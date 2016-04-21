@@ -1,0 +1,64 @@
+\documentclass[12 pt]{article} 
+\everymath={\displaystyle} 
+\usepackage[height=9in,width=6.5in]{geometry}
+\usepackage{amsmath, amssymb,amsthm,graphicx}
+
+%Some definitions that will give you theorems environments
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lm}[thm]{Lemma}
+\newtheorem{ax}[thm]{Axiom}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{df}[thm]{Definition}
+\newtheorem{nt}[thm]{Notation}
+\newtheorem{rmk}[thm]{Remark}
+\numberwithin{thm}{section}
+
+\title{Your Title}
+\author{Your Name\\
+Math XXX}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this article we prove some nifty stuff. Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah 
+\end{abstract}
+
+
+\section{Introduction}
+Here is some background material.
+Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah 
+
+\section{Preliminaries}
+Here is some stuff that you need to know in order to read this paper.
+Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah 
+
+\section{The Hard Work}
+Here is our main theorem:
+\begin{thm} \label{someName}
+Something is true.
+\end{thm}
+
+\begin{proof}
+We offer a proof only so you can see a book citation. As we can see in \cite{thebook} and in \cite{thearticle} and even \cite{thewebpage} this is most certainly true.
+\end{proof}
+
+Well, it all works out like so.  Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah 
+
+\section{Conclusion}
+Here is an example of cross referencing.
+From \ref{someName} we see that
+\begin{lm}
+Something else is also true.
+\end{lm}
+
+There ya go.  Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah Math Math Math Blah Blah Blah 
+
+\bibliographystyle{plain}
+\bibliography{paper}
+\end{document}
