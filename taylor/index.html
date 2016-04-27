@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+
+#spork{
+  width: 50%;
+  height: 500px;
+  float:left;
+}
+div.left{
+  float:left;
+  padding: 10px;
+}
+img{
+  vertical-align:middle;
+}
+div.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+#titleBar{
+  font-size: 50px;
+}
+img.squares{
+  height:100px
+}
+img.eraser{
+  width:100px;
+}
+</style>
+<script src='spork.js'></script>
+<script>
+var lastX;              //variables for previous
+var lastY;  //position of the mouse
+
+function onmousedown(){
+  //remember where mouse starts
+  lastX=mouseX;
+  lastY=mouseY;
+}
+
+function pencil(){
+  //Draw line from last position
+  //to current position if the
+  //mouse is down
+  if (mouseDown){
+    line(lastX, lastY,
+        mouseX, mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function ribbon(){
+  	if(mouseDown){
+      line(lastX+10, lastY+10,
+           mouseX+10, mouseY+10,
+           mouseX-10, mouseY-10,
+           lastX-10, lastY-10,
+           lastX+10, lastY+10);
+      fill();
+        lastX=mouseX;
+    lastY=mouseY;
+    }
+}
+
+function fuzz(){
+  if(mouseDown){
+    	save();
+      	translate(mouseX, mouseY);
+    	rotate(random()*360);
+    	line(-10,0,10,0);
+    	restore();
+    lastX=mouseX;
+    lastY=mouseY;
+    }
+}
+ function circles(){
+   var cx, cy, dx, dy, r;
+  if(mouseDown){
+    	save();
+      fillcolor('white');
+    	cx=(lastX+mouseX)/2;
+    	cy=(lastY+mouseY)/2;
+    	dx=mouseX-cx;
+    	dy=mouseY-cy;
+        r=sqrt(dx*dx+dy*dy);
+    	circle(cx, cy, r);
+      fill();
+    	restore();
+    lastX=mouseX;
+    lastY=mouseY;
+    }
+}
+function squares(){
+  	if(mouseDown){
+      rect(lastX, lastY,
+           mouseX, mouseY,
+           mouseX, mouseY,
+           lastX, lastY,
+           lastX, lastY);
+
+        lastX=mouseX;
+    lastY=mouseY;
+    }
+}
+
+function onclick(){
+  if(bucketButton.checked)floodfill(mouseX,mouseY);
+}
+
+
+function onmousemove(){
+  if (pencilButton.checked)pencil();
+  else if (fuzzButton.checked)fuzz();
+  else if (ribbonButton.checked)ribbon();
+  else if (circlesButton.checked)circles();
+  else if (eraserButton.checked)pencil();
+    else if (squaresButton.checked)squares();
+
+
+}
+function setBothColors(c){
+  color(c);
+  fillcolor(c);
+}
+var theImages =[ ];
+var triangleWidth=250;
+var imageWidth=triangleWidth/3; //tweek this number
+var numberImages=15; //tweek this number
+function setup(){
+  //size(2*triangleWidth+imageWidth, 2*triangleWidth+imageWidth);
+  theImages=[img1, img2, img3, img4];
+}
+function draw(){
+  save();
+  translate(width/2, height/2);
+  rect(-width/2,-height/2,width,height);
+  fillcolor('white');
+  fill();
+  color(0,0,0,0);
+  for(i=0;i<numberImages;i=i+1){ //this will change later
+  var randomImage=theImages[floor(random()*theImages.length)];
+  var x=random()*triangleWidth; //triangleWidth/2 does cool things
+  var y=random()*x;
+  var r=random()*360;
+  save();
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  rotate(90);
+  save();
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+}
+restore();
+}
+function clearScreen(){
+  clear();
+}
+function selectEraser(){
+  whiteButton.checked=true;
+  thick.checked=true;
+  setBothColors('white');
+  linewidth(15);
+}
+
+</script>
+
+
+</head>
+
+<body>
+  <div id='titleBar'>My Paint Program</div>
+  <div id='spork'></div>
+  <div id='penSelect' class='left'> <div class='title'>Pen Type </div>
+<input type='radio'name='penType' id='pencilButton' checked> <img src='images/pencil.png'><br>
+<input type='radio'name='penType' id='fuzzButton'> <img src='images/fuzz.png'> <br>
+<input type='radio'name='penType' id='ribbonButton'><img src='images/ribbon.png'> <br>
+<input type='radio'name='penType' id='circlesButton'> <img src='images/circles.png'> <br>
+<input type='radio'name='penType' id='squaresButton'> <img src='images/squares.png' img class='squares'> <br>
+<input type='radio'name='penType' id='bucketButton'> Fill  <br>
+
+<button onclick='clearScreen();'> Clear</button><br>
+<input type='radio'name='penType' id='eraserButton' onclick='selectEraser();' ><img src='images/eraser.png' img class='eraser'>
+  </div>
+  <div id='colorSelect' class='left'> <div class='title'>Color </div>
+<input type='radio' name='widthButton' onclick='setBothColors("black");' checked><img src='images/black.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("red");'><img src='images/red.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("orange");'><img src='images/orange.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("yellow");'><img src='images/yellow.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("green");'><img src='images/green.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("blue");'><img src='images/blue.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("indigo");'><img src='images/indigo.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("violet");'><img src='images/violet.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("white");' id='whiteButton'><img src='images/white.png'><br>
+  </div>
+  <div id='sizeSelect' class='left'> <div class='title'>Size </div>
+<input type='radio'name='sizeType' onclick='linewidth(1);' checked> 1px<br>
+<input type='radio'name='sizeType' onclick='linewidth(5);'> 5px<br>
+<input type='radio'name='sizeType' onclick='linewidth(10);'> 10px<br>
+<input type='radio'name='sizeType' onclick='linewidth(15);' id='thick'> 15px<br>
+  </div>
+  <img id='img1' src='images/img1.png'>
+  <img id='img2' src='images/img2.png'>
+  <img id='img3' src='images/img3.png'>
+  <img id='img4' src='images/img4.png'>
+
+</body>
+
+</html>
