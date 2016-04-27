@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/Twocheckers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142, Fall 2013
+//2 Checkers
+
+function checkerone(){
+ color('red');
+ circle(checkerX,checkerY,35);
+ fillcolor('red');
+ fill();
+}
+
+function checkertwo(){
+ color('black');
+ circle(checkerS,checkerT,35);
+ fillcolor('black');
+ fill();
+}
+
+function spaceone(){
+ distanceone =(((checkerX-mouseX)*(checkerX-mouseX))+((checkerY-mouseY)*(checkerY-mouseY)));
+ return(distanceone);
+}
+
+function spacetwo(){
+ distancetwo =(((checkerS-mouseX)*(checkerS-mouseX))+((checkerT-mouseY)*(checkerT-mouseY)));
+ return(distancetwo);
+}
+
+function onmouseup(){
+ clear();
+ checkerone();
+ checkertwo();
+}
+
+function onmousemove(){
+ if((mouseDown)&&(spaceone()<1225)) {
+ checkerX=mouseX;
+ checkerY=mouseY;
+  spaceone();
+ clear();
+ checkerone();
+ checkertwo();
+}
+else
+ if((mouseDown)&&(spacetwo()<1225)) {
+ checkerS=mouseX;
+ checkerT=mouseY;
+  spacetwo();
+ clear();
+ checkertwo();
+ checkerone();
+}
+}
+function setup(){
+  checkerS=100;
+  checkerT=200;
+  checkerX=300;
+  checkerY=200;
+}
+
+function draw(){
+  checkerone(checkerX, checkerY,35);
+  checkertwo(checkerS, checkerT, 35);
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Two Checkers!</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a program that would draw an object as the mouse moves across the screen. </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, button, random, and mouse commands from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+
+
+<center><div id="spork"></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/Twocheckers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

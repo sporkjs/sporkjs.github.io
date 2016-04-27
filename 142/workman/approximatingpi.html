@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Approximating Pi</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="portfolio.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+</style>
+<script src="spork.js"></script>
+<script>
+	
+	function setup(){
+ 	loop();
+  	circle(200,200,200);
+}
+
+function draw(){
+  	var x;
+    var y;
+  	var RGB;
+  	x=400*random();
+  	y=400*random();
+  	R=floor(256*random());
+    G=floor(256*random());
+    B=floor(256*random());
+  	picolor(x,y);
+    point(x,y);
+  	
+
+}
+
+function onclick(){
+  	clear();
+    setup();
+}
+
+function picolor(x,y){
+    if ((x-200)*(x-200)+(y-200)*(y-200) <(200*200))
+  	color('aquamarine');
+  else
+    color('black');
+}
+
+</script>
+</head>
+<body>
+<script>
+writeHeader();
+</script>
+<div id="spork"></div>
+<script>
+writeFooter();
+</script>
+</body>
+</html>

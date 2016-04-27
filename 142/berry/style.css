@@ -1,0 +1,31 @@
+button{
+	-webkit-appearance: none;
+}
+body {
+	background: lightslategray;
+}
+
+div.title{
+	background: thistle;
+	text-align: center;
+	font-size: 48px;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+div.content{
+	background: slategray;
+	
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
+div.footer{
+	background: thistle;
+	text-align: center;
+	font-size: 16px;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+div.ol{
+	margin: auto;
+	width: 15%;
+}

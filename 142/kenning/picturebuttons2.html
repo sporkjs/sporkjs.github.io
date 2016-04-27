@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="thursdaystyle.css">
+
+<style>
+
+button.imgButton{
+  width:160px;
+  height:160px;
+  background:grey;
+  
+  
+
+}
+
+button.showButtons{
+  width:20px;
+  height:200px;
+  z-index:2;
+  position:fixed;
+  bottom:20px;
+
+}
+
+img.thumbnail{
+  max-width:100px;
+  max-height:100px;
+  vertical-align:middle;
+
+}
+
+#viewDiv{
+  position:absolute;
+  top:80px;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  background: rgba(100,100,100,0.5);
+  
+}
+
+#bodyDiv{
+	height:400px;
+	
+	
+
+}
+
+#theImage{
+  max-width:90%;
+  max-height:90%;
+  position:absolute;
+  top:5%;
+  bottom:5%;
+  left:5%;
+  right:5%;
+  margin:auto;
+}
+
+#buttonDiv{
+  position:fixed;
+  bottom:10px;
+  left:0px;
+  right:100%;
+  height:200px;
+  z-index:1;
+  text-align:center;
+  white-space:nowrap;
+  overflow-x:auto;
+  overflow-y:hidden;
+  transition:all 1s linear;
+  -webkit-transition:all 1s linear;
+}
+  
+</style>
+
+<script src='header.js'></script>
+
+<script>
+
+var N=8;
+var buttonString='';
+
+for(i=8;i<16;i=i+1){
+
+  buttonString=buttonString+'<button class="imgButton" onclick="showPicture('+i+');"><img class="thumbnail" src="photos/photos'+i+'.png"></button>';
+
+}
+
+
+
+function showPicture(x){
+	viewDiv.style.display='block';
+	theImage.src="photos/photos"+x+".png";
+	hideButtons();
+}
+
+function hidePicture(x){
+	viewDiv.style.display='none';
+}
+
+function showButtons(x){
+	buttonDiv.style.right='0%';
+	
+}
+
+function hideButtons(x){
+	buttonDiv.style.right='100%';
+}
+
+
+
+</script>
+
+<body>
+
+<script>showHeader();</script>
+
+<h1>Spork Pictures</h1>
+Click the button on the bottom left for more pictures. 
+
+
+<div id='buttonDiv'>
+  <script>
+    document.write(buttonString);
+  </script>
+
+</div>
+
+<div id='viewDiv'>
+
+
+<img src="photos/photos10.png" id="theImage" name="theImage">
+
+</div>
+
+
+<script>showFooter();</script>
+
+<button class="showButtons" onclick="showButtons();" > > </button>
+
+</body>
+</html>

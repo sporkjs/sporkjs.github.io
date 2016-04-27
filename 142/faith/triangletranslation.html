@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/triangletranslation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<link rel="stylesheet"type="text/css"href="style.css">
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Triangle Translation</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to draw a right triangle similar to a picture with the labels lying on each side.  </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used basic JavaScript programming functions and the Spork library.</p>
+
+<h4>Picture:</h4> 
+ 
+<img src ="triangletraslation.png">
+
+<h4>Code:</h4>
+
+<pre class='code'>
+//Faith Hoppen
+//Math 142
+//Triangle Transformation
+
+background(204,153,255);
+
+triangle(125,300,275,300,275,100);     //Triangle
+fillcolor(153,153,255);
+fill();
+
+font("20px arial narrow")                  //Words
+fillcolor(204,0,204);
+
+save();
+translate(145,222);
+rotate(308);
+filltext('hypotenuse',0,20);
+restore();
+
+save();
+filltext('adjacent',172,319);
+restore();
+
+save();
+translate(380,80);
+rotate(90);
+filltext('opposite',100,100);
+restore();
+</pre>
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/triangletranslation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:09 GMT -->
+</html>
+

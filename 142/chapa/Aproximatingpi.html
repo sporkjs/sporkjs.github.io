@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nerd Web</title>
+<link rel="stylesheet" type="text/css" href="final.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+</style>
+<script src="spork.js"></script>
+<script>
+var numpoints
+var numcircle
+
+function setup(){ 
+  size(400,430);
+  font("20px times");
+  circle(200,200,200);
+  loop();
+  numpoints=0
+  numcircle=0
+}
+
+function draw(){
+x= random()*400;
+y= random()*400;
+
+  if((x-200)*(x-200)+(y-200)*(y-200)<40000){ 
+    color ("red");
+    point (x,y);
+    numcircle=numcircle+1
+  }
+  else{
+    color ("black");
+    point (x,y);
+  }
+numpoints= numpoints+1
+rect(0,400,400,30);
+fillcolor("white");
+  fill();
+fillcolor("black");
+filltext("Aproximation of Pi with "+numpoints +" Points is "+ 4*numcircle/numpoints,0,425);
+}
+
+
+function onclick(){
+  clear();
+  setup();
+}
+</script>
+</head>
+<body>
+<p>
+<H1>Approximating Pi</H1>
+<p> 
+
+<p>
+<H2>Matthew James Chapa</H2>
+<p>
+
+<p>
+<H2>Spring 2015<H2>
+<p>
+<div id="spork"></div>
+</body>
+<br><a href='indexfinal.html'>Main Page</a>
+</html>

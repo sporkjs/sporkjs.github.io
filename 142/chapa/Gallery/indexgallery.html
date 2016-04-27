@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>
+   </title>
+  
+   <style>
+	#galleryPicture{
+	height:600px;
+	}
+	img.buttonImage{
+	height:50px;
+	
+	}
+	div.gallery{
+	Text-align:center;
+	}
+	body{
+	color:lightblue;
+	background:black;
+	}
+	#caption{
+	font-size:30px;
+	}
+	button{
+	webkit-appearance:none;
+	border-radius: 0px;
+	height: 100px
+	}
+   </style>
+   <script>
+	var image1="BlockyThing.png";
+	var image2="CreatureFunction.png";
+	var image3="House.png";
+	var image4="Shapes.png";
+	var image5="Text.png";
+
+	var caption1="Those Squares Thought";
+	var caption2="Pandas!";
+	var caption3="Home Sweet Home";
+	var caption4="Christ Conqueres All";
+	var caption5="Hearts are Cool";
+
+	function changeImage(newImage,newCaption){
+	galleryPicture.src=newImage;
+	caption.innerHTML=newCaption;
+	}
+	
+   </script>
+   </head>
+
+ 	<div class="gallery">
+	<H1>Nerd Life</H1>
+	<img src="BlockyThing.png" id="galleryPicture" name="galleryPicture">
+	<div id="caption"> 
+	</div> 
+	<img class="button no background">
+	<button onclick="changeImage(image1,caption1);"><img src="BlockyThing.png" class="buttonImage"></button>
+	<button onclick="changeImage(image2,caption2);"><img src="CreatureFunction.png" class="buttonImage"></button>
+	<button onclick="changeImage(image3,caption3);"><img src="House.png" class="buttonImage"></button>
+	<button onclick="changeImage(image4,caption4);"><img src="Shapes.png" class="buttonImage"></button>
+	<button onclick="changeImage(image5,caption5);"><img src="Text.png" class="buttonImage"></button>
+   </body>
+<br><a href='indexfinal.html'>Main Page</a>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thomas Hinrichs - Math 142</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<style>
+	</style>
+	<script src="../spork.js"></script>
+	<script src='portfolio.js'></script>
+<script>
+
+function drawClock(){
+
+  	fillcolor("black");
+  	aligntext('center')
+	filltext("12",0,-170);
+  	rotate('30');
+	filltext("1",0,-170);
+  	rotate('30');
+	filltext("2",0,-170);
+  	rotate('30');
+	filltext("3",0,-170);
+   	rotate('30');
+	filltext("4",0,-170);
+    rotate('30');
+	filltext("5",0,-170);
+    rotate('30');
+	filltext("6",0,-170);
+    rotate('30');
+	filltext("7",0,-170);
+    rotate('30');
+	filltext("8",0,-170);
+  	rotate('30');
+	filltext("9",0,-170);
+ 	rotate('30');
+	filltext("10",0,-170);
+  	rotate('30');
+	filltext("11",0,-170);
+  	rotate(30);
+}
+
+function creature(x,y){
+  save();
+  translate(x,y);
+  scale(1);
+  //LeftEar
+  color(100,100,100);
+  fillcolor(100,100,100);
+  rect(-190,-90,110,30);
+  fill();
+  arc(-100,-80,90,180,0);
+  fill();
+  rect(-190,-60,80,70);
+  fill();
+  ellipse(-100,10,89,50,0,180);
+  fill();
+  color("pink");
+  fillcolor("pink");
+  circle(-90,-70,70);
+  fill();
+  rect(-160,-70,70,70);
+  fill();
+  ellipse(-100,0,59,30,0,180);
+  fill();
+
+
+  //RightEar
+  color(100,100,100);
+  fillcolor(100,100,100);
+  rect(80,-90,110,30);
+  fill();
+  arc(100,-80,90,180,0);
+  fill();
+  rect(110,-60,80,70);
+  fill();
+  ellipse(100,10,89,50,0,180);
+  fill();
+  color("pink");
+  fillcolor("pink");
+  circle(90,-70,70);
+  fill();
+  rect(90,-70,70,70);
+  fill();
+  ellipse(100,0,59,30,0,180);
+  fill();
+
+  //circle face
+  color(150,150,150);
+  fillcolor(150,150,150);
+  circle(0,0,125);
+  fill();
+
+  //lefteye
+  color("white");
+  fillcolor("white");
+  ellipse(45,-30,20,40);
+  fill();
+  fillcolor("black")
+  circle(45,-30,15);
+  fill();
+
+
+
+  //righteye
+  color("white");
+  fillcolor("white");
+  ellipse(-45,-30,20,40);
+  fill();
+  fillcolor("black")
+  circle(-45,-30,15);
+  fill();
+
+  //mouth
+  color("black");
+  fillcolor('black');
+  ellipse(0,80,40,10,180,0);
+  fill();
+  ellipse(0,80,40,30,0,180);
+  fill();
+  restore();
+}
+function textMinute(){
+  	save();
+  	scale(.6)
+  	fillcolor("white");
+  	filltext(minute(),76,-36);
+  	restore();
+}
+
+function textHour(){
+  	save();
+  	scale(.6);
+  	fillcolor("white")
+  	filltext(hour(),-76,-36);
+  	restore();
+}
+
+function drawHourHand(){
+  	linewidth(5);
+	line(0,0,0,-100);
+  
+}
+function drawHour(){
+  	save();
+  	rotate(360*hour()/12);
+  	drawHourHand();
+  	restore();
+}
+function drawMinuteHand(){
+  	linewidth(5);
+  	line(0,0,0,-150);
+}
+function drawMinute(){
+  	save();
+  	rotate(360*minute()/60);
+  	drawMinuteHand();
+  	restore();
+}
+function drawSecondHand(){
+	color(100,100,100);
+    fillcolor(100,100,100);
+  	quad(-30,0,90,100,110,80,20,-10);
+  	fill();
+  	arc(90,100,30,270,90);
+  	fill();
+  	quad(90,100,70,120,90,130,115,110)
+  	fill();
+  	ellipse(0,-2,30,10,170,315);
+ 	fill();
+}
+function drawSecond(){
+  	save();
+  	rotate(360*second()/60);
+  	drawSecondHand();
+  	restore();
+}
+function setup (){
+  	translate (200,200);
+  	loop();
+}
+function draw(){
+  	clear();
+  	creature(0,0);
+    	textMinute();
+  	textHour();
+  	drawSecond();
+  	drawMinute();
+  	drawHour();
+  	drawClock();
+
+
+}
+
+	</script>
+</head>
+
+<body>
+<script>writeHeader();</script>
+This is a clock. The elephant was my creature for the class. 
+<div id="spork"></div>
+
+<p>
+<a href="index.html"><h1>Go Back</h1></a>
+</p>
+<script>writeFooter();</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>	
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  	<link rel="stylesheet" type="text/css" href="doran.css">
+
+<style>	
+</style>
+	<script type="text/javascript" src="spork.js"></script>
+			<script src='header.js'></script>
+			<script type="text/javascript" src="spork.js"></script>
+<script>
+		
+							var lastX;
+							var lastY;
+
+						function onmousedown() {
+  							lastX = mouseX;
+  							lastY = mouseY;
+ 
+						}
+
+						function onmousemove() {
+  							if (mouseDown) {
+      							line (mouseX, mouseY, lastX, lastY);
+      							lastX = mouseX;
+      							lastY = mouseY;
+    							}
+						}
+						function setup(){
+							background('white');
+						}
+
+</script>
+</head>
+<body>
+<script>showHeader();</script>
+<div class='TitleArea'>
+	
+	<h1>Draw</h1>
+	
+</div>
+
+<div id='spork'></div>		
+	
+		
+		
+	
+							
+							<p>
+								Colours
+							</p>
+							<p>
+								<button onclick="color('red');"> Red </button>
+								<button onclick="color('blue');"> Blue </button>
+								<button onclick="color('purple');"> Purple </button>
+								<button onclick="color('green');"> Green </button>
+							</p>
+							
+							<p>
+							
+								Clear Canvas
+							</p>
+							<p>
+								<button onclick="setup();"> Clear</button>
+							</p>
+								Eraser
+							<p>
+							</p>
+							
+								<p> <button onclick="color('white');"> Eraser </button> </p>
+								
+								<button onclick="linewidth(5);"> 5pt Eraser </button>
+								
+
+		</div>
+
+		
+		
+<script>showFooter();</script>
+</body>
+</html>

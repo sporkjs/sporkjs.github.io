@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nerd Web</title>
+<link rel="stylesheet" type="text/css" href="final.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+img.ticks{
+width: 100px;
+height: 100px;
+}
+
+td{
+border:5px solid black;
+}
+
+table{
+border-collapse:collapse;
+border:hidden;
+}
+</style>
+<script>
+function tack(t,row,col){
+if (grid[row][col]==2){
+t.src=images[turn];
+grid [row][col]= turn
+turn=1-turn;
+}
+seeIfGameOver();
+}
+var grid=[	[2,2,2],
+		[2,2,2],
+		[2,2,2]
+		];
+var images= ['x.png','o.png'];
+var turn=0;
+var names=['X','O'];
+
+function seeIfGameOver(){
+	if ((grid[0][0]==grid[1][1]) && (grid[1][1]==grid[2][2]) && (grid[0][0]!=2)){
+			alert(names[grid[0][0]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[0][0]==grid[0][1]) && (grid[0][1]==grid[0][2]) && (grid[0][0]!=2)){
+			alert(names[grid[0][0]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[1][0]==grid[1][1]) && (grid[1][1]==grid[1][2]) && (grid[1][1]!=2)){
+			alert(names[grid[1][1]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[2][0]==grid[2][1]) && (grid[2][1]==grid[2][2]) && (grid[2][2]!=2)){
+			alert(names[grid[2][2]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[0][0]==grid[1][0]) && (grid[1][0]==grid[2][0]) && (grid[0][0]!=2)){
+			alert(names[grid[0][0]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[0][1]==grid[1][1]) && (grid[1][1]==grid[2][1]) && (grid[0][1]!=2)){
+			alert(names[grid[0][1]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[0][2]==grid[1][2]) && (grid[1][2]==grid[2][2]) && (grid[0][2]!=2)){
+			alert(names[grid[0][2]]+' WINS!');
+			gameOver=true;
+		}
+		else 	if ((grid[0][2]==grid[1][1]) && (grid[1][1]==grid[2][0]) && (grid[1][1]!=2)){
+			alert(names[grid[1][1]]+' WINS!');
+			gameOver=true;
+		}
+		else{
+			gameOver=true;
+			for (i=0;i<3;i++)
+				for (j=0;j<3;j++)
+					if (grid[i][j] == 2)
+						gameOver=false;
+			if (gameOver)
+				alert('Game Over.');
+		}
+
+}
+
+function markSquare(t,row,col){
+	if (!gameOver){
+		if (grid[row][col] == 2){
+			t.src=marks[turn];
+			grid[row][col]=turn;
+			turn=1-turn;
+		}
+		else
+			alert('That square is marked already.');
+		endGame();
+	}
+}
+
+</script>
+</head>
+<body>
+<table> 
+<tr>
+<td> <img src='blank.png' class='ticks' onclick="tack(this,0,0);"> </td>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,0,1);"> </td>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,0,2);"> </td>
+</tr>
+
+<tr>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,1,0);"> </td>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,1,1);"> </td>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,1,2);"> </td>
+</tr>
+
+<tr>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,2,0);"> </td>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,2,1);"> </td>
+<td> <img src='blank.png'class='ticks'onclick="tack(this,2,2);"> </td>
+</tr>
+</table>
+
+</body>
+<br><a href='indexfinal.html'>Main Page</a>
+</html>

@@ -1,0 +1,37 @@
+body { 
+ font-family:Courier;
+ font-size: 24px;
+ background: purple;
+ color: black;
+font-family: Times New Roman;
+font-size: 30px;
+ padding: 10px;
+ margin: 0px;}
+a:link{
+color:black;
+}
+
+a:visited{
+color:black;
+}
+
+
+div.title {
+ font-size:200%;
+ text-align: center;
+ background: red;
+}
+
+p{
+text-indent: 20px;
+ 
+}
+
+div.content{
+ padding: 20px;
+}
+
+div.footer{
+ font-size:50%;
+ text-align: center;
+}

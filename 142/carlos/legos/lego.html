@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Lego </title>
+	
+<link rel="stylesheet" type="text/css" href="style.css">
+	
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<script src='portfolio.js'></script>
+
+
+	<style>
+		
+			div.gallery{
+
+			border-style: solid;
+
+			border-color: black;
+
+			text-align: center;
+
+			padding: 10px;
+
+			background: grey;
+
+			width: 300px;
+	
+			height: 300px;
+
+			margin: 10px auto;
+			
+			position: relative;
+		
+		}
+		
+
+			#galleryPicture{
+
+			height: 280px;
+	
+			position: absolute;
+	
+			left: 10px;
+		
+		}
+		
+
+			#shirt{
+		
+			height: 300px;
+	
+			position: absolute;
+	
+			left: 0px;
+		
+			}
+		
+
+			#pants{
+			
+			height: 300px;
+		
+			position: absolute;
+	
+			left: 0px;
+		
+		}
+		
+		
+			#head{
+			
+			height: 300px;
+		
+			position: absolute;
+	
+			left: 0px;
+		
+		}
+		
+
+			img.buttonImage{
+	
+			border: none;
+	
+			border-radius: 10px;
+			height: 100px;
+	
+		}
+		
+
+			#mainselectionDiv{
+	
+			border: none;
+			height:125px;
+	
+			text-align: center;
+			overflow-y:hidden;
+			overflow-x: auto;
+			white-space: nowrap;
+		}
+		
+			div.selectionDiv{
+			display: none;
+	
+			border: none;
+		
+			text-align: center;
+		
+			padding: 10px;
+			
+			border-radius: 10px;
+			
+			background: dodgerblue;
+		}
+		
+
+			#categories{
+			
+text-align: center;
+	
+			border: none;
+		
+			padding: 10px;
+		}
+
+	</style>
+	
+
+	<script>
+		
+
+	var shirt1='shirt1.gif';
+		
+	var shirt2='shirt2.gif';
+		
+	var shirt3='shirt3.gif';
+		
+	var shirt4='shirt4.gif';
+		
+	var shirt5='shirt5.gif';
+		
+	var shirt6='shirt6.gif';
+		
+	var pants1='pants1.gif';
+		
+	var pants2='pants2.gif';
+		
+	var pants3='pants3.gif';
+		
+	var pants4='pants4.gif';
+	
+	var pants5='pants5.gif';
+		
+	var pants6='pants6.gif';
+		
+	var head1='head1.gif';
+		
+	var head2='head2.gif';
+		
+	var head3='head3.gif';
+		
+	var head4='head4.gif';
+		
+	var head5='head5.gif';
+		
+
+	function changeShirt(newShirt){
+			
+	shirt.src=newShirt;
+		
+	}
+		
+	
+	function changePants(newPants){
+		
+	pants.src=newPants;
+		
+	}
+		
+
+	function changeHead(newHead){
+			
+	head.src=newHead;
+		
+	}
+
+	
+
+	function showShirt(){
+		
+	shirtSelectionDiv.style.display='block';
+		
+	pantsSelectionDiv.style.display='none';
+		
+	headSelectionDiv.style.display='none';
+		
+	}
+	
+
+	function showPants(){
+		
+	shirtSelectionDiv.style.display='none';
+		
+	pantsSelectionDiv.style.display='block';
+		
+	headSelectionDiv.style.display='none';
+		
+	}
+
+	
+
+	function showHead(){
+		
+	shirtSelectionDiv.style.display='none';
+		
+	pantsSelectionDiv.style.display='none';
+		
+	headSelectionDiv.style.display='block';
+		
+	}
+
+	
+
+	</script>
+
+
+	</head>
+
+	<body>
+	<script>writeheader();</script>
+	
+
+<div class='gallery'>
+	
+	<img src="legos/shirt1.gif" id="shirt" name="shirt">
+
+	<img src="legos/pants1.gif" id="pants" name="pants">
+	
+	<img src="legos/head1.gif" id="head" name="head">
+	
+
+</div>
+
+
+	<div id="categories">
+
+	<button class="category" onclick="showShirt();">Shirts</button>
+	
+	<button class="category" onclick="showPants();">Pants</button>
+	
+	<button class="category" onclick="showHead();">Heads</button>
+
+	</div>
+
+
+
+	<div id="mainSelectionDiv">
+
+	<div id="shirtSelectionDiv" class="selectionDiv">
+
+	<button onclick="changeShirt(shirt1);">
+<img src="legos/shirt1.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeShirt(shirt2);">
+<img src="legos/shirt2.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeShirt(shirt3);">
+<img src="legos/shirt3.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeShirt(shirt4);">
+<img src="legos/shirt4.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeShirt(shirt5);">
+<img src="legos/shirt5.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeShirt(shirt6);">
+<img src="legos/shirt6.jpg" class="buttonImage">
+</button>
+
+	</div>
+
+
+	<div id="pantsSelectionDiv" class="selectionDiv">
+
+	<button onclick="changePants(pants1);">
+<img src="legos/pants1.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changePants(pants2);">
+<img src="legos/pants2.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changePants(pants3);">
+<img src="legos/pants3.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changePants(pants4);">
+<img src="legos/pants4.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changePants(pants5);">
+<img src="legos/pants5.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changePants(pants6);">
+<img src="legos/pants6.jpg" class="buttonImage">
+</button>
+
+
+	</div>
+
+
+	<div id="headSelectionDiv" class="selectionDiv">
+
+	<button onclick="changeHead(head1);">
+<img src="legos/head1.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeHead(head2);">
+<img src="legos/head2.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeHead(head3);">
+<img src="legos/head3.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeHead(head4);">
+<img src="legos/head4.jpg" class="buttonImage">
+</button>
+
+	<button onclick="changeHead(head5);">
+<img src="legos/head5.jpg" class="buttonImage">
+</button>
+
+	</div>
+</div>
+
+	<script>writefooter();</script>
+	</body>
+	</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<link rel="stylesheet" type="text/css" href="finalassignmentpagestyle.css">
+	<script src='header.js'></script>
+
+	<script type="text/javascript" src="spork.js"></script>
+<script>
+var x,y,r,vx,vy,e;
+
+function setup(){
+  x=200;
+  y=200;
+  r=40;
+  vx=0;
+  vy=0;
+  e=-.9;
+  ax=0;
+  ay=1;
+  timestep(1);
+  loop();
+}
+
+function checker(){
+  
+  circle(x,y,r)
+  fillcolor('maroon');
+  fill();
+}
+  
+function onmousedown(){
+    x=mouseX;
+  	y=mouseY;
+  }
+function onmousemove(){
+  if((mouseDown)&&(distanceToChecker()<r)){
+    vx=mouseX-x;
+    vy=mouseY-y;
+  x=mouseX;
+  y=mouseY;
+}
+}
+
+function distanceToChecker(){
+  var dx=x-mouseX;
+  var dy=y-mouseY;
+  return (sqrt(dx*dx + dy*dy));
+}
+
+function bounce(){
+  if(x>width-r){
+    vx=e*vx;
+    x=width-r;
+  }
+  if(y>height-r){
+    vy=e*vy;
+    y=height-r;
+  }
+  if(y<r){
+    vy=e*vy;
+    y=r;
+  }
+   if(x<r){
+    vx=e*vx;
+     x=r;
+  }
+}
+function draw(){
+  clear();
+  background('olive');
+  checker();
+  if(!((mouseDown)&&(distanceToChecker()<r))){
+  x=x+vx;
+  y=y+vy;
+  bounce();
+  vx=vx+ax;
+  vy=vy+ay;
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+	<script>showHeader();</script>
+		<b> Interactive Gravity Checker </b>
+		<p>
+		<div id='spork'></div>
+		</p>
+		<p>
+		Using Spork, we were instructed to create a checker like object that,<br> 
+		when clicked on with the mouse, could be thrown or bounced and resemble the effects of gravity<br> 
+		upon the throwing or bouncing action. 
+	<script>showFooter();</script>
+
+</body>
+
+</html>

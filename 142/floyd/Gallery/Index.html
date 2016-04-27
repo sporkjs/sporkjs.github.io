@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Math 142</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<style>
+
+#galleryPicture{
+		height: 300px;
+		border: none;
+}
+	
+	img.buttonImage{
+	height:50px;
+}
+</style>
+
+<script>
+	var image1= "smileyface1.png";
+	var image2= "blockything.png";
+	var image3= "house1.png";
+	var image4= "creaturefunction.png";
+	var image5= "loops.png";
+
+	var caption1= "Smiley Face";
+	var caption2= "Blocky Thing";
+	var caption3= "House";
+	var caption4= "Creature Function";
+	var caption5= "Loop Drawing";
+function changeImage(newImage,newCaption){
+	galleryPicture.src=newImage;
+	caption.innerHTML=newCaption;
+}
+
+</script>
+
+</head>
+<body>
+	<div class='gallery'>
+	<img src="smileyface1.png" id="galleryPicture" name="galleryPicture">
+
+<div id="caption">
+	
+</div>
+
+		<button onclick= "changeImage(image1,caption1);"><img src="smileyface1.png" class= "buttonImage"></button>
+
+		<button onclick= "changeImage(image2,caption2);"><img src="blockything.png" class= "buttonImage"></button>
+
+		<button onclick= "changeImage(image3,caption3);"><img src="house1.png" class= "buttonImage"></button>
+
+		<button onclick= "changeImage(image4,caption4);"><img src="creaturefunction.png" class= "buttonImage"></button>
+
+		<button onclick= "changeImage(image5,caption5);"><img src="loops.png" class= "buttonImage"></button>
+</div>
+<a href= "../portfolioindex.html">Return to Homepage</a>
+</body>
+</html>

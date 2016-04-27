@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CANVAS</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script src="portfolio.js"></script>
+<style>
+	#spork{
+	text-align:center;
+	margin:auto;
+	width:550px;
+	}
+div.content{
+	text-align:center;
+}	
+</style>
+<script src="spork.js"></script>
+<script>
+    var x1;
+    var y1;
+    function setup(){
+	size(500,500);
+    }
+
+    function onmousemove(){
+      if (mouseDown == true){
+    	line(x1,y1,mouseX,mouseY);
+        x1=mouseX;
+        y1=mouseY;
+      }
+    }
+
+    function onmousedown(){
+	x1=mouseX;
+      	y1=mouseY;
+  
+    }
+    
+    function Black(){
+	color('black');
+	fill();
+    }
+
+    function Red(){
+	color('red');
+	fill();
+    }
+	
+     function Orange(){
+	color('orange');
+	fill();
+    }
+
+      function Yellow(){
+	color('yellow');
+	fill();
+    }
+
+      function Green(){
+	color('green');
+	fill();
+    }
+
+    function Blue(){
+	color('blue');
+	fill();
+    }
+
+    function Purple(){
+	color('purple');
+	fill();
+    }
+    
+    function changeWidth1(){
+	linewidth(1);
+    }
+
+     function changeWidth2(){
+	linewidth(3);
+    }
+
+     function changeWidth3(){
+	linewidth(5);
+    }
+
+     function changeWidth4(){
+	linewidth(10);
+    }
+
+     function changeWidth5(){
+	linewidth(15);
+    }
+
+     function changeWidth6(){
+	linewidth(20);
+    }
+
+     function changeWidth7(){
+	linewidth(30);
+    }
+     function clearCanvas(){
+	clear();     
+    }
+
+</script>
+</head>
+<body>
+<script>
+writeHeader();
+</script>
+
+<div id="spork"></div>
+	<button onClick="Black();">Black</button>
+	<button onClick="Red();">Red</button>
+	<button onClick="Orange();">Orange</button>
+	<button onClick="Yellow();">Yellow</button>
+	<button onClick="Green();">Green</button>
+	<button onClick="Blue();">Blue</button>
+	<button onClick="Purple();">Purple</button>
+	<br>
+	<br>
+	<button onClick="changeWidth1();">1px</button>
+	<button onClick="changeWidth2();">3px</button>
+	<button onClick="changeWidth3();">5px</button>
+	<button onClick="changeWidth4();">10px</button>
+	<button onClick="changeWidth5();">15px</button>
+	<button onClick="changeWidth6();">20px</button>
+	<button onClick="changeWidth7();">30px</button>
+	<button onClick="clearCanvas();">CLEAR</button>
+<script>
+writeFooter();
+</script>
+</body>
+</html>

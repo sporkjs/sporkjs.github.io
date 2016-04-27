@@ -1,0 +1,37 @@
+button{
+	-webkit-appearance: none;
+}
+
+#titleDiv{
+	background:grey;
+	width:25%;
+	text-align:center;
+	margin:auto;
+	overflow:hidden;	
+}
+
+#bodyDiv{
+	background:yellow;
+	width:50%;
+	text-align:center;
+	margin:auto;
+	position:relative;
+	overflow:hidden;
+	
+	
+
+}
+
+#footerDiv{
+	background:grey;
+	width:25%;
+	height:150px;
+	text-align:center;
+	margin:auto;
+}
+
+#spork{
+	
+	margin:auto;
+}
+

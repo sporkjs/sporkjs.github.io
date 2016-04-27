@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/brownian.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142, Fall 2013
+//Brownian
+
+var X;
+var Y;
+ 
+function drawpoint(X,Y){                              //this will draw a point at (X,Y) with color (204,0,204)
+  color(204,0,204);
+  point(X,Y);
+}
+
+
+function setup(){
+  translate(200,200);
+  X=0                                                 //Original X value for first point
+  Y=0                                                 //Original Y value for first point
+  timestep(10);                                       //how quickly the next point appears
+  linewidth(2);                                       //the width of each point
+}
+
+function draw(){
+  drawpoint(X,Y);                                     //calling the drawpoint() function at (x,Y)
+  X=X+random()*2-1;                                   //Incrementing X in order to draw an adjacent point
+  Y=Y+random()*2-1;
+}
+
+</script>
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Brownian Motion</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a program that included funtions to take an initial point and from that create another point at a random adjacent point, and to continue the cycle from there.  </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, loop, and random functions from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+<center><button onclick='startloop();'>Start</button><div id='spork'></div>
+<button onclick='stoploop();'>Stop</button>
+</center>
+
+<center><div id="spork"></div></center>
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/brownian.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

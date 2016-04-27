@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<link rel="stylesheet" type="text/css" href="finalassignmentpagestyle.css">
+	<script src='header.js'></script>
+
+	<script type="text/javascript" src="spork.js"></script>
+
+<script>
+
+							var lastX;
+							var lastY;
+
+						function onmousedown() {
+  							lastX = mouseX;
+  							lastY = mouseY;
+ 
+						}
+
+						function onmousemove() {
+  							if (mouseDown) {
+      							line (mouseX, mouseY, lastX, lastY);
+      							lastX = mouseX;
+      							lastY = mouseY;
+    							}
+						}
+						function setup(){
+							background('white');
+						}
+
+</script>
+
+
+</head>
+<body>
+
+	<script>showHeader();</script>
+		<b> Drawing Program </b>
+		<p>
+		<div id='spork'></div>
+<b>Tools</b>
+							<p>
+								Colours
+							</p>
+							<p>
+								<button onclick="color('red');"> Red </button>
+								<button onclick="color('blue');"> Blue </button>
+								<button onclick="color('black');"> Black </button>
+								<button onclick="color('yellow');"> Yellow </button>
+							</p>
+							<p>
+								Line Widths
+							</p>
+							<p>
+								<button onclick="linewidth(1);"> 1pt Line </button>
+								<button onclick="linewidth(5);"> 5pt Line </button>
+								<button onclick="linewidth(10);"> 10pt Line </button>
+								<button onclick="linewidth(20);"> 20pt Line </button>
+							</p>
+							<p>
+							
+								Clear Canvas
+							</p>
+							<p>
+								<button onclick="setup();"> Clear</button>
+							</p>
+								Eraser
+							<p>
+							</p>
+							
+								<p> <button onclick="color('white');"> Eraser </button> </p>
+								<button onclick="linewidth(2);"> 2pt Eraser </button>
+								<button onclick="linewidth(5);"> 5pt Eraser </button>
+								<button onclick="linewidth(10);"> 10pt Eraser </button>
+								<button onclick="linewidth(20);"> 20pt Eraser </button>
+
+		</div>
+
+
+	<script>showFooter();</script>
+
+</body>
+
+</html>

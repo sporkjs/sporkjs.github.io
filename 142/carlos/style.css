@@ -1,0 +1,58 @@
+button{
+	-webkit-appearance: none;
+}
+
+div.title{
+ text-align: center;
+ color: white;
+ background: dodgerblue;
+}
+
+div.content{
+ background: white;
+ overflow: hidden;
+ padding-top: 20px;
+}
+
+div.menu{
+ font-size: 10px;
+ width: 200px;
+ float: left;
+ margin:5px
+}
+
+div.works{
+ font-size: 20px;
+ width: 200px;
+ text-align: center;
+ margin:5px;
+}
+
+button.menuButton{
+ font-size: 15px;
+ border-radius: 10px;
+ padding:5px;
+ width: 200px;
+}
+
+
+h1{
+ margin:0px;
+}
+
+h2{
+ margin:0px;
+}
+
+h3{
+ margin:0px;
+}
+
+#spork{
+ margin:auto;
+ width:410px;
+}
+
+#buttonsdiv{
+ text-align:center;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="thursdaystyle.css">
+
+<style>
+		#spork{
+			width:85%;
+			border:none;
+}
+		#colorButtonDiv{
+			width:100%;
+}
+		#linewidthButtonDiv{
+			width:100%;
+}
+		</style>
+
+<script src='header.js'></script>
+<script type="text/javascript" src="spork.js"></script>
+<script>
+var lastX, lastY;
+
+
+
+
+function onmousedown(){
+  //record position to start drawing
+  lastX=mouseX;
+  lastY=mouseY;
+}
+
+function onmousemove(){
+ if (mouseDown){
+  line(lastX,lastY,mouseX,mouseY);
+  lastX=mouseX;
+  lastY=mouseY;
+ }
+}
+
+function setup(){
+fillContainer();
+background('white');
+linewidth(5);
+
+}
+
+
+
+
+		</script>
+<body>
+
+<script>showHeader();</script>
+
+<h1>Drawing Canvas</h1>
+
+<div id='spork'>
+
+</div>
+
+<div id='colorButtonDiv'>
+<input type="radio" name="color" onclick="color('red');"> Red
+<input type="radio" name="color" onclick="color('blue');"> Blue
+<input type="radio" name="color" onclick="color('green');"> Green
+<input type="radio" name="color" onclick="color('yellow');"> Yellow	
+<input type="radio" name="color" onclick="color('orange');"> Orange
+<input type="radio" name="color" onclick="color('purple');"> Purple
+<br>
+<input type="radio" name="color" onclick="color('white');"> Erase
+</div>
+
+<div id='linewidthButtonDiv'>
+<input type="radio" name="linewidth" onclick="linewidth(5)");"> Thin
+<input type="radio" name="linewidth" onclick="linewidth(10)");"> Medium
+<input type="radio" name="linewidth" onclick="linewidth(20)");"> Thick
+</div>
+
+<script>showFooter();</script>
+
+</body>
+</html>

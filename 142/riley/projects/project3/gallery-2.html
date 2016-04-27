@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+	<style>
+		button.item {
+			width:23%;
+			height:auto;
+			min-height:300px;
+			padding: 0px;
+			margin: 1% .8%;
+		}
+		img.thumbnail {
+			max-height:auto;
+			max-width:100%;
+		}
+		#viewDiv{
+			position:fixed;
+			top:10px;
+			bottom:10px;
+			left:10px;
+			right:10px;
+			background: rgba(236, 240, 241,0.9);
+			border-radius: 10px;
+			display: none;
+			/*-webkit-animation: growIn .2s;*/
+		}
+		.buttonDiv {
+			padding: .6% .8% 1% .8%;
+			margin: 0px;
+		}
+		#theImage{
+		max-width: 90%;
+		max-height: 90%;
+		position: absolute;
+		top: 5%;
+		bottom: 5%;
+		left: 5%;
+		right: 5%;
+		margin: auto;
+		}
+	</style>
+	<script>
+    var N=7;
+    var buttonString='';
+    for(i=0; i<N; i=i+1){
+        buttonString=buttonString+'<button class="imgButton item" onclick="showPicture('+i+');"><img class="thumbnail" src="images/image'+i+'.png"></button>';
+    }
+    function showPicture(x){
+		viewDiv.style.display='block';
+		theImage.src="images/image"+x+".png"
+    
+    }
+	function hidePicture(){
+		viewDiv.style.display='none';
+	}
+</script>
+</head>
+
+<body>
+    <div class="buttonDiv js-masonry" data-masonry-options='{ "itemSelector": ".item" }'>
+        <script>document.write(buttonString);</script>
+    </div>
+	<div id='viewDiv'>
+		<button class="closeButton" onclick="hidePicture();">X</button>
+		<img src="photos/photo0.jpg" id="theImage" name="theImage">
+	</div>
+    
+</body>
+</html>
+<script src="masonry.js"></script>
+<!-- <div class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 200 }'>
+  <div class="item"></div>
+  <div class="item"></div>
+  ...
+</div> -->

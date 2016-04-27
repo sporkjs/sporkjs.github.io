@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Paper Doll </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<script src="portfolio.js"></script>
+	<style>
+		div.gallery{
+			border-style: solid;
+			border-color: black;
+			text-align: center;
+			background: grey;
+			width: 300px;
+			height: 300px;
+			margin: 10px auto;
+			position: relative;
+		}
+		img.GalleryPicture{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		#eyes{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		#hands{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		#hat{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		#mouth{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		#nose{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		#shoes{
+			height: 300px;
+			position: absolute;
+			left: 0px;
+		}
+		img.buttonImage{
+			border: none;
+			height: 50px;
+		}
+		#mainselectionDiv{
+			border: none;
+			height:125px;
+			text-align: center;
+			overflow-y:hidden;
+			overflow-x: auto;
+			white-space: nowrap;
+		}
+		div.selectionDiv{
+			display: none;
+			border: none;
+			text-align: center;
+			padding: 10px;
+			border-radius: 10px;
+			border-top-left-radius:0px;
+			border-top-right-radius:0px;
+			background: aqua;
+		}
+		#categories{
+			background: blue;
+			text-align: center;
+			border: none;
+			padding: 10px;
+		}
+
+	</style>
+	<script>
+		var eyes1='Layers/eyes01.png';
+		var eyes2='Layers/eyes02.png';
+		var eyes3='Layers/eyes03.png';
+		var eyes4='Layers/eyes04.png';
+		var hands1='Layers/hands01.png';
+		var hands2='Layers/hands02.png';
+		var hands3='Layers/hands03.png';
+		var hat1='Layers/hat01.png';
+		var hat2='Layers/hat02.png';
+		var hat3='Layers/hat03.png';
+		var mouth1='Layers/mouth01.png';
+		var mouth2='Layers/mouth02.png';
+		var mouth3='Layers/mouth03.png';
+		var nose1='Layers/nose01.png';
+		var nose2='Layers/nose02.png';
+		var nose3='Layers/nose03.png';
+		var shoes1='Layers/shoes01.png';
+		var shoes2='Layers/shoes02.png';
+		var shoes3='Layers/shoes03.png';
+		function changeEyes(newEyes){
+			eyes.src=newEyes;
+		}
+		function changeHands(newHands){
+			hands.src=newHands;
+		}
+		function changeHat(newHat){
+			hat.src=newHat;
+		}
+		function changeMouth(newMouth){
+			mouth.src=newMouth;
+		}
+		function changeNose(newNose){
+			nose.src=newNose;
+		}
+		function changeShoes(newShoes){
+			shoes.src=newShoes;
+		}
+
+	function showEyes(){
+		eyesSelectionDiv.style.display='block';
+		handsSelectionDiv.style.display='none';
+		hatSelectionDiv.style.display='none';
+		mouthSelectionDiv.style.display='none';
+		noseSelectionDiv.style.display='none';
+		shoesSelectionDiv.style.display='none';
+		}
+	function showHands(){
+		eyesSelectionDiv.style.display='none';
+		handsSelectionDiv.style.display='block';
+		hatSelectionDiv.style.display='none';
+		mouthSelectionDiv.style.display='none';
+		noseSelectionDiv.style.display='none';
+		shoesSelectionDiv.style.display='none';
+		}
+
+	function showHat(){
+		eyesSelectionDiv.style.display='none';
+		handsSelectionDiv.style.display='none';
+		hatSelectionDiv.style.display='block';
+		mouthSelectionDiv.style.display='none';
+		noseSelectionDiv.style.display='none';
+		shoesSelectionDiv.style.display='none';
+		}
+
+	function showMouth(){
+		eyesSelectionDiv.style.display='none';
+		handsSelectionDiv.style.display='none';
+		hatSelectionDiv.style.display='none';
+		mouthSelectionDiv.style.display='block';
+		noseSelectionDiv.style.display='none';
+		shoesSelectionDiv.style.display='none';
+		}
+
+	function showNose(){
+		eyesSelectionDiv.style.display='none';
+		handsSelectionDiv.style.display='none';
+		hatSelectionDiv.style.display='none';
+		mouthSelectionDiv.style.display='none';
+		noseSelectionDiv.style.display='block';
+		shoesSelectionDiv.style.display='none';
+		}
+
+	function showShoes(){
+		eyesSelectionDiv.style.display='none';
+		handsSelectionDiv.style.display='none';
+		hatSelectionDiv.style.display='none';
+		mouthSelectionDiv.style.display='none';
+		noseSelectionDiv.style.display='none';
+		shoesSelectionDiv.style.display='block';
+		}
+
+	</script>
+</head>
+
+<body>
+<script>
+writeHeader();
+</script>
+
+<div class='gallery'>
+	<img class="GalleryPicture" src="Layers/MrPotatoHead.png" id="MrPotatoHead" name="MrPotatoHead">
+	<img class="GalleryPicture" src="Layers/eyes01.png" id="eyes" name="eyes">
+	<img class="GalleryPicture" src="Layers/hands01.png" id="hands" name="hands">
+	<img class="GalleryPicture" src="Layers/hat01.png" id="hat" name="hat">
+	<img class="GalleryPicture" src="Layers/mouth01.png" id="mouth" name="mouth">
+	<img class="GalleryPicture" src="Layers/nose01.png" id="nose" name="nose">
+	<img class="GalleryPicture" src="Layers/shoes01.png" id="shoes" name="shoes">
+
+</div>
+
+<div id="categories">
+	<button class="category" onclick="showEyes();">Eyes</button>
+	<button class="category" onclick="showHands();">Hands</button>
+	<button class="category" onclick="showHat();">Hat</button>
+	<button class="category" onclick="showMouth();">Mouth</button>
+	<button class="category" onclick="showNose();">Nose</button>
+	<button class="category" onclick="showShoes();">Shoes</button>
+</div>
+
+<div id="mainSelectionDiv">
+	<div id="eyesSelectionDiv" class="selectionDiv">
+		<button onclick="changeEyes(eyes1);">
+			<img class="buttonImage" src="thumbnails/eyes01.png" class="buttonImage">
+		</button>
+		<button onclick="changeEyes(eyes2);">
+			<img class="buttonImage" src="thumbnails/eyes02.png" class="buttonImage">
+		</button>
+		<button onclick="changeEyes(eyes3);">
+			<img class="buttonImage" src="thumbnails/eyes03.png" class="buttonImage">
+		</button>
+		<button onclick="changeEyes(eyes4);">
+			<img class="buttonImage" src="thumbnails/eyes04.png" class="buttonImage">
+		</button>
+
+	</div>
+	<div id="handsSelectionDiv" class="selectionDiv">
+		<button onclick="changeHands(hands1);">
+			<img class="buttonImage" src="thumbnails/hands01.png" class="buttonImage">
+		</button>
+		<button onclick="changeHands(hands2);">
+			<img class="buttonImage" src="thumbnails/hands02.png" class="buttonImage">
+		</button>
+		<button onclick="changeHands(hands3);">
+			<img class="buttonImage" src="thumbnails/hands03.png" class="buttonImage">
+		</button>
+
+	</div>
+	<div id="hatSelectionDiv" class="selectionDiv">
+		<button onclick="changeHat(hat1);">
+			<img class="buttonImage" src="thumbnails/hat01.png" class="buttonImage">
+		</button>
+		<button onclick="changeHat(hat2);">
+			<img class="buttonImage" src="thumbnails/hat02.png" class="buttonImage">
+		</button>
+		<button onclick="changeHat(hat3);">
+			<img class="buttonImage" src="thumbnails/hat03.png" class="buttonImage">
+		</button>
+
+	</div>
+	<div id="mouthSelectionDiv" class="selectionDiv">
+		<button onclick="changeMouth(mouth1);">
+			<img class="buttonImage" src="thumbnails/mouth01.png" class="buttonImage">
+		</button>
+		<button onclick="changeMouth(mouth2);">
+			<img class="buttonImage" src="thumbnails/mouth02.png" class="buttonImage">
+		</button>
+		<button onclick="changeMouth(mouth3);">
+			<img class="buttonImage" src="thumbnails/mouth03.png" class="buttonImage">
+		</button>
+
+	</div>
+	<div id="noseSelectionDiv" class="selectionDiv">
+		<button onclick="changeNose(nose1);">
+			<img class="buttonImage" src="thumbnails/nose01.png" class="buttonImage">
+		</button>
+		<button onclick="changeNose(nose2);">
+			<img class="buttonImage" src="thumbnails/nose02.png" class="buttonImage">
+		</button>
+		<button onclick="changeNose(nose3);">
+			<img class="buttonImage" src="thumbnails/nose03.png" class="buttonImage">
+		</button>
+
+	</div>
+	<div id="shoesSelectionDiv" class="selectionDiv">
+		<button onclick="changeShoes(shoes1);">
+			<img class="buttonImage" src="thumbnails/shoes01.png" class="buttonImage">
+		</button>
+		<button onclick="changeShoes(shoes2);">
+			<img class="buttonImage" src="thumbnails/shoes02.png" class="buttonImage">
+		</button>
+		<button onclick="changeShoes(shoes3);">
+			<img class="buttonImage" src="thumbnails/shoes03.png" class="buttonImage">
+		</button>
+
+	</div>
+</div>
+
+<p>
+
+</p>
+
+<script>
+writeFooter();
+</script>
+</body>
+</html>

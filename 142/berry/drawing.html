@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Cole Berry's Drawing</title>
+<link rel="stylesheet" type="text.css" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script src='portfolio.js'></script>
+<script src="spork.js"></script>
+	<script>
+		var x1;
+		var y1;
+		var x2;
+		var y2;
+		var lineColor;
+		var lineSize;
+		
+		function onmousemove(){
+			if (mouseDown == true){
+				
+				x1 = mouseX;
+				y1 = mouseY;
+				line(x1, y1, x2, y2);
+				x2 = mouseX;
+				y2 = mouseY;
+			}
+		}
+
+		function onmousedown(){
+			x1 = mouseX;
+			y1 = mouseY;
+			x2 = mouseX;
+			y2 = mouseY;
+			color(lineColor);	
+			linewidth(lineSize);			
+		}
+		function colorRed(){
+			lineColor='red';
+		}
+		function colorBlack(){
+			lineColor='black';
+		}
+		function colorBlue(){
+			lineColor='blue';
+		}
+		function colorYellow(){
+			lineColor='yellow';
+		}
+		function colorGreen(){
+			lineColor='green';
+		}
+		function colorViolet(){
+			lineColor='violet';
+		}
+		function colorOrange(){
+			lineColor='orange';
+		}
+		function widthSmall(){
+			lineSize='1';
+		}
+		function widthMedium(){
+			lineSize='10';
+		}
+		function widthLarge(){
+			lineSize='30';
+		}
+		function clearAll(){
+			lineSize='500';
+			clear();
+			lineSize='1';
+		}
+	</script>
+</head>
+
+<body>
+<script>writeHeader();</script>
+<center>
+<p>
+<div id="spork"></div>
+	<button onclick="colorBlack();">Black</button>
+	<button onclick="colorRed();">Red</button>
+	<button onclick="colorBlue();">Blue</button>
+	<button onclick="colorYellow();">Yellow</button>
+	<button onclick="colorGreen();">Green</button>
+	<button onclick="colorViolet();">Violet</button>
+	<button onclick="colorOrange();">Orange</button>
+	<p>Brush Size</p>
+	<button onclick="widthSmall();">Small</button>
+	<button onclick="widthMedium();">Medium</button>
+	<button onclick="widthLarge();">Large</button>
+	<button onclick="clearAll();">Clear</button></center>
+	<p>
+<script>writeFooter();</script>
+</body>
+
+</html>

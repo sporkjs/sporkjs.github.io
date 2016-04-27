@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script type="text/javascript" src="spork.js"></script>
+<script>
+//setup should contain fillContainer();
+var paddleX;
+var paddleOldX;
+var paddleV=0;
+var paddleWidth=30;
+var controlHeight=50;
+
+var ballX;
+var ballR=10;
+var ballY;
+var ballDy=-1;
+var ballDx=1;
+
+function drawPaddle(){
+ rect(paddleX-paddleWidth, height-10-controlHeight, 2*paddleWidth, 10);
+ fill();
+}
+
+function drawBall(){
+ circle(ballX, ballY, ballR);
+ fill();
+}
+
+function onmousemove(){
+ if (mouseDown){
+   paddleX=mouseX;
+ }
+}
+
+function setup(){
+ fillContainer();
+ paddleX=width/2;
+ paddleOldX=width/2;
+ ballX=width/2;
+ ballY=height-ballR-controlHeight-10;
+
+
+ timestep(20);
+ loop();
+}
+
+function paddleVelocity(){
+ paddleV=paddleX-paddleOldX;
+ paddleOldX=paddleX;
+}
+function moveBall(){
+ ballX+=ballDx;
+ ballY+=ballDy;
+ if ((ballX>width-ballR) || (ballX<ballR))
+  ballDx*=-1;
+ if (ballY<ballR)
+  ballDy*=-1;
+ if (ballY>height-ballR-controlHeight-10)
+  if ((paddleX-paddleWidth < ballX) && (paddleX+paddleWidth>ballX)){
+   ballDy*=-1;
+   ballDx+=paddleV;
+  }
+  else{
+   stoploop();
+   alert('You Missed');
+  }
+}
+
+function draw(){
+ clear();
+ paddleVelocity();
+ moveBall();
+ drawPaddle();
+ drawBall();
+}
+
+</script>
+</head>
+<body>
+<div id='spork' style='position:fixed; top:10px;bottom:10px;left:10px;right:10px;'></div>
+</body>
+</html>

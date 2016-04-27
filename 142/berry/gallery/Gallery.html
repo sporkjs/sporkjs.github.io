@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Cole Berry's Image Gallery</title>
+<link rel="stylesheet" type="text.css" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script src='portfolio.js'></script>
+<style>
+		#galleryPicture{
+			height:200px;
+		}
+		img.buttonImage{
+			height:50px;
+		}
+		div.gallery{
+			text-align:center;
+		}
+		button.buttonStyle{
+			background:darkgrey;
+		}
+	</style>
+	<script>
+			var image1="BlockyThingy.png";
+			var image2="Creature.png";
+			var image3="House.png";
+			var image4="LoopImg.png";
+			var image5="TextImage.png";
+			
+			var caption1="Blocky Thingy";
+			var caption2="Creature";
+			var caption3="House";
+			var caption4="Loop Image";
+			var caption5="Text Image";
+		function ChangeImage(newImage,newCaption){
+			galleryPicture.src=newImage;
+			caption.innerHTML=newCaption;
+		}
+	</script>
+</head>
+
+<body>
+<script>writeHeader();</script>
+<center>
+<p>
+<div class="gallery">
+	<img src="BlockyThingy.png" id="galleryPicture" name="galleryPicture">
+	<div >
+	<h3 id="caption">Blocky Thingy</h3>
+	</div>
+	<button class="buttonStyle" onclick="ChangeImage(image1,caption1);"><img src="BlockyThingy.png" class="buttonImage"></button>
+	<button class="buttonStyle" onclick="ChangeImage(image2,caption2);"><img src="Creature.png" class="buttonImage"></button>
+	<button class="buttonStyle" onclick="ChangeImage(image3,caption3);"><img src="House.png" class="buttonImage"></button>
+	<button class="buttonStyle" onclick="ChangeImage(image4,caption4);"><img src="LoopImg.png" class="buttonImage"></button>
+	<button class="buttonStyle" onclick="ChangeImage(image5,caption5);"><img src="TextImage.png" class="buttonImage"></button>
+	</div><p></center>
+<div class='footer'><a href='../index.html'>Back to portfolio</a><br><a href='../../index.html'>Back to index</a></div>
+</body>
+
+</html>

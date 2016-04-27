@@ -1,0 +1,46 @@
+div{
+border:1px solid black;
+}
+
+body{
+font-family: Courier;
+font-size:24px;
+color:orange;
+padding: 50px;
+}
+
+html { 
+  background: url(techno_house.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#spork{
+border:none;
+}
+
+div.title{
+font-size:200%;
+text-align: center;
+background:yellow;
+}
+
+p{
+text-indent:20px;
+}
+
+div.content{
+padding: 20px;
+}
+
+div.footer{
+font-size:50%;
+text-align: center;
+}
+
+pre{
+background:rgba(200,200,200,0.5);
+}
+
