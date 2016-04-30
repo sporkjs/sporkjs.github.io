@@ -1,43 +1,0 @@
-<!DOCTYPE html>
-<html>
-
-<head> 
-
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-	<link rel="stylesheet" type="text/css" href="finalassignmentpagestyle.css">
-	<script src='header.js'></script>
-
-<script type="text/javascript" src="spork.js"></script>
-		<script>
-
-
-var x,y,z, r, b, g;function drawHour(){  var x=hour()*30;   color('blue');  linewidth(6);  circle(0,0,x);}function drawMinute(){  var r=6*minute();  color('red');  linewidth(10);  circle(0,0,r);}function drawSecond(){  var x= 6*second();  color('green');  linewidth(3);  circle(0,0,x,height);}function setup(){  size(360,360);  loop();}function draw(){  clear();
-  background('white');  drawMinute();  drawSecond();  drawHour();}
-</script>
-
-</head>
-
-<body>
-
-	<script>showHeader();</script>
-		<p>
-		<b> CLOCK </b>
-		<p> 
-	<div id='spork'></div>
-		</p>
-		<p>
-		</p>
-		<p>
-		We were instructed to create a clock that counted seconds, minutes, and hours in a creative way. <br>
-		Using the program, Spork, to create the clock we used commands such as circle, second, minute, hour, and color. <br>
-		Blue = Hours <br>
-		Red = Minutes <br> 
-		Green = Seconds <br>
-		</p>
-	<script>showFooter();</script>
-
-
-
-</body>
-
-</html>
