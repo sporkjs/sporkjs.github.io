@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="SmashBros.css">
+<style>
+
+body{
+	text-align:center;
+	
+}
+#titleBar{
+	font-family: "Algerian", Times, serif;
+	font-size: 50px;
+	font-style: italic;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 10px darkblue;
+	border: white;
+}
+#content{
+	
+	width: 80%;
+	margin: auto;
+}
+#SmashClothes{
+	position: relative;
+	height: 500px;
+	width: 500px;
+	margin: auto;
+}
+img.clothes{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	height: 100%;
+}
+button.select{
+	height: 70px;
+	width: 70px;
+	background: rgb(156, 156, 116);
+}
+img.select{
+	height:90%;
+}
+#mainSelectionDiv{
+	height:125px;
+	overflow-y:hidden;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+#leftDiv{
+	position: fixed;
+	left:0px;
+	top:150px;
+	text-align:left;
+}
+#rightDiv{
+	position: fixed;
+	right:0px;
+	top:150px;
+	text-align:right;
+}
+div.selectionDiv{
+	width: 70px;
+	white-space: nowrap;
+	overflow:hidden;
+	-webkit-transition: width 2s; /* Safari */
+        transition: width 2s;
+display: inline-block;
+}
+div.selectionDiv:hover {
+    width: 1000px;
+
+}
+
+button.category{
+	text-align: center;
+	width: 50px;
+	background: rgb(156, 156, 116);
+}
+
+</style>
+<script>
+function showShirts(){
+	shirtSelectionDiv.style.display='block';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='none';
+	scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='none';
+}
+function showPants(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='block';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='none';
+        scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='none';
+}
+function showBoots(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='block';
+	helmetSelectionDiv.style.display='none';
+	scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='none';
+}
+function showHelmet(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='block';
+	scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='none';
+}
+function showScarf(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='none';
+	scarfSelectionDiv.style.display='block';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='none';
+}
+function showGloves(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='none';
+	scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='block';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='none';
+}
+function showBelt(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='none';
+	scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='block';
+	miscSelectionDiv.style.display='none';
+}
+function showMisc(){
+	shirtSelectionDiv.style.display='none';
+	pantsSelectionDiv.style.display='none';
+	bootsSelectionDiv.style.display='none';
+	helmetSelectionDiv.style.display='none';
+	scarfSelectionDiv.style.display='none';
+	glovesSelectionDiv.style.display='none';
+	beltSelectionDiv.style.display='none';
+	miscSelectionDiv.style.display='block';
+}
+</script>
+</head>
+<body>
+<div id='titleBar'>Smash Clothes</div>
+
+
+<div id='SmashClothes'>
+	<img id='misc' 	        name='misc'	class='clothes' src='images/Misc/misc1.gif'>
+	<img id='model'  	name='model'	class='clothes' src='images/base.png'>
+	<img id='shirt' 	name='shirt' 	class='clothes' src='images/Shirts/shirt1.gif'>
+	<img id='boots' 	name='boots'	class='clothes' src='images/Boots/boots1.gif'>
+	<img id='pants' 	name='pants'	class='clothes' src='images/Pants/pants1.gif'>
+	<img id='hemlet' 	name='helmet'	class='clothes' src='images/Helmet/helmet1.gif'>
+	<img id='scarf' 	name='scarf'	class='clothes' src='images/Scarf/scarf1.gif'>
+	<img id='gloves' 	name='gloves'	class='clothes' src='images/Gloves/gloves1.gif'>
+	<img id='belt' 	        name='belt'	class='clothes' src='images/Belt/belt1.gif'>
+</div>
+<div id='leftDiv'>
+	<div id='shirtSelectionDiv'class='selectionDiv'>
+		<button class='select' onclick='shirt.src="images/Shirts/Black.png";'><img class='select' src='images/Shirts/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Blood.png";'><img class='select' src='images/Shirts/thumbnails/BloodT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Blue.png";'><img class='select' src='images/Shirts/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Cyan.png";'><img class='select' src='images/Shirts/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Falcon.png";'><img class='select' src='images/Shirts/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Gold.png";'><img class='select' src='images/Shirts/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Green.png";'><img class='select' src='images/Shirts/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Pink.png";'><img class='select' src='images/Shirts/thumbnails/PinkT.png'></button>
+		<button class='select' onclick='shirt.src="images/Shirts/Red.png";'><img class='select' src='images/Shirts/thumbnails/RedT.png'></button>
+	</div>
+<br>
+	<div id='pantsSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='pants.src="images/Pants/Black.png";'><img class='select' src='images/Pants/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/BloodHawk.png";'><img class='select' src='images/Pants/thumbnails/BloodHawkT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Blue.png";'><img class='select' src='images/Pants/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Cyan.png";'><img class='select' src='images/Pants/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Falcon.png";'><img class='select' src='images/Pants/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Gold.png";'><img class='select' src='images/Pants/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Green.png";'><img class='select' src='images/Pants/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Pink.png";'><img class='select' src='images/Pants/thumbnails/PinkT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Red.png";'><img class='select' src='images/Pants/thumbnails/RedT.png'></button>
+		<button class='select' onclick='pants.src="images/Pants/Pikmin.png";'><img class='select' src='images/Pants/thumbnails/PikminT.png'></button>
+	</div>
+<br>
+	<div id='bootsSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='boots.src="images/Boots/Black.png";'><img class='select' src='images/Boots/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Blood.png";'><img class='select' src='images/Boots/thumbnails/BloodT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/BloodHawk.png";'><img class='select' src='images/Boots/thumbnails/BloodHawkT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Blue.png";'><img class='select' src='images/Boots/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Cyan.png";'><img class='select' src='images/Boots/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Falcon.png";'><img class='select' src='images/Boots/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Gold.png";'><img class='select' src='images/Boots/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Green.png";'><img class='select' src='images/Boots/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Pikmin.png";'><img class='select' src='images/Boots/thumbnails/PikminT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Pink.png";'><img class='select' src='images/Boots/thumbnails/PinkT.png'></button>
+		<button class='select' onclick='boots.src="images/Boots/Red.png";'><img class='select' src='images/Boots/thumbnails/RedT.png'></button>
+	</div>
+<br>
+	<div id='helmetSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='helmet.src="images/Helmet/Red.png";'><img class='select' src='images/Helmet/thumbnails/RedT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Black.png";'><img class='select' src='images/Helmet/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Blood.png";'><img class='select' src='images/Helmet/thumbnails/BloodT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/BloodHawk.png";'><img class='select' src='images/Helmet/thumbnails/BloodHawkT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Blue.png";'><img class='select' src='images/Helmet/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Cyan.png";'><img class='select' src='images/Helmet/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Falcon.png";'><img class='select' src='images/Helmet/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Gold.png";'><img class='select' src='images/Helmet/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Green.png";'><img class='select' src='images/Helmet/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Pikmin.png";'><img class='select' src='images/Helmet/thumbnails/PikminT.png'></button>
+		<button class='select' onclick='helmet.src="images/Helmet/Red.png";'><img class='select' src='images/Helmet/thumbnails/RedT.png'></button>
+	</div>
+</div>
+<div id='rightDiv'>
+	<div id='scarfSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='scarf.src="images/Scarf/Black.png";'><img class='select' src='images/Scarf/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Blood.png";'><img class='select' src='images/Scarf/thumbnails/BloodT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/BloodHawk.png";'><img class='select' src='images/Scarf/thumbnails/BloodHawkT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Blue.png";'><img class='select' src='images/Scarf/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Cyan.png";'><img class='select' src='images/Scarf/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Falcon.png";'><img class='select' src='images/Scarf/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Gold.png";'><img class='select' src='images/Scarf/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Green.png";'><img class='select' src='images/Scarf/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Pikmin.png";'><img class='select' src='images/Scarf/thumbnails/PikminT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Pink.png";'><img class='select' src='images/Scarf/thumbnails/PinkT.png'></button>
+		<button class='select' onclick='scarf.src="images/Scarf/Red.png";'><img class='select' src='images/Scarf/thumbnails/RedT.png'></button>
+	</div><br><div id='glovesSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='gloves.src="images/Gloves/Black.png";'><img class='select' src='images/Gloves/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Blood.png";'><img class='select' src='images/Gloves/thumbnails/BloodT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/BloodHawk.png";'><img class='select' src='images/Gloves/thumbnails/BloodHawkT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Blue.png";'><img class='select' src='images/Gloves/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Cyan.png";'><img class='select' src='images/Gloves/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Falcon.png";'><img class='select' src='images/Gloves/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Gold.png";'><img class='select' src='images/Gloves/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Green.png";'><img class='select' src='images/Gloves/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Pink.png";'><img class='select' src='images/Gloves/thumbnails/PinkT.png'></button>
+		<button class='select' onclick='gloves.src="images/Gloves/Red.png";'><img class='select' src='images/Gloves/thumbnails/RedT.png'></button>
+	</div><br><div id='beltSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='belt.src="images/Belt/Black.png";'><img class='select' src='images/Belt/thumbnails/BlackT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Blood.png";'><img class='select' src='images/Belt/thumbnails/BloodT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/BloodHawk.png";'><img class='select' src='images/Belt/thumbnails/BloodHawkT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Blue.png";'><img class='select' src='images/Belt/thumbnails/BlueT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Cyan.png";'><img class='select' src='images/Belt/thumbnails/CyanT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Falcon.png";'><img class='select' src='images/Belt/thumbnails/FalconT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Gold.png";'><img class='select' src='images/Belt/thumbnails/GoldT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Green.png";'><img class='select' src='images/Belt/thumbnails/GreenT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Pink.png";'><img class='select' src='images/Belt/thumbnails/PinkT.png'></button>
+		<button class='select' onclick='belt.src="images/Belt/Red.png";'><img class='select' src='images/Belt/thumbnails/RedT.png'></button>
+	</div><br><div id='miscSelectionDiv' class='selectionDiv'>
+		<button class='select' onclick='misc.src="images/Misc/Cape.png";'><img class='select' src='images/Misc/thumbnails/CapeT.png'></button>
+		<button class='select' onclick='misc.src="images/Misc/Wings.png";'><img class='select' src='images/Misc/thumbnails/WingsT.png'></button>
+		<button class='select' onclick='misc.src="images/base.png";'><img class='select' src='images/Misc/thumbnails/NoneT.png'></button>
+	</div>
+</div>
+	
+
+
+
+</body>
+</html>
