@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>TITLE GOES HERE</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<script src='portfolio.js'></script>
+
+<script src="spork.js"></script>
+
+<script>
+
+
+
+var x;
+var y;
+var Cupx;
+var Score;
+var GameNotOver;
+var v;
+
+
+function setup(){
+  y=0;
+  x=random()*400;
+  Cupx=200;
+  Score=0;
+  v=1;
+  timestep(10);
+  GameNotOver=true;
+  loop();
+
+}
+
+function creature(x,y,s){
+  save();
+  translate(x,y);
+  scale(s);
+
+fillcolor("black");
+ellipse(-120, 20, 70, 20);
+fill();
+
+fillcolor("black");
+ellipse(120, 20, 70, 20);
+fill();
+
+fillcolor("orange");
+ellipse(-80, 120, 70, 40);
+fill();
+
+fillcolor("orange");
+ellipse(80, 120, 70, 40);
+fill();
+
+fillcolor("black");
+circle(0,0, 140);
+fill();
+
+fillcolor("white");
+circle(0,60, 80);
+fill();
+
+save();
+translate(150,200);
+fillcolor('red'); 
+line(-190,-190,-110,-110,-110,-190,-190,-110,-190,-190); 
+fill(); 
+restore();
+
+fillcolor("white");
+circle(-45,-55,30);
+fill();
+
+fillcolor("white");
+circle(35,-75,50);
+fill();
+
+fillcolor("black");
+circle(-35,-50,10);
+fill();
+
+fillcolor("black");
+circle(15,-70,20);
+fill();
+
+translate(140,160);
+fillcolor("orange");
+triangle(-140, -130, -110, -180, -170, -180);
+fill();
+
+restore();
+
+}
+
+
+
+function draw(){
+  clear();
+      background(30,144,255);
+
+fillcolor("green");
+rect(0,300,400,100); 
+fill();
+
+fillcolor("white");
+rect(240,199,100,100); 
+fill();
+
+fillcolor(173,216,230)
+rect(250,210,35,35);
+fill();
+
+fillcolor(173,216,230);
+rect(295,210,35,35);
+fill();
+
+fillcolor("red");
+rect(272,259,35,40);
+fill();
+
+fillcolor(128,0,0);
+triangle(290,150,220,200,360,200);
+fill();
+
+fillcolor("yellow");
+circle(80,80,50);
+fill();
+
+color("white");
+fillcolor("white");
+circle(250,80,20);
+fill();
+
+fillcolor("white");
+circle(280,80,20);
+fill();
+
+fillcolor("white");
+circle(310,80,20);
+fill();
+
+color("white");
+fillcolor("white");
+circle(200,150,20);
+fill();
+
+fillcolor("white");
+circle(170,150,20);
+fill();
+
+fillcolor("white");
+circle(140,150,20);
+fill();
+  drawcreature();
+  y=y+v;
+  filltext(Score,15,45);
+  bounce();
+  drawCup();
+ 
+
+}
+
+
+function drawcreature(){
+  creature(x,y,.1);
+ 
+
+  
+}
+
+
+function bounce(){
+  if (y>400){
+    if ((Cupx-10<x)&(x<Cupx+10)&GameNotOver){
+    v=v+0.2;
+    y=0;
+    x=random()*400;
+    Score=(Score+1);
+    }
+    else{
+      filltext('Game Over!',80,200);
+      GameNotOver=false;
+    }
+  }
+}
+
+function drawCup(){
+  arc(Cupx,380,20,0,180);
+  fill();
+}
+
+function onkeydown(){
+  if (keyCode == rightArrow)
+    Cupx=Cupx+8;
+  if (keyCode == leftArrow)
+    Cupx=Cupx-8;
+  if (keyChar == 'S')
+    setup();
+}
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<script>writeheader();</script>
+
+<div id="spork"></div>
+
+<script>writefooter();</script>
+
+
+
+</body>
+
+</html>
