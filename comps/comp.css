@@ -1,0 +1,28 @@
+
+#thePreview{
+	height: auto;
+	width: 35%;
+	float:left;
+	min-height: 500px;
+	background: white;
+	border: 1px solid black;
+	padding: 10px;
+	margin: 10px;
+}
+#theLatex{
+	width: 35%;
+	min-height: 500px;
+	background: lightgray;
+	padding: 10px;
+	margin: 10px;
+}
+#controlPanel{
+	float: left;
+	padding-right: 10px;
+}
+ol  ol{
+	list-style-type: lower-latin;
+}
+ol  ol ol{
+	list-style-type: lower-roman;
+}
