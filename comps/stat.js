@@ -782,21 +782,65 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item There is a linear correlation between the weight of a glow worm and how much it eats in a day. Here is a table below of weights (in ounces) and amount eaten (in ounces) in a day by a sample of glow worms:\
-		$$\\begin{array}{c|cccccccccc}\
-		weight \& 0.75 \& 1.25 \& 1.05 \& 0.65 \& 1.35 \& 0.95 \& 1.20 \& 0.95 \& 0.70\\\\ \\hline\
-		weight \\, eaten \& 1.55 \& 2.45 \& 2.05 \& 1.25 \& 2.55 \& 1.85 \& 2.35 \& 1.75 \& 1.30\
-		\\end{array}$$\
-		\\begin{enumerate}\
-		\\item Use the data in the table to find a regression equation relating weight to amount eaten. \
-		\\item Is the linear correlation positive or negative? \
-		\\item Use the regression equation to approximate the amount that a worm which weighs 1 ounce \
-		eats in one day.  \
-		\\end{enumerate}',
 	'\\item A random sample of eight drivers insured with a company and having similar auto insurance policies was selected. The following table lists their driving experiences (in years) and monthly auto insurance premiums. After conducting a hypothesis test we conclude there is linear correlation between the variables. Predict the monthly auto insurance premium for a driver with 10 years of driving experience.\
 		$$\\begin{array}{r|c|c|c|c|c|c|c|c}Driving \\, Experience (years) \& 5 \& 2 \& 12 \& 9 \& 15 \& 6 \& 25 \& 16 \\\\ \\hline\
-		Monthly \\, Premium (\\$)\& 64\& 87\& 50\& 71\& 44\& 56\& 42\& 60\\end{array}$$'
-					];
+		Monthly \\, Premium (\\$)\& 64\& 87\& 50\& 71\& 44\& 56\& 42\& 60\\end{array}$$',
+'\\item There is a linear correlation between song audiences impressions and album sales.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	number of albums sold for a song\
+	with 20 (hundred million) audience impressions. (In the table below, audience impressions\
+	are in hundreds of millions and the numbers of albums sold are in hundreds\
+	of thousands).\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
+	Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
+	\\end{array}$$',
+'\\item There is a linear correlation between movie budgets and gross income for the movie.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	gross amount for a movie with a\
+	budget of 40 million dollars. (In the table below, all amounts are in millions of dollars.)\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90 \\\\ \\hline\
+	Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
+	\\end{array}$$',
+'\\item There is a linear correlation between car weight and fuel consumption.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	highway fuel consumption\
+	amount (in mi/gal) for a car that weighs 3000 lb.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
+	Fuel \\, consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
+	\\end{array}$$',
+'\\item There is a linear linear correlation between bear chest size and weight.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	weight (in pounds) of a bear with a chest size of 50 in.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Chest \\, size \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
+	Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
+	\\end{array}$$',
+'\\item There is a linear correlation between diastolic and systolic blood pressure measurements.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	diastolic blood pressure for a person with a systolic reading of 140.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
+	Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
+	\\end{array}$$',
+'\\item There is a linear correlation between the number of murders in a city and the population size of the city.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	population size for a city with 120 murders. (The population sizes are in hundreds of thousands.)\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
+	Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
+	\\end{array}$$',
+'\\item There is a linear correlation between the temperature and the number of times that a cricket chirps in \
+	one minute.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	temperature for a time when a cricket is chirping at the rate of 1000 chirps per minute.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
+	Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
+	\\end{array}$$',
+			];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------

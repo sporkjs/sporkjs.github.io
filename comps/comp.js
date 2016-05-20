@@ -93,5 +93,6 @@ function setup(){
 		r+='<label for="check'+i+'"> <input type="checkbox" id="check'+i+'"> '+names[i].replace('Competency ', '')+' </label><br>';
 	r+="<br><button onclick='doit();'>Create Test</button><button onclick='showall();'>All Types</button>";
 	controlPanel.innerHTML=r;
+	MathJax.Hub.Typeset();
 }
 window.onload=function(){setup();}
