@@ -724,14 +724,27 @@ comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item Sue thinks that the average length of a glow worm is 10 inches. She collected a sample of glow worms and measured their lengths. The results are below in inches:\\\\ 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10 \\begin{enumerate} \\item Use this data to construct a $95\\%$ confidence interval estimate of the mean length of a glow worm.  \\item Does it appear as if the average length of a glow worm is 10 inches? Explain.  \\end{enumerate}',
-	'\\item A study of 10 randomly selected participants in a study had a mean systolic blood pressure of 121.2 and a standard deviation of 11.1. Construct a $95\\%$ confidence interval for the true systolic blood pressure.'
+	'\\item A study of 10 randomly selected participants in a study had a mean systolic blood pressure of 121.2 and a standard deviation of 11.1. Construct a $95\\%$ confidence interval for the true systolic blood pressure.',
+	'\\item  Heights for teenage girls were calculated. The mean height for the sample of 12 girls was 166 cm and the standard deviation was 8 cm.   Compute the  $95\\%$ confidence interval for the height of teenage girls.',
+	'\\item  A sample of 22 tests had a mean of 60 and a standard deviation of 10. Construct a $99\\%$ confidence interval for the mean test score.',
+	'\\item  Fifty newborn elephants are weighed. The sample mean is 244 pounds. The sample standard deviation is 11 pounds. Construct a $95\\%$ confidence interval for the population mean weight of newborn elephants.',
+	'\\item  The U.S. Census Bureau conducts a study to determine the time needed to complete the short form. The Bureau surveys 200 people. The sample mean is 8.2 minutes and the  standard deviation is 2.2 minutes. Compute a $90\\%$ confidence interval for the population mean time to complete the forms.',
 					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Among a sample of 170 green glow  worms, 127 were female. Among a sample of 220 blue glow worms, 104 were female. \\begin{enumerate} \\item Find a $95\%$ confidence interval estimate of the proportion of green glow worms which are female.  \\item Find a $95\%$ confidence interval estimate of the proportion of blue glow worms which are female.  \\item Does it appear as if one type of glow worm has a larger proportion that are female? Explain. \\end{enumerate}',
-	'\\item A study of 950 randomly selected students revealed that 370 of them changed had changed their majors at least once. Construct a $95\\%$ confidence interval for the proportion of all students who change their majors.'
+	'\\item A study of 950 randomly selected students revealed that 370 of them changed had changed their majors at least once. Construct a $95\\%$ confidence interval for the proportion of all students who change their majors.',
+	'\\item  A political science student at a large university wants to estimate the percent of students who are registered voters. She surveys 500 students and finds that 300 are registered voters. Compute a $90\\%$ confidence interval for the true percent of students who are registered voters.',
+	'\\item  Police set up a checkpoint at which drivers are stopped and their cars inspected for safety violations. They find that 14 of the 134 cars stopped have at least one safety violation. Construct a $95\\%$ confidence interval for the proportion of all cars with safety violations.',
+	'\\item  A political science student at a large university wants to estimate the percent of students who are registered voters. She surveys 500 students and finds that 300 are registered voters. Compute a $90\\%$ confidence interval for the true percent of students who are registered voters.',
+	'\\item  An insurance company checks police records on 582 accidents and notes that teens were at the wheel in 91 of them.  Construct a $95\\%$ confidence interval for the percentage of all accidents that involve teenage drivers.',
+	'\\item  A political science student at a large university wants to estimate the percent of students who are registered voters. She surveys 500 students and finds that 300 are registered voters. Compute a $90\\%$ confidence interval for the true percent of students who are registered voters.',
+	'\\item  Suppose that a market research firm is hired to estimate the percent of adults living in a large city who have cell phones. Five hundred randomly selected adult residents in this city are surveyed to determine whether they have cell phones. Of the 500 people surveyed, 421 responded yes - they own cell phones. Construct a $95\\%$ confidence interval for the proportion of adult residents of this city who have a cell phone.',
+	'\\item  A political science student at a large university wants to estimate the percent of students who are registered voters. She surveys 500 students and finds that 300 are registered voters. Compute a $90\\%$ confidence interval for the true percent of students who are registered voters.',
+	'\\item   A person claims to be able to predict the outcome of flipping a coin. This person is correct 16 out of 25 times. Compute the  $95\\%$ confidence interval for the proportion of times this person can predict coin flips correctly.',
+	'\\item  A political science student at a large university wants to estimate the percent of students who are registered voters. She surveys 500 students and finds that 300 are registered voters. Compute a $90\\%$ confidence interval for the true percent of students who are registered voters.',
+
 					];
 theType++;
 comps[theComp][theType]=[];
@@ -751,8 +764,11 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Suppose that you want to construct a confidence interval estimate of the proportion of glow worms that are female.  If you want your margin of error to be no more than $.05$ and a confidence level of $96\\%$, then how many worms should you sample? (Round to the next highest integer.)', 
-	'\\item Suppose we want to construct a $95\\%$ confdence interval for $p$ to have a margin of error of at most $3.5\\%$. Find the required sample size.'
+	'\\item Suppose we want to construct a $95\\%$ confdence interval for a proportion  $p$ to have a margin of error of at most $3.5\\%$. Find the required sample size.',
+	'\\item  Suppose we want to construct a $95 \\%$ confdence interval for a proportion $p$ to have a margin of error of at most $1.5 \\%$. How large of a survey would you recommend?',
+	'\\item  We are interested in estimating the proportion of students at a university who smoke. If we wanted the margin of error to be no larger than $2 \\%$ at a $95 \\%$ confidence level for the proportion of students who smoke, how big of a sample would we need?',
+	'\\item  Suppose we want to construct a $95 \\%$ confdence interval for $p$ to have a margin of error of at most $3.0 \\%$. How large of a survey would you recommend?',
+	'\\item  We are interested in estimating the proportion of Americans who access the internet on their cell phones. If we wanted the margin of error to be no larger than $2.5 \\%$ at a $90 \\%$ confidence level for the proportion of students who smoke, how big of a sample would we need?	',
 					];
 theType++;
 theComp++;
