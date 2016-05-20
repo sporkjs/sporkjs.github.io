@@ -795,7 +795,7 @@ comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item A survey of 200 adults found that $18\\%$ had participated in a fitness activity in the last week. Test the claim that the participation rate of adults in a fitness activity is $20\\%$.'+theDirections,
-	'\\item A study was performed on 440 people with chronic arthritis. The subjects were given ibuprofen. If more than $3\\%$ of the users suffer adverse side effects the FDA puts a warning label on the package. In the study 23 subjects sfered adverse side effects. Based on this data should a warning label be put on the package?'+theDirections,
+	'\\item A study was performed on 440 people with chronic arthritis. The subjects were given ibuprofen. If more than $3\\%$ of the users suffer adverse side effects the FDA puts a warning label on the package. In the study 23 subjects suffered adverse side effects. Based on this data should a warning label be put on the package?'+theDirections,
 	'\\item The business department at a university would like to advertise that more than $50\\%$ of its graduates obtained a job offer prior to graduation. A sample of 240 recent graduates indicated that 138 of these graduates had a job offer prior to graduation. Based upon this data would they be justified in making this advertisement?'+theDirections,
 	'\\item A survey of 517 residents of Finland found 94 respondents were lactose intolerant. Test the claim that $17\\%$ of the Finnish population are lactose intolerant.'+theDirections,
 	'\\item Among 703 randomly selected workers, $61\\%$ got their jobs through networking. Use the sample\
@@ -847,7 +847,7 @@ comps[theComp][theType]=[
 		e-mail (based on data from The World Almanac and Book of Facts). Use those sample\
 		results to test the claim that more than $15\\%$ of U.S. households use e-mail. Use a 0.05\
 		significance level.'+theDirections,
-	'\\item In 1990, 5.8% of job applicants who were tested for\
+	'\\item In 1990, $5.8\\%$ of job applicants who were tested for\
 		drugs failed the test. At the 0.01 significance level, test the claim that the failure rate\
 		is now lower if a simple random sample of 1520 current job applicants results in 58\
 		failures (based on data from the American Management Association).'+theDirections,
@@ -859,24 +859,24 @@ comps[theComp][theType]=[
 		issue has such great importance, use a 0.005 significance level.'+theDirections,
 	'\\item In one study of smokers who tried to quit\
 		smoking with nicotine patch therapy, 39 were smoking one year after the treatment,\
-		and 32 were not smoking one year after the treatment (based on data from “High-\
-		Dose Nicotine Patch Therapy,” by Dale et al., Journal of the American Medical\
+		and 32 were not smoking one year after the treatment (based on data from ``High-\
+		Dose Nicotine Patch Therapy,\" by Dale et al., Journal of the American Medical\
 		Association, Vol. 274, No. 17). Use a 0.10 significance level to test the claim that\
 		among smokers who try to quit with nicotine patch therapy, the majority are smoking\
 		a year after the treatment.'+theDirections,
 	'\\item In a study of store checkout scanners, 1234 items\
 		were checked and 20 checked items were found to be overcharges, and 1214 checked\
-		items were not overcharges (based on data from “UPC Scanner Pricing Systems: Are\
-		They Accurate?” by Goodstein, Journal of Marketing, Vol. 58). Use a 0.05 significance\
+		items were not overcharges (based on data from ``UPC Scanner Pricing Systems: Are\
+		They Accurate?\" by Goodstein, Journal of Marketing, Vol. 58). Use a 0.05 significance\
 		level to test the claim that with scanners, $1\\%$ of sales are overcharges. (Before\
 		scanners were used, the overcharge rate was estimated to be about $1\\%$.)'+theDirections,
 	'\\item A recent Gallup poll of 976 randomly selected adults showed that\
 		312 of them never drink. Use those survey results to test the claim that less than $1/3$\
 		of all adults never drink. Use a 0.05 significance level.'+theDirections,
-	'\\item In a Gallup poll of 1018 adults, it was found that 22% smoked cigarettes in\
+	'\\item In a Gallup poll of 1018 adults, it was found that $22\\%$ smoked cigarettes in\
 		the past week. Use a 0.05 significance level to test the claim that less than $25\\%$ of\
 		adults have smoked within the past week.'+theDirections,
-	'\\item In a Gallup poll of 1125 adults, it was found that 47% fly never or rarely. Use\
+	'\\item In a Gallup poll of 1125 adults, it was found that $47\\%$ fly never or rarely. Use\
 		a 0.05 significance level to test the claim that the percentage of adults who fly never\
 		or rarely is equal to $50\\%$.'+theDirections,
 	'\\item In the case of Casteneda v. Partida, it was found that during a\
@@ -921,8 +921,8 @@ comps[theComp][theType]=[
 		balls have bounce heights with a mean different from 92.84 in.'+theDirections,
 	'\\item In a study of the effects of prenatal cocaine use on infants, the following\
 		sample data were obtained for weights at birth: $n =190$, $\\overline{x}=2700g$, $s=645g$\
-		(based on data from “Cognitive Outcomes of Preschool Children with Prenatal\
-		Cocaine Exposure,” by Singer, et al., Journal of the American Medical Association,\
+		(based on data from ``Cognitive Outcomes of Preschool Children with Prenatal\
+		Cocaine Exposure,\" by Singer, et al., Journal of the American Medical Association,\
 		Vol. 291, No. 20). Use a 0.01 significance level to test the claim that weights of babies\
 		born to cocaine users have a mean that is less than the mean of 3103 g for babies born\
 		to mothers who do not use cocaine.'+theDirections,
@@ -935,15 +935,15 @@ comps[theComp][theType]=[
 		tested, then retested after being treated with fludrocortisone. A standard scale from\
 		27 to 17 is used to measure fatigue before and after the treatment. The changes are\
 		summarized with these statistics: $n = 21$, $\\overline{x}=4.00$, $s = 2.17$ (based on data from\
-		“The Relationship Between Neurally Mediated Hypotension and the Chronic Fatigue\
-		Syndrome,” by Bou-Holaigah, Rowe, Kan, and Calkins, Journal of the American\
+		``The Relationship Between Neurally Mediated Hypotension and the Chronic Fatigue\
+		Syndrome,\" by Bou-Holaigah, Rowe, Kan, and Calkins, Journal of the American\
 		Medical Association, Vol. 274, No. 12). The changes were computed in a way that\
 		makes positive values represent improvements. Use a 0.01 significance level to test\
 		the claim that the mean change is positive.'+theDirections,
 	'\\item Forty subjects followed the Weight Watchers diet for a year.\
 		Their weight changes are summarized by these statistics:  $\\overline{x}=-6.6lb$, $s = 10.8 lb$\
-		(based on data from “Comparison of the Atkins, Ornish, Weight Watchers, and Zone\
-		Diets for Weight Loss and Heart Disease Risk Reduction,” by Dansinger et al.,\
+		(based on data from ``Comparison of the Atkins, Ornish, Weight Watchers, and Zone\
+		Diets for Weight Loss and Heart Disease Risk Reduction,\" by Dansinger et al.,\
 		Journal of the American Medical Association, Vol. 293, No. 1). Use a 0.01 significance\
 		level to test the claim that the diet has no effect.'+theDirections,
 	'\\item The heights are measured for supermodels Niki Taylor,\
@@ -975,17 +975,17 @@ comps[theComp][theType]=[
 	'\\item In a randomized controlled trial in Kenya, insecticidetreated\
 		bednets were tested as a way to reduce malaria. Among 343 infants who used\
 		the bednets, 15 developed malaria. Among 294 infants not using bednets, 27 developed\
-		malaria (based on data from “Sustainability of Reductions in Malaria Transmission\
-		and Infant Mortality in Western Kenya with Use of Insecticide-Treated Bednets,”\
+		malaria (based on data from ``Sustainability of Reductions in Malaria Transmission\
+		and Infant Mortality in Western Kenya with Use of Insecticide-Treated Bednets,\"\
 		by Lindblade et al., Journal of the American Medical Association, Vol. 291, No. 21).\
 		Use a 0.01 significance level to test the claim that the incidence of malaria is lower\
 		for infants who use the bednets.'+theDirections,
 	'\\item In a study of the accuracy of telephone surveys, 720 people\
-		refused to respond when they were among the 1720 people included in a “standard”\
+		refused to respond when they were among the 1720 people included in a ``standard\"\
 		5-day survey. In the same study, 429 people refused to respond when they were\
-		among the 1640 people included in a “rigorous” 8-week survey. (The data are based\
-		on results from “Consequences of Reducing Nonresponse in a National Telephone\
-		Survey,” by Keeter et al., Public Opinion Quarterly, Vol. 64, No. 2.) Use a 0.01 significance\
+		among the 1640 people included in a ``rigorous\" 8-week survey. (The data are based\
+		on results from ``Consequences of Reducing Nonresponse in a National Telephone\
+		Survey,\" by Keeter et al., Public Opinion Quarterly, Vol. 64, No. 2.) Use a 0.01 significance\
 		level to test the claim that the refusal rate is lower with the rigorous survey.'+theDirections,
 	'\\item Asurvey of 436 workers showed that 192 of them said that it was\
 		seriously unethical to monitor employee e-mail. When 121 senior-level bosses were\
@@ -999,14 +999,14 @@ comps[theComp][theType]=[
 		Among 843 smoking employees of hospitals with the smoking ban, 56 quit\
 		smoking one year after the ban. Among 703 smoking employees from workplaces\
 		without a smoking ban, 27 quit smoking a year after the ban (based on data from\
-		“Hospital Smoking Bans and Employee Smoking Behavior,” by Longo, Brownson,et al., \
+		``Hospital Smoking Bans and Employee Smoking Behavior,\" by Longo, Brownson,et al., \
 		Journal of the American Medical Association, Vol. 275, No. 16). Use a $0.05$ significance level to test the claim that there is a difference in the rate of smokers who quit smoking at hospitals with and without the ban.'+theDirections,
 	'\\item In a USA Today article about an experimental nasal\
-		spray vaccine for children, the following statement was presented: “In a trial involving\
+		spray vaccine for children, the following statement was presented: ``In a trial involving\
 		1602 children only 14 ($1\\%$) of the 1070 who received the vaccine developed the\
-		flu, compared with 95 ($18\\%$) of the 532 who got a placebo.” The article also referred\
-		to a study claiming that the experimental nasal spray “cuts children’s chances of getting\
-		the flu.” Use the data to test this claim with a $0.05$ significance level.'+theDirections,
+		flu, compared with 95 ($18\\%$) of the 532 who got a placebo.\" The article also referred\
+		to a study claiming that the experimental nasal spray ``cuts children’s chances of getting\
+		the flu.\" Use the data to test this claim with a $0.05$ significance level.'+theDirections,
 	'\\item The drug Clarinex is used to treat symptoms from allergies.\
 		In a clinical trial of this drug, $2.1\\%$ of the 1655 treated subjects experienced fatigue.\
 		Among the 1652 subjects given placebos, $1.2\\%$ experienced fatigue (based on\
@@ -1033,7 +1033,7 @@ comps[theComp][theType]=[
 		the claim that the two Dutchess County regions have different rates of unsafe radon\
 		levels.'+theDirections,
 	'\\item In a Time CNN survey, $24\\%$ of 205 single women said\
-		that they “definitely want to get married.” In the same survey, $27\\%$ of 260 single men\
+		that they ``definitely want to get married.\" In the same survey, $27\\%$ of 260 single men\
 		gave that same response. Use a 0.01 significance level to test the claim that there is a difference between the proportions of single men and women who want to get married.'+theDirections,
 					];
 theType++;
@@ -1052,21 +1052,21 @@ comps[theComp][theType]=[
 	'\\item A course can be taken for credit by attending lectures or by doing online sessions. An examinanion was given to groups of students using each method. The 12 online students had a mean of 34.22 and a standard deviation of 4.45. The 14 students in the conventional class had a mean of 32.56 and a standard deviation of 4.95. Test the claim that students doing the course online scored the same as the students in the conventional class.'+theDirections,
 	'\\item In a randomized, double-blind,\
 		placebo-controlled trial of children, echinacea was tested as a treatment for upper respiratory\
-		infections in children. “Days of fever” was one criterion used to measure effects.\
+		infections in children. ``Days of fever\" was one criterion used to measure effects.\
 		Among 337 children treated with echinacea, the mean number of days with\
 		fever was 0.81, with a standard deviation of 1.50 days. Among 370 children given a\
 		placebo, the mean number of days with fever was 0.64 with a standard deviation of\
-		1.16 days (based on data from “Efficacy and Safety of Echinacea in Treating Upper\
-		Respiratory Tract Infections in Children,” by Taylor et al., Journal of the American\
+		1.16 days (based on data from ``Efficacy and Safety of Echinacea in Treating Upper\
+		Respiratory Tract Infections in Children,\" by Taylor et al., Journal of the American\
 		Medical Association, Vol. 290, No. 21). Use a 0.05 significance level to test the claim\
 		that echinacea affects the number of days with fever.'+theDirections,
 	'\\item A study was conducted to assess\
 		the effects that occur when children are exposed to cocaine before birth. Children were\
-		tested at age 4 for object assembly skill, which was described as “a task requiring\
-		visual-spatial skills related to mathematical competence.” The 190 children born to cocaine\
+		tested at age 4 for object assembly skill, which was described as ``a task requiring\
+		visual-spatial skills related to mathematical competence.\" The 190 children born to cocaine\
 		users had a mean of 7.3 and a standard deviation of 3.0. The 186 children not exposed\
 		to cocaine had a mean score of 8.2 with a standard deviation of 3.0. (The data\
-		are based on “Cognitive Outcomes of Preschool Children with Prenatal Cocaine Exposure,”\
+		are based on ``Cognitive Outcomes of Preschool Children with Prenatal Cocaine Exposure,\"\
 		by Singer et al., Journal of the American Medical Association, Vol. 291, No. 20.)\
 		Use a 0.05 significance level to test the claim that prenatal cocaine exposure is associated\
 		with lower scores of four-year-old children on the test of object assembly.'+theDirections,
@@ -1075,8 +1075,8 @@ comps[theComp][theType]=[
 		low birth weights (less than 1000 g) had Wechsler IQ scores at age 8 with a\
 		mean of 95.5 and a standard deviation of 16.0. For 220 subjects with normal birth\
 		weights, the mean at age 8 is 104.9 and the standard deviation is 14.1. (Based on data'+theDirections,
-	'\\item from “Neurobehavioral Outcomes of School-age Children Born Extremely Low Birth\
-		Weight or Very Preterm in the 1990s,” by Anderson et al., Journal of the American\
+	'\\item from ``Neurobehavioral Outcomes of School-age Children Born Extremely Low Birth\
+		Weight or Very Preterm in the 1990s,\" by Anderson et al., Journal of the American\
 		Medical Association, Vol. 289, No. 24.) Use a 0.05 significance level to test the claim that there is a difference between the mean IQ score of 8-year-old children born with low\
 		birth weight and the mean of 8-year-old children born with normal birth weight.'+theDirections,
 	'\\item A randomized trial tested the effectiveness of\
@@ -1088,8 +1088,8 @@ comps[theComp][theType]=[
 	'\\item Many studies have\
 		been conducted to test the effects of marijuana use on mental abilities. In one such\
 		study, groups of light and heavy users of marijuana in college were tested for memory\
-		recall, with the results given below (based on data from “The Residual Cognitive Effects\
-		of Heavy Marijuana Use in College Students,” by Pope and Yurgelun-Todd,\
+		recall, with the results given below (based on data from ``The Residual Cognitive Effects\
+		of Heavy Marijuana Use in College Students,\" by Pope and Yurgelun-Todd,\
 		Journal of the American Medical Association, Vol. 275, No. 7). Use a 0.01 significance\
 		level to test the claim that the population of heavy marijuana users has a lower\
 		mean than the light users.\\\\\
@@ -1100,8 +1100,8 @@ comps[theComp][theType]=[
 		similar in the important ways that affect the experiment. In an experiment designed to\
 		test the effectiveness of paroxetine for treating bipolar depression, subjects were measured\
 		using the Hamilton depression scale with the results given below (based on data\
-		from “Double-Blind, Placebo-Controlled Comparison of Imipramine and Paroxetine\
-		in the Treatment of Bipolar Depression,” by Nemeroff et al., American Journal of\
+		from ``Double-Blind, Placebo-Controlled Comparison of Imipramine and Paroxetine\
+		in the Treatment of Bipolar Depression,\" by Nemeroff et al., American Journal of\
 		Psychiatry, Vol. 158, No. 6).\\\\\
 		Placebo group: $n=43$,$\\overline{x}=21.57$, $s=3.87$\\\\\
 		Paroxetine treatment group: $n=33$,$\\overline{x}=20.38$, $s=3.91$\
@@ -1112,8 +1112,8 @@ comps[theComp][theType]=[
 		variety of pains. Researchers conducted a study to determine whether magnets are effective\
 		in treating back pain. Pain was measured using the visual analog scale, and the\
 		results given below are among the results obtained in the study (based on data from\
-		“Bipolar Permanent Magnets for the Treatment of Chronic Lower Back Pain: A Pilot\
-		Study,” by Collacott, Zimmerman, White, and Rindone, Journal of the American\
+		``Bipolar Permanent Magnets for the Treatment of Chronic Lower Back Pain: A Pilot\
+		Study,\" by Collacott, Zimmerman, White, and Rindone, Journal of the American\
 		Medical Association, Vol. 283, No. 10). Use a 0.05 significance level to test the claim\
 		that those treated with magnets have a greater reduction in pain than those given a\
 		sham treatment (similar to a placebo).\\\\\
@@ -1124,8 +1124,8 @@ comps[theComp][theType]=[
 		x-ray computed tomography (CT) to collect data on brain volumes for a group of patients\
 		with obsessive-compulsive disorders and a control group of healthy persons.\
 		Sample results for volumes (in mL) follow for the right cordate (based on data from\
-		“Neuroanatomical Abnormalities in Obsessive-Compulsive Disorder Detected with\
-		Quantitative X-Ray Computed Tomography,” by Luxenberg et al., American Journal\
+		``Neuroanatomical Abnormalities in Obsessive-Compulsive Disorder Detected with\
+		Quantitative X-Ray Computed Tomography,\" by Luxenberg et al., American Journal\
 		of Psychiatry, Vol. 145, No. 9).\
 		Control group: $n=10$, $\\overline{x}=0.45$, $s=0.08$\\\\\
 		Obsessive-compulsive patients: $n=10$, $\\overline{x}=0.34$, $s=0.08$. Use a 0.01 significance level to test the claim that there is a difference\
@@ -1133,8 +1133,8 @@ comps[theComp][theType]=[
 	'\\item An experiment was conducted to test the\
 		effects of alcohol. The errors were recorded in a test of visual and motor skills for a\
 		treatment group of people who drank ethanol and another group given a placebo. The\
-		results are shown in the accompanying table (based on data from “Effects of Alcohol\
-		Intoxication on Risk Taking, Strategy, and Error Rate in Visuomotor Performance,”\
+		results are shown in the accompanying table (based on data from ``Effects of Alcohol\
+		Intoxication on Risk Taking, Strategy, and Error Rate in Visuomotor Performance,\"\
 		by Streufert et al., Journal of Applied Psychology, Vol. 77, No. 4).  Use a 0.05 significance level to test the claim that there is a difference between the\
 		treatment group and control group.\
 		$$\
@@ -1173,7 +1173,7 @@ comps[theComp][theType]=[
 	'\\item Researchers collected data on the numbers of hospital admissions\
 		resulting from motor vehicle crashes, and results are given below for Fridays\
 		on the 6th of a month and Fridays on the following 13th of the same month (based on\
-		data from “Is Friday the 13th Bad for Your Health?” by Scanlon et al., British Medical\
+		data from ``Is Friday the 13th Bad for Your Health?\" by Scanlon et al., British Medical\
 		Journal, Vol. 307, as listed in the Data and Story Line online resource of data sets).\
 		Use a 0.05 significance level to test the claim that when the 13th day of a month falls\
 		on a Friday, the numbers of hospital admissions from motor vehicle crashes are not\
@@ -1206,7 +1206,7 @@ comps[theComp][theType]=[
 		71 \\, 74.5 \\, 74 \\, 73 \\, 69.5 \\, 71.5 \\, 75 \\, 72 \& 73 \\, 74 \\, 68 \\, 69.5 \\, 72 \\, 71 \\, 72 \\, 71.5 \\\\\
 		70.5 \\, 69 \\, 74 \\, 70 \\, 71 \\, 72 \\, 70 \\, 67 \& \\, 70 \\, 68 \\, 71 \\, 72 \\, 70 \\, 72 \\, 72 \\, 72\
 		\\end{array}$$' + theDirections,
-	'\\item The article “An SAT Coaching Program That Works,” by\
+	'\\item The article ``An SAT Coaching Program That Works,\" by\
 		Kaplan (Chance, Vol. 15, No. 1) included a graph depicting SAT scores for 50 subjects\
 		in a control group. Nine of the 50 points were randomly selected, with each point\
 		representing the score on the SAT test taken the first time and the score on the SAT\
@@ -1229,8 +1229,8 @@ comps[theComp][theType]=[
 		\\end{array}$$' + theDirections,
 	'\\item A study was conducted to investigate\
 		the effectiveness of hypnotism in reducing pain. Results for randomly selected subjects\
-		are given in the accompanying table (based on “An Analysis of Factors That\
-		Contribute to the Efficacy of Hypnotic Analgesia,” by Price and Barber, Journal of\
+		are given in the accompanying table (based on ``An Analysis of Factors That\
+		Contribute to the Efficacy of Hypnotic Analgesia,\" by Price and Barber, Journal of\
 		Abnormal Psychology, Vol. 96, No. 1). The values are before and after hypnosis; the\
 		measurements are in centimeters on a pain scale. Use a 0.05 significance level to test the claim that the sensory measurements are\
 		lower after hypnotism.\
@@ -1238,8 +1238,8 @@ comps[theComp][theType]=[
 		Before \& 6.6 \& 6.5 \& 9.0 \& 10.3 \& 11.3 \& 8.1 \& 6.3 \& 11.6 \\\\ \\hline\
 		After \& 6.8 \& 2.4 \& 7.4 \& 8.5 \& 8.1 \& 6.1 \& 3.4 \& 2.0\
 		\\end{array}$$' + theDirections,
-	'\\item In 1908, William Gosset published the article “The Probable Error\
-		of a Mean” under the pseudonym of “Student” (Biometrika, Vol. 6, No. 1). He included\
+	'\\item In 1908, William Gosset published the article ``The Probable Error\
+		of a Mean\" under the pseudonym of ``Student\" (Biometrika, Vol. 6, No. 1). He included\
 		the data listed below for two different types of corn seed (regular and kiln\
 		dried) that were used on adjacent plots of land. The listed values are the yields of head\
 		corn in pounds per acre.\
@@ -1318,10 +1318,10 @@ comps[theComp][theType]=[
 		Month \& Jan. \& Feb. \& March \& April \& May \& June \& July \& Aug. \& Sept. \& Oct. \& Nov. \& Dec. \\\\ \\hline\
 		Number \& 6 \& 8 \& 10 \& 16 \& 22 \& 28 \& 24 \& 28 \& 26 \& 14 \& 10 \& 8\
 		\\end{array}$$'+theDirections,
-	'\\item Do “A” students tend to sit in a particular part of the\
+	'\\item Do ``A\" students tend to sit in a particular part of the\
 		classroom? The author recorded the locations of the students who received grades of\
 		A, with these results: 17 sat in the front, 9 sat in the middle, and 5 sat in the back of\
-		the classroom. Test the claim that the “A” students\
+		the classroom. Test the claim that the ``A\" students\
 		are not evenly distributed throughout the classroom.'+theDirections,
 	'\\item The author collected data consisting of the month of birth\
 		of actresses who won Oscars. Use a 0.05 significance level to test the claim that Oscar-\
@@ -1355,7 +1355,7 @@ comps[theComp][theType]=[
 		\& Brown Eyes \& Blue Eyes \& Green Eyes\\\\ \\hline\
 		Frequency \& 132 \& 17 \& 0\
 		\\end{array}$$'+theDirections,
-	'\\item The USA Today headline of “Seven-game series defy odds” referred\
+	'\\item The USA Today headline of ``Seven-game series defy odds\" referred\
 		to a claim that seven-game World Series contests occur more often than expected\
 		by chance. Listed below are the numbers of games of World Series contests\
 		(omitting two that lasted eight games) along with the proportions that would be expected\
@@ -1378,7 +1378,7 @@ comps[theComp][theType]=[
 		were white, 23 were Hispanic, 69 were black, 14 were Asian, and 2\
 		were American Indian Alaskan Native. The proportions of the U.S. population of the\
 		same groups are 0.757, 0.091, 0.108, 0.038, and 0.007, respectively. (Based on data\
-		from “Participation in Clinical Trials,” by Murthy, Krumholz, and Gross, Journal of\
+		from ``Participation in Clinical Trials,\" by Murthy, Krumholz, and Gross, Journal of\
 		the American Medical Association, Vol. 291, No. 22.) Use a 0.05 significance level to\
 		test the claim that the participants fit the same distribution as the U.S. population.'+theDirections,
 					];
@@ -1432,9 +1432,9 @@ comps[theComp][theType]=[
 		Not \\, smoking \& 59 \& 57\
 		\\end{array}$$'+theDirections,
 	'\\item In a USA Today article about an experimental vaccine for\
-		children, the following statement was presented: “In a trial involving 1602 children,\
+		children, the following statement was presented: ``In a trial involving 1602 children,\
 		only 14 ($1\\%$) of the 1070 who received the vaccine developed the flu, compared with\
-		95 ($18\\%$) of the 532 who got a placebo.” The data are shown in the table below. Use a\
+		95 ($18\\%$) of the 532 who got a placebo.\" The data are shown in the table below. Use a\
 		0.05 significance level to test for independence between the variable of treatment\
 		(vaccine or placebo) and the variable representing flu (developed flu, did not develop\
 		flu).\
@@ -1506,8 +1506,8 @@ comps[theComp][theType]=[
 		\\end{array}$$'+theDirections,
 	'\\item A randomized controlled trial was designed to compare\
 		the effectiveness of splinting against surgery in the treatment of carpal tunnel syndrome.\
-		Results are given in the table below (based on data from “Splinting vs.\
-		Surgery in the Treatment of Carpal Tunnel Syndrome,” by Gerritsen et al., Journal of\
+		Results are given in the table below (based on data from ``Splinting vs.\
+		Surgery in the Treatment of Carpal Tunnel Syndrome,\" by Gerritsen et al., Journal of\
 		the American Medical Association, Vol. 288, No. 10). The results are based on evaluations\
 		made one year after the treatment. Using a 0.01 significance level, test the\
 		claim that success is independent of the type of treatment.\
@@ -1580,8 +1580,8 @@ comps[theComp][theType]=[
 	'\\item A study was conducted to investigate the effects of exercise on\
 		stress. The table below lists systolic blood pressure readings (in mmHg) of subjects\
 		from the time preceding 25 minutes of aerobic bicycle exercise and preceding the\
-		introduction of stress through arithmetic and speech tests (based on data from “Sympathoadrenergic\
-		Mechanisms in Reduced Hemodynamic Stress Responses after Exercise,”\
+		introduction of stress through arithmetic and speech tests (based on data from ``Sympathoadrenergic\
+		Mechanisms in Reduced Hemodynamic Stress Responses after Exercise,\"\
 		by Kim Brownley et al., Medicine and Science in Sports and Exercise, Vol. 35,\
 		No. 6). Use a 0.05 significance level to test the claim that the different groups of subjects\
 		have the same mean blood pressure.\
@@ -1709,8 +1709,8 @@ comps[theComp][theType]=[
 		cigarettes \\, per \\, day \& 60 \& 10 \& 4 \& 15 \& 10 \& 1 \& 20 \& 8 \& 7 \& 10 \& 10 \& 20\\\\ \\hline\
 		cotinine \& 179 \& 283 \& 75.6 \& 174 \& 209 \& 9.51 \& 350 \& 1.85 \& 43.4 \& 25.1 \& 408 \& 344\
 		\\end{array}$$'+theDirections,
-	'\\item In “The Effects of Temperature on Marathon Runner\’s\
-		Performance,” by David Martin and John Buoncristiani (Chance, Vol. 12, No. 4),\
+	'\\item In ``The Effects of Temperature on Marathon Runner\’s\
+		Performance,\" by David Martin and John Buoncristiani (Chance, Vol. 12, No. 4),\
 		high temperatures and times (in minutes) were given for women who won the New\
 		York City marathon in recent years. Results are listed below. Test the claim that there is a linear correlation between the temperatures and the times.\
 		$$\\begin{array}{r|ccccccccccccc}\
