@@ -37,7 +37,7 @@ function doit(){
 			k=Math.floor(Math.random()*problemsToAdd.length);
 			while (used[k] !=0)
 				k=Math.floor(Math.random()*problemsToAdd.length);
-			r+=problemsToAdd[k]+'\r';
+			r+='\r'+problemsToAdd[k]+'\r';
 			used[k]=1;
 			j++;
 		}
@@ -67,9 +67,9 @@ function showall(){
 	if (document.getElementById('check'+i).checked){
 		r+='\r'+names[i]+'\r';
 		for (j=0;j<comps[i].length;j++){
-			r+='\r Type '+j+' ('+nums[i][j]+')'+'\r \\begin{enumerate}';
+			r+='\r Type '+j+' ('+nums[i][j]+')'+'\r \\begin{enumerate}\r';
 			for (k=0;k<comps[i][j].length;k++)
-				r+=comps[i][j][k]+'\r';
+				r+='\r'+comps[i][j][k]+'\r';
 			r+='\\end{enumerate}\r'
 		}
 	}

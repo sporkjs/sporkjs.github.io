@@ -790,15 +790,110 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: One Proportion';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the claim in symbols: \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the claim in symbols: \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item In a sample of 153 glow worms, 91 were female. Use this data and a $5\\%$ significance level to test the claim that most worms are female.'+theDirections,
-	'\\item A survey of 200 adults found that $18\%$ had participated in a fitness activity in the last week. Test the claim that the participation rate of adults in a fitness activity is $20\\%$.'+theDirections,
+	'\\item A survey of 200 adults found that $18\\%$ had participated in a fitness activity in the last week. Test the claim that the participation rate of adults in a fitness activity is $20\\%$.'+theDirections,
 	'\\item A study was performed on 440 people with chronic arthritis. The subjects were given ibuprofen. If more than $3\\%$ of the users suffer adverse side effects the FDA puts a warning label on the package. In the study 23 subjects sfered adverse side effects. Based on this data should a warning label be put on the package?'+theDirections,
-	'\\item The business department at a university would like to advertise that more than $50\%$ of its graduates obtained a job offer prior to graduation. A sample of 240 recent graduates indicated that 138 of these graduates had a job offer prior to graduation. Based upon this data would they be justified in making this advertisement?'+theDirections,
+	'\\item The business department at a university would like to advertise that more than $50\\%$ of its graduates obtained a job offer prior to graduation. A sample of 240 recent graduates indicated that 138 of these graduates had a job offer prior to graduation. Based upon this data would they be justified in making this advertisement?'+theDirections,
 	'\\item A survey of 517 residents of Finland found 94 respondents were lactose intolerant. Test the claim that $17\\%$ of the Finnish population are lactose intolerant.'+theDirections,
+	'\\item Among 703 randomly selected workers, $61\\%$ got their jobs through networking. Use the sample\
+		data with a $0.05$ significance level to test the claim that most (more than\
+		$50\\%$) workers get their jobs through networking.'+theDirections,
+	'\\item When Gregor Mendel\
+		conducted his famous hybridization experiments with peas, one such experiment\
+		resulted in offspring consisting of 428 peas with green pods and 152 peas\
+		with yellow pods. According to Mendel’s theory, $1/4$ of the offspring peas\
+		should have yellow pods. Use a 0.05 significance level\
+		to test the claim that the proportion of peas with yellow pods is equal to $1/4$.'+theDirections,
+	'\\item In one of Mendel’s famous hybridization experiments,\
+		8023 offspring peas were obtained, and $24.94\\%$ of them had green flowers.\
+		The others had white flowers. Use a 0.05 significance\
+		level to test the claim that green-flowered peas occur at a rate of $25\\%$.'+theDirections,
+	'\\item In a survey of 703 randomly selected workers, $15.93\\%$ got their\
+		jobs through newspaper ads (based on data from Taylor Nelson Sofres Intereach).\
+		Consider a hypothesis test that uses a 0.05 significance level to test the claim that less\
+		than $20\\%$ of workers get their jobs through newspaper ads.'+theDirections,
+	'\\item When 109,857 arrests for federal offenses were randomly selected,\
+		it was found that 31,969 of them were drug offenses. Use a $0.05$ significance level to the claim\
+		that more than $29\\%$ of federal crimes were for drug offenses'+theDirections,
+	'\\item A survey of 4276 randomly selected households showed\
+		that 4019 of them had telephones (based on data from the U.S. Census Bureau). Use a $0.01$ significance level\
+		to test the claim that the percentage of households with telephones is now greater than the $35\\%$\
+		rate that was found in 1920.'+theDirections,
+	'\\item The Genetics and IVF Institute conducted a clinical trial\
+		of the XSORT method designed to increase the probability of conceiving a girl. As\
+		this book was being written, 325 babies were born to parents using the XSORT\
+		method, and 295 of them were girls. Use the sample data with a 0.01 significance\
+		level to test the claim that with this method, the probability of a baby being a girl is\
+		greater than 0.5.'+theDirections,
+	'\\item The Genetics and IVF Institute conducted a clinical trial\
+		of the YSORT method designed to increase the probability of conceiving a boy. As\
+		this book was being written, 51 babies were born to parents using the YSORT\
+		method, and 39 of them were boys. Use the sample data with a 0.01 significance level\
+		to test the claim that with this method, the probability of a baby being a boy is greater\
+		than 0.5.'+theDirections,
+	'\\item In a study of 11,000 car crashes, it was found that 5720 of them occurred\
+		within 5 miles of home (based on data from Progressive Insurance). Use a 0.01 significance\
+		level to test the claim that more than $50\\%$ of car crashes occur within 5 miles\
+		of home.'+theDirections,
+	'\\item Among 734 randomly selected Internet users, it was\
+		found that 360 of them use the Internet for making travel plans (based on data from a\
+		Gallup poll). Use a 0.01 significance level to test the claim that among Internet users,\
+		less than $50\\%$ use it for making travel plans.'+theDirections,
+	'\\item Technology is dramatically changing the way we communicate.\
+		In 1997, a survey of 880 U.S. households showed that 149 of them use\
+		e-mail (based on data from The World Almanac and Book of Facts). Use those sample\
+		results to test the claim that more than $15\\%$ of U.S. households use e-mail. Use a 0.05\
+		significance level.'+theDirections,
+	'\\item In 1990, 5.8% of job applicants who were tested for\
+		drugs failed the test. At the 0.01 significance level, test the claim that the failure rate\
+		is now lower if a simple random sample of 1520 current job applicants results in 58\
+		failures (based on data from the American Management Association).'+theDirections,
+	'\\item In a study of 420,095 Danish cell phone users, 135 subjects\
+		developed cancer of the brain or nervous system (based on data from the Journal of\
+		the National Cancer Institute as reported in USA Today). Test the claim of a once popular belief that such cancers are affected by cell phone use. That is, test the claim\
+		that cell phone users develop cancer of the brain or nervous system at a rate that is different\
+		from the rate of $0.0340\\%$ for people who do not use cell phones. Because this\
+		issue has such great importance, use a 0.005 significance level.'+theDirections,
+	'\\item In one study of smokers who tried to quit\
+		smoking with nicotine patch therapy, 39 were smoking one year after the treatment,\
+		and 32 were not smoking one year after the treatment (based on data from “High-\
+		Dose Nicotine Patch Therapy,” by Dale et al., Journal of the American Medical\
+		Association, Vol. 274, No. 17). Use a 0.10 significance level to test the claim that\
+		among smokers who try to quit with nicotine patch therapy, the majority are smoking\
+		a year after the treatment.'+theDirections,
+	'\\item In a study of store checkout scanners, 1234 items\
+		were checked and 20 checked items were found to be overcharges, and 1214 checked\
+		items were not overcharges (based on data from “UPC Scanner Pricing Systems: Are\
+		They Accurate?” by Goodstein, Journal of Marketing, Vol. 58). Use a 0.05 significance\
+		level to test the claim that with scanners, $1\\%$ of sales are overcharges. (Before\
+		scanners were used, the overcharge rate was estimated to be about $1\\%$.)'+theDirections,
+	'\\item A recent Gallup poll of 976 randomly selected adults showed that\
+		312 of them never drink. Use those survey results to test the claim that less than $1/3$\
+		of all adults never drink. Use a 0.05 significance level.'+theDirections,
+	'\\item In a Gallup poll of 1018 adults, it was found that 22% smoked cigarettes in\
+		the past week. Use a 0.05 significance level to test the claim that less than $25\\%$ of\
+		adults have smoked within the past week.'+theDirections,
+	'\\item In a Gallup poll of 1125 adults, it was found that 47% fly never or rarely. Use\
+		a 0.05 significance level to test the claim that the percentage of adults who fly never\
+		or rarely is equal to $50\\%$.'+theDirections,
+	'\\item In the case of Casteneda v. Partida, it was found that during a\
+		period of 11 years in Hidalgo County, Texas, 870 people were selected for grand jury\
+		duty, and $39\\%$ of them were Mexican-Americans. Among the people eligible for\
+		grand jury duty, $79.1\\%$ were Mexican-Americans. Use a 0.01 significance level to test\
+		the claim that the selection process is biased against Mexican-Americans.'+theDirections,
+	'\\item Clarinex is a drug used to treat asthma. In\
+		clinical tests of this drug, 1655 patients were treated with 5-mg doses of Clarinex, and\
+		$2.1\\%$ of them experienced fatigue (based on data from the Schering Corporation). Use\
+		a 0.01 significance level to test the claim that the percentage of Clarinex users experiencing\
+		fatigue is greater than the $1.2\\%$ rate for those not using Clarinex.'+theDirections,
+	'\\item One survey showed that among 785 randomly selected\
+		subjects who completed four years of college, $18.3\\%$ smoke and $81.7\\%$ do not\
+		smoke (based on data from the American Medical Association). Use a 0.01 significance\
+		level to test the claim that the rate of smoking among those with four years of\
+		college is less than the $27\\%$ rate for the general population.'+theDirections,
 					];
 theType++;
 theComp++;
@@ -809,13 +904,58 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: One Mean';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the claim in symbols: \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the claim in symbols: \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item A sample of 87 glow worms had an average length of 10.5 inches with a standard deviation of 1.25 inches. Use this data and a $5\\%$ significance level to test the claim that the average length of a glow worm is at least 10 inches.'+theDirections,
 	'\\item The mean breaking strength of a textile fiber should be at least 150 psi. A random sample of 15 fiber specimens had a mean of 152.08 and a standard deviation of 4.18. Does the fabric seem to meet the requirement?'+theDirections,
 	'\\item The following data presents the number of works hours lost per day on a construction project: 8.8, 12.5, 5.4, 12.8, 9.1, 14.7, 8.8, 12.2, 13.3, 6.9, 2.2. Test the claim that the mean number of work hours lost per day is more than 8 hours.'+theDirections,
+	'\\item A sample of 106 body temperatures had a\
+		mean of $98.20^\\circ$F and a standard deviation of $0.62^\\circ$F. Use a $0.05$ significance level to\
+		test the claim that the mean body temperature is less than 98.6°F.'+theDirections,
+	'\\item In previous tests, baseballs were dropped 24 ft onto a concrete surface, and\
+		they bounced an average of 92.84 in. In a test of a sample of 40 new balls, the bounce\
+		heights had a mean of 92.67 in. and a standard deviation of 1.79 in. (based on data\
+		from Brookhaven National Laboratory and USA Today). Use a 0.05 significance level\
+		to determine whether there is sufficient evidence to support the claim that the new\
+		balls have bounce heights with a mean different from 92.84 in.'+theDirections,
+	'\\item In a study of the effects of prenatal cocaine use on infants, the following\
+		sample data were obtained for weights at birth: $n =190$, $\\overline{x}=2700g$, $s=645g$\
+		(based on data from “Cognitive Outcomes of Preschool Children with Prenatal\
+		Cocaine Exposure,” by Singer, et al., Journal of the American Medical Association,\
+		Vol. 291, No. 20). Use a 0.01 significance level to test the claim that weights of babies\
+		born to cocaine users have a mean that is less than the mean of 3103 g for babies born\
+		to mothers who do not use cocaine.'+theDirections,
+	'\\item When consumers apply for credit, their credit is rated using FICO\
+		(Fair, Isaac, and Company) scores. A random sample of credit ratings is obtained, and\
+		the FICO scores are summarized with these statistics: $n = 18$, $\\overline{x}=660.3$, $s= 95.9$.\
+		Use a 0.05 significance level to test the claim that these credit ratings are from a population\
+		with a mean that is equal to 700.'+theDirections,
+	'\\item Patients with chronic fatigue syndrome were\
+		tested, then retested after being treated with fludrocortisone. A standard scale from\
+		27 to 17 is used to measure fatigue before and after the treatment. The changes are\
+		summarized with these statistics: $n = 21$, $\\overline{x}=4.00$, $s = 2.17$ (based on data from\
+		“The Relationship Between Neurally Mediated Hypotension and the Chronic Fatigue\
+		Syndrome,” by Bou-Holaigah, Rowe, Kan, and Calkins, Journal of the American\
+		Medical Association, Vol. 274, No. 12). The changes were computed in a way that\
+		makes positive values represent improvements. Use a 0.01 significance level to test\
+		the claim that the mean change is positive.'+theDirections,
+	'\\item Forty subjects followed the Weight Watchers diet for a year.\
+		Their weight changes are summarized by these statistics:  $\\overline{x}=-6.6lb$, $s = 10.8 lb$\
+		(based on data from “Comparison of the Atkins, Ornish, Weight Watchers, and Zone\
+		Diets for Weight Loss and Heart Disease Risk Reduction,” by Dansinger et al.,\
+		Journal of the American Medical Association, Vol. 293, No. 1). Use a 0.01 significance\
+		level to test the claim that the diet has no effect.'+theDirections,
+	'\\item The heights are measured for supermodels Niki Taylor,\
+		Nadia Avermann, Claudia Schiffer, Elle MacPherson, Christy Turlington, Bridget\
+		Hall, Kate Moss, Valeria Mazza, and Kristy Hume. They have a mean of 70.2 in.\
+		and a standard deviation of 1.5 in. Use a 0.01 significance level to test the claim\
+		that supermodels have heights with a mean that is greater than the mean of 63.6 in.'+theDirections,
+	'\\item A New York Times article noted that the mean life span for 35\
+		male symphony conductors was 73.4 years, in contrast to the mean of 69.5 years for\
+		males in the general population. Assuming that the 35 males have life spans with a\
+		standard deviation of 8.7 years, use a 0.05 significance level to test the claim that\
+		male symphony conductors have a mean life span that is greater than 69.5 years.'+theDirections,
 					];
 theType++;
 theComp++;
@@ -826,13 +966,75 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: Two Proportions';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the claim in symbols: \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the claim in symbols: \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item In a sample of 203 green glow worms, 105 were  female. In a sample of 175 blue glow worms, 91 were female. Use this data and a $.05$ significance level to test the claim that the proportion of green worms that  are female is the same as the proportion of blue worms that are female.'+theDirections,
 	'\\item A survey of 430 randomly chosen adults finds that 47 of 222 men and 37 of 208 women have purchased books online. Determine if men and women are equally likely to purchase books online.'+theDirections,
 	'\\item In a random sample, 46 of 400 tulip bulbs from one nursery failed to bloom and 18 of 200 tulip  bulbs from another nursery failed to bloom. Test the claim that bulbs from the two nurseries are equally likely to fail to bloom.'+theDirections,
+	'\\item In a randomized controlled trial in Kenya, insecticidetreated\
+		bednets were tested as a way to reduce malaria. Among 343 infants who used\
+		the bednets, 15 developed malaria. Among 294 infants not using bednets, 27 developed\
+		malaria (based on data from “Sustainability of Reductions in Malaria Transmission\
+		and Infant Mortality in Western Kenya with Use of Insecticide-Treated Bednets,”\
+		by Lindblade et al., Journal of the American Medical Association, Vol. 291, No. 21).\
+		Use a 0.01 significance level to test the claim that the incidence of malaria is lower\
+		for infants who use the bednets.'+theDirections,
+	'\\item In a study of the accuracy of telephone surveys, 720 people\
+		refused to respond when they were among the 1720 people included in a “standard”\
+		5-day survey. In the same study, 429 people refused to respond when they were\
+		among the 1640 people included in a “rigorous” 8-week survey. (The data are based\
+		on results from “Consequences of Reducing Nonresponse in a National Telephone\
+		Survey,” by Keeter et al., Public Opinion Quarterly, Vol. 64, No. 2.) Use a 0.01 significance\
+		level to test the claim that the refusal rate is lower with the rigorous survey.'+theDirections,
+	'\\item Asurvey of 436 workers showed that 192 of them said that it was\
+		seriously unethical to monitor employee e-mail. When 121 senior-level bosses were\
+		surveyed, 40 said that it was seriously unethical to monitor employee e-mail (based\
+		on data from a Gallup poll). Use a 0.05 significance level to test the claim that for\
+		those saying that monitoring e-mail is seriously unethical, the proportion of employees\
+		is greater than the proportion of bosses.'+theDirections,
+	'\\item The Joint Commission on Accreditation of Healthcare\
+		Organizations mandated that hospitals ban smoking by 1994. In a study of the effects\
+		of this ban, subjects who smoke were randomly selected from two different populations.\
+		Among 843 smoking employees of hospitals with the smoking ban, 56 quit\
+		smoking one year after the ban. Among 703 smoking employees from workplaces\
+		without a smoking ban, 27 quit smoking a year after the ban (based on data from\
+		“Hospital Smoking Bans and Employee Smoking Behavior,” by Longo, Brownson,et al., \
+		Journal of the American Medical Association, Vol. 275, No. 16). Use a $0.05$ significance level to test the claim that there is a difference in the rate of smokers who quit smoking at hospitals with and without the ban.'+theDirections,
+	'\\item In a USA Today article about an experimental nasal\
+		spray vaccine for children, the following statement was presented: “In a trial involving\
+		1602 children only 14 ($1\\%$) of the 1070 who received the vaccine developed the\
+		flu, compared with 95 ($18\\%$) of the 532 who got a placebo.” The article also referred\
+		to a study claiming that the experimental nasal spray “cuts children’s chances of getting\
+		the flu.” Use the data to test this claim with a $0.05$ significance level.'+theDirections,
+	'\\item The drug Clarinex is used to treat symptoms from allergies.\
+		In a clinical trial of this drug, $2.1\\%$ of the 1655 treated subjects experienced fatigue.\
+		Among the 1652 subjects given placebos, $1.2\\%$ experienced fatigue (based on\
+		data from Schering Corporation). Use a 0.05 significance level to test the claim that\
+		the incidence of fatigue is greater among those who use Clarinex.'+theDirections,
+	'\\item In a survey of commuting habits, it was found that among 1068\
+		homeowners, $82.4\\%$ drive themselves to work. Among 1064 renters, $68.1\\%$ drive\
+		themselves to work (based on data from The U.S. Census American Housing Survey).\
+		Use a 0.05 significance level to test the claim that there is a difference in the proportions of homeowners and renters that commute.'+theDirections,
+	'\\item Among 5000 items of randomly selected baggage handled by American\
+		Airlines, 22 were lost. Among 4000 items of randomly selected baggage handled\
+		by Delta Airlines, 15 were lost (based on data from the U.S. Department of Transportation). Use this data and a 0.05 significance level to test the claim that there is a difference between the two rates of lost baggage.'+theDirections,
+	'\\item Among 2200 randomly selected male car occupants\
+		over the age of 8, $72\\%$ wear seat belts. Among 2380 randomly selected female car occupants\
+		over the age of 8, $84\\%$ wear seat belts (based on data from the U.S. Department\
+		of Transportation). Use a 0.05 significance level to test the claim that both genders\
+		have the same rate of seat belt use.'+theDirections,
+	'\\item Radon is a gas produced when radium decays, and it can enter\
+		homes where it can become a health threat. Among 186 homes in Hyde Park,\
+		New York (home of Franklin D. Roosevelt), $16\\%$ were found to have unsafe radon\
+		levels (above 4 picocuries per liter). Among 237 homes in LaGrange, New York\
+		(home of the author), $19\\%$ were found to have unsafe radon levels (based on data\
+		from the New York State Department of Health). Use a 0.05 significance level to test\
+		the claim that the two Dutchess County regions have different rates of unsafe radon\
+		levels.'+theDirections,
+	'\\item In a Time CNN survey, $24\\%$ of 205 single women said\
+		that they “definitely want to get married.” In the same survey, $27\\%$ of 260 single men\
+		gave that same response. Use a 0.01 significance level to test the claim that there is a difference between the proportions of single men and women who want to get married.'+theDirections,
 					];
 theType++;
 theComp++;
@@ -843,12 +1045,107 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: Two Independent Means';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the claim in symbols: \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the claim in symbols: \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item A sample of 36 blue glow worms had an average weight of 1.3 ounces with a standard deviation of 0.2 ounces. A sample of 49 green glow worms had an average weight of 1.6 ounces with a standard deviation of 0.3 ounces. Use this data and a significance level of $\\alpha =0.05$ to test the claim that, on average, the blue glow worms are lighter than the green glow worms.'+theDirections,
 	'\\item A course can be taken for credit by attending lectures or by doing online sessions. An examinanion was given to groups of students using each method. The 12 online students had a mean of 34.22 and a standard deviation of 4.45. The 14 students in the conventional class had a mean of 32.56 and a standard deviation of 4.95. Test the claim that students doing the course online scored the same as the students in the conventional class.'+theDirections,
+	'\\item In a randomized, double-blind,\
+		placebo-controlled trial of children, echinacea was tested as a treatment for upper respiratory\
+		infections in children. “Days of fever” was one criterion used to measure effects.\
+		Among 337 children treated with echinacea, the mean number of days with\
+		fever was 0.81, with a standard deviation of 1.50 days. Among 370 children given a\
+		placebo, the mean number of days with fever was 0.64 with a standard deviation of\
+		1.16 days (based on data from “Efficacy and Safety of Echinacea in Treating Upper\
+		Respiratory Tract Infections in Children,” by Taylor et al., Journal of the American\
+		Medical Association, Vol. 290, No. 21). Use a 0.05 significance level to test the claim\
+		that echinacea affects the number of days with fever.'+theDirections,
+	'\\item A study was conducted to assess\
+		the effects that occur when children are exposed to cocaine before birth. Children were\
+		tested at age 4 for object assembly skill, which was described as “a task requiring\
+		visual-spatial skills related to mathematical competence.” The 190 children born to cocaine\
+		users had a mean of 7.3 and a standard deviation of 3.0. The 186 children not exposed\
+		to cocaine had a mean score of 8.2 with a standard deviation of 3.0. (The data\
+		are based on “Cognitive Outcomes of Preschool Children with Prenatal Cocaine Exposure,”\
+		by Singer et al., Journal of the American Medical Association, Vol. 291, No. 20.)\
+		Use a 0.05 significance level to test the claim that prenatal cocaine exposure is associated\
+		with lower scores of four-year-old children on the test of object assembly.'+theDirections,
+	'\\item When investigating a relationship\
+		between birth weight and IQ, researchers found that 258 subjects with extremely\
+		low birth weights (less than 1000 g) had Wechsler IQ scores at age 8 with a\
+		mean of 95.5 and a standard deviation of 16.0. For 220 subjects with normal birth\
+		weights, the mean at age 8 is 104.9 and the standard deviation is 14.1. (Based on data'+theDirections,
+	'\\item from “Neurobehavioral Outcomes of School-age Children Born Extremely Low Birth\
+		Weight or Very Preterm in the 1990s,” by Anderson et al., Journal of the American\
+		Medical Association, Vol. 289, No. 24.) Use a 0.05 significance level to test the claim that there is a difference between the mean IQ score of 8-year-old children born with low\
+		birth weight and the mean of 8-year-old children born with normal birth weight.'+theDirections,
+	'\\item A randomized trial tested the effectiveness of\
+		diets on adults. Among 40 subjects using the Weight Watchers diet, the mean weight\
+		loss after one year was 3.0 lb with a standard deviation of 4.9 lb. Among 40 subjects using\
+		the Atkins diet, the mean weight loss after one year was 2.1 lb with a standard deviation\
+		of 4.8 lb. Use a 0.05 significance level to test the claim that there is a difference between the mean\
+		weight lost by subjects using the two different diets.'+theDirections,
+	'\\item Many studies have\
+		been conducted to test the effects of marijuana use on mental abilities. In one such\
+		study, groups of light and heavy users of marijuana in college were tested for memory\
+		recall, with the results given below (based on data from “The Residual Cognitive Effects\
+		of Heavy Marijuana Use in College Students,” by Pope and Yurgelun-Todd,\
+		Journal of the American Medical Association, Vol. 275, No. 7). Use a 0.01 significance\
+		level to test the claim that the population of heavy marijuana users has a lower\
+		mean than the light users.\\\\\
+		Items sorted correctly by light marijuana users: $n = 64$,$\\overline{x}=53.3$, $s=3.6$ \\\\\
+		Items sorted correctly by heavy marijuana users: $n=65$,$\\overline{x}=51.3$, $s=4.5$. '+theDirections,
+	'\\item In clinical experiments involving\
+		different groups of independent samples, it is important that the groups be\
+		similar in the important ways that affect the experiment. In an experiment designed to\
+		test the effectiveness of paroxetine for treating bipolar depression, subjects were measured\
+		using the Hamilton depression scale with the results given below (based on data\
+		from “Double-Blind, Placebo-Controlled Comparison of Imipramine and Paroxetine\
+		in the Treatment of Bipolar Depression,” by Nemeroff et al., American Journal of\
+		Psychiatry, Vol. 158, No. 6).\\\\\
+		Placebo group: $n=43$,$\\overline{x}=21.57$, $s=3.87$\\\\\
+		Paroxetine treatment group: $n=33$,$\\overline{x}=20.38$, $s=3.91$\
+		Use a 0.05 significance level to test the claim that the treatment group and\
+		placebo group come from populations with the same mean.'+theDirections,
+	'\\item People spend huge sums of money\
+		(currently around $\\$5$ billion annually) for the purchase of magnets used to treat a wide\
+		variety of pains. Researchers conducted a study to determine whether magnets are effective\
+		in treating back pain. Pain was measured using the visual analog scale, and the\
+		results given below are among the results obtained in the study (based on data from\
+		“Bipolar Permanent Magnets for the Treatment of Chronic Lower Back Pain: A Pilot\
+		Study,” by Collacott, Zimmerman, White, and Rindone, Journal of the American\
+		Medical Association, Vol. 283, No. 10). Use a 0.05 significance level to test the claim\
+		that those treated with magnets have a greater reduction in pain than those given a\
+		sham treatment (similar to a placebo).\\\\\
+		Reduction in pain level after magnet treatment: $n=20$, $\\overline{x}=0.49$, $s=0.96$\\\\\
+		Reduction in pain level after sham treatment: $n=20$, $\\overline{x}=0.44$, $s=1.4$\
+		'+theDirections,
+	'\\item One study used\
+		x-ray computed tomography (CT) to collect data on brain volumes for a group of patients\
+		with obsessive-compulsive disorders and a control group of healthy persons.\
+		Sample results for volumes (in mL) follow for the right cordate (based on data from\
+		“Neuroanatomical Abnormalities in Obsessive-Compulsive Disorder Detected with\
+		Quantitative X-Ray Computed Tomography,” by Luxenberg et al., American Journal\
+		of Psychiatry, Vol. 145, No. 9).\
+		Control group: $n=10$, $\\overline{x}=0.45$, $s=0.08$\\\\\
+		Obsessive-compulsive patients: $n=10$, $\\overline{x}=0.34$, $s=0.08$. Use a 0.01 significance level to test the claim that there is a difference\
+		between the two population means'+theDirections,
+	'\\item An experiment was conducted to test the\
+		effects of alcohol. The errors were recorded in a test of visual and motor skills for a\
+		treatment group of people who drank ethanol and another group given a placebo. The\
+		results are shown in the accompanying table (based on data from “Effects of Alcohol\
+		Intoxication on Risk Taking, Strategy, and Error Rate in Visuomotor Performance,”\
+		by Streufert et al., Journal of Applied Psychology, Vol. 77, No. 4).  Use a 0.05 significance level to test the claim that there is a difference between the\
+		treatment group and control group.\
+		$$\
+		\\begin{array}{c|c}\
+		Treatment & Placebo\\\\\
+		Group  & Group\\\\ \\hline\
+		n_1=22 & n_2 = 22 \\\\\
+		\\overline{x}_1=4.20 & \\overline{x}_2 = 1.71\\\\\
+		s_1 = 2.20 &  s_2 = 0.72\
+		\\end{array}\
+		$$'+theDirections,
 					];
 theType++;
 theComp++;
@@ -859,21 +1156,100 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: Matched Pairs';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the claim in symbols: \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the claim in symbols: \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Some believe that a glow worm will consume its body weight in food each day. Below are listed the weights (in ounces) of several glow worms along with the weight of food consumed by each worm \
-	in one day.\
-	$$\
-	\\begin{array}{r|c|c|c|c|c|c|c|c|c|c|c|c}\
-	Weight \\, of \\, worm	 \& 1.25 \& 1.18 \& 1.01 	\&  0.99	 \& 0.91 \& 0.88 \& 0.75 \& 0.73 \& 0.71 \& 0.68 \\\\ 		\\hline\
-	Weight \\, consumed	 \& 1.20 \& 1.20	 \& 1.10 	 \& 1.05	 \& 0.95 \& 0.85 \& 0.70 \& 0.71 \& 0.71 \& 0.79 	\
-	\\end{array}\
-	$$\
-	Use this data and a significance level of $.05$ to test the claim that on average the amount of food \
-	eaten by a glow worm in a day is different from its weight.\
-	\end{enumerate}' + theDirections,					];
+	'\\item Listed below are actual high\
+		temperatures and the high temperatures that were forecast one day earlier.\
+		Use a 0.05 significance level to test the claim that there is no difference between the means of the \
+		actual high temperatures and the high temperatures that were forecast one day earlier.\
+		$$\
+		\\begin{array}{r|ccccc}\
+		Actual \\, high \& 80 \& 77 \& 81 \& 85 \& 73 \\\\ \\hline\
+		High \\, forecast \\, one \\, day \\, earlier \& 78 \& 75 \&  81 \& 85 \& 76\
+		\\end{array}\
+		$$' + theDirections,
+	'\\item Researchers collected data on the numbers of hospital admissions\
+		resulting from motor vehicle crashes, and results are given below for Fridays\
+		on the 6th of a month and Fridays on the following 13th of the same month (based on\
+		data from “Is Friday the 13th Bad for Your Health?” by Scanlon et al., British Medical\
+		Journal, Vol. 307, as listed in the Data and Story Line online resource of data sets).\
+		Use a 0.05 significance level to test the claim that when the 13th day of a month falls\
+		on a Friday, the numbers of hospital admissions from motor vehicle crashes are not\
+		affected.\
+		$$\
+		\\begin{array}{r|ccccccc}\
+		Friday \\, the \\, 6th: \& 9 \& 6 \& 11 \& 11 \& 3 \& 5 \\\\ \\hline\
+		Friday \\, the \\, 13th: \& 13\&  12 \& 14 \& 10 \& 4 \& 12\
+		\\end{array}\
+		$$' + theDirections,
+	'\\item Fourteen different medical students measured the blood\
+		pressure of the same patient, then repeated the measurement the following day. Listed\
+		below are the systolic readings in mmHg (based on data from Bellevue Hospital in\
+		New York City). Test the claim that there is no difference in the measurements between the two days.\
+		$$\
+		\\begin{array}{r|cccccccccccccc}\
+		Day \\, 1: \& 138\& 130\& 135\& 140\& 120\& 125\& 120\& 130\& 130\& 144\& 143\& 140\& 130\& 150 \\\\ \\hline\
+		Day \\, 2:\& 116\& 120\& 125\& 110\& 120\& 135\& 124\& 118\& 120\& 130\& 140\& 140\& 130\& 138	\
+		\\end{array}\
+		$$' + theDirections,
+	'\\item Listed below are the heights of candidates who\
+		won presidential elections and the heights of the candidates with the next highest\
+		number of popular votes. The data are in chronological order, so the corresponding\
+		heights from the two lists are matched. For candidates who won more than once, only\
+		the heights from the first election are included, and no elections before 1900 are included.\
+		A well-known theory is that winning candidates tend to be taller than the corresponding\
+		losing candidates. Use a 0.05 significance level to test that theory.\
+		$$\\begin{array}{l|l}\
+		Winner \& Runner-Up \\\\ \\hline\
+		71 \\, 74.5 \\, 74 \\, 73 \\, 69.5 \\, 71.5 \\, 75 \\, 72 \& 73 \\, 74 \\, 68 \\, 69.5 \\, 72 \\, 71 \\, 72 \\, 71.5 \\\\\
+		70.5 \\, 69 \\, 74 \\, 70 \\, 71 \\, 72 \\, 70 \\, 67 \& \\, 70 \\, 68 \\, 71 \\, 72 \\, 70 \\, 72 \\, 72 \\, 72\
+		\\end{array}$$' + theDirections,
+	'\\item The article “An SAT Coaching Program That Works,” by\
+		Kaplan (Chance, Vol. 15, No. 1) included a graph depicting SAT scores for 50 subjects\
+		in a control group. Nine of the 50 points were randomly selected, with each point\
+		representing the score on the SAT test taken the first time and the score on the SAT\
+		test taken a second time, with no preparatory course taken between the two tests. The\
+		graph was used to identify the scores listed below. Test the claim that the differences\
+		have a mean of 0.\
+		$$\\begin{array}{r|ccccccccc}\
+		First \\, score \& 480 \& 510 \& 530 \& 540 \& 550 \& 560 \& 600 \& 620 \& 660 \\\\ \\hline\
+		Second \\, score \& 460 \& 500 \& 530 \& 520 \& 580 \& 580 \& 560 \& 640 \& 690\
+		\\end{array}$$' + theDirections,
+	'\\item As part of the National Health and Nutrition\
+		Examination Survey conducted by the Department of Health and Human Services,\
+		self-reported heights and measured heights were obtained for males aged\
+		12–16. Listed below are sample results.\
+		Use a 0.05 significance level to test the claim that there is a difference between\
+		self-reported heights and measured heights of males aged 12–16.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Reported \& 68 \& 71 \& 63 \& 70 \& 71 \& 60 \& 65 \& 64 \& 54 \& 63 \& 66\&  72 \\\\ \\hline\
+		Measured \&  67.9\&  69.9 \& 64.9 \& 68.3 \& 70.3 \& 60.6 \& 64.5 \& 67.0 \& 55.6 \& 74.2 \& 65.0 \& 70.8\
+		\\end{array}$$' + theDirections,
+	'\\item A study was conducted to investigate\
+		the effectiveness of hypnotism in reducing pain. Results for randomly selected subjects\
+		are given in the accompanying table (based on “An Analysis of Factors That\
+		Contribute to the Efficacy of Hypnotic Analgesia,” by Price and Barber, Journal of\
+		Abnormal Psychology, Vol. 96, No. 1). The values are before and after hypnosis; the\
+		measurements are in centimeters on a pain scale. Use a 0.05 significance level to test the claim that the sensory measurements are\
+		lower after hypnotism.\
+		$$\\begin{array}{r|cccccccc}\
+		Before \& 6.6 \& 6.5 \& 9.0 \& 10.3 \& 11.3 \& 8.1 \& 6.3 \& 11.6 \\\\ \\hline\
+		After \& 6.8 \& 2.4 \& 7.4 \& 8.5 \& 8.1 \& 6.1 \& 3.4 \& 2.0\
+		\\end{array}$$' + theDirections,
+	'\\item In 1908, William Gosset published the article “The Probable Error\
+		of a Mean” under the pseudonym of “Student” (Biometrika, Vol. 6, No. 1). He included\
+		the data listed below for two different types of corn seed (regular and kiln\
+		dried) that were used on adjacent plots of land. The listed values are the yields of head\
+		corn in pounds per acre.\
+		Using a 0.05 significance level, test the claim that there is no difference between\
+		the yields from the two types of seed.\
+		$$\\begin{array}{r|ccccccccccc}\
+		Regular \& 1903 \& 1935 \& 1910 \& 2496 \& 2108 \& 1961 \& 2060 \& 1444 \& 1612 \& 1316 \& 1511 \\\\ \\hline\
+		Kiln \\, dried \& 2009 \& 1915 \& 2011 \& 2463 \& 2180 \& 1925 \& 2122 \& 1482 \& 1542 \& 1443 \& 1535\
+		\\end{array}$$' + theDirections,
+	];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -883,38 +1259,128 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: $\\chi^2$ GOF';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item Which is the same as your claim, $H_0$ or $H_1$? \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item In a certain forest, all of the glow worms are blue, green, brown, or yellow. \
-	A sample of glow worms from this forest yielded the counts of each color listed below.\
-	Use this data and a significance level of $\\alpha=0.05$ to test the claim that the colors are not \
-	uniformly distributed.\
-	$$\\begin{array}{c|c|c|c}\
-	blue \& green \& yellow \& brown \\\\ \\hline\
-	24 \& 51 \& 49 \& 56\
-	\\end{array}$$' + theDirections,
-	'\\item A single die was rolled 60 times with the results listed below. Does the die seem to be fair?\
-	$$\\begin{array}{r|cccccc}Digit \& 1 \& 2 \& 3 \& 4 \& 5 \& 6\\\\\
-	Frequency \& 14 \& 7 \& 9 \& 12\& 12\& 6\\end{array}$$' + theDirections,
+	'\\item A single die was rolled 60 times with the results listed below. Test the claim that the die is fair. (Use a significance level of 0.05.)\
+		$$\\begin{array}{r|cccccc}Digit \& 1 \& 2 \& 3 \& 4 \& 5 \& 6\\\\\
+		Frequency \& 14 \& 7 \& 9 \& 12\& 12\& 6\\end{array}$$' + theDirections,
 	'\\item Among drivers who have had a crash in the last year, 100 are randomly selected and\
-	categorized by age. If all ages have the same crash rate, we would expect ( because of\
-	the age distribution of licensed drivers) the given categories to have $16\\%$; $44\\%$; $27\\%$ and\
-	$13\\%$ of the subjects, respectively. Does any age group appear to have a disproportionate\
-	number of crashes?\
-	$$\\begin{array}{r|cccc}\
-	Age\& Under \\, 25\& 25-44 \& 45-64\&  Over \\, 64 \\\\\
-	Drivers \& 42\& 22\& 14\& 22\
-	\\end{array}$$' + theDirections,
-	'\\item A single die was rolled 120 times with the results listed below. Does the die seem to be fair?\
-	$$\\begin{array}{r|cccccc}\
-	Digit\& 1\& 2\& 3\& 4\& 5\& 6\\\\\
-	Frequency \&22\& 14\& 18\& 30\& 24\& 12 \\end{array}$$' + theDirections,
+		categorized by age. If all ages have the same crash rate, we would expect ( because of\
+		the age distribution of licensed drivers) the given categories to have $16\\%$; $44\\%$; $27\\%$ and\
+		$13\\%$ of the subjects, respectively. Does any age group appear to have a disproportionate\
+		number of crashes?\
+		$$\\begin{array}{r|cccc}\
+		Age\& Under \\, 25\& 25-44 \& 45-64\&  Over \\, 64 \\\\\
+		Drivers \& 42\& 22\& 14\& 22\
+		\\end{array}$$' + theDirections,
+	'\\item A single die was rolled 120 times with the results listed below. Test the claim that the die is fair. (Use a significance level of 0.05.)\
+		$$\\begin{array}{r|cccccc}\
+		Digit\& 1\& 2\& 3\& 4\& 5\& 6\\\\\
+		Frequency \&22\& 14\& 18\& 30\& 24\& 12 \\end{array}$$' + theDirections,
 	'\\item A company advertises that its premium mixture of nuts cotains $10\\%$ Brazilian, $20\\%$ \
-	cashews, $20\\%$ almonds, $10\\%$ hazelnuts and $40\\%$ peanuts. You purchase a can and remove \
-	a random sample of 200 nuts. The results are listed below. Does the mixture match the company\'s claim?\
-	$$\\begin{array}{ccccc} Brazil\& Cashew \&Almond\& Hazelnuts\& Peanuts \\\\	18\& 36\& 48\& 22\& 76 \\end{array}$$' + theDirections,	
+		cashews, $20\\%$ almonds, $10\\%$ hazelnuts and $40\\%$ peanuts. You purchase a can and remove \
+		a random sample of 200 nuts. The results are listed below. Test the company\'s claim? (Use a significance level of 0.05.)\
+		$$\\begin{array}{ccccc} Brazil\& Cashew \&Almond\& Hazelnuts\& Peanuts \\\\	18\& 36\& 48\& 22\& 76 \\end{array}$$' + theDirections,	
+	'\\item A classic tale involves four car-pooling students who\
+		missed a test and gave as an excuse a flat tire. On the makeup test, the instructor asked\
+		the students to identify the particular tire that went flat. If they really didn’t have a flat\
+		tire, would they be able to identify the same tire? The author asked 41 other students\
+		to identify the tire they would select. The results are listed in the following table (except\
+		for one student who selected the spare). Use a 0.05 significance level to test the\
+		author’s claim that the results fit a uniform distribution.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Tire \& Left \\, front \& Right \\, front \& Left \\, rear \& Right rear \\\\ \\hline\
+		Number \\, selected \& 11 \& 15 \& 8 \& 6\
+		\\end{array}$$'+theDirections,
+	'\\item Randomly selected deaths from car crashes were obtained,\
+		and the results are included in the table below (based on data from the Insurance Institute\
+		for Highway Safety). Use a 0.05 significance level to test the claim that car crash\
+		fatalities occur with equal frequency on the different days of the week.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Day \& Sun \& Mon \& Tues \& Wed \& Thurs \& Fri \& Sat \\\\ \\hline\
+		Number \\, of \\, fatalities \& 132 \& 98 \& 95 \& 98 \& 105 \& 133 \& 158\
+		\\end{array}$$'+theDirections,
+	'\\item Randomly selected birth records were obtained and results are listed in the\
+		table below (based on data from the National Vital Statistics Report, Vol. 49, No. 1).\
+		Use a 0.05 significance level to test the reasonable claim that births occur with equal\
+		frequency on the different days of the week.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Day \& Sun \& Mon \& Tues \& Wed \& Thurs \& Fri \& Sat \\\\ \\hline\
+		Births \& 36 \& 55 \& 62 \& 60 \& 60 \& 58 \& 48\
+		\\end{array}$$'+theDirections,
+	'\\item Randomly selected deaths of motorcycle riders are summarized\
+		in the table below (based on data from the Insurance Institute for Highway Safety).\
+		Use a 0.05 significance level to test the claim that such fatalities occur with equal frequency\
+		in the different months.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Month \& Jan. \& Feb. \& March \& April \& May \& June \& July \& Aug. \& Sept. \& Oct. \& Nov. \& Dec. \\\\ \\hline\
+		Number \& 6 \& 8 \& 10 \& 16 \& 22 \& 28 \& 24 \& 28 \& 26 \& 14 \& 10 \& 8\
+		\\end{array}$$'+theDirections,
+	'\\item Do “A” students tend to sit in a particular part of the\
+		classroom? The author recorded the locations of the students who received grades of\
+		A, with these results: 17 sat in the front, 9 sat in the middle, and 5 sat in the back of\
+		the classroom. Test the claim that the “A” students\
+		are not evenly distributed throughout the classroom.'+theDirections,
+	'\\item The author collected data consisting of the month of birth\
+		of actresses who won Oscars. Use a 0.05 significance level to test the claim that Oscar-\
+		winning actresses are born in the different months with the same frequency.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Month \& Jan. \& Feb. \& March \& April \& May \& June \& July \& Aug. \& Sept. \& Oct. \& Nov. \& Dec. \\\\ \\hline\
+		Number \& 7 \& 3 \& 7 \& 7 \& 8 \& 7 \& 6 \& 6 \& 5 \& 6 \& 9 \& 5\
+		\\end{array}$$'+theDirections,
+	'\\item The author collected data consisting of the month of birth of\
+		actors who won Oscars. Use a 0.05 significance level to test the claim that Oscarwinning\
+		actors are born in the different months with the same frequency.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Month \& Jan. \& Feb. \& March \& April \& May \& June \& July \& Aug. \& Sept. \& Oct. \& Nov. \& Dec. \\\\ \\hline\
+		Number \& 9 \& 5 \& 7 \& 14 \& 8 \& 1 \& 7 \& 6 \& 4 \& 5 \& 1 \& 9\
+		\\end{array}$$'+theDirections,
+	'\\item A wedding caterer randomly selects clients from the past few years and\
+		records the months in which the wedding receptions were held. The results are listed\
+		below (based on data from The Amazing Almanac). Use a 0.05 significance level to\
+		test the claim that weddings are held in the different months with the same frequency.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Month \& Jan. \& Feb. \& March \& April \& May \& June \& July \& Aug. \& Sept. \& Oct. \& Nov. \& Dec. \\\\ \\hline\
+		Number \& 5 \& 8 \& 6 \& 8 \& 11 \& 14 \& 10 \& 9 \& 10 \& 12 \& 8 \& 9\
+		\\end{array}$$'+theDirections,
+	'\\item A researcher has developed a theoretical model for predicting\
+		eye color. After examining a random sample of parents, she predicts the eye color of\
+		the first child. The table below lists the eye colors of offspring. Based on her theory,\
+		she predicted that $87\\%$ of the offspring would have brown eyes, $8\\%$ would have blue\
+		eyes, and $5\\%$ would have green eyes. Use a 0.05 significance level to test the claim\
+		that the actual frequencies correspond to her predicted distribution.\
+		$$\\begin{array}{r|cccccccccccc}\
+		\& Brown Eyes \& Blue Eyes \& Green Eyes\\\\ \\hline\
+		Frequency \& 132 \& 17 \& 0\
+		\\end{array}$$'+theDirections,
+	'\\item The USA Today headline of “Seven-game series defy odds” referred\
+		to a claim that seven-game World Series contests occur more often than expected\
+		by chance. Listed below are the numbers of games of World Series contests\
+		(omitting two that lasted eight games) along with the proportions that would be expected\
+		with teams of equal abilities. Use a 0.05 significance level to test the claim that\
+		the observed frequencies agree with the theoretical proportions.\
+		$$\\begin{array}{r|cccccccccccc}\
+		Games \& 4 \& 5 \& 6 \& 7\\\\ \\hline \
+		Actual \\, World \\, Series \\, contests \& 18 \& 20 \& 22 \& 37 \\\\ \\hline\
+		Expected \\, proportion \& 2/16 \& 4/16 \& 5/16 \& 5/16\
+			\\end{array}$$'+theDirections,
+	'\\item Based on the genotypes of parents, offspring are expected to\
+		have genotypes distributed in such a way that $25\\%$ have genotypes denoted by AA,\
+		$50\\%$ have genotypes denoted by Aa, and $25\\%$ have genotypes denoted by aa. When\
+		145 offspring are obtained, it is found that 20 of them have AA genotypes, 90 have Aa\
+		genotypes, and 35 have aa genotypes. Test the claim that the observed genotype offspring\
+		frequencies fit the expected distribution of $25\\%$ for AA, $50\\%$ for Aa, and $25\\%$\
+		for aa. Use a significance level of 0.05.'+theDirections,
+	'\\item A study was conducted to investigate racial\
+		disparity in clinical trials of cancer. Among the randomly selected participants, 644\
+		were white, 23 were Hispanic, 69 were black, 14 were Asian, and 2\
+		were American Indian Alaskan Native. The proportions of the U.S. population of the\
+		same groups are 0.757, 0.091, 0.108, 0.038, and 0.007, respectively. (Based on data\
+		from “Participation in Clinical Trials,” by Murthy, Krumholz, and Gross, Journal of\
+		the American Medical Association, Vol. 291, No. 22.) Use a 0.05 significance level to\
+		test the claim that the participants fit the same distribution as the U.S. population.'+theDirections,
 					];
 theType++;
 theComp++;
@@ -925,30 +1391,157 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: Contingency Table';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item Which is the same as your claim, $H_0$ or $H_1$? \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Below is a table showing how many worms in a sample were green, blue, and yellow and how \
-	many were male or female. Use this data and a significance level of $\\alpha = 0.05$ to test the claim \
-	that the gender of these worms is dependent on color.\
-	$$\\begin{array}{c|c|c|c}\
-		\& green \& blue \& yellow \\\\ \\hline\
-	Male		\& 62 \& 12 \& 28 \\\\ \\hline\
-	Female	\& 21 \& 16 \& 34\
-	\\end{array}$$' + theDirections,
 	'\\item A university collected data to determine if the amount of time spent involved with\
-	extracurricular activities affects class performance. Test the claim that physical activity\
-	is independent of class performance.\
-	$$\\begin{array}{r|c|c|c}Extracurricular \\, Activity:\& \
-	Low \& Medium \& High\\\\ \\hline\
-	C \\, or \\, better \& 12\& 68\& 7\\\\ \\hline\
-	D \\, or \\, F \& 9 \& 23 \& 5\\end{array}$$' + theDirections,
+		extracurricular activities affects class performance. Test the claim that physical activity\
+		is independent of class performance.\
+		$$\\begin{array}{r|c|c|c}Extracurricular \\, Activity:\& \
+		Low \& Medium \& High\\\\ \\hline\
+		C \\, or \\, better \& 12\& 68\& 7\\\\ \\hline\
+		D \\, or \\, F \& 9 \& 23 \& 5\\end{array}$$' + theDirections,
 	'\\item A study of 531 persons injured in bicycle crashes is summarized below. Does a helmet seem to\
-	be effective in helping to prevent facial injuries?\
-	$$\\begin{array}{c|c|c} \& Helmet \\, Worn \& No \\, Helmet\\\\ \\hline\
-	Facial \\, Injuries \& 30 \& 182\\\\ \\hline\
-	No \\, Facial \\,  Injuries \& 83 \& 236\\end{array}$$' + theDirections,
+		be effective in helping to prevent facial injuries?\
+		$$\\begin{array}{c|c|c} \& Helmet \\, Worn \& No \\, Helmet\\\\ \\hline\
+		Facial \\, Injuries \& 30 \& 182\\\\ \\hline\
+		No \\, Facial \\,  Injuries \& 83 \& 236\\end{array}$$' + theDirections,
+	'\\item Racial profiling is the controversial practice of targeting someone\
+		for criminal behavior on the basis of the person’s race, national origin, or ethnicity.\
+		The accompanying table summarizes results for randomly selected drivers stopped by\
+		police in a recent year (based on data from the U.S. Department of Justice, Bureau of Justice\
+		Statistics). Using the data in this table results in the Minitab display. Use a 0.05 significance\
+		level to test the claim that being stopped is independent of race and ethnicity\
+		$$\\begin{array}{r|ccccc}\
+		\& Black \\, and  \& White \\, and \\\\ \
+		\& Non-Hispanic \&  Non-Hispanic \\\\ \\hline\
+		Stopped \& 24 \& 147 \\\\ \
+		by \\, police\\\\\
+		Not\\, stopped  \& 176 \& 1253 \\\\\
+		by \\, police\
+		\\end{array}$$'+theDirections,
+	'\\item The accompanying table summarizes successes and failures when subjects\
+		used different methods in trying to stop smoking. The determination of smoking\
+		or not smoking was made five months after the treatment was begun, and the data are\
+		based on results from the Centers for Disease Control and Prevention. Use  a 0.05 significance level to test the\
+		claim that success is independent of the method used.\
+		$$\\begin{array}{r|ccccc}\
+		\& Nicotine \\, Gum \& Nicotine \\, Patch \\\\ \\hline\
+		Smoking \& 191 \&  263 \\\\\
+		Not \\, smoking \& 59 \& 57\
+		\\end{array}$$'+theDirections,
+	'\\item In a USA Today article about an experimental vaccine for\
+		children, the following statement was presented: “In a trial involving 1602 children,\
+		only 14 ($1\\%$) of the 1070 who received the vaccine developed the flu, compared with\
+		95 ($18\\%$) of the 532 who got a placebo.” The data are shown in the table below. Use a\
+		0.05 significance level to test for independence between the variable of treatment\
+		(vaccine or placebo) and the variable representing flu (developed flu, did not develop\
+		flu).\
+		$$\\begin{array}{r|ccccc}\
+		\& Caught \\, the \\, flu \& Did \\, not \\, catch \\, the \\, flu \\\\ \\hline\
+		Vaccine \\, treatment \& 14 \& 1056 \\\\\
+		Placebo \& 95 \& 437\
+		\\end{array}$$'+theDirections,
+	'\\item A study was conducted of the association between intoxication\
+		and pedestrian deaths, with the results shown in the accompanying table (based on\
+		data from the National Highway Traffic Safety Administration). Use a 0.05 significance\
+		level to test the claim that pedestrian fatalities are independent of the intoxication\
+		of the driver and the intoxication of the pedestrian.\
+		$$\\begin{array}{r|ccccc}\
+		\& Pedestrian \\, Intoxicated \& Pedestrian \\, Not \\, Intoxicated \\\\ \\hline\
+		Driver \\, intoxicated \& 59 \& 79 \\\\\
+		Driver \\, not \\, intoxicated \& 266 \& 581\
+		\\end{array}$$'+theDirections,
+	'\\item The table below is based on data from a Scripps Survey\
+		Research Center poll. Use a 0.05 significance level to test the claim that gender and\
+		left-handedness are independent.\
+		$$\\begin{array}{r|ccccc}\
+		\& Left-handed \& Not \\, Left-handed \\\\ \\hline\
+		Male \&83  \& 17\\\\\
+		Female \& 184 \& 16\
+		\\end{array}$$'+theDirections,
+	'\\item The data in the table below are based on data from a\
+		Time magazine article. Use a 0.05 significance level to test the claim that whether a\
+		subject had low birth weight or normal birth weight is independent of whether the\
+		subject graduates from high school by age 19.\
+		$$\\begin{array}{r|ccccc}\
+		\& Graduated \\, from \\, high \\, school  \& Did \\, not \\, graduate \\, from \\, high \\, school \\\\\
+		\& by \\, age \\, 19 \& by \\, age \\, 19 \\\\ \\hline\
+		Low \\, birth \\, weight \& 8 \& 42 \\\\\
+		Normal \\, birth \\, weight \& 86 \& 64\
+		\\end{array}$$'+theDirections,
+	'\\item The data in the accompanying table summarize results\
+		from tests of the accuracy of polygraphs (based on data from the Office of Technology\
+		Assessment). Use a 0.05 significance level to test the claim that whether the subject\
+		lies is independent of the polygraph indication.\
+		$$\\begin{array}{r|ccccc}\
+		\& Polygraph \\, Indicated \& Polygraph \\, Indicated\\\\\
+		\& Truth \& Lie \\\\ \\hline\
+		Subject \\, told \\, the \\, truth\& 65\& 15\\\\\
+		Subject \\, told \\, a \\, lie\& 3\& 17\
+		\\end{array}$$'+theDirections,
+	'\\item An experiment was conducted to test the ability of dogs to\
+		detect bladder cancer. Dogs were trained with urine samples from bladder cancer patients\
+		and people in a control group who did not have bladder cancer. Results are\
+		given in the table below (based on data from the New York Times). Using a 0.01 significance\
+		level, test the claim that the source of the sample (healthy or with bladder\
+		cancer) is independent of the dog’s selections.\
+		$$\\begin{array}{r|ccccc}\
+		\& Sample \\, from \\, subject \& Sample \\, from \\, subject \\\\\
+		\& with \\, bladder \\, cancer \& without \\, bladder \\, cancer \\\\ \\hline\
+		Dog \\, identified \\, subject \\, as \\, cancerous \&22 \&32 \\\\\
+		Dog \\, did \\, not \\, identify \\, subject \\, as \\, cancerous \& 32 \& 282 \
+		\\end{array}$$'+theDirections,
+	'\\item Many people believe that criminals who plead\
+		guilty tend to get lighter sentences than those who are convicted in trials. The accompanying\
+		table summarizes randomly selected sample data for San Francisco\
+		defendants in burglary cases. All of the subjects had prior prison sentences. At the\
+		0.05 significance level, test the claim that the sentence (sent to prison or not sent to\
+		prison) is independent of the plea.\
+		$$\\begin{array}{r|ccccc}\
+		\& Guilty \\, Plea \&  Not\\, Guilty\\, Plea \\\\ \\hline\
+		Sent \\,to \\,prison \& 392 \&  58 \\\\\
+		Not \\,sent \\,to \\,prison \& 564 \& 14\
+		\\end{array}$$'+theDirections,
+	'\\item A randomized controlled trial was designed to compare\
+		the effectiveness of splinting against surgery in the treatment of carpal tunnel syndrome.\
+		Results are given in the table below (based on data from “Splinting vs.\
+		Surgery in the Treatment of Carpal Tunnel Syndrome,” by Gerritsen et al., Journal of\
+		the American Medical Association, Vol. 288, No. 10). The results are based on evaluations\
+		made one year after the treatment. Using a 0.01 significance level, test the\
+		claim that success is independent of the type of treatment.\
+		$$\\begin{array}{r|ccccc}\
+		\& Successful \& Unsuccessful \\\\ \\hline\
+		Splint \& 60 \& 23 \\\\\
+		Surgery \& 67 \& 6\
+		\\end{array}$$'+theDirections,
+	'\\item When flipping a penny or spinning a penny, is the\
+		probability of getting heads the same? Use the data in the table below with a 0.05 significance\
+		level to test the claim that the proportion of heads is the same with flipping\
+		as with spinning.\
+		$$\\begin{array}{r|ccccc}\
+		\& Heads \&  Tails \\\\ \\hline\
+		Flipping \& 14,709 \& 14,306 \\\\\
+		Spinning \& 9,197 \& 11,225\
+		\\end{array}$$'+theDirections,
+	'\\item Use the data in the table to test the claim that occupation is independent\
+		of whether the cause of death was homicide. The table is based on data\
+		from the U.S. Department of Labor, Bureau of Labor Statistics.\
+		$$\\begin{array}{r|ccccc}\
+		\& Police \& Cashier \& Taxi Driver \& Guard \\\\ \\hline\
+		Homicide \& 82 \&  107 \&  70 \& 59 \\\\\
+		Not \\, homicide \& 92 \&  9 \& 29 \& 42\
+		\\end{array}$$'+theDirections,
+	'\\item Winning team data were collected\
+		for teams in different sports, with the results given in the accompanying table.\
+		Use a 0.10 significance level to test the claim that home/visitor wins are independent\
+		of the sport.\
+		$$\\begin{array}{r|ccccc}\
+		\& Basketball \& Baseball \& Hockey \& Football \\\\ \\hline\
+		Home \\, team \\, wins \& 127 \& 53 \& 50 \& 57 \\\\\
+		Visiting \\, team \\, wins \& 71 \& 47 \& 43 \& 42\
+		\\end{array}$$'+theDirections,
 					];
 theType++;
 theComp++;
@@ -959,21 +1552,70 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: ANOVA';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item Which is the same as your claim, $H_0$ or $H_1$? \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Listed below are the lengths in inches of samples of three different colors of glow worms. Use \
-	this data and a significance level of $\\alpha =0.05$ to test the claim that the different colors of worms \
-	have the same average length.\\\\\
-	Blue: 7, 7, 7, 8, 8, 9, 9, 9, 10, 10, 11, 12\\\\\
-	Green: 8, 8, 8, 9, 9, 10, 10, 10, 11, 11, 12, 13\\\\\
-	Brown: 9, 9, 9, 10, 10, 11, 11, 11, 12, 12, 13, 14' + theDirections,
 	'\\item The response time for three different types of circuits used in an electronic calculator are listed \
-	below. Test the claim that the three circuits have same response time.\\\\\
-	I 19 22 20 18 25\\\\\
-	II 20 21 33 27 40\\\\\
-	III 16 15 18 26 17' + theDirections,
+		below. Test the claim that the three circuits have same response time.\\\\\
+		I: 19 22 20 18 25\\\\\
+		II: 20 21 33 27 40\\\\\
+		III: 16 15 18 26 17' + theDirections,
+	'\\item In car crash experiments conducted\
+		by the National Transportation Safety Administration, new cars were purchased and\
+		crashed into a fixed barrier at 35 mi/h. Head injury data for different size cars are given below.\
+		Use a 0.05 significance level to test the claim that the different size categories have the same mean.\\\\\
+		Subcompact: 681 428 917 898 420\\\\\
+		Compact: 643 655 442 514 525\\\\\
+		Midsize: 469 727 525 454 259\\\\\
+		Full-size: 384 656 602 687 360'+theDirections,
+			'\\item In car crash experiments conducted\
+		by the National Transportation Safety Administration, new cars were purchased and\
+		crashed into a fixed barrier at 35 mi/h. Chest deceleration data for different size cars are given below.\
+		Use a 0.05 significance level to test the claim that the different size categories have the same mean.\\\\\
+		Subcompact: 55 47 59 49 42\\\\\
+		Compact: 57 57 46 54 51\\\\\
+		Midsize: 45 53 49 51 46\\\\\
+		Full-size: 44 45 39 58 44'+theDirections,
+	'\\item A study was conducted to investigate the effects of exercise on\
+		stress. The table below lists systolic blood pressure readings (in mmHg) of subjects\
+		from the time preceding 25 minutes of aerobic bicycle exercise and preceding the\
+		introduction of stress through arithmetic and speech tests (based on data from “Sympathoadrenergic\
+		Mechanisms in Reduced Hemodynamic Stress Responses after Exercise,”\
+		by Kim Brownley et al., Medicine and Science in Sports and Exercise, Vol. 35,\
+		No. 6). Use a 0.05 significance level to test the claim that the different groups of subjects\
+		have the same mean blood pressure.\
+		$$\\begin{array}{cccc}\
+		Female/Black \&  Male/Black \& Female/White \& Male/White \\\\ \\hline\
+		117.00 \&  115.67 \&  119.67 \&  124.33 \\\\\
+		130.67 \&  120.67 \&  106.00 \&  111.00\\\\\
+		102.67 \&  133.00 \&  108.33\&   99.67\\\\\
+		93.67 \&  120.33 \&  107.33 \&  128.33\\\\\
+		96.33 \&  124.67 \&  117.00 \&  102.00\\\\\
+		92.00 \&  118.33 \&  113.33 \&  127.33\
+		\\end{array}$$'+theDirections,
+	'\\item Samples of head breadths were\
+		obtained by measuring skulls of Egyptian males from three different epochs, and the\
+		measurements are listed below (based on data from Ancient Races of the Thebaid, by\
+		Thomson and Randall-Maciver). Changes in head shape over time suggest that\
+		interbreeding occurred with immigrant populations. Use a 0.05 significance level to\
+		test the claim that the different epochs do not all have the same mean.\
+		$$\\begin{array}{ccc}\
+		4000 B.C. \& 1850 B.C. \& 150 A.D\\\\\\hline\
+		131 \& 129 \& 128\\\\\
+		138 \& 134 \& 138\\\\\
+		125 \& 136 \& 136\\\\\
+		129 \& 137 \& 139\\\\\
+		132 \& 137 \& 141\\\\\
+		135 \& 129 \& 142\\\\\
+		132 \& 136 \& 137\\\\\
+		134 \& 138 \& 145\\\\\
+		138 \& 134 \& 137\
+		\\end{array}$$'+theDirections,
+	'\\item The UN recently announced that this decade is the warmest decade on record.  Below are average annual temperatures for Lincoln, Ne, for the past three decades.  Use a .05 significance level to test the claim that these temperatures are samples from populations with different means.\\\\\
+		2000s: 50.6 52.6 53.6 52.8 51.8 51.1 53.9 52.5 52.1\\\\\
+		1990s: 52.7 53.2 50.6 48.7 50.8 50.5 48.3 51.8 53.2 53.5\\\\\
+		1980s: 50.5 52.8 54.2 53.0 49.2 51.1 50.8 49.3 52.7 51.9	'+theDirections, 
 	];
 theType++;
 theComp++;
@@ -984,21 +1626,112 @@ comps[theComp]=[];
 nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: Linear Correlation';
 theType=0;
-theDirections= '\\begin{enumerate} \\item State the Null Hypothesis $H_0$: \\item State the Alternative Hypothesis $H_1$: \\item Which is the same as your claim, $H_0$ or $H_1$? \\item State your $P$-value: \\item State your formal conclusion: \\item State your final conclusion: \\end{enumerate}';
+theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Below are lengths (in inches) and weights (in ounces) of a sample of glow worms. Use this data \
-	and a significance level of $\\alpha = 0.05$ to test the claim that there is a linear correlation between \
-	length and weight of a glow worm.\
-	$$\\begin{array}{c|cccccccccc}\
-	length  \& 9 \& 9 \& 10 \& 10 \& 10 \& 11 \& 11 \& 12 \& 13\\\\ \\hline\
-	weight \& 0.75 \& .85 \& .95 \& 1.00 \& 1.05 \& 1.15 \& 1.20 \& 1.35 \& 1.55\
-	\\end{array}$$' + theDirections,
-	'\\item The following data shows the mileage for a certain vehicle at various speeds. Determine if there \
+	'\\item The following data shows the mileage for a certain vehicle at various speeds. Test the claim that there \
 	is significant linear correlation between the speed and MPG.\
 	$$\\begin{array}{r|ccccc}Speed \& 30\& 40\& 50\& 60\& 70\\\\ \\hline\
 	MPG\& 24 \&28\& 30\& 28\& 26\\end{array}$$' + theDirections,
+	'\\item Using the data\
+		given below, test the claim that there is a a linear correlation between height of an eruption of Old Faithful\
+		and the time interval after the eruption.\
+		$$\\begin{array}{r|cccccccc}\
+		Height \& 140 \& 110 \& 125 \& 120 \& 140 \& 120 \& 125 \& 150 \\\\\\hline\
+		 Interval \\, after \& 92 \& 65 \& 72 \& 94 \& 83 \& 94 \& 101 \& 87\
+		\\end{array}$$'+theDirections,
+	'\\item The table below lists the numbers of audience impressions\
+		(in hundreds of millions) listening to songs and the corresponding numbers of albums\
+		sold (in hundreds of thousands). The number of audience impressions is a count of the\
+		number of times people have heard the song. The table is based on data from USA Today. Test the claim that\
+		there is a linear correlation between the number of impressions and the number of albums sold.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
+		Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are the budgets (in millions of dollars) and the\
+		gross receipts (in millions of dollars) for randomly selected movies (based on data\
+		from the Motion Picture Association of America). Test the claim that there is  a linear correlation\
+		between the money spent making the movie and the amount that it recovered in theaters.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90\\\\ \\hline\
+		Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are the weights (in pounds) and the\
+		highway fuel consumption amounts (in mi gal) of randomly selected cars (Chrysler\
+		Sebring, Ford Mustang, BMW 3-Series, Ford Crown Victoria, Honda Civic, Mazda\
+		Protégé, Hyundai Accent). Test the claim that there is a linear correlation between weight and highway\
+		fuel consumption.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
+		Fuel \\, Consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are the chest sizes (in inches) and weights\
+		(in pounds) of randomly selected bears that were anesthetized and measured (based\
+		on data from Gary Alt and Minitab, Inc.). Because it is much more difficult to weigh a\
+		bear than to measure its chest size, the presence of a correlation could lead to a\
+		method for estimating weight based on chest size. Test the claim that there is  a linear correlation between\
+		chest size and weight.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Chest \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
+		Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are heights (in inches) and weights\
+		(in pounds) for supermodels Michelle Alves, Nadia Avermann, Paris Hilton, Kelly\
+		Dyer, Christy Turlington, Bridget Hall, Naomi Campbell, Valerie Mazza, and Kristy\
+		Hume. Test a claim that there is  a correlation between height and weight?\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Height (in) \& 70 \& 70.5 \& 68 \& 65 \& 70 \& 70 \& 70 \& 70 \& 71\\\\ \\hline\
+		Weight (lb) \& 117 \& 119 \& 105 \& 115 \& 119 \& 127 \& 113 \& 123 \& 115\
+		\\end{array}$$'+theDirections,
+	'\\item Fourteen different second-year medical students took\
+		blood pressure measurements of the same patient and the results are listed below (data\
+		provided by Marc Triola, MD). Test the claim that there is  a correlation between systolic and diastolic\
+		values.\
+		$$\\begin{array}{r|ccccccccccccccc}\
+		Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
+		Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
+		\\end{array}$$'+theDirections,
+	'\\item The table below lists the numbers of murders and the\
+		population sizes (in hundreds of thousands) for large cities in America during a recent\
+		year (based on data from the New York Times). Test the claim that there is a linear correlation between the population size and number of murders in a year.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
+		Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
+		\\end{array}$$'+theDirections,
+	'\\item When nicotine is absorbed by the body, cotinine is produced.\
+		A measurement of cotinine in the body is therefore a good indicator of how much a\
+		person smokes. Listed below are the reported numbers of cigarettes smoked per day\
+		and the measured amounts of cotinine (in ng mL). (The values are from randomly selected\
+		subjects in the National Health Examination Survey.) Test the claim that there is a linear correlation between the number of cigarettes smoked in a day and the amount of cotinine in the body.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		cigarettes \\, per \\, day \& 60 \& 10 \& 4 \& 15 \& 10 \& 1 \& 20 \& 8 \& 7 \& 10 \& 10 \& 20\\\\ \\hline\
+		cotinine \& 179 \& 283 \& 75.6 \& 174 \& 209 \& 9.51 \& 350 \& 1.85 \& 43.4 \& 25.1 \& 408 \& 344\
+		\\end{array}$$'+theDirections,
+	'\\item In “The Effects of Temperature on Marathon Runner\’s\
+		Performance,” by David Martin and John Buoncristiani (Chance, Vol. 12, No. 4),\
+		high temperatures and times (in minutes) were given for women who won the New\
+		York City marathon in recent years. Results are listed below. Test the claim that there is a linear correlation between the temperatures and the times.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		temperature \& 55 \& 61 \& 49 \& 62 \& 70 \& 73 \& 51 \& 57\\\\ \\hline\
+		time \& 145 \& 148 \& 148 \& 148 \& 147 \& 146 \& 144 \& 147\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are heights (in inches) of mothers and heights (in\
+		inches) of their daughters (based on data from the National Health Examination Survey). Test a claim that there is a linear correlation between the heights.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Mother \& 63 \& 67 \& 64 \& 60 \& 65 \& 67 \& 59 \& 60\\\\ \\hline\
+		Daughter \& 58.6 \& 64.7 \& 65.3 \& 61.0 \& 65.4 \& 67.4 \& 60.9 \& 63.1\
+		\\end{array}$$'+theDirections,
+	'\\item One classic application of correlation involves the association\
+		between the temperature and the number of times a cricket chirps in a minute.\
+		Listed below are the numbers of chirps in 1 min and the corresponding temperatures\
+		in degrees Fahrenheit (based on data from The Song of Insects by George W. Pierce,\
+		Harvard University Press). Test the claim that there is a linear correlation between the number of chirps in one minute and the temperature.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
+		Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
+		\\end{array}$$'+theDirections,
 	];
 theType++;
 theComp++;
