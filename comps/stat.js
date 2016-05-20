@@ -542,21 +542,128 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	'\\item The glow worms from the lower Trinity River Valley are either blue or green.  $30\\%$ are blue. Let $x$ be the number of blue worms in a simple random sample of 500 of these worms. What is the expected value of $x$? ',
-	'\\item The glow worms from the lower Trinity River Valley are either blue or green.  $30\\%$ are blue. Let $x$ be the number of blue worms in a simple random sample of 500 of these worms. What is the standard deviation of $x$? ',
 	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the expected number of free throws she makes. Using the binomial distribution.',
 					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item The glow worms from the lower Trinity River Valley are either blue or green.  $30\\%$ are blue. What is the probability that among 100 of these worms there are not more than 35 blue worms? ',
 	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes exactly 5 of them. Using the binomial distribution.',
 	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes at least 5 of them. Using the binomial distribution.',
 	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes at most 5 of them. Using the binomial distribution.',
 	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, exactly 5 resign during the first year.',
 	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, at most 3 resign during the first year.',
 	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, at least 7 resign during the first year.',
+	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
+		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
+		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
+		Find the probability that at least five of the subjects experience headaches. Is it unusual\
+		to have at least five of six subjects experience headaches?',
+
+	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
+		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
+		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
+		Find the probability that at most two subjects experience headaches. Is it unusual to\
+		have at most two of six subjects experience headaches?',
+
+	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
+		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
+		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
+		Find the probability that more than one subject experiences headaches. Is it unusual to\
+		have more than one of six subjects experience headaches?',
+
+	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
+		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
+		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
+		Find the probability that at least one subject experiences headaches. Is it unusual to\
+		have at least one of six subjects experience headaches?',
+
+	'\\item The CBS television show 60 Minutes has been successful for\
+		many years. That show recently had a share of 20, meaning that among the TV sets in\
+		use, $20\\%$ were tuned to 60 Minutes (based on data from Nielsen Media Research). \
+		A survey is conducted of 10 randomly selected households having TV sets in use at the time of a \
+		60 Minutes broadcast. Assume that $20\\%$ of all TV sets are tuned to 60 Minutes during this time.\
+		Find the probability that none of the households are tuned to 60 Minutes.',
+
+	'\\item The CBS television show 60 Minutes has been successful for\
+		many years. That show recently had a share of 20, meaning that among the TV sets in\
+		use, $20\\%$ were tuned to 60 Minutes (based on data from Nielsen Media Research). \
+		A survey is conducted of 10 randomly selected households having TV sets in use at the time of a \
+		60 Minutes broadcast. Assume that $20\\%$ of all TV sets are tuned to 60 Minutes during this time.\
+		Find the probability that at least one household is tuned to 60 Minutes.',
+
+	'\\item The CBS television show 60 Minutes has been successful for\
+		many years. That show recently had a share of 20, meaning that among the TV sets in\
+		use, $20\\%$ were tuned to 60 Minutes (based on data from Nielsen Media Research). \
+		A survey is conducted of 10 randomly selected households having TV sets in use at the time of a \
+		60 Minutes broadcast. Assume that $20\\%$ of all TV sets are tuned to 60 Minutes during this time.\
+		Find the probability that at most one household is tuned to 60 Minutes.',
+
+	'\\item The Hemingway Financial Company prepares tax returns for individuals.\
+		(Motto: ``We also write great fiction.\") According to the Internal Revenue Service, individuals\
+		making $\\$25,000-\\$50,000$ are audited at a rate of $1\\%$. The Hemingway\
+		Company prepares five tax returns for individuals in that tax bracket, and three of\
+		them are audited.\
+		Find the probability that when 5 people making $\\$25,000-\\$50,000$ are randomly\
+		selected, exactly 3 of them are audited.',
+
+	'\\item The Hemingway Financial Company prepares tax returns for individuals.\
+		(Motto: ``We also write great fiction.\") According to the Internal Revenue Service, individuals\
+		making $\\$25,000-\\$50,000$ are audited at a rate of $1\\%$. The Hemingway\
+		Company prepares five tax returns for individuals in that tax bracket, and three of\
+		them are audited.\
+		Find the probability that when 5 people making $\\$25,000-\\$50,000$ are randomly\
+		selected, at least 3 of them are audited.',
+
+	'\\item The Medassist Pharmaceutical Company receives large shipments\
+		of aspirin tablets and uses this acceptance sampling plan: Randomly select and\
+		test 24 tablets, then accept the whole batch if there is only one or none that does not\
+		meet the required specifications. If a particular shipment of thousands of aspirin\
+		tablets actually has a $4\\%$ rate of defects, what is the probability that this whole shipment\
+		will be accepted?',
+
+	'\\item A study was conducted to determine whether there\
+		were significant differences between medical students admitted through special programs\
+		(such as affirmative action) and medical students admitted through the regular\
+		admissions criteria. It was found that the graduation rate was $94\\%$ for the medical students\
+		admitted through special programs (based on data from the Journal of the\
+		American Medical Association).\
+		If 10 of the students from the special programs are randomly selected, find the\
+		probability that at least 9 of them graduated.',
+
+	'\\item A study was conducted to determine whether there\
+		were significant differences between medical students admitted through special programs\
+		(such as affirmative action) and medical students admitted through the regular\
+		admissions criteria. It was found that the graduation rate was $94\\%$ for the medical students\
+		admitted through special programs (based on data from the Journal of the\
+		American Medical Association).\
+		If 10 of the students from the special programs are randomly selected, find the\
+		probability that at most 7 of them graduated. Would this be unusual?',
+
+	'\\item Air America has a policy of booking as many as 15 persons on\
+		an airplane that can seat only 14. (Past studies have revealed that only $85\\%$ of the\
+		booked passengers actually arrive for the flight.) Find the probability that if Air\
+		America books 15 persons, not enough seats will be available.',
+
+	'\\item The author purchased a slot machine that is configured so that\
+		there is a $1/2000$ probability of winning the jackpot on any individual trial. Although\
+		no one would seriously consider tricking the author, suppose that a guest claims that\
+		she played the slot machine 5 times and hit the jackpot twice.\
+		Find the probability of exactly two jackpots in 5 trials.',
+
+	'\\item The author purchased a slot machine that is configured so that\
+		there is a $1/2000$ probability of winning the jackpot on any individual trial. Although\
+		no one would seriously consider tricking the author, suppose that a guest claims that\
+		she played the slot machine 5 times and hit the jackpot twice.\
+		Find the probability of at least two jackpots in 5 trials.',
+
+	'\\item After being rejected for employment, Kim Kelly\
+		learns that the Bellevue Credit Company has hired only two women among the last 20\
+		new employees. She also learns that the pool of applicants is very large, with an approximately\
+		equal number of qualified men and women. Help her address the charge\
+		of gender discrimination by finding the probability of getting two or fewer women\
+		when 20 people are hired, assuming that there is no discrimination based on gender.',
+
 					];
 theType++;
 comps[theComp][theType]=[];
@@ -617,25 +724,138 @@ comps[theComp][theType]=[
 					];
 theType++;
 comps[theComp][theType]=[];
-nums[theComp][theType]=1;
+nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. What proportion of these worms are between 8 inches and 9 inches in length? ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. What proportion of these worms are between 7 inches and 9 inches in length? ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. What proportion of these worms are between 6 inches and 8 inches in length? ',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 80 and 105.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 100 and 115.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 90 and 100.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 120 and 130.',
-					];
+	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 1 woman is randomly selected, find the probability that her height is between\
+		63.5 in. and 64.5 in.',
+
+	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 1 woman is randomly selected, find the probability that her height is between\
+		60 in. and 65 in.',
+
+	'\\item When women were allowed to become pilots of fighter\
+		jets, engineers needed to redesign the ejection seats because they had been designed\
+		for men only. The ACES-II ejection seats were designed for men weighing between\
+		140 lb and 211 lb. The population of women has normally distributed weights with a\
+		mean of 143 lb and a standard deviation of 29 lb (based on data from the National\
+		Health Survey). If 1 woman is randomly selected, find the probability that her weight is between\
+		140 lb and 211 lb.',
+
+	'\\item Currently, quarters have weights that are normally distributed\
+		with a mean of 5.670 g and a standard deviation of 0.062 g. A vending machine is\
+		configured to accept only those quarters with weights between 5.550 g and 5.790 g.\
+		If what proportion of quarters are accepted by this machine?',
+	'\\item Assume that adults have IQ scores that are normally distributed with a mean of 100 \
+		and a standard deviation of 15.\
+		Find the probability that a randomly selected adult has an IQ between 90 and 110 (referred\
+		to as the normal range).',
+
+	'\\item Women\'s heights are normally distributed with mean 63.6 in. and standard deviation 2.5 in.\
+		The U.S. Army requires women’s heights\
+		to be between 58 in. and 80 in. Find the percentage of women meeting that height requirement.\
+		What percentage of women are being denied the opportunity to join the Army because\
+		they are too short or too tall?',
+		];
 theType++;
 comps[theComp][theType]=[];
-nums[theComp][theType]=1;
+nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. What is the probability that a randomly selected worm of this type is shorter than that 10 inches? ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. What is the probability that a randomly selected worm of this type is longer than that 10 inches? ',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 16. Find the probability that a randomly selected individual has a score below 115.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 16. Find the probability that a randomly selected individual has a score above 130.',
+	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+		by $\\sigma=2.5 in$. (based on data from the National Health Survey). If 1 woman is randomly selected, find the probability that her height is greater than\
+		63 in.',
 
+	'\\item Scores for men on the verbal portion of the SAT-I test are normally\
+		distributed with a mean of 509 and a standard deviation of 112 (based on data\
+		from the College Board). If 1 man is randomly selected, find the probability that his score is at least 590.',
+
+	'\\item An aircraft strobe light is designed so that the times between\
+		flashes are normally distributed with a mean of 3.00 s and a standard deviation of 0.40 s.\
+		Find the probability that an individual time is greater than 4.00 s.',
+
+	'\\item Engineers must consider the breadths of male heads\
+		when designing motorcycle helmets. Men have head breadths that are normally distributed\
+		with a mean of 6.0 in. and a standard deviation of 1.0 in. (based on anthropometric\
+		survey data from Gordon, Churchill, et al.). If one male is randomly selected, find the probability that his head breadth is less\
+		than 6.2 in.',
+
+	'\\item A ski gondola in Vail, Colorado, carries skiers to the top of a mountain.\
+		It bears a plaque stating that the maximum capacity is 12 people or 2004 pounds.\
+		That capacity will be exceeded if 12 people have weights with a mean greater than\
+		$2004/12=167$ pounds. Because men tend to weigh more than women, a ``worst\
+		case\" scenario involves 12 passengers who are all men. Men have weights that are\
+		normally distributed with a mean of 172 lb and a standard deviation of 29 lb (based\
+		on data from the National Health Survey). Find the probability that if an individual man is randomly selected, his weight will\
+		be greater than 167 pounds.',
+
+	'\\item For women aged 18–24, systolic blood pressures (in mm Hg) are normally\
+		distributed with a mean of 114.8 and a standard deviation of 13.1 (based on\
+		data from the National Health Survey). Hypertension is commonly defined as a systolic\
+		blood pressure above 140. If a woman between the ages of 18 and 24 is randomly selected, find the probability\
+		that her systolic blood pressure is greater than 140.',
+
+	'\\item In planning for hot water requirements, the manager of the\
+		Luxurion Hotel finds that guests spend a mean of 11.4 min each day in the shower\
+		(based on data from the Opinion Research Corporation). Assume that the shower\
+		times are normally distributed with a standard deviation of 2.6 min.\
+		Find the percentage of guests who shower more than 12 min.',
+
+	'\\item M$\\&$M plain candies have a mean weight of 0.8565 g\
+		and a standard deviation of 0.0518 g.  If 1 M$\\&$M plain candy is randomly selected, find the probability that it weighs\
+		more than 0.8535 g.',
+
+	'\\item Under older Federal Aviation Administration rules, airlines\
+		had to estimate the weight of a passenger as 185 pounds. (That amount is for an adult\
+		traveling in winter, and it includes 20 pounds of carry-on baggage.) Current rules require\
+		an estimate of 195 pounds. Men have weights that are normally distributed with\
+		a mean of 172 pounds and a standard deviation of 29 pounds.\
+		Based on this, assume that adult male travellers along with baggage have an average weight of \
+		192 pounds with a standard deviation of 29 pounds.\
+		If 1 adult male is randomly selected and is assumed to have 20 pounds of carry-on\
+		baggage, find the probability that his total is greater than 195 pounds.',
+	'\\item Assume that adults have IQ scores that are normally distributed with a mean of 100 \
+		and a standard deviation of 15.\
+		Find the probability that a randomly selected adult has an IQ that is less than 130.',
+
+	'\\item Assume that adults have IQ scores that are normally distributed with a mean of 100 \
+		and a standard deviation of 15.\
+		Find the probability that a randomly selected adult has an IQ greater than 131.5 (the\
+		requirement for membership in the Mensa organization).',
+
+	'\\item Women\'s heights are normally distributed with mean 63.6 in. and standard deviation 2.5 in.\
+		The Beanstalk Club, a social organization for\
+		tall people, has a requirement that women must be at least 70 in. (or 5 ft 10 in.) tall.\
+		What percentage of women meet that requirement?',
+
+	'\\item Women\'s heights are normally distributed with mean 63.6 in. and standard deviation 2.5 in.\
+		The standard doorway height is 80 in. What percentage of women are too tall to fit through a standard doorway\
+		without bending?',
+
+	'\\item Women\'s heights are normally distributed with mean 63.6 in. and standard deviation 2.5 in.\
+		The standard casket has an inside length of 78 in.\
+		What percentage of women are too tall to fit in a standard casket?',
+
+	'\\item Men\'s eights are normally distributed with mean 69.0 in. and standard deviation 2.8 in.\
+		The standard casket has an inside length of 78 in.\
+		What percentage of men are too tall to fit in a standard casket?',
+
+	'\\item Men\'s eights are normally distributed with mean 69.0 in. and standard deviation 2.8 in.\
+		The standard doorway height is 80 in. What percentage of men are too tall to fit through a standard doorway without\
+		bending?',
+
+	'\\item In a study of facial behavior, people in a control group are timed for eye\
+		contact in a 5-minute period. Their times are normally distributed with a mean of\
+		184.0 s and a standard deviation of 55.0 s (based on data from ``Ethological Study of\
+		Facial Behavior in Nonparanoid and Paranoid Schizophrenic Patients,\" by Pittman,\
+		Olk, Orr, and Singh, Psychiatry, Vol. 144, No. 1). For a randomly selected person\
+		from the control group, find the probability that the eye contact time is greater than\
+		230.0 s, which is the mean for paranoid schizophrenics.',
 					];
 theType++;
 theComp++;
@@ -656,45 +876,65 @@ comps[theComp][theType]=[
 					];
 theType++;
 comps[theComp][theType]=[];
-nums[theComp][theType]=1;
+nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the middle $98\\%$ of these worms from the rest. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the middle $92\\%$ of these worms from the rest. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the middle $88\\%$ of these worms from the rest. ',
+	//middle
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the middle $95\\%$ of the scores from the rest.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the middle $99\\%$ of the scores from the rest.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the middle $90\\%$ of the scores from the rest.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the shortest $8\\%$ of these worms from the rest. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the shortest $2\\%$ of these worms from the rest. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the shortest $6\\%$ of these worms from the rest. ',
+	'\\item Engineers must consider the breadths of male heads when designing\
+		motorcycle helmets. Men have head breadths that are normally distributed with a\
+		mean of 6.0 in. and a standard deviation of 1.0 in. (based on anthropometric survey\
+		data from Gordon, Churchill, et al.). Due to financial constraints, the helmets will be\
+		designed to fit all men except those with head breadths that are in the smallest $2.5\\%$ or\
+		largest $2.5\\%$. Find the minimum and maximum head breadths that the helmets will fit.',
+	//lowest
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the lowest $5\\%$ of the scores from the rest.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the lowest $9\\%$ of the scores from the rest.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the lowest $1\\%$ of the scores from the rest.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the longest $8\\%$ of these worms from the rest. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the longest $2\\%$ of these worms from the rest. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find two lengths which separate the longest $6\\%$ of these worms from the rest. ',
+	'\\item The lengths of pregnancies are normally distributed with a\
+		mean of 268 days and a standard deviation of 15 days.\
+		If we stipulate that a baby is premature if the length of pregnancy is in the lowest\
+		$4\\%$, find the length that separates premature babies from those who are not premature.',
+
+	'\\item Birth weights in the United States are normally distributed with a\
+		mean of 3420 g and a standard deviation of 495 g. If a hospital plans to set up special\
+		observation conditions for the lightest $2\\%$ of babies, what weight is used for the cutoff\
+		separating the lightest $2\\%$ from the others?',
+	//highest
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the highest $5\\%$ of the scores from the rest.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the highest $9\\%$ of the scores from the rest.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find two scores which separate the highest $1\\%$ of the scores from the rest.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find the first quartile for lengths of these worms. ',
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. Find the length required for one of these worms to be at the $80^{th}$ percentile. ',
+	'\\item Assume that adults have IQ scores that are normally distributed with a mean of 100 \
+		and a standard deviation of 15.\
+		Find the IQ score separating the top $85\\%$ from the others.',
+
+	'\\item Men\'s eights are normally distributed with mean 69.0 in. and standard deviation 2.8 in.\
+		The standard doorway height is 80 in.\
+		If a statistician designs a house so that all of the doorways have heights that are\
+		sufficient for all men except the tallest $5\\%$, what doorway height would be used?',
+
+	'\\item Men\'s eights are normally distributed with mean 69.0 in. and standard deviation 2.8 in.\
+		The standard casket has an inside length of 78 in.\
+		A manufacturer of caskets wants to reduce production costs by making smaller\
+		caskets. What inside length would fit all men except the tallest $1\\%$?',
+	//quartiles and percentiles
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the third quartile for these test scores.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the score required to be at the $90^{th}$ percentile.',
+	'\\item Assume that adults have IQ scores that are normally distributed with a mean of 100 \
+		and a standard deviation of 15.\
+		Find $P_{10}$ for IQ scores.',
+
+	'\\item Assume that adults have IQ scores that are normally distributed with a mean of 100 \
+		and a standard deviation of 15.\
+		Find $P_{60}$ for IQ scores.',
+
+	'\\item Engineers want to design seats in commercial aircraft\
+		so that they are wide enough to fit 98% of all males. (Accommodating $100\\%$ of males\
+		would require very wide seats that would be much too expensive.) Men have hip\
+		breadths that are normally distributed with a mean of 14.4 in. and a standard deviation of\
+		1.0 in. (based on anthropometric survey data from Gordon, Clauser, et al.). Find $P_{98}$. That\
+		is, find the hip breadth for men that separates the smallest $98\\%$ from the largest $2\\%$.',
 					];					
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -705,12 +945,107 @@ nums[theComp]=[];
 names[theComp]='Competency '+theComp+'A: Central Limit Theorem';
 theType=0;
 comps[theComp][theType]=[];
-nums[theComp][theType]=2;
+nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item The lengths of blue glow worms from the lower Trinity River Valley are normally distributed with a mean of 9 inches and a standard deviation of 1 inch. What is the probability that a simple random sample of 49 of these worms has an average length less than 9.1 inches? ',
 	'\\item Fuel economy estimates for cars tested predict a mean of 24.8 mpg and a standard deviation of 6.2 for highway driving. Assume a normal distribution applies to the data. A sample of 16 cars is selected. Find the probability that the sample average, is between 23 and 27.',
-	'\\item The scores on a final exam have a mean of 78 and a standard deviation of 10. Suppose that 25 individuals are randomly chosen. Find the probability that the average of the scores is between 75 and 80.'
-					];
+	'\\item The scores on a final exam have a mean of 78 and a standard deviation of 10. Suppose that 25 individuals are randomly chosen. Find the probability that the average of the scores is between 75 and 80.',
+	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 9 women are randomly selected, find the probability that they have a mean\
+		height between 63.5 in. and 64.5 in.',
+
+	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 16 women are randomly selected, find the probability that they have a mean\
+		height between 60 in. and 65 in.',
+
+	'\\item An aircraft strobe light is designed so that the times between\
+		flashes are normally distributed with a mean of 3.00 s and a standard deviation of 0.40 s.\
+		Find the probability that the mean for 60 randomly selected times is greater than\
+		4.00 s.',
+
+	'\\item When women were allowed to become pilots of fighter\
+		jets, engineers needed to redesign the ejection seats because they had been designed\
+		for men only. The ACES-II ejection seats were designed for men weighing between\
+		140 lb and 211 lb. The population of women has normally distributed weights with a\
+		mean of 143 lb and a standard deviation of 29 lb (based on data from the National\
+		Health Survey). If 36 different women are randomly selected, find the probability that their mean\
+		weight is between 140 lb and 211 lb.',
+
+	'\\item Currently, quarters have weights that are normally distributed\
+		with a mean of 5.670 g and a standard deviation of 0.062 g. A vending machine is\
+		configured to accept only those quarters with weights between 5.550 g and 5.790 g.\
+		If 280 different quarters are inserted into the vending machine, what is the probability\
+		that the mean falls between the limits of 5.550 g and 5.790 g?',
+	];
+theType++;
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item assume that women’s heights are normally distributed with a mean given by $\mu=63.6 in$. and a standard deviation given\
+		by $\sigma=2.5 in$. (based on data from the National Health Survey).  If 100 women are randomly selected, find the probability that they have a mean\
+		height greater than 63 in.',
+
+	'\\item A ski gondola in Vail, Colorado, carries skiers to the top of a mountain.\
+		It bears a plaque stating that the maximum capacity is 12 people or 2004 pounds.\
+		That capacity will be exceeded if 12 people have weights with a mean greater than\
+		$2004/12=167$ pounds. Because men tend to weigh more than women, a ``worst\
+		case\" scenario involves 12 passengers who are all men. Men have weights that are\
+		normally distributed with a mean of 172 lb and a standard deviation of 29 lb (based\
+		on data from the National Health Survey). Find the probability that 12 randomly selected men will have a mean that is greater\
+		than 167 pounds (so that their total weight is greater than the gondola maximum\
+		capacity of 2004 lb).',
+
+	'\\item The new Lucky Lady Casino wants to increase revenue by providing\
+		buses that can transport gamblers from other cities. Research shows that these gamblers\
+		tend to be older, they tend to play slot machines only, and they have losses with\
+		a mean of $\\$182$ and a standard deviation of $\\$105$. The buses carry 35 gamblers per\
+		trip. The casino gives each bus passenger $\\$50$ worth of vouchers that can be converted\
+		to cash, so the casino needs to recover that cost in order to make a profit. Find\
+		the probability that if a bus is filled with 35 passengers, the mean amount lost by a\
+		passenger will exceed $\\$50$.',
+
+	'\\item Assume that cans of Coke are filled so that the actual amounts\
+		have a mean of 12.00 oz and a standard deviation of 0.11 oz. Find the probability that a sample of 36 cans will have a mean amount of at least\
+		12.19 oz.',
+
+	'\\item Scores for men on the verbal portion of the SAT-I test are normally\
+		distributed with a mean of 509 and a standard deviation of 112 (based on data\
+		from the College Board).  If 16 men are randomly selected, find the probability that their mean score is\
+		at least 590.',
+
+	'\\item Engineers must consider the breadths of male heads\
+		when designing motorcycle helmets. Men have head breadths that are normally distributed\
+		with a mean of 6.0 in. and a standard deviation of 1.0 in. (based on anthropometric\
+		survey data from Gordon, Churchill, et al.). The Safeguard Helmet company plans an initial production run of 100 helmets.\
+		Find the probability that 100 randomly selected men have a mean head breadth\
+		less than 6.2 in.',
+
+	'\\item For women aged 18–24, systolic blood pressures (in mm Hg) are normally\
+		distributed with a mean of 114.8 and a standard deviation of 13.1 (based on\
+		data from the National Health Survey). Hypertension is commonly defined as a systolic\
+		blood pressure above 140. If 4 women in that age bracket are randomly selected, find the probability that their\
+		mean systolic blood pressure is greater than 140.',
+
+	'\\item In planning for hot water requirements, the manager of the\
+		Luxurion Hotel finds that guests spend a mean of 11.4 min each day in the shower\
+		(based on data from the Opinion Research Corporation). Assume that the shower\
+		times are normally distributed with a standard deviation of 2.6 min. The hotel has installed a system that can provide enough hot water provided that\
+		the mean shower time for 84 guests is less than 12 min. If the hotel currently has\
+		84 guests, find the probability that there will not be enough hot water.',
+
+	'\\item M$\\&$M plain candies have a mean weight of 0.8565 g\
+		and a standard deviation of 0.0518 g.  If 465 M$\\&$M plain candies are randomly selected, find the probability that their\
+		mean weight is at least 0.8535 g.',
+
+	'\\item Under older Federal Aviation Administration rules, airlines\
+		had to estimate the weight of a passenger as 185 pounds. (That amount is for an adult\
+		traveling in winter, and it includes 20 pounds of carry-on baggage.) Current rules require\
+		an estimate of 195 pounds. Men have weights that are normally distributed with\
+		a mean of 172 pounds and a standard deviation of 29 pounds.\
+		Based on this, assume that adult male travellers along with baggage have an average weight of \
+		192 pounds with a standard deviation of 29 pounds.\
+		If a Boeing 767-300 aircraft is full of 213 adult male passengers and each is assumed\
+		to have 20 pounds of carry-on baggage, find the probability that the mean\
+		passenger weight (including carry-on baggage) is greater than 195 pounds.',	
+	];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
