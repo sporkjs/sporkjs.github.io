@@ -88,7 +88,7 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Law of Large Numbers';
+names[theComp]='Competency '+theComp+'C: Probability Concepts';
 theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -106,6 +106,13 @@ comps[theComp][theType]=[
 	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =40\\%$.',
 					];
 theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=3;
+comps[theComp][theType]=[
+		'\\item What is the complement of an event $A$?',
+		'\\item What does it mean for two events $A$ and $B$ to be disjoint?',
+		'\\item What does it mean for two events $A$ and $B$ to be independent?',
+						];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -158,7 +165,7 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Confidence Intervals';
+names[theComp]='Competency '+theComp+'C: Confidence Interval Explanation';
 theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -342,19 +349,102 @@ comps[theComp][theType]=[
 		'\\item Classify this procedure as an experiment or an observational study: In a study evaluating the relationship between stress and muscle cramps half the subjects are randomly assigned to be exposed to increased stressed by being placed into an elevator that falls rapidly and stops abruptly and the other half are left at no or baseline stress.',
 		'\\item Classify this procedure as an experiment or an observational study: A researcher is interested in the effects of exercise on mental health and he proposes the following study: Use stratified random sampling to ensure representative proportions of 18-30, 31-40 and 41-55 year olds from the population. Next, randomly assign half the subjects from each age group to exercise twice a week, and instruct the rest not to exercise. Conduct a mental health exam at the beginning and at the end of the study, and compare the results.',
 		'\\item Classify this procedure as an experiment or an observational study: A study that surveyed a random sample of otherwise healthy high school students found that they are more likely to get muscle cramps when they are stressed. The study also noted that students drink more coffee and sleep less when they are stressed.',
-					];
+	'\\item Determine if this process is an experiment or an observational study:\
+		Nine-year-old Emily Rosa became an author of an article in the\
+		Journal of the American Medical Association after she tested professional touch therapists.\
+		Using a cardboard partition, she held her hand above the therapist’s hand, and\
+		the therapist was asked to identify the hand that Emily chose.',
+
+	'\\item Determine if this process is an experiment or an observational study:\
+		Much controversy arose over a study of patients with syphilis who\
+		were not given a treatment that could have cured them. Their health was followed for\
+		years after they were found to have syphilis.',
+
+	'\\item Determine if this process is an experiment or an observational study:\
+		The U.S. Food and Drug Administration randomly selects a sample of\
+		Bayer aspirin tablets. The amount of aspirin in each tablet is measured for accuracy.',
+		
+	'\\item Determine if this process is an experiment or an observational study:\
+		Cruise ship passengers are given magnetic bracelets, which they\
+		agree to wear in an attempt to eliminate or diminish the effects of motion sickness.',	
+	];
 theType++;
 theDirections='\\item Determine the type of sampling (convenience, cluster, stratified, systematic, simple random) used in this procedure:';
 comps[theComp][theType]=[];
 nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	theDirections+'To create a sample of glow worms, Ron chooses all of the glow worms on the roof of his porch.',
-	theDirections+'To create a sample of glow worms, Ron randomly selects a yard in town and then collects every glow worm from that yard.',
-	theDirections+'To create a sample of glow worms, Ron collects 10 worms from each yard in town. ',
-	theDirections+'Regular customers at Hy-Vee who belong to a rewards program have an ID number. Hy-Vee decides to randomly select 100 numbers and survey the selected cardholders.',
-	theDirections+''
-					];
+		
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		At a police sobriety checkpoint, every 5th driver was stopped and interviewed.',
+
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		On days of presidential elections, the news media organize an exit poll in\
+		which specific polling stations are randomly selected and all voters are surveyed as\
+		they leave the premises.',
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A researcher for the Spaulding athletic equipment company is\
+		studying the relationship between the level of education and participation in any\
+		sport. She conducts a survey of 40 randomly selected golfers, 40 randomly selected\
+		tennis players, and 40 randomly selected swimmers.',
+
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		An engineering student measures the strength of fingers used to push\
+		buttons by testing family members.',
+
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		An Internal Revenue Service researcher investigates cheating on income tax\
+		reports by surveying all waiters and waitresses at 20 randomly selected restaurants.',
+
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A marketing expert for MTV is planning a survey in which 500 people\
+		will be randomly selected from each age group of 10–19, 20–29, and so on.',
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		The author surveyed all of his students to obtain sample data consisting\
+		of the number of credit cards students possess.',
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		Fund-raisers for the College of Newport test a new telemarketing campaign\
+		by obtaining a list of all alumni and selecting every 100th name on that list.',
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		In a Gallup poll of 1059 adults, the interview subjects were selected\
+		by using a computer to randomly generate telephone numbers that were then called.',
+
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A market researcher has partitioned all California residents into categories\
+		of unemployed, employed full time, and employed part time. She is surveying\
+		50 people from each category.',
+
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		Motivated by a student who died from binge drinking, the College\
+		of Newport conducts a study of student drinking by randomly selecting 10 different\
+		classes and interviewing all of the students in each of those classes.',					];
 theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=2;
+comps[theComp][theType]=[
+	'\\item Determine whether the given data value is a statistic or a parameter:\
+		A sample of households is selected and the average (mean) number\
+		of people per household is 2.58 (based on data from the U.S. Census Bureau).',
+
+	'\\item Determine whether the given data value is a statistic or a parameter:\
+		Currently, $42\\%$ of the governors of the 50 United States are Democrats.',
+
+	'\\item Determine whether the given data value is a statistic or a parameter:\
+		In a study of all 2223 passengers aboard the Titanic, it is found that 706 survived\
+		when it sank.',
+
+	'\\item Determine whether the given data value is a statistic or a parameter:\
+		A sample of Americans is selected and the average (mean)\
+		amount of time watching television is 4.6 hours per day.',
+					];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -381,15 +471,23 @@ theDirections='\\item Classify this type of quantitative data as continuous or d
 comps[theComp][theType]=[];
 nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	theDirections+'The weight of a glow worm.',
-	theDirections+'The mass of the pine needles consumed by a glow worm in a day.',
-	theDirections+'The number of green glow worms in a sample of 100 worms.',
-	theDirections+'The number of bottles of Gatorade on a shelf.',
-	theDirections+'The volume of liquid in a bottle of Gatorade.',
-	theDirections+'The distance a player runs during a basketball game.',
-	theDirections+'The the number of fouls a player has during a game.'
-					];
-theType++;
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		When 50 letters were sent\
+		as part of an experiment, three of them arrived at the target address.',
+
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		In New York City, there are 3250 walk buttons that pedestrians\
+		can press at traffic intersections, and 2500 of them do not work (based on data from\
+		the article ``For Exercise in New York Futility, Push Button,\" by Michael Luo, New\
+		York Times).',
+
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The mean weight of pennies currently being minted is 2.5 grams.',
+
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		In a survey of 1059 adults, it is found that $39\\%$ of them have guns in\
+		their homes (based on a Gallup poll).',					];
+	theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -476,8 +574,11 @@ comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item The blue glow worms of the lower Trinity River Valley have an average length of 8 inches with a standard deviation of 1 inch. The green glow worms from the same region have an average length of 9 inches with a standard deviation of 1.5 inches. Bob found a blue worm that is 10 inches long and a green worm that is 11 inches long.  Which worm is more unusual? Support your answer.',
-	'\\item Suppose scores on the SAT are normally distributed with a mean of $\\mu = 1000$ and a standard deviation of  $\\sigma = 200$ and that scores on the ACT are normally distributed with a mean of $\\mu = 27$ and a standard deviation of $\\sigma = 3$. Angela scored 1260 on the SAT and Brian scored 33 on the ACT. Which student did better? Explain your conclusion.'
-					];
+	'\\item Suppose scores on the SAT are normally distributed with a mean of $\\mu = 1000$ and a standard deviation of  $\\sigma = 200$ and that scores on the ACT are normally distributed with a mean of $\\mu = 27$ and a standard deviation of $\\sigma = 3$. Angela scored 1260 on the SAT and Brian scored 33 on the ACT. Which student did better? Explain your conclusion.',
+	'\\item Which is relatively better: a score of 85 on a psychology test\
+		or a score of 45 on an economics test? Scores on the psychology test have a mean of\
+		90 and a standard deviation of 10. Scores on the economics test have a mean of 55\
+		and a standard deviation of 5.',						];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -498,7 +599,33 @@ comps[theComp][theType]=[
 		that $10\\%$ of the items produced are defective. If batches of 80 items are produced,\
 		the mean number of defects per batch is 8.0 and the standard deviation is 2.7. Would it\
 		be unusual to get only five defects in a batch? Explain',
-					];
+	'\\item Men have heights with a mean of 176 cm and a standard deviation\
+		of 7 cm. Charles Darwin had a height of 182 cm. \
+		Find the $z$-score of Darwin\'s height.\
+		Would Darwin\'s height be unusual by the Range Rule of Thumb?',
+	'\\item Stanford Binet IQ scores have a mean of 100 and a standard deviation\
+		of 16. Albert Einstein reportedly had an IQ of 160. \
+		Find the $z$-score for Einstein\'s IQ.\
+		Would this be unusual by the Range Rule of Thumb?',
+	'\\item With a height of 67 in., William McKinley was the shortest\
+		president of the past century. The presidents of the past century have a mean height of \
+		71.5 in. and a standard deviation of 2.1 in. Find the $z$-score for McKinley\'s height.\
+		Would this be unusual by the Range Rule of Thumb?',
+	'\\item Sandy Allen is the world’s tallest woman with a height of\
+		91.25 in. (or 7 ft, 7.25 in.). Women have heights with a mean of 63.6 in. and a standard\
+		deviation of 2.5 in.\
+		Find a $z$-score for Allen\'s height.\
+		Would this be unusual by the Range Rule of Thumb?',
+	'\\item The Beanstalk Club is limited to women and men who are very\
+		tall. The minimum height requirement for women is 70 in. Women’s heights have a\
+		mean of 63.6 in. and a standard deviation of 2.5 in. Find the z score corresponding to\
+		a woman with a height of 70 in. and determine whether that height is unusual by the Range Rule of Thumb.',
+	'\\item For men aged between 18 and 24 years, serum cholesterol levels\
+		(in mg 100 mL) have a mean of 178.1 and a standard deviation of 40.7 (based on data\
+		from the National Health Survey). Find the z score corresponding to a male, aged\
+		18–24 years, who has a serum cholesterol level of 259.0 mg 100 mL. Is this level unusually\
+		high by the Range Rule of Thumb?',
+				];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -513,7 +640,16 @@ comps[theComp][theType]=[
 		the mean number of defects per batch is 8.0 and the standard deviation is 2.7. Find\
 		the maximum and minimum usual number of defective items in a batch of 80 by the Range\
 		Rule of Thumb.',
-		];
+	'\\item Women\'s heights have a mean of 63.6 in. and a standard deviation of 2.5 in.\
+		Use the Range Rule of Thumb to find the maximum and minimum usual heights of women.',
+	'\\item Women have heights with a mean of 63.6 in. and a standard deviation of 2.5 in.\
+		Use the Range Rule of Thumb to find the maximum and minimum usual heights of women.',
+	'\\item Men have heights with a mean of 176 cm and a standard deviation of 7 cm.\
+		Use the Range Rule of Thumb to find the maximum and minimum usual heights of men.',
+	'\\item Lengths of pregnancies have a mean of 268 days and a standard deviation of 15 days.\
+		Use the Range Rule of Thumb to find the maximum and minimum usual lengths of pregnancies.',
+	'\\item Human body temperatures have a mean of $98.20^{\\circ}F$ and a standard deviation of $0.62^{\\circ}F$. \
+		Use the Range Rule of Thumb to find the maximum and minimum usual human body temperatures.',		];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -556,8 +692,142 @@ nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item An advocacy group is investigating whether gender has an effect on job category in large investment firms. A survey of a sample of firms yielded the following results. 	$$\\begin{array}{ccc} Job \\, Category \& Male \& Female\\\\ Clerical \& 80 \& 200\\\\ Professional \& 720 \& 480\\\\ Executive \& 400\&  120\\end{array}$$ Find the probability that a randomly selected employee is female.',
 	'\\item An advocacy group is investigating whether gender has an effect on job category in large investment firms. A survey of a sample of firms yielded the following results. 	$$\\begin{array}{ccc} Job \\, Category \& Male \& Female\\\\ Clerical \& 80 \& 200\\\\ Professional \& 720 \& 480\\\\ Executive \& 400\&  120\\end{array}$$ Find the probability that a randomly selected employee is female given that the job category is executive.',
-	'\\item A survey of investors finds that $50\\%$ use a full service brokerage firm to invest in stocks, $30\\%$ trade stocks online, and $20\\%$ do both. Find the probability that an investor selected at  random uses a full service brokerage firm to invest in stocks OR trades stocks online.'
-					];
+	'\\item A survey of investors finds that $50\\%$ use a full service brokerage firm to invest in stocks, $30\\%$ trade stocks online, and $20\\%$ do both. Find the probability that an investor selected at  random uses a full service brokerage firm to invest in stocks OR trades stocks online.',
+	];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Find the probability of the event that among three children, there is exactly one girl.',
+
+	'\\item Find the probability of the event that among three children, there are exactly two girls.',
+
+	'\\item Find the probability of the event that among three children, there are exactly three girls.',
+
+	'\\item In a study of 420,095 cell phone users in Denmark, it\
+		was found that 135 developed cancer of the brain or nervous system. Estimate the\
+		probability that a randomly selected cell phone user will develop such a cancer.',
+
+	'\\item In a recent year, 389 of the 281,421,906 people in the United\
+		States were struck by lightning. Estimate the probability that a randomly selected person\
+		in the United States will be struck by lightning this year.',
+
+	'\\item In a test of the MicroSort gender-selection technique, results consisted\
+		of 295 baby girls and 30 baby boys (based on data from the Genetics & IVF Institute).\
+		Based on this result, what is the probability of a girl born to a couple using\
+		the MicroSort method?',
+
+	'\\item New York City has 750 pedestrian walk buttons that work,\
+		and another 2500 that do not work (based on data from ``For Exercise in New York\
+		Futility, Push Button,\" by Michael Luo, New York Times). If a pedestrian walk button\
+		is randomly selected in New York City, what is the probability that it works?',
+
+	'\\item On their first date, Kelly asks Mike to guess the date of her birth,\
+		not including the year. What is the probability that Mike will guess correctly? (Ignore leap years.)\
+		Would it be unusual for him to guess correctly on his first try?',
+		
+
+	'\\item The U.S. General Accounting Office tested the Internal Revenue\
+		Service for correctness of answers to taxpayers’ questions. For 1733 trials, the IRS\
+		was correct 1107 times and wrong 626 times.\
+		Estimate the probability that a randomly selected taxpayer’s question will be\
+		answered incorrectly.\
+		Is it unusual for the IRS to provide a wrong answer to a taxpayer’s question?',
+		
+
+	'\\item Among 400 randomly selected drivers in the 20–24 age\
+		bracket, 136 were in a car crash during the last year (based on data from the National\
+		Safety Council). If a driver in that age bracket is randomly selected, what is the approximate\
+		probability that he or she will be in a car accident during the next year? Is it\
+		unusual for a driver in that age bracket to be involved in a car crash during a year?',	
+
+	'\\item In a clinical trial of Lipitor (atorvastatin), a common drug\
+		used to lower cholesterol, one group of patients was given a treatment of 10-mg atorvastatin\
+		tablets. That group consists of 19 patients who experienced flu symptoms and\
+		844 patients who did not (based on data from Pfizer, Inc.).\
+		Estimate the probability that a patient taking the drug will experience flu symptoms.\
+		Is it unusual for a patient taking the drug to experience flu symptoms?',	
+
+	'\\item Women have a $0.25\\%$ rate of red/green color blindness. If a woman is randomly\
+		selected, what is the probability that she does not have red/green color blindness?',
+
+
+
+	'\\item A Reuters/Zogby poll showed that 61% of Americans say they believe that life exists\
+		elsewhere in the galaxy. What is the probability of randomly selecting someone\
+		not having that belief?',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find the probability of\
+		getting someone who is not group A.',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find the probability of\
+		getting someone who is type $Rh^-$.',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find the probability of\
+		getting someone who is group A or type $Rh^-$.',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find the probability of\
+		getting someone who is group A or group B.',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find P(not type $Rh^+$).',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find P(group B or type\
+		$Rh^+$).',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find P(group AB or type\
+		$Rh^+$).',
+
+	'\\item Consider this table that summarizes the distribution of blood groups and Rh types.\
+		$$\\begin{array}{r|cccc}\
+		\& O \& A \& B \& AB \\\\ \\hline\
+		Rh^+ \& 39 \& 35 \& 8 \& 4\\\\\
+		Rh^- \& 6 \& 5 \& 2 \& 1\
+		\\end{array}$$\
+		If one person is randomly selected, find P(group A or O or\
+		type $Rh^+$).',
+		];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -566,6 +836,76 @@ comps[theComp][theType]=[
 	'\\item The probability of it snowing on December 25th in Seward is $40\\%$, find the probability it does not snow on December 25th.'
 					];
 theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item In the 108th Congress, the Senate consists of 51 Republicans,\
+		48 Democrats, and 1 Independent. If a lobbyist for the tobacco industry randomly\
+		selects three different Senators, what is the probability that they are all Republicans?',
+
+
+	'\\item With one method of a procedure called acceptance sampling, a\
+		sample of items is randomly selected without replacement and the entire batch is accepted\
+		if every item in the sample is okay. The Niko Electronics Company has just\
+		manufactured 5000 CDs, and 100 are defective. If 4 of these CDs are randomly selected\
+		for testing, what is the probability that the entire batch will be accepted?',
+		
+
+	'\\item It is common for public opinion polls to have a “confidence\
+		level” of $95\\%$, meaning (roughly) that there is a 0.95 probability that the poll results are accurate\
+		within the claimed margins of error. If six different organizations conduct\
+		independent polls, what is the probability that all six of them are accurate within\
+		the claimed margins of error?',
+
+	'\\item Recent developments appear to\
+		make it possible for couples to dramatically increase the likelihood that they will\
+		conceive a child with the gender of their choice. In a test of a gender-selection\
+		method, 12 couples try to have baby girls. If this gender-selection method has no\
+		effect, what is the probability that the 12 babies will be all girls?',
+
+	'\\item In a Riverhead, New York, case, nine different crime\
+		victims listened to voice recordings of five different men. All nine victims identified\
+		the same voice as that of the criminal. If the voice identifications were made by random\
+		guesses, find the probability that all nine victims would select the same person.',
+
+
+	'\\item Bob reasons that when he asks a woman for a date, she can accept or reject\
+		his request, so he assumes that he has a 0.5 probability of getting a date. If his assumption\
+		is correct, what is the probability of getting five rejections when Bob asks\
+		five different women for dates?',
+		
+	'\\item If a couple plans to have four children, what is the\
+		probability that they will have at least one girl? ',
+
+
+
+	'\\item If a couple plans to have 10 children (it could happen),\
+		what is the probability that there will be at least one girl?',
+
+	'\\item Find the probability of a couple having a baby girl when their\
+		third child is born, given that the first two children were both girls.',
+
+	'\\item A statistics professor wants to ensure that she is not\
+		late for an early class because of a malfunctioning alarm clock. Instead of using one\
+		alarm clock, she decides to use three. What is the probability that at least one of her\
+		alarm clocks works correctly if each individual alarm clock has a 95% chance of\
+		working correctly?',
+
+	'\\item With one method of the procedure called acceptance sampling,\
+		a sample of items is randomly selected without replacement, and the entire\
+		batch is rejected if there is at least one defect. The Medtyme Company has just manufactured\
+		5000 blood pressure monitors, and $4\\%$ are defective. If 3 of them are selected\
+		and tested, what is the probability that the entire batch will be rejected?',
+
+	'\\item When doing blood testing for HIV infections, the\
+		procedure can be made more efficient and less expensive by combining samples of\
+		blood specimens. If samples from three people are combined and the mixture tests\
+		negative, we know that all three individual samples are negative. Find the probability\
+		of a positive result for three samples combined into one mixture, assuming the probability\
+		of an individual blood sample testing positive is 0.1 (the probability for the ``at risk\"\
+		population, based on data from the New York State Health Department).',
+
+					];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -920,6 +1260,10 @@ comps[theComp][theType]=[
 	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(1.1 < z < 3)$. ',
 	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(-2.5 < z < 1.5)$. ',
 	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(-2 < z < -1)$. ',
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(-1.5 < z < -0.5)$. ',
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(-1 < z < 0)$. ',
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(0 < z < 1.5)$. ',
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(0.5 < z < 2)$. ',
 					];
 theType++;
 comps[theComp][theType]=[];
@@ -929,6 +1273,10 @@ comps[theComp][theType]=[
 	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z > -1)$.', 
 	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z < 1.25)$.', 
 	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z < -2.5)$.', 
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z < -1.25)$.', 
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z > -1.25)$.', 
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z < 3.25)$.', 
+	'\\item Suppose that $z$ is a random variable with a standard normal distribution. Find $P(z > 3.25)$.', 
 					];
 theType++;
 comps[theComp][theType]=[];
