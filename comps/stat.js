@@ -42,6 +42,11 @@ names[theComp]='Competency '+theComp+'C: Graphing';
 theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
+comps[theComp][theType]=['\\item I RECOMMEND REMOVING AND HAVING SOME \"DESCRIBE\" or \"IDENTIFY\" TYPE QUESTIONS IN 13.'
+					];
+
+/*comps[theComp][theType]=[];
+nums[theComp][theType]=1;
 comps[theComp][theType]=['\\item Sketch a histogram that has each of these shapes.\
 		\\begin{enumerate}\
 		\\item Uniform   \
@@ -59,6 +64,7 @@ comps[theComp][theType]=[
 	'\\item Sketch a scatter plot which seems to show negative linear correlation.'
 
 					];
+*/
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -97,7 +103,7 @@ comps[theComp][theType]=[
 	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =4/9$.',
 	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =0.75$.',
 	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =0.9$.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =40\%$.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =40\\%$.',
 					];
 theType++;
 theComp++;
@@ -135,15 +141,15 @@ comps[theComp][theType]=[
 					'\\item The expected value of a certain random variable is 12. What does this mean?',
 					'\\item The expected value of a certain random variable is 100.23. What does this mean?',
 					'\\item The expected value of a certain random variable is 3.14. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\$0.97$. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\$1.97$. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\$2.25$. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\$0.50$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\$298$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\$597$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\$123$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\$1026$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\$103$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$0.97$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$1.97$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$2.25$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$0.50$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$298$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$597$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$123$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$1026$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$103$. What does this mean?',
 					];
 theType++;
 theComp++;
@@ -163,10 +169,10 @@ theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-					'\\item What is meant by the statement, \`\`We are $95\%$ sure that the actual proportion is between $0.56$ and $0.61$?\"',
-					'\\item What is meant by the statement, \`\`We are $95\%$ sure that the actual proportion is between $0.6$ and $0.7$?\"',
-					'\\item What is meant by the statement, \`\`We are $95\%$ sure that the population mean is between $12$ inches and $14$ inches?\"',
-					'\\item What is meant by the statement, \`\`We are $95\%$ sure that the population mean is between $8$ inches and $10$ inches?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the actual proportion is between $0.56$ and $0.61$?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the actual proportion is between $0.6$ and $0.7$?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the population mean is between $12$ inches and $14$ inches?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the population mean is between $8$ inches and $10$ inches?\"',
 					];
 theType++;
 theComp++;
@@ -264,6 +270,7 @@ theDirectionsLong = 'For each claim below, write the letter of the type of claim
 theDirections = 'State what type of test you would use to test this claim: ';
 names[theComp]='Competency '+theComp+'C: Choosing a test';
 theType=0;
+
 comps[theComp][theType]=[];
 nums[theComp][theType]=5;
 comps[theComp][theType]=[
@@ -275,9 +282,51 @@ comps[theComp][theType]=[
 		'\\item '+theDirections+'About one half of our students are education majors. One quarter are business majors, and one quarter are some other major.	',
 		'\\item '+theDirections+'Female math majors have an average height greater than $66$ inches.',
 		'\\item '+theDirections+'On average, college students gain weight during their freshmen year.',
-		'\\item '+theDirections+'Female math majors are on average taller than female business majors. '
+		'\\item '+theDirections+'Female math majors are on average taller than female business majors. ',
+		'\\item '+theDirections+'Most college students get less than 7 hours of sleep each night.',
+		'\\item '+theDirections+'Most teenagers do not drink alcohol before the age of 16.',
+		'\\item '+theDirections+'More than sixty percent of college students change their majors more than twice.',
+		'\\item '+theDirections+'The proportion of full time college students who register for less than 17 hours is not one half.',
+		'\\item '+theDirections+'On average adults drink less than 8 cups of water per day.',
+		'\\item '+theDirections+'Pine needles have an average length less than 100mm.',
+		'\\item '+theDirections+'On average college students sleep no more than 7 hours per night.',
+		'\\item '+theDirections+'The average Ginko leaf width is 7cm. ',
+		'\\item '+theDirections+'The average shoe size of a college female is 8.5. ',
+		'\\item '+theDirections+'Female students at Concordia have an average height greater than 63.8 inches. ',
+		'\\item '+theDirections+'The average acorn diameter is greater than 2cm. ',
+		'\\item '+theDirections+'More college students drink soda than coffee. ',
+		'\\item '+theDirections+'The proportion of college students who have done illegal drugs is the same as the proportion of college students who are involved in Bible studies. ',
+		'\\item '+theDirections+'The proportion of college students who like math is different from the proportion of college students who like scare movies. ',
+		'\\item '+theDirections+'Fewer students like math than like to read. ',
+		'\\item '+theDirections+'The proportion of students who have had pets is greater than the proportion that are involved in extracurricular activities. ',
+		'\\item '+theDirections+'Cigarettes of type A have more nicotine than cigarettes of type B. ',
+		'\\item '+theDirections+'Paint of type A covers more area than paint of type B. ',
+		'\\item '+theDirections+'There is no difference in the average repair costs from the two types of bumper guards. ',
+		'\\item '+theDirections+'The males from two different islands have the same mean cephalic index. ',
+		'\\item '+theDirections+'There is no difference in font end and rear end repair costs on the same type of car. ',
+		'\\item '+theDirections+'A safety training program decreased the weekly losses in man hours in a factory. ',
+		'\\item '+theDirections+'An SAT training program increases students\' scores. ',
+		'\\item '+theDirections+'On average Best Actor is older than the Best Actress. ',
+		'\\item '+theDirections+'College students on average gain weight during their freshman year. ',
+		'\\item '+theDirections+'People on the Atkins diet for six months lose weight. ',
+		'\\item '+theDirections+'There is a linear correlation between cost and quality of TV sets. ',
+		'\\item '+theDirections+'There is a linear correlation between blood pressure measurements in the left and right arm. ',
+		'\\item '+theDirections+'There is a linear correlation between the number of times that a cricket chirps in a minute and temperature. ',
+		'\\item '+theDirections+'There is a linear correlation between brain volume and IQ. ',
+		'\\item '+theDirections+'Factory occupational injuries occur on each day of the week with equal frequency. ',
+		'\\item '+theDirections+'Children are born on each day of the week with equal frequency. ',
+		'\\item '+theDirections+'M$\\&$M colors match the company\'s claimed distribution. ',
+		'\\item '+theDirections+'Home field advantage is independent of sport. ',
+		'\\item '+theDirections+'Whether or not a criminal knows his victim is independent of the type of crime he commits. ',
+		'\\item '+theDirections+'Whether or not a person contracts polio is independent of whether or not he took the polio vaccine. ',
+		'\\item '+theDirections+'Motorcycle accidents are independent of the color of helmet the motorcycle rider wears. ',
+		'\\item '+theDirections+'Four, six, and eight cylinder cars have different average gas mileage. ',
+		'\\item '+theDirections+'Skull breadths from three different Egyptian kingdoms have different averages. ',
+		'\\item '+theDirections+'Crash test dummies in small, medium, and large cars have the same average head injury measurements.',
+		'\\item '+theDirections+'Crash test dummies in small, medium, and large cars have the same average chest deceleration measurements.',
 					];
 theType++;
+
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -290,8 +339,9 @@ theDirections='\\item Classify this procedure as an experiment or an observation
 comps[theComp][theType]=[];
 nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	theDirections+'To study color distribution among glow worms, Ron locates 200 glow worms and records their colors.',
-	theDirections+'To test the idea that glow worms actually glow under a full moon when it is cold, Ron places 100 worms under low light in a container whose temperature is maintained at $20^{\\circ} F$ and observes whether or not they glow. '
+		'\\item Classify this procedure as an experiment or an observational study: In a study evaluating the relationship between stress and muscle cramps half the subjects are randomly assigned to be exposed to increased stressed by being placed into an elevator that falls rapidly and stops abruptly and the other half are left at no or baseline stress.',
+		'\\item Classify this procedure as an experiment or an observational study: A researcher is interested in the effects of exercise on mental health and he proposes the following study: Use stratified random sampling to ensure representative proportions of 18-30, 31-40 and 41-55 year olds from the population. Next, randomly assign half the subjects from each age group to exercise twice a week, and instruct the rest not to exercise. Conduct a mental health exam at the beginning and at the end of the study, and compare the results.',
+		'\\item Classify this procedure as an experiment or an observational study: A study that surveyed a random sample of otherwise healthy high school students found that they are more likely to get muscle cramps when they are stressed. The study also noted that students drink more coffee and sleep less when they are stressed.',
 					];
 theType++;
 theDirections='\\item Determine the type of sampling (convenience, cluster, stratified, systematic, simple random) used in this procedure:';
@@ -440,14 +490,30 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item The blue glow worms of the lower Trinity River Valley have an average length of 8 inches with a standard deviation of 1 inch.  Bob found a blue worm that is 10 inches long. Is this unusual by the Range Rule of Thumb?',
+	'\\item If we consider an experiment of generating 100 births and\
+		recording the genders of the babies, the mean number of girls is 50 and the standard\
+		deviation is 5 girls. Would it be unusual by the Range Rule of Thumb to get 70 girls in 100 births? Explain.',
+
+	'\\item A manufacturing process has a defect rate of $10\\%$, meaning\
+		that $10\\%$ of the items produced are defective. If batches of 80 items are produced,\
+		the mean number of defects per batch is 8.0 and the standard deviation is 2.7. Would it\
+		be unusual to get only five defects in a batch? Explain',
 					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item The blue glow worms from the lower Trinity River Valley have an average length of 8 inches with a standard deviation of 1 inch. Find the minimum and maximum usual values for the length of one of these worms according to the Range Rule of Thumb.',
-					];
+	'\\item If we consider an experiment of generating 100 births and\
+		recording the genders of the babies, the mean number of girls is 50 and the standard\
+		deviation is 5 girls. Find the maximum and minimum usual number of girls in 100 births \
+		according to the Range Rule of Thumb.',
+
+	'\\item A manufacturing process has a defect rate of $10\\%$, meaning\
+		that $10\\%$ of the items produced are defective. If batches of 80 items are produced,\
+		the mean number of defects per batch is 8.0 and the standard deviation is 2.7. Find\
+		the maximum and minimum usual number of defective items in a batch of 80 by the Range\
+		Rule of Thumb.',
+		];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -511,12 +577,12 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$',
+	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$',
 	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c} x \& 1 \& 2 \& 3 \& 4 \& 5 \\\\ \\hline P(x) \& 0.1 \& 0.3 \& 0.2 \& 0.3 \& 0.1   \\end{array}$$',
 	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c} x \& 1 \& 2 \& 3 \& 4 \& 5 \\\\ \\hline P(x) \& 0.32 \& 0.35 \& 0.18 \& 0.10 \& 0.05   \\end{array}$$',
 					];
 theType++;
-theDirections='Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$';
+theDirections='Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
@@ -528,7 +594,33 @@ comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item A game costs $\\$10$ to play. In the game, you select 3 digits. There is one winning sequence of digits. If you select a winning sequence, you win $\\$1000$. What is your expected profit when playing this game?',
-	'\\item Suppose you play a game with a biased coin. You play each game by tossing the coin once. $P(H) = 3/5$ and $P(T) = 2/5$. If you toss a head, you pay $\\$4$. If you toss a tail, you win $\\$5$. Find the expected winnings from this game.'
+	'\\item Suppose you play a game with a biased coin. You play each game by tossing the coin once. $P(H) = 3/5$ and $P(T) = 2/5$. If you toss a head, you pay $\\$4$. If you toss a tail, you win $\\$5$. Find the expected winnings from this game.',
+	'\\item You are playing a game by drawing a card from a standard deck and replacing it. If the card is a face card, you win \\$30.\
+		If it is not a face card, you pay \\$2. There are 12 face cards in a deck of 52 cards. What is the expected value of playing the\
+		game?',
+
+	'\\item The IT staff for a large corporation has developed the following probability distribution for the number of calls requiring troubleshooting problems per day. Find the mean  of the random variable.\
+		$$ \\begin{array}{c|c|c|c|c|c}\
+		x&      0&1& 2&3&4\\\\\
+		\\hline\
+		P(x)&0.32&0.35&0.18&0.10&0.05\
+		\\end{array}$$',
+
+
+	'\\item  Suppose you play a game with a biased coin. You play each game by tossing the coin once. $P(H) = \\frac{2}{3}$ and\
+		$P(T) = \\frac{1}{3}$. If you toss a head, you pay $\\$6$. If you toss a tail, you win $\\$10$. If you play this game many times, will you come out ahead? Explain.',
+
+	'\\item A baker is deciding how many batches of muffins to make to sell in his bakery. He wants to make enough to sell every one and no fewer. Through observation, the baker has established a probability distribution. \
+		$$ \\begin{array}{c|c|c|c|c}\
+		x&      1& 2&3&4\\\\\
+		\\hline\
+		P(x)&0.15&0.35&0.40&0.10\
+		\\end{array}$$\
+		\\begin{enumerate}\
+		\\item What is the probability the baker will sell exactly one batch?\
+		\\item What is the probability the baker will sell more than one batch?\
+		\\item On average, how many batches should the baker make?\
+		\\end{enumerate}',
 					];
 theType++;
 theComp++;
@@ -540,64 +632,89 @@ nums[theComp]=[];
 names[theComp]='Competency '+theComp+'A: Binomial and Poisson';
 theType=0;
 comps[theComp][theType]=[];
-nums[theComp][theType]=2;
+nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the expected number of free throws she makes. Using the binomial distribution.',
-					];
+	'\\item Several psychology students are unprepared for a surprise true\
+	false test with 16 questions, and all of their answers are guesses.\
+	Find the mean and standard deviation for the number of correct answers for such\
+	students.',
+
+	'\\item Several economics students are unprepared for a multiple-choice\
+	quiz with 25 questions, and all of their answers are guesses. Each question has five\
+	possible answers, and only one of them is correct. Find the mean and standard \
+	deviation for the number of correct answers for such students.',
+		
+	'\\item Mars, Inc., claims that $20\\%$ of its M$\\&$M plain\
+	candies are orange, and a sample of 100 such candies is randomly selected.\
+	Find the mean and standard deviation for the number of orange candies in such\
+	groups of 100.',
+
+	'\\item Mars, Inc., claims that $14\\%$ of its M$\\&$M plain\
+	candies are yellow, and a sample of 100 such candies is randomly selected.\
+	Find the mean and standard deviation for the number of yellow candies in such\
+	groups of 100.',
+
+	'\\item The Central Intelligence Agency has specialists who analyze\
+	the frequencies of letters of the alphabet in an attempt to decipher intercepted messages.\
+	In standard English text, the letter r is used at a rate of $7.7\\%$.\
+	Find the mean and standard deviation for the number of times the letter r will be\
+	found on a typical page of 2600 characters.',
+	];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes exactly 5 of them. Using the binomial distribution.',
-	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes at least 5 of them. Using the binomial distribution.',
-	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes at most 5 of them. Using the binomial distribution.',
-	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, exactly 5 resign during the first year.',
-	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, at most 3 resign during the first year.',
-	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, at least 7 resign during the first year.',
+	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes exactly 5 of them. Use the binomial distribution.',
+	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes at least 5 of them. Use the binomial distribution.',
+	'\\item A basketball player has a $70\\%$ free throw percentage. During a game she shoots 8 free throws. Find the probability she makes at most 5 of them. Use the binomial distribution.',
+	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, exactly 5 resign during the first year. Use the binomial distribution.',
+	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, at most 3 resign during the first year. Use the binomial distribution.',
+	'\\item A company finds that an average of $20\\%$ of all new employees resign during the first year. Use the binomial distribution to find the probability that among the next 10 employees hired, at least 7 resign during the first year. Use the binomial distribution.',
 	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
 		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
 		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
 		Find the probability that at least five of the subjects experience headaches. Is it unusual\
-		to have at least five of six subjects experience headaches?',
+		to have at least five of six subjects experience headaches? Use the binomial distribution.',
 
 	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
 		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
 		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
 		Find the probability that at most two subjects experience headaches. Is it unusual to\
-		have at most two of six subjects experience headaches?',
+		have at most two of six subjects experience headaches? Use the binomial distribution.',
 
 	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
 		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
 		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
 		Find the probability that more than one subject experiences headaches. Is it unusual to\
-		have more than one of six subjects experience headaches?',
+		have more than one of six subjects experience headaches? Use the binomial distribution.',
 
 	'\\item In a clinical test of the drug Lipitor, $16.7\\%$ of the subjects treated with 10 mg \
 		of atorvastatin experienced headaches (based on data from Parke-Davis). In each case, \
 		assume that 6 subjects are randomly selected and treated with 10 mg of atorvastatin\
 		Find the probability that at least one subject experiences headaches. Is it unusual to\
-		have at least one of six subjects experience headaches?',
+		have at least one of six subjects experience headaches? Use the binomial distribution.',
 
 	'\\item The CBS television show 60 Minutes has been successful for\
 		many years. That show recently had a share of 20, meaning that among the TV sets in\
 		use, $20\\%$ were tuned to 60 Minutes (based on data from Nielsen Media Research). \
 		A survey is conducted of 10 randomly selected households having TV sets in use at the time of a \
 		60 Minutes broadcast. Assume that $20\\%$ of all TV sets are tuned to 60 Minutes during this time.\
-		Find the probability that none of the households are tuned to 60 Minutes.',
+		Find the probability that none of the households are tuned to 60 Minutes. Use the binomial distribution.',
 
 	'\\item The CBS television show 60 Minutes has been successful for\
 		many years. That show recently had a share of 20, meaning that among the TV sets in\
 		use, $20\\%$ were tuned to 60 Minutes (based on data from Nielsen Media Research). \
 		A survey is conducted of 10 randomly selected households having TV sets in use at the time of a \
 		60 Minutes broadcast. Assume that $20\\%$ of all TV sets are tuned to 60 Minutes during this time.\
-		Find the probability that at least one household is tuned to 60 Minutes.',
+		Find the probability that at least one household is tuned to 60 Minutes. Use the binomial distribution.',
 
 	'\\item The CBS television show 60 Minutes has been successful for\
 		many years. That show recently had a share of 20, meaning that among the TV sets in\
 		use, $20\\%$ were tuned to 60 Minutes (based on data from Nielsen Media Research). \
 		A survey is conducted of 10 randomly selected households having TV sets in use at the time of a \
 		60 Minutes broadcast. Assume that $20\\%$ of all TV sets are tuned to 60 Minutes during this time.\
-		Find the probability that at most one household is tuned to 60 Minutes.',
+		Find the probability that at most one household is tuned to 60 Minutes. Use the binomial distribution.',
 
 	'\\item The Hemingway Financial Company prepares tax returns for individuals.\
 		(Motto: ``We also write great fiction.\") According to the Internal Revenue Service, individuals\
@@ -605,7 +722,7 @@ comps[theComp][theType]=[
 		Company prepares five tax returns for individuals in that tax bracket, and three of\
 		them are audited.\
 		Find the probability that when 5 people making $\\$25,000-\\$50,000$ are randomly\
-		selected, exactly 3 of them are audited.',
+		selected, exactly 3 of them are audited. Use the binomial distribution.',
 
 	'\\item The Hemingway Financial Company prepares tax returns for individuals.\
 		(Motto: ``We also write great fiction.\") According to the Internal Revenue Service, individuals\
@@ -613,14 +730,14 @@ comps[theComp][theType]=[
 		Company prepares five tax returns for individuals in that tax bracket, and three of\
 		them are audited.\
 		Find the probability that when 5 people making $\\$25,000-\\$50,000$ are randomly\
-		selected, at least 3 of them are audited.',
+		selected, at least 3 of them are audited. Use the binomial distribution.',
 
 	'\\item The Medassist Pharmaceutical Company receives large shipments\
 		of aspirin tablets and uses this acceptance sampling plan: Randomly select and\
 		test 24 tablets, then accept the whole batch if there is only one or none that does not\
 		meet the required specifications. If a particular shipment of thousands of aspirin\
 		tablets actually has a $4\\%$ rate of defects, what is the probability that this whole shipment\
-		will be accepted?',
+		will be accepted? Use the binomial distribution.',
 
 	'\\item A study was conducted to determine whether there\
 		were significant differences between medical students admitted through special programs\
@@ -629,7 +746,7 @@ comps[theComp][theType]=[
 		admitted through special programs (based on data from the Journal of the\
 		American Medical Association).\
 		If 10 of the students from the special programs are randomly selected, find the\
-		probability that at least 9 of them graduated.',
+		probability that at least 9 of them graduated. Use the binomial distribution.',
 
 	'\\item A study was conducted to determine whether there\
 		were significant differences between medical students admitted through special programs\
@@ -638,38 +755,122 @@ comps[theComp][theType]=[
 		admitted through special programs (based on data from the Journal of the\
 		American Medical Association).\
 		If 10 of the students from the special programs are randomly selected, find the\
-		probability that at most 7 of them graduated. Would this be unusual?',
+		probability that at most 7 of them graduated. Would this be unusual? Use the binomial distribution.',
 
 	'\\item Air America has a policy of booking as many as 15 persons on\
 		an airplane that can seat only 14. (Past studies have revealed that only $85\\%$ of the\
 		booked passengers actually arrive for the flight.) Find the probability that if Air\
-		America books 15 persons, not enough seats will be available.',
+		America books 15 persons, not enough seats will be available. Use the binomial distribution.',
 
 	'\\item The author purchased a slot machine that is configured so that\
 		there is a $1/2000$ probability of winning the jackpot on any individual trial. Although\
 		no one would seriously consider tricking the author, suppose that a guest claims that\
 		she played the slot machine 5 times and hit the jackpot twice.\
-		Find the probability of exactly two jackpots in 5 trials.',
+		Find the probability of exactly two jackpots in 5 trials. Use the binomial distribution.',
 
 	'\\item The author purchased a slot machine that is configured so that\
 		there is a $1/2000$ probability of winning the jackpot on any individual trial. Although\
 		no one would seriously consider tricking the author, suppose that a guest claims that\
 		she played the slot machine 5 times and hit the jackpot twice.\
-		Find the probability of at least two jackpots in 5 trials.',
+		Find the probability of at least two jackpots in 5 trials. Use the binomial distribution.',
 
 	'\\item After being rejected for employment, Kim Kelly\
 		learns that the Bellevue Credit Company has hired only two women among the last 20\
 		new employees. She also learns that the pool of applicants is very large, with an approximately\
 		equal number of qualified men and women. Help her address the charge\
 		of gender discrimination by finding the probability of getting two or fewer women\
-		when 20 people are hired, assuming that there is no discrimination based on gender.',
+		when 20 people are hired, assuming that there is no discrimination based on gender. Use the binomial distribution.',
 
 					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item In a particular region of the Valley, the average number of glow worms per acre is 100.  What is the probability that a randomly selected acre of land in this region has at least 110 glow worms on it? Would this be unusual by the $5\\%$ rule?',
+	'\\item Dandelions are studied for their effects on crop production and lawn\
+		growth. In one region, the mean number of dandelions per square meter was found to\
+		be 7.0 (based on data from Manitoba Agriculture and Food).\
+		Find the probability of no dandelions in an area of 1 $m^2$.\
+		Use the Poisson distribution.',
+
+	'\\item Dandelions are studied for their effects on crop production and lawn\
+		growth. In one region, the mean number of dandelions per square meter was found to\
+		be 7.0 (based on data from Manitoba Agriculture and Food).\
+		Find the probability of at least one dandelion in an area of 1 $m^2$.\
+		Use the Poisson distribution.',
+
+	'\\item Dandelions are studied for their effects on crop production and lawn\
+		growth. In one region, the mean number of dandelions per square meter was found to\
+		be 7.0 (based on data from Manitoba Agriculture and Food).\
+		Find the probability of at most two dandelions in an area of 1 $m^2$.\
+		Use the Poisson distribution.',
+
+
+	'\\item The author found that in one month (30 days), he made 47 cell phone\
+		calls. Use the Poisson distribution to find the probability of no calls on a day.',
+
+	'\\item The author found that in one month (30 days), he made 47 cell phone\
+		calls. Use the Poisson distribution to find the probability of one call on a day.',
+
+	'\\item Radioactive atoms are unstable because they have too much energy.\
+		When they release their extra energy, they are said to decay. When studying\
+		cesium-137, it is found that during the course of decay over 365 days, 1,000,000\
+		radioactive atoms are reduced to 977,287 radioactive atoms.\
+		Find the probability that on a given day, 50 radioactive atoms decayed.\
+		Use th Poisson distribution.',
+
+	'\\item A classical example of the Poisson distribution involves\
+		the number of deaths caused by horse kicks to men in the Prussian Army between\
+		1875 and 1894. Data for 14 corps were combined for the 20-year period, and the 280\
+		corps-years included a total of 196 deaths.\
+		Find the probability that a randomly selecte corps-year had 0 deaths caused by horse kicks.',
+
+
+	'\\item A classical example of the Poisson distribution involves\
+		the number of deaths caused by horse kicks to men in the Prussian Army between\
+		1875 and 1894. Data for 14 corps were combined for the 20-year period, and the 280\
+		corps-years included a total of 196 deaths.\
+		Find the probability that a randomly selecte corps-year had 1 deaths caused by horse kicks.',
+
+
+	'\\item A classical example of the Poisson distribution involves\
+		the number of deaths caused by horse kicks to men in the Prussian Army between\
+		1875 and 1894. Data for 14 corps were combined for the 20-year period, and the 280\
+		corps-years included a total of 196 deaths.\
+		Find the probability that a randomly selecte corps-year had 2 deaths caused by horse kicks.',
+
+
+	'\\item A classical example of the Poisson distribution involves\
+		the number of deaths caused by horse kicks to men in the Prussian Army between\
+		1875 and 1894. Data for 14 corps were combined for the 20-year period, and the 280\
+		corps-years included a total of 196 deaths.\
+		Find the probability that a randomly selecte corps-year had 3 deaths caused by horse kicks.',
+
+
+	'\\item In one year, there were 116 homicide deaths in Richmond, Virginia\
+		(based on ``A Classroom Note on the Poisson Distribution: A Model for Homicidal\
+		Deaths in Richmond, Va for 1991,\" by Winston A. Richards in Mathematics and\
+		Computer Education). For a randomly selected day, find the probability that the number\
+		of homicide deaths is 0.',
+
+	'\\item In one year, there were 116 homicide deaths in Richmond, Virginia\
+		(based on ``A Classroom Note on the Poisson Distribution: A Model for Homicidal\
+		Deaths in Richmond, Va for 1991,\" by Winston A. Richards in Mathematics and\
+		Computer Education). For a randomly selected day, find the probability that the number\
+		of homicide deaths is 1.',
+
+	'\\item In one year, there were 116 homicide deaths in Richmond, Virginia\
+		(based on ``A Classroom Note on the Poisson Distribution: A Model for Homicidal\
+		Deaths in Richmond, Va for 1991,\" by Winston A. Richards in Mathematics and\
+		Computer Education). For a randomly selected day, find the probability that the number\
+		of homicide deaths is 2.',
+
+	'\\item In one year, there were 116 homicide deaths in Richmond, Virginia\
+		(based on ``A Classroom Note on the Poisson Distribution: A Model for Homicidal\
+		Deaths in Richmond, Va for 1991,\" by Winston A. Richards in Mathematics and\
+		Computer Education). For a randomly selected day, find the probability that the number\
+		of homicide deaths is 3.',
+
+
 					];
 theType++;
 theComp++;
@@ -683,18 +884,25 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 8 inches to 10 inches.  What proportion of these worms are between 8.5 inches and 9.5 inches in length? ',
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 6 inches to 12 inches.  What proportion of these worms are between 8 inches and 10 inches in length? ',
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 9 inches to 13 inches.  What proportion of these worms are between 10 inches and 12 inches in length? ',
-					];
+	'\\item Consider the uniform distribution for $0 \\leq x \\leq 8$. Find $P(2.5 < x < 7.5)$.',
+	'\\item Smiling times, in seconds, of an eight-week-old baby follow a uniform distribution between zero and 23 seconds. What is the probability that a randomly chosen eight-week-old baby smiles between two and 18 seconds?',
+	'\\item The amount of time, in minutes, that a person must wait for a bus is uniformly distributed between zero and 15 minutes. What is the probability that a person waits fewer than 12.5 minutes?',
+	'\\item The total duration of baseball games in the major league in the 2011 season is uniformly distributed between 447 hours and 521 hours. What is the probability that the duration of games for a team for the 2011 season is between 480 and 500 hours?',
+	'\\item The time it takes a nine-year old to eat a donut is between 0.5 and 4 minutes. Find the probability that a randomly selected nine-year old child eats a donut in less than two minutes.',
+	'\\item Ace Heating and Air Conditioning Service finds that the amount of time a repairman needs to fix a furnace is uniformly distributed between 1.5 and four hours. Find the probability that a randomly selected furnace repair requires more than two hours.',					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 8 inches to 10 inches.  Find a length that separates the longest $5\\%$ of these worms from the rest.',
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 6 inches to 12 inches.   Find a length that separates the shortest $5\\%$ of these worms from the rest.',
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 9 inches to 13 inches.   Find a length that separates the shortest $10\\%$ of these worms from the rest.',
-	'\\item Gray glow worms from Gregg County have lengths which are uniformly distributed from 9 inches to 13 inches.   ind a length that separates the longest $10\\%$ of these worms from the rest.',
+	'\\item Consider the uniform distribution for $0 \\leq x \\leq 8$. Find the value of $x$ which separates the lowest $10\\%$ of values from the rest.',
+	'\\item Consider the uniform distribution for $0 \\leq x \\leq 8$. Find the value of $x$ which separates the highest $10\\%$ of values from the rest.',
+	'\\item Smiling times, in seconds, of an eight-week-old baby follow a uniform distribution between zero and 23 seconds. Find the length of time which separates the shortest $25\\%$ of smiles from the rest.',
+	'\\item Smiling times, in seconds, of an eight-week-old baby follow a uniform distribution between zero and 23 seconds. Find the length of time which separates the longest $25\\%$ of smiles from the rest.',
+	'\\item The amount of time, in minutes, that a person must wait for a bus is uniformly distributed between zero and 15 minutes. Find the length of time which separates the shortest $1\\%$ of waits from the rest.',
+	'\\item The amount of time, in minutes, that a person must wait for a bus is uniformly distributed between zero and 15 minutes. Find the length of time which separates the longest $1\\%$ of waits from the rest.',
+	'\\item The total duration of baseball games in the major league in the 2011 season is uniformly distributed between 447 hours and 521 hours. Find the time which separates the shortest $5\\%$ of games from the rest.',
+	'\\item The total duration of baseball games in the major league in the 2011 season is uniformly distributed between 447 hours and 521 hours. Find the time which separates the longest $5\\%$ of games from the rest.',
+
 					];
 theType++;
 theComp++;
