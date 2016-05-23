@@ -402,7 +402,7 @@ comps[theComp][theType]=[
 
 	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
 		A marketing expert for MTV is planning a survey in which 500 people\
-		will be randomly selected from each age group of 10–19, 20–29, and so on.',
+		will be randomly selected from each age group of 10-19, 20-29, and so on.',
 
 	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
 		The author surveyed all of his students to obtain sample data consisting\
