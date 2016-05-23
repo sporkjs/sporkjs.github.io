@@ -352,7 +352,7 @@ comps[theComp][theType]=[
 	'\\item Determine if this process is an experiment or an observational study:\
 		Nine-year-old Emily Rosa became an author of an article in the\
 		Journal of the American Medical Association after she tested professional touch therapists.\
-		Using a cardboard partition, she held her hand above the therapist’s hand, and\
+		Using a cardboard partition, she held her hand above the therapist\'s hand, and\
 		the therapist was asked to identify the hand that Emily chose.',
 
 	'\\item Determine if this process is an experiment or an observational study:\
@@ -611,19 +611,19 @@ comps[theComp][theType]=[
 		president of the past century. The presidents of the past century have a mean height of \
 		71.5 in. and a standard deviation of 2.1 in. Find the $z$-score for McKinley\'s height.\
 		Would this be unusual by the Range Rule of Thumb?',
-	'\\item Sandy Allen is the world’s tallest woman with a height of\
+	'\\item Sandy Allen is the world\'s tallest woman with a height of\
 		91.25 in. (or 7 ft, 7.25 in.). Women have heights with a mean of 63.6 in. and a standard\
 		deviation of 2.5 in.\
 		Find a $z$-score for Allen\'s height.\
 		Would this be unusual by the Range Rule of Thumb?',
 	'\\item The Beanstalk Club is limited to women and men who are very\
-		tall. The minimum height requirement for women is 70 in. Women’s heights have a\
+		tall. The minimum height requirement for women is 70 in. Women\'s heights have a\
 		mean of 63.6 in. and a standard deviation of 2.5 in. Find the z score corresponding to\
 		a woman with a height of 70 in. and determine whether that height is unusual by the Range Rule of Thumb.',
 	'\\item For men aged between 18 and 24 years, serum cholesterol levels\
 		(in mg 100 mL) have a mean of 178.1 and a standard deviation of 40.7 (based on data\
 		from the National Health Survey). Find the z score corresponding to a male, aged\
-		18–24 years, who has a serum cholesterol level of 259.0 mg 100 mL. Is this level unusually\
+		$18-24$ years, who has a serum cholesterol level of 259.0 mg 100 mL. Is this level unusually\
 		high by the Range Rule of Thumb?',
 				];
 theType++;
@@ -728,11 +728,11 @@ comps[theComp][theType]=[
 		
 
 	'\\item The U.S. General Accounting Office tested the Internal Revenue\
-		Service for correctness of answers to taxpayers’ questions. For 1733 trials, the IRS\
+		Service for correctness of answers to taxpayers\' questions. For 1733 trials, the IRS\
 		was correct 1107 times and wrong 626 times.\
-		Estimate the probability that a randomly selected taxpayer’s question will be\
+		Estimate the probability that a randomly selected taxpayer\'s question will be\
 		answered incorrectly.\
-		Is it unusual for the IRS to provide a wrong answer to a taxpayer’s question?',
+		Is it unusual for the IRS to provide a wrong answer to a taxpayer\'s question?',
 		
 
 	'\\item Among 400 randomly selected drivers in the 20–24 age\
@@ -1286,11 +1286,11 @@ comps[theComp][theType]=[
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 100 and 115.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 90 and 100.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 15. Find the probability that a randomly selected individual has a score between 120 and 130.',
-	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+	'\\item Assume that women\'s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
 		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 1 woman is randomly selected, find the probability that her height is between\
 		63.5 in. and 64.5 in.',
 
-	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+	'\\item Assume that women\'s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
 		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 1 woman is randomly selected, find the probability that her height is between\
 		60 in. and 65 in.',
 
@@ -1312,7 +1312,7 @@ comps[theComp][theType]=[
 		to as the normal range).',
 
 	'\\item Women\'s heights are normally distributed with mean 63.6 in. and standard deviation 2.5 in.\
-		The U.S. Army requires women’s heights\
+		The U.S. Army requires women\'s heights\
 		to be between 58 in. and 80 in. Find the percentage of women meeting that height requirement.\
 		What percentage of women are being denied the opportunity to join the Army because\
 		they are too short or too tall?',
@@ -1323,7 +1323,7 @@ nums[theComp][theType]=2;
 comps[theComp][theType]=[
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 16. Find the probability that a randomly selected individual has a score below 115.',
 	'\\item Scores on the Stanford-Binet IQ test are normally distributed with a mean of 100 and a standard deviation of 16. Find the probability that a randomly selected individual has a score above 130.',
-	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+	'\\item Assume that women\'s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
 		by $\\sigma=2.5 in$. (based on data from the National Health Survey). If 1 woman is randomly selected, find the probability that her height is greater than\
 		63 in.',
 
@@ -1505,11 +1505,11 @@ nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item Fuel economy estimates for cars tested predict a mean of 24.8 mpg and a standard deviation of 6.2 for highway driving. Assume a normal distribution applies to the data. A sample of 16 cars is selected. Find the probability that the sample average, is between 23 and 27.',
 	'\\item The scores on a final exam have a mean of 78 and a standard deviation of 10. Suppose that 25 individuals are randomly chosen. Find the probability that the average of the scores is between 75 and 80.',
-	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+	'\\item Assume that women\'s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
 		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 9 women are randomly selected, find the probability that they have a mean\
 		height between 63.5 in. and 64.5 in.',
 
-	'\\item Assume that women’s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+	'\\item Assume that women\'s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
 		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 16 women are randomly selected, find the probability that they have a mean\
 		height between 60 in. and 65 in.',
 
@@ -1535,7 +1535,7 @@ comps[theComp][theType]=[
 theType++;
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item assume that women’s heights are normally distributed with a mean given by $\mu=63.6 in$. and a standard deviation given\
+	'\\item assume that women\'s heights are normally distributed with a mean given by $\mu=63.6 in$. and a standard deviation given\
 		by $\sigma=2.5 in$. (based on data from the National Health Survey).  If 100 women are randomly selected, find the probability that they have a mean\
 		height greater than 63 in.',
 
@@ -1755,10 +1755,10 @@ comps[theComp][theType]=[
 	'\\item When Gregor Mendel\
 		conducted his famous hybridization experiments with peas, one such experiment\
 		resulted in offspring consisting of 428 peas with green pods and 152 peas\
-		with yellow pods. According to Mendel’s theory, $1/4$ of the offspring peas\
+		with yellow pods. According to Mendel\'s theory, $1/4$ of the offspring peas\
 		should have yellow pods. Use a 0.05 significance level\
 		to test the claim that the proportion of peas with yellow pods is equal to $1/4$.'+theDirections,
-	'\\item In one of Mendel’s famous hybridization experiments,\
+	'\\item In one of Mendel\'s famous hybridization experiments,\
 		8023 offspring peas were obtained, and $24.94\\%$ of them had green flowers.\
 		The others had white flowers. Use a 0.05 significance\
 		level to test the claim that green-flowered peas occur at a rate of $25\\%$.'+theDirections,
@@ -1956,7 +1956,7 @@ comps[theComp][theType]=[
 		spray vaccine for children, the following statement was presented: ``In a trial involving\
 		1602 children only 14 ($1\\%$) of the 1070 who received the vaccine developed the\
 		flu, compared with 95 ($18\\%$) of the 532 who got a placebo.\" The article also referred\
-		to a study claiming that the experimental nasal spray ``cuts children’s chances of getting\
+		to a study claiming that the experimental nasal spray ``cuts children\'s chances of getting\
 		the flu.\" Use the data to test this claim with a $0.05$ significance level.'+theDirections,
 	'\\item The drug Clarinex is used to treat symptoms from allergies.\
 		In a clinical trial of this drug, $2.1\\%$ of the 1655 treated subjects experienced fatigue.\
@@ -2236,11 +2236,11 @@ comps[theComp][theType]=[
 		$$\\begin{array}{ccccc} Brazil\& Cashew \&Almond\& Hazelnuts\& Peanuts \\\\	18\& 36\& 48\& 22\& 76 \\end{array}$$' + theDirections,	
 	'\\item A classic tale involves four car-pooling students who\
 		missed a test and gave as an excuse a flat tire. On the makeup test, the instructor asked\
-		the students to identify the particular tire that went flat. If they really didn’t have a flat\
+		the students to identify the particular tire that went flat. If they really didn\'t have a flat\
 		tire, would they be able to identify the same tire? The author asked 41 other students\
 		to identify the tire they would select. The results are listed in the following table (except\
 		for one student who selected the spare). Use a 0.05 significance level to test the\
-		author’s claim that the results fit a uniform distribution.\
+		author\'s claim that the results fit a uniform distribution.\
 		$$\\begin{array}{r|cccccccccccc}\
 		Tire \& Left \\, front \& Right \\, front \& Left \\, rear \& Right rear \\\\ \\hline\
 		Number \\, selected \& 11 \& 15 \& 8 \& 6\
@@ -2359,7 +2359,7 @@ comps[theComp][theType]=[
 		Facial \\, Injuries \& 30 \& 182\\\\ \\hline\
 		No \\, Facial \\,  Injuries \& 83 \& 236\\end{array}$$' + theDirections,
 	'\\item Racial profiling is the controversial practice of targeting someone\
-		for criminal behavior on the basis of the person’s race, national origin, or ethnicity.\
+		for criminal behavior on the basis of the person\'s race, national origin, or ethnicity.\
 		The accompanying table summarizes results for randomly selected drivers stopped by\
 		police in a recent year (based on data from the U.S. Department of Justice, Bureau of Justice\
 		Statistics). Using the data in this table results in the Minitab display. Use a 0.05 significance\
@@ -2437,7 +2437,7 @@ comps[theComp][theType]=[
 		and people in a control group who did not have bladder cancer. Results are\
 		given in the table below (based on data from the New York Times). Using a 0.01 significance\
 		level, test the claim that the source of the sample (healthy or with bladder\
-		cancer) is independent of the dog’s selections.\
+		cancer) is independent of the dog\'s selections.\
 		$$\\begin{array}{r|ccccc}\
 		\& Sample \\, from \\, subject \& Sample \\, from \\, subject \\\\\
 		\& with \\, bladder \\, cancer \& without \\, bladder \\, cancer \\\\ \\hline\
@@ -2660,7 +2660,7 @@ comps[theComp][theType]=[
 		cigarettes \\, per \\, day \& 60 \& 10 \& 4 \& 15 \& 10 \& 1 \& 20 \& 8 \& 7 \& 10 \& 10 \& 20\\\\ \\hline\
 		cotinine \& 179 \& 283 \& 75.6 \& 174 \& 209 \& 9.51 \& 350 \& 1.85 \& 43.4 \& 25.1 \& 408 \& 344\
 		\\end{array}$$'+theDirections,
-	'\\item In ``The Effects of Temperature on Marathon Runner\’s\
+	'\\item In ``The Effects of Temperature on Marathon Runner\'s\
 		Performance,\" by David Martin and John Buoncristiani (Chance, Vol. 12, No. 4),\
 		high temperatures and times (in minutes) were given for women who won the New\
 		York City marathon in recent years. Results are listed below. Test the claim that there is a linear correlation between the temperatures and the times.\
