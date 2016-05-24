@@ -367,7 +367,25 @@ comps[theComp][theType]=[
 	'\\item Determine if this process is an experiment or an observational study:\
 		Cruise ship passengers are given magnetic bracelets, which they\
 		agree to wear in an attempt to eliminate or diminish the effects of motion sickness.',	
-	];
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A clinic gives a drug to a group of ten patients and a placebo to another group of ten patients to find out if the drug has an effect on the patients\' illness.',	
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A sample of fish is taken from a lake to measure the effect of pollution from a nearby factory on the fish.',
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A political pollster reports that his candidate has a $10\\%$ lead in the polls with $10\\%$ undecided.',
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A quality control specialist compares the output from a machine with a new lubricant to the output of machines with the old lubricant.',
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A stock analyst selects a stock from a group of twenty for investment by choosing the stock with the greatest earnings per share reported for the last quarter.',		
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A stock analyst compares the relationship between stock prices and earnings per share to help him select a stock for investment.',
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A T.V. show\'s executives raised the fee for commercials following a report that the show received a ``No. 1\" rating in a survey of viewers.',
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A T.V. show\'s executives commissioned a study to gauge the impact of the show\'s ratings on the sales of its advertisers.',
+	'\\item Determine whether the given description corresponds to an observational study or an experiment:\
+		A doctor performs several diagnostic tests to determine the reason for a patient\'s illness.',
+			];
 theType++;
 theDirections='\\item Determine the type of sampling (convenience, cluster, stratified, systematic, simple random) used in this procedure:';
 comps[theComp][theType]=[];
@@ -425,7 +443,30 @@ comps[theComp][theType]=[
 	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
 		Motivated by a student who died from binge drinking, the College\
 		of Newport conducts a study of student drinking by randomly selecting 10 different\
-		classes and interviewing all of the students in each of those classes.',					];
+		classes and interviewing all of the students in each of those classes.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		49, 34, and 48 students are selected from the Sophomore, Junior, and Senior classes with 496, 348, and 481 students respectively.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A sample consists of every 49th student from a group of 496 students.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A market researcher selects 500 drivers under 30 years of age and 500 drivers over 30 years of age.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A market researcher selects 500 people from each of 10 cities.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A tax auditor selects every 1000th income tax return that is received.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A pollster uses a computer to generate 500 random numbers, then interviews the voters corresponding to those numbers.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		To avoid working late, a quality control analyst simply inspects the first 100 items produced in a day.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		An education researcher randomly selects 48 middle schools and interviews all the teachers at each school.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		A researcher interviews 19 work colleagues who work in his building.',
+	'\\item Identify the type of sampling used here (random, systematic, convenience, stratified, or cluster):\
+		The name of each contestant is written on a separate card, the cards are placed in a bag, and three names are picked from the bag.',
+		
+		
+		];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=2;
@@ -433,17 +474,21 @@ comps[theComp][theType]=[
 	'\\item Determine whether the given data value is a statistic or a parameter:\
 		A sample of households is selected and the average (mean) number\
 		of people per household is 2.58 (based on data from the U.S. Census Bureau).',
-
 	'\\item Determine whether the given data value is a statistic or a parameter:\
 		Currently, $42\\%$ of the governors of the 50 United States are Democrats.',
-
 	'\\item Determine whether the given data value is a statistic or a parameter:\
 		In a study of all 2223 passengers aboard the Titanic, it is found that 706 survived\
 		when it sank.',
-
 	'\\item Determine whether the given data value is a statistic or a parameter:\
 		A sample of Americans is selected and the average (mean)\
 		amount of time watching television is 4.6 hours per day.',
+	'\\item Determine if the value described is a statistic or a parameter.\
+		A sample of 120 employees of a company is selected, and the average age is found to be 37 years.',
+	'\\item Determine if the value described is a statistic or a parameter.\
+		The number of freshmen entering college in a certain year is 621.',
+	'\\item Determine if the value described is a statistic or a parameter.\
+		A marketing firm does a survey to find out how many people use a product. Of the one hundred people contacted, fifteen said they use the product.',
+		
 					];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -486,7 +531,22 @@ comps[theComp][theType]=[
 
 	'\\item Determine whether the given value is from a discrete or continuous data set:\
 		In a survey of 1059 adults, it is found that $39\\%$ of them have guns in\
-		their homes (based on a Gallup poll).',					];
+		their homes (based on a Gallup poll).',	
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The number of freshmen entering college in a certain year is 621.',
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The temperature of a cup of coffee is $67.3^{\\circ}F$.',
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The weight of Bill\'s pack as he sets off on a backpacking trip is 48.3 lb.',
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The number of limbs on a 2-year-old oak tree is 21.',
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The height of 2-year-old maple tree is 28.3 ft.',
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The number of stories in a Manhattan building is 22.',
+	'\\item Determine whether the given value is from a discrete or continuous data set:\
+		The total number of phone calls a sales representative makes in a month is 425.',		
+		];
 	theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -539,13 +599,71 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Below are the lengths (in inches) of a sample of glow worms. Calculate the mean, median, mode, range, midrange, standard deviation, and variance of this data. Round your answers to one decimal place. \\begin{quotation} \\noindent5, 6, 7, 8, 8, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12 \\end{quotation} '
+	'\\item Statistics students participated in an experiment to test their ability\
+		to determine when 1 minute (or 60 seconds) has passed. The results are given below\
+		in seconds.\
+		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
+		49 49 52 53 58 62 68 75',
+	'\\item A dietician obtains the amounts of sugar (in centigrams) from 100 centigrams\
+		(or 1 gram) in each of 10 different cereals, including Cheerios, Corn Flakes, Fruit\
+		Loops, and 7 others. Those values are listed below.\
+		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
+		3 7 13 24 30 39 43 44 47 47',
+	'\\item Listed below are intervals (in minutes) between eruptions of the\
+		Old Faithful geyser in Yellowstone National Park.\
+		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
+		65 87 90 92 92 93 94 95 95 96 98 98',
+	'\\item Fourteen different second-year medical students at\
+		Bellevue Hospital measured the blood pressure of the same person. The systolic readings\
+		(in mmHg) are listed below.\
+		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
+		 120 120 125 130 130 130 130 135 138 140 140 143 144 150',
+	'\\item Researchers at the University of Maryland collected body temperature\
+		readings from a sample of adults, and eight of those temperatures are listed\
+		below (in degrees Fahrenheit).\
+		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
+		98.0 98.0 98.4 98.4 98.4 98.6 98.6 99.0 ',
+	'\\item Listed below are the thorax lengths (in millimeters) of a sample of male\
+		fruit flies.\
+		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
+		0.64 0.68 0.72 0.76 0.84 0.84 0.84 0.84 0.90 0.90  0.92    ',
+
+
 					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Below are the lengths (in inches) of a sample of glow worms. Find the five number summary of this data. Be sure to tell me what each number represents. Round your answers to one decimal place.\\begin{quotation} \\noindent 3, 5, 6, 7, 7, 7, 7, 8, 8, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12 \\end{quotation}'
+	'\\item Statistics students participated in an experiment to test their ability\
+		to determine when 1 minute (or 60 seconds) has passed. The results are given below\
+		in seconds.\
+		Find the five number summary  of this data.\\\\\
+		49 49 52 53 58 62 68 75',
+	'\\item A dietician obtains the amounts of sugar (in centigrams) from 100 centigrams\
+		(or 1 gram) in each of 10 different cereals, including Cheerios, Corn Flakes, Fruit\
+		Loops, and 7 others. Those values are listed below.\
+		Find the five number summary  of this data.\\\\\
+		3 7 13 24 30 39 43 44 47 47',
+	'\\item Listed below are intervals (in minutes) between eruptions of the\
+		Old Faithful geyser in Yellowstone National Park.\
+		Find the five number summary  of this data.\\\\\
+		65 87 90 92 92 93 94 95 95 96 98 98',
+	'\\item Fourteen different second-year medical students at\
+		Bellevue Hospital measured the blood pressure of the same person. The systolic readings\
+		(in mmHg) are listed below.\
+		Find the five number summary  of this data.\\\\\
+		 120 120 125 130 130 130 130 135 138 140 140 143 144 150',
+	'\\item Researchers at the University of Maryland collected body temperature\
+		readings from a sample of adults, and eight of those temperatures are listed\
+		below (in degrees Fahrenheit).\
+		Find the five number summary  of this data.\\\\\
+		98.0 98.0 98.4 98.4 98.4 98.6 98.6 99.0 ',
+	'\\item Listed below are the thorax lengths (in millimeters) of a sample of male\
+		fruit flies.\
+		Find the five number summary  of this data.\\\\\
+		0.64 0.68 0.72 0.76 0.84 0.84 0.84 0.84 0.90 0.90  0.92    ',
+
+
 					];
 theType++;
 comps[theComp][theType]=[];
@@ -567,18 +685,52 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Below are the lengths (in inches) of a sample of glow worms. Calculate the percentile of the data value 11. Round your answer to the nearest whole number. \\begin{quotation} \\noindent 3, 5, 6, 7, 7, 7, 7, 8, 8, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12 \\end{quotation} ',
+	'\\item Statistics students participated in an experiment to test their ability\
+		to determine when 1 minute (or 60 seconds) has passed. The results are given below\
+		in seconds.\
+		Calculate the percentile of the data value 53.\\\\\
+		49 49 52 53 58 62 68 75',
+	'\\item A dietician obtains the amounts of sugar (in centigrams) from 100 centigrams\
+		(or 1 gram) in each of 10 different cereals, including Cheerios, Corn Flakes, Fruit\
+		Loops, and 7 others. Those values are listed below.\
+		Calculate the percentile of the data value 44.\\\\\
+		3 7 13 24 30 39 43 44 47 47',
+	'\\item Listed below are intervals (in minutes) between eruptions of the\
+		Old Faithful geyser in Yellowstone National Park.\
+		Calculate the percentile of the data value 96.\\\\\
+		65 87 90 92 92 93 94 95 95 96 98 98',
+	'\\item Fourteen different second-year medical students at\
+		Bellevue Hospital measured the blood pressure of the same person. The systolic readings\
+		(in mmHg) are listed below.\
+		Calculate the percentile of the data value 135.\\\\\
+		 120 120 125 130 130 130 130 135 138 140 140 143 144 150',
+	'\\item Researchers at the University of Maryland collected body temperature\
+		readings from a sample of adults, and eight of those temperatures are listed\
+		below (in degrees Fahrenheit).\
+		Calculate the percentile of the data value 98.6.\\\\\
+		98.0 98.0 98.4 98.4 98.4 98.6 98.6 99.0 ',
+	'\\item Listed below are the thorax lengths (in millimeters) of a sample of male\
+		fruit flies.\
+		Calculate the percentile of the data value 0.90.\\\\\
+		0.64 0.68 0.72 0.76 0.84 0.84 0.84 0.84 0.90 0.90  0.92    ',
+
+
 					];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item The blue glow worms of the lower Trinity River Valley have an average length of 8 inches with a standard deviation of 1 inch. The green glow worms from the same region have an average length of 9 inches with a standard deviation of 1.5 inches. Bob found a blue worm that is 10 inches long and a green worm that is 11 inches long.  Which worm is more unusual? Support your answer.',
 	'\\item Suppose scores on the SAT are normally distributed with a mean of $\\mu = 1000$ and a standard deviation of  $\\sigma = 200$ and that scores on the ACT are normally distributed with a mean of $\\mu = 27$ and a standard deviation of $\\sigma = 3$. Angela scored 1260 on the SAT and Brian scored 33 on the ACT. Which student did better? Explain your conclusion.',
 	'\\item Which is relatively better: a score of 85 on a psychology test\
 		or a score of 45 on an economics test? Scores on the psychology test have a mean of\
 		90 and a standard deviation of 10. Scores on the economics test have a mean of 55\
-		and a standard deviation of 5.',						];
+		and a standard deviation of 5.',	
+	'\\item Which is better, a score of 92 on a test with a mean of 71 and a standard deviation of 15, or a score of 688 on a test with a mean of 493 and a standard deviation of 150?',
+	'\\item Which is better: a score of 82 on a test with a mean of 70 and a standard deviation of 8, or a score of 82 on a test with a mean of 75 and a standard deviation of 4?',
+	'\\item Which score has a higher relative position, a score of 271.2 on a test for which $\\mu= 240$ and $\\sigma = 24$, or a score of 63.6 on a test for which $\\mu = 60$ and $\\sigma = 6$?',
+	'\\item Which score has a higher relative position, a score of 60 on a test with mean 53 and standard deviation 10, or a score of 240.3 on a test with mean 206 standard deviation 49?',
+	'\\item Which score has the highest relative position: a score of 47.4 on a test with mean 42 and standard deviation 9, a score of 5.6 on a test for with mean 3.9 and standard deviation 1.2, or a score of 386.8 on a test with mean 358 and standard deviation 48?',		
+		];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
@@ -625,6 +777,20 @@ comps[theComp][theType]=[
 		from the National Health Survey). Find the z score corresponding to a male, aged\
 		$18-24$ years, who has a serum cholesterol level of 259.0 mg 100 mL. Is this level unusually\
 		high by the Range Rule of Thumb?',
+'\\item Scores on a test have a mean of 66 and a standard deviation of 9. Michelle has a score of 57. Convert Michelle\'s score to a z-score. Is this unusual?',
+'\\item The mean of a set of data is 4.11 and its standard deviation is 3.03. Find the z score for a value of 10.86. Is this unusual?',
+'\\item The mean of a set of data is -2.91 and its standard deviation is 3.88. Find the z score for a value of 2.80. Is this unusual?',
+'\\item The mean of a set of data is 108.06 and its standard deviation is 115.45. Find the z score for a value of 489.67. Is this unusual?',
+'\\item The mean height of a basketball team is 6 feet with a standard deviation of 0.2 feet. The team\'s center is 6.9 feet tall. Find the center\'s z score. Is his score unusual?',
+'\\item A department store, on average, has daily sales of $\\$28,372.72$. The standard deviation of sales is  $\\$2000$. On Tuesday, the store sold $\\$34,885.21$ worth of goods. Find Tuesday\'s z score. Was Tuesday an unusually good day?',
+'\\item Find the $z$-score of the given data value and use it to determine if the value is unusual: \
+	A test score of 48.4 on a test having a mean of 66 and a standard deviation of 11.',
+'\\item Find the $z$-score of the given data value and use it to determine if the value is unusual: \
+	A body temperature of $96.7^{\\circ} F$ given that human body temperatures have a mean of $98.20^{\\circ} F$ and a standard deviation of $0.62^{\\circ}$.',
+'\\item Find the $z$-score of the given data value and use it to determine if the value is unusual: \
+	A weight of 224 pounds among a population having a mean weight of 158 pounds and a standard deviation of 23.5 pounds.',
+'\\item Find the $z$-score of the given data value and use it to determine if the value is unusual: \
+	A time for the 100 meter sprint of 14.9 seconds at a school where the mean time for the 100 meter sprint is 17.6 seconds and the standard deviation is 2.1 seconds.',
 				];
 theType++;
 comps[theComp][theType]=[];
@@ -920,15 +1086,92 @@ comps[theComp][theType]=[
 	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$',
 	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c} x \& 1 \& 2 \& 3 \& 4 \& 5 \\\\ \\hline P(x) \& 0.1 \& 0.3 \& 0.2 \& 0.3 \& 0.1   \\end{array}$$',
 	'\\item Find the mean of the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c} x \& 1 \& 2 \& 3 \& 4 \& 5 \\\\ \\hline P(x) \& 0.32 \& 0.35 \& 0.18 \& 0.10 \& 0.05   \\end{array}$$',
-					];
+	'\\item Find the expected value of the random variable with this distribution:\
+		$$\\begin{array}{c|c}\
+		x \& P(x) \\\\ \\hline\
+		0 \& 0.26 \\\\\
+		1 \& 0.11 \\\\\
+		2 \& 0.16 \\\\\
+		3 \& 0.05 \\\\\
+		4 \& 0.42 \\\\\
+		\\end{array}$$',
+	'\\item Find the expected value of the random variable $x$ which is the number of houses sold by a realtor in a \
+		single month at the Sendsom\'s Real Estate office. The probability distribution for $x$ is given by:\
+		$$\\begin{array}{c|c}\
+		Houses Sold (x) \& Probability P(x) \\\\\\hline\
+		0 \& 0.24 \\\\\
+		1 \& 0.01 \\\\\
+		2 \& 0.12 \\\\\
+		3 \& 0.16 \\\\\
+		4 \& 0.01 \\\\\
+		5 \& 0.14 \\\\\
+		6 \& 0.11 \\\\\
+		7 \& 0.21 \\\\\
+		\\end{array}$$',
+	'\\item Find the expected value for the number $x$ of golf balls ordered by customers of a pro shop if $x$ has the following probability\
+		distribution.\
+		$$\\begin{array}{c|c}\
+		x \& P(x)\\\\\\hline\
+		3 \& 0.14 \\\\\
+		6 \& 0.29 \\\\\
+		9 \& 0.36 \\\\\
+		12 \& 0.11 \\\\\
+		15 \& 0.10 \\\\\
+		\\end{array}$$',
+	'\\item In a certain town, $30\\%$ of adults have a college degree. The accompanying table describes the\
+		probability distribution for the number $x$ of adults (among 4 randomly selected adults) who have a\
+		college degree. Find the expected value of $x$.\
+		$$\\begin{array}{c|c}\
+		x \& P(x) \\\\\\hline\
+		0 \& 0.2401 \\\\\
+		1 \& 0.4116 \\\\\
+		2 \& 0.2646 \\\\\
+		3 \& 0.0756 \\\\\
+		4 \& 0.0081 \\\\\
+		\\end{array}$$',
+	'\\item The accompanying table shows the probability distribution for $x$, the number that shows up when\
+		a loaded die is rolled. Find the expected value for $x$.\
+		$$\\begin{array}{c|c}\
+		x \& P(x) \\\\\\hline\
+		1 \& 0.14 \\\\\
+		2 \& 0.16 \\\\\
+		3 \& 0.12 \\\\\
+		4 \& 0.14 \\\\\
+		5 \& 0.13 \\\\\
+		6 \& 0.31 \\\\\
+		\\end{array}$$',
+	'\\item The probabilities that a batch of 4 computers will contain 0, 1, 2, 3, and 4 defective computers are\
+		0.4096, 0.4096, 0.1536, 0.0256, and 0.0016, respectively. Find the expected number of defective computers in a batch of 4.',
+	'\\item A police department reports that the probabilities that 0, 1, 2, and 3 burglaries will be reported in a\
+		given day are 0.54, 0.43, 0.02, and 0.01, respectively. Find the expected number of burglaries on a given day.',
+	'\\item In a game, you have a $1/36$ probability of winning $\\$85$ and a $35/36$ probability of losing $\\$4$. What is\
+		your expected value?',
+	'\\item A contractor is considering a sale that promises a profit of $\\$26,000$ with a probability of 0.7 or a loss\
+		(due to bad weather, strikes, and such) of $\\$8000$ with a probability of 0.3. What is the expected\
+		profit?',					];
 theType++;
-theDirections='Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$';
+theDirections='';
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item '+theDirections+'Find the values of $x$ which are unusually low by the $5\\%$ rule.',
-	'\\item '+theDirections+'Find the values of $x$ which are unusually low by the $5\\%$ rule.',
-					];
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& .01 \& .02 \& .03 \& .04 \& .08 \& .21 \& .42 \& .11 \& .06 \& .02  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.01	\&	0.01	\&	0.02	\&	0.35	\&	0.15	\&	0.05	\&	0.1	\&	0.25	\&	0.05	\&	0.01  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.01	\&	0.01	\&	0.02	\&	0.35	\&	0.15	\&	0.05	\&	0.1	\&	0.25	\&	0.05	\&	0.01  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+
+
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.03	\&	0.06	\&	0.12	\&	0.12	\&	0.06	\&	0.07	\&	0.12	\&	0.24	\&	0.12	\&	0.06  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.03	\&	0.06	\&	0.12	\&	0.12	\&	0.06	\&	0.07	\&	0.12	\&	0.24	\&	0.12	\&	0.06  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+
+
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.04	\&	0.1	\&	0.1	\&	0.1	\&	0.04	\&	0.28	\&	0.1	\&	0.1	\&	0.1	\&	0.04  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.04	\&	0.1	\&	0.1	\&	0.1	\&	0.04	\&	0.28	\&	0.1	\&	0.1	\&	0.1	\&	0.04  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+
+
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.02	\&	0.06	\&	0.04	\&	0.12	\&	0.2	\&	0.27	\&	0.12	\&	0.06	\&	0.1	\&	0.01  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+	'\\item Consider the random variable whose distribution is given by this chart: $$\\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c} x \& 0 \& 1 \& 2 \& 3 \& 4 \& 5 \& 6 \& 7 \& 8 \& 9 \\\\ \\hline P(x) \& 0.02	\&	0.06	\&	0.04	\&	0.12	\&	0.2	\&	0.27	\&	0.12	\&	0.06	\&	0.1	\&	0.01  \\end{array}$$ Find the values of $x$ which are unusually low by the $5\\%$ rule.',
+		];
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -961,7 +1204,18 @@ comps[theComp][theType]=[
 		\\item What is the probability the baker will sell more than one batch?\
 		\\item On average, how many batches should the baker make?\
 		\\end{enumerate}',
-					];
+	'\\item Suppose you pay $\\$2.00$ to roll a fair die with the understanding that you will get back $\\$4.00$ for\
+		rolling a 2 or a 3, nothing otherwise. What is your expected value?',
+	'\\item Suppose you buy 1 ticket for $\\$1$ out of a lottery of 1,000 tickets where the prize for the one winning\
+		ticket is to be $\\$500$. What is your expected value?',
+	'\\item A 28-year-old man pays $\\$181$ for a one-year life insurance policy with coverage of $\\$150,000$. If the\
+		probability that he will live through the year is 0.9994, what is the expected value for the insurance\
+		policy? (To the man.)',
+	'\\item The prizes that can be won in a sweepstakes are listed below together with the chances of winning\
+		each one: $\\$4200$ (1 chance in 8000); $\\$1600$ (1 chance in 6900); $\\$500$ (1 chance in 3300);\
+		$\\$300$ (1 chance in 2000). Find the expected value of the amount won for one entry if the cost of\
+		entering is 53 cents.',		
+			];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
