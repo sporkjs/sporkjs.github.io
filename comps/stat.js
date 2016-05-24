@@ -38,48 +38,23 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Graphing';
+names[theComp]='Competency '+theComp+'C: REMOVING';
 theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
-comps[theComp][theType]=['\\item I RECOMMEND REMOVING AND HAVING SOME \"DESCRIBE\" or \"IDENTIFY\" TYPE QUESTIONS IN 13.'
+comps[theComp][theType]=['PLACE HOLDER'
 					];
-
-/*comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=['\\item Sketch a histogram that has each of these shapes.\
-		\\begin{enumerate}\
-		\\item Uniform   \
-		\\item Skew Left  \
-		\\item Skew Right  \
-		\\item Bimodal  \
-		\\end{enumerate}	'
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Sketch a scatter plot which seems to show no linear correlation.',
-	'\\item Sketch a scatter plot which seems to show positive linear correlation.',
-	'\\item Sketch a scatter plot which seems to show negative linear correlation.'
-
-					];
-*/
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Measures of Center';
+names[theComp]='Competency '+theComp+'C: REMOVING';
 theType=0;
 comps[theComp][theType]=[];
-nums[theComp][theType]=2;
-comps[theComp][theType]=[
-	'\\item Which measure of center is the only one that can be used with categorical data? ',
-	'\\item Which measure of center is the only one that is reliable in the sense that measures from samples ',
-	'\tend to be close to the measure for the population?',
-	'\\item Which measure of center is resistant to outliers?'
+nums[theComp][theType]=1;
+comps[theComp][theType]=['PLACE HOLDER'
 					];
 theType++;
 theComp++;
@@ -627,6 +602,7 @@ comps[theComp][theType]=[
 		fruit flies.\
 		Find the mean, median, mode, midrange, range, standard deviation, and variance of this data.\\\\\
 		0.64 0.68 0.72 0.76 0.84 0.84 0.84 0.84 0.90 0.90  0.92    ',
+'\\item The following data show the lengths of boats moored in a marina. The data are ordered from smallest to largest: 16; 17; 19; 20; 20; 21; 23; 24; 25; 25; 25; 26; 26; 27; 27; 27; 28; 29; 30; 32; 33; 33; 34; 35; 37; 39; 40. Calculate the mean, median, mode, range, midrange, standard deviation, and variance of this data. Round your answers to one decimal place. ',
 
 
 					];
@@ -674,6 +650,20 @@ comps[theComp][theType]=[
 	'\\item The five number summary for a set of data is $$\\begin{array}{ccccc} Min\&  Q1 \& Median \& Q3 \& Max \\\\ 	46000 \& 61000  \& 77020 \& 87000 \& 140000 \\end{array}$$ Suppose the marketing manager who was earning $\\$140,000$ got a raise and is now earning $\\$160,000$. What would happen to the standard deviation?',
 					];
 theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=2;
+comps[theComp][theType]=[
+'\\item When the data are skewed left, what is the typical relationship between the mean and median?',
+
+'\\item When the data are symmetrical, what is the typical relationship between the mean and median?',
+
+'\\item When the data are skewed right, what is the typical relationship between the mean and median?',
+	'\\item Which measure of center is the only one that can be used with categorical data? ',
+	'\\item Which measure of center is the only one that is reliable in the sense that measures from samples ',
+	'\tend to be close to the measure for the population?',
+	'\\item Which measure of center is resistant to outliers?'
+
+	]
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -732,6 +722,17 @@ comps[theComp][theType]=[
 	'\\item Which score has the highest relative position: a score of 47.4 on a test with mean 42 and standard deviation 9, a score of 5.6 on a test for with mean 3.9 and standard deviation 1.2, or a score of 386.8 on a test with mean 358 and standard deviation 48?',		
 		];
 theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+'\\item For runners in a race, a low time means a faster run. The winners in a race have the shortest running times. Is it more desirable to have a finish time with a high or a low percentile when running a race? Explain.',
+
+'\\item On an exam, would it be more desirable to earn a grade with a high or low percentile? Explain.',
+
+'\\item Mina is waiting in line at the Department of Motor Vehicles (DMV). Her wait time of 32 minutes is the $85^{th}$ percentile of wait times. Is that good or bad? Write a sentence interpreting the 85th percentile in the context of this situation.',
+
+'\\item In a survey collecting data about the salaries earned by recent college graduates, Li found that her salary was in the $78^{th}$ percentile. Should Li be pleased or upset by this result? Explain.',
+			];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
