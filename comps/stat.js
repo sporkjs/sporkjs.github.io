@@ -477,14 +477,15 @@ theDirections='\\item Classify this type of data as categorical or quantitative:
 comps[theComp][theType]=[];
 nums[theComp][theType]=2;
 comps[theComp][theType]=[
-	theDirections+'The weights of 1000 glow worms collected near Nacogdoches.',
-	theDirections+'The genders of 1000 glow worms collected near Bedias.',
-	theDirections+'The zip codes in East Texas where glow worms have been found.',
-	theDirections+'The number of bedrooms in a real estate listing for a home.',
-	theDirections+'The style of home in a real estate listing for a home.',
-	theDirections+'The number of bathrooms in a real estate listing for a home.',
-	theDirections+'The subdivision in a real estate listing for a home.',
-	theDirections+'The asking price in a real estate listing for a home.'
+	theDirections+'Weight of a brown squirrel.',
+	theDirections+'Zip code.',
+	theDirections+'Gender.',
+	theDirections+'Snow fall amount.',
+	theDirections+'Ethnicity.',
+	theDirections+'Wind speed.',
+	theDirections+'Flight number.',
+	theDirections+'Hair color.',
+	theDirections+'Amount of rainfall.',
 					];
 theType++;
 theDirections='\\item Classify this type of quantitative data as continuous or discrete: ';
@@ -534,35 +535,211 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Below are the lengths (in inches) of a sample of glow worms.	Use your calculator to draw a histogram of the data. Describe the shape of the data (is it bell-shaped, uniform, skew left, skew right, bimodal, or is there no apparent pattern?).\\begin{quotation} \\noindent5, 6, 7, 8, 8, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12\\end{quotation}'
+	'\\item Describe the shape of this histogram:\
+	\\begin{center}\
+		\\begin{tikzpicture}\
+			\\begin{axis}[ybar interval, xtick=data, xticklabels={}, x tick label style= {rotate=90,anchor=east,\/pgf\/number format\/1000 sep={}},axis y line=left, axis x line=bottom, ylabel = {}, yticklabels={},  ymin=0, thick,grid=major]\
+				\\addplot coordinates {(0,3) (1,6) (2,8) (3,6) (4,4) (5,3) (6,2) (7,1) (8,1) (9,1) (10,0)};\
+			\\end{axis}\
+		\\end{tikzpicture}\
+	\\end{center}',
+
+	'\\item Describe the shape of this histogram:\
+	\\begin{center}\
+		\\begin{tikzpicture}\
+			\\begin{axis}[ybar interval, xtick=data, xticklabels={}, x tick label style= {rotate=90,anchor=east,\/pgf\/number format\/1000 sep={}},axis y line=left, axis x line=bottom, ylabel = {}, yticklabels={},  ymin=0, thick,grid=major]\
+				\\addplot coordinates {(0,1) (1,1) (2,1) (3,1) (4,2) (5,3) (6,4) (7,6) (8,8) (9,6) (10,3) (11,0)};\
+			\\end{axis}\
+		\\end{tikzpicture}\
+	\\end{center}',
+
+
+	'\\item Describe the shape of this histogram:\
+	\\begin{center}\
+		\\begin{tikzpicture}\
+			\\begin{axis}[ybar interval, xtick=data, xticklabels={}, x tick label style= {rotate=90,anchor=east,\/pgf\/number format\/1000 sep={}},axis y line=left, axis x line=bottom, ylabel = {}, yticklabels={},  ymin=0, thick,grid=major]\
+				\\addplot coordinates {(0,0) (1,1) (2,3) (3,6) (4,8) (5,9) (6,8) (7,6) (8,3) (9,1) (10,0) (11,0)};\
+			\\end{axis}\
+		\\end{tikzpicture}\
+	\\end{center}',
+
+
+	'\\item Describe the shape of this histogram:\
+	\\begin{center}\
+		\\begin{tikzpicture}\
+			\\begin{axis}[ybar interval, xtick=data, xticklabels={}, x tick label style= {rotate=90,anchor=east,\/pgf\/number format\/1000 sep={}},axis y line=left, axis x line=bottom, ylabel = {}, yticklabels={},  ymin=0, thick,grid=major]\
+				\\addplot coordinates {(0,10) (1,10.5) (2,9.5) (3,10) (4,10.5) (5,10) (6,9.5) (7,10) (8,9.5) (9,10) (10,10.5) (11,10) (12,0)};\
+			\\end{axis}\
+		\\end{tikzpicture}\
+	\\end{center}',
 					];
 theType++;
+/*
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item Match the histogram with the boxplot.'
 					];
 theType++;
-theDirections='\\item The boxplots show monthly sales revenue figures (in $\\$$ thousands) for a discount officesupply company with locations in three different regions of the U.S. ';
+*/
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	theDirections+'Which region has the most variation of sales revenues?',
-	theDirections+'Which region has the lowest median sales revenue?',
-	theDirections+'Which region has the lowest IRQ?',
-	theDirections+'Which region has the lowest mean sales revenue?'
-					];
-theType++;
-theDirections='\\item The boxplots show monthly sales revenue figures (in $\\$$ thousands) for a discount officesupply company with locations in three different regions of the U.S. ';
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	theDirections+'Which region has the least variation of sales revenues?',
-	theDirections+'Which region has the highest median sales revenue?',
-	theDirections+'Which region has the highest IRQ?',
-	theDirections+'Which region has the highest mean sales revenue?'
-					];
+	'\\item The following boxplots show monthly sales revenue figures ($\\$$ thousands) for a discount office supply company with\
+	locations in three different regions of the U.S. \
+	\\begin{center}\
+	\\begin{tikzpicture}\
+	\\begin{axis}[\
+	boxplot\/draw direction=y,xtick={1,2,3},\
+	xticklabels={Northeast, Southeast, West},\
+	]\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	100, \
+		lower quartile=	120,\
+		median=		151, \
+		upper quartile=	170,\
+		upper whisker=	190}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	70, \
+		lower quartile=	74,\
+		median=		85, \
+		upper quartile=	100,\
+		upper whisker=	120}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	20, \
+		lower quartile=	72,\
+		median=		90, \
+		upper quartile=	150,\
+		upper whisker=	200}]\
+		coordinates {};\
+	\\end{axis}\
+	\\end{tikzpicture}\
+	\\end{center}\
+	\\begin{enumerate}\
+	\\item Which region has the largest IRQ?\
+	\\item Which region has the least variation in revenue?\
+	\\item Which region has the highest median revenue?\
+	\\item About what is the third quartile for revenue in the West?\
+	\\end{enumerate}',
+	'\\item The following boxplots show monthly sales revenue figures ($\\$$ thousands) for a discount office supply company with\
+	locations in three different regions of the U.S. \
+	\\begin{center}\
+	\\begin{tikzpicture}\
+	\\begin{axis}[\
+	boxplot\/draw direction=y,xtick={1,2,3},\
+	xticklabels={Northeast, Southeast, West},\
+	]\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	50, \
+		lower quartile=	60,\
+		median=		70, \
+		upper quartile=	80,\
+		upper whisker=	90}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	75, \
+		lower quartile=	100,\
+		median=		125, \
+		upper quartile=	150,\
+		upper whisker=	160}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	100, \
+		lower quartile=	125,\
+		median=		150, \
+		upper quartile=	175,\
+		upper whisker=	200}]\
+		coordinates {};\
+	\\end{axis}\
+	\\end{tikzpicture}\
+	\\end{center}\
+	\\begin{enumerate}\
+	\\item Which region has the largest IRQ?\
+	\\item Which region has the most variation in revenue?\
+	\\item Which region has the lowest median revenue?\
+	\\item About what is the median for revenue in the West?\
+	\\end{enumerate}',
 
+	'\\item The following boxplots show monthly sales revenue figures ($\\$$ thousands) for a discount office supply company with\
+	locations in three different regions of the U.S. \
+	\\begin{center}\
+	\\begin{tikzpicture}\
+	\\begin{axis}[\
+	boxplot\/draw direction=y,xtick={1,2,3},\
+	xticklabels={Northeast, Southeast, West},\
+	]\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	50, \
+		lower quartile=	75,\
+		median=		100, \
+		upper quartile=	175,\
+		upper whisker=	200}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	50, \
+		lower quartile=	70,\
+		median=		80, \
+		upper quartile=	85,\
+		upper whisker=	100}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	50, \
+		lower quartile=	75,\
+		median=		100, \
+		upper quartile=	125,\
+		upper whisker=	150}]\
+		coordinates {};\
+	\\end{axis}\
+	\\end{tikzpicture}\
+	\\end{center}\
+	\\begin{enumerate}\
+	\\item Which region has the largest IRQ?\
+	\\item Which region has the most variation in revenue?\
+	\\item Which region has the highest median revenue?\
+	\\item About what is the first quartile for revenue in the West?\
+	\\end{enumerate}',
+	'\\item The following boxplots show monthly sales revenue figures ($\\$$ thousands) for a discount office supply company with\
+	locations in three different regions of the U.S. \
+	\\begin{center}\
+	\\begin{tikzpicture}\
+	\\begin{axis}[\
+	boxplot\/draw direction=y,xtick={1,2,3},\
+	xticklabels={Northeast, Southeast, West},\
+	]\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	100, \
+		lower quartile=	120,\
+		median=		130, \
+		upper quartile=	140,\
+		upper whisker=	150}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	25, \
+		lower quartile=	75,\
+		median=		150, \
+		upper quartile=	175,\
+		upper whisker=	200}]\
+		coordinates {};\
+	\\addplot+[boxplot prepared={\
+		lower whisker=	50, \
+		lower quartile=	75,\
+		median=		100, \
+		upper quartile=	150,\
+		upper whisker=	200}]\
+		coordinates {};\
+	\\end{axis}\
+	\\end{tikzpicture}\
+	\\end{center}\
+	\\begin{enumerate}\
+	\\item Which region has the largest IRQ?\
+	\\item Which region has the least variation in revenue?\
+	\\item Which region has the highest median revenue?\
+	\\item About what is the third quartile for revenue in the West?\
+	\\end{enumerate}',
+
+		];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -880,7 +1057,7 @@ comps[theComp][theType]=[
 		in the United States will be struck by lightning this year.',
 
 	'\\item In a test of the MicroSort gender-selection technique, results consisted\
-		of 295 baby girls and 30 baby boys (based on data from the Genetics & IVF Institute).\
+		of 295 baby girls and 30 baby boys (based on data from the Genetics $\\&$ IVF Institute).\
 		Based on this result, what is the probability of a girl born to a couple using\
 		the MicroSort method?',
 
@@ -1790,8 +1967,8 @@ comps[theComp][theType]=[
 theType++;
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item assume that women\'s heights are normally distributed with a mean given by $\mu=63.6 in$. and a standard deviation given\
-		by $\sigma=2.5 in$. (based on data from the National Health Survey).  If 100 women are randomly selected, find the probability that they have a mean\
+	'\\item Assume that women\'s heights are normally distributed with a mean given by $\\mu=63.6 in$. and a standard deviation given\
+		by $\\sigma=2.5 in$. (based on data from the National Health Survey).  If 100 women are randomly selected, find the probability that they have a mean\
 		height greater than 63 in.',
 
 	'\\item A ski gondola in Vail, Colorado, carries skiers to the top of a mountain.\
