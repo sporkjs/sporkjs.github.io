@@ -1079,7 +1079,7 @@ comps[theComp][theType]=[
 		Is it unusual for the IRS to provide a wrong answer to a taxpayer\'s question?',
 		
 
-	'\\item Among 400 randomly selected drivers in the 20–24 age\
+	'\\item Among 400 randomly selected drivers in the 20Â–24 age\
 		bracket, 136 were in a car crash during the last year (based on data from the National\
 		Safety Council). If a driver in that age bracket is randomly selected, what is the approximate\
 		probability that he or she will be in a car accident during the next year? Is it\
@@ -1195,8 +1195,8 @@ comps[theComp][theType]=[
 		for testing, what is the probability that the entire batch will be accepted?',
 		
 
-	'\\item It is common for public opinion polls to have a “confidence\
-		level” of $95\\%$, meaning (roughly) that there is a 0.95 probability that the poll results are accurate\
+	'\\item It is common for public opinion polls to have a Â“confidence\
+		levelÂ” of $95\\%$, meaning (roughly) that there is a 0.95 probability that the poll results are accurate\
 		within the claimed margins of error. If six different organizations conduct\
 		independent polls, what is the probability that all six of them are accurate within\
 		the claimed margins of error?',
@@ -1782,7 +1782,7 @@ comps[theComp][theType]=[
 		on data from the National Health Survey). Find the probability that if an individual man is randomly selected, his weight will\
 		be greater than 167 pounds.',
 
-	'\\item For women aged 18–24, systolic blood pressures (in mm Hg) are normally\
+	'\\item For women aged 18Â–24, systolic blood pressures (in mm Hg) are normally\
 		distributed with a mean of 114.8 and a standard deviation of 13.1 (based on\
 		data from the National Health Survey). Hypertension is commonly defined as a systolic\
 		blood pressure above 140. If a woman between the ages of 18 and 24 is randomly selected, find the probability\
@@ -2006,7 +2006,7 @@ comps[theComp][theType]=[
 		Find the probability that 100 randomly selected men have a mean head breadth\
 		less than 6.2 in.',
 
-	'\\item For women aged 18–24, systolic blood pressures (in mm Hg) are normally\
+	'\\item For women aged 18Â–24, systolic blood pressures (in mm Hg) are normally\
 		distributed with a mean of 114.8 and a standard deviation of 13.1 (based on\
 		data from the National Health Survey). Hypertension is commonly defined as a systolic\
 		blood pressure above 140. If 4 women in that age bracket are randomly selected, find the probability that their\
@@ -2295,7 +2295,7 @@ comps[theComp][theType]=[
 	'\\item The following data presents the number of works hours lost per day on a construction project: 8.8, 12.5, 5.4, 12.8, 9.1, 14.7, 8.8, 12.2, 13.3, 6.9, 2.2. Test the claim that the mean number of work hours lost per day is more than 8 hours.'+theDirections,
 	'\\item A sample of 106 body temperatures had a\
 		mean of $98.20^\\circ$F and a standard deviation of $0.62^\\circ$F. Use a $0.05$ significance level to\
-		test the claim that the mean body temperature is less than 98.6°F.'+theDirections,
+		test the claim that the mean body temperature is less than 98.6Â°F.'+theDirections,
 	'\\item In previous tests, baseballs were dropped 24 ft onto a concrete surface, and\
 		they bounced an average of 92.84 in. In a test of a sample of 40 new balls, the bounce\
 		heights had a mean of 92.67 in. and a standard deviation of 1.79 in. (based on data\
@@ -2603,9 +2603,9 @@ comps[theComp][theType]=[
 	'\\item As part of the National Health and Nutrition\
 		Examination Survey conducted by the Department of Health and Human Services,\
 		self-reported heights and measured heights were obtained for males aged\
-		12–16. Listed below are sample results.\
+		12Â–16. Listed below are sample results.\
 		Use a 0.05 significance level to test the claim that there is a difference between\
-		self-reported heights and measured heights of males aged 12–16.\
+		self-reported heights and measured heights of males aged 12Â–16.\
 		$$\\begin{array}{r|cccccccccccc}\
 		Reported \& 68 \& 71 \& 63 \& 70 \& 71 \& 60 \& 65 \& 64 \& 54 \& 63 \& 66\&  72 \\\\ \\hline\
 		Measured \&  67.9\&  69.9 \& 64.9 \& 68.3 \& 70.3 \& 60.6 \& 64.5 \& 67.0 \& 55.6 \& 74.2 \& 65.0 \& 70.8\
@@ -3044,7 +3044,7 @@ comps[theComp][theType]=[
 	'\\item Listed below are the weights (in pounds) and the\
 		highway fuel consumption amounts (in mi gal) of randomly selected cars (Chrysler\
 		Sebring, Ford Mustang, BMW 3-Series, Ford Crown Victoria, Honda Civic, Mazda\
-		Protégé, Hyundai Accent). Test the claim that there is a linear correlation between weight and highway\
+		ProtÃ©gÃ©, Hyundai Accent). Test the claim that there is a linear correlation between weight and highway\
 		fuel consumption.\
 		$$\\begin{array}{r|ccccccccccccc}\
 		Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
