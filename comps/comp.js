@@ -11,6 +11,20 @@ function doit(){
 	var adding=[];
 	var problemsToAdd=[];
 	var r='';
+	var top='\
+\\documentclass[10pt]{extreport} \r\
+\\usepackage[height=9in,width=7in]{geometry}\r\
+\\usepackage{amsmath}\r\
+\\usepackage{multicol}\r\
+\\usepackage{enumerate}\r\
+\\usepackage{tikz,pgfplots}\r\
+\\usepgfplotslibrary{statistics}\r\
+\\everymath={\\displaystyle} \r\
+\\parindent = 0 in \r\
+\\pagestyle{empty}\r\
+\\begin{document}\r\
+	';
+	var bottom='\r\\end{document}';
 	for (i=0;i<comps.length;i++)
 	if (document.getElementById('check'+i).checked){
 		r+='\r'+names[i]+'\r';
@@ -43,7 +57,7 @@ function doit(){
 		}
 		r+='\\end{enumerate}\r\\eject\r';
 	}
-	theLatex.value=r;
+	theLatex.value=top+r+bottom;
 //	theLatex.style.height = (theLatex.scrollHeight)+"px";
 	r=r.replace(/\\item/g, '<li>');
 	r=r.replace(/\\begin{enumerate}/g, '<ol>')
@@ -64,6 +78,20 @@ function showall(){
 	var adding=[];
 	var problemsToAdd=[];
 	var r='';
+	var top='\
+\\documentclass[10pt]{extreport} \r\
+\\usepackage[height=9in,width=7in]{geometry}\r\
+\\usepackage{amsmath}\r\
+\\usepackage{multicol}\r\
+\\usepackage{enumerate}\r\
+\\usepackage{tikz,pgfplots}\r\
+\\usepgfplotslibrary{statistics}\r\
+\\everymath={\\displaystyle} \r\
+\\parindent = 0 in \r\
+\\pagestyle{empty}\r\
+\\begin{document}\r\
+	';
+	var bottom='\r\\end{document}';
 	for (i=0;i<comps.length;i++)
 	if (document.getElementById('check'+i).checked){
 		r+='\r'+names[i]+'\r';
@@ -75,7 +103,7 @@ function showall(){
 		}
 	r+='\r\\eject\r';
 	}
-	theLatex.value=r;
+	theLatex.value=top+r+bottom;
 //	theLatex.style.height = (theLatex.scrollHeight)+"px";
 	r=r.replace(/\\item/g, '<li>');
 	r=r.replace(/\\begin{enumerate}/g, '<ol>')
