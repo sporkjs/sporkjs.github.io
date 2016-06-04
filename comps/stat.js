@@ -209,249 +209,6 @@ comps[theComp][theType]=[
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Probability Concepts';
-theType=0;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.85$. Explain what this means in regard to the Law of Large Numbers.',
-	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.75$. Explain what this means in regard to the Law of Large Numbers.',
-	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.65$. Explain what this means in regard to the Law of Large Numbers.',
-	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.90$. Explain what this means in regard to the Law of Large Numbers.',
-	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.84$. Explain what this means in regard to the Law of Large Numbers.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =3/5$.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =1/2$.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =4/9$.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =0.75$.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =0.9$.',
-	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =40\\%$.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=3;
-comps[theComp][theType]=[
-		'\\item What is the complement of an event $A$?',
-		'\\item What does it mean for two events $A$ and $B$ to be disjoint?',
-		'\\item What does it mean for two events $A$ and $B$ to be independent?',
-						];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Explain the Rare Event Rule.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=2;
-comps[theComp][theType]=[
-		'\\item When calculating probabilities, which arithmetical operation is associated with the word and?',
-		'\\item When calculating probabilities, which arithmetical operation is associated with the word or?',
-						];
-theComp++;
-//-------------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Random Variables';
-theType=0;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-					'\\item What is a random variable?'
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-					'\\item The expected value of a certain random variable is 9. What does this mean?',
-					'\\item The expected value of a certain random variable is 12. What does this mean?',
-					'\\item The expected value of a certain random variable is 100.23. What does this mean?',
-					'\\item The expected value of a certain random variable is 3.14. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\\$0.97$. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\\$1.97$. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\\$2.25$. What does this mean?',
-					'\\item The expected profit from a certain lottery game is $-\\$0.50$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\\$298$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\\$597$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\\$123$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\\$1026$. What does this mean?',
-					'\\item The expected profit to an insurance company from a certain type of policy is $\\$103$. What does this mean?',
-					];
-theType++;
-theComp++;
-//-------------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Confidence Interval Explanation';
-theType=0;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-					'\\item What is the purpose of a confidence interval?'
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the actual proportion is between $0.56$ and $0.61$?\"',
-					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the actual proportion is between $0.6$ and $0.7$?\"',
-					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the population mean is between $12$ inches and $14$ inches?\"',
-					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the population mean is between $8$ inches and $10$ inches?\"',
-					];
-theType++;
-theComp++;
-//-------------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+'C: Claims';
-theType=0;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-					'\\item Explain why we reject $H_0$ in a hypothesis test when the $P$-value is extremely small.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item In a certain hypothesis test, the claim is the same as $H_0$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.02$, then what is your final conclusion?',
-	'\\item In a certain hypothesis test, the claim is the same as $H_0$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.12$, then what is your final conclusion?'
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item In a certain hypothesis test, the claim is the same as $H_1$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.02$, then what is your final conclusion?',
-	'\\item In a certain hypothesis test, the claim is the same as $H_1$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.12$, then what is your final conclusion?'
-
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Translate this claim into symbols: The mean is less than 100 pounds.',
-	'\\item Translate this claim into symbols: The mean is greater than 100 pounds.',
-	'\\item Translate this claim into symbols: The proportion is less than $0.75$.',
-	'\\item Translate this claim into symbols: The proportion is greater than $0.75$.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Translate this claim into symbols: The mean is at least 100 pounds.',
-	'\\item Translate this claim into symbols: The mean is at most 100 pounds.',
-	'\\item Translate this claim into symbols: The proportion is at least $0.75$.',
-	'\\item Translate this claim into symbols: The proportion is at most $0.75$.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Translate this claim into symbols: The mean is not more than 100 pounds.',
-	'\\item Translate this claim into symbols: The mean is not less than 100 pounds.',
-	'\\item Translate this claim into symbols: The proportion is not more than $0.75$.',
-	'\\item Translate this claim into symbols: The proportion is not less than $0.75$.',
-					];
-theType++;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item Translate this claim into symbols: The mean is 100 pounds.',
-	'\\item Translate this claim into symbols: The mean is not 100 pounds.',
-	'\\item Translate this claim into symbols: The proportion is $0.75$.',
-	'\\item Translate this claim into symbols: The proportion is not $0.75$.',
-					];
-theComp++;
-//-------------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-theDirectionsLong = 'For each claim below, write the letter of the type of claim.\
-	Types of claims:\
-	\\begin{multicols}{3}\
-	\\begin{enumerate}[A.]\
-		\\item One proportion $Z$ test\
-		\\item One mean $T$ test\
-		\\item Two proportion $Z$ test\
-		\\item Two independent means\
-		\\item Matched pairs\
-		\\item Correlation\
-		\\item $\chi^2$ Goodness of Fit\
-		\\item Contingency table\
-		\\item ANOVA\
-	\\end{enumerate}\
-	\\end{multicols}';
-theDirections = 'State what type of test you would use to test this claim: ';
-names[theComp]='Competency '+theComp+'C: Choosing a test';
-theType=0;
-
-comps[theComp][theType]=[];
-nums[theComp][theType]=5;
-comps[theComp][theType]=[
-		'\\item '+theDirections+'There is a linear correlation between homework grades and test grades in statistics class.',
-		'\\item '+theDirections+'Most college students change their majors at some point in their college careers.',
-		'\\item '+theDirections+'Whether or not a student is an athlete is independent of that student\'s major.',
-		'\\item '+theDirections+'The proportion of science majors who are athletes is greater than the proportion of business majors who are athletes.',
-		'\\item '+theDirections+'Science majors, business majors, art majors, and music majors have the same average GPAs.',
-		'\\item '+theDirections+'About one half of our students are education majors. One quarter are business majors, and one quarter are some other major.	',
-		'\\item '+theDirections+'Female math majors have an average height greater than $66$ inches.',
-		'\\item '+theDirections+'On average, college students gain weight during their freshmen year.',
-		'\\item '+theDirections+'Female math majors are on average taller than female business majors. ',
-		'\\item '+theDirections+'Most college students get less than 7 hours of sleep each night.',
-		'\\item '+theDirections+'Most teenagers do not drink alcohol before the age of 16.',
-		'\\item '+theDirections+'More than sixty percent of college students change their majors more than twice.',
-		'\\item '+theDirections+'The proportion of full time college students who register for less than 17 hours is not one half.',
-		'\\item '+theDirections+'On average adults drink less than 8 cups of water per day.',
-		'\\item '+theDirections+'Pine needles have an average length less than 100mm.',
-		'\\item '+theDirections+'On average college students sleep no more than 7 hours per night.',
-		'\\item '+theDirections+'The average Ginko leaf width is 7cm. ',
-		'\\item '+theDirections+'The average shoe size of a college female is 8.5. ',
-		'\\item '+theDirections+'Female students at Concordia have an average height greater than 63.8 inches. ',
-		'\\item '+theDirections+'The average acorn diameter is greater than 2cm. ',
-		'\\item '+theDirections+'More college students drink soda than coffee. ',
-		'\\item '+theDirections+'The proportion of college students who have done illegal drugs is the same as the proportion of college students who are involved in Bible studies. ',
-		'\\item '+theDirections+'The proportion of college students who like math is different from the proportion of college students who like scare movies. ',
-		'\\item '+theDirections+'Fewer students like math than like to read. ',
-		'\\item '+theDirections+'The proportion of students who have had pets is greater than the proportion that are involved in extracurricular activities. ',
-		'\\item '+theDirections+'Cigarettes of type A have more nicotine than cigarettes of type B. ',
-		'\\item '+theDirections+'Paint of type A covers more area than paint of type B. ',
-		'\\item '+theDirections+'There is no difference in the average repair costs from the two types of bumper guards. ',
-		'\\item '+theDirections+'The males from two different islands have the same mean cephalic index. ',
-		'\\item '+theDirections+'There is no difference in font end and rear end repair costs on the same type of car. ',
-		'\\item '+theDirections+'A safety training program decreased the weekly losses in man hours in a factory. ',
-		'\\item '+theDirections+'An SAT training program increases students\' scores. ',
-		'\\item '+theDirections+'On average Best Actor is older than the Best Actress. ',
-		'\\item '+theDirections+'College students on average gain weight during their freshman year. ',
-		'\\item '+theDirections+'People on the Atkins diet for six months lose weight. ',
-		'\\item '+theDirections+'There is a linear correlation between cost and quality of TV sets. ',
-		'\\item '+theDirections+'There is a linear correlation between blood pressure measurements in the left and right arm. ',
-		'\\item '+theDirections+'There is a linear correlation between the number of times that a cricket chirps in a minute and temperature. ',
-		'\\item '+theDirections+'There is a linear correlation between brain volume and IQ. ',
-		'\\item '+theDirections+'Factory occupational injuries occur on each day of the week with equal frequency. ',
-		'\\item '+theDirections+'Children are born on each day of the week with equal frequency. ',
-		'\\item '+theDirections+'M$\\&$M colors match the company\'s claimed distribution. ',
-		'\\item '+theDirections+'Home field advantage is independent of sport. ',
-		'\\item '+theDirections+'Whether or not a criminal knows his victim is independent of the type of crime he commits. ',
-		'\\item '+theDirections+'Whether or not a person contracts polio is independent of whether or not he took the polio vaccine. ',
-		'\\item '+theDirections+'Motorcycle accidents are independent of the color of helmet the motorcycle rider wears. ',
-		'\\item '+theDirections+'Four, six, and eight cylinder cars have different average gas mileage. ',
-		'\\item '+theDirections+'Skull breadths from three different Egyptian kingdoms have different averages. ',
-		'\\item '+theDirections+'Crash test dummies in small, medium, and large cars have the same average head injury measurements.',
-		'\\item '+theDirections+'Crash test dummies in small, medium, and large cars have the same average chest deceleration measurements.',
-					];
-theType++;
-
-theComp++;
-//-------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
@@ -911,6 +668,50 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
+names[theComp]='Competency '+theComp+'C: Probability Concepts';
+theType=0;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.85$. Explain what this means in regard to the Law of Large Numbers.',
+	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.75$. Explain what this means in regard to the Law of Large Numbers.',
+	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.65$. Explain what this means in regard to the Law of Large Numbers.',
+	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.90$. Explain what this means in regard to the Law of Large Numbers.',
+	'\\item Suppose that $A$ is an outcome of an experiment and that $P(A)=0.84$. Explain what this means in regard to the Law of Large Numbers.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =3/5$.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =1/2$.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =4/9$.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =0.75$.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =0.9$.',
+	'\\item Use the Law of Large Numbers to explain what is meant when we say $P(A) =40\\%$.',
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=3;
+comps[theComp][theType]=[
+		'\\item What is the complement of an event $A$?',
+		'\\item What does it mean for two events $A$ and $B$ to be disjoint?',
+		'\\item What does it mean for two events $A$ and $B$ to be independent?',
+						];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Explain the Rare Event Rule.',
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=2;
+comps[theComp][theType]=[
+		'\\item When calculating probabilities, which arithmetical operation is associated with the word and?',
+		'\\item When calculating probabilities, which arithmetical operation is associated with the word or?',
+						];
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
 names[theComp]='Competency '+theComp+'A: Probabilities';
 theType=0;
 comps[theComp][theType]=[];
@@ -1126,6 +927,38 @@ comps[theComp][theType]=[
 		is correct, what is the probability of getting five rejections when Bob asks\
 		five different women for dates?',		
 					];
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
+names[theComp]='Competency '+theComp+'C: Random Variables';
+theType=0;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+					'\\item What is a random variable?'
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+					'\\item The expected value of a certain random variable is 9. What does this mean?',
+					'\\item The expected value of a certain random variable is 12. What does this mean?',
+					'\\item The expected value of a certain random variable is 100.23. What does this mean?',
+					'\\item The expected value of a certain random variable is 3.14. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$0.97$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$1.97$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$2.25$. What does this mean?',
+					'\\item The expected profit from a certain lottery game is $-\\$0.50$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$298$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$597$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$123$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$1026$. What does this mean?',
+					'\\item The expected profit to an insurance company from a certain type of policy is $\\$103$. What does this mean?',
+					];
+theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -1829,6 +1662,29 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
+names[theComp]='Competency '+theComp+'C: Confidence Interval Explanation';
+theType=0;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+					'\\item What is the purpose of a confidence interval?'
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the actual proportion is between $0.56$ and $0.61$?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the actual proportion is between $0.6$ and $0.7$?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the population mean is between $12$ inches and $14$ inches?\"',
+					'\\item What is meant by the statement, \`\`We are $95\\%$ sure that the population mean is between $8$ inches and $10$ inches?\"',
+					];
+theType++;
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
 names[theComp]='Competency '+theComp+'A: Confidence Intervals';
 theType=0;
 comps[theComp][theType]=[];
@@ -1892,71 +1748,64 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
-names[theComp]='Competency '+theComp+'A: Regression';
+names[theComp]='Competency '+theComp+'C: Claims';
 theType=0;
 comps[theComp][theType]=[];
-nums[theComp][theType]=2;
+nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item A random sample of eight drivers insured with a company and having similar auto insurance policies was selected. The following table lists their driving experiences (in years) and monthly auto insurance premiums. After conducting a hypothesis test we conclude there is linear correlation between the variables. Predict the monthly auto insurance premium for a driver with 10 years of driving experience.\
-		$$\\begin{array}{r|c|c|c|c|c|c|c|c}Driving \\, Experience (years) \& 5 \& 2 \& 12 \& 9 \& 15 \& 6 \& 25 \& 16 \\\\ \\hline\
-		Monthly \\, Premium (\\$)\& 64\& 87\& 50\& 71\& 44\& 56\& 42\& 60\\end{array}$$',
-'\\item There is a linear correlation between song audiences impressions and album sales.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	number of albums sold for a song\
-	with 20 (hundred million) audience impressions. (In the table below, audience impressions\
-	are in hundreds of millions and the numbers of albums sold are in hundreds\
-	of thousands).\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
-	Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
-	\\end{array}$$',
-'\\item There is a linear correlation between movie budgets and gross income for the movie.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	gross amount for a movie with a\
-	budget of 40 million dollars. (In the table below, all amounts are in millions of dollars.)\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90 \\\\ \\hline\
-	Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
-	\\end{array}$$',
-'\\item There is a linear correlation between car weight and fuel consumption.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	highway fuel consumption\
-	amount (in mi/gal) for a car that weighs 3000 lb.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
-	Fuel \\, consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
-	\\end{array}$$',
-'\\item There is a linear linear correlation between bear chest size and weight.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	weight (in pounds) of a bear with a chest size of 50 in.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Chest \\, size \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
-	Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
-	\\end{array}$$',
-'\\item There is a linear correlation between diastolic and systolic blood pressure measurements.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	diastolic blood pressure for a person with a systolic reading of 140.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
-	Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
-	\\end{array}$$',
-'\\item There is a linear correlation between the number of murders in a city and the population size of the city.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	population size for a city with 120 murders. (The population sizes are in hundreds of thousands.)\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
-	Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
-	\\end{array}$$',
-'\\item There is a linear correlation between the temperature and the number of times that a cricket chirps in \
-	one minute.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	temperature for a time when a cricket is chirping at the rate of 1000 chirps per minute.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
-	Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
-	\\end{array}$$',
-			];
+					'\\item Explain why we reject $H_0$ in a hypothesis test when the $P$-value is extremely small.',
+					];
 theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item In a certain hypothesis test, the claim is the same as $H_0$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.02$, then what is your final conclusion?',
+	'\\item In a certain hypothesis test, the claim is the same as $H_0$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.12$, then what is your final conclusion?'
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item In a certain hypothesis test, the claim is the same as $H_1$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.02$, then what is your final conclusion?',
+	'\\item In a certain hypothesis test, the claim is the same as $H_1$. If the significance level is $\\alpha=0.05$ and the $P$-value is $P=0.12$, then what is your final conclusion?'
+
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Translate this claim into symbols: The mean is less than 100 pounds.',
+	'\\item Translate this claim into symbols: The mean is greater than 100 pounds.',
+	'\\item Translate this claim into symbols: The proportion is less than $0.75$.',
+	'\\item Translate this claim into symbols: The proportion is greater than $0.75$.',
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Translate this claim into symbols: The mean is at least 100 pounds.',
+	'\\item Translate this claim into symbols: The mean is at most 100 pounds.',
+	'\\item Translate this claim into symbols: The proportion is at least $0.75$.',
+	'\\item Translate this claim into symbols: The proportion is at most $0.75$.',
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Translate this claim into symbols: The mean is not more than 100 pounds.',
+	'\\item Translate this claim into symbols: The mean is not less than 100 pounds.',
+	'\\item Translate this claim into symbols: The proportion is not more than $0.75$.',
+	'\\item Translate this claim into symbols: The proportion is not less than $0.75$.',
+					];
+theType++;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item Translate this claim into symbols: The mean is 100 pounds.',
+	'\\item Translate this claim into symbols: The mean is not 100 pounds.',
+	'\\item Translate this claim into symbols: The proportion is $0.75$.',
+	'\\item Translate this claim into symbols: The proportion is not $0.75$.',
+					];
 theComp++;
 //-------------------------------------------------------------------------------------------------------
 
@@ -2909,5 +2758,157 @@ comps[theComp][theType]=[
 		\\end{array}$$'+theDirections,
 	];
 theType++;
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
+names[theComp]='Competency '+theComp+'A: Regression';
+theType=0;
+comps[theComp][theType]=[];
+nums[theComp][theType]=2;
+comps[theComp][theType]=[
+	'\\item A random sample of eight drivers insured with a company and having similar auto insurance policies was selected. The following table lists their driving experiences (in years) and monthly auto insurance premiums. After conducting a hypothesis test we conclude there is linear correlation between the variables. Predict the monthly auto insurance premium for a driver with 10 years of driving experience.\
+		$$\\begin{array}{r|c|c|c|c|c|c|c|c}Driving \\, Experience (years) \& 5 \& 2 \& 12 \& 9 \& 15 \& 6 \& 25 \& 16 \\\\ \\hline\
+		Monthly \\, Premium (\\$)\& 64\& 87\& 50\& 71\& 44\& 56\& 42\& 60\\end{array}$$',
+'\\item There is a linear correlation between song audiences impressions and album sales.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	number of albums sold for a song\
+	with 20 (hundred million) audience impressions. (In the table below, audience impressions\
+	are in hundreds of millions and the numbers of albums sold are in hundreds\
+	of thousands).\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
+	Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
+	\\end{array}$$',
+'\\item There is a linear correlation between movie budgets and gross income for the movie.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	gross amount for a movie with a\
+	budget of 40 million dollars. (In the table below, all amounts are in millions of dollars.)\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90 \\\\ \\hline\
+	Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
+	\\end{array}$$',
+'\\item There is a linear correlation between car weight and fuel consumption.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	highway fuel consumption\
+	amount (in mi/gal) for a car that weighs 3000 lb.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
+	Fuel \\, consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
+	\\end{array}$$',
+'\\item There is a linear linear correlation between bear chest size and weight.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	weight (in pounds) of a bear with a chest size of 50 in.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Chest \\, size \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
+	Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
+	\\end{array}$$',
+'\\item There is a linear correlation between diastolic and systolic blood pressure measurements.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	diastolic blood pressure for a person with a systolic reading of 140.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
+	Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
+	\\end{array}$$',
+'\\item There is a linear correlation between the number of murders in a city and the population size of the city.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	population size for a city with 120 murders. (The population sizes are in hundreds of thousands.)\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
+	Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
+	\\end{array}$$',
+'\\item There is a linear correlation between the temperature and the number of times that a cricket chirps in \
+	one minute.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	temperature for a time when a cricket is chirping at the rate of 1000 chirps per minute.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
+	Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
+	\\end{array}$$',
+			];
+theType++;
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
+theDirectionsLong = 'For each claim below, write the letter of the type of claim.\
+	Types of claims:\
+	\\begin{multicols}{3}\
+	\\begin{enumerate}[A.]\
+		\\item One proportion $Z$ test\
+		\\item One mean $T$ test\
+		\\item Two proportion $Z$ test\
+		\\item Two independent means\
+		\\item Matched pairs\
+		\\item Correlation\
+		\\item $\chi^2$ Goodness of Fit\
+		\\item Contingency table\
+		\\item ANOVA\
+	\\end{enumerate}\
+	\\end{multicols}';
+theDirections = 'State what type of test you would use to test this claim: ';
+names[theComp]='Competency '+theComp+'C: Choosing a test';
+theType=0;
+
+comps[theComp][theType]=[];
+nums[theComp][theType]=5;
+comps[theComp][theType]=[
+		'\\item '+theDirections+'There is a linear correlation between homework grades and test grades in statistics class.',
+		'\\item '+theDirections+'Most college students change their majors at some point in their college careers.',
+		'\\item '+theDirections+'Whether or not a student is an athlete is independent of that student\'s major.',
+		'\\item '+theDirections+'The proportion of science majors who are athletes is greater than the proportion of business majors who are athletes.',
+		'\\item '+theDirections+'Science majors, business majors, art majors, and music majors have the same average GPAs.',
+		'\\item '+theDirections+'About one half of our students are education majors. One quarter are business majors, and one quarter are some other major.	',
+		'\\item '+theDirections+'Female math majors have an average height greater than $66$ inches.',
+		'\\item '+theDirections+'On average, college students gain weight during their freshmen year.',
+		'\\item '+theDirections+'Female math majors are on average taller than female business majors. ',
+		'\\item '+theDirections+'Most college students get less than 7 hours of sleep each night.',
+		'\\item '+theDirections+'Most teenagers do not drink alcohol before the age of 16.',
+		'\\item '+theDirections+'More than sixty percent of college students change their majors more than twice.',
+		'\\item '+theDirections+'The proportion of full time college students who register for less than 17 hours is not one half.',
+		'\\item '+theDirections+'On average adults drink less than 8 cups of water per day.',
+		'\\item '+theDirections+'Pine needles have an average length less than 100mm.',
+		'\\item '+theDirections+'On average college students sleep no more than 7 hours per night.',
+		'\\item '+theDirections+'The average Ginko leaf width is 7cm. ',
+		'\\item '+theDirections+'The average shoe size of a college female is 8.5. ',
+		'\\item '+theDirections+'Female students at Concordia have an average height greater than 63.8 inches. ',
+		'\\item '+theDirections+'The average acorn diameter is greater than 2cm. ',
+		'\\item '+theDirections+'More college students drink soda than coffee. ',
+		'\\item '+theDirections+'The proportion of college students who have done illegal drugs is the same as the proportion of college students who are involved in Bible studies. ',
+		'\\item '+theDirections+'The proportion of college students who like math is different from the proportion of college students who like scare movies. ',
+		'\\item '+theDirections+'Fewer students like math than like to read. ',
+		'\\item '+theDirections+'The proportion of students who have had pets is greater than the proportion that are involved in extracurricular activities. ',
+		'\\item '+theDirections+'Cigarettes of type A have more nicotine than cigarettes of type B. ',
+		'\\item '+theDirections+'Paint of type A covers more area than paint of type B. ',
+		'\\item '+theDirections+'There is no difference in the average repair costs from the two types of bumper guards. ',
+		'\\item '+theDirections+'The males from two different islands have the same mean cephalic index. ',
+		'\\item '+theDirections+'There is no difference in font end and rear end repair costs on the same type of car. ',
+		'\\item '+theDirections+'A safety training program decreased the weekly losses in man hours in a factory. ',
+		'\\item '+theDirections+'An SAT training program increases students\' scores. ',
+		'\\item '+theDirections+'On average Best Actor is older than the Best Actress. ',
+		'\\item '+theDirections+'College students on average gain weight during their freshman year. ',
+		'\\item '+theDirections+'People on the Atkins diet for six months lose weight. ',
+		'\\item '+theDirections+'There is a linear correlation between cost and quality of TV sets. ',
+		'\\item '+theDirections+'There is a linear correlation between blood pressure measurements in the left and right arm. ',
+		'\\item '+theDirections+'There is a linear correlation between the number of times that a cricket chirps in a minute and temperature. ',
+		'\\item '+theDirections+'There is a linear correlation between brain volume and IQ. ',
+		'\\item '+theDirections+'Factory occupational injuries occur on each day of the week with equal frequency. ',
+		'\\item '+theDirections+'Children are born on each day of the week with equal frequency. ',
+		'\\item '+theDirections+'M$\\&$M colors match the company\'s claimed distribution. ',
+		'\\item '+theDirections+'Home field advantage is independent of sport. ',
+		'\\item '+theDirections+'Whether or not a criminal knows his victim is independent of the type of crime he commits. ',
+		'\\item '+theDirections+'Whether or not a person contracts polio is independent of whether or not he took the polio vaccine. ',
+		'\\item '+theDirections+'Motorcycle accidents are independent of the color of helmet the motorcycle rider wears. ',
+		'\\item '+theDirections+'Four, six, and eight cylinder cars have different average gas mileage. ',
+		'\\item '+theDirections+'Skull breadths from three different Egyptian kingdoms have different averages. ',
+		'\\item '+theDirections+'Crash test dummies in small, medium, and large cars have the same average head injury measurements.',
+		'\\item '+theDirections+'Crash test dummies in small, medium, and large cars have the same average chest deceleration measurements.',
+					];
+theType++;
+
 theComp++;
 //-------------------------------------------------------------------------------------------------------
