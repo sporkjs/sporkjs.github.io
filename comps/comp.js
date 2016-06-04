@@ -41,7 +41,7 @@ function doit(){
 			used[k]=1;
 			j++;
 		}
-		r+='\\end{enumerate}';
+		r+='\\end{enumerate}\r\\eject\r';
 	}
 	theLatex.value=r;
 //	theLatex.style.height = (theLatex.scrollHeight)+"px";
@@ -51,6 +51,7 @@ function doit(){
 	r=r.replace(/\\begin{quotation}/g, '<center>')
 	r=r.replace(/\\end{quotation}/g, '</center>')
 	r=r.replace(/\\noindent/g, '')
+	r=r.replace(/\\eject/g, '')
 	//r=r.replace(/\\\\/g, '<br>')
 
 	thePreview.innerHTML=r;
@@ -72,6 +73,7 @@ function showall(){
 				r+='\r'+comps[i][j][k]+'\r';
 			r+='\\end{enumerate}\r'
 		}
+	r+='\r\\eject\r';
 	}
 	theLatex.value=r;
 //	theLatex.style.height = (theLatex.scrollHeight)+"px";
@@ -81,6 +83,7 @@ function showall(){
 	r=r.replace(/\\begin{quotation}/g, '<center>')
 	r=r.replace(/\\end{quotation}/g, '</center>')
 	r=r.replace(/\\noindent/g, '')
+	r=r.replace(/\\eject/g, '')
 	//r=r.replace(/\\\\/g, '<br>')
 
 	thePreview.innerHTML=r;
