@@ -11,6 +11,10 @@
 	z-index: 10;
 }
 
+body{
+	background-image: url('png/background.png');
+	margin:0px;
+}
 #spork{
 	text-align: center;
 }
@@ -22,8 +26,9 @@ canvas{
 #content{
 		padding-top: 80px;
 		font-size:20px;
-		width:90%;
+		width:80%;
 		margin: auto;
+		background: white;
 }
 
 div.image{
