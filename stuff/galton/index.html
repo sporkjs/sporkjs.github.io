@@ -75,7 +75,8 @@ function setupBalls(){
 		aX[i]=0;
 		aY[i]=0;
 	}
-	
+	maxCount=0;
+	highest=N-1;
 }
 function showPegs(){
 	var i;
@@ -225,6 +226,9 @@ variable with 10 trials and probability of success 50%. The column that the marb
 represents a value of the random variable. As the number of marbles dropped increases,
 the counts of marbles in the individual columns will begin to approximate a binomial
 distribution.
+<br><br>
+<button onclick='stoploop();' style='width: 100%;'>Stop</button><br><br>
+<button onclick='startover();' style='width: 100%;'>Start Over</button>
 </div>
 <div id='spork'></div>
 <!--
