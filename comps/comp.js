@@ -1,7 +1,7 @@
 var comps=[];
 var nums=[];
 var names=[];
-var theComp=0;
+var theComp=1;
 var theType=0;
 var theVariant=0;
 
@@ -25,7 +25,7 @@ function doit(){
 \\begin{document}\r\
 	';
 	var bottom='\r\\end{document}';
-	for (i=0;i<comps.length;i++)
+	for (i=1;i<comps.length;i++)
 	if (document.getElementById('check'+i).checked){
 		r+='\r'+names[i]+'\r';
 		r+=r='\\begin{enumerate}\r';
@@ -92,7 +92,7 @@ function showall(){
 \\begin{document}\r\
 	';
 	var bottom='\r\\end{document}';
-	for (i=0;i<comps.length;i++)
+	for (i=1;i<comps.length;i++)
 	if (document.getElementById('check'+i).checked){
 		r+='\r'+names[i]+'\r';
 		for (j=0;j<comps[i].length;j++){
@@ -120,7 +120,7 @@ function showall(){
 function setup(){
 	var i;
 	var r='';
-	for (i=0;i<comps.length;i++)
+	for (i=1;i<comps.length;i++)
 		r+='<label for="check'+i+'"> <input type="checkbox" id="check'+i+'"> '+names[i].replace('Competency ', '')+' </label><br>';
 	r+="<br><button onclick='doit();'>Create Test</button><button onclick='showall();'>All Types</button>";
 	controlPanel.innerHTML=r;
