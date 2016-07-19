@@ -294,7 +294,7 @@ comps[theComp][theType]=[
 	\\end{tikzpicture}\
 	\\end{center}\
 	\\begin{enumerate}\
-	\\item Which region has the largest IRQ?\
+	\\item Which region has the largest IQR?\
 	\\item Which region has the least variation in revenue?\
 	\\item Which region has the highest median revenue?\
 	\\item About what is the third quartile for revenue in the West?\
@@ -332,7 +332,7 @@ comps[theComp][theType]=[
 	\\end{tikzpicture}\
 	\\end{center}\
 	\\begin{enumerate}\
-	\\item Which region has the largest IRQ?\
+	\\item Which region has the largest IQR?\
 	\\item Which region has the most variation in revenue?\
 	\\item Which region has the lowest median revenue?\
 	\\item About what is the median for revenue in the West?\
@@ -371,7 +371,7 @@ comps[theComp][theType]=[
 	\\end{tikzpicture}\
 	\\end{center}\
 	\\begin{enumerate}\
-	\\item Which region has the largest IRQ?\
+	\\item Which region has the largest IQR?\
 	\\item Which region has the most variation in revenue?\
 	\\item Which region has the highest median revenue?\
 	\\item About what is the first quartile for revenue in the West?\
@@ -409,7 +409,7 @@ comps[theComp][theType]=[
 	\\end{tikzpicture}\
 	\\end{center}\
 	\\begin{enumerate}\
-	\\item Which region has the largest IRQ?\
+	\\item Which region has the largest IQR?\
 	\\item Which region has the least variation in revenue?\
 	\\item Which region has the highest median revenue?\
 	\\item About what is the third quartile for revenue in the West?\
