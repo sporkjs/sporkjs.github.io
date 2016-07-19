@@ -2281,7 +2281,7 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
-names[theComp]='Competency '+theComp+'H: $\\chi^2$ GOF';
+names[theComp]='Competency '+theComp+'H: $\\chi^2$ Tests';
 theType=0;
 theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
 comps[theComp][theType]=[];
@@ -2407,7 +2407,7 @@ comps[theComp][theType]=[
 		test the claim that the participants fit the same distribution as the U.S. population.'+theDirections,
 					];
 theType++;
-theComp++;
+/*theComp++;
 //-------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------
@@ -2417,7 +2417,7 @@ names[theComp]='Competency '+theComp+'H: Contingency Table';
 theType=0;
 theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
 comps[theComp][theType]=[];
-nums[theComp][theType]=1;
+*/nums[theComp][theType]=1;
 comps[theComp][theType]=[
 	'\\item A university collected data to determine if the amount of time spent involved with\
 		extracurricular activities affects class performance. Test the claim that physical activity\
