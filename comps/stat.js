@@ -2281,6 +2281,193 @@ theComp++;
 //--------------------------------------------------------------------------------------------------
 comps[theComp]=[];
 nums[theComp]=[];
+names[theComp]='Competency '+theComp+'H: Linear Correlation';
+theType=0;
+theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+	'\\item The following data shows the mileage for a certain vehicle at various speeds. Test the claim that there \
+	is significant linear correlation between the speed and MPG.\
+	$$\\begin{array}{r|ccccc}Speed \& 30\& 40\& 50\& 60\& 70\\\\ \\hline\
+	MPG\& 24 \&28\& 30\& 28\& 26\\end{array}$$' + theDirections,
+	'\\item Using the data\
+		given below, test the claim that there is a a linear correlation between height of an eruption of Old Faithful\
+		and the time interval after the eruption.\
+		$$\\begin{array}{r|cccccccc}\
+		Height \& 140 \& 110 \& 125 \& 120 \& 140 \& 120 \& 125 \& 150 \\\\\\hline\
+		 Interval \\, after \& 92 \& 65 \& 72 \& 94 \& 83 \& 94 \& 101 \& 87\
+		\\end{array}$$'+theDirections,
+	'\\item The table below lists the numbers of audience impressions\
+		(in hundreds of millions) listening to songs and the corresponding numbers of albums\
+		sold (in hundreds of thousands). The number of audience impressions is a count of the\
+		number of times people have heard the song. The table is based on data from USA Today. Test the claim that\
+		there is a linear correlation between the number of impressions and the number of albums sold.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
+		Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are the budgets (in millions of dollars) and the\
+		gross receipts (in millions of dollars) for randomly selected movies (based on data\
+		from the Motion Picture Association of America). Test the claim that there is  a linear correlation\
+		between the money spent making the movie and the amount that it recovered in theaters.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90\\\\ \\hline\
+		Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are the weights (in pounds) and the\
+		highway fuel consumption amounts (in mi gal) of randomly selected cars (Chrysler\
+		Sebring, Ford Mustang, BMW 3-Series, Ford Crown Victoria, Honda Civic, Mazda\
+		Protégé, Hyundai Accent). Test the claim that there is a linear correlation between weight and highway\
+		fuel consumption.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
+		Fuel \\, Consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are the chest sizes (in inches) and weights\
+		(in pounds) of randomly selected bears that were anesthetized and measured (based\
+		on data from Gary Alt and Minitab, Inc.). Because it is much more difficult to weigh a\
+		bear than to measure its chest size, the presence of a correlation could lead to a\
+		method for estimating weight based on chest size. Test the claim that there is  a linear correlation between\
+		chest size and weight.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Chest \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
+		Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are heights (in inches) and weights\
+		(in pounds) for supermodels Michelle Alves, Nadia Avermann, Paris Hilton, Kelly\
+		Dyer, Christy Turlington, Bridget Hall, Naomi Campbell, Valerie Mazza, and Kristy\
+		Hume. Test a claim that there is  a correlation between height and weight?\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Height (in) \& 70 \& 70.5 \& 68 \& 65 \& 70 \& 70 \& 70 \& 70 \& 71\\\\ \\hline\
+		Weight (lb) \& 117 \& 119 \& 105 \& 115 \& 119 \& 127 \& 113 \& 123 \& 115\
+		\\end{array}$$'+theDirections,
+	'\\item Fourteen different second-year medical students took\
+		blood pressure measurements of the same patient and the results are listed below (data\
+		provided by Marc Triola, MD). Test the claim that there is  a correlation between systolic and diastolic\
+		values.\
+		$$\\begin{array}{r|ccccccccccccccc}\
+		Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
+		Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
+		\\end{array}$$'+theDirections,
+	'\\item The table below lists the numbers of murders and the\
+		population sizes (in hundreds of thousands) for large cities in America during a recent\
+		year (based on data from the New York Times). Test the claim that there is a linear correlation between the population size and number of murders in a year.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
+		Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
+		\\end{array}$$'+theDirections,
+	'\\item When nicotine is absorbed by the body, cotinine is produced.\
+		A measurement of cotinine in the body is therefore a good indicator of how much a\
+		person smokes. Listed below are the reported numbers of cigarettes smoked per day\
+		and the measured amounts of cotinine (in ng mL). (The values are from randomly selected\
+		subjects in the National Health Examination Survey.) Test the claim that there is a linear correlation between the number of cigarettes smoked in a day and the amount of cotinine in the body.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		cigarettes \\, per \\, day \& 60 \& 10 \& 4 \& 15 \& 10 \& 1 \& 20 \& 8 \& 7 \& 10 \& 10 \& 20\\\\ \\hline\
+		cotinine \& 179 \& 283 \& 75.6 \& 174 \& 209 \& 9.51 \& 350 \& 1.85 \& 43.4 \& 25.1 \& 408 \& 344\
+		\\end{array}$$'+theDirections,
+	'\\item In ``The Effects of Temperature on Marathon Runner\'s\
+		Performance,\" by David Martin and John Buoncristiani (Chance, Vol. 12, No. 4),\
+		high temperatures and times (in minutes) were given for women who won the New\
+		York City marathon in recent years. Results are listed below. Test the claim that there is a linear correlation between the temperatures and the times.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		temperature \& 55 \& 61 \& 49 \& 62 \& 70 \& 73 \& 51 \& 57\\\\ \\hline\
+		time \& 145 \& 148 \& 148 \& 148 \& 147 \& 146 \& 144 \& 147\
+		\\end{array}$$'+theDirections,
+	'\\item Listed below are heights (in inches) of mothers and heights (in\
+		inches) of their daughters (based on data from the National Health Examination Survey). Test a claim that there is a linear correlation between the heights.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Mother \& 63 \& 67 \& 64 \& 60 \& 65 \& 67 \& 59 \& 60\\\\ \\hline\
+		Daughter \& 58.6 \& 64.7 \& 65.3 \& 61.0 \& 65.4 \& 67.4 \& 60.9 \& 63.1\
+		\\end{array}$$'+theDirections,
+	'\\item One classic application of correlation involves the association\
+		between the temperature and the number of times a cricket chirps in a minute.\
+		Listed below are the numbers of chirps in 1 min and the corresponding temperatures\
+		in degrees Fahrenheit (based on data from The Song of Insects by George W. Pierce,\
+		Harvard University Press). Test the claim that there is a linear correlation between the number of chirps in one minute and the temperature.\
+		$$\\begin{array}{r|ccccccccccccc}\
+		Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
+		Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
+		\\end{array}$$'+theDirections,
+	];
+theType++;
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
+names[theComp]='Competency '+theComp+'A: Regression';
+theType=0;
+comps[theComp][theType]=[];
+nums[theComp][theType]=2;
+comps[theComp][theType]=[
+	'\\item A random sample of eight drivers insured with a company and having similar auto insurance policies was selected. The following table lists their driving experiences (in years) and monthly auto insurance premiums. After conducting a hypothesis test we conclude there is linear correlation between the variables. Predict the monthly auto insurance premium for a driver with 10 years of driving experience.\
+		$$\\begin{array}{r|c|c|c|c|c|c|c|c}Driving \\, Experience (years) \& 5 \& 2 \& 12 \& 9 \& 15 \& 6 \& 25 \& 16 \\\\ \\hline\
+		Monthly \\, Premium (\\$)\& 64\& 87\& 50\& 71\& 44\& 56\& 42\& 60\\end{array}$$',
+'\\item There is a linear correlation between song audiences impressions and album sales.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	number of albums sold for a song\
+	with 20 (hundred million) audience impressions. (In the table below, audience impressions\
+	are in hundreds of millions and the numbers of albums sold are in hundreds\
+	of thousands).\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
+	Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
+	\\end{array}$$',
+'\\item There is a linear correlation between movie budgets and gross income for the movie.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	gross amount for a movie with a\
+	budget of 40 million dollars. (In the table below, all amounts are in millions of dollars.)\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90 \\\\ \\hline\
+	Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
+	\\end{array}$$',
+'\\item There is a linear correlation between car weight and fuel consumption.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	highway fuel consumption\
+	amount (in mi/gal) for a car that weighs 3000 lb.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
+	Fuel \\, consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
+	\\end{array}$$',
+'\\item There is a linear linear correlation between bear chest size and weight.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	weight (in pounds) of a bear with a chest size of 50 in.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Chest \\, size \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
+	Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
+	\\end{array}$$',
+'\\item There is a linear correlation between diastolic and systolic blood pressure measurements.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	diastolic blood pressure for a person with a systolic reading of 140.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
+	Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
+	\\end{array}$$',
+'\\item There is a linear correlation between the number of murders in a city and the population size of the city.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	population size for a city with 120 murders. (The population sizes are in hundreds of thousands.)\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
+	Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
+	\\end{array}$$',
+'\\item There is a linear correlation between the temperature and the number of times that a cricket chirps in \
+	one minute.\
+	Use the data below to find the regression equation and use that equation to find the best predicted \
+	temperature for a time when a cricket is chirping at the rate of 1000 chirps per minute.\
+	$$\\begin{array}{r|cccccccccccccccccccc}\
+	Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
+	Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
+	\\end{array}$$',
+			];
+theType++;
+theComp++;
+//-------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------
+comps[theComp]=[];
+nums[theComp]=[];
 names[theComp]='Competency '+theComp+'H: $\\chi^2$ Tests';
 theType=0;
 theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
@@ -2641,193 +2828,6 @@ comps[theComp][theType]=[
 		1990s: 52.7 53.2 50.6 48.7 50.8 50.5 48.3 51.8 53.2 53.5\\\\\
 		1980s: 50.5 52.8 54.2 53.0 49.2 51.1 50.8 49.3 52.7 51.9	'+theDirections, 
 	];
-theType++;
-theComp++;
-//-------------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+'H: Linear Correlation';
-theType=0;
-theDirections= '\r \\begin{enumerate} \r \\item State the Null Hypothesis $H_0$: \r \\item State the Alternative Hypothesis $H_1$: \r \\item Which is the same as your claim, $H_0$ or $H_1$? \r \\item State your $P$-value: \r \\item State your formal conclusion: \r \\item State your final conclusion: \r \\end{enumerate}\r';
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-	'\\item The following data shows the mileage for a certain vehicle at various speeds. Test the claim that there \
-	is significant linear correlation between the speed and MPG.\
-	$$\\begin{array}{r|ccccc}Speed \& 30\& 40\& 50\& 60\& 70\\\\ \\hline\
-	MPG\& 24 \&28\& 30\& 28\& 26\\end{array}$$' + theDirections,
-	'\\item Using the data\
-		given below, test the claim that there is a a linear correlation between height of an eruption of Old Faithful\
-		and the time interval after the eruption.\
-		$$\\begin{array}{r|cccccccc}\
-		Height \& 140 \& 110 \& 125 \& 120 \& 140 \& 120 \& 125 \& 150 \\\\\\hline\
-		 Interval \\, after \& 92 \& 65 \& 72 \& 94 \& 83 \& 94 \& 101 \& 87\
-		\\end{array}$$'+theDirections,
-	'\\item The table below lists the numbers of audience impressions\
-		(in hundreds of millions) listening to songs and the corresponding numbers of albums\
-		sold (in hundreds of thousands). The number of audience impressions is a count of the\
-		number of times people have heard the song. The table is based on data from USA Today. Test the claim that\
-		there is a linear correlation between the number of impressions and the number of albums sold.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
-		Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
-		\\end{array}$$'+theDirections,
-	'\\item Listed below are the budgets (in millions of dollars) and the\
-		gross receipts (in millions of dollars) for randomly selected movies (based on data\
-		from the Motion Picture Association of America). Test the claim that there is  a linear correlation\
-		between the money spent making the movie and the amount that it recovered in theaters.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90\\\\ \\hline\
-		Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
-		\\end{array}$$'+theDirections,
-	'\\item Listed below are the weights (in pounds) and the\
-		highway fuel consumption amounts (in mi gal) of randomly selected cars (Chrysler\
-		Sebring, Ford Mustang, BMW 3-Series, Ford Crown Victoria, Honda Civic, Mazda\
-		Protégé, Hyundai Accent). Test the claim that there is a linear correlation between weight and highway\
-		fuel consumption.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
-		Fuel \\, Consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
-		\\end{array}$$'+theDirections,
-	'\\item Listed below are the chest sizes (in inches) and weights\
-		(in pounds) of randomly selected bears that were anesthetized and measured (based\
-		on data from Gary Alt and Minitab, Inc.). Because it is much more difficult to weigh a\
-		bear than to measure its chest size, the presence of a correlation could lead to a\
-		method for estimating weight based on chest size. Test the claim that there is  a linear correlation between\
-		chest size and weight.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Chest \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
-		Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
-		\\end{array}$$'+theDirections,
-	'\\item Listed below are heights (in inches) and weights\
-		(in pounds) for supermodels Michelle Alves, Nadia Avermann, Paris Hilton, Kelly\
-		Dyer, Christy Turlington, Bridget Hall, Naomi Campbell, Valerie Mazza, and Kristy\
-		Hume. Test a claim that there is  a correlation between height and weight?\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Height (in) \& 70 \& 70.5 \& 68 \& 65 \& 70 \& 70 \& 70 \& 70 \& 71\\\\ \\hline\
-		Weight (lb) \& 117 \& 119 \& 105 \& 115 \& 119 \& 127 \& 113 \& 123 \& 115\
-		\\end{array}$$'+theDirections,
-	'\\item Fourteen different second-year medical students took\
-		blood pressure measurements of the same patient and the results are listed below (data\
-		provided by Marc Triola, MD). Test the claim that there is  a correlation between systolic and diastolic\
-		values.\
-		$$\\begin{array}{r|ccccccccccccccc}\
-		Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
-		Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
-		\\end{array}$$'+theDirections,
-	'\\item The table below lists the numbers of murders and the\
-		population sizes (in hundreds of thousands) for large cities in America during a recent\
-		year (based on data from the New York Times). Test the claim that there is a linear correlation between the population size and number of murders in a year.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
-		Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
-		\\end{array}$$'+theDirections,
-	'\\item When nicotine is absorbed by the body, cotinine is produced.\
-		A measurement of cotinine in the body is therefore a good indicator of how much a\
-		person smokes. Listed below are the reported numbers of cigarettes smoked per day\
-		and the measured amounts of cotinine (in ng mL). (The values are from randomly selected\
-		subjects in the National Health Examination Survey.) Test the claim that there is a linear correlation between the number of cigarettes smoked in a day and the amount of cotinine in the body.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		cigarettes \\, per \\, day \& 60 \& 10 \& 4 \& 15 \& 10 \& 1 \& 20 \& 8 \& 7 \& 10 \& 10 \& 20\\\\ \\hline\
-		cotinine \& 179 \& 283 \& 75.6 \& 174 \& 209 \& 9.51 \& 350 \& 1.85 \& 43.4 \& 25.1 \& 408 \& 344\
-		\\end{array}$$'+theDirections,
-	'\\item In ``The Effects of Temperature on Marathon Runner\'s\
-		Performance,\" by David Martin and John Buoncristiani (Chance, Vol. 12, No. 4),\
-		high temperatures and times (in minutes) were given for women who won the New\
-		York City marathon in recent years. Results are listed below. Test the claim that there is a linear correlation between the temperatures and the times.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		temperature \& 55 \& 61 \& 49 \& 62 \& 70 \& 73 \& 51 \& 57\\\\ \\hline\
-		time \& 145 \& 148 \& 148 \& 148 \& 147 \& 146 \& 144 \& 147\
-		\\end{array}$$'+theDirections,
-	'\\item Listed below are heights (in inches) of mothers and heights (in\
-		inches) of their daughters (based on data from the National Health Examination Survey). Test a claim that there is a linear correlation between the heights.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Mother \& 63 \& 67 \& 64 \& 60 \& 65 \& 67 \& 59 \& 60\\\\ \\hline\
-		Daughter \& 58.6 \& 64.7 \& 65.3 \& 61.0 \& 65.4 \& 67.4 \& 60.9 \& 63.1\
-		\\end{array}$$'+theDirections,
-	'\\item One classic application of correlation involves the association\
-		between the temperature and the number of times a cricket chirps in a minute.\
-		Listed below are the numbers of chirps in 1 min and the corresponding temperatures\
-		in degrees Fahrenheit (based on data from The Song of Insects by George W. Pierce,\
-		Harvard University Press). Test the claim that there is a linear correlation between the number of chirps in one minute and the temperature.\
-		$$\\begin{array}{r|ccccccccccccc}\
-		Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
-		Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
-		\\end{array}$$'+theDirections,
-	];
-theType++;
-theComp++;
-//-------------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------------------------------------
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+'A: Regression';
-theType=0;
-comps[theComp][theType]=[];
-nums[theComp][theType]=2;
-comps[theComp][theType]=[
-	'\\item A random sample of eight drivers insured with a company and having similar auto insurance policies was selected. The following table lists their driving experiences (in years) and monthly auto insurance premiums. After conducting a hypothesis test we conclude there is linear correlation between the variables. Predict the monthly auto insurance premium for a driver with 10 years of driving experience.\
-		$$\\begin{array}{r|c|c|c|c|c|c|c|c}Driving \\, Experience (years) \& 5 \& 2 \& 12 \& 9 \& 15 \& 6 \& 25 \& 16 \\\\ \\hline\
-		Monthly \\, Premium (\\$)\& 64\& 87\& 50\& 71\& 44\& 56\& 42\& 60\\end{array}$$',
-'\\item There is a linear correlation between song audiences impressions and album sales.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	number of albums sold for a song\
-	with 20 (hundred million) audience impressions. (In the table below, audience impressions\
-	are in hundreds of millions and the numbers of albums sold are in hundreds\
-	of thousands).\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Impressions \& 28 \& 13 \& 14 \& 24 \& 20 \& 18 \& 14 \& 24 \& 17 \\\\ \\hline\
-	Albums \\, sold \& 19 \& 7 \& 7 \& 20 \& 6 \& 4 \& 5 \& 25 \& 12\
-	\\end{array}$$',
-'\\item There is a linear correlation between movie budgets and gross income for the movie.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	gross amount for a movie with a\
-	budget of 40 million dollars. (In the table below, all amounts are in millions of dollars.)\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Budget \& 62 \& 90 \& 50 \& 35 \& 200 \& 100 \& 90 \\\\ \\hline\
-	Gross \& 65 \& 64 \& 48 \& 57 \& 601 \& 146 \& 47\
-	\\end{array}$$',
-'\\item There is a linear correlation between car weight and fuel consumption.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	highway fuel consumption\
-	amount (in mi/gal) for a car that weighs 3000 lb.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Weight \& 3175 \& 3450 \& 3225 \& 3985 \& 2440 \& 2500 \& 2290 \\\\ \\hline\
-	Fuel \\, consumption \& 27 \& 29 \& 27 \& 24 \& 37 \& 34 \& 37\
-	\\end{array}$$',
-'\\item There is a linear linear correlation between bear chest size and weight.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	weight (in pounds) of a bear with a chest size of 50 in.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Chest \\, size \& 26 \& 45 \& 54 \& 49 \& 35 \& 41 \& 41 \& 49 \& 38 \& 31 \\\\ \\hline\
-	Weight \& 80 \& 344 \& 416 \& 348 \& 166 \& 220 \& 262 \& 360 \& 204 \& 144\
-	\\end{array}$$',
-'\\item There is a linear correlation between diastolic and systolic blood pressure measurements.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	diastolic blood pressure for a person with a systolic reading of 140.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Systolic \& 138 \& 130 \& 135 \& 140 \& 120 \& 125 \& 120 \& 130 \& 130 \& 144 \& 143 \& 140 \& 130 \& 150 \\\\ \\hline\
-	Diastolic \& 82 \& 91 \& 100 \& 100 \& 80 \& 90 \& 80 \& 80 \& 80 \& 98 \& 105 \& 85 \& 70 \& 100\
-	\\end{array}$$',
-'\\item There is a linear correlation between the number of murders in a city and the population size of the city.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	population size for a city with 120 murders. (The population sizes are in hundreds of thousands.)\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Murders \& 258 \& 264 \& 402 \& 253 \& 111 \& 648 \& 288 \& 654 \& 256 \& 60 \& 590 \\\\ \\hline\
-	Population \& 4 \& 6 \& 9 \& 6 \& 3 \& 29 \& 15 \& 38 \& 20 \& 6 \& 81\
-	\\end{array}$$',
-'\\item There is a linear correlation between the temperature and the number of times that a cricket chirps in \
-	one minute.\
-	Use the data below to find the regression equation and use that equation to find the best predicted \
-	temperature for a time when a cricket is chirping at the rate of 1000 chirps per minute.\
-	$$\\begin{array}{r|cccccccccccccccccccc}\
-	Chirps \& 882 \& 1188 \& 1104 \& 864 \& 1200 \& 1032 \& 960 \& 900 \\\\ \\hline\
-	Temperature \& 69.7 \& 93.3 \& 84.3 \& 76.3 \& 88.6 \& 82.6 \& 71.6 \& 79.6\
-	\\end{array}$$',
-			];
 theType++;
 theComp++;
 //-------------------------------------------------------------------------------------------------------
