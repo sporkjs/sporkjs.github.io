@@ -40,9 +40,11 @@ div.imageTitle{
 }
 img.medium{
 	max-height: 400px;
+	max-width: 90%;
 }
 img.small{
 	max-height: 200px;
+	max-width: 90%;
 }
 div.imageCaption{
 	font-size: 15px;
