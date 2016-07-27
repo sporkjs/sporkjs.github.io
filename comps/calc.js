@@ -35,28 +35,6 @@ theComp++;
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-comps[theComp]=[];
-nums[theComp]=[];
-names[theComp]='Competency '+theComp+': 2.3 The Precise Definition of a Limit';
-//--------------------------------------------------------------------------------------------------
-theType=0;
-comps[theComp][theType]=[];
-nums[theComp][theType]=1;
-comps[theComp][theType]=[
-		'\\item Consider the function $f(x)=2x+3$. Then $\\lim_{x \\rightarrow 4}f(x)=11$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-4|<\\delta$ then $|f(x)-11|<\\epsilon$.',
-		'\\item Consider the function $f(x)=3x+4$. Then $\\lim_{x \\rightarrow 5}f(x)=19$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-5|<\\delta$ then $|f(x)-19|<\\epsilon$.',
-		'\\item Consider the function $f(x)=4x+5$. Then $\\lim_{x \\rightarrow 6}f(x)=29$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-6|<\\delta$ then $|f(x)-29|<\\epsilon$.',
-		'\\item Consider the function $f(x)=5x+6$. Then $\\lim_{x \\rightarrow 7}f(x)=41$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-7|<\\delta$ then $|f(x)-41|<\\epsilon$.',
-		'\\item Consider the function $f(x)=6x+7$. Then $\\lim_{x \\rightarrow 8}f(x)=55$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-8|<\\delta$ then $|f(x)-55|<\\epsilon$.',
-		'\\item Consider the function $f(x)=7x+8$. Then $\\lim_{x \\rightarrow 9}f(x)=71$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-9|<\\delta$ then $|f(x)-71|<\\epsilon$.',
-		'\\item Consider the function $f(x)=8x+9$. Then $\\lim_{x \\rightarrow 1}f(x)=17$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-1|<\\delta$ then $|f(x)-17|<\\epsilon$.',
-		'\\item Consider the function $f(x)=9x+1$. Then $\\lim_{x \\rightarrow 2}f(x)=19$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-2|<\\delta$ then $|f(x)-19|<\\epsilon$.',
-		'\\item Consider the function $f(x)= x+2$. Then $\\lim_{x \\rightarrow 3}f(x)=5$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-3|<\\delta$ then $|f(x)-5|<\\epsilon$.',
-];
-//--------------------------------------------------------------------------------------------------
-theComp++;
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -211,13 +189,14 @@ comps[theComp][theType]=[
 		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{\\sin(3x)}{x}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{\\sin(2x)}{3x}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{x}{\\sin(5x)}$',
+/*
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{x \\csc(2x)}{\\cos(5x)}$',
+*/		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{x \\csc(2x)}{\\cos(5x)}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{x+x\\cos(x)}{\\sin(x) \\cos(x)}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{x^2-x+\\sin(x)}{2x}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow 0} \\frac{\\sin(2x)}{\\sin(5x)}$',
@@ -257,13 +236,14 @@ comps[theComp][theType]=[
 		'\\item Find the limit: $\\lim_{x \\rightarrow -\\infty} \\frac{x^3+7x^2-2}{x^4-x+1}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow -\\infty} \\frac{3x^7+5x^2-1}{6x^8-7x+3}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow -\\infty} \\frac{5x^4-2x^3+9}{3+x-4x^5}$',
+/*
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{2x^2+3}{5x^2+7}$',
+*/		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{2x^2+3}{5x^2+7}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{2x^3+7}{x^3-x^2+x+7}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{x^2+1}{x^2+3}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{3x^2+7}{x^2-2}$',
@@ -283,13 +263,14 @@ comps[theComp][theType]=[
 		'\\item Find the limit: $\\lim_{x \\rightarrow -\\infty} \\frac{x^4+7x^2-2}{x^4-x+1}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow -\\infty} \\frac{3x^8+5x^2-1}{6x^8-7x+3}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow -\\infty} \\frac{5x^5-2x^3+9}{3+x-4x^5}$',
+/*
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{2x^3+3}{5x^2+7}$',
+*/		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{2x^3+3}{5x^2+7}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{2x^4+7}{x^3-x^2+x+7}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{x^3+1}{x^2+3}$',
 		'\\item Find the limit: $\\lim_{x \\rightarrow \\infty} \\frac{3x^4+7}{x^2-2}$',
@@ -385,37 +366,58 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find all vertical asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x+2}{x+3}$',
-		'\\item Find all vertical asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{2-x}{(x-1)^2}$',
-		'\\item Find all vertical asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x-1}{x^2(x+2)}$',
-		'\\item Find all vertical asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x^2-2x}{x^2-4x+4}$',
-		'\\item Find all vertical asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x^2-2x-8}{x^2-5x+6}$',
+		'\\item Find all vertical asymptotes of this function.  $f(x)=\\frac{x+2}{x+3}$',
+		'\\item Find all vertical asymptotes of this function.  $f(x)=\\frac{2-x}{(x-1)^2}$',
+		'\\item Find all vertical asymptotes of this function.  $f(x)=\\frac{x-1}{x^2(x+2)}$',
+		'\\item Find all vertical asymptotes of this function.  $f(x)=\\frac{x^2-2x}{x^2-4x+4}$',
+		'\\item Find all vertical asymptotes of this function.  $f(x)=\\frac{x^2-2x-8}{x^2-5x+6}$',
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{2\\sqrt{x}+x^{-1}}{3x-7}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{2+\\sqrt{x}}{2-\\sqrt{x}}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{\\sqrt[3]{x}-\\sqrt[5]{x}}{\\sqrt[3]{x}+\\sqrt[5]{x}}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{\\sqrt{x^2+1}}{x+1}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{\\sqrt{2x^2+1}}{7x+1}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{\\sqrt{3x^2+1}}{1-2x}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{\\sqrt{4x^2+1}}{1-3x}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{\\sqrt{5x^2+1}}{6x+1}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x-3}{\\sqrt{4x^2+25}}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{4-3x^3}{\\sqrt{x^6+9}}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x^3-2}{|x|^3+1}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{3x^3-2}{2|x|^3+1}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{x-1}{|2x+1|}$',
-		'\\item Find all horizontal asymptotes of this function. Your answer must be supported by limits. $f(x)=\\frac{3x+5}{|x|+2}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{2\\sqrt{x}+x^{-1}}{3x-7}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{2+\\sqrt{x}}{2-\\sqrt{x}}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{\\sqrt[3]{x}-\\sqrt[5]{x}}{\\sqrt[3]{x}+\\sqrt[5]{x}}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{\\sqrt{x^2+1}}{x+1}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{\\sqrt{2x^2+1}}{7x+1}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{\\sqrt{3x^2+1}}{1-2x}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{\\sqrt{4x^2+1}}{1-3x}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{\\sqrt{5x^2+1}}{6x+1}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{x-3}{\\sqrt{4x^2+25}}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{4-3x^3}{\\sqrt{x^6+9}}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{x^3-2}{|x|^3+1}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{3x^3-2}{2|x|^3+1}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{x-1}{|2x+1|}$',
+		'\\item Find all horizontal asymptotes of this function.  $f(x)=\\frac{3x+5}{|x|+2}$',
 ];
 //--------------------------------------------------------------------------------------------------
 theComp++;
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+comps[theComp]=[];
+nums[theComp]=[];
+names[theComp]='Competency '+theComp+': 2.3 The Precise Definition of a Limit';
+//--------------------------------------------------------------------------------------------------
+theType=0;
+comps[theComp][theType]=[];
+nums[theComp][theType]=1;
+comps[theComp][theType]=[
+		'\\item Consider the function $f(x)=2x+3$. Then $\\lim_{x \\rightarrow 4}f(x)=11$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-4|<\\delta$ then $|f(x)-11|<\\epsilon$.',
+		'\\item Consider the function $f(x)=3x+4$. Then $\\lim_{x \\rightarrow 5}f(x)=19$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-5|<\\delta$ then $|f(x)-19|<\\epsilon$.',
+		'\\item Consider the function $f(x)=4x+5$. Then $\\lim_{x \\rightarrow 6}f(x)=29$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-6|<\\delta$ then $|f(x)-29|<\\epsilon$.',
+		'\\item Consider the function $f(x)=5x+6$. Then $\\lim_{x \\rightarrow 7}f(x)=41$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-7|<\\delta$ then $|f(x)-41|<\\epsilon$.',
+		'\\item Consider the function $f(x)=6x+7$. Then $\\lim_{x \\rightarrow 8}f(x)=55$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-8|<\\delta$ then $|f(x)-55|<\\epsilon$.',
+		'\\item Consider the function $f(x)=7x+8$. Then $\\lim_{x \\rightarrow 9}f(x)=71$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-9|<\\delta$ then $|f(x)-71|<\\epsilon$.',
+		'\\item Consider the function $f(x)=8x+9$. Then $\\lim_{x \\rightarrow 1}f(x)=17$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-1|<\\delta$ then $|f(x)-17|<\\epsilon$.',
+		'\\item Consider the function $f(x)=9x+1$. Then $\\lim_{x \\rightarrow 2}f(x)=19$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-2|<\\delta$ then $|f(x)-19|<\\epsilon$.',
+		'\\item Consider the function $f(x)= x+2$. Then $\\lim_{x \\rightarrow 3}f(x)=5$. Suppose that $\\epsilon=0.01$. Find $\\delta>0$ so that if $0<|x-3|<\\delta$ then $|f(x)-5|<\\epsilon$.',
+];
+//--------------------------------------------------------------------------------------------------
+theComp++;
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 comps[theComp]=[];
@@ -426,16 +428,16 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\frac{x^2-x-2}{x-2}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\begin{cases} \\frac{1}{x^2} & x \\neq 0 \\\\ 1 & x= 0\\end{cases}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\begin{cases} \\frac{x^2-x-2}{x-2} & x \\neq 2 \\\\ 1 & x=2 \\end{cases}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\frac{x^2+2x+1}{x^2-1}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\frac{x^2-1}{|x-1|}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\frac{|x^2-4|}{x+2}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\frac{x^2-5x+6}{x^2-4x+4}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\begin{cases} x+1 & x \\leq 1 \\\\ \\frac{1}{x} & 1 < x<3 \\\\ \\sqrt{x-3} & 3 \\leq x\\end{cases}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\begin{cases} 1+x^2 & x \\leq 0 \\\\ 2-x & 0 < x \\leq 2 \\\\ (x-2)^2 & 2 < x \\end{cases}$',
-		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable. You must support your answers with limits. $f(x)=\\begin{cases} x+2 & x<0 \\\\ 2x^2 & 0 \\leq x \\leq 1 \\\\ 2-x & 1 < x \\end{cases}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\frac{x^2-x-2}{x-2}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\begin{cases} \\frac{1}{x^2} & x \\neq 0 \\\\ 1 & x= 0\\end{cases}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\begin{cases} \\frac{x^2-x-2}{x-2} & x \\neq 2 \\\\ 1 & x=2 \\end{cases}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\frac{x^2+2x+1}{x^2-1}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\frac{x^2-1}{|x-1|}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\frac{|x^2-4|}{x+2}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\frac{x^2-5x+6}{x^2-4x+4}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\begin{cases} x+1 & x \\leq 1 \\\\ \\frac{1}{x} & 1 < x<3 \\\\ \\sqrt{x-3} & 3 \\leq x\\end{cases}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\begin{cases} 1+x^2 & x \\leq 0 \\\\ 2-x & 0 < x \\leq 2 \\\\ (x-2)^2 & 2 < x \\end{cases}$',
+		'\\item Find all points of discontinuity of this function. Label each as jump, infinite, or removable.  $f(x)=\\begin{cases} x+2 & x<0 \\\\ 2x^2 & 0 \\leq x \\leq 1 \\\\ 2-x & 1 < x \\end{cases}$',
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
@@ -472,7 +474,16 @@ comps[theComp][theType]=[
 		\\end{cases}$$'
 		];
 //--------------------------------------------------------------------------------------------------
-theType++;
+theComp++;
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+comps[theComp]=[];
+nums[theComp]=[];
+names[theComp]='Competency '+theComp+': 2.5b Intermediate Value Theorem';
+//--------------------------------------------------------------------------------------------------
+theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
@@ -489,6 +500,8 @@ comps[theComp][theType]=[
 //--------------------------------------------------------------------------------------------------
 theComp++;
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 
@@ -511,6 +524,7 @@ comps[theComp][theType]=[
 		'\\item Use the definition to find the derivative of $f(x)=5x-3x^2$ at the point $(1,2)$.',
 ];
 //--------------------------------------------------------------------------------------------------
+/*
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -524,6 +538,7 @@ comps[theComp][theType]=[
 		'\\item Use the definition of the derivative to show that if $f(x)$ is differentiable, if $k$ is a constant, and if $J(x)=k \\cdot f(x)$ then $J\'(x)=k \\cdot f\'(x)$.',
 		'\\item Use the definition of the derivative to show that if $f(x)=mx+b$ then $f\'(x)=m$. ',
 ];
+*/
 //--------------------------------------------------------------------------------------------------
 //theType++;
 //comps[theComp][theType]=[];
@@ -634,6 +649,7 @@ comps[theComp][theType]=[
 		'\\item Find an equation of the line tangent to the graph of $y=6x^3+2x^2+4x$ at the point where $x=2$.',
 ];
 //--------------------------------------------------------------------------------------------------
+/*
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -650,6 +666,7 @@ comps[theComp][theType]=[
 		'\\item Find the $x$ values of all points on the graph of $y=2x^3-6x^2+6x+1$ where the tangent line is horizontal.',
 		'\\item Find the $x$ values of all points on the graph of $y=2x^3-18x^2+54x-9$ where the tangent line is horizontal.',
 ];
+*/
 //--------------------------------------------------------------------------------------------------
 theComp++;
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -665,15 +682,15 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-	'\\item Consider the position function $s(t)=t^3-3t+2$ for $0 \\leq t \\leq 2$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=t^3-12t+5$ for $0 \\leq t \\leq 3$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=t^3-27t+13$ for $0 \\leq t \\leq 4$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=t^3-3t+5$ for $0 \\leq t \\leq 2$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=6t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction?  \\end{enumerate}',
-	'\\item Consider the position function $s(t)=2t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=4t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=6t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction? \\end{enumerate}',
-	'\\item Consider the position function $s(t)=8t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. When, if ever, does the body change direction?	 \\end{enumerate}			',
+	'\\item Consider the position function $s(t)=t^3-3t+2$ for $0 \\leq t \\leq 2$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=t^3-12t+5$ for $0 \\leq t \\leq 3$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=t^3-27t+13$ for $0 \\leq t \\leq 4$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=t^3-3t+5$ for $0 \\leq t \\leq 2$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=6t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.   \\end{enumerate}',
+	'\\item Consider the position function $s(t)=2t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=4t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=6t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval.  \\end{enumerate}',
+	'\\item Consider the position function $s(t)=8t-t^2$ for $0 \\leq t \\leq 6$ of a body moving on a number line with $t$ measured in seconds and $s$ measured in meters. \\begin{enumerate} \\item Find the body\'s displacement and average velocity on the time interval. \\item Find the body\'s velocity and acceleration at the end of the time interval. 	 \\end{enumerate}			',
 ];
 //--------------------------------------------------------------------------------------------------
 theComp++;
@@ -716,13 +733,14 @@ comps[theComp][theType]=[
 		'\\item Find the derivative of $f(x)=x^2 \\csc(x)$.',
 		'\\item Find the derivative of $f(x)=x^2 \\tan(x)$.',
 		'\\item Find the derivative of $f(x)=x^2 \\cot(x)$.',
+/*
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the derivative of $f(x)=\\frac{2x+7}{\\sin(x)+2x}$.',
+*/		'\\item Find the derivative of $f(x)=\\frac{2x+7}{\\sin(x)+2x}$.',
 		'\\item Find the derivative of $f(x)=\\frac{3x+6}{\\cos(x)+4x}$.',
 		'\\item Find the derivative of $f(x)=\\frac{4x+5}{\\csc(x)+6x}$.',
 		'\\item Find the derivative of $f(x)=\\frac{5x+4}{\\sec(x)+8x}$.',
@@ -817,13 +835,14 @@ comps[theComp][theType]=[
 		'\\item Find the derivative of $f(x)=\\cot(x) \\sqrt{x^2+1}$',
 		'\\item Find the derivative of $f(x)=\\sec(x) \\sqrt{x^2+1}$',
 		'\\item Find the derivative of $f(x)=\\csc(x) \\sqrt{x^2+1}$',
+/*
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the derivative of $f(x)=\\frac{x^2}{ \\sin(2x+8)}$',
+*/		'\\item Find the derivative of $f(x)=\\frac{x^2}{ \\sin(2x+8)}$',
 		'\\item Find the derivative of $f(x)=\\frac{x^2 }{\\cos(3x+7)}$',
 		'\\item Find the derivative of $f(x)=\\frac{x^2}{ \\tan(4x+6)}$',
 		'\\item Find the derivative of $f(x)=\\frac{x^2}{ \\cot(5x+5)}$',
@@ -854,6 +873,7 @@ nums[theComp]=[];
 names[theComp]='Competency '+theComp+': 3.7 Implicit Differentiation';
 //--------------------------------------------------------------------------------------------------
 theType=0;
+/*
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
@@ -872,15 +892,16 @@ comps[theComp][theType]=[
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
+*/
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the lines that are tangent and normal to the graph of $x^2+xy-y^2=1$ at the point $(2,3)$.',
-		'\\item Find the lines that are tangent and normal to the graph of $x^2+y^2=25$ at the point $(3,-4)$.',
-		'\\item Find the lines that are tangent and normal to the graph of $x^2y^2=9$ at the point $(-1,3)$.',
-		'\\item Find the lines that are tangent and normal to the graph of $y^2-2x-4y-1=0$ at the point $(-2,1)$.',
-		'\\item Find the lines that are tangent and normal to the graph of $6x^2+3xy+2y^2+17y-6=0$ at the point $(-1,0)$.',
-		'\\item Find the lines that are tangent and normal to the graph of $x^2-xy\\sqrt{3}+2y^2=5$ at the point $(\\sqrt{3},2)$.',
+		'\\item Find equations of the lines that are tangent and normal to the graph of $x^2+xy-y^2=1$ at the point $(2,3)$.',
+		'\\item Find equations of the lines that are tangent and normal to the graph of $x^2+y^2=25$ at the point $(3,-4)$.',
+		'\\item Find equations of the lines that are tangent and normal to the graph of $x^2y^2=9$ at the point $(-1,3)$.',
+		'\\item Find equations of the lines that are tangent and normal to the graph of $y^2-2x-4y-1=0$ at the point $(-2,1)$.',
+		'\\item Find equations of the lines that are tangent and normal to the graph of $6x^2+3xy+2y^2+17y-6=0$ at the point $(-1,0)$.',
+		'\\item Find equations of the lines that are tangent and normal to the graph of $x^2-xy\\sqrt{3}+2y^2=5$ at the point $(\\sqrt{3},2)$.',
 ];
 //--------------------------------------------------------------------------------------------------
 theComp++;
@@ -1002,20 +1023,21 @@ theType=0;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=5-12x+3x^2$ guaranteed by the Mean Value theorem on the interval $[1,3]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=x^3-x^2-6x+2$ guaranteed by the Mean Value theorem on the interval $[0,3]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=\\sqrt{x}-\\frac{x}{3}$ guaranteed by the Mean Value theorem on the interval $[0,9]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=2x^2-3x+1$ guaranteed by the Mean Value theorem on the interval $[0,2]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=x^3-3x+2$ guaranteed by the Mean Value theorem on the interval $[-2,2]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=\\sqrt[3]{x}$ guaranteed by the Mean Value theorem on the interval $[0,1]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=\\frac{1}{x}$ guaranteed by the Mean Value theorem on the interval $[1,3]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=\\sqrt{x}$ guaranteed by the Mean Value theorem on the interval $[0,4]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=x^3-2x$ guaranteed by the Mean Value theorem on the interval $[-2,2]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=x^2+2x-1$ guaranteed by the Mean Value theorem on the interval $[0,1]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=x^{2/3}$ guaranteed by the Mean Value theorem on the interval $[0,1]$.',
-		'\\item Find the $x$-coordinates of the points on the graph of $f(x)=x+\\frac{1}{x}$ guaranteed by the Mean Value theorem on the interval $\\left[ \\frac{1}{2}, 2\\right]$.',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=5-12x+3x^2$  on the interval $[1,3]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=x^3-x^2-6x+2$  on the interval $[0,3]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=\\sqrt{x}-\\frac{x}{3}$  on the interval $[0,9]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=2x^2-3x+1$  on the interval $[0,2]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=x^3-3x+2$  on the interval $[-2,2]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=\\sqrt[3]{x}$  on the interval $[0,1]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=\\frac{1}{x}$  on the interval $[1,3]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=\\sqrt{x}$  on the interval $[0,4]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=x^3-2x$  on the interval $[-2,2]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=x^2+2x-1$  on the interval $[0,1]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=x^{2/3}$  on the interval $[0,1]$?',
+		'\\item What does the Mean Value Theorem guarantee about  $f(x)=x+\\frac{1}{x}$  on the interval $\\left[ \\frac{1}{2}, 2\\right]$?',
 ];
 //--------------------------------------------------------------------------------------------------
+/*
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -1026,6 +1048,7 @@ comps[theComp][theType]=[
 		'\\item Prove that the equation $x^3+\\frac{4}{x^2}+7=0$ has exactly one real solution in the interval $(-\\infty,0)$.',
 		'\\item Prove that the equation $2x-\\cos^2(x)+\\sqrt{2}=0$ has exactly one real solution.',
 ];
+*/
 //--------------------------------------------------------------------------------------------------
 theComp++;
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1084,7 +1107,7 @@ theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Use the first derivative to analyze the function $f(x)=sin(x)-\\cos(x)$ on the interval $[0,2\\pi]$.',
+		'\\item Use the first derivative to analyze the function $f(x)=\sin(x)-\\cos(x)$ on the interval $[0,2\\pi]$.',
 		'\\item Use the first derivative to analyze the function $f(x)=\\sqrt{3} \\cos(x) + \\sin(x)$ on the interval $[0, 2 \\pi]$.',
 		'\\item Use the first derivative to analyze the function $f(x)=\\tan(x)-2x$ on the interval $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2} \\right)$.',
 		'\\item Use the first derivative to analyze the function $f(x)=2\\cos(x)+\\cos^2(x)$ on the interval $[-\\pi,\\pi]$.',
@@ -1284,6 +1307,7 @@ comps[theComp][theType]=[
 		'\\item Solve the initial value problem: $f\'(x)=\\frac{1}{2}\\sec(x) \\tan(x)$ and $f(0)=1$',
 ];
 //--------------------------------------------------------------------------------------------------
+/*
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -1297,6 +1321,7 @@ comps[theComp][theType]=[
 		'\\item An object moving along a number line begins at rest at 2. Its acceleration $t$ seconds after it begins moving is given by $a(t)=t^4 -\\frac{1}{t^4}$ meters per second squared. What is the displacement of the object from $t=1$ to $t=2$ seconds?',
 		'\\item An object moving along a number line begins at rest at 3. Its acceleration $t$ seconds after it begins moving is given by $a(t)=10$ meters per second squared. What is the displacement of the object from $t=1$ to $t=2$ seconds?		',
 ];
+*/
 //--------------------------------------------------------------------------------------------------
 theComp++;
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1388,13 +1413,14 @@ comps[theComp][theType]=[
 		'\\item Find the derivative of $F(x)=\\int_{0}^{x} \\frac{1}{\\sqrt{1+t^2}}dt$',
 		'\\item Find the derivative of $F(x)=\\int_{0}^{x} \\frac{1}{1+\\sin^2(t)}dt$',
 		'\\item Find the derivative of $F(x)=\\int_{0}^{x} \\frac{1}{1+\\cos^2(t)}dt$',
+/*
 ];
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
 comps[theComp][theType]=[
-		'\\item Find the derivative of $F(x)=\\int_{x}^{0} \\frac{1}{1+t}dt$',
+*/		'\\item Find the derivative of $F(x)=\\int_{x}^{0} \\frac{1}{1+t}dt$',
 		'\\item Find the derivative of $F(x)=\\int_{x}^{0} \\sin^2(t) dt$',
 		'\\item Find the derivative of $F(x)=\\int_{x}^{0} \\frac{t}{1+t^2}dt$',
 		'\\item Find the derivative of $F(x)=\\int_{x}^{0} \\cos^2(t)dt$',
@@ -1406,6 +1432,7 @@ comps[theComp][theType]=[
 		'\\item Find the derivative of $F(x)=\\int_{x}^{0} \\frac{1}{1+\\cos^2(t)}dt$',
 ];
 //--------------------------------------------------------------------------------------------------
+/*
 theType++;
 comps[theComp][theType]=[];
 nums[theComp][theType]=1;
@@ -1421,6 +1448,7 @@ comps[theComp][theType]=[
 		'\\item Find the derivative of $F(x)=\\int_{0}^{1+x^2} \\frac{1}{1+\\sin^2(t)}dt$',
 		'\\item Find the derivative of $F(x)=\\int_{0}^{1-x^2} \\frac{1}{1+\\cos^2(t)}dt$',
 ];
+*/
 //--------------------------------------------------------------------------------------------------
 theType++;
 comps[theComp][theType]=[];
