@@ -13,7 +13,11 @@
 	font-weight: bold;
 }
 #content{
-	position: relative;
+	position: fixed;
+	bottom: 0px;
+	top:60px;
+	left:0px;
+	right:0px;
 }
 .nameDiv{
 	font-size: 24px;
@@ -23,10 +27,26 @@
 	margin-left:12px;
 	margin-bottom: 12px;
 }
+.photo{
+	max-width: 90%;
+}
 #infoDiv{
 	padding-left: 24px;
-	display: inline-block;
-	width: 20%;
+	width: 24%;
+	position:absolute;
+	right:0%;
+	top:0px;
+	bottom:0px;
+	overflow: auto;
+}
+#mapDiv{
+	width:75%;
+	position:absolute;
+	left:0px;
+	right:25%;
+	top:0px;
+	bottom:0px;
+	overflow: hidden;
 }
 </style>
 <script src='spork.js'></script>
@@ -90,6 +110,8 @@ function showInfo(){
 			h=graduates[i];
 			s+="<div class='nameDiv'>"+h.firstName+' '+h.lastName+"</div>";
 			s+="<div class='info'>"+h.year+"<br>";
+			if (h.picture != "")
+				s+="<img class='photo' src='png/"+h.picture+"'><br>";
 			s+=h.job+"<br>";
 			s+=h.employer+"<br>";
 			s+=h.city+", "+h.state+"<br>";
@@ -129,7 +151,9 @@ function draw(){
 <body>
 <div id='titleDiv'>Recent CUNE Math Graduates</div>
 <div id='content'>
-<div id='spork'></div>
+<div id='mapDiv'>
+	<div id='spork'></div>
+</div>	
 <div id='infoDiv'></div>
 </div>
 <img id='theMap' class='hidden' src='png/map.png'>
