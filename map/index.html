@@ -5,6 +5,10 @@
 .hidden{
 	display: none;
 }
+canvas{
+	background: url('png/map.png');
+	background-size: cover;
+}
 #spork{
 	float: left;
 }	
@@ -104,6 +108,7 @@ function showInfo(){
 	var i;
 	var h;
 	var s="";
+	clear();
 	drawIt();	
 	for (i=0;i<N;i++)
 		if (distanceTo(i) < 10){
@@ -138,7 +143,7 @@ function setup(){
 	}
 function drawIt(){
 	var i;
-	drawImage(theMap, width/2,height/2,width,height);
+//	drawImage(theMap, width/2,height/2,width,height);
 	for (i=0;i<N;i++){
 		showLocation(graduates[i].mapX, graduates[i].mapY);
 		}
