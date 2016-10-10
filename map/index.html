@@ -1,1 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.hidden{
+	display: none;
+}
+#spork{
+	float: left;
+}	
+#titleDiv{
+	font-size: 48px;
+	font-weight: bold;
+}
+#content{
+	position: relative;
+}
+.nameDiv{
+	font-size: 24px;
+	font-weight: bold;
+}
+.info{
+	margin-left:12px;
+	margin-bottom: 12px;
+}
+#infoDiv{
+	padding-left: 24px;
+	display: inline-block;
+	width: 20%;
+}
+</style>
+<script src='spork.js'></script>
+<script src='graduates.js'></script>
+<script>
+var N=graduates.length;
+var selected=-1;
 
+var cornerX=485;
+var cornerY=508;
+var cornerLAT=36.9988746;
+var cornerLONG=-109.0444764;
+
+var neX=686;
+var neY=397;
+var neLAT=40.003097;
+var neLONG=-102.051759;
+
+function MAPX(latitude, longitude){
+	var x= xM*(longitude-neLONG)+neX;
+	return(x);
+	}
+function MAPY(latitude, longitude){
+	var y= yM*(latitude-neLAT)+neY;
+	return(y);
+	}	
+function setupMapCoords(){
+	var i;
+	for (i=0;i<N;i++){
+		graduates[i].mapX=MAPX(graduates[i].latitude,graduates[i].longitude);
+		graduates[i].mapY=MAPY(graduates[i].latitude,graduates[i].longitude);
+	}
+}
+function distanceTo(i){
+	var dx=mouseX-graduates[i].mapX;
+	var dy=mouseY-graduates[i].mapY;
+	return(sqrt(dx*dx+dy*dy));
+}
+function showLocation(x,y){
+	save();
+	color('red');
+	fillcolor('red');
+	circle(x,y,3);
+	fill();
+	restore();
+}
+function highlightLocation(x,y){
+	save();
+	color('green');
+	linewidth(2);
+	circle(x,y,5);
+	restore();
+}
+function showInfo(){
+	var i;
+	var h;
+	var s="";
+	drawIt();	
+	for (i=0;i<N;i++)
+		if (distanceTo(i) < 10){
+			h=graduates[i];
+			s+="<div class='nameDiv'>"+h.firstName+' '+h.lastName+"</div>";
+			s+="<div class='info'>"+h.year+"<br>";
+			s+=h.job+"<br>";
+			s+=h.employer+"<br>";
+			s+=h.city+", "+h.state+"<br>";
+			s+="</div>";
+			highlightLocation(h.mapX,h.mapY);
+		}
+	infoDiv.innerHTML=s;	
+}
+function onclick(){
+	showInfo();
+}
+function setup(){
+	var wWidth=window.innerWidth;
+	size(0.75*wWidth, 0.75*wWidth*theMap.height/theMap.width);
+	var s=width/theMap.width;
+	neX*=s;
+	neY*=s;
+	cornerX*=s;
+	cornerY*=s;
+	xM=(neX-cornerX)/(neLONG-cornerLONG);
+	yM=(neY-cornerY)/(neLAT-cornerLAT);
+	setupMapCoords();
+	drawIt();
+	}
+function drawIt(){
+	var i;
+	drawImage(theMap, width/2,height/2,width,height);
+	for (i=0;i<N;i++){
+		showLocation(graduates[i].mapX, graduates[i].mapY);
+		}
+}
+function draw(){
+
+}
+</script>
+</head>
+<body>
+<div id='titleDiv'>Recent CUNE Math Graduates</div>
+<div id='content'>
+<div id='spork'></div>
+<div id='infoDiv'></div>
+</div>
+<img id='theMap' class='hidden' src='png/map.png'>
+</body>
+</html>
