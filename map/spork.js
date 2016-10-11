@@ -360,9 +360,11 @@ var mouseY;
 var mouseDown=false;
 
 function getCoords(e) {
-	var brect=theCanvasHandle.getBoundingClientRect();
-	mouseX=e.clientX-brect.left;
-	mouseY=e.clientY-brect.top;
+	if (e){
+		var brect=theCanvasHandle.getBoundingClientRect();
+		mouseX=e.clientX-brect.left;
+		mouseY=e.clientY-brect.top;
+	}	
 }
 function onmousedown(){}
 function mouseDownFunction(e){
