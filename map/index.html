@@ -120,8 +120,8 @@ function showInfo(){
 	for (i=0;i<N;i++)
 		if (distanceTo(i) < 5){
 			h=graduates[i];
-			s+="<div class='nameDiv'>"+h.firstName+' '+h.lastName+"</div>";
-			s+="<div class='info'>"+h.year+"<br>";
+			s+="<div class='nameDiv'>"+h.firstName+' '+h.lastName+" - "+h.year+"</div>";
+			s+="<div class='info'>";//+h.year+"<br>";
 			if (h.picture != "")
 				s+="<img class='photo' src='png/"+h.picture+"'><br>";
 			s+=h.job+"<br>";
