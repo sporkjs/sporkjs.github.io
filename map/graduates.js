@@ -1,8 +1,7 @@
-var graduates =[	
-
+var graduates=[
 {firstName: 'Mark', lastName: 'Anderson', year: '2016', job: '', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
 {firstName: 'Adam', lastName: 'Aschenbrenner', year: '2016', job: 'Teacher', employer: 'Lincoln Southwest', blurb: '', city: 'Lincoln', state: 'NE', latitude: 40.81, longitude: -96.68, picture: ''},
-{firstName: 'Matthew', lastName: 'Chapa', year: '2016', job: 'Teacher', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
+{firstName: 'Matthew', lastName: 'Chapa', year: '2016', job: 'Teacher', employer: '', blurb: '', city: 'Merrill', state: 'WI', latitude: 45.18, longitude: -89.7, picture: ''},
 {firstName: 'Michael', lastName: 'Grau', year: '2016', job: 'Graduate Student in Mechanical Engineering', employer: 'NYU Tandon School of Engineering', blurb: '', city: 'Brooklyn', state: 'NY', latitude: 40.64, longitude: -73.94, picture: ''},
 {firstName: 'Madison', lastName: 'Hawkins', year: '2016', job: 'Teacher', employer: 'Prince of Peace', blurb: '', city: 'Fremont', state: 'CA', latitude: 37.56, longitude: -121.98, picture: ''},
 {firstName: 'Mary', lastName: 'Hietala', year: '2016', job: 'X', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
@@ -49,11 +48,12 @@ var graduates =[
 
 {firstName: 'Sarah', lastName: 'Mack', year: '2014', job: 'Teacher', employer: 'Central City High School', blurb: '', city: 'Central City', state: 'NE', latitude: 41.11, longitude: -98, picture: ''},
 {firstName: 'Nathanael', lastName: 'Pfeil', year: '2014', job: 'X', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
-{firstName: 'Jon', lastName: 'Richters', year: '2014', job: '', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
+{firstName: 'Jon', lastName: 'Richters', year: '2014', job: 'Corporate Programmer', employer: 'Future Foam Inc.', blurb: '', city: 'Council Bluffs', state: 'IA', latitude: 41.24, longitude: -95.85, picture: ''},
+
 {firstName: 'Ethan', lastName: 'Utecht', year: '2014', job: 'X', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
 {firstName: 'Angela', lastName: 'Bruhn', year: '2013', job: 'Teacher', employer: 'Lyons-Decatur Northeast High School', blurb: '', city: 'Lyons', state: 'NE', latitude: 41.93, longitude: -96.47, picture: ''},
 {firstName: 'Preston', lastName: 'Doerr', year: '2013', job: '', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
-{firstName: 'Eric', lastName: 'Fox', year: '2013', job: 'X', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
+{firstName: 'Eric', lastName: 'Fox', year: '2013', job: 'Investigator in medical device and food commodoties', employer: 'Food and Drug Administration', blurb: '', city: 'Omaha', state: 'NE', latitude: 41.26, longitude: -96.01, picture: ''},
 {firstName: 'Daniel', lastName: 'Geu', year: '2013', job: '', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
 {firstName: 'Daniel', lastName: 'Gibson', year: '2013', job: 'Teacher', employer: 'Lutheran School Association', blurb: '', city: 'Decatur', state: 'IL', latitude: 39.85, longitude: -88.93, picture: 'dangibson.jpg'},
 
@@ -204,6 +204,4 @@ var graduates =[
 {firstName: 'Leah', lastName: 'Steinbronn', year: '2005', job: '', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
 {firstName: 'Darin', lastName: 'Suckstorf', year: '2005', job: 'X', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
 {firstName: 'Lydia', lastName: 'Tirrel', year: '2005', job: 'X', employer: '', blurb: '', city: '', state: '', latitude: 0, longitude: 0, picture: ''},
-
-
 ];
