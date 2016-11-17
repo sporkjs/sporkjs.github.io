@@ -8,10 +8,9 @@
 		text-decoration: underline;
 	}
 </style>
-
 <link rel="stylesheet" href="cm.css">
-<link rel="stylesheet" href="allThemes.css">
 
+<style> .CodeMirror{font-size:25px} </style>
 <script src="cmSporkEditor.js"></script>
 
 <link rel="stylesheet" type="text/css" href="quick.css">
@@ -25,70 +24,11 @@
 <script>showHeader();</script>
 
 <div id='buttonDiv'> Code Name:<input type='text' id='name' value='draft'> <button onclick='saveCode();'>Save</button>  <button onclick='loadCode();'>Load</button>  <button onclick='toim();'>Get Image</button> <button onclick='stoploop();'>Stop</button> <button onclick='startloop();'>Start</button> <button onclick='runCode();'>go</button></div>
-<div>
 <div id='cmDiv'><textarea id="code" name="code"></textarea></div> <div id='spork'></div>
-</div>
+
 <div id='loadDiv' class='popup'></div>
 <div id='imgDiv' class='popup'><button onclick='imgDiv.style.display="none";'>Close</button><center><img id='theImage' src='dot.png' style='border:1px solid black;background:white;'></center>Right-click on the image to save.</div>
 <br>
-<select onchange='editor.replaceSelection(cheats[this.value]);'>
-<option>cheats</option>
-<option>arc</option>
-<option>background</option>
-<option>circle</option>
-<option>clear</option>
-<option>color</option>
-<option>ellipse</option>
-<option>fill</option>
-<option>fillcolor</option>
-<option>line</option>
-<option>linewidth</option>
-<option>point</option>
-<option>quad</option>
-<option>rect</option>
-<option>restore</option>
-<option>rotate</option>
-<option>save</option>
-<option>scale</option>
-<option>size</option>
-<option>translate</option>
-<option>triangle</option>
-<option>alert</option>
-<option>braces</option>
-<option>comment</option>
-<option>date</option>
-<option>day</option>
-<option>draw</option>
-<option>filltext</option>
-<option>font</option>
-<option>for</option>
-<option>function</option>
-<option>height</option>
-<option>hour</option>
-<option>if</option>
-<option>if...else</option>
-<option>loop</option>
-<option>minute</option>
-<option>month</option>
-<option>mouseDown</option>
-<option>onclick</option>
-<option>onmousedown</option>
-<option>onmousemove</option>
-<option>onmouseout</option>
-<option>onmouseover</option>
-<option>onmouseup</option>
-<option>prompt</option>
-<option>second</option>
-<option>setup</option>
-<option>startloop</option>
-<option>stoploop</option>
-<option>stroketext</option>
-<option>timestep</option>
-<option>var</option>
-<option>while</option>
-<option>width</option>
-<option>year</option>
-</select>
 <select onchange="selectTheme()" id='themeSelect'>
     <option>default</option>
     <option>3024-day</option>
@@ -121,6 +61,8 @@
     <option>xq-dark</option>
     <option>xq-light</option>
 </select>
+
+
 <script>
        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
       mode: {name: "javascript", globalVars: true},
@@ -136,11 +78,10 @@
 	  var input = document.getElementById("themeSelect");
      var theme = input.options[input.selectedIndex].innerHTML;
     editor.setOption("theme", theme);
-  }
-
-
+  }	
 </script>
 
 <script>showFooter();</script>
+
 </body>
  </html>

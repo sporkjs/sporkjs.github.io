@@ -1,0 +1,92 @@
+div.example {position:relative; width: 90%; background-image:linear-gradient( white , lightblue 50px);  background: -webkit-linear-gradient(white, lightblue); background: -moz-linear-gradient(white, lightblue); border: 1px solid black; border-radius: 10px; padding: 10px; margin: 20px;}
+div.code {position:relative; width: 90%; background-color: white; border: 1px dashed grey; border-radius: 10px; padding: 10px; margin:auto;}
+div.codeblock{position:relative; background-color: lightgray;}
+div.exampledisplay{}
+pre.codeblock{position:relative; width: 100%;background-color:lightgray;}
+div.inlinecodeexample{position:relative; display: inline-block; margin: auto; border: 1px solid grey; padding: 10px; margin: 10px;}
+img.example{position:relative; border: 1px solid black}
+button {
+	-webkit-appearance: none;
+}
+#titlebar {
+	position: relative;
+	padding-left:100px;
+	background:#0F192A;
+	color: white;
+	line-height:60px;
+	vertical-align:middle;
+	z-index:10;
+	font-family: 'Comic Sans MS', 'ChalkboardSE-Bold';
+	font-size: 40px;
+	margin-left: 0px;
+	margin-right:0px;
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+#menubar {
+	display: inline-block;
+	position: absolute;
+	right:0px;
+	text-align: right;
+	font-size:12px;
+	background:#0F192A;	
+	color: white;
+	text-align:center;
+	}
+#menubar1 {
+	position:fixed;
+	bottom:0px;
+	height:20px;
+	left:0px;
+	right:0px;
+	font-size:12px;
+	background:#0F192A;	
+	color: white;
+	text-align:center;
+	}
+hr.dashed{
+	border:1px dashed black
+	}
+a.menu{
+	color:white;
+	margin:12px;
+}
+
+#cmDiv{
+	display: inline-block;
+}
+.CodeMirror {
+	border-top: 1px solid black; 
+	border-bottom: 1px solid black;
+	display:inline-block;
+	width:600px;
+	height:500px;
+//	position: absolute;
+//	left:10px;
+//	top:0px;
+	}
+#spork{
+	display:inline-block;
+//	position: absolute;
+//	top:0px;
+//	right:10px;
+}
+#buttonDiv{
+	width:600px;
+	text-align:right;
+}
+div.popup{
+	position:fixed;
+	top:20px;
+	bottom:20px;
+	left:20px;
+	right:20px;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 20;
+	display:none;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	overflow: auto;
+	color: white;
+}

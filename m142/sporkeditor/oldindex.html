@@ -3,11 +3,7 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-<style>
-	#editorButton {
-		text-decoration: underline;
-	}
-</style>
+
 
 <link rel="stylesheet" href="cm.css">
 <link rel="stylesheet" href="allThemes.css">
@@ -18,11 +14,9 @@
 <script type="text/javascript">var EDITOR = 1;</script>
 <script type="text/javascript" src="spork.js"></script>
 <script type="text/javascript" src="sporkEditor.js"></script>
-<script type="text/javascript" src="header.js"></script>
 
 </head>
 <body>
-<script>showHeader();</script>
 
 <div id='buttonDiv'> Code Name:<input type='text' id='name' value='draft'> <button onclick='saveCode();'>Save</button>  <button onclick='loadCode();'>Load</button>  <button onclick='toim();'>Get Image</button> <button onclick='stoploop();'>Stop</button> <button onclick='startloop();'>Start</button> <button onclick='runCode();'>go</button></div>
 <div>
@@ -104,9 +98,9 @@
     <option>lesser-dark</option>
     <option>mbo</option>
     <option>mdn-like</option>
-    <option >midnight</option>
+    <option selected>midnight</option>
     <option>monokai</option>
-    <option selected>neat</option>
+    <option>neat</option>
     <option>night</option>
     <option>paraiso-dark</option>
     <option>paraiso-light</option>
@@ -130,7 +124,7 @@
 	autoCloseBrackets: true,
         extraKeys: {"Ctrl-Space": "autocomplete"} ,
 	});
-	editor.setOption("theme", "neat");
+	editor.setOption("theme", "midnight");
 	
  function selectTheme() {
 	  var input = document.getElementById("themeSelect");
@@ -141,6 +135,5 @@
 
 </script>
 
-<script>showFooter();</script>
 </body>
  </html>
