@@ -55,6 +55,12 @@ function clear(){
 	theCanvas.clearRect(0,0,width,height);
 	theCanvas.restore();
 }
+function rgb(r,g,b){
+	return("rgb("+r+","+g+","+b+")");
+}
+function rgba(r,g,b,a){
+	return("rgba("+r+","+g+","+b+","+a+")");
+}
 function color(){
 	var l = arguments.length;
 	if (l==1)
@@ -90,7 +96,13 @@ function lineWidth(n){
 	theCanvas.lineWidth=n;
 }
 function linewidth(n){
-	lineWidth(n);
+	theCanvas.lineWidth=n;
+}
+function linecap(n){
+	theCanvas.lineCap=n;
+}
+function lineCap(n){
+	theCanvas.lineCap=n;
 }
 function line(){
 	var l = arguments.length/2;
@@ -105,6 +117,9 @@ function rect(x1,y1,x2,y2){
 	theCanvas.beginPath();
 	theCanvas.rect(x1,y1,x2,y2);
 	theCanvas.stroke();
+}
+function fillrect(x1,y1,x2,y2){
+	theCanvas.fillRect(x1,y1,x2,y2);
 }
 function triangle(x1,y1,x2,y2,x3,y3){
 	line(x1,y1,x2,y2,x3,y3,x1,y1);
@@ -186,6 +201,9 @@ function stroketext(t, x, y){
 function aligntext(x){
 	theCanvas.textAlign=x;
 }
+function valigntext(x){
+	theCanvas.textBaseline=x;
+}
 function measureText(t){
 	return(theCanvas.measureText(t).width);
 }
@@ -215,6 +233,8 @@ function copyImageData(R,G,B,A){
 }
 
 function floodfill(x,y){
+	x=floor(x);
+	y=floor(y);
   var R=[], G=[], B=[], A=[];
   var r,g,b,a;
   var pstack=[];
@@ -352,9 +372,11 @@ var mouseY;
 var mouseDown=false;
 
 function getCoords(e) {
-	var brect=theCanvasHandle.getBoundingClientRect();
-	mouseX=e.clientX-brect.left;
-	mouseY=e.clientY-brect.top;
+	if (e){
+		var brect=theCanvasHandle.getBoundingClientRect();
+		mouseX=e.clientX-brect.left;
+		mouseY=e.clientY-brect.top;
+	}	
 }
 function onmousedown(){}
 function mouseDownFunction(e){
@@ -490,12 +512,15 @@ function month(){
 
 
 // Initialization -------------------------------------------------------------------------------------------------------------------------------
-//Make Math object accessible without "Math."
+//Make Math object accessible without "Math." And extend Array object prototype
 function cacheMath(){
 	var aMathFunctions = Object.getOwnPropertyNames(Math);
 
 	for (var i in aMathFunctions){
 		window[aMathFunctions[i]] = Math[aMathFunctions[i]];
+	}
+	Array.prototype.random = function(){
+		return(this[floor(this.length*random())]);
 	}
 }
 function init(){
@@ -590,6 +615,15 @@ var noiseSeed;
 var noiseValues;
 var noiseGridSize;
 
+function flattenNoiseEdges(){
+	var n=noiseGridSize;
+	var x,y,z;
+	for (x=0;x<=n;x++)
+		for (y=0;y<=n;y++)
+			for (z=0;z<=n;z++)
+				if ((x==0) || (y==0) || (x==n) || (y==n))
+					noiseValues[x][y][z]=0;	
+}
 function setupNoise(n){
 	var i,j,k;
 	if (arguments.length==0)
@@ -652,3 +686,9 @@ function noise(x, y, z){
 	return(c0*(1-tz)+c1*tz);
 }
 //---------------------------------------------------------------------------------------------
+function COS(x){
+  return(cos(x*pi/180));
+}
+function SIN(x){
+  return(sin(x*pi/180));
+}
