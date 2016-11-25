@@ -55,6 +55,12 @@ function clear(){
 	theCanvas.clearRect(0,0,width,height);
 	theCanvas.restore();
 }
+function rgb(r,g,b){
+	return("rgb("+r+","+g+","+b+")");
+}
+function rgba(r,g,b,a){
+	return("rgba("+r+","+g+","+b+","+a+")");
+}
 function color(){
 	var l = arguments.length;
 	if (l==1)
@@ -506,12 +512,15 @@ function month(){
 
 
 // Initialization -------------------------------------------------------------------------------------------------------------------------------
-//Make Math object accessible without "Math."
+//Make Math object accessible without "Math." And extend Array object prototype
 function cacheMath(){
 	var aMathFunctions = Object.getOwnPropertyNames(Math);
 
 	for (var i in aMathFunctions){
 		window[aMathFunctions[i]] = Math[aMathFunctions[i]];
+	}
+	Array.prototype.random = function(){
+		return(this[floor(this.length*random())]);
 	}
 }
 function init(){
