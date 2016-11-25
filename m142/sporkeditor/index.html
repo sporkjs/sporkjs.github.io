@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Spork  Editor</title>
 
 <style>
 	#editorButton {
@@ -104,9 +104,9 @@
     <option>lesser-dark</option>
     <option>mbo</option>
     <option>mdn-like</option>
-    <option >midnight</option>
+    <option selected>midnight</option>
     <option>monokai</option>
-    <option selected>neat</option>
+    <option >neat</option>
     <option>night</option>
     <option>paraiso-dark</option>
     <option>paraiso-light</option>
@@ -130,7 +130,7 @@
 	autoCloseBrackets: true,
         extraKeys: {"Ctrl-Space": "autocomplete"} ,
 	});
-	editor.setOption("theme", "neat");
+	editor.setOption("theme", "midnight");
 	
  function selectTheme() {
 	  var input = document.getElementById("themeSelect");
