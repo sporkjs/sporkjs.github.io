@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Some Mathematics in Art</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+#titleBar{
+	font-size: 40px;
+	border-bottom: 1px solid gray;
+	}
+#wrapper{
+	width: 80%;
+	margin: auto;
+	}
+#content{
+	width: 50%;
+}
+#mainNavigation{
+	font-size: 9px;
+}
+#gallery{
+	position: absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	background: rgba(0,0,0,0.75);
+	display: none;
+}
+#leftscroll{
+	position:absolute;
+	left: 0px;
+	width: 50%;
+	text-align: left;
+	height: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	color: lightgray;
+	font-size: 40px;
+}
+#rightscroll{
+	position:absolute;
+	right:0px;
+	width: 50%;
+	text-align: right;
+	height: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	color: lightgray;
+	font-size: 40px;
+}
+#closeButton{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: lightgray;
+	background: none;
+	border: none;
+	font-size: 40px;
+      }
+#page{
+	position: absolute;
+	top:5%;
+	bottom: 5%;
+	left: 5%;
+	right:5%;
+}
+#photoFrame{
+	position: relative;
+	height: 90%;
+}
+#photo{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left:0px;
+	right:0px;
+	margin: auto;
+	width: auto;
+	background: white;
+	max-height: 90%;
+	max-width: 90%;
+}
+#caption{
+	height: 10%;
+	width: 400px;
+	margin: auto;
+	text-align: center;
+	color: lightgray;
+}
+button.thumb{
+	width: 110px;
+	height: 110px;
+	border: 1px solid gray;
+	background: none;
+	border-radius: 0px;
+	padding: 2px;
+	margin: 10px;
+}
+img.thumb{
+	width: 100px;
+	height: 100px;
+}
+    </style>
+     <script>
+theCaptions=[	"A stone etched with a pattern of triangles from the Blombos Cave in South Africa. Some identify this as the oldest example of art.",
+			"A coin from Knossos in the first century B.C. featuring a labyrinth.",
+			"The Labyrinth in the Chartres Cathedral in France.",
+			"A labyrinth by Hans Pedersen featuring in the shape of a face.",
+			"A labyrinth by Hans Pedersen in the shape of a hand.",
+			"A sculpture based on a labyrinth pattern in stainless steel by Robert Bosch.",
+			"A drawing by Robert Bosch based on a cellular automaton.",
+			"A painting by Cenedra White based on polygonal dissection.",
+			"A painting by Cenedra White based on polygonal dissection.",
+			"A painting by Richard Diebenkorn. In 1985, Kirsch and Kirsch developed a phrase structure grammar to mimic the painting style of Richard Diebenkorn.",
+			"A painting by Joan Miro. In 1985, Kirsch and Kirsch developed a phrase structure grammar to mimic the painting style of Joan Miro.",
+			"A painting by Piet Mondrian. Paintings of this style can be mimiced with phrase structure grammars.",
+			"<i>Fifteen Etchings</i> by Sol Lewitt. This piece demonstrates a combinatorial enumeration more or less equivalent to the set of subsets of a four element set."
+]
+
+theImages=[	"images/blombos.png",
+			"images/knossos.png",
+			"images/chartreslabyrinth.png",
+			"images/hanspedersen.png",
+			"images/hanspedersen2.png",
+			"images/bosch.png",
+			"images/boschgameoflife.png",
+			"images/cenedra1.png",
+			"images/cenedra2.png",
+			"images/diebenkorn.png",
+			"images/miro.png",
+			"images/mondrian.png",
+			"images/sollewitt.png"
+]
+    var currentImage=0;
+    function showNextImage(){
+	show(currentImage+1);
+    }
+    function showPreviousImage(){
+	show(currentImage-1);
+    }
+    function show(n){
+	photo.src=theImages[n];
+	caption.innerHTML = theCaptions[n];
+	currentImage=n;
+	if (n==0)
+		leftscroll.style.display='none';
+	else
+		leftscroll.style.display='block';
+	if (n==theImages.length-1)
+		rightscroll.style.display='none';
+	else
+		rightscroll.style.display='block';
+	gallery.style.display='block';
+    }
+    function endshow(){
+	gallery.style.display='none';
+    }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Some Mathematics in Art</div>
+      <div id="mainNavigation">A photo gallery example for Math 142, J.W. Snow</div>
+      <div id="content">
+	      <button class="thumb"  onclick="show(0);"><img class="thumb" src="thumbnails/blombos.png"></button>
+	      <button class="thumb" onclick="show(1);"><img class="thumb" src="thumbnails/knossos.png" onclick="show(1);"></button>
+	      <button class="thumb" onclick="show(2);"><img class="thumb" src="thumbnails/chartreslabyrinth.png" onclick="show(2);"></button>
+	      <button class="thumb" onclick="show(3);"><img class="thumb" src="thumbnails/hanspedersen.png" onclick="show(3);"></button>
+	      <button class="thumb" onclick="show(4);"><img class="thumb" src="thumbnails/hanspedersen2.png" onclick="show(4);"></button>
+	      <button class="thumb" onclick="show(5);"><img class="thumb" src="thumbnails/bosch.png" onclick="show(5);"></button>
+	      <button class="thumb" onclick="show(6);"><img class="thumb" src="thumbnails/boschgameoflife.png" onclick="show(6);"></button>
+	      <button class="thumb" onclick="show(7);"><img class="thumb" src="thumbnails/cenedra1.png" onclick="show(7);"></button>
+	      <button class="thumb" onclick="show(8);"><img class="thumb" src="thumbnails/cenedra2.png" onclick="show(8);"></button>
+	      <button class="thumb" onclick="show(9);"><img class="thumb" src="thumbnails/diebenkorn.png" onclick="show(9);"></button>
+	      <button class="thumb" onclick="show(10);"><img class="thumb" src="thumbnails/miro.png" onclick="show(10);"></button>
+	      <button class="thumb" onclick="show(11);"><img class="thumb" src="thumbnails/mondrian.png" onclick="show(11);"></button>
+	      <button class="thumb" onclick="show(12);"><img class="thumb" src="thumbnails/sollewitt.png" onclick="show(12);"></button>
+	<div id="gallery">
+		<div id="page">
+			<div id="photoFrame">
+				<img id="photo" src="images/image1.png"/>
+			</div>
+			<div id="caption">blah blah 
+			</div>
+		</div>
+		<button id="leftscroll" onclick="showPreviousImage();">&leftarrow;</button>
+		<button id="rightscroll" onclick="showNextImage();">&rightarrow;</button>
+		<button onclick="endshow();" id="closeButton">X</button>	
+	</div>	
+      </div>
+      <div id="secondaryNavigation"></div>
+    </div>
+  </body>
+</html>
