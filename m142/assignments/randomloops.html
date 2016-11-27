@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math 142/242</title>
+<link rel="stylesheet" type="text/css" href="../quick.css">
+<script type='text/javascript' src='header.js'></script>
+<style>
+img{
+	//width:500px;
+	display:block;
+	margin:auto;
+}
+</style>
+</head>
+<body>
+<html>
+<script> showHeader(); </script>
+<h3>More Fun With For Loops</h3>
+
+Create a website that ilustrates the use of For Loops, Randomness, and Arrays in drawing on the HTML canvas as outlined below.<br><br>
+
+<b>Turning it:</b> To turn in this project, you should place the website in a folder called <b>randomloops</b> inside of your class website and link the site from your main class homepage.<br><br>
+
+<b>Requirements:</b>
+The site should contain at least these pages:
+<ul>
+<li> (1 page) A home page with a title and links to the pages listed below. Each page below should include a Spork canvas on which your image is drawn.</li>
+<li> (1 page) Use your creature function to draw copies of your creature on a grid so that every version of the creature is a random size.
+<li> (1 page) Create a new <b>randomCreature(x,y,r)</b> function that draws a copy of your creature with random colors at (x,y) with radius r. Use arrays to limit the range of colors that are possible. This may involve these steps:
+	<ul>
+	<li>Select at least two different regions of your creature that are different colors.</li>
+	<li>Rewrite the color declarations for those regions using variables. For example, if my creature has blue eyes, instead of <b>color('blue');</b> I might use <b>color(eyeColor);</b> where eyeColor is a variable.</li>
+	<li>Construct an array with possible colors. This might look like <b>var possibleEyeColors=['blue','green','orange'];</b></li>
+	<li>Use the arrays to set the random colors. This might look like <b>eyeColor=possibleEyeColors.random();</b></li>
+	</ul>
+</li>
+<li> (1 page) On this page, you will draw a random picture in the style of this Sol Lewitt wall drawing: <img src='images/sollewitt4.jpg'>
+You should consider these steps:
+	<ul>
+	<li>Consider this square centered at (x,y) with width and height 2r: <img src='images/lewittsquare.png'></li>
+	<li>Make four functions with calls such as <b>segment1(x,y,r)</b>. One function should draw a line from point A to point E (with a command such as <b>line(x-r,y-r,x+r,y+r);</b>). One function should draw a line from G to C. One should draw a line from H to D, and one should draw a line from B to F.</li>
+	<li>If you would like to add (random) color to your functions, feel free.</li>
+	<li>Write a program that uses arrays to randomly call one of your four functions at each point in a regular grid.</li>
+	</ul>
+	<b>If you would rather</b> you can use line segments connecting different points, or you can use some arcs of circles to get a different effect. Here is an example using arcs of circles: <img src="images/tiles.png">
+</li>
+<li> (1 page) Get copies of circle pattern functions from at least two of your classmates. Use arrays to randomly draw circle patterns at random locations with random sizes.</li>
+</ul>
+
+<script> showFooter(); </script>
+</html>
+</body>

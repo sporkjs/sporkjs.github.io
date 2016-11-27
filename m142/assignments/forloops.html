@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math 142/242</title>
+<link rel="stylesheet" type="text/css" href="../quick.css">
+<script type='text/javascript' src='header.js'></script>
+<style>
+img{
+	//width:500px;
+	display:block;
+	margin:auto;
+}
+</style>
+</head>
+<body>
+<html>
+<script> showHeader(); </script>
+<h3>Fun With For Loops</h3>
+
+Create a website that ilustrates the use of For Loops in drawing on the HTML canvas as outlined below.<br><br>
+
+<b>Turning it:</b> To turn in this project, you should place the website in a folder called <b>forloops</b> inside of your class website and link the site from your main class homepage.<br><br>
+
+<b>Requirements:</b>
+The site should contain at least these pages:
+<ul>
+<li> (1 page) A home page with a title and links to the pages listed below. Each page below should include a Spork canvas on which your image is drawn.</li>
+<li> (1 page) Convert your creature code to a function <b>creature(x,y,r)</b> which draws your creature centered at the point (x,y) with radius r. Then use this function to draw a grid with repetetive copies of your creature.
+<img src="images/creatureGrid.png">
+</li>
+<li> (1 page) Draw a different circle pattern such as this. I suggest you follow these directions to make functions which draw the circle pattern.
+	<ul>
+	<li>Use the standard 400x400 Spork canvas initially.</li>
+	<li>First translate to (200,200) like we did with the creature code.</li>
+	<li>Use For Loops to draw a circle pattern centered at (0,0).</li>
+	<li>Make sure the radius of the outside circle is close to 200.</li>
+	<li>After your translation, but before you begin drawing, draw a filled white circle whose radius is the same as your largest intended radius in the pattern. We are doing this because later we do not want the patterns to be transparent.</li>
+	<li>Convert your code to a function <b>circlePattern(x,y,r)</b> which draws your pattern centered at (x,y) with radius r like we did the creature function.</li>
+	<li>For now, use your code to draw your pattern in the center of the Spork canvas.</li>
+	<li>We will use all three patterns again later.</li>
+	</ul>
+	<img src="images/circlepattern.png">
+</li>
+<li>Use For Loops and clipping to draw a picture like one of those below by Sol Lewitt (which are composed of sets of parallel lines).
+<img src="images/sollewitt1.jpg">
+<img src="images/sollewitt2.jpg">
+<img src="images/sollewitt3.jpg">
+</li>
+</ul>
+
+<script> showFooter(); </script>
+</html>
+</body>
