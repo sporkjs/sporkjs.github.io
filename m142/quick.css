@@ -65,6 +65,7 @@ body {
 	margin: 15px;
 	background: white;
 	padding:20px;
+	overflow:hidden;
 }
 button.navButton {
 	-webkit-appearance: none;
