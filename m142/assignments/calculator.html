@@ -26,6 +26,13 @@ button.operation{
 	font-weight: bold;
 }
 button.equals{
+	width:120px;
+	height:40px;
+	border-radius:0px;
+	font-size: 20px;
+	font-weight: bold;
+}
+button.clear{
 	width:40px;
 	height:80px;
 	border-radius:0px;
@@ -55,6 +62,9 @@ function calculate(){
 	var s=display.innerHTML;
 	display.innerHTML=eval(s);
 }
+function clearscreen(){
+	display.innerHTML='';
+}
 </script>
 </head>
 <body>
@@ -70,7 +80,7 @@ Use HTML, CSS, and JavaScript to make a calculator.<br><br>
 <ul>
 <li>The overall shape of your calculator should be rectangular (with no butons floating to the side).</li>
 <li>Use a table for the layout of the buttons and display.</li>
-<li>You should at least have buttons for : digits 0, 1, 2, 3, 4, 5, 6, 7, 8, 9; operations +, -, &times;, &div;; parentheses (, ); and a decimal.</li>
+<li>You should at least have buttons for : digits 0, 1, 2, 3, 4, 5, 6, 7, 8, 9; operations +, -, &times;, &div;; parentheses (, ); a decimal; and clear.</li>
 </ul>
 
 <table class='calculator'>
@@ -78,11 +88,14 @@ Use HTML, CSS, and JavaScript to make a calculator.<br><br>
 <tr>
 	<td><button class='number' onclick='insertChar("0");'>0</button></td>
 	<td><button class='number' onclick='insertChar("1");'>1</button></td>
-	<td rowspan=2><button class='equals' onclick='calculate();'>=</button></td>
+	<td rowspan=2><button class='clear' onclick='clearscreen();'>C</button></td>
 </tr>
 <tr>
 	<td><button class='operation' onclick='insertChar("+");'>+</button></td>
 	<td><button class='operation' onclick='insertChar("*");'>&times;</button></td>
+</tr>
+<tr>
+	<td colspan=3><button class='equals' onclick='calculate();'>=</button></td>
 </tr>
 </table>
 
