@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math 142/242</title>
+<link rel="stylesheet" type="text/css" href="../quick.css">
+<script type='text/javascript' src='header.js'></script>
+<style>
+img{
+	width:500px;
+	display:block;
+	margin:auto;
+}
+</style>
+</head>
+<body>
+<html>
+<script> showHeader(); </script>
+<h3>Noise Gallery</h3>
+
+Create a website that illustrates  the use of the noise function to draw shapes and patterns.<br><br>
+
+<b>Turning it:</b> To turn in this project, you should place the website in a folder called <b>noise</b> inside of your class website and link the site from your main class homepage.<br><br>
+
+<b>Requirements:</b>
+The site should contain at least these pages:
+<ul>
+<li> (1 page) A home page with a title and links to the pages listed below. Each page below should include a Spork canvas on which your image is drawn.</li>
+<li> (1 page) <b>Hair</b> On this page, you will modify the Brownian motion page from your Motion assignment by following these steps:
+	<ul>
+	<li>Add a <b>setupNoise(5);</b> command to your setup() function. You can experiment with numbers other than 5 later.</li>
+	<li>Your <b>brownian(x,y)</b> function should have a line of the form <b>angle=random()*360;</b>. Change this to <b>angle=noise(x/width,y/height)*360;</b></li>
+	<li>As it is, this page will occasionally give an error. The reason for the error is that the noise() function wants arguments between 0 and 1. The values of x and y may be too big or small for this, so we need to make the points wrap around to stay on the canvas. You can do this like we did in the last two lines of the <a href='../examplecode/motion3.html'>Wrap Around</a> example.</li>
+	</ul>
+</li>
+<li> (1 page) <b>Circle Grid</b> On this page, we will modify the <a href='../examplecode/circlegrid.html'>Circle Grid Example</a> by following these steps to make the radii of the circles determined by the noise function.
+	<ul>
+	<li>Add a <b>setupNoise(5);</b> command to your setup() function. You can experiment with numbers other than 5 later.</li>
+	<li>Inside the draw() function, add a declarion for a variable c which will (almost) be a noise value.</li>
+	<li>Before the command <b>circle(x,y,20);</b>, let c be a noise value by calling the command <b>c=noise(x/width, y/height);</b></li>
+	<li>The variable c now has a value between -1 and 1. We want c to be between 0 and 1 so add this line: <b>c=(c+1)/2;</b>.</li>
+	<li>Now change <b>circle(x,y,20);</b> to <b>circle(x,y,c*20);</b></li>
+	<li>Experiment with values other than 20.</li>
+	<li>Make a page that shows off the drawings that result.</li>
+	</ul>
+</li>
+<li> (1 page) <b>Funky Stripes</b> On this page, we will modify the <a href='../examplecode/noisestatic.html'>Noise Static Example</a> by following these steps to change how we select the color:
+	<ul>
+	<li>For this example, we just want to round the gray level c to the nearest multiple of 20. This can be accomplished by adding the line <b>c=20*floor(c/20);</b> after the line <b>c=floor(128*(noise(x/width, y/height)+1));</b></li>
+	<li>After you have a drawing working, experiment with values other than 20.</li>
+	<li>Make a page that shows off the drawings that result.</li>
+	</ul>
+</li>
+<li> (1 page) <b>Cow Spots</b> On this page, we will modify the <a href='../examplecode/noisestatic.html'>Noise Static Example</a> by following these steps to change how we select the color:
+	<ul>
+	<li>Replace the line <b>c=floor(128*(noise(x/width, y/height)+1));</b> with simply <b>c=noise(x/width, y/height);</b>. This just sets c to be a noise value.</li>
+	<li>Delete the line <b>fillcolor(c,c,c)</b>;</li>
+	<li>In place of the line that you just deleted, place an if statement. If c&gt;0, set the fillcolor to black; otherwise, set the fillcolor to white.</li>
+	<li>Experiment with comparing c to numbers other than 0.</li>
+	<li>Make a page that shows off the drawings that result.</li>
+	</ul>
+</li>
+</ul>
+
+<script> showFooter(); </script>
+</html>
+</body>

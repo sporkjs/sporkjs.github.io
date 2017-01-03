@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Math 142/242</title>
+<link rel="stylesheet" type="text/css" href="../quick.css">
+<script type='text/javascript' src='header.js'></script>
+<style>
+img{
+	width:500px;
+	display:block;
+	margin:auto;
+}
+</style>
+</head>
+<body>
+<html>
+<script> showHeader(); </script>
+<h3>Parametric Equations</h3>
+
+Create a website that illustrates  the use of parametric equations to draw curves.<br><br>
+
+<b>Turning it:</b> To turn in this project, you should place the website in a folder called <b>parametric</b> inside of your class website and link the site from your main class homepage.<br><br>
+
+<b>Requirements:</b>
+The site should contain at least these pages:
+<ul>
+<li> (1 page) A home page with a title and links to the pages listed below. Each page below should include a Spork canvas on which your image is drawn.</li>
+<li> (1 page) Modify the <a href="../examplecode/rose2.html">parametric curve using the animation loop example</a> to make a page that has your creature moving around the canvas following a parametrically defined path.</li>
+<li> (1 page) Make a function <b>rose(x,y,r)</b> that draws a rose centered at the point (x,y) with radius r. Modify one of your implicit curve assignments to use this rose instead of blotches.</li>
+<li> (1 page) Modify one of your impressionism assignments to use your rose function.</li>
+<li> (1 page) Make a grid of parametric curves such as this: <img src='images/roses.png'>
+I suggest you modify your <b>rose(x,y,r)</b> function to become a new function <b>rose(x,y,r,n,m)</b> that draws the rose defined by <i>x=r*COS(n*t)</i> and <i>y=r*SIN(m*t)</i>. You can then vary values of n and m in your grid.
+</li>
+</ul>
+
+<script> showFooter(); </script>
+</html>
+</body>
