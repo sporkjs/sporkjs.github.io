@@ -1,6 +1,6 @@
 // Spork.js
 //John W. Snow (john.snow@cune.edu)
-//Version of 2014-4-5
+//Version of 2016-12-16
 /*This is a JavaScript library that provides easy access to 
  - The HTML 5 canvas
  - Animation
@@ -104,7 +104,8 @@ function append(i){
 function deleteSpork(i){
 	localStorage.removeItem('SPORK|'+storedName[i]);
 //	theLoadDiv.innerHTML ='';
-	theLoadDiv.style.display='none';
+//	theLoadDiv.style.display='none';
+	loadCode();
 }
 function loadCode(){
 //	theCode.value = localStorage['runCode'];
@@ -122,9 +123,9 @@ function loadCode(){
 		}
 	}
 	if (k==0)
-		theLoadDiv.innerHTML = '<button onclick=\'loadDiv.style.display=\"none\";\'>Cancel</button><br>No programs were found.';
+		theLoadDiv.innerHTML = '<button onclick=\'loadDiv.style.display=\"none\";\'>Close</button><br>No programs were found.';
 	else{
-		var outputString="<button onclick='loadDiv.style.display=\"none\";'>Cancel</button><ul>";
+		var outputString="<button onclick='loadDiv.style.display=\"none\";'>Close</button><ul>";
 		for (j=0;j<k;j++)
 			outputString+="<li>"+storedName[j]+" <a class='menu' href='javascript:display("+j+");'>Replace</a> or <a class='menu' href='javascript:append("+j+");'>Append</a> or <a class='menu' href='javascript:deleteSpork("+j+");'>Delete</a>";
 		outputString+='</ul>';
