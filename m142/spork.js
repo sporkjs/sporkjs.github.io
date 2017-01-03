@@ -287,8 +287,7 @@ function floodfill(x,y){
   for (i=0;i<width;i++)
     for (j=0;j<height;j++)
       if (R[i][j]==-1){
-        rect(i,j,1,1);
-        fill();
+        fillrect(i,j,1,1);
       }
   restore();
 }
