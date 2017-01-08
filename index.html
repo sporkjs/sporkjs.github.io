@@ -47,6 +47,8 @@ function setup(){
   translate(width/2, height/2);
   setupNoise(7);
   timestep(2000);
+  color('white');
+  drawing.style.borderColor='white';
   loop();
 }
 function draw(){
@@ -66,15 +68,30 @@ function draw(){
   }
 }</script>
 <style>
+html{
+	width:100%;
+	height:100%;
+	padding: 0px;
+	margin:0px;
+}
 body{
-	background: rgb(255,248,220);
+	background: rgb(15,25,42);
+	color: white;
+	display: table;
+	width:100%;
+	height:100%;
+	padding: 0px;
+	margin:0px;
+}
+a{
+	color: white;
+	display: table-cell;
+	text-align: center;
 }
 #wrapper{
-	position:fixed;
-	top:0px;
-	bottom:0px;
-	left:0px;
-	right:0px;
+	display: table-cell;
+	text-align: center;
+	vertical-align:middle;
 }
 #spork{
 	position: fixed;
@@ -90,10 +107,9 @@ body{
 canvas{
 	max-width: 90%;
 }
-#link142{
-	position: fixed;
-	bottom: 5px;
-	right: 5px;
+div.navigation{
+	display: table-row;
+	height:50px;
 }
 </style>
 </head>
@@ -101,6 +117,12 @@ canvas{
 <div id='wrapper'>
 <div id='spork'></div>
 </div>
+<div class='navigation'>
+<a href='m142/index.html'> Math 142</a>
+<a href='stuff/diffeq/index.html'> DE Solver</a>
+<a href='stuff/calculator/index.html'> Calculator</a>
+<a href='stuff/galton/index.html'> Pegboard</a>
+
 </body>
 
 </html>
