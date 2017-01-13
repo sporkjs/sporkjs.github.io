@@ -27,25 +27,35 @@ The site should contain at least these pages:
 <li> (1 page) A home page with a title and links to the pages listed below. Each page below should include a Spork canvas on which your image is drawn.</li>
 <li> (1 page) Draw a grid of circles so that the radius of each circle is random.
 <li> (1 page) Use your creature function to draw copies of your creature on a grid so that every version of the creature is a random size.
-<li> (1 page) Create a new <b>randomCreature(x,y,r)</b> function that draws a copy of your creature with random colors at (x,y) with radius r. Use arrays to limit the range of colors that are possible. This may involve these steps:
+<li> (1 page) Create a new <b>randomCreature(x,y,r)</b> function that draws a copy of your creature with random colors at (x,y) with radius r. Use this function to draw a grid of random creatures. This may involve these steps:
 	<ul>
 	<li>Select at least two different regions of your creature that are different colors.</li>
-	<li>Rewrite the color declarations for those regions using variables. For example, if my creature has blue eyes, instead of <b>color('blue');</b> I might use <b>color(eyeColor);</b> where eyeColor is a variable.</li>
-	<li>Construct an array with possible colors. This might look like <b>var possibleEyeColors=['blue','green','orange'];</b></li>
-	<li>Use the arrays to set the random colors. This might look like <b>eyeColor=possibleEyeColors.random();</b></li>
+	<li>Rewrite the color declarations for those regions using variables. For example, if my creature has blue eyes, instead of <b>color('blue');</b> I might use the following steps to get a random eye color:
+		<ul>
+		<li>At the top of your function, construct an array with possible colors. This might look like <b>var possibleEyeColors=['blue','green','orange'];</b></li>
+		<li>Use the array to select a random color at the top of your function. This might look like <b>var eyeColor=possibleEyeColors.random();</b></li>
+		<li>Now replace <b>color('blue');</b> when you draw the eyes with	<b>color(eyeColor);</b></li>
+		</ul>
+	</li>
+
+	
 	</ul>
 </li>
-<li> (1 page) On this page, you will draw a random picture in the style of this Sol Lewitt wall drawing: <img src='images/sollewitt4.jpg'>
-You should consider these steps:
+<li> (1 page) Get copies of circle pattern functions from the Fun with For Loops assignments from at least two of your classmates. Use arrays to randomly draw circle patterns at random locations with random sizes.</li>
+<li> (1 page) On this page, you will draw a grid picture with geometric shapes. You should follow these steps:
 	<ul>
-	<li>Consider this square centered at (x,y) with width and height 2r: <img src='images/lewittsquare.png'></li>
-	<li>Make four functions with calls such as <b>segment1(x,y,r)</b>. One function should draw a line from point A to point E (with a command such as <b>line(x-r,y-r,x+r,y+r);</b>). One function should draw a line from G to C. One should draw a line from H to D, and one should draw a line from B to F.</li>
-	<li>If you would like to add (random) color to your functions, feel free.</li>
-	<li>Write a program that uses arrays to randomly call one of your four functions at each point in a regular grid.</li>
+	<li>Create a function <b>pattern(x,y,r)</b> which draws a geometric pattern at (x,y) with radius r. To do so, you should follow steps like we did for the creature and circle functions. Here is an example: <img src='images/geometric.png'>.
+	<li>Do at least one of these two things:
+		<ul>
+		<li> Add a random rotation by a multiple of 90 degrees to your function. To do so, you would add a line such as <b>rotate(floor(random()*4)*90);</b> after the translate command at the top of your pattern function.</li>
+		<li>Make at least one of the colors in your pattern random.</li>
+		</ul>
+	</li>
+	<li>Make a grid drawing using this new random pattern function. Here is an example using the geometric pattern above: <img src='images/geogrid.png'></li>
 	</ul>
-	<b>If you would rather</b> you can use line segments connecting different points, or you can use some arcs of circles to get a different effect. Here is an example using arcs of circles: <img src="images/tiles.png">
+	Here is an example of a geometric drawing on a grid from Sol Lewitt: <img src="images/sollewitt4.jpg"> Each pattern is a vertical line or a line slanting up or a line slanting down. 
+	Here is an example using a pattern made from arcs of circles: <img src="images/tiles.png">
 </li>
-<li> (1 page) Get copies of circle pattern functions from at least two of your classmates. Use arrays to randomly draw circle patterns at random locations with random sizes.</li>
 </ul>
 
 <script> showFooter(); </script>
