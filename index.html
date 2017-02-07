@@ -77,7 +77,6 @@ html{
 body{
 	background: rgb(15,25,42);
 	color: white;
-	display: table;
 	width:100%;
 	height:100%;
 	padding: 0px;
@@ -85,14 +84,10 @@ body{
 }
 a{
 	color: white;
-	display: table-cell;
-	text-align: center;
+	display: inline-block;
+	width: 15%;
 }
-#wrapper{
-	display: table-cell;
-	text-align: center;
-	vertical-align:middle;
-}
+
 #spork{
 	position: fixed;
 	top:0px;
@@ -108,22 +103,25 @@ canvas{
 	max-width: 90%;
 }
 div.navigation{
-	display: table-row;
-	height:50px;
+	position:fixed;
+	bottom: 0px;
+	left:0px;
+	right:0px;
+	text-align:center;
+	height: 50px;
+	z-index:10;
 }
 </style>
 </head>
 <body>
-<div id='wrapper'>
 <div id='spork'></div>
-</div>
 <div class='navigation'>
 <a href='m142/index.html'> Math 142</a>
 <a href='stuff/de/index.html'> DE Solver</a>
 <a href='stuff/calculator/index.html'> Calculator</a>
 <a href='stuff/galton/index.html'> Pegboard</a>
 <a href='research/index.html'> Research</a>
-	</div>
+</div>
 </body>
 
 </html>
