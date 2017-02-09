@@ -598,6 +598,7 @@ function print(s){
 //--------------------------------------------------------------------------------------------------------------------------------------
 function startover(){
 	stoploop();
+	size(width,height);
 	setup();
 	draw();
 	if (CONTINUELOOPING)
