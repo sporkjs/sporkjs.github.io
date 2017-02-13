@@ -1108,3 +1108,89 @@ scale(R/170);
 
   }
 //===========================================================================
+  function emily(X,Y,R){
+  save();
+  translate(X,Y);
+  scale(R/200);
+
+  circle(0,0,200)
+  fillcolor("white");
+  fill();
+
+  linewidth(10);
+  color('yellow')
+  circle(0,0,160)
+  var a
+
+  for (a=0;a<360;a=a+10){
+    save();
+    rotate(a);
+    circle(150,125,9);
+    fillcolor(a,0,255-a);
+    fill();
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(5);
+    color('red');
+    line(150,110,100,100);
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(3);
+    color('blue');
+    line(120,100,75,75);
+    restore();
+
+    save();
+    rotate(a);
+    color('purple');
+    linewidth(3);
+    circle(100,80,9);
+    restore();
+
+    save();
+    rotate(a);
+    color('yellow');
+    linewidth(3);
+    circle(90,60,9);
+    restore();
+
+     save();
+    rotate(a);
+    circle(70,65,4);
+    fillcolor(a,0,255-a);
+    fill();
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(5);
+    color('red');
+    line(50,30,10,10);
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(3);
+    color('blue');
+    line(20,15,8,8);
+    restore();
+
+    save();
+    rotate(a);
+    color('purple');
+    linewidth(3);
+    circle(10,8,9);
+    restore();
+
+
+  }
+
+  circle(0,0,10)
+  fillcolor('yellow');
+  fill();
+  restore();
+}
