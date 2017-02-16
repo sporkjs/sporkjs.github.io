@@ -741,7 +741,7 @@ function zachary(X,Y,R){
   linewidth(3);
   color("lightblue");
   rotate(x);
-  line(20,20,width/6,5);
+  line(20,20,100,5);
   restore();
   }
 
@@ -1202,6 +1202,7 @@ function jenny(X,Y,R){
 	  circle(0,0,200);
   fillcolor("lightblue");
   fill();
+	clip();
 
   circle(0,0,180)
   fillcolor("orange");
