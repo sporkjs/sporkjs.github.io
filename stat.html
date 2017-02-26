@@ -538,7 +538,7 @@ function findListStats(i){
 	var i,j,sum, sumx2,max,min,med,half;
 		listn[i]=list[i].length;
 		for (j=0;j<listn[i];j++)
-			list[i][j]=eval(fixExponents(list[i][j]));
+			list[i][j]=eval((list[i][j]));
 		listn[i]=list[i].length
 		if ((listn[i]==1) && (list[i]==''))
 			listn[i]=0;
@@ -1980,7 +1980,7 @@ try{
 }
 catch(err){
 	alert('Input Error.');
-}		
+}	
 }
 
 function CalculateCorrelation(){
