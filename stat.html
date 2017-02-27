@@ -823,6 +823,7 @@ function setupAll(){
 	scatterplotx0.checked=true;
 	scatterploty1.checked=true;
 	freq0.checked=true;
+	calculated0.checked=true;
 	//HEREHERE
 }
 //--------------------------------------------------------------------------------------------------------------------
@@ -850,6 +851,36 @@ catch(err){
 }
 }
 //Data List Generation Stuff----------------------------------------------------------------------------------------------
+function calculateList(){
+try{
+	loadDataLists();
+
+	var i,l,g,f,m,j;
+	for (i=0;i<numlists;i++)
+		if (document.getElementById('calculated'+i).checked)
+			l=i;
+	f=calculatedformula.value;
+	g=f;
+	for (i=0;i<numlists;i++)
+		g=g.replace(RegExp('l'+i, 'g'),'L'+i);
+	m=2000000000;
+	for (i=0;i<numlists;i++)
+		if (g.search('L'+i)!=-1)
+			m=min(m,listn[i]);
+	f=g;
+	if ((m<2000000000) ){
+		for (j=0;j<m;j++){
+			for (i=0;i<numlists;i++)
+				if (g.search('L'+i)!=-1)
+					g=g.replace(RegExp('L'+i, 'g'),list[i][j]);
+			list[l][j]=eval(g);
+			g=f;
+		}
+		printDataListsValueOnly();
+		loadDataLists();
+	}
+}catch(err){alert('Input Error');}
+}
 function generateUniformDataSet(){
 	var i,l;
 	l=0;
@@ -2129,6 +2160,18 @@ List:
 		<button onclick='insertCannedData();'>Insert Data</button>
 	</div>
 	</li>
+	
+	<li><button class='expander'>Calculated List</button>
+	<div class='expandable'>
+		List:
+		<script>
+		for (dli=0;dli<numlists;dli++)
+			document.write("<input type='radio' name='calculatedradio' id='calculated"+dli+"'>"+dli+"&nbsp;");
+		</script>
+		<br>Formula=<input type="text" id="calculatedformula">
+		<button onclick="calculateList();">Calculate List</button>
+	</div></li>
+	
 	<li><button class='expander'>Random Uniform</button>
 	<div class='expandable'>
 		List:
