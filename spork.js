@@ -1,6 +1,6 @@
 // Spork.js
 //John W. Snow (john.snow@cune.edu)
-//Version of 2015-9-21
+//Version of 2017-3-15
 /*This is a JavaScript library that provides easy access to 
  - The HTML 5 canvas
  - Animation
@@ -287,8 +287,7 @@ function floodfill(x,y){
   for (i=0;i<width;i++)
     for (j=0;j<height;j++)
       if (R[i][j]==-1){
-        rect(i,j,1,1);
-        fill();
+        fillrect(i,j,1,1);
       }
   restore();
 }
@@ -599,6 +598,7 @@ function print(s){
 //--------------------------------------------------------------------------------------------------------------------------------------
 function startover(){
 	stoploop();
+	size(width,height);
 	setup();
 	draw();
 	if (CONTINUELOOPING)
@@ -691,4 +691,14 @@ function COS(x){
 }
 function SIN(x){
   return(sin(x*pi/180));
+}
+//save canvas
+function canvasToImg(imageID){
+	var image=theCanvasHandle.toDataURL("image/png");
+	imageID.src=image;
+}    
+function canvasToNewImg(){
+	var newImage = document.createElement('img');
+	canvasToImg(newImage);
+	document.body.appendChild(newImage);
 }
