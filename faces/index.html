@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shannon Snow</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+body{
+	background: rgb(238, 234, 231);
+}
+#titleBar{
+	font-size: 40px;
+	border-bottom: 1px solid gray;
+	z-index: 100;
+	}
+#wrapper{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left: 10%;
+	width: 80%;
+	margin: auto;
+	overflow:hidden;
+	}
+#content{
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+#mainNavigation{
+	font-size: 9px;
+}
+#gallery{
+	position: absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	background: rgba(0,0,0,0.75);
+	display: none;
+}
+#leftscroll{
+	position:absolute;
+	left: 0px;
+	width: 50%;
+	text-align: left;
+	height: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	color: lightgray;
+	font-size: 40px;
+}
+#rightscroll{
+	position:absolute;
+	right:0px;
+	width: 50%;
+	text-align: right;
+	height: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	color: lightgray;
+	font-size: 40px;
+}
+#closeButton{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: lightgray;
+	background: none;
+	border: none;
+	font-size: 40px;
+      }
+#page{
+	position: absolute;
+	top:5%;
+	bottom: 5%;
+	left: 5%;
+	right:5%;
+	height: 90%;
+}
+#photoFrame{
+	position: relative;
+	height: 90%;
+}
+#photo{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left:0px;
+	right:0px;
+	margin: auto;
+	width: auto;
+	background: white;
+	max-height: 90%;
+	max-width: 90%;
+}
+#caption{
+z-index:10;
+position: relative;
+	height: 10%;
+	width: 400px;
+	margin: auto;
+	text-align: center;
+	color: lightgray;
+	font-size: 25px;
+}
+button.circ{
+font-size: 25px;
+color: white;
+border: none;
+outline:none;
+background: none;
+}
+button.thumb{
+	position: absolute;
+	top: 30%;
+	left:0px;
+	right:0px;
+	width: 100%;
+	text-align: center;
+	outline: none;
+	margin: auto;
+	height: 33%;
+	border: none;
+	background: none;
+	border-radius: none;
+	padding: 0px;
+	margin: 0px;
+}
+img.thumb{
+	height: 90%;
+}
+    </style>
+     <script>
+
+theImages=[	"images/image1.jpg",
+			"images/image64.jpg",
+			"images/image65.jpg",
+			"images/image35.jpg",
+			"images/image40.jpg",
+			"images/image7.jpg",
+			"images/image15.jpg",
+			"images/image19.jpg",
+			"images/image33.jpg",
+			"images/image43.jpg",
+			"images/image44.jpg",
+			"images/image48.jpg",
+			"images/image61.jpg",
+			"images/image31.jpg",
+			"images/image62.jpg",
+			"images/image30.jpg",
+			]
+			
+    var currentImage=0;
+    function showNextImage(){
+    if (currentImage<theImages.length-1)
+	show(currentImage+1);
+    }
+    function showPreviousImage(){
+    if (currentImage>0)
+	show(currentImage-1);
+    }
+    function show(n){
+	photo.src=theImages[n];
+	currentImage=n;
+	var t="";
+	for (i=0;i<theImages.length;i=i+1){
+//		t+="<button class='circ' onclick='show("+i+");'>";
+		if (i==n)
+			t=t+"&bullet; ";
+		else
+			t=t+"&cir; ";
+//		t+="</button>";
+		}
+	caption.innerHTML = t;
+	gallery.style.display='block';
+    }
+    function endshow(){
+	gallery.style.display='none';
+    }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Shannon Snow, <i>Faces</i></div>
+     <div id="content">
+      <button class = "thumb" onclick="show(0);">
+      <img class="thumb" src="images/eyeSmall.jpg"><br>Click to See
+      </button>
+      </div>
+    </div>
+ 
+	<div id="gallery">
+		<div id="page">
+			<div id="photoFrame">
+				<img id="photo" src=""/>
+			</div>
+				<div id='caption'></div>
+		</div>
+		<button id="leftscroll" onclick="showPreviousImage();">&leftarrow;</button>
+		<button id="rightscroll" onclick="showNextImage();">&rightarrow;</button>
+		<button onclick="endshow();" id="closeButton">X</button>	
+	</div>
+    
+  </body>
+</html>
