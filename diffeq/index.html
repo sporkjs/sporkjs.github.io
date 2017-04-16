@@ -97,6 +97,9 @@ button.solveButton{
 #graphDiv{
 	float: left;
 }
+#graph{
+	border: 3px groove black;
+}
 </style>
 
 
@@ -211,7 +214,7 @@ function drawAxis(){
 	
 	graphContext.setLineDash([]);
 	graphContext.beginPath();
-	graphContext.strokeStyle='gray';
+	graphContext.strokeStyle='lightgray';
 	for (x=-10*dx;x<=10*dx;x+=dx){
 		graphContext.moveTo(scaleX(x), scaleY(minY));
 		graphContext.lineTo(scaleX(x), scaleY(maxY));
@@ -250,13 +253,13 @@ function drawAxis(){
 		}
 	}
 function clearGraph(){
-	graphContext.fillStyle='lightgray';
+	graphContext.fillStyle='white';
 	graphContext.fillRect(0,0,width,height);
 	drawAxis();
 }
 function init(){
 	graphContext=graph.getContext('2d');
-	graphContext.fillStyle='lightgray';
+	graphContext.fillStyle='white';
 	width=graph.width;
 	height=graph.height;
 	clearGraph();
@@ -311,7 +314,7 @@ var theColors=['brown',
 function init(){
 	//graphing stuff
 	graphContext=graph.getContext('2d');
-	graphContext.fillStyle='lightgray';
+	graphContext.fillStyle='white';
 	width=graph.width;
 	height=graph.height;
 	clearGraph();
