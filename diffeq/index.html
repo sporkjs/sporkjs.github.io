@@ -67,6 +67,19 @@ table.methodtable{
 	border: 1px solid black;
 	text-align: right;
 }
+#axisTypeDiv{
+	position:relative;
+	padding-top:10px;
+}
+#axisSelectionDiv{
+	position: absolute;
+	top: 10px;
+	background: white;
+	z-index: 10;
+	display: none;
+	border: 1px solid black;
+	text-align: left;
+}
 #methodDiv{
 	padding-top: 10px;
 }
@@ -192,7 +205,22 @@ function drawticks(){
 		}
 	}	
 function drawAxis(){
-	/*
+	var dx=(maxX-minX)/10;
+	var dy=(maxY-minY)/10;
+	var x,y;
+	
+	graphContext.setLineDash([]);
+	graphContext.beginPath();
+	graphContext.strokeStyle='gray';
+	for (x=-10*dx;x<=10*dx;x+=dx){
+		graphContext.moveTo(scaleX(x), scaleY(minY));
+		graphContext.lineTo(scaleX(x), scaleY(maxY));
+		}
+	for (y=-10*dy;y<=10*dy;y+=dy)	{
+		graphContext.moveTo(scaleX(minX), scaleY(y));
+		graphContext.lineTo(scaleX(maxX), scaleY(y));
+		}
+	graphContext.stroke();
 	graphContext.beginPath();
 	graphContext.strokeStyle='black';
 	graphContext.moveTo(scaleX(minX), scaleY(0));
@@ -200,8 +228,26 @@ function drawAxis(){
 	graphContext.moveTo(scaleX(0), scaleY(minY));
 	graphContext.lineTo(scaleX(0), scaleY(maxY));
 	graphContext.stroke();
-	*/
-	drawticks();
+
+	graphContext.fillStyle='black';
+	graphContext.beginPath();
+	for (x=-10*dx;x<=10*dx;x+=dx){
+		graphContext.moveTo(scaleX(x), scaleY(minY)-3);
+		graphContext.lineTo(scaleX(x), scaleY(minY)+3);
+		}
+	for (y=-10*dy;y<=10*dy;y+=dy)	{
+		graphContext.moveTo(scaleX(minX)-3,scaleY(y));
+		graphContext.lineTo(scaleX(minX)+3,scaleY(y));
+		}
+	graphContext.stroke();
+	for (x=-10*dx;x<=10*dx;x+=dx){
+		if ((scaleX(x) > 20) && (scaleX(x)<width-20))
+			graphContext.fillText(x.toFixed(2), scaleX(x),scaleY(minY)-15);
+		}
+	for (y=-10*dy;y<=10*dy;y+=dy)	{
+		if ((scaleY(y) > 20) && (scaleY(y)<height-20))
+			graphContext.fillText(y.toFixed(2), scaleX(minX)+10,scaleY(y));
+		}
 	}
 function clearGraph(){
 	graphContext.fillStyle='lightgray';
@@ -216,6 +262,21 @@ function init(){
 	clearGraph();
 	cacheMath();
 }
+function showArrow(x1,y1,x2,y2){
+	var X=(x1+x2)/2;
+	var Y=(y1+y2)/2;
+	var dx=x2-x1;
+	var dy=y2-y1;
+	graphContext.save();
+	graphContext.translate(scaleX(x1),scaleY(y1));
+	graphContext.rotate(2*pi-atan2(dy,dx));
+	graphContext.beginPath();
+	graphContext.moveTo(-10, -10);
+	graphContext.lineTo(0,0);
+	graphContext.lineTo(-10, 10);
+	graphContext.stroke();
+	graphContext.restore();
+}
 function plotPoints(X,Y,c,d){
 	var i;
 	graphContext.strokeStyle=c;
@@ -225,12 +286,17 @@ function plotPoints(X,Y,c,d){
 	for (i=1;i<T.length;i++)
 		graphContext.lineTo(scaleX(X[i]),scaleY(Y[i]));
 	graphContext.stroke();
+	
+	var dt=floor(T.length/4);
+	for (i=0;i<=T.length;i+=dt){
+		showArrow(X[i],Y[i], X[i+1], Y[i+1]);
+		}
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 var numEq = 1;
 var theEquations, dxdt,x0,theGraphOptions,graphCheckBoxes,DT,T, euler=[], rk4=[];
-var theColors=['gray',
+var theColors=['brown',
 			'black',
 			'red',
 			'orange',
@@ -307,6 +373,14 @@ function hideGraphOptions(){
 	graphSelectionDiv.style.display='none';
 	cover.style.display='none';
 }
+function showAxisOptions(){
+	axisSelectionDiv.style.display='block';
+	cover.style.display='block';
+}
+function hideAxisOptions(){
+	axisSelectionDiv.style.display='none';
+	cover.style.display='none';
+}
 function graphXY(){
 	for (i=1;i<=9;i++)
 		graphCheckBoxes[i].checked=false;
@@ -329,50 +403,78 @@ function setupT(){
 }
 function showTable(){
 
-	var i,j;
+	var i,j,c;
 	var s='<tr><td></td>';
-	if (eulerMethod.checked==true) s+='<th colspan='+numEq+'>Euler</th>';
-	if (rk4Method.checked==true) s+='<th colspan='+numEq+'>RK4</th>';
+	if (eulerMethod.checked==true) s+='<th colspan='+numEq*NUMCONDITIONS+'>Euler</th>';
+	if (rk4Method.checked==true) s+='<th colspan='+numEq*NUMCONDITIONS+'>RK4</th>';
 	s+='</tr><tr><td>t</td>';
 	if (eulerMethod.checked==true)
 		for (i=1;i<=numEq;i++)
-			s+='<td style="color: '+theColors[i]+';">x<sub>'+i+'</sub></td>';
+			s+='<td colspan='+NUMCONDITIONS+' style="color: '+theColors[i]+';">x<sub>'+i+'</sub></td>';
 	if (rk4Method.checked==true)
 		for (i=1;i<=numEq;i++)
-			s+='<td style="color: '+theColors[i]+';">x<sub>'+i+'</sub></td>';
+			s+='<td  colspan='+NUMCONDITIONS+' style="color: '+theColors[i]+';">x<sub>'+i+'</sub></td>';
 	s+='</tr>';
 	for (j=0;j<T.length;j++){
 		s+='<tr><td>'+T[j].toFixed(8)+'</td>';
 		if (eulerMethod.checked==true)
 			for (i=1;i<=numEq;i++)
-				s+='<td style="color: '+theColors[i]+';">'+euler[i][j].toFixed(8)+'</td>';		
+			for (c=0;c<NUMCONDITIONS;c++)
+				s+='<td style="color: '+theColors[i]+';">'+EULEROUTPUT[i][c][j].toFixed(8)+'</td>';		
 		if (rk4Method.checked==true)
 			for (i=1;i<=numEq;i++)
-				s+='<td style="color: '+theColors[i]+';">'+rk4[i][j].toFixed(8)+'</td>';		
+			for (c=0;c<NUMCONDITIONS;c++)
+				s+='<td style="color: '+theColors[i]+';">'+RK4OUTPUT[i][c][j].toFixed(8)+'</td>';		
 	}
 	s+='</tr>';
 	dataTable.innerHTML=s;
+}
+var XO=[];
+var EULEROUTPUT=[];
+var RK4OUTPUT=[];
+var NUMCONDITIONS=1;
+function getInitialConditions(){
+var i,j;
+	for (i=1;i<=numEq;i++){
+		XO[i]=[];
+		XO[i]=x0[i].value.split(',');
+		EULEROUTPUT[i]=[];
+		RK4OUTPUT[i]=[];
+		for (j=0;j<XO[i].length;j++){
+			EULEROUTPUT[i][j]=[];
+			RK4OUTPUT[i][j]=[];
+			}
+	}
+	NUMCONDITIONS=XO[1].length;
+	for (i=1;i<=numEq;i++)
+		NUMCONDITIONS=min(NUMCONDITIONS,XO[i].length);
 }
 function eulerSolve(){
 	var dxdtfcn=[];
 	var x1,x2,x3,x4,x5,x6,x7,x8,x9,t,s;
 	var i,j,k;
+	var INITIALCONDITION;
+
 	for (i=1;i<=numEq;i++)
 		dxdtfcn[i]=fixExponents(dxdt[i].value);
+for (INITIALCONDITION=0;INITIALCONDITION<NUMCONDITIONS;INITIALCONDITION++){		
 	for (i=1;i<=numEq;i++){
 		euler[i]=[];
-		euler[i][0]=eval(fixExponents(x0[i].value));
+		euler[i][0]=eval(fixExponents(XO[i][INITIALCONDITION]));
 	}	
 	for (j=1;j<T.length;j++){
 		for (k=1;k<=numEq;k++){
 			s='x'+k+'=euler['+k+']['+(j-1)+'];'
 			eval(s);
 		}
-
 		t=T[j-1];
 		for (i=1;i<=numEq;i++)
 			euler[i][j]=euler[i][j-1]+DT*eval(dxdtfcn[i]);
 		}
+for (i=1;i<=numEq;i++)
+	for (j=0;j<T.length;j++)
+		EULEROUTPUT[i][INITIALCONDITION][j]=euler[i][j];
+}		
 }
 function rk4Solve(){
 	var dxdtfcn=[];
@@ -382,11 +484,14 @@ function rk4Solve(){
 	var K2=[];
 	var K3=[];
 	var K4=[];
+	var INITIALCONDITION;
+	
+for (INITIALCONDITION=0;INITIALCONDITION<NUMCONDITIONS;INITIALCONDITION++){		
 	for (i=1;i<=numEq;i++)
 		dxdtfcn[i]=fixExponents(dxdt[i].value);
 	for (i=1;i<=numEq;i++){
 		rk4[i]=[];
-		rk4[i][0]=eval(fixExponents(x0[i].value));
+		rk4[i][0]=eval(fixExponents(XO[i][INITIALCONDITION]));
 	}	
 	for (j=1;j<T.length;j++){
 		//Find K1
@@ -430,36 +535,49 @@ function rk4Solve(){
 		rk4[i][j]=rk4[i][j-1]+DT*(K1[i]+2*K2[i]+2*K3[i]+K4[i])/6	;
 
 	}	
+for (i=1;i<=numEq;i++)
+	for (j=0;j<T.length;j++)
+		RK4OUTPUT[i][INITIALCONDITION][j]=rk4[i][j];	
+		}
 }
 function setUpAxis(){
-	var i,j;
+	var i,j,c;
+	if (!autoaxis.checked){
+		minX=eval(fixExponents(minxinput.value));
+		maxX=eval(fixExponents(maxxinput.value));
+		minY=eval(fixExponents(minyinput.value));
+		maxY=eval(fixExponents(maxyinput.value));
+	}
+	else{
 	if (graphCheckBoxes[0].checked == true){
 		if (eulerMethod.checked==true){
-			minX=euler[1][0];
-			maxX=euler[1][0];
-			minY=euler[2][0];
-			maxY=euler[2][0];
+			minX=EULEROUTPUT[1][0][0];
+			maxX=EULEROUTPUT[1][0][0];
+			minY=EULEROUTPUT[2][0][0];
+			maxY=EULEROUTPUT[2][0][0];
 		}
 		else{
-			minX=rk4[1][0];
-			maxX=rk4[1][0];
-			minY=rk4[2][0];
-			maxY=rk4[2][0];
+			minX=RK4OUTPUT[1][0][0];
+			maxX=RK4OUTPUT[1][0][0];
+			minY=RK4OUTPUT[2][0][0];
+			maxY=RK4OUTPUT[2][0][0];
 		}
 		if (eulerMethod.checked==true){
-			for (i=0;i<T.length;i++){
-				if (euler[1][i]<minX) minX=euler[1][i];
-				if (euler[1][i]>maxX) maxX=euler[1][i];
-				if (euler[2][i]<minY) minY=euler[2][i];
-				if (euler[2][i]>maxY) maxY=euler[2][i];
+			for (i=0;i<T.length;i++)
+			for (c=0;c<NUMCONDITIONS;c++){
+				if (EULEROUTPUT[1][c][i]<minX) minX=EULEROUTPUT[1][c][i];
+				if (EULEROUTPUT[1][c][i]>maxX) maxX=EULEROUTPUT[1][c][i];
+				if (EULEROUTPUT[2][c][i]<minY) minY=EULEROUTPUT[2][c][i];
+				if (EULEROUTPUT[2][c][i]>maxY) maxY=EULEROUTPUT[2][c][i];
 			}
 		}
 		if (rk4Method.checked==true){
-			for (i=0;i<T.length;i++){
-				if (rk4[1][i]<minX) minX=rk4[1][i];
-				if (rk4[1][i]>maxX) maxX=rk4[1][i];
-				if (rk4[2][i]<minY) minY=rk4[2][i];
-				if (rk4[2][i]>maxY) maxY=rk4[2][i];
+			for (i=0;i<T.length;i++)
+			for (c=0;c<NUMCONDITIONS;c++){
+				if (RK4OUTPUT[1][c][i]<minX) minX=RK4OUTPUT[1][c][i];
+				if (RK4OUTPUT[1][c][i]>maxX) maxX=RK4OUTPUT[1][c][i];
+				if (RK4OUTPUT[2][c][i]<minY) minY=RK4OUTPUT[2][c][i];
+				if (RK4OUTPUT[2][c][i]>maxY) maxY=RK4OUTPUT[2][c][i];
 			}		
 		}
 	}
@@ -474,47 +592,57 @@ function setUpAxis(){
 		while(graphCheckBoxes[i].checked==false)
 			i++
 		if (eulerMethod.checked==true){
-			minY=euler[i][0];
-			maxY=euler[i][0];
+			minY=EULEROUTPUT[i][0][0];
+			maxY=EULEROUTPUT[i][0][0];
 		}
 		else{
-			minY=rk4[i][0];
-			maxY=rk4[i][0];
+			minY=RK4OUTPUT[i][0][0];
+			maxY=RK4OUTPUT[i][0][0];
 		}
 		if (eulerMethod.checked==true){
 			for (i=1;i<=numEq;i++)
 				for (j=0;j<T.length;j++)
+			for (c=0;c<NUMCONDITIONS;c++)
 				if (graphCheckBoxes[i].checked==true){
-					if (euler[i][j]<minY) minY=euler[i][j];
-					if (euler[i][j]>maxY) maxY=euler[i][j];
+					if (EULEROUTPUT[i][c][j]<minY) minY=EULEROUTPUT[i][c][j];
+					if (EULEROUTPUT[i][c][j]>maxY) maxY=EULEROUTPUT[i][c][j];
 				}
 		}
 		if (rk4Method.checked==true){
 			for (i=1;i<=numEq;i++)
 				for (j=0;j<T.length;j++)
+			for (c=0;c<NUMCONDITIONS;c++)
 				if (graphCheckBoxes[i].checked==true){
-					if (rk4[i][j]<minY) minY=rk4[i][j];
-					if (rk4[i][j]>maxY) maxY=rk4[i][j];
+					if (RK4OUTPUT[i][c][j]<minY) minY=RK4OUTPUT[i][c][j];
+					if (RK4OUTPUT[i][c][j]>maxY) maxY=RK4OUTPUT[i][c][j];
 				}		
 		}
 	}
+	}
 	clearGraph();
 }
+
 function showEulerGraph(){
+	var c,i;
 	if (graphCheckBoxes[0].checked==true)
-		plotPoints(euler[1], euler[2],'black',[2]);
+				for (c=0;c<NUMCONDITIONS;c++)
+					plotPoints(EULEROUTPUT[1][c], EULEROUTPUT[2][c],theColors[c],[2]);
 	else
 		for (i=1;i<=numEq;i++)
 			if (graphCheckBoxes[i].checked==true)
-				plotPoints(T,euler[i],theColors[i],[2]);
+				for (c=0;c<NUMCONDITIONS;c++)
+					plotPoints(T,EULEROUTPUT[i][c],theColors[i],[2]);
+					
 }
 function showRK4Graph(){
 	if (graphCheckBoxes[0].checked==true)
-		plotPoints(rk4[1], rk4[2],'black',[]);
+		for (c=0;c<NUMCONDITIONS;c++)
+		plotPoints(RK4OUTPUT[1][c], RK4OUTPUT[2][c],theColors[c],[]);
 	else
 		for (i=1;i<=numEq;i++)
+		for (c=0;c<NUMCONDITIONS;c++)
 			if (graphCheckBoxes[i].checked==true)
-				plotPoints(T,rk4[i],theColors[i],[]);
+				plotPoints(T,RK4OUTPUT[i][c],theColors[i],[]);
 }
 function showGraph(){
 	setUpAxis();
@@ -529,6 +657,7 @@ function solveit(){
 	euler=[];
 	rk4=[];
 	var i;
+	getInitialConditions();
 	eulerSolve();
 	rk4Solve();
 	showGraph();
@@ -566,20 +695,34 @@ function solveit(){
 				<br>
 				<button onclick='hideGraphOptions();'>Close</button>
 			</div>	
-		</div>		
+		</div>	
+		<div id='axisTypeDiv'>
+			<div class='smallerheader'>Axis <button onclick='showAxisOptions();'>Select</button></div>
+			<div id='axisSelectionDiv'>
+				<input type='radio' name='axistype' id='autoaxis' checked> Automatic Axis <br>
+				<input type='radio' name='axistype'> Fixed Axis<br>
+				<table>
+				<tr><td class='rightalign'>Min X</td><td><input type='text' id='minxinput' value='-10'></td></tr>
+				<tr><td class='rightalign'>Max X</td><td><input type='text' id='maxxinput' value='10'></td></tr>
+				<tr><td class='rightalign'>Min Y</td><td><input type='text' id='minyinput' value='-10'></td></tr>
+				<tr><td class='rightalign'>Max Y</td><td><input type='text' id='maxyinput' value='10'></td></tr>
+				</table>
+				<button onclick='hideAxisOptions();'>Close</button>
+			</div>
+		</div>
 		<button class='solveButton' onclick='solveit();'>Solve it!</button>
 		<div id='tDiv'>
 		<table>
 			<tr><td class='rightalign'>t<sub>min</sub></td><td>=</td><td> <input type='text' id='tmin' value='0'></td></tr>
-			<tr><td class='rightalign'>t<sub>max</sub></td><td>=</td><td> <input type='text' id='tmax' value='1'></td></tr>
-			<tr><td class='rightalign'>&Delta;t</td><td>=</td><td> <input type='text' id='dt' value='0.5'></input></td></tr>
+			<tr><td class='rightalign'>t<sub>max</sub></td><td>=</td><td> <input type='text' id='tmax' value='2*pi'></td></tr>
+			<tr><td class='rightalign'>&Delta;t</td><td>=</td><td> <input type='text' id='dt' value='0.05'></input></td></tr>
 		</table>
 		</div>
 		<div id='equationDiv'>
 			<table id='equationTable'>
 				<tr class='equation'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>0</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value=''></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>0</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
-				<tr class='equation first'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>1</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value='2*t'></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>1</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
-				<tr class='equation'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>2</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value=''></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>2</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
+				<tr class='equation first'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>1</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value='cos(t)'></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>1</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
+				<tr class='equation'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>2</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value='sin(t)'></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>2</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
 				<tr class='equation'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>3</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value=''></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>3</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
 				<tr class='equation'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>4</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value=''></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>4</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
 				<tr class='equation'>	<td class='rightalign'><div class='fraction'><div class='numerator'>dx<sub>5</sub></div><div class='denominator'>dt</div></div></td><td>=</td><td> <input type='text' class='dxdt' value=''></td><td>&nbsp;&nbsp;</td><td class='rightalign'>x<sub>5</sub>(t<sub>min</sub>)</td><td>=</td><td><input type='text' class='initial' value='0'></td></tr>		
