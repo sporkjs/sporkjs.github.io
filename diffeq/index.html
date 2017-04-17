@@ -145,6 +145,7 @@ function fixExponentsOld(s){
 	return a;
 	}
 function fixExponents(s){
+	s=s.replace(/(\d+)\.(\d+)/g,'($1.$2)');
 	var i=0;
 	var re1=/:OP(\d+):([^]*):CP\1:\s*\^\s*:OP(\d+):([^]*):CP\3:/
 	var re2=/:OP(\d+):([^]*):CP\1:\s*\^\s*(\w*)/
@@ -700,10 +701,10 @@ function solveit(){
 			</div>	
 		</div>	
 		<div id='axisTypeDiv'>
-			<div class='smallerheader'>Axis <button onclick='showAxisOptions();'>Select</button></div>
+			<div class='smallerheader'>Window <button onclick='showAxisOptions();'>Select</button></div>
 			<div id='axisSelectionDiv'>
-				<input type='radio' name='axistype' id='autoaxis' checked> Automatic Axis <br>
-				<input type='radio' name='axistype'> Fixed Axis<br>
+				<input type='radio' name='axistype' id='autoaxis' checked> Automatic <br>
+				<input type='radio' name='axistype'> Fixed <br>
 				<table>
 				<tr><td class='rightalign'>Min X</td><td><input type='text' id='minxinput' value='-10'></td></tr>
 				<tr><td class='rightalign'>Max X</td><td><input type='text' id='maxxinput' value='10'></td></tr>
