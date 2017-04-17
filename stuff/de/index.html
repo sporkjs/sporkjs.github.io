@@ -207,33 +207,9 @@ function drawticks(){
 	for (x=height/10.0;x<height;x+=height/10.0){
 		graphContext.fillText(unscaleY(x), scaleX(minX)+10,x);
 		}
-	}	
-function drawAxis(){
-	var dx=(maxX-minX)/10;
-	var dy=(maxY-minY)/10;
-	var x,y;
-	
-	graphContext.setLineDash([]);
-	graphContext.beginPath();
-	graphContext.strokeStyle='lightgray';
-	for (x=-10*dx;x<=10*dx;x+=dx){
-		graphContext.moveTo(scaleX(x), scaleY(minY));
-		graphContext.lineTo(scaleX(x), scaleY(maxY));
-		}
-	for (y=-10*dy;y<=10*dy;y+=dy)	{
-		graphContext.moveTo(scaleX(minX), scaleY(y));
-		graphContext.lineTo(scaleX(maxX), scaleY(y));
-		}
-	graphContext.stroke();
-	graphContext.beginPath();
-	graphContext.strokeStyle='black';
-	graphContext.moveTo(scaleX(minX), scaleY(0));
-	graphContext.lineTo(scaleX(maxX), scaleY(0));
-	graphContext.moveTo(scaleX(0), scaleY(minY));
-	graphContext.lineTo(scaleX(0), scaleY(maxY));
-	graphContext.stroke();
-
-	graphContext.fillStyle='black';
+		
+//extra:
+/*
 	graphContext.beginPath();
 	for (x=-10*dx;x<=10*dx;x+=dx){
 		graphContext.moveTo(scaleX(x), scaleY(minY)-3);
@@ -244,14 +220,39 @@ function drawAxis(){
 		graphContext.lineTo(scaleX(minX)+3,scaleY(y));
 		}
 	graphContext.stroke();
-	for (x=-10*dx;x<=10*dx;x+=dx){
+	*/
+	}	
+function drawAxis(){
+	var dx=(maxX-minX)/10;
+	var dy=(maxY-minY)/10;
+	var x,y;
+
+	graphContext.setLineDash([]);
+	graphContext.beginPath();
+	graphContext.strokeStyle='lightgray';
+	graphContext.fillStyle='black';
+	for (x=-10*dx;x<=minX;x=x+dx);
+	for (;x<=maxX;x+=dx){
+		graphContext.moveTo(scaleX(x), scaleY(minY));
+		graphContext.lineTo(scaleX(x), scaleY(maxY));
 		if ((scaleX(x) > 20) && (scaleX(x)<width-20))
 			graphContext.fillText(x.toFixed(2), scaleX(x),scaleY(minY)-15);
 		}
-	for (y=-10*dy;y<=10*dy;y+=dy)	{
+	for (y=-10*dy;y<=minY;y=y+dy);
+	for (;y<=maxY;y+=dy)	{
+		graphContext.moveTo(scaleX(minX), scaleY(y));
+		graphContext.lineTo(scaleX(maxX), scaleY(y));
 		if ((scaleY(y) > 20) && (scaleY(y)<height-20))
 			graphContext.fillText(y.toFixed(2), scaleX(minX)+10,scaleY(y));
 		}
+	graphContext.stroke();
+	graphContext.beginPath();
+	graphContext.strokeStyle='black';
+	graphContext.moveTo(scaleX(minX), scaleY(0));
+	graphContext.lineTo(scaleX(maxX), scaleY(0));
+	graphContext.moveTo(scaleX(0), scaleY(minY));
+	graphContext.lineTo(scaleX(0), scaleY(maxY));
+	graphContext.stroke();
 	}
 function clearGraph(){
 	graphContext.fillStyle='white';
@@ -283,6 +284,8 @@ function showArrow(x1,y1,x2,y2){
 }
 function plotPoints(X,Y,c,d){
 	var i;
+	graphContext.save();
+	graphContext.lineWidth=2;
 	graphContext.strokeStyle=c;
 	graphContext.setLineDash(d);	
 	graphContext.beginPath();
@@ -295,6 +298,7 @@ function plotPoints(X,Y,c,d){
 	for (i=0;i<=T.length;i+=dt){
 		showArrow(X[i],Y[i], X[i+1], Y[i+1]);
 		}
+	graphContext.restore();	
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------
@@ -630,7 +634,7 @@ function showEulerGraph(){
 	var c,i;
 	if (graphCheckBoxes[0].checked==true)
 				for (c=0;c<NUMCONDITIONS;c++)
-					plotPoints(EULEROUTPUT[1][c], EULEROUTPUT[2][c],theColors[c],[2]);
+					plotPoints(EULEROUTPUT[1][c], EULEROUTPUT[2][c],theColors[c+1],[2]);
 	else
 		for (i=1;i<=numEq;i++)
 			if (graphCheckBoxes[i].checked==true)
@@ -641,7 +645,7 @@ function showEulerGraph(){
 function showRK4Graph(){
 	if (graphCheckBoxes[0].checked==true)
 		for (c=0;c<NUMCONDITIONS;c++)
-		plotPoints(RK4OUTPUT[1][c], RK4OUTPUT[2][c],theColors[c],[]);
+		plotPoints(RK4OUTPUT[1][c], RK4OUTPUT[2][c],theColors[c+1],[]);
 	else
 		for (i=1;i<=numEq;i++)
 		for (c=0;c<NUMCONDITIONS;c++)
