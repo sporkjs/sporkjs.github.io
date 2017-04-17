@@ -304,16 +304,17 @@ function plotPoints(X,Y,c,d){
 //---------------------------------------------------------------------------------------------------------------------------------------
 var numEq = 1;
 var theEquations, dxdt,x0,theGraphOptions,graphCheckBoxes,DT,T, euler=[], rk4=[];
-var theColors=['brown',
-			'black',
-			'red',
-			'orange',
-			'brown',
-			'green',
-			'blue',
-			'indigo',
-			'violet',
-			'pink',
+var theColors=[
+['brown','black','red','orange','brown','green','blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['black','red','orange','brown','green','blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['red','orange','brown','green','blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['orange','brown','green','blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['brown','green','blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['green','blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['blue','indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['indigo','violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['violet','pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
+['pink','brown','black','red','orange','brown','green','blue','indigo','violet','pink'],
 			];
 
 function init(){
@@ -332,11 +333,18 @@ function init(){
 	graphCheckBoxes=document.getElementsByClassName('graphCheck');
 	
 	var i;
-	for (i=0;i<=9;i++){
-		theEquations[i].style.color=theColors[i];
-		theGraphOptions[i].style.color=theColors[i];
+	var j;
+	var M=floor(16777215 /100);
+/*	for (i=0;i<=10;i++){
+		theColors[i]=[];
+		for (j=0;j<=10;j++){
+			theColors[i][j]='rgb('+i*75+','+j*75+','+(i+j)*50+')';
+		}
+	}	
+*/	for (i=0;i<=9;i++){
+		theEquations[i].style.color=theColors[i][0];
+		theGraphOptions[i].style.color=theColors[i][0];
 	}
-
 }
 function showEquations(){
 	var i;
@@ -418,21 +426,21 @@ function showTable(){
 	s+='</tr><tr><td>t</td>';
 	if (eulerMethod.checked==true)
 		for (i=1;i<=numEq;i++)
-			s+='<td colspan='+NUMCONDITIONS+' style="color: '+theColors[i]+';">x<sub>'+i+'</sub></td>';
+			s+='<td colspan='+NUMCONDITIONS+' style="color: '+theColors[i][0]+';">x<sub>'+i+'</sub></td>';
 	if (rk4Method.checked==true)
 		for (i=1;i<=numEq;i++)
-			s+='<td  colspan='+NUMCONDITIONS+' style="color: '+theColors[i]+';">x<sub>'+i+'</sub></td>';
+			s+='<td  colspan='+NUMCONDITIONS+' style="color: '+theColors[i][0]+';">x<sub>'+i+'</sub></td>';
 	s+='</tr>';
 	for (j=0;j<T.length;j++){
 		s+='<tr><td>'+T[j].toFixed(8)+'</td>';
 		if (eulerMethod.checked==true)
 			for (i=1;i<=numEq;i++)
 			for (c=0;c<NUMCONDITIONS;c++)
-				s+='<td style="color: '+theColors[i]+';">'+EULEROUTPUT[i][c][j].toFixed(8)+'</td>';		
+				s+='<td style="color: '+theColors[i][c]+';">'+EULEROUTPUT[i][c][j].toFixed(8)+'</td>';		
 		if (rk4Method.checked==true)
 			for (i=1;i<=numEq;i++)
 			for (c=0;c<NUMCONDITIONS;c++)
-				s+='<td style="color: '+theColors[i]+';">'+RK4OUTPUT[i][c][j].toFixed(8)+'</td>';		
+				s+='<td style="color: '+theColors[i][c]+';">'+RK4OUTPUT[i][c][j].toFixed(8)+'</td>';		
 	}
 	s+='</tr>';
 	dataTable.innerHTML=s;
@@ -634,23 +642,23 @@ function showEulerGraph(){
 	var c,i;
 	if (graphCheckBoxes[0].checked==true)
 				for (c=0;c<NUMCONDITIONS;c++)
-					plotPoints(EULEROUTPUT[1][c], EULEROUTPUT[2][c],theColors[c+1],[2]);
+					plotPoints(EULEROUTPUT[1][c], EULEROUTPUT[2][c],theColors[0][c],[2]);
 	else
 		for (i=1;i<=numEq;i++)
 			if (graphCheckBoxes[i].checked==true)
 				for (c=0;c<NUMCONDITIONS;c++)
-					plotPoints(T,EULEROUTPUT[i][c],theColors[i],[2]);
+					plotPoints(T,EULEROUTPUT[i][c],theColors[i][c],[2]);
 					
 }
 function showRK4Graph(){
 	if (graphCheckBoxes[0].checked==true)
 		for (c=0;c<NUMCONDITIONS;c++)
-		plotPoints(RK4OUTPUT[1][c], RK4OUTPUT[2][c],theColors[c+1],[]);
+		plotPoints(RK4OUTPUT[1][c], RK4OUTPUT[2][c],theColors[0][c],[]);
 	else
 		for (i=1;i<=numEq;i++)
 		for (c=0;c<NUMCONDITIONS;c++)
 			if (graphCheckBoxes[i].checked==true)
-				plotPoints(T,RK4OUTPUT[i][c],theColors[i],[]);
+				plotPoints(T,RK4OUTPUT[i][c],theColors[i][c],[]);
 }
 function showGraph(){
 	setUpAxis();
