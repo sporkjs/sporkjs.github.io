@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+                 <title>Nat Attack's Page</title>
+		<link rel="stylesheet" type="text/css" href="style1.css">
+                  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script src='portfolio.js'></script>
+
+                  <style>
+		
+
+
+
+			#theDiv{
+				
+				text-align: center;
+
+			}
+			#spork{
+				
+				text-align:center;
+			}
+</style>
+		<script src="spork.js"></script>
+<script>
+function drawCircle(){
+  save();
+  fillcolor('lightgreen');
+  circle(200,200,200);
+  fill();
+  restore();
+}
+var x;
+var y;
+var numPoints;
+var numInCircle;
+
+function draw(){
+  x=random()*400;
+  y=random()*400;
+  pointColor();
+  drawPoints();
+  loop();
+  drawText();
+
+  
+  
+}
+
+function setup(){
+  size(400,420);
+  drawCircle();
+  drawPoints();
+  numPoints=0;
+  numInCircle=0;
+  font('12px Courier');
+  
+}
+
+function drawPoints(){
+  point(x,y);
+  numPoints=numPoints+1;
+  
+}
+
+function pointColor(){
+  if((x-200)*(x-200)+(y-200)*(y-200)<(200*200)){
+    color('blue');
+    numInCircle=numInCircle+1;
+  }
+  else{
+    color('green');
+  }
+  
+}
+
+		function drawText(){
+  			fillcolor('green');
+  			rect(0,400,400,20);
+  			fill();
+  			fillcolor('white');
+  			filltext('Aprroximation of Pi with '+numPoints+' points ='+4*numInCircle/numPoints,10,415)
+		}
+
+</script>
+
+<Body>
+<script>writeHeader();</script>
+<div class='content'>
+<div id="spork">
+
+</div>
+</div>
+<p>
+<a href="index.html">Go back</a>
+</p>
+<br><br>
+<script>writeFooter();</script>
+
+
+</body>
+
+</html>
