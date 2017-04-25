@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Brownian Color</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+</style>
+<script src="spork.js"></script>
+<script>
+
+var x=200;
+var y=200;
+
+function setup(){
+x=200;
+y=200;
+  loop();
+}
+function draw(){
+vx=floor(3*random())-1;
+vy=floor(3*random())-1;
+  x=x+vx;
+y=y+vy;
+randomColor();
+point (x,y);
+}
+function randomColor(){
+  R=floor(256*random());
+  G=floor(256*random());
+  B=floor(256*random());
+  A=random();
+  color(R,G,B,A);
+  fillcolor(R,G,B,A);
+}
+</script>
+
+</head>
+
+<body>
+ 
+</div>
+
+<div class='content'>
+
+<div id="spork"></div>
+
+</div>
+</body>
+<a href= "portfolioindex.html">Return to Homepage</a>
+</html>

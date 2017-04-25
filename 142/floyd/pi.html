@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Approximating Pi</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<style>
+
+</style>
+
+<script src="spork.js"></script>
+
+<script>
+
+
+
+  var numPoints;
+  var numInCircle;
+
+function setup(){
+ size(400,420)
+ background('white');
+  loop() 
+  circle(200,200,200);
+ numPoints=0
+ numInCircle=0
+ font("bold 12px Courier");
+}
+function draw(){
+  
+  
+  
+  x=400*random();
+  y=400*random();
+  
+  if ((x-200)*(x-200)+(y-200)*(y-200)<40000){
+      color('purple');
+    numInCircle=numInCircle+1;
+  }
+    else
+      color('black');
+  point(x,y);
+  numPoints=numPoints+1;
+
+  rect(0, 400, 400, 20);
+  fillcolor('white');
+            fill();
+  
+fillcolor('deeppink');
+filltext('Approximtion of Pi with ' + numPoints + ' points= ' + 4* numInCircle/numPoints, 10,415);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class='content'>
+
+<div id="spork"></div>
+
+<a href= "portfolioindex.html">Return to Homepage</a>
+</div>
+</body>
+
+</html>

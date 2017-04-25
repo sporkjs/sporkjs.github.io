@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paper Doll</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+body{
+	text-align:center;
+	
+}
+#titleBar{
+	font-size: 50px;
+	font-style: italic;
+	color: white;
+}
+#content{
+	background: white;
+	width: 80%;
+	margin: auto;
+}
+#paperDoll{
+	position: relative;
+	height: 625px;
+	width: 500px;
+	margin: auto;
+}
+img.clothes{
+	position: absolute;
+	left: 0px;
+	height: 100%;
+}
+button.select{
+	height: 100px;
+	background:white;
+	width:175px;
+	text-align:center;
+}
+img.select{
+	height:90%;
+}
+#shoeDiv{
+text-align:center;
+}
+
+#accessoriesDiv{
+	position:fixed;
+	left:0px;
+	top:0px;
+	text-align:left;
+	width:150px;
+}
+
+#outfitstaplesDiv{
+	position:fixed;
+	right:0px;
+	width:150px;
+	top:150px;
+	text-align:right;
+}
+div.selectionDiv{
+	
+}
+</style>
+<script>
+function clearAll(){
+outfitstaples2.src='blank.png';
+outfitstaples1.src='blank.png';
+shoes.src='blank.png';
+accessories1.src='blank.png';
+accessories2.src='blank.png';
+accessories3.src='blank.png';
+accessories4.src='blank.png';
+}
+</script>
+</head>
+<body>
+<div id='titleBar'>Paper Doll</div>
+
+<div id='content'>
+
+</div>
+		
+	<div id='accessoriesDiv' class='selectionDiv'>
+		<button class='select' onclick='accessories1.src="smscepter1.png";'><img class='select'src='smscepter01.png'></button>
+		<button class='select' onclick='accessories1.src="smscepter2.png";'><img class='select' src='smscepter02.png'></button>
+		<button class='select' onclick='accessories2.src="smgloves.png";'><img class='select' src='smgloves1.png'></button>
+		<button class='select' onclick='accessories3.src="smschoolbow.png";'><img class='select' src='smschoolbow1.png'></button>
+		<button class='select' onclick='accessories3.src="smuniformbow.png";'><img class='select' src='smuniformbow1.png'></button>
+		<button class='select' onclick='accessories4.src="luna.png";'><img class='select' src='luna1.png'></button>
+	
+	</div>
+ <div id='outfitstaplesDiv' class='selectionDiv'>
+		<button class='select' onclick='outfitstaples1.src="smuniform.png"; outfitstaples2.src="blank.png";'><img class='select' src='smuniform1.png'></button>
+		<button class='select' onclick='outfitstaples1.src="smschoolshirt.png";'><img class='select' src='smschoolshirt1.png'></button>
+		<button class='select' onclick='outfitstaples2.src="smschoolskirt.png";'><img class='select' src='smschoolskirt1.png'></button>
+		<button onclick='clearAll();'class='select' ><img class='select' src='sailormoondoll.jpg'></button>
+		
+		
+		
+	</div>
+
+<div id='paperDoll'>
+	<img id='model'  	name='model'	class='clothes' src='sailormoondoll.jpg'>
+	<img id='outfitstaples2' 		name='outfitstaples' 	class='clothes' src='blank.png'>
+	<img id='outfitstaples1' 		name='outfitstaples' 	class='clothes' src='blank.png'>
+	<img id='shoes' 	name='shoes'	class='clothes' src='blank.png'>
+	<img id='accessories1' 	name='accessories'	class='clothes' src='blank.png'>
+	<img id='accessories2' 	name='accessories'	class='clothes' src='blank.png'>
+	<img id='accessories3' 	name='accessories'	class='clothes' src='blank.png'>
+	<img id='accessories4' 	name='accessories'	class='clothes' src='blank.png'>
+	
+	
+	
+</div>
+</div>
+</body>
+<br></br>
+<div id='shoeDiv' class='selectionDiv'>
+		<button class='select' onclick='shoes.src="smboots.png";'><img class='select' src='smboots1.png'></button>
+		<button class='select' onclick='shoes.src="smshoes.png";'><img class='select' src='smshoes1.png'></button>
+		<button class='select' onclick='shoes.src="blank.png";'><img class='select' src='feet.png'></button>	
+</div>
+<br></br>
+<a href= "../portfolioindex.html">Return to Homepage</a>
+</html>

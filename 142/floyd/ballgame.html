@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cup and Ball Game</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+</style>
+<script src="spork.js"></script>
+<script>
+var Ballx;
+var Bally;
+var Cupx;
+var Score;
+var GameNotOver;
+var v;
+
+function setup(){
+  Bally=0;
+  Ballx=random()*400;
+  loop();
+  Cupx=200;
+  Score=0;
+  timestep(10);
+  GameNotOver=true;
+  v=1;
+}
+
+
+function draw(){
+  clear();
+  save();
+  background('lightblue');
+circle(200, 200, 100);
+fillcolor('yellow');
+fill();
+  restore();
+  
+  drawBall();
+  Bally=Bally+v;
+  bounce();
+  drawCup();
+  filltext(Score,15,45)
+}
+function drawBall(){
+  circle (Ballx,Bally,7);
+  fill();
+}
+function bounce(){
+  if (Bally>375){
+    if ((Cupx-10<Ballx)&(Ballx<Cupx +10)&(GameNotOver)){
+     Bally=0;
+     Ballx=random()*400;
+     Score=Score+1;
+    v=v+.25
+    }
+  
+  else{
+    filltext ('Game Over',100,200);
+    GameNotOver=false;
+  }}
+}
+function drawCup(){
+  arc(Cupx,375,15,0,180);
+  fill();
+}
+function onkeydown(){
+  if (keyCode == rightArrow)
+    Cupx=Cupx+5;
+  if(keyCode == leftArrow)
+    Cupx=Cupx-5;
+  if (keyChar=='S')
+    setup();
+}
+</script>
+</head>
+<body>
+<div id="spork"></div>
+<a href= "portfolioindex.html">Return to Homepage</a>
+</button
+</body>
+</html>
