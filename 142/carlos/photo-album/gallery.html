@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Image Gallery</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script src='../portfolio.js'></script>
+
+<style>
+
+	#galleryPicture{
+		height: 300px;
+	}	
+
+	img.buttonImage{
+		height: 50px;
+	}
+
+	div.gallery{
+		text-align:center;
+	}
+	
+	button.buttons{
+		border-radius:10px;
+		padding:5px;
+	}
+
+	#caption{
+		font-family:"helvetica";
+		margin:10px;
+	}
+</style>
+
+<script>
+
+	var image1="BT.png"
+	var image2="Creature.png"
+	var image3="grid.png"
+	var image4="House.png"
+	var image5="mc.png"
+	var image6="RT.png"
+	var image7="SGP.png"
+	var image8="star.png"
+
+	var caption1="Blocky Thing"
+	var caption2="Creature"
+	var caption3="Grid Picture"
+	var caption4="House"
+	var caption5="A lot of creatures"
+	var caption6="Rotated Text"
+	var caption7="Simple Geometric Picture"
+	var caption8="Star"
+
+	function changeImage(newImage,newCaption){
+		galleryPicture.src=newImage;
+		caption.innerHTML=newCaption;
+	}
+
+</script>
+
+</head>
+
+<body>
+
+
+<script>writeheader();</script>
+<center>
+	<h4>Image Gallery</h4>
+</center>
+	<div class='gallery'>
+	<img src="BT.png" id="galleryPicture" name="galleryPicture">
+	<div id="caption">Blocky Thing</div>
+
+	<button class='buttons'onClick="changeImage(image1,caption1);"><img src="BT.png" class="buttonImage"></button>
+	<button class='buttons'onClick="changeImage(image2,caption2);"><img src="Creature.png" class="buttonImage"></button>
+	<button class='buttons'onClick="changeImage(image3,caption3);"><img src="grid.png" class="buttonImage"></button>
+	<button class='buttons'onClick="changeImage(image4,caption4);"><img src="House.png" class="buttonImage"></button>
+	<button class='buttons'onClick="changeImage(image5,caption5);"><img src="mc.png" class="buttonImage"></button>
+	<button class='buttons'onClick="changeImage(image6,caption6);"><img src="RT.png" class="buttonImage"></button>	
+	<button class='buttons'onClick="changeImage(image7,caption7);"><img src="SGP.png" class="buttonImage"></button>
+	<button class='buttons'onClick="changeImage(image8,caption8);"><img src="star.png" class="buttonImage"></button>
+</div>
+
+
+
+
+
+<script>writefooter();</script>
+
+</body>
+
+</html>
