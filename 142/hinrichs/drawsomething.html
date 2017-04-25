@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Thomas Hinrichs - Math 142 </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<style>
+		#spork{
+			border: none;
+			text-align: center;
+		}
+		div.button{
+			border: none;
+		}
+	</style>
+	<script src="../spork.js"></script>
+	<script src='portfolio.js'></script>
+	<script>
+		var x;
+		var y;
+		function setup(){
+			size(600,600);
+		}
+		function changeColor(a){
+			color(a);
+		}
+		function changeWidth(b){
+			linewidth(b);
+		}
+		function onmousedown(){
+  			x=mouseX;
+  			y=mouseY;
+		}
+		function onmousemove(){
+  			if(mouseDown == true){
+      				line(x, y, mouseX, mouseY);
+      				x=mouseX;
+			      	y=mouseY;
+      				restore();
+   			}
+		}
+		function sporkclear(){
+			clear();
+		}
+	</script>
+</head>
+
+<body>
+<script>writeHeader();</script>
+This allows you to draw on the white part of the screen. You can change the color and size of the brush if you choose to do so. 
+<div id="spork"></div>
+
+<div class='button'>
+	<button class="colorButton" onclick="changeColor('Red');">Red</button>
+	<button class="colorButton" onclick="changeColor('Blue');">Blue</button>
+	<button class="colorButton" onclick="changeColor('Yellow');">Yellow</button>
+	<button class="colorButton" onclick="changeColor('Green');">Green</button>
+	<button class="colorButton" onclick="changeColor('Orange');">Orange</button>
+	<button class="colorButton" onclick="changeColor('White');">Eraser</button>	
+<br><br>
+	<button class="widthButton" onclick="changeWidth('1');">1px</button>
+	<button class="widthButton" onclick="changeWidth('5');">5px</button>
+	<button class="widthButton" onclick="changeWidth('10');">10px</button>
+	<button class="widthButton" onclick="changeWidth('50');">50px</button>
+	<button class="widthButton" onclick="changeWidth('100');">100px</button>
+
+	<button class="clearButton" onclick="sporkclear();">Clear</button>
+<br>
+</div>
+<p>
+<a href="index.html"><h1>Go Back</h1></a>
+</p>
+<script>writeFooter();</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+	<title>Thomas Hinrichs - Math 142 </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<style>
+		#spork{
+			border: none;
+		}
+	</style>
+	<script src='portfolio.js'></script>
+	<script src="../spork.js"></script>
+	<script>
+var ballx;
+var bally;
+var ballvy;
+var cupx;
+var score;
+var gameNotOver;
+var v;
+
+
+function setup(){
+	ballx=random()*400;
+  	bally=0;
+  	ballvy=1;
+  	cupx=200;
+    	score=0;
+    	gameNotOver=true;
+  	loop();
+}
+
+function drawBall(){
+	bally=bally+ballvy;
+  	fillcolor('black');
+  	circle(ballx,bally,5);
+	fill();
+}
+
+function drawCup(){
+	fillcolor('black');
+  	arc(cupx,380,20,0,180);
+   	fill();
+}
+
+function draw(){
+  	clear();
+  	drawBall();
+  	drawCup();
+  	bounce();
+  	around();
+  	filltext(score,10,30);
+
+}
+function around(){
+  	if(cupx>400)
+  		cupx=0;
+    	if(cupx<0)
+  		cupx=400;
+
+}
+function bounce(){
+  	if(bally>400){
+      		if((cupx-20<ballx)&(ballx<cupx+20)&(gameNotOver)){
+			bally=0;
+            		ballx=random()*400;
+          		score=score+1;
+        	}
+		else{
+			filltext('GAME OVER!!!!',50,200)
+            		gameNotOver=false;
+        	}
+    	}
+}
+
+function onkeydown(){
+	if (keyCode == rightArrow)
+      	cupx=cupx+10;
+	if (keyCode == leftArrow)
+      	cupx=cupx-10;
+}
+
+function onclick(){
+  	clear();
+	setup();
+}
+  
+		
+	</script>
+</head>
+
+<body>
+<script>writeHeader();</script>
+This a game. The ball drops and you must try to catch it in the cup using the arrow keys on the keyboard!!!!
+
+<div id="spork"></div>
+
+
+<p>
+<a href="index.html"><h1>Go Back</h1></a>
+</p>
+<script>writeFooter();</script>
+</body>
+</html>
