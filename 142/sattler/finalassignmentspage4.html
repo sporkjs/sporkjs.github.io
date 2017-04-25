@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<link rel="stylesheet" type="text/css" href="finalassignmentpagestyle.css">
+	<script src='header.js'></script>
+
+<style>
+
+div.imagesDiv{
+	padding: 20px;
+	text-align:center;
+	}
+
+div.buttonsDiv{
+	background-color:black;
+	height: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	text-align:center;
+	margin: auto;
+	padding: 10px;
+	}
+
+button{
+	height: 100px;
+	background-color:black;
+	padding:5px;
+	border-radius:5px;
+	border-color:black;
+	}
+
+#captionDiv{
+	padding:10px;
+	font: italic 20px courier new;
+	color:white;
+	}
+
+</style>
+
+
+</head>
+<body>
+
+	<script>showHeader();</script>
+		<b> Photo Gallery </b>
+
+<script>
+
+caption1= 'Lines and Vines'
+caption2= 'Psalm 46:10'
+caption3= 'For Days'
+caption4= 'Casa'
+caption5= 'Square Bear'
+caption6= 'Continum'
+caption7= 'Brownian Motion Still'
+
+</script>
+</head>
+<body> 
+	
+	<div class= 'imagesDiv'>
+		<img name='theImg' id='theImg' src='BlockyThing copy.png' height='400px'> 
+
+	<div id= 'captionDiv'>
+				<script> document.write (caption1) </script>
+
+	</div>
+	</div>
+	<div class= 'buttonsDiv'>
+		<button onclick="theImg.src='BlockyThing copy.png'; captionDiv.innerHTML=caption1;"> <img src='BlockyThing copy.png' height='80px'> </button>
+		<button onclick="theImg.src='rotatedtext copy.png'; captionDiv.innerHTML=caption2;"> <img src='rotatedtext copy.png' height='80px'> </button>
+		<button onclick="theImg.src='simplegeometricpattern copy.png'; captionDiv.innerHTML=caption3;"> <img src='simplegeometricpattern copy.png' height='80px'> </button>
+		<button onclick="theImg.src='house copy.png'; captionDiv.innerHTML=caption4;"> <img src='house copy.png' height='80px'> </button>
+		<button onclick="theImg.src='creaturesquarebear copy.png'; captionDiv.innerHTML=caption5;"> <img src='creaturesquarebear copy.png' height='80px'> </button>
+		<button onclick="theImg.src='nestedcircles.png'; captionDiv.innerHTML=caption6;"> <img src='nestedcircles.png' height='80px'> </button>
+		<button onclick="theImg.src='browniansample.png'; captionDiv.innerHTML=caption7;"> <img src='browniansample.png' height='80px'> </button>
+	</div>
+
+
+
+	<script>showFooter();</script>
+
+</body>
+
+</html>
