@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Calculator 1</title>
+	<link rel="stylesheet" type="text/css" href="calc-main.css" />
+	<script src="calc-functions.js"></script>
+	
+</head>
+<body>
+	<main>
+		<div id="calculator">
+			<table>
+				<tr>
+					<td colspan="4"><div class="answer" id="display"></td>
+				</tr>
+				<tr>
+					<td><button class="square-std number" onclick='insertCharacter(1);'>1</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(2);'>2</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(3);'>3</button></td>
+					<td><button class="square-std calculate" onclick='insertCharacter("/");'>/</button></td>
+				</tr>
+				<tr>
+					<td><button class="square-std number" onclick='insertCharacter(4);'>4</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(5);'>5</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(6);'>6</button></td>
+					<td><button class="square-std calculate" onclick='insertCharacter("*");'>*</button></td>
+					
+				</tr>
+				<tr>
+					<td><button class="square-std number" onclick='insertCharacter(7);'>7</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(8);'>8</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(9);'>9</button></td>
+					<td><button class="square-std calculate" onclick='insertCharacter("-");'>-</button></td>
+				</tr>
+				<tr>
+					<td><button class="square-std number" onclick='insertCharacter(0);'>0</button></td>
+					<td><button class="square-std number" onclick='insertCharacter(.);'>.</button></td>
+					<td><button class="square-std clear calculate" onclick='clearDisplay();'>C</button></td>
+					<td><button class="square-std plus calculate" onclick='insertCharacter("+");'>+</button></td>
+				</tr>
+				<tr>
+					<td colspan="4"><button class="calculate equals" onclick='calculate();'>=</button></td>
+				</tr>
+			</table>
+			
+	</div>
+	</main>
+	
+</body>
+</html>
