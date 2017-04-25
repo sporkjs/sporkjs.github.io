@@ -1,0 +1,98 @@
+<!Doctype HTML>
+
+<html>
+
+  <head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="styleClass.css">
+<script src='header.js'></script>
+
+    <style>
+button.imgButton {
+	border-radius: 10px;
+	width: 120px;
+	height: 120px;
+	margin: 10px;
+	padding-rigth: 10px;
+
+}
+
+img.thumbnail {
+	max-width: 100px;
+	max-height: 100px;
+	vertical-align: middle;
+}
+
+#viewDiv {
+	position: fixed;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background: rgba(100,100,100,.8);
+	display: none;
+}
+
+#theImg {
+	max-width: 90%;
+	max-height: 90%;
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	left: 5%;
+	right: 5%;
+	margin: auto;
+}
+
+div.closeButton {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+}
+
+    </style>
+
+
+    <script>
+	var N=7;
+	var buttonString= '';
+
+	for(i=0; i<N; i++) {
+	  buttonString = buttonString + "<button class='imgButton' onclick='showPicture(" + i + ");'><img class='thumbnail'src='photos2/photo"+i+".png'></button>";
+}
+
+	function showPicture(x) {
+	  viewDiv.style.display='block';
+	  theImg.src='photos2/photo' + x + '.png';
+}
+
+	function hidePicture() {
+	  viewDiv.style.display='none';
+}
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <script>showHeader();</script>
+
+    <div class='title'>Image Gallery</div>
+
+    <p><div class= 'buttonDiv'>
+    <script>document.write(buttonString);</script>
+   </div>
+
+   <div id='viewDiv'> 
+    <button class='closeButton' onclick='hidePicture();'>x</button>
+    <img id='theImg' name='theImg' src='photos/photo0.jpg'>
+   </div></p>
+
+    <script>showFooter();</script>
+
+  </body>
+
+</html>
