@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/random.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142, Fall 2013
+//Random Color Shapes
+
+
+function randomFillColor(){                   //this function chooses the R,G,B random fill color for each shape
+  var A;
+  var B;
+  var C;
+  A=floor(254*random())+1;                    //this will be our R value.  We used the floor of the random() function so that we will not have decimals, and then we multiplied by 255 because random() gives a number between 0 and 1, then in order to make it a range of 1-255, we added one to the end of the equation.
+  B=floor(254*random())+1;
+  C=floor(254*random())+1;
+  fillcolor(A,B,C);
+}
+
+function drawCircle(X,Y){
+   circle(X,Y, 10);
+   randomFillColor();
+   fill();
+}
+
+function drawSquare(X,Y){
+   rect(X,Y,10,10);
+   randomFillColor();
+   fill();
+}
+
+ function drawTriangle(X,Y){
+   triangle(X,Y,X+10,Y,X+5,Y+10);
+   randomFillColor();
+   fill();
+}
+var FunctionArray=[drawCircle, drawSquare, drawTriangle];             //this variable holds all three functions that we want to randomly choose from
+
+function setup(){
+  timestep(80);                                                       //how fast the shapes will be drawn
+ }
+
+function draw(){
+  var X;                                                              //x and y will hold the values of the x and y positions for each shape
+  var Y;
+  X=400*random();                                                     //we made these values random()*400 because random() makes them between 0 and 1, then we multiply that value by 400 so that we are using the whole canvas
+  Y=400*random();
+  i=floor(3*random());                                                //i is the counter for the array, we made this floor so that we do not have decimals, and *3 because we have 3 shapes to choose from
+  FunctionArray[i](X,Y);                                              //puts all previous components together and calls a random shape with a random color to be drawn at a random spot on the canvas
+}
+
+
+</script>
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Random Shapes</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a function that would draw random circles(of radius 10), squares(side lengths 10), or triangles of random colors when the button was clicked. </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, button, and random from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+<center><button onclick='startloop();'>Start</button><div id='spork'></div>
+<button onclick='stoploop();'>Stop</button>
+</center>
+
+<center><div id="spork"></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/random.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

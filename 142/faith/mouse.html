@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/mouse.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142, Fall 2013
+//Mouse
+
+function randomColor(){
+  var A;
+  var B;
+  var C;
+  A=floor(255*random())+1;
+  B=floor(255*random())+1;
+  C=floor(255*random())+1;
+  color(A,B,C);
+}
+
+function onmousemove(){
+  randomColor();
+  rect(mouseX,mouseY, 15,15);
+}
+
+function onmousedown(){
+  clear();
+}
+
+function setup(){
+  clear();
+}
+
+
+</script>
+
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Squares on mouse movement</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a program that would draw an object as the mouse moves across the screen. </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, button, random, and mouse commands from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+
+
+<center><div id="spork"></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/mouse.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

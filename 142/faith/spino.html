@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/spino.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+var a;
+var X;
+var Y;
+var W
+var Z;
+var dx;
+var dy;
+var ds;
+var dt;
+
+function spino(){
+background('blue');
+
+color('yellow');
+for (a=0;a<width;a=a+5)
+ line(a,0,width,a);
+
+
+color('white')
+for(a=0;a<width;a=a+5)
+  line(0,a,a,width);
+
+color('green')
+for(a=0;a<width;a=a+10){
+  line(a,0,width,a);
+  line(0,a,a,width);
+}
+}
+
+function Pointone(){
+  color('orange');
+  linewidth(2);
+  point(X,Y);
+}
+
+function Pointtwo(){
+  color('orange');
+  linewidth(2);
+  point(W,Z);
+}
+function setup(){
+  clear();
+  size(400,400);
+  X=200*random();
+  Y=200*random();
+  W=200*random();
+  Z=200*random();
+  dx=1;
+  dy=.5;
+  ds=1;
+  dt=.05;
+  timestep(5);
+}
+
+function draw1(){
+  Pointone(X,Y);
+  if(X>398)                              //checks to see if the tiger is off the right side of the screen
+   (dx = -1);                             //if so, changes the value of dx in order to change the direction
+  if(X<0)                            //checks to see if the tiger is off the left side of the screen
+   (dx=1);                                //if so, changes the value of dx in order to change direction
+  X=X+dx;                              //increments X
+  if(Y>398)                             //checks to see if the tiger is off the top of the screen
+   dy = -1;                               //if so, changes the value of dy in order to change direction
+  if(Y<0)                           //checks to see if the tiger is off the bottom of the screen
+   dy = 1;                               //if so, changes the value of dy in order to change direction
+  Y=Y+dy;                            //increments Y
+}
+
+function draw2(){
+  Pointtwo(W,Z);
+  if(W>398)                              //checks to see if the line is off the right side of the screen
+   (ds = -1);                             //if so, changes the value of dx in order to change the direction
+  if(W<0)                            //checks to see if the line is off the left side of the screen
+   (ds=1);                                //if so, changes the value of dx in order to change direction
+  W=W+ds;                              //increments X
+  if(Z>398)                             //checks to see if the line is off the top of the screen
+   dt = -1;                               //if so, changes the value of dy in order to change direction
+  if(Z<0)                           //checks to see if the tiger is off the bottom of the screen
+   dt = 1;                               //if so, changes the value of dy in order to change direction
+  Z=Z+dt;                            //increments Y
+}
+
+function draw(){
+ spino();
+ draw2();
+ draw1();
+}
+
+</script>
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Bouncing Creature</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a program that would make line art that has a spinograph formation.  </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function,and loop functions along with conditionals from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+<center><button onclick='startloop();'>Start</button><div id='spork'></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/spino.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

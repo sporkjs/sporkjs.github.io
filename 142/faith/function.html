@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/function.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<link rel="stylesheet"type="text/css"href="style.css">
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Creature Function</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> For this assignment, we used our original creature creation (Tiger) and the creature(x,y,s) function to draw our creature at (x,y), scaled by s.  Once the original code is written, we can call the creature function as many times as we want to any point and any scale.  </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the translate and scale JavaScript programming functions.</p>
+
+<h4>Picture:</h4>
+
+<img src="function.png">
+
+<h4>Code:</h4>
+
+<pre class='code'>
+//Faith Hoppen
+//Math 142, Fall 2013
+//Creature Function
+
+function creature(x,y,s){    
+                                   
+    save();
+    translate(x,y);
+    scale(s);
+    color('orange');                                         //head
+    circle(0,0,100); 
+    fillcolor('orange');
+    fill();
+
+    color('black');                                           //ears
+    triangle(50,-84,75,-105,75,-69);
+    fillcolor('orange');
+    fill();
+    triangle(-50,-84,-75,-105,-75,-69);
+    fillcolor('orange');
+    fill();
+
+    circle(25,-45,25);                                     //eyes
+    fillcolor('white');
+    fill();
+    circle(-25,-45,25);
+    fillcolor('white');
+    fill();
+    circle(25,-42,12);
+    fillcolor('black');
+    fill();
+    circle(-25,-42,12);
+    fillcolor('black');
+    fill();
+
+    color('white');                                         //nose
+    circle(17,30,18);
+    fillcolor('white');
+    fill();
+    circle(-17,30,18);
+    fillcolor('white');
+    fill();
+    color('black');
+    triangle(-15,10,15,10,0,32);
+    fillcolor('black');
+    fill();
+    arc(10,33,10,8,255);
+    arc(-10,33,10,10,190);
+    point(15,23);
+    point(23,23);
+    point(19,29);
+    point(-15,23);
+    point(-23,23); 
+    point(-19,29);
+
+    linewidth(8);                                         //stripes
+    color(0,0,0,.75);
+    line(46,46,54,58,66,49,72,60,79,56);
+    line(-46,46,-54,58,-66,49,-72,60,-79,56);
+    line(40,10,46,19,59,4,68,15,76,10,85,18,95,8);
+    line(-40,10,-46,19,-59,4,-68,15,-76,10,-85,18,-95,8);
+    line(43,-10,50,-20,58,-12,65,-25,75,-8,84,-35,95,-5);
+    line(-43,-10,-50,-20,-58,-12,-65,-25,-75,-8,-84,-35,-95,-5);
+    restore();
+}
+
+creature(0,0,.5);
+creature(200,200,.2);
+creature(300,75,1);
+creature(75,300,.6);
+creature(275,260,.4);
+creature(250,360,.08);
+creature(100,150,.75);
+creature(340,360,.08);
+creature(340,270,.08);
+</pre>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/function.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:16 GMT -->
+</html>

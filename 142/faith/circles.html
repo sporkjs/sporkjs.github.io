@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/circles.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142
+//Circle loops
+
+var n;
+
+function setup(){
+  background('steelblue');
+  translate(200,200);
+  n=1;
+  circle(0,0,150);
+  fillcolor(250,250,250,.7);
+  fill();
+  timestep(300);
+}
+
+function draw(){
+   circle(0,0,150);
+   for(i=1; i<=n; i++){
+    circle(150,0,10);
+    circle(125,0,10);
+  rotate(360/n);
+}
+  n++;
+}
+
+
+</script>
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Circles</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a function that would draw circles going rotating around a larger circle in the canvas. </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, button, rotate, and loop commands from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+<center><button onclick='startloop();'>Start</button><div id='spork'></div>
+<button onclick='stoploop();'>Stop</button>
+</center>
+
+<center><div id="spork"></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/circles.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

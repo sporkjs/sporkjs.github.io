@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/nestedloops.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142, Fall 2013
+//Nested loops
+
+var x;
+var y;
+
+function randomFillColor(){                   //this function chooses the R,G,B random fill color for each shape
+  var A;
+  var B;
+  var C;
+  A=floor(254*random())+1;                    //this will be our R value.  We used the floor of the random() function so that we will not have decimals, and then we multiplied by 255 because random() gives a number between 0 and 1, then in order to make it a range of 1-255, we added one to the end of the equation.
+  B=floor(254*random())+1;
+  C=floor(254*random())+1;
+  fillcolor(A,B,C);
+}
+
+function box(x,y){
+save();
+translate(x,y);
+triangle(0,0,-40,0,0,-40);
+ randomFillColor();
+ fill();
+triangle(-40,0,0,-40,-40,-40);
+ randomFillColor();
+ fill();
+restore();
+}
+
+function setup(){
+timestep(2000);
+}
+
+function draw(){
+ for(x=0;x<=width;x+=40){
+  for(y=0;y<=height;y+=40){
+   box(x,y);
+}
+}
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Nested Loops</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a function that would draw a series of the same objects taht would randomly change color. </p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, button, rotate, and loop commands from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+<center><button onclick='startloop();'>Start</button><div id='spork'></div>
+<button onclick='stoploop();'>Stop</button>
+</center>
+
+<center><div id="spork"></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/nestedloops.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>

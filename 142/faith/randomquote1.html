@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/randomquote1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<title> Faith Hoppen, Math 142 </title>
+<meta http-equiv="X-UA-Compatible"content="IE=Edge"/>
+<link rel="stylesheet"type="text/css"href="style.css">
+<script src="spork.js"></script>
+
+<script>
+//Faith Hoppen
+//Math 142
+//Random Quote
+
+function Quote1(){
+  font('20px times');
+  color(127,0,255);
+  filltext("Just when I though you couldn't possibly be any dumber,",125,200);
+  filltext(" you go and do something like this...and TOTALLY redeem yourself!",120,225);
+  filltext("-Dumb and Dumber",120,250);
+}
+
+function Quote2(){
+  font('20px times');
+  color(0,255,128);
+  filltext("Exercise gives you endorphins, and endorphins make you happy,",145,200);
+  filltext(" and happy people don't just kill their husbands.  They just don't!", 150,225);
+  filltext('-Legally Blonde',150,250);
+}
+
+function Quote3(){
+  font('20px times');
+  color(255,102,102);
+  filltext("I'm kind of psychic.  I have a fifth sense.  It's like I have ESPN or something.",105,200);
+  filltext('-Mean Girls',105,250);
+}
+
+function Quote4(){
+  font('20px times');
+  color(255,255,51);
+  filltext('So do you play the beautiful game bro? Brothers? Brethren?', 175,200);
+  filltext("-She's the Man", 175,250);
+}
+
+function Quote5(){
+  font('20px times');
+  color(255,153,51);
+  filltext('Special?  Like stop eating the paste special?',220,200);
+  filltext('-Gilmore Girls',220,250);
+}
+
+function Quote6(){
+  font('20px times');
+  color(76,153,0);
+  filltext('In Omnia Paratus.  Ready for anything.',240,200);
+  filltext('-Gilmore Girls',240,250);
+}
+
+var FunctionArray=[Quote1, Quote2, Quote3, Quote4, Quote5, Quote6];
+
+function setup(){        
+  timestep(5000);                    //shows a new quote every 5 seconds
+  size(610,200);                     //rectangle instead of square canvas
+  translate(-100,-100);
+}
+
+function draw(){
+  clear();                           //clears the canvas so that the quotes are not printed on top of each other
+  i=(floor(6*random()));             
+  FunctionArray[i]();
+}
+   
+</script>
+</head>
+<body>
+
+<div class="titlebox">
+<h1>Draw on Command</h1>
+<h3>Faith Hoppen</h3>
+<h4>Math 142, Fall 2013</h4>
+</div>
+
+<p> <b>Assignment:</b> In this project, we were asked to write a function that would display a new random quote at the click of a button.</p>
+<br>
+<p> <b>Tools:</b> In order to complete this, we used the variable, function, button, and random from JavaScript programming and the Spork editor to make it come to life.</p>
+<br>
+
+<center><button onclick='draw();'>New Quote</button><div id='spork'></div>
+</center>
+
+<center><div id="spork"></div></center>
+
+
+
+<br><a href=index-2.html>Return to Assignment Index</a>
+
+
+
+</body>
+
+<!-- Mirrored from web.cune.org/faith.hoppen/randomquote1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 May 2015 17:18:23 GMT -->
+</html>
