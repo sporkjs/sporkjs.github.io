@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+
+<style>
+
+
+	#wrapper{
+	width: 80%;
+
+	margin: auto;
+	}
+
+	#titlebar{
+	font-size: 35px;
+	font-family: times;
+	color: rgb(76,92,104);
+	border-bottom: 0.5px solid lightgrey;
+	}
+
+	img.thumbnail{
+	width: 100px;
+	height: 100px;
+	}
+
+	button.thumbnail{
+	background: none;
+	margin: 5px;
+	padding: 5px;
+	height: 110px;
+	width: 110px;
+	border-radius: 0px;
+	}
+
+	#buttons{
+	width: 70%
+	}
+
+	#gallery{
+	background: rgba(70,73,76,.5);
+	position: fixed;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	display: none;
+	}
+
+	#both{
+	position: absolute;
+		top: 5%;
+		bottom: 5%;
+		left: 5%;
+		right: 5%;
+	}
+
+	#picture{
+	height: 90%;
+	position: relative;
+	}
+
+	#caption{
+	font-size: 20px;
+	font-family: times;
+	height: 10%;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	}
+
+	#gallerypicture{
+	background: white;
+	max-height: 80%;
+	max-width: 90%;
+	position: absolute;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+		margin: auto;
+	}
+
+	#closebutton{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: lightgrey;
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 40px;
+	}
+
+	#rightbutton{
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		right: 0px;
+		width: 50%;
+		text-align: right;
+		background: none;
+		border:none;
+		outline:none;
+		color: lightgray;
+		font-size: 30px;
+	}
+
+	#leftbutton{
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left:0px;
+		width: 50%;
+		text-align: left;
+		background:none;
+		border:none;
+		outline:none;
+		color:lightgray;
+		font-size:30px;
+	}
+</style>
+
+<script>
+theCaptions=[	"<i>Animal Farm</i>. Digital Design. 2015.",
+			"<i>Athena</i>. Charcoal. 2015.",
+			"<i>Skull</i>. Charcoal. 2014.",
+			"<i>Words of Dietrich Bonhoeffer</i>. 8x8 in. Booklet. 2015.",
+			"<i>Personal Bookplate</i>. Illustration. 2015.",
+			"<i>Brand</i>. Leaves, twine, and clothes pins. 2015.",
+			"<i>CB2</i>. Retail Illustration. 2015.",
+			"<i>Courtney</i>. Photograph. 2015.",
+			"<i>Figure It Out</i>. Pen and Oil Pastel. 2015.",
+			"<i>Feet Pieces</i>. Sketchbook paper and residue from travels. 2015.",
+			"<i>Hope (More Than A Portrait Series)</i>. Photograph. 2015.",
+			"<i>March (HEY MOM Calendar)</i>.</i> Digital Design. 2015.",
+			"<i>Type Portrait</i>. Digital Illustration. 2015."
+]
+
+theImages=[	"images/animalfarm.jpg",
+			"images/athena.jpg",
+			"images/bonesdrawing.jpg",
+			"images/bonhoefferfinal.jpg",
+			"images/bookplate.jpg",
+			"images/brand.jpg",
+			"images/cb2.jpg",
+			"images/courtney.jpg",
+			"images/drawingfinal.png",
+			"images/feetpieces.jpg",
+			"images/hope.jpg",
+			"images/march.jpg",
+			"images/typeportrait.jpg"
+]
+	var currentpicture;
+	function showPicture(n){
+		gallerypicture.src=theImages[n];
+		caption.innerHTML=theCaptions[n];
+		currentpicture=n;
+		if (currentpicture==0)
+			leftbutton.style.display='none';
+		else {
+			leftbutton.style.display='block';
+		}
+		if (currentpicture==theImages.length-1)
+			rightbutton.style.display='none';
+		else {
+			rightbutton.style.display='block';
+		}
+			gallery.style.display= 'block';
+	}
+	function closewindow(){
+		gallery.style.display='none';
+	}
+	function shownext(){
+	showPicture(currentpicture+1);
+	}
+	function showprevious(){
+	showPicture(currentpicture-1);
+	}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="titlebar"> Eva's Artwork </div>
+	<div id="buttons">
+	<button class="thumbnail" onclick="showPicture(0);"><img class="thumbnail" src="thumbnails/animalfarm.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(1);"><img class="thumbnail" src="thumbnails/athena.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(2);"><img class="thumbnail" src="thumbnails/bonesdrawing.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(3);"><img class="thumbnail" src="thumbnails/bonhoefferfinal.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(4);"><img class="thumbnail" src="thumbnails/bookplate.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(5);"><img class="thumbnail" src="thumbnails/brand.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(6);"><img class="thumbnail" src="thumbnails/cb2.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(7);"><img class="thumbnail" src="thumbnails/courtney.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(8);"><img class="thumbnail" src="thumbnails/drawingfinal.png"></button>
+	<button class="thumbnail" onclick="showPicture(9);"><img class="thumbnail" src="thumbnails/feetpieces.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(10);"><img class="thumbnail" src="thumbnails/hope.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(11);"><img class="thumbnail" src="thumbnails/march.jpg"></button>
+	<button class="thumbnail" onclick="showPicture(12);"><img class="thumbnail" src="thumbnails/typeportrait.jpg"></button>
+	</div>
+</div>
+
+	<div id="gallery">
+	<div id="both">
+		<div id="picture"></div>
+			<img id="gallerypicture" src="images/blombos.png">
+		<div id="caption"></div>
+		</div>
+		<button id="leftbutton" onclick="showprevious();">&leftarrow;</button>
+		<button id="rightbutton" onclick="shownext();">&rightarrow;</button>
+	<button id="closebutton" onclick="closewindow();">x</button>
+	</div>
+</body>
+
+</html>

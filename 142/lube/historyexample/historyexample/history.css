@@ -1,0 +1,42 @@
+	body{
+		background-color: lightblue;
+		}
+	#wrapper{
+		background-color: white;
+		width: 80%;
+		margin: auto;
+		border-radius: 15px;
+		overflow: hidden;
+		}
+	#titlebar{
+		background-color: lightyellow;
+		color: gray;
+		font-size: 40px;
+		font-family: helvetica;
+		padding: 10px;
+		}
+	#navigationbar{
+		text-align: center;
+		border-bottom: 1px solid lightgray;
+		}
+	#content{
+		margin: 20px;
+		}
+	#secondarynavigation{
+		text-align: right;
+		border-top: 1px solid lightgray;
+		font-size: 10px;
+		padding-right: 10px;
+		}
+	#titlebarimage{
+		height: 80px;
+		vertical-align: middle;
+		}
+		div.tab{
+			display:inline-block;
+			width: 18%;
+		}
+		img.smallright{
+			height: 250px;
+			float: right;
+		}

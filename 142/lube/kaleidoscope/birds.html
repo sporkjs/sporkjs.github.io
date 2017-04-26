@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="kaleidoscope.css">
+    <title>Kaleidoscopes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: none;
+        margin: 10px;
+        padding: 10px;
+      }
+      img{
+        width:100px;
+      }
+      canvas{
+        width:400px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      var theImages=[];
+      var trianglewidth=1000;
+      var imagewidth=trianglewidth/2;
+      function setup(){
+        size(2*trianglewidth+imagewidth, 2*trianglewidth+imagewidth); //this will change
+        theImages=[bluejay,cardinal];
+        translate(width/2, height/2);
+      }
+      function draw(){
+        clear(); //this will change later
+        color (0,0,0,0);
+        for(i=0;i<47;i=i+1){
+        var randomImage = theImages[floor(random()*theImages.length)];
+        var x=random()*trianglewidth; //this will change
+        var y=random()*x; //this will change
+        var r=random()*360;
+
+        save();
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        save();
+        scale (-1,1);
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        save();
+        scale (1,-1);
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        save();
+        scale (-1,-1);
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        rotate (90);
+
+        save();
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        save();
+        scale (-1,1);
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        save();
+        scale (1,-1);
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+
+        save();
+        scale (-1,-1);
+        triangle(0,0,width/2,0, width/2,height/2);
+        clip ();
+        drawImage(randomImage, x,y,imagewidth,imagewidth,r);
+        restore();
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar"> Birds </div>
+      <div id="mainNavigation"></div>
+      <div id="content"> Here is a kaleidoscope full of birds! Cardinals and Blue Jays stand out because of their color - why not combine the two!
+        <div id="spork"></div>
+        <button onclick='startover();'>Draw it again</button><br>
+        <img id='bluejay' src='images/bluejay.png'>
+        <img id='cardinal' src='images/cardinal.png'>
+
+      </div>
+      <div id="secondaryNavigation"></div>
+    </div>
+  </body>
+</html>

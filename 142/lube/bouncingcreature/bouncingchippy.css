@@ -1,0 +1,63 @@
+body{
+		
+background-color: rgb(71,45,48);
+		
+}
+	
+#wrapper{
+		
+border: none;
+		
+background-color: rgb(255,225,168);
+		
+width: 75%;
+		
+margin: auto;
+		
+overflow: hidden;
+		
+}
+	
+#titleBar{
+		
+border: none;
+		
+background-color: rgb(114,61,70);
+		
+color: white;
+		
+font-size: 40px;
+		
+font-family: times;
+		
+text-align: center;
+		
+}
+	
+#content{
+		
+margin: 5px;
+		
+border: none;
+		
+text-align:center;
+		
+}
+	
+#description{
+		
+text-align: left;
+		
+border: none;
+		
+font-size: 20px;
+		
+font-family: helvetica;
+		
+padding-right: 10px;
+		
+}
+img.sporkimage{
+	
+height: 400px;
+}

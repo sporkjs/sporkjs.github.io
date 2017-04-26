@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <link rel="stylesheet" type="text/css" href="drawing.css">
+<style>
+</style>
+<script src='spork.js'></script>
+<script>
+var lastX; //variables for previous
+var lastY;  //position of the mouse
+
+function onmousedown(){
+  //remember where mouse starts
+  lastX=mouseX;
+  lastY=mouseY;
+}
+
+function pencil(){
+  //Draw line from last position
+  //to current position if the
+  //mouse is down
+  if (mouseDown){
+    line(lastX, lastY,
+        mouseX, mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function fuzz(){
+  if (mouseDown){
+    save();
+    linewidth(1);
+    translate(mouseX, mouseY);
+    rotate(random()*360);
+    line(-10,0,10,0);
+    restore();
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function circles(){
+  var cx, cy, dx, dy, r;
+  if (mouseDown){
+    save();
+    linewidth(1);
+    cx=(lastX+mouseX)/2;
+    cy=(lastY+mouseY)/2;
+    dx=mouseX-cx;
+    dy=mouseY-cy;
+    r=sqrt(dx*dx+dy*dy);
+    circle(cx, cy, r);
+    restore();
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function ribbon(){
+  if (mouseDown){
+    line (lastX+10, lastY+10,
+         mouseX+10, mouseY+10,
+         mouseX-10, mouseY-10,
+         lastX-10, lastY-10,
+    	lastX+10, lastY+10);
+    fill();
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function onmousemove(){
+if (pencilButton.checked) pencil();
+if (fuzzButton.checked) fuzz();
+if (circleButton.checked) circles();
+if (ribbonButton.checked) ribbon();
+}
+
+function setBothColors(c){
+  color(c);
+  fillcolor(c);
+}
+
+function setup(){
+}
+
+function draw(){
+
+}
+</script>
+<head>
+</head>
+<body>
+  <div id='titleBar'>My Paint Program</div>
+  <div id='spork'></div>
+  <div id='penSelect'>
+    <input type='radio' name='penType' id='pencilButton' checked> <img src="images/pencil.png" width="100px"> <br>
+    <input type='radio' name='penType' id='fuzzButton'> <img src="images/fuzz.png" width="100px"> <br>
+    <input type='radio' name='penType' id='circleButton'> <img src="images/circles.png" width="100px"> <br>
+    <input type='radio' name='penType' id='ribbonButton'> <img src="images/ribbon.png" width="100px">
+  </div>
+  <div id='colorSelect'></div>
+    <input type='radio' name='widthButton' onclick='setBothColors("white");'>White<br>
+    <input type='radio' name='widthButton' onclick='setBothColors("rgb(51,92,103)");'>Blue<br>
+    <input type='radio' name='widthButton' onclick='setBothColors("rgb(158,42,43)");'>Red<br>
+  <div id='sizeSelect'>
+    <input type='radio' name='sizeButton' onclick='linewidth(1);' checked> 1px<br>
+    <input type='radio' name='sizeButton' onclick='linewidth(10);'> 10px<br>
+
+  </div>
+</body>
+</html>

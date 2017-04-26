@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///Users/artconcordesign/Desktop/calc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <style>
+  button.num{
+    font-size: 50px;
+    width:80px;
+    height:90px;
+    border-radius:0px;
+    padding:0px;
+    background:rgb(255,225,168)
+}
+  button.fun{
+    font-size: 50px;
+    width:80px;
+    height:90px;
+    border-radius:0px;
+    padding:0px;
+    background: rgb(201,203,163);
+  }
+  button.equal{
+    font-size: 50px;
+    width:80px;
+    height:90px;
+    border-radius:0px;
+    padding:0px;
+    background: rgb(226,109,92);
+  }
+  #display{
+    height:90px;
+    width:240px;
+    background:rgb(219,229,183);
+    font-size:50px;
+    font-style:times;
+    vertical-align:middle;
+    line-height:80px;
+    text-align:right;
+    overflow:hidden;
+  }
+  table{
+    border-collapse:collapse;
+  }
+  </style>
+  <script>
+  function addcharacter(x){
+    var s;
+    s=display.innerHTML;
+    display.innerHTML=s+x;
+  }
+  function cleardisplay(){
+      display.innerHTML="";
+  }
+  function evaluatedisplay(){
+    var s;
+    s=display.innerHTML;
+    display.innerHTML=eval(s);
+  }
+  </script>
+</head>
+<body>
+  <table>
+    <tbody><tr>
+      <td colspan="3"><div id="display"></div></td>
+      <td><button class="fun" onclick="cleardisplay();">C</button></td>
+    </tr>
+    <tr>
+      <td><button class="num" onclick="addcharacter(&quot;7&quot;);">7</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;8&quot;);">8</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;9&quot;);">9</button></td>
+      <td><button class="fun" onclick="addcharacter(&quot;/&quot;);">/</button></td>
+    </tr>
+    <tr>
+      <td><button class="num" onclick="addcharacter(&quot;4&quot;);">4</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;5&quot;);">5</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;6&quot;);">6</button></td>
+      <td><button class="fun" onclick="addcharacter(&quot;x&quot;);">x</button></td>
+    </tr>
+    <tr>
+      <td><button class="num" onclick="addcharacter(&quot;1&quot;);">1</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;2&quot;);">2</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;3&quot;);">3</button></td>
+      <td><button class="fun" onclick="addcharacter(&quot;-&quot;);">-</button></td>
+    </tr>
+    <tr>
+      <td><button class="fun" onclick="addcharacter(&quot;.&quot;);">.</button></td>
+      <td><button class="num" onclick="addcharacter(&quot;0&quot;);">0</button></td>
+      <td><button class="equal" onclick="evaluatedisplay();">=</button></td>
+      <td><button class="fun" onclick="addcharacter(&quot;+&quot;);">+</button></td>
+    </tr>
+  </tbody></table>
+
+
+</body></html>

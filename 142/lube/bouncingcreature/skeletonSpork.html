@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bouncing Chippy</title>
+	<link rel="stylesheet" type="text/css" href="bouncingchippy.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+function creature(x,y,s){
+save();
+translate(x,y);
+scale(s);
+
+//feathers
+color(242,204,143);
+fillcolor(242,204,143);
+triangle (-100,-20, -50, -150, 0, -80)
+fill();
+color(255,215,150);
+fillcolor(255,215,150);
+triangle (-100,-20, -100, -100, 0, -80)
+fill();
+
+color(242,204,143);
+fillcolor(242,204,143);
+triangle (100,-20, 15,-100, 50,-150)
+fill();
+color(255,215,150);
+fillcolor(255,215,150);
+triangle (100,-20, 0,-80, 100,-100)
+fill();
+
+//head
+color(224,122,95);
+fillcolor(224,122,95);
+circle(0,-17,100);
+fill();
+
+//body
+color(224,122,95);
+fillcolor(224,122,95);
+circle(0,150,150);
+fill();
+
+
+//beak
+color(233,196,106);
+fillcolor(242,204,143);
+triangle(-90,17, 90,17, 0,130);
+fill();
+
+
+//left Eye
+color();
+fillcolor(244,241,222);
+circle(-40,0,40);
+fill();
+fillcolor(61,64,91);
+circle(-40,0,15);
+fill();
+
+//right Eye
+color();
+fillcolor(244,241,222);
+circle(40,0,40);
+fill();
+fillcolor(61,64,91);
+circle(40,0,15);
+fill();
+
+//feathers
+color(242,204,143);
+fillcolor(242,204,143);
+triangle(-100,-20, -50, -100, 0, -80);
+triangle(100,-20, 0,-80, 50,-100);
+  restore();
+restore();
+}
+
+var X; //X-value of location of cat
+var Y; //y-value of location of cat
+var VX; //X velocity
+var VY; //y velocity
+var R; //Radius of creature
+var G; //
+
+function bounce(){
+  if (X>width-R){
+    VX=-abs(VX);
+  }
+  if (X<R){
+    VX=abs(VX);
+  }
+  if (Y>height-R){
+    VY=-abs(VY);
+  }
+  if (Y<R){
+    VY=abs(VY);
+  }
+}
+
+function setup(){
+  X=200;
+  Y=200;
+  VX=2;
+  VY=1;
+  R=50;
+  G=0.1;
+  loop();
+}
+function draw (){
+    clear();
+    creature (X,Y,0.5);
+  	X=X+VX;
+    Y=Y+VY;
+  	VY=VY+G;
+    bounce();
+  }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Bouncing Chippy</div>
+      <div id="content">
+	<p>
+		Here is Chippy, bouncing happily within the confines of a box. As you can see, Chippy is a bird of many talents. Why should one's skills only be limited to flying? Especially when bouncing is an available option.
+	</p>
+        <div id="spork"></div>
+      </div>
+    </div>
+  </body>
+</html>
