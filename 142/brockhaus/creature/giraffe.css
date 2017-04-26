@@ -1,0 +1,56 @@
+body{
+  background-color: lightgray;
+  color:white;
+  text-align: center;
+  font-size: 30px;
+  margin:20px;
+  }
+  #content{
+    margin: 20px;
+
+    }
+  #spork{
+    background-color:lightgreen;
+  }
+  #wrapper{
+    background-color: #04B4AE;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+    #titleBar{
+      background-color: #FFBF00;
+      color: white;
+      font-size: 50px;
+      padding: 10px;
+      text-align: left;
+      text-shadow: 3px 3px black;
+      font-family: fantasy;
+      }
+      #secondaryNavigation{
+        background-color: #FFBF00;
+        text-align: right;
+        border-top: 1px solid gray;
+        font-size: 10px;
+        padding-right: 10px;
+        color: black;
+
+        }
+        #navigationBar{
+          text-align: center;
+          border-bottom: 1px solid gray;
+          font-family: fantasy;
+          padding-top: 10px;
+        
+
+          }
+          div.tab{
+            display:inline-block;
+            width:30%;
+          }
+img.giraffe{
+margin-left: auto;
+margin-right: auto;
+display:block;
+}

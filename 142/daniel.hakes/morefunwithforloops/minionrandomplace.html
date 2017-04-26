@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+  <title>Fun Forloops 2</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+      size(600,400);
+  }
+  function draw(){
+    var x,y;
+
+    var i;
+
+    for(i=0;i<15;i=i+1){
+    x=random()*width;
+    y=random()*height;
+    r=random()*100+10;
+    minion(x,y,r);
+
+  function f1(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    //draw below this line
+    rotate(90*floor(4*random()));
+    linewidth(30);
+    line(-200,0,0,-200);
+    line(0,200,200,0);
+    //draw above this line
+    restore();
+  }
+  function f2(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    //draw below this line
+    linewidth(25);
+    line(-200,0,200,0);
+    line(0,-200,0,200);
+    //draw above this line
+    restore();
+  }
+  function setup(){
+
+  }
+  function draw(){
+    var x,y;
+    var r=20;
+    var theFunctions=[f1,f2];
+    var f;
+    for (x=r;x<width;x=x+2*r)
+      for(y=r;y<height;y=y+2*r){
+      f=theFunctions.random();
+        f(x,y,r);
+    }
+  }
+
+  function minion(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+
+  //Minion
+  circle(0,-35,130);
+  fillcolor("yellow");
+  fill();
+
+  rect(-130,-35,260,300);
+  fillcolor("yellow");
+  fill();
+
+  //Mouth
+  ellipse(25,107,66,20);
+  fillcolor("black");
+  fill();
+
+  //Glasses Strap
+  rect(-130,-40,260,45);
+  fillcolor("black");
+  fill();
+
+  //Eye Whites
+  circle(-62,-20,58);
+  linewidth(11);
+  fillcolor("white");
+  fill();
+
+  circle(62,-20,58);
+  fillcolor("white");
+  fill();
+
+  //Blue Eyes
+  circle(50,-5,18);
+  fillcolor("blue");
+  fill();
+
+  circle(-50,-5,18);
+  fillcolor("blue");
+  fill();
+
+  //Glasses Framing
+  arc(-61,-20,58,20,390);
+  arc(61,-20,58,20,390);
+
+  //Hair
+  line(0,-183,0,-156);
+  line(37,-183,22,-155);
+  line(-37,-183,-22,-155);
+
+    restore();
+  }
+  //draw above this line
+  /*Circle Grid Example
+  This example will draw circles even spaced
+  on a rectangular grid.
+  */
+
+  function setup(){
+    /*
+    Since this example is just demonstrating a grid,
+    we do not need to do any special setup.
+    */
+  }
+  function draw(){
+    //variables for the centers of our circles
+    var x,y;
+
+    //x will take on values 20, 60, 100...
+    for (x=40;x<width;x=x+55)
+      //for each value of x, y takes on 20, 60...
+      for (y=40;y<height;y=y+55){
+       minion(x,y,19);
+        /*
+        Play with the value 20 in this last line.
+        Larger values make the circles overlap.
+        Smaller values adds space between them.
+        */
+      }
+  }
+  function setup(){
+
+  }
+  function draw(){
+    var x,y;
+    var r=50;
+    for (x=r;x<width;x=x+2*r)
+      for(y=r;y<height;y=y+2*r){
+      minion(x,y,r*random()+5);
+      r=random()*50;
+  	minion(x,y,r);
+    }
+  }
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+        <div id="content">
+    <div id="titleBar">Randomly Placed Minions</div>
+      <div id="spork"></div>
+            <button onclick='startover();'>New Image</button>
+      <a href="index.html">More Fun With Forloops</a>
+    </div>
+  </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

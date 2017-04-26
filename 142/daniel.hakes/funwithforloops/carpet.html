@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <title>Quad</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function carpet(x,y,r){
+    save();
+  translate(x,y);
+    scale(r/200);
+  var x
+
+  circle(0,0,5);
+  fillcolor("blue");
+  fill();
+
+  for(x=5;x<=360;x=x+5){
+  save();
+  linewidth(5);
+  color("gray");
+    fillcolor("white");
+    fill();
+  circle(0,0,195);
+  restore();
+  }
+
+  save();
+  linewidth(2.5);
+  color("orange");
+  circle(0,0,3);
+  restore();
+
+  save();
+  linewidth(10);
+  color("blue");
+  circle(0,0,10);
+  restore();
+
+  save();
+  linewidth(12);
+  color("pink");
+  circle(0,0,15);
+  restore();
+
+  save();
+  linewidth(10);
+  color("pink");
+  circle(0,0,186);
+  restore();
+
+  for(x=0;x<=width;x=x+10){
+  save();
+  linewidth(2.5);
+  color("orange");
+  rotate(x);
+  circle(0,35,10);
+  restore();
+  }
+
+  for(x=0;x<=360;x=x+4){
+  save();
+  linewidth(3);
+  color("blue");
+  rotate(x);
+  line(45,25,45,50);
+  restore();
+  }
+
+  for(x=0;x<=width;x=x+30){
+  save();
+  linewidth(6);
+  color("darkorange");
+    fillcolor("blue");
+  rotate(x);
+  circle(0,84,11);
+    fill();
+  restore();
+  }
+
+  for(x=0;x<=width;x=x+30){
+  save();
+  linewidth(7);
+  color("darkorange");
+    fillcolor("blue");
+  rotate(x);
+  triangle(54,54,70,70,70,70);
+    fill();
+  restore();
+  }
+
+  save();
+  linewidth(2);
+  color("gray");
+  circle(0,0,70);
+  restore();
+
+  save();
+  linewidth(5);
+  color("gray");
+  circle(0,0,108);
+  restore();
+
+  for(x=0;x<=width;x=x+10){
+  save();
+  linewidth(6);
+  color("orange");
+      fillcolor("blue");
+  rotate(x);
+  circle(110,95,10);
+    fill();
+  restore();
+  }
+
+  for(x=5;x<=360;x=x+5){
+  save();
+  linewidth(3);
+  color("blue");
+  rotate(x);
+  line(120,50,110,30);
+  restore();
+  }
+
+  save();
+  linewidth(2);
+  color("gray");
+  circle(0,0,70);
+  restore();
+
+  save();
+  linewidth(7);
+  color("orange");
+  circle(0,0,175);
+  restore();
+
+  save();
+  linewidth(7);
+  color("blue");
+  circle(0,0,165);
+  restore();
+    restore();
+  }
+  function setup(){
+
+  }
+  function draw(){
+    carpet(200,200,200);
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+      <div id="spork"></div>
+          <a href="index.html">Fun With Forloops</a>
+    </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

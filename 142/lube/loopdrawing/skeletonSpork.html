@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loop Drawing</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+
+	function draw () {
+
+      //define colorArray
+     var colorArray = ['blue', 'lightblue', 'yellow', 'gray', 'lightgray'];
+     //select random integer
+     i = floor(5*random());
+     //get random entry
+     randomColor=colorArray[i];
+     fillcolor(randomColor)
+
+     circle(width*random(), height*random(),20);
+     circle(width*random(), height*random(),10);
+     circle(width*random(), height*random(),10);
+
+
+     //vertical lines
+     for (x=10;x<width;x=x+10)
+       line(x,0,x,height);
+
+     //horizontal lines
+     for (y=10;y<height;y=y+10)
+       line(0,y,width,y);
+
+     //circles
+     for (x=10;x<width;x=x+10)
+       for (y=10;y<width;y=y+10)
+         circle(x,y,15);
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Loop Drawing</div>
+        <div id="spork"></div>
+        <div id="content">
+          <p>
+            This loop drawing is a combination of circles on a grid.
+          </p>
+      </div>
+    </div>
+  </body>
+</html>

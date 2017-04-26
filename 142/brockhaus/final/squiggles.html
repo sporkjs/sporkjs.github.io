@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+
+<style>
+#secondaryNavigation{
+  text-align: right;
+  border-top: 1px solid black;
+  font-size: 10px;
+  padding-right: 10px;
+  clear:both;
+
+  }
+#spork{
+  width: 50%;
+  height: 500px;
+  float:left;
+}
+div.left{
+  float:left;
+  padding: 10px;
+}
+img{
+  vertical-align:middle;
+}
+img.pattern{
+  width:100px;
+}
+div.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+#titleBar{
+  font-size: 50px;
+}
+</style>
+<script src='spork.js'></script>
+<script>
+var lastX;              //variables for previous
+var lastY;  //position of the mouse
+
+function onmousedown(){
+  //remember where mouse starts
+  lastX=mouseX;
+  lastY=mouseY;
+}
+
+function pencil(){
+  //Draw line from last position
+  //to current position if the
+  //mouse is down
+  if (mouseDown){
+    line(lastX, lastY,
+        mouseX, mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function ribbon(){
+  	if(mouseDown){
+      line(lastX+10, lastY+10,
+           mouseX+10, mouseY+10,
+           mouseX-10, mouseY-10,
+           lastX-10, lastY-10,
+           lastX+10, lastY+10);
+      fill();
+        lastX=mouseX;
+    lastY=mouseY;
+    }
+}
+
+function fuzz(){
+  if(mouseDown){
+    	save();
+      	translate(mouseX, mouseY);
+    	rotate(random()*360);
+    	line(-10,0,10,0);
+    	restore();
+    lastX=mouseX;
+    lastY=mouseY;
+    }
+}
+function symmetricFill(a,b){
+
+  var x=a-width/2;
+  var y=b-height/2;
+
+  floodfill(x+width/2,y+height/2);
+  floodfill(y+width/2, x+height/2);
+  floodfill(-y+width/2, x+height/2);
+  floodfill(-x+width/2, y+height/2);
+  floodfill(-x+width/2, -y+height/2);
+  floodfill(-y+width/2, -x+height/2);
+  floodfill(x+width/2, -y+height/2);
+  floodfill(y+width/2, -x+height/2);
+}
+
+function onclick(){
+  if(bucketButton.checked)floodfill(mouseX,mouseY);
+  else if (symmetricButton.checked) symmetricFill(mouseX,mouseY);
+
+}
+
+
+function onmousemove(){
+  if (pencilButton.checked)pencil();
+  else if (fuzzButton.checked)fuzz();
+  else if (ribbonButton.checked)ribbon();
+
+
+
+}
+function setBothColors(c){
+  color(c);
+  fillcolor(c);
+}
+var theImages =[ ];
+var triangleWidth=300;
+var imageWidth=triangleWidth/2; //tweek this number
+var numberImages=2; //tweek this number
+function setup(){
+  //size(2*triangleWidth+imageWidth, 2*triangleWidth+imageWidth);
+  theImages=[img1, img2, img3, img4];
+  size (500,500);
+
+
+}
+function draw(){
+  save();
+  translate(width/2, height/2);
+  rect(-width/2,-height/2,width,height);
+  fillcolor('white');
+  fill();
+  color(0,0,0,0);
+  for(i=0;i<numberImages;i=i+1){ //this will change later
+  var randomImage=theImages[floor(random()*theImages.length)];
+  var x=random()*triangleWidth; //triangleWidth/2 does cool things
+  var y=random()*x;
+  var r=random()*360;
+  save();
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  rotate(90);
+  save();
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+
+  save();
+  scale(-1,-1);
+  triangle(0,0,width/2,0, width/2, height/2);
+  clip();
+  drawImage(randomImage, x,y, imageWidth,imageWidth,r);
+  restore();
+}
+restore();
+}
+function clearScreen(){
+  clear();
+}
+function selectEraser(){
+  whiteButton.checked=true;
+  thick.checked=true;
+  setBothColors('white');
+  linewidth(15);
+}
+
+</script>
+
+<head>
+</head>
+
+<body>
+  <div id='titleBar'>Final Project</div>
+  <div id='spork'></div>
+  <div id='penSelect' class='left'> <div class='title'>Pen Type </div>
+<input type='radio'name='penType' id='pencilButton' checked> <img src='images/pencil.png'><br>
+<input type='radio'name='penType' id='fuzzButton'> <img src='images/fuzz.png'> <br>
+<input type='radio'name='penType' id='ribbonButton'><img src='images/ribbon.png'> <br>
+<input type='radio'name='penType' id='bucketButton'> <img src='images/bucket.png'>  <br>
+<input type='radio'name='penType' id='symmetricButton'> Symmetric Fill  <br>
+<button onclick='clearScreen();'> Clear</button><br>
+<button onclick='startover();'>Draw it again</button><br>
+  </div>
+  <div id='colorSelect' class='left'> <div class='title'>Color </div>
+<input type='radio' name='widthButton' onclick='setBothColors("black");' checked><img src='images/black.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("lightgray");'><img src='images/lightgray.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("red");'><img src='images/red.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("coral");'><img src='images/coral.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("lightsalmon");'><img src='images/lightsalmon.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("orange");'><img src='images/orange.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("yellow");'><img src='images/yellow.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("lightgreen");'><img src='images/limegreen.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("greenyellow");'><img src='images/greenyellow.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("green");'><img src='images/green.png'><br>
+</div>
+<div id='colorSelect' class='left'> <div class='title'> </div>
+<br>
+<br>
+<input type='radio' name='widthButton' onclick='setBothColors("aqua");'><img src='images/aqua.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("skyblue");'><img src='images/skyblue.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("blue");'><img src='images/blue.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("dodgerblue");'><img src='images/dodgerblue.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("slateblue");'><img src='images/slateblue.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("indigo");'><img src='images/indigo.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("purple");'><img src='images/purple.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("violet");'><img src='images/violet.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("hotpink");'><img src='images/pink.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("deeppink");'><img src='images/deeppink.png'><br>
+<input type='radio' name='widthButton' onclick='setBothColors("white");' id='whiteButton'><img src='images/white.png'><br>
+  </div>
+  <div id='sizeSelect' class='left'> <div class='title'>Size </div>
+<input type='radio'name='sizeType' onclick='linewidth(1);' checked> 1px<br>
+<input type='radio'name='sizeType' onclick='linewidth(5);'> 5px<br>
+<input type='radio'name='sizeType' onclick='linewidth(10);'> 10px<br>
+<input type='radio'name='sizeType' onclick='linewidth(15);' id='thick'> 15px<br>
+  </div>
+  <div id='picture' class='left'> <div class='title'></div>
+  <img class='pattern' id='img1' src='images/img1.png'>
+  <img class='pattern' id='img2' src='images/img2.png'>
+  <img class='pattern' id='img3' src='images/img3.png'>
+  <img class='pattern' id='img4' src='images/img4.png'>
+</div>
+<div id="secondaryNavigation">Taylor Brockhaus | Math 142 | <a href="index.html"</a>Go Back</div>
+</div>
+</body>
+
+</html>

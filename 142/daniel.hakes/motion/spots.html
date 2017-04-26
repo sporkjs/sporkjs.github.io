@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>Spots</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    timestep(800);
+    loop();
+  }
+  function draw(){
+
+        var q,w;
+    q=random()*(width-40)+20;
+    w=random()*(height-40)+20;
+
+    var x=random()*width;
+    var y=random()*height;
+
+    circle(x,y,min(x, y, width-x, height-y));
+      fillcolor(255,150,0,0.82);
+    fill();
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Spots</div>
+    <div id="content">
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">Home</a>
+    </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

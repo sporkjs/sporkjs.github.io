@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crazy Vortex</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 3px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+
+	#titleBar{
+		color: black;
+		font-size: 100px;
+		background-color: lightgreen;
+		text-align: center;
+		}
+
+	#mainNavigation{
+		background-color: white;
+		border-radius: 15px;
+		}
+
+	#content{
+		background-color: pink;
+		text-align: left;
+		font-size: 20px;
+		}
+
+	#wrapper{
+		background-color: tan;
+		border-radius: 15px;
+		}
+
+	#secondaryNavigation{
+		background-color: lightgreen;
+		text-align: right;
+		font-size: 10px;
+		border-radius: 15px;
+		}
+
+	img.center{
+		height: 500px;
+		}
+
+    </style>
+	<script src="spork.js"></script>
+     <script>
+  
+function randomColor(){
+  var r, g, b;
+  r=floor(256*random());
+  g=floor(256*random());
+  b=floor(256*random());
+  color(r,g,b);
+}
+
+function randomFillColor(){
+  var r, g, b;
+  r=floor(256*random());
+  g=floor(256*random());
+  b=floor(256*random());
+  fillcolor(r,g,b);
+}
+function setup(){
+  loop();
+  timestep(100);
+}
+
+function draw(){
+save();
+translate(200,200);
+
+randomColor();
+randomFillColor();
+quad(-200,-200, 200,-200, 200,200, -200,200);
+fill();
+
+n=(4*random());
+rotate(n*90);
+
+for(i=0;i<100;i=i+1){
+  randomColor();
+  randomFillColor();
+  quad(-200,-200, 200,-200, 200,200, -200, 200);
+  fill();
+  rotate(45);
+  scale(0.955);
+}
+  restore();
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Keeptin Temm</div>
+      <div id="mainNavigation">
+
+<a href="index.html">Where am I?</a>
+<a href="creature.html">Wait, who're we talking about?</a>
+<a href="bouncingCreature.html">I remember it being cool</a>
+<a href="gallery.html">Dude, I'll laugh at just about anything</a>
+<a href="illusion.html">I swear these things are moving, man</a>
+<a href="calculator.html">What is math, really?</a>
+<a href="kaleidoscope.html">There's so much smash</a>
+<a href="kaleidoscopeColor.html">PANDAAAAS</a>
+
+</div>
+
+      <div id="content">
+		<div id="spork"></div>
+<p>
+I think the fumes have gotten to me here...
+</div>
+      <div id="secondaryNavigation">Another mushroom, another victim</div>
+    </div>
+  </body>
+</html>

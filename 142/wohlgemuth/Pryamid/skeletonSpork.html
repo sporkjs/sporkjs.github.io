@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PRYAMID</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        margin: 10px;
+        padding: 10px;
+      }
+      #wrapper{
+        width: 50%;
+        margin: auto;
+        overflow: hidden;
+      }
+      #titleBar{
+        background-color: paleturquoise;
+        color: indianred;
+        font-size: 60px;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight:lighter;
+        }
+      #mainNavigation{
+        background-color: paleturquoise;
+      }
+     #content{
+       background-color: paleturquoise;
+       color: indianred;
+       text-align: center;
+       font-family: sans-serif;
+       font-weight: lighter;
+       padding-left: 40px;
+       padding-right: 40px;
+       padding-bottom: 40px;
+     }
+     #secondaryNavigation{
+       background-color: paleturquoise;
+     }
+     #space1{
+       top: 0px;
+       bottom: 0px;
+       right: 0px;
+       text-align: right;
+       background: none;
+       outline: none;
+       color: indianred;
+       font-size: 12px;
+       border: none;
+     }
+     #space2{
+       top: 0px;
+       bottom: 0px;
+       right: 0px;
+       text-align: right;
+       background: none;
+       outline: none;
+       color: indianred;
+       font-size: 12px;
+       border: none;
+     }
+     #space3{
+       top: 0px;
+       bottom: 0px;
+       right: 0px;
+       text-align: right;
+       background: none;
+       outline: none;
+       color: indianred;
+       font-size: 12px;
+       border: none;
+     }
+     #space4{
+       top: 0px;
+       bottom: 0px;
+       right: 0px;
+       text-align: right;
+       background: none;
+       outline: none;
+       color: indianred;
+       font-size: 12px;
+       border: none;
+     }
+
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+      function setup(){
+translate (200,200);
+x=30;
+}
+
+function draw(){
+clear();
+R=95;G=158;B=160;A=1;
+linewidth(2);
+
+
+for(w=400;w>10;w=w-x){
+
+color (R,G,B,A);
+fillcolor(R,G,B,A);
+rect (-w/2,-w/2,w,w);
+fill();
+R=R+12;
+G=G+12;
+B=B+12;
+A=A-.05;
+}
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">
+        PYRAMID
+      </div>
+      <div id="mainNavigation"></div>
+      <div id="content">
+        <div id="spork"></div>
+        <p>
+        This is the Pyramid Illusion, also called the Vasarely illusion. As the amount of squares increases, a large 'X' begins to appear.
+        </p>
+        <button id="space1" onclick="x=60; draw();">60</button>
+        <button id="space2" onclick="x=50; draw();">50</button>
+        <button id="space3" onclick="x=40; draw();">40</button>
+        <button id="space4" onclick="x=30; draw();">30</button>
+      </div>
+      <div id="secondaryNavigation"></div>
+    </div>
+  </body>
+</html>

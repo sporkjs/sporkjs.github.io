@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <title>My Paint Program</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  var lastX,lastY;
+  function onmousedown(){
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+  function pencil(){
+    if(mouseDown){
+    line(lastX,lastY,mouseX,mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+    }
+  }
+  function fuzz(){
+    if(mouseDown){
+save();
+linewidth(1);
+rect(mouseX,mouseY,theLineWidth,theLineWidth);
+fill();
+restore();
+    }
+  }
+  var theLineWidth
+function setup(){
+size(600,400);
+background('white');
+theLineWidth=1;
+onmousemove=pencil;
+}
+function draw(){
+
+}
+function setLineWidth(x){
+  linewidth(x);
+  theLineWidth=x;
+}
+function setPenType(x){
+  onmousemove=x;
+}
+function selectEraser(){
+  eraserWidth.checked=true;
+  eraserColor.checked=true;
+  color('white');
+  linewidth(20);
+  onmousemove=pencil;
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">My Paint Program</div>
+    <div id="content">
+      <div id="spork"></div>
+      <button onclick="background('white');">Clear</button>
+<fieldset>
+  <legend>
+    Pen Type
+  </legend>
+  <input type="radio" name="penType" checked onclick="setPenType(pencil);" />Pencil
+  <input type="radio" name="penType" onclick="setPenType(fuzz);" />Fuzz
+  <input type="radio" name="penType" onclick="selectEraser();" />Eraser
+</fieldset>
+  <fieldset>
+  <legend>
+      Pen Size
+    </legend>
+      <input type="radio" name="penSize" checked onclick="setLineWidth(1);"/><div class="pensize one"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(2);"/><div class="pensize two"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(3);"/><div class="pensize three"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(4);"/><div class="pensize four"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(5);"/><div class="pensize five"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(6);"/><div class="pensize six"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(7);"/><div class="pensize seven"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(8);"/><div class="pensize eight"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(9);"/><div class="pensize nine"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(10);"/><div class="pensize ten"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(15);"/><div class="pensize fifteen"></div>
+      <input type="radio" name="penSize" onclick="setLineWidth(20);" id='eraserWidth'/><div class="pensize twenty"></div>
+</fieldset>
+<fieldset>
+  <legend>
+    Pen Color
+  </legend>
+      <input type="radio" name="penColor" checked onclick="color('black')" /><div class="pensize ten"></div>
+      <input type="radio" name="penColor" onclick="color('grey')" /><div class="pensize ten grey"></div>
+      <input type="radio" name="penColor" onclick="color('white')" id='eraserColor' /><div class="pensize ten white"></div>
+      <input type="radio" name="penColor" onclick="color('darkred')" /><div class="pensize ten darkred"></div>
+      <input type="radio" name="penColor" onclick="color('red')" /><div class="pensize ten red"></div>
+      <input type="radio" name="penColor" onclick="color('orange')" /><div class="pensize ten orange"></div>
+      <input type="radio" name="penColor" onclick="color('coral')" /><div class="pensize ten coral"></div>
+      <input type="radio" name="penColor" onclick="color('yellow')" /><div class="pensize ten yellow"></div>
+      <input type="radio" name="penColor" onclick="color('indigo')" /><div class="pensize ten indigo"></div>
+      <input type="radio" name="penColor" onclick="color('blue')" /><div class="pensize ten blue"></div>
+      <input type="radio" name="penColor" onclick="color('dodgerblue')" /><div class="pensize ten dodgerblue"></div>
+      <input type="radio" name="penColor" onclick="color('aqua')" /><div class="pensize ten aqua"></div>
+      <input type="radio" name="penColor" onclick="color('violet')" /><div class="pensize ten violet"></div>
+      <input type="radio" name="penColor" onclick="color('deeppink')" /><div class="pensize ten deeppink"></div>
+      <input type="radio" name="penColor" onclick="color('lime')" /><div class="pensize ten lime"></div>
+      <input type="radio" name="penColor" onclick="color('green')" /><div class="pensize ten green"></div>
+</fieldset>
+    </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

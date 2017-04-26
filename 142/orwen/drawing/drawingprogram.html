@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+#spork{
+	float:left;
+}
+#penSelect{
+	float:left;
+}					
+img{
+	vertical-align:middle;
+}
+
+#colorSelect{
+	float:left;
+}
+
+#sizeSelect{
+	float:left;
+}
+#clearDiv{
+clear:both;
+}
+
+	</style>
+	
+
+
+
+
+	<script src="spork.js"></script>
+	<script>
+function pixel(x,y){
+  rect(x,y,1,1)
+}
+
+var lastX;
+var lastY;
+
+function setBothColors(c){
+	color(c);
+	fillcolor(c);
+}
+
+function randomColor(){
+	var r,g,b
+    r = floor(256*random());
+    g = floor(256*random());
+    b = floor(256*random());
+
+    color(r,g,b);
+	fillcolor(r,g,b);
+
+}
+
+
+function onmousedown(){
+  lastX=mouseX;
+  lastY=mouseY;
+  
+}
+
+function pencil(){
+  if (mouseDown){  
+  line(lastX, lastY, mouseX, mouseY)
+  lastX=mouseX;
+  lastY=mouseY;
+  }
+}
+
+function eraser(){
+
+  if (mouseDown){  
+  save();
+	color('white');
+  line(lastX, lastY, mouseX, mouseY)
+  lastX=mouseX;
+  lastY=mouseY;
+  restore();
+  }
+}
+
+function ribbon(){
+  if (mouseDown){
+    line(lastX+10,lastY+10,
+         mouseX+10,mouseY+10,
+         mouseX-10,mouseY-10,
+         lastX-10,lastY-10,
+         lastX+10,lastY+10);
+    fill();
+    	lastX=mouseX;
+  		lastY=mouseY;
+  }
+  
+}
+
+function fuzz(){
+  if (mouseDown){
+    save();
+         
+		translate(mouseX,mouseY);
+    	rotate(random()*360)
+    	line(-10,0,10,0);
+    
+    restore();
+
+    	lastX=mouseX;
+  		lastY=mouseY;
+  }
+  
+}
+
+function circles(){
+	var cx, cy, dx, dy, r;
+	  if (mouseDown){
+    	
+		save();
+        cx=(lastX+mouseX)/2;
+        cy=(lastY+mouseY)/2;
+        
+        dx=mouseX-cx;
+        dy=mouseY-cy;
+        
+        r=sqrt(dx*dx+dy+dy);
+        
+        circle(cx,cy,r);
+		restore();
+
+    	lastX=mouseX;
+  		lastY=mouseY;
+  }
+  
+}
+
+function custom(){
+	var s;
+	        s=(4*random());
+
+  if (mouseDown){
+	  	
+    save();
+         
+		translate(mouseX,mouseY);
+    	rotate(random()*360)
+        
+
+        if (s=1){  	circle(0,0,10);fill();}
+        if (s=2){  	rect(0, 0, 10, 10);fill();}  
+        if (s=3){  	triangle(10, 0, -10, 0, 0, -10);fill();}
+		
+
+
+
+    restore();
+    
+    lastX=mouseX;
+    lastY=mouseY;
+
+  }
+
+}
+
+function onmousemove(){
+	if(pencilButton.checked)pencil();
+	else if(fuzzButton.checked)fuzz();
+	else if(ribbonButton.checked)ribbon();
+	else if(circleButton.checked)circles();
+	else if(customButton.checked)custom();
+	else if(eraserButton.checked)eraser();
+
+}
+
+function clearImage(){clear();}
+
+function draw(){}
+
+function setup(){}
+
+	</script>
+  
+  </head>
+
+
+  <body>
+	<div id="titleBar">Paint</div>
+	<div id="spork"></div>
+	<div id="penSelect">
+		<input type="radio" name="penType" id="pencilButton" checked>		<img src="paintImages/black.png"><br>
+		<input type="radio" name="penType" id="fuzzButton">			<img src="paintImages/fuzz.png"><br>	
+		<input type="radio" name="penType" id="ribbonButton">			<img src="paintImages/ribbon.png"><br>
+		<input type="radio" name="penType" id="circleButton">			<img src="paintImages/circles.png"><br>
+		<input type="radio" name="penType" id="customButton">			<img src="paintImages/custom.png"><br>
+		<input type="radio" name="penType" id="eraserButton">			Eraser<br>
+
+	</div>
+	
+	<div id="colorSelect">
+
+		<input type="radio" name="colorButton" onclick="setBothColors('black');" checked>	<img src="paintImages/black.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('red');">			<img src="paintImages/red.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('orange');">		<img src="paintImages/orange.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('yellow');">		<img src="paintImages/yellow.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('green');">		<img src="paintImages/green.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('blue');">		<img src="paintImages/blue.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('purple');">		<img src="paintImages/indigo.png"><br>
+		<input type="radio" name="colorButton" onclick="setBothColors('white');">		<img src="paintImages/white.png"><br>
+		<button id="colorRandom" onclick="setBothColors(randomColor());">		<img src="paintImages/random.png"></button><br>
+	</div>
+
+
+	<div id="sizeSelect">
+		<input type="radio" name="sizeButton" onclick="linewidth(1);" checked>1px<br>
+		<input type="radio" name="sizeButton" onclick="linewidth(2);">2px<br>
+		<input type="radio" name="sizeButton" onclick="linewidth(3);">3px<br>
+		<input type="radio" name="sizeButton" onclick="linewidth(5);">5px<br>
+		<input type="radio" name="sizeButton" onclick="linewidth(10);">10px<br>
+		<input type="radio" name="sizeButton" onclick="linewidth(20);">20px<br>
+	</div>
+
+	<div id="clearDiv"><button onclick="clearImage();">CLEAR</button></div>
+
+		
+	    
+  </body>
+
+</html>

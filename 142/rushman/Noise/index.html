@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+
+<head>
+  <style>
+  body{
+    background-color: #0B3861;
+    }
+  #wrapper{
+    width: 80%;
+    margin:auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: gray;
+  }
+  #titleBar{
+    font-size:50px;
+    border-bottom: 1px solid black;
+    border-width:medium;
+    font-family: cursive;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    text-shadow: 3px 3px black;
+  }
+  #navigationBar{
+    text-align: center;
+    border-bottom: 1px solid gray;
+    font-family: cursive;
+    }
+  #content{
+    margin: 20px;
+    border: none;
+    font-family: cursive;
+    }
+  #secondaryNavigation{
+    text-align: right;
+    border-top: 1px solid gray;
+    font-size: 20px;
+    padding-right: 10px;
+    font-family: cursive;
+    clear: both;
+    }
+div.tab{
+display: inline-block;
+width: 18%;
+vertical-align: middle;
+}
+div.tab a{
+text-decoration: none;
+  }
+  #buttonDiv{
+    width: 75%;
+  }
+img.thumbnail{
+    width:300px;
+    height: 300px;
+  }
+  button.thumbnail{
+    background: none;
+    margin: 5px
+    padding: 5px;
+    height:315px;
+    width:315px;
+    border-radius: 0px;
+    border-color: black;
+}
+#gallery{
+  background: rgba(0,0,0,0.85);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display:none;
+  }
+  #both{
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+  }
+  #picture{
+    height: 90%;
+    position:relative;
+  }
+  #caption{
+    height: 10%;
+    color: lightgray;
+    text-align: center;
+  }
+  #galleryPicture{
+    max-height:90%;
+    max-width:90%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    background-color: white;
+  }
+  #closeButton{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    color:lightgray;
+    background: none;
+    font-size: 40px;
+    border:none;
+    outline:none;
+  }
+  #rightButton{
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    right:0px;
+    width:50%;
+    text-align:right;
+    background: none;
+    border:none;
+    outline:none;
+    color:lightgray;
+    font-size:50px;
+  }
+  #leftButton{
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    width:50%;
+    left:0px;
+    text-align:left;
+    background: none;
+    border:none;
+    outline:none;
+    color:lightgray;
+    font-size:50px;
+  }
+  </style>
+
+  <script>
+theCaptions=[	"Noise Picture #1",
+  			"Noise Picture #2",
+"Noise Picture #3",
+  ]
+
+theImages=[	"images/noise1.png",
+"images/noise2.png",
+"images/noise3.png",
+]
+
+var currentPicture;
+  function showPicture(n){
+    galleryPicture.src=theImages[n];
+    caption.innerHTML=theCaptions[n];
+    currentPicture=n;
+    if (currentPicture==0)
+    leftButton.style.display='none';
+    else {
+    leftButton.style.display='block';
+  }
+  if (currentPicture==theImages.length-1)
+  rightButton.style.display='none';
+  else {
+  rightButton.style.display='block';
+  }
+  gallery.style.display='block';
+  }
+  function closeWindow(){
+    gallery.style.display='none';
+  }
+  function showNext(){
+    showPicture(currentPicture+1);
+  }
+  function showPrevious(){
+    showPicture(currentPicture-1);
+  }
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+<div id="titleBar">Noise Pictures</div>
+
+<div id="content">
+   These pictures were all drawn using a noise function. They were inspired by combining previous noise pictures that we were drawing in class.
+</div>
+<div id="buttonDiv">
+  <button class="thumbnail" onclick="showPicture(0);"><img class="thumbnail" src="thumbnails/noise1.png"></button>
+  <button class="thumbnail" onclick="showPicture(1);"><img class="thumbnail" src="thumbnails/noise2.png"></button>
+  <button class="thumbnail" onclick="showPicture(2);"><img class="thumbnail" src="thumbnails/noise3.png"></button>
+
+</div>
+  </div>
+
+  <div id="gallery">
+    <div id="both">
+      <div id="picture">
+          <img id="galleryPicture" src="images/kiddos1.jpg"></div>
+        <div id="caption">nonsense nonsense nonsense nonsense nonsense</div>
+      </div>
+            <button id="leftButton" onclick="showPrevious();">&leftarrow;</button>
+            <button id="rightButton" onclick="showNext();">&rightarrow;</button>
+            <button id="closeButton" onclick="closeWindow();">X</div>
+    </div>
+
+</body>
+
+</html>

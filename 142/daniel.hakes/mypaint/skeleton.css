@@ -1,0 +1,133 @@
+div{
+  border: 0px solid black;
+  padding: 10px;
+  margin:  10px;
+}
+body{
+
+}
+#wrapper{
+  background-color: lightgray;
+  margin:auto;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+#titleBar{
+  border-bottom: 1px solid black;
+  font-size: 80px;
+  margin: 20px;
+  background-color: Orange;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
+#mainNavigation{
+align-items: center;
+}
+#spork{
+  width: 90%;
+  text-align: center;
+  margin:auto;
+  height: 500px;
+}
+#content{
+  width: 80%;
+  margin:auto;
+}
+#secondaryNavigation{
+  text-align: center;
+  border-top: 1px solid black;
+  font-size: 12px;
+  clear:both;
+}
+div.pensize{
+  width: 20px;
+  background: black;
+  padding: 0px;
+  border: none;
+  display: inline-block;
+}
+div.one{
+height: 1px;
+}
+div.two{
+height: 2px;
+}
+div.three{
+  height: 3px;
+}
+div.four{
+height: 4px;
+}
+div.five{
+  height: 5px;
+}
+div.six{
+height: 6px;
+}
+div.seven{
+  height: 7px;
+}
+div.eight{
+height: 8px;
+}
+div.nine{
+height: 9px;
+}
+div.ten{
+height: 10px;
+}
+div.fifteen{
+height: 15px;
+}
+div.twenty{
+height: 20px;
+}
+div.red{
+  background: red;
+}
+div.orange{
+  background: orange;
+}
+div.blue{
+  background: blue;
+}
+div.yellow{
+  background: yellow;
+}
+div.white{
+  background: white;
+  border-color: black;
+}
+div.green{
+  background: green;
+}
+div.grey{
+  background: grey;
+}
+div.violet{
+  background: violet;
+}
+div.aqua{
+  background: aqua;
+}
+div.darkred{
+  background: darkred;
+}
+div.dodgerblue{
+  background: dodgerblue;
+}
+div.coral{
+  background: coral;
+}
+div.deeppink{
+  background: deeppink;
+}
+div.lime{
+  background: lime;
+}
+div.indigo{
+  background: indigo;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TITLE GOES HERE</title>
+<link rel="stylesheet" type="text/css" href="final.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+</style>
+<script src="spork.js"></script>
+<script>
+
+function creature(x,y,s){
+	save();
+
+	translate(x,y);
+	scale(s);
+
+	linewidth(10)
+	fillcolor('white')
+	circle(0,0,100)
+	fill()
+	//left side
+	//eyes
+	rotate(-35)
+	ellipse(-30,-40,40,-20)
+	fillcolor('black')
+	fill()
+
+	point(-20,-35)
+	fillcolor('blue')
+	fill()
+	//ear
+	save()
+	linewidth(20)
+	circle(-40,-120,30)
+	fillcolor('black')
+	fill()
+	restore()	
+	//mouth
+	save()
+	arc(10,50,35,45,200)
+	arc(-50,10,35,45,200)
+	rotate(170)
+	triangle(20,20,-20,-20,20,-20)
+	fillcolor('pink')
+	fill()
+
+	restore()
+
+	//right side
+	//eye
+	rotate(65)
+	ellipse(30,-40,-40,20)
+	fillcolor('black')
+	fill()
+
+	point(20,-35)
+	fillcolor('blue')
+	fill()
+
+	//ear
+	save()
+
+	linewidth(20)
+	circle(40,-120,30)
+	fillcolor('black')
+	fill()
+
+	restore()
+
+restore();
+}
+
+//center of clock
+function drawFace(){
+  save();
+	creature(0,0,.4);
+  	aligntext("center")
+    filltext("12",0,-170);
+  	rotate(30);
+  	filltext("1",0,-170);
+ 	rotate(30);
+  	filltext("2",0,-170);
+  	rotate(30);
+  	filltext("3",0,-170);
+	rotate(30);
+  	filltext("4",0,-170);
+  	rotate(30);	
+  	filltext("5",0,-170);
+  	rotate(30);
+  	filltext("6",0,-170);
+	rotate(30);
+  	filltext("7",0,-170);
+	rotate(30);
+  	filltext("8",0,-170); 
+	rotate(30);
+  	filltext("9",0,-170);
+  	rotate(30);
+  	filltext("10",0,-170);
+  	rotate(30);
+  	filltext("11",0,-170);
+  	rotate(30);
+  restore();
+}
+
+//second hand
+function drawSecondHand(){
+	line(0,0,0,-150);
+  	creature(0,-150,.1)
+}
+
+function drawSecond(){
+ 	save();
+ 	rotate(360*second()/60);
+  	drawSecondHand();
+  	restore();
+}
+
+function setup(){
+	translate(200,200);  
+  	loop();
+}
+
+function draw(){
+  	clear();
+  	drawFace();
+	drawSecond();
+  	drawMinute();
+  	drawHour();
+  	
+}
+
+//minute hand
+function drawMinuteHand(){
+	line(0,0,0,-175);
+  	creature(0,-175,.1)
+}
+
+function drawMinute(){
+ 	save();
+ 	rotate(360*minute()/60);
+  	drawMinuteHand();
+  	restore();
+}
+
+function setup(){
+	translate(200,200);  
+  	loop();
+}
+
+//hour hand
+function drawHourHand(){
+	line(0,0,0,-125);
+  	creature(0,-125,.2);
+}
+
+function drawHour(){
+ 	save();
+ 	rotate(360*hour()/12);
+  	drawHourHand();
+  	restore();
+}
+
+function setup(){
+	translate(200,200);  
+  	loop();
+}
+
+</script>
+</head>
+<body>
+<p>
+<H1>Panda Clock</H1>
+<p> 
+
+<p>
+<H2>Matthew James Chapa</H2>
+<p>
+
+<p>
+<H2>Spring 2015</H2>
+<p>
+<div id="spork"></div>
+</body>
+<br><a href='indexfinal.html'>Main Page</a>
+</html>

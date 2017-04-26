@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>Quad</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  /*
+  Clip Grid Example
+  This example will draw two grids.
+  One grid is a grid of black circles.
+  The other grid is a grid of squares clipped into
+  a circle.
+  */
+
+  function setup(){
+    //No special setup needed
+  }
+  function draw(){
+    //y value for the line
+    var x;
+
+    //y takes on the values 3, 6, 9...
+    for (x=3;x<height;x=x+3){
+      //draw a line from x=0 to x=width
+      line(x,0,x,height);
+  }
+
+    //draw circle for clipping
+    fillcolor('white')	//white background
+  quad(70,70,80,350,300,320,330,100);
+    fill();
+    //keep the rest of the drawing in the circle
+    clip();
+
+    //change fill color back to black/other color for squares
+    fillcolor('blue');
+
+      var y;
+
+    //y takes on the values 3, 6, 9...
+    for (y=3;y<height;y=y+3){
+      //draw a line from x=0 to x=width
+      line(0,y,width,y);
+      }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+      <div id="spork"></div>
+          <a href="index.html">Fun With Forloops</a>
+    </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TITLE GOES HERE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+
+
+    </style>
+    <script src="spork.js"></script>
+     <script>
+     function setup(){
+ translate (200,200);
+   loop();
+   r=0;
+ }
+
+ function draw(){
+   clear();
+   save();
+   rotate(r);
+
+ rect(-100,-100,200,200);
+ fillcolor('blue');
+ color('blue');
+ fill();
+
+  r=r+.5;
+   restore();
+
+
+ rect(-210,-200,200,200);
+ fillcolor('orange');
+ color('orange');
+ fill();
+
+ rect(10,-200,200,200);
+ fillcolor('orange');
+ color('orange');
+ fill();
+
+ rect(10,20,200,200);
+ fillcolor('orange');
+ color('orange');
+ fill();
+
+ rect(-210,20,200,200);
+ fillcolor('orange');
+ color('orange');
+ fill();
+
+ }
+
+    </script>
+  </head>
+  <body>
+    <div id="spork"></div>
+  </body>
+
+</html>

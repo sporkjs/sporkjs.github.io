@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Julia Set in Color</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <link rel="stylesheet" type="text/css" href="Personal.css">
+    <style>
+      div{
+        font-family: helvetica;
+        color: darkred;
+        margin: 20px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+
+    var minX; //left hand side
+    var minY; //bottom
+    var dx; //width
+    var dy; //height
+    var cx; //constants in the iteration
+    var cy;
+    function onclick(){
+      var centerX=dx*mouseX/width+minX;
+      var centerY=dy*mouseY/height+minY;
+      dx=dx/2;
+      dy=dy/2;
+      zoom.value=dx;
+      minX=centerX-dx/2;
+      minY=centerY-dy/2;
+      clear();
+      draw();
+    }
+    function setup(){
+      minX=-2;
+      minY=-2;
+      dx=4;
+      dy=4;
+      zoom.value=dx;
+      cx=eval(cxInput.value);
+      cy=eval(cyInput.value);
+      size(200,200);
+    }
+    function biggerWindow(){
+      minX=-2;
+      minY=-2;
+      dx=4;
+      dy=4;
+      zoom.value=dx;
+      cx=eval(cxInput.value);
+      cy=eval(cyInput.value);
+      size(400,400);
+      draw();
+    }
+    function draw(){
+      for (k=0;k<width;k=k+1)
+        for(j=0;j<height;j=j+1){
+          x=dx*k/width+minX;
+          y=dy*j/height+minY;
+          color('white');
+          for(n=0;n<100;n=n+1){
+            newX=x*x-y*y+cx;
+            newY=2*x*y+cy;
+            x=newX;
+            y=newY;
+            if(x*x+y*y>4){
+              color(n,n,5*n);
+              n=1000;
+            }
+          }
+          rect(k,j,1,1);
+        }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Leah Guenther</div>
+      <div id="mainNavigation">
+              <div class="tab" id="home"><a href="index.html">Home</a></div>
+              <div class="tab" id="hinton"><a href="HistoryExample/index.html">Charles Howard Hinton</a></div>
+              <div class="tab" id="creature"><a href="creature.html">Spork Creature page</a></div>
+              <div class="tab" id="bouncingCreature"><a href="bouncingCreature.html">Bouncing Creature</a></div>
+              <div class="tab" id="art"><a href="art.html">Purple 3D Art</a></div>
+              <div class="tab" id="gallery"><a href="galleryExample/gallery.html">Gallery</a></div>
+              <div class="tab" id="illusions"><a href="illusions/index.html">Illusions</a></div>
+              <div class="tab" id="kaleidoscope"><a href="kaleidoscope/website/index.html">Kaleidoscope</a></div>
+              <div class="tab" id="calculator"><a href="calculator.html">Calculator</a></div>
+              <div class="tab" id="noise"><a href="noise.html">Noise Art</a></div>
+              <div class="tab" id="julia"><a href="juliaColor.html">Julia Set</a></div></div>
+      <div id="content">Julia Set (Deep Blue)
+        <div id="spork"></div>
+        <button onclick='startover();'>Start Over</button>
+        CX=<input type='text' id='cxInput' value='-0.8'>
+        CY=<input type='text' id='cyInput' value='0.1'>
+        ZOOM=<input type='text' id='zoom' value='4'>
+        <button onclick='biggerWindow();'>Bigger Window</button>
+
+      </div>
+      <div id="secondaryNavigation">Secondary navigation bar</div>
+    </div>
+  </body>
+</html>

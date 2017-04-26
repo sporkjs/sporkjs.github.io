@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BOUNCING JEREMY</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        margin: 10px;
+        padding: 10px;
+      }
+      #wrapper{
+        width: 50%;
+        margin: auto;
+        overflow: hidden;
+      }
+      #titleBar{
+        background-color: paleturquoise;
+        color: indianred;
+        font-size: 60px;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight:lighter;
+        }
+      #mainNavigation{
+        background-color: paleturquoise;
+      }
+     #content{
+       background-color: paleturquoise;
+       color: indianred;
+       text-align: center;
+       font-family: sans-serif;
+       font-weight: lighter;
+       padding-left: 40px;
+       padding-right: 40px;
+       padding-bottom: 40px;
+     }
+     #secondaryNavigation{
+       background-color: paleturquoise;
+     }
+     #link{
+       font-family: sans-serif;
+       font-weight: lighter;
+       text-align: center;
+       font-size: 8pt;
+     }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+      function creature(x,y,s){
+	save();
+  	translate(x,y);
+	scale(s);
+
+    //body
+    color('indianred');
+    fillcolor('indianred');
+    circle(0,0,100);
+    fill();
+
+    //Left Arm
+    save();
+    color('indianred');
+    fillcolor('indianred');
+    translate(-105,0);
+    rotate(125);
+    ellipse(0,0,45,27);
+    fill();
+    restore();
+
+    //Right Arm
+    save();
+    color('indianred');
+    fillcolor('indianred');
+    translate(105,0);
+    rotate(-125);
+    ellipse(0,0,45,27);
+    fill();
+    restore();
+
+
+    //Left leg
+    save();
+    color('indianred');
+    fillcolor('indianred');
+    translate(-40,80);
+    rotate(70);
+    ellipse(0,0,60,35);
+    fill();
+    restore();
+
+    //Right leg
+    save();
+    color('indianred');
+    fillcolor('indianred');
+    translate(40,80);
+    rotate(110);
+    ellipse(0,0,60,35);
+    fill();
+    restore();
+
+
+    //Left Ear
+    color('indianred');
+    fillcolor('indianred');
+    circle(-40,-95,20);
+    fill();
+
+    //Left Ear
+    color('coral');
+    fillcolor('coral');
+    circle(-40,-95,10);
+    fill();
+
+    //Right Ear
+    color('indianred');
+    fillcolor('indianred');
+    circle(40,-95,20);
+    fill();
+
+    //Right Ear
+    color('coral');
+    fillcolor('coral');
+    circle(40,-95,10);
+    fill();
+
+    //Zipper
+    color ('coral');
+    line (0,-35, 0,60);
+
+    //Face
+    color('peachpuff');
+    fillcolor('peachpuff');
+    ellipse(0,-35,55,35);
+    fill();
+
+    //Left Eye
+    color('black');
+    fillcolor('black');
+    circle(-7,-50,1);
+    fill();
+
+    //Right Eye
+    color('black');
+    fillcolor('black');
+    circle(7,-50,1);
+    fill();
+
+    //Mouth
+    color ('black');
+    line (-7,-40, 7,-40);
+  	restore();
+	}
+
+var X; //X-value of location
+var Y; //Y-value of location
+var VX; //X velocity
+var VY; //Y velocity
+var R; //Radius of creature
+var G; //Gravity
+
+function bounce(){
+	if (X>width-R){
+      VX=-abs(VX);
+    }
+  	if (X<R){
+      VX=abs(VX);
+    }
+  	if (Y>height-R){
+      VY=-abs(VY);
+    }
+  	if (Y<R+25){
+      VY=abs(VY);
+    }
+}
+
+function setup (){
+  X=200;
+  Y=200;
+  VX=1;
+  VY=1;
+  R=100;
+  G=0.01;
+  loop();
+}
+function draw(){
+  	clear();
+	creature(X,Y,.75);
+  	X=X+VX;
+  	Y=Y+VY;
+  	VY=VY+G;
+  	bounce();
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">
+        BOUNCING JEREMY
+      </div>
+      <div id="mainNavigation"></div>
+      <div id="content">
+        <div id="spork"></div>
+        One may think Jeremy is a creature, a bear perhaps. But quite the contrary! Jeremy is in fact a small human being. During the snowy season of the year, Jeremy enjoys protecting himself against the winter elements with his red snow suit. He's in an uncontrollable state of happiness which causes him to jump around.
+      </div>
+      <div id="secondaryNavigation"></div>
+      <div id="link"><a href="../index.html">HOME</a></div>
+    </div>
+  </body>
+</html>

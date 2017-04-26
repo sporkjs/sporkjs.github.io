@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <link rel="stylesheet" type="text/css" href="bouncingformat.css">
+    <title>Bouncing Puppy</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+    function creature (x,y,s){
+      save();
+      translate(x,y);
+      scale(s);
+
+    //leftear long
+    color('#F5DA81');
+    fillcolor('#F5DA81');
+    ellipse(-125,-25,25,60);
+    fill();
+    //leftear short
+    color('#F5DA81')
+    fillcolor('#F5DA81')
+    ellipse(-80,-70,60,30);
+    fill();
+
+    //rightear long
+    color('#F5DA81');
+    fillcolor('#F5DA81');
+    ellipse(125,-25,25,60);
+    fill();
+    //rightear short
+    color('#F5DA81')
+    fillcolor('#F5DA81')
+    ellipse(80,-70,60,30);
+    fill();
+
+    //head
+    color('#F3E2A9');
+    fillcolor('#F3E2A9');
+    ellipse(0, 0, 100, 120);
+    fill();
+
+
+    //nose
+    color('black');
+    fillcolor('black');
+    ellipse(0, 15, 20, 15);
+    fill();
+
+    //mouth
+    color('black');
+    fillcolor('black');
+    triangle(-50,50, 50,50, 0,90);
+    fill();
+
+
+    color('black');
+    fillcolor('black');
+    arc(0,45, 45, 10, -190);
+    fill();
+
+    //tongue
+    color('pink');
+    fillcolor('pink');
+    arc(0,68, 27, 10, -190);
+    fill();
+    fillcolor('pink');
+    arc(0,78, 23, 10, -190);
+    fill();
+
+    //left eye
+    color('black');
+    fillcolor('black');
+    circle(-35,-45, 12);
+    fill();
+
+    //right eye
+    color('black');
+    fillcolor('black');
+    circle(35,-45,12);
+    fill();
+
+    //left freckles
+    color('black');
+    fillcolor('black');
+    circle(-35,25,1);
+    fill();
+
+    fillcolor('black');
+    circle(-40, 21, 1);
+    fill();
+
+    fillcolor('black');
+    circle(-45, 30, 1);
+    fill();
+
+    fillcolor('black');
+    circle(-38, 35, 1);
+    fill();
+
+    //right freckles
+    color('black');
+    fillcolor('black')
+    circle(35, 25, 1);
+    fill();
+
+    fillcolor('black');
+    circle(40, 21, 1);
+    fill();
+
+    fillcolor('black');
+    circle(45, 30, 1);
+    fill();
+
+    fillcolor('black');
+    circle(38, 35, 1);
+    fill();
+
+    //left whiskers
+    color('white');
+    fillcolor('white');
+    line(-90,35, -45,30);
+    fill();
+
+    fillcolor('white');
+    line(-100,25, -40,21);
+    fill();
+
+    fillcolor('white');
+    line(-87,30, -35,25);
+    fill();
+
+    fillcolor('white');
+    line(-100,45, -38,35);
+    fill();
+
+    //right whiskers
+
+    color('white');
+    fillcolor('white');
+    line(90,35, 45,30);
+    fill();
+
+    fillcolor('white');
+    line(80,22, 40,21);
+    fill();
+
+    fillcolor('white');
+    line(93,25, 35,25);
+    fill();
+
+    fillcolor('white');
+    line(100,38, 38,35);
+    fill();
+      restore();
+    }
+
+    var X; //X-value of location
+    var Y; //Y-value of location
+    var VX; //X Velocity
+    var VY; //Y velocity
+    var R; //Radius of creature
+    var G; //Gravity
+
+    function bounce(){
+      if (X>width-R){
+        VX= -abs(VX);
+      }
+      if (X<R){
+        VX= abs(VX);
+      }
+      if (Y>height-R){
+        VY= -abs(VY)*.95;
+      }
+      if (Y<R){
+        VY= abs(VY);
+      }
+    }
+    function setup (){
+      X=200;
+      Y=200;
+      VX=2;
+     VY=1;
+      R=90
+      G=0.4;
+      timestep(10)
+     loop();
+    }
+    function draw(){
+      clear();
+      X=X+VX;
+      Y=Y+VY;
+      VY=VY+G;
+      creature(X,Y,0.5);
+      bounce();
+    }
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">My Bouncing Puppy</div>
+       <div id="content"> My puppy is extremely happy and hyper all of the time. That is why he is bouncing!
+        <div id="spork"></div>
+      </div>
+      <div id="secondaryNavigation">Carly Rushman | Math 142</div>
+    </div>
+  </body>
+</html>

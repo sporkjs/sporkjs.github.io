@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" type"text/css" href="drawings.css">
+    <title>Noise</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+    <style>
+    div{
+      border: none;
+      margin: 10px;
+      padding: 10px;
+    }
+    img{
+      width:100px;
+    }
+    canvas{
+      width:400px;
+      height:400px;
+    }
+    body{
+      background-color: teal;
+      }
+      #titleBarImage{
+        height: 80px;
+        vertical-align: middle;
+      }
+
+    #wrapper{
+      background-color: white;
+      width: 80%;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      border: none;
+      }
+    #titleBar{
+      background-color: black;
+      color: white;
+      font-size: 50px;
+      padding: 10px;
+      text-align: left;
+      text-shadow: 3px 3px black;
+      font-family: fantasy;
+      border: none;
+      }
+      #navigationBar{
+        text-align: center;
+        border-bottom: 1px solid black;
+        font-family: fantasy;
+        padding-top: 10px;
+
+        }
+    #content{
+      background-color: white;
+      margin: 20px;
+      border: none;
+      font-family: fantasy;
+      text-align: center;
+      }
+      #secondaryNavigation{
+        text-align: right;
+        border-top: 1px solid black;
+        font-size: 10px;
+        padding-right: 10px;
+        clear:both;
+
+        }
+
+    </style>
+    <script src="spork.js"></script>
+    <script>
+    function COS(x){
+  return(cos(x*pi/180));
+}
+function SIN(x){
+  return(sin(x*pi/180));
+}
+function pixel(x,y){
+  rect(x,y,1,1);
+}
+function pixel4(x,y){
+  rect(x,y,1,1);
+  rect(-x,y,1,1);
+  rect(x,-y,1,1);
+  rect(-x,-y,1,1);
+}
+
+function setup(){
+  setupNoise(4);
+  linewidth(.1);
+  loop();
+  clear();
+}
+
+function draw(){
+
+ var x=random()*width;
+  var y=random()*height;
+  var i, angle;
+  for (i=0; i<300; i=i+1){
+   color('teal');
+   pixel(x,y);
+   angle=360*noise(abs(x/width), abs(y/height));
+   x=x+COS(angle);
+   y=y+SIN(angle);
+  }
+   var x=random()*width;
+  var y=random()*height;
+  var i, angle;
+  for (i=0; i<500; i=i+1){
+   color('gray');
+   pixel(x,y);
+   angle=360*noise(abs(x/width), abs(y/height));
+   x=x+COS(angle);
+   y=y+SIN(angle);
+  }
+
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Using Noise</div>
+      <div id="content"> Here is something I made using noise.
+        <div id="spork"></div>
+        <button onclick='stoploop();'>Stop</button><br>
+        <button onclick='startloop();'>Go</button><br>
+<button onclick='startover();'>Draw it again</button><br>
+        <div id="spork">
+
+</div>
+
+    <div id="secondaryNavigation">	Taylor Brockhaus | Math 142 | <a href="http://www.cune.edu">CUNE</a></div>
+    </div>
+</div>
+  </body>
+</html>

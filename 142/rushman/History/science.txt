@@ -1,0 +1,21 @@
+Hydrostatics:
+Today when we get any idea, we often shout the word 'Eureka'. This famous word is originally attributed to Archimedes, for the invention of measuring the volume of an object with an irregular shape. Once when Hiero had ordered a gold crown, he suspected that the crown was not made of pure gold but also silver. However, he could not prove this. He told Archimedes of his suspicion. 
+One day as Archimedes thoughts were revolving around the problem, he took a bath in his bathtub. He realized that the amount of water that overflowed the tub was proportional to the amount of his body that was submerged. At the realization he came shouting out of the bathtub "Eureka, Eureka" and ran out on to the streets of Syracuse completely naked.
+In his work 'The Floating Bodies', this principle is known as the 'Archimedes Principle'. But the example of golden crown does not appear in any known works of Archimedes.
+
+Principle of levers:
+Although Archimedes did not invent the lever, he discovered the reasoning behind why it worked. It is said that he remarked, "Give me a place to stand on, and I will move the Earth." Plutarch explained how Archimedes designed the block and tackle pulley systems, allowing sailors to use the principle of leverage to lift objects that would otherwise have been too heavy to shift. It is also said that Archimedes built the Syracusia ship, which was the largest vessel of its time and capable of transporting 600 passengers. Since a ship of this size would leak a considerable amount of water through the hull, the Archimedes' screw was purportedly developed in order to remove the bilge water. The screw was a machine with a revolving screw shaped blade inside a cylinder. It was turned by hand, and could also be used to transfer water from a low-lying body of water into irrigation canals.
+
+Archimedes' claw:
+Archimedes' claw was invented to defend the city of Syracuse. Known as the 'ship-shaker', it is shaped like a crane arm, from which a large metal hook was balanced. When the claw was dropped on an attacking ship, it would lift the ship by swinging the arm upwards and then sink the ship.
+
+Death Ray:
+There have bee n many doubts about Archimedes weapon of the death Ray. However in 2005 the Death Ray was proved and tested by a University class (MIT). Using over one hundred mirrors,they made a dummy profile of ship with 5 inch thick wood which ignited after focusing all the mirrors to a specific point on the ship. this experiment was then carried out again on a real boat in the water with the help of the 'mythbusters'.Thus proving Archimedes death ray as no longer a theory but a definitely possibility that this 'death ray' tactic was used against the roman ships in Syracuse.
+
+DeathRay.jpeg
+
+Archimedes’ screw:
+One story recounts how a perplexed King Hiero was unable to empty rainwater from the hull of one of his ships. The King called upon Archimedes for assistance. Archimedes' solution was to create a machine consisting of a hollow tube containing a spiral that could be turned by a handle at one end. When the lower end of the tube was placed into the hull and the handle turned, water was carried up the tube and out of the boat. The Archimedes Screw is still used as a method of irrigation in developing countries.
+
+screw.jpeg
+

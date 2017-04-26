@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <title>Fun Forloops 2</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function minion(x,y,r){
+    var possibleEyeColors=['blue',
+                           'orange',
+                           'white',
+                          'red',
+                          'black',
+                          'purple',
+                          'darkpink'];
+    var possibleLipColors=['red',
+                          'green',
+                          'black',
+                          'purple',
+                          'darkpink',
+                          'brown'];
+    	var eyeColor=possibleEyeColors.random();
+      var lipColor=possibleLipColors.random();
+    save()
+    translate(x,y);
+    scale(r/200);
+
+  //Minion
+  circle(0,-35,130);
+  fillcolor("yellow");
+  fill();
+
+  rect(-130,-35,260,300);
+  fillcolor("yellow");
+  fill();
+
+  //Lip
+  ellipse(25,107,66,20);
+  color(lipColor);
+  fillcolor(lipColor);
+  fill();
+
+  //Glasses Strap
+  rect(-130,-40,260,45);
+  fillcolor("black");
+  fill();
+
+  //Eye Whites
+  circle(-62,-20,58);
+  linewidth(11);
+  fillcolor("white");
+  fill();
+
+  circle(62,-20,58);
+  fillcolor("white");
+  fill();
+
+  //Blue Eyes
+  circle(50,-5,18);
+  fillcolor(eyeColor);
+  fill();
+
+  circle(-50,-5,18);
+  fillcolor(eyeColor);
+  fill();
+
+  //Glasses Framing
+  arc(-61,-20,58,20,390);
+  arc(61,-20,58,20,390);
+
+  //Hair
+  line(0,-183,0,-156);
+  line(37,-183,22,-155);
+  line(-37,-183,-22,-155);
+
+  restore();
+  }
+  function setup(){
+      size(600,400);
+      loop();
+      timestep(700);
+  }
+  function draw(){
+    var x,y;
+    for (x=40;x<width;x=x+75)
+      for (y=40;y<height;y=y+100){
+       minion(x,y,40);
+      }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+        <div id="content">
+    <div id="titleBar">Random Creature Colors</div>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">More Fun With Forloops</a>
+    </div>
+  </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

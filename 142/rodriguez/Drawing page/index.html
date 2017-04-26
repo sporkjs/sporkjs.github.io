@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<style>
+div.left{
+	float:left;
+
+}
+	img{
+	vertical-align:middle;
+
+}
+</style>
+<script src='spork.js'></script>
+<script>
+var lastX; //variables for previous
+var lastY;  //position of the mouse
+
+function onmousedown(){
+  //remember where mouse starts
+  lastX=mouseX;
+  lastY=mouseY;
+}
+
+function pencil(){
+  //Draw line from last position
+  //to current position if the
+  //mouse is down
+  if (mouseDown){
+    line(lastX, lastY,
+        mouseX, mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function eraser(){
+	if (mouseDown){
+	save();
+	color('white');
+    line(lastX, lastY,
+        mouseX, mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+	restore();
+	}	
+}
+
+function ribbon(){
+  if (mouseDown){
+    line(lastX+10, lastY+10,
+        mouseX+10, mouseY+10,
+        mouseX-10, mouseY-10,
+        lastX-10, lastY-10,
+        lastX+10, lastY+10);
+    fill();
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function fuzz(){
+  if (mouseDown){
+    save();
+    linewidth(1);
+    translate(mouseX, mouseY);
+    rotate(random()*360);
+    line(-10,0,10,0);
+    restore();
+    lastX=mouseX;
+    lastY=mouseY;
+
+  }
+}
+
+function circles(){
+  var cx, cy, dx, dy, r;
+  if (mouseDown){
+    save();
+    linewidth(1);
+    cx=(lastX+mouseX)/2;
+    cy=(lastY+mouseY)/2;
+    dx=mouseX-cx;
+    dy=mouseY-cy;
+    r=sqrt(dx*dx+dy*dy);
+    circle(cx, cy, r);
+    restore();
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function onclick(){
+	if (creatureButton.checked) creature();
+}
+function creature(x,y,s){
+ {
+	x=mouseX;
+	y=mouseY;
+	s= .2;
+  	save();
+    translate(x,y);
+	scale(s);
+//eye
+circle(0,0,100);
+
+//iris
+circle(0,0,50);
+fillcolor('purple');
+fill();
+
+//Pupil
+circle(0,0,25);
+fillcolor('black');
+fill();
+
+//hat
+triangle(-100,-75, 0,-200, 100,-75);
+fillcolor('orange')
+fill();
+
+  restore();
+	}
+}
+
+function setBothColors(c){
+	color(c);
+	fillcolor(c);
+}
+function onmousemove(){
+  if (pencilButton.checked) pencil();
+  else if (fuzzButton.checked) fuzz();
+ else if (ribbonButton.checked) ribbon();
+	 else if (circlesButton.checked) circles();
+	 else if (eraserButton.checked) eraser();
+	else if (creatureButton.checked) if (mouseDown) creature();
+}
+function setup(){
+	size(600,600);
+}
+
+function draw(){
+
+}
+
+function clearScreen(){
+	clear();
+}
+</script>
+<head>
+</head>
+<body>
+  <div id='titleBar'>My Paint Program</div>
+  <div id='spork' class='left'></div>
+  <div id='penSelect' class='left'>Pen Type<br>
+    <input type='radio' name='penType' id='pencilButton' checked><img src='images/pencil.png'><br>
+    <input type='radio' name='penType' id='fuzzButton'><img src='images/fuzz.png'><br>
+	<input type='radio' name='penType' id='ribbonButton'><img src='images/ribbon.png'><br>
+	<input type='radio' name='penType' id='circlesButton'><img src='images/circles.png'><br>
+	<input type='radio' name='penType' id='eraserButton'>Eraser<br>
+	<input type='radio' name='penType' id='creatureButton'>Mr. Eye<br>
+	<button onclick='clearScreen();'>Clear</button>
+  </div>
+  <div id='colorSelect' class='left'>Color Select<br>
+	 <input type='radio' name='widthButton' onclick='setBothColors("red");'><img src='images/red.png'><br>
+	 <input type='radio' name='widthButton' onclick='setBothColors("blue");'><img src='images/blue.png'><br>
+	 <input type='radio' name='widthButton' onclick='setBothColors("yellow");'><img src='images/yellow.png'><br>
+	<input type='radio' name='widthButton' onclick='setBothColors("indigo");'><img src='images/indigo.png'><br>
+	 <input type='radio' name='widthButton' onclick='setBothColors("green");'><img src='images/green.png'><br>
+	 <input type='radio' name='widthButton' onclick='setBothColors("orange");'><img src='images/orange.png'><br>
+	 <input type='radio' name='widthButton' onclick='setBothColors("Black");'><img src='images/black.png'><br>
+	<input type='radio' name='widthButton' onclick='setBothColors("white");'><img src='images/white.png'><br>
+	</div>
+  <div id='sizeSelect' class='left'>Size Select<br>
+    <input type='radio' name='sizeButton' onclick='linewidth(1);' checked> 1px<br>
+    <input type='radio' name='sizeButton' onclick='linewidth(10);'> 10px<br>
+	 <input type='radio' name='sizeButton' onclick='linewidth(3);'> 3px<br>
+	 <input type='radio' name='sizeButton' onclick='linewidth(7);'> 7px<br>
+  </div>
+	
+</body>
+</html>
+
+

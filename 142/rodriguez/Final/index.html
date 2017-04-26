@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<style>
+div.left{
+	float:left;
+
+}
+	img{
+	vertical-align:middle;
+
+}
+	button.colorButton{
+	width: 30px;
+	height: 30px;
+}
+</style>
+<script src='spork.js'></script>
+<script>
+var lastX; //variables for previous
+var lastY;  //position of the mouse
+
+var pixelSize=15;
+var numPix=0;
+var X=[];
+var Y=[];
+var C=[];
+var currentColor='black'
+var showGrid=false;
+
+function pixel(x,y){
+	if((numPix==0) ||(X[numPix-1]!=x) || ( (Y[numPix-1]!=y) || (C[numPix-1]!=currentColor))){
+	rect (x,y,pixelSize,pixelSize);
+	fill();
+	if (showGrid) drawGrid();
+	X[numPix]=x;
+	Y[numPix]=y;
+	C[numPix]=currentColor;
+	numPix=numPix+1;
+	}
+}
+
+function drawGrid(){
+	showGrid=true;
+	save();
+	color('black');
+for(var i=0;i<height;i=i+pixelSize){
+
+	line(0,i,width,i);
+	
+	line(i,0,i,width);
+
+	
+	}
+	restore();
+}
+function hideGrid(){ 
+	clear();
+	showGrid=false;
+	var m=numPix;
+	numPix=0
+	for(i=0;i<m;i=i+1) {
+		setBothColors(C[i]);
+		pixel(X[i],Y[i]);
+		}
+}
+
+function undo(){
+	if (numPix>0){
+	clear();
+	numPix=numPix-1;
+	var m=numPix;
+	numPix=0
+
+	for(var i=0;i<m;i=i+1){
+		setBothColors(C[i]);
+		pixel(X[i],Y[i]);
+		}
+	}
+}
+function onclick(){
+	pixel(mouseX-(mouseX%pixelSize),mouseY-(mouseY%pixelSize));
+	
+}
+
+function setBothColors(c){
+	color(c);
+	fillcolor(c);
+	currentColor=c;
+}
+function onmousemove(){
+	if (mouseDown)
+	pixel(mouseX-(mouseX%pixelSize),mouseY-(mouseY%pixelSize));
+	
+  
+}
+function setup(){
+	size(600,600);
+}
+
+function draw(){
+
+}
+
+function clearScreen(){
+	clear();
+	if (showGrid) drawGrid();
+	numPix=0;
+}
+</script>
+<head>
+</head>
+<body>
+  <div id='titleBar'>Pixel Art Machine</div>
+  <div id='spork' class='left'></div>
+  <div id='penSelect' class='left'>Guidance Buttons<br>
+   
+    
+	<button onclick='clearScreen();'>Clear</button>
+
+	<button onclick='drawGrid();'>Show Grid</button>
+	
+	<button onclick='hideGrid();'>Hide Grid</button>
+	
+	<button onclick='undo();'>undo</button>
+  </div>
+
+  <div id='colorSelect' class='left'>Color Select<br>
+<table>
+<tr>
+<td><button class="colorButton" onclick="setBothColors('red');" style="background:red;"></td>
+<td><button class="colorButton" onclick="setBothColors('orange');" style="background:orange;"></td>
+</tr>
+<tr>
+<td><button class="colorButton" onclick="setBothColors('yellow');" style="background:yellow;"></td>
+<td><button class="colorButton" onclick="setBothColors('blue');" style="background:blue;"></td>
+</tr>
+<tr>
+<td><button class="colorButton" onclick="setBothColors('green');" style="background:green;"></td>
+<td><button class="colorButton" onclick="setBothColors('indigo');" style="background:indigo;"></td>
+</tr>
+<tr>
+<td><button class="colorButton" onclick="setBothColors('violet');" style="background:violet;"></td>
+<td><button class="colorButton" onclick="setBothColors('black');" style="background:black;"></td>
+</tr>
+<tr>
+<td><button class="colorButton" onclick="setBothColors('white');" style="background:white;"></td>
+<td><button class="colorButton" onclick="setBothColors('brown');" style="background:brown;"></td>
+</tr>
+</table>
+	
+	</div>
+ 
+</body>
+</html>
+
+

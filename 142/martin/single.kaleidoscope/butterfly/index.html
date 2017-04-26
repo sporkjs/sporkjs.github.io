@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Butterfly</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+    div{
+      border: 1px solid black;
+      margin: 10px;
+      padding: 10px;
+    }
+    img{
+      max-height: 100px;
+      max-width: 100px;
+      vertical-align: middle;
+    }
+    canvas{
+      width: 600px;
+      height: 600px;
+    }
+    div{
+      border: none;
+      margin: 10px;
+      padding: 10px;
+    }
+    body{
+      background-color: gray;
+    }
+
+    #wrapper{
+      background-color: lightyellow;
+      width: 80%;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden
+    }
+    #titleBar{
+      background-color: lightblue;
+      color: white;
+      font-size: 50px;
+      padding: 10px;
+      margin: auto;
+    }
+    }
+    #content{
+      text-align: auto;
+      font-size: 30px;
+      margin:auto;
+    }
+    #secondaryNavigation{
+      float: right;
+    }
+    #titleBar{
+      font-size: 50px;
+      border-bottom: 1px solid lightyellow;
+      text-align: center;
+    }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      var theImages = [];
+      var trianglewidth=2000;
+      var imagewidth=trianglewidth/1;
+      var numberImages=10;
+      function setup(){
+        size(2*trianglewidth+1.5*imagewidth,2*trianglewidth+1.5*imagewidth); //this will change
+        theImages=[img1];
+        translate(width/2, height/2);
+      }
+      function draw(){
+        rect(-width/2,-height/2, width,height);
+        fillcolor('lightblue');
+        fill();
+        color(0,0,0,0);
+      for(i=0;i<numberImages;i=i+1){
+        var randomImage = theImages[floor(random()*theImages.length)];
+        var x=random()*trianglewidth; //this will change
+        var y=random()*x;
+        var r=random()*360;
+        save();
+        triangle(0,0, width/2,0, width/2, height/2);
+        clip();
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+        save();
+        scale(-1,1);
+
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+
+        save();
+        scale(1,-1);
+
+        save();
+        triangle(0,0, width/2,0, width/2, height/2);
+        clip();
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+
+        restore();
+
+        save();
+        scale(-1,-1);
+        triangle(0,0, width/2,0, width/2, height/2);
+        clip();
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+
+        rotate(90);
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+
+        save();
+        scale(-1,1);
+        triangle(0,0, width/2,0, width/2, height/2);
+        clip();
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+
+        save();
+        scale(1,-1);
+        triangle(0,0, width/2,0, width/2, height/2);
+        clip();
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+
+        save();
+        scale(-1,-1);
+        triangle(0,0, width/2,0, width/2, height/2);
+        clip();
+        drawImage(randomImage, x,y, imagewidth,imagewidth, r);
+        restore();
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Butterfly</div>
+      <div id="mainNavigation"></div>
+      <div id="content">
+        <div id="spork"></div>
+        <button onclick='startover();'>Draw it again</button><br>
+        <img id='img1' src='images/img1.png'>
+
+
+
+      </div>
+      <div id="secondaryNavigation">Hope Martin | Math 142 </div>
+    </div>
+  </body>
+</html>

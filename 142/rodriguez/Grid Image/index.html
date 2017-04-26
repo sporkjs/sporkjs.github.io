@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Its an eye party!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+<script src="spork.js">
+</script>
+     <script>
+function randomColor(){
+  var r, g, b;
+  r= floor(256*random());
+  g= floor(256*random());
+  b= floor(256*random());
+  color(r,g,b);
+  
+}
+  
+  function randomfillcolor(){
+  var r, g, b;
+  r= floor(256*random());
+  g= floor(256*random());
+  b= floor(256*random());
+  fillcolor(r,g,b);
+    
+  }
+  
+function creature(x,y,s){
+
+  	save();
+    translate(x,y);
+	scale(s);
+//eye
+circle(0,0,100);
+
+//iris
+circle(0,0,50);
+randomfillcolor();
+fill();
+
+//Pupil
+circle(0,0,25);
+fillcolor('black');
+fill();
+
+//hat
+triangle(-100,-75, 0,-200, 100,-75);
+randomfillcolor()
+fill();
+
+  restore();
+}
+
+function setup(){
+  size (600,400);
+}
+
+function draw (){
+  
+  var x,y;
+  for(x=25; x<width; x=x+50){
+  for(y=25; y<height; y=y+50){
+  
+  creature(x,y,0.1);
+		}
+ 	 }
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">It's Party Time!</div>
+<div id="content">
+<div id= "spork">
+</div>
+
+This our friend Eye. 
+<p>
+There is a part of Eyes today! Many of our friend eye's friends have come over. 
+</p>
+
+<p>
+Their dancing to the music because there Eyes themselves!
+</p>
+
+<p> 
+Every eye loves to have a good time!
+</p>
+
+</div>
+
+
+  </body>
+</html>

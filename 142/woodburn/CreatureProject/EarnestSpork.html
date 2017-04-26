@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Earnest the fish</title>
+    	<link rel="stylesheet" type="text/css" href="earnest.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+    #bouncingTab {background-color: orange}
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascrifunction creature(x,y,s){
+
+      function creature(x,y,s){
+        save();
+
+      translate(x,y);
+        scale(s);
+        //fish
+        //topfin
+      color('black');
+      fillcolor('black');
+      triangle(-10,-50,40,0,40,-60);
+      fill();
+      color('black');
+      fillcolor('black');
+      triangle(-20,-40,30,-10,10,-70);
+      fill();
+      color('black');
+      fillcolor('black');
+      triangle(-30,-40,20,-30,-20,-70);
+      fill();
+      //bottomfin
+      color('black');
+      fillcolor('black');
+      triangle(40,50,-10,30,10,50);
+      fill();
+      color('black');
+      fillcolor('black');
+      triangle(30,60,-10,30,-10,50);
+      fill();
+      color('black');
+      fillcolor('black');
+      triangle(20,70,-20,30,-20,45);
+      fill();
+      triangle();
+
+      //tail
+      color('black');
+      fillcolor('black');
+      triangle(10,0,80,40,80,-40);
+      fill();
+      color('black');
+      fillcolor('darkorange');
+      triangle(10,0,80,20,80,-20);
+      fill();
+      //body
+      color('black');
+      fillcolor('darkorange');
+      circle(0,0,50);
+      fill();
+      //lips
+      color('black');
+      fillcolor('pink');
+      circle(-50,20,8);
+      fill();
+      color('black');
+      fillcolor('pink');
+      circle(-52,10,8);
+      fill();
+      //middlefin
+      color('black');
+      fillcolor('black');
+      triangle(-20,0,20,20,20,-20);
+      fill();
+      color('black');
+      fillcolor('darkorange');
+      triangle(-20,0,20,10,20,-10)
+      fill();
+      //eye
+      color('black');
+      fillcolor('black');
+      circle(-35,-5,3);
+      fill();
+      restore();
+
+      }
+      var X; //X-value of location
+      var Y; //Y-value of location
+      var VX; // X velocity
+      var Vy; // Y velocity
+      var R; //Radius of creature
+      var G; //Gravity
+
+      function bounce(){
+        if (Y>height-R){
+          VY=-abs(VY);
+        }
+        if (X>width-R){
+          VX=-abs(VX);
+
+        }
+        if (X<R){
+          VX=abs(VX);
+
+        }
+        if (Y<R){
+          VY=abs(VY);
+        }
+      }
+      function setup(){
+        X=200;
+        Y=200;
+        VX=0.5;
+        VY=1;
+        R=40
+        G=0.1;
+      loop();
+      }
+      function draw(){
+        clear();
+        creature(X,Y,0.5)
+         X=X+VX;
+         Y=Y+VY;
+        VY=VY+G
+        bounce();
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Earnest the fish</div>
+      <div id="mainNavigation">
+        <div class="tab" id="homeTab"><a href="Earnestthefish.html">Main</a></div>
+        <div class="tab" id="bouncingTab"><a href="EarnestSpork.html">Bouncing Earnest</a></div></div>
+<div id="content">
+        <div id="spork"></div>
+</div>
+      <div id="secondaryNavigation">Grace Woodburn | <a href="../index.html">Math 142<a/></div>
+    </div>
+  </body>
+</html>

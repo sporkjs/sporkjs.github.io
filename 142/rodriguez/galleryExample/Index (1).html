@@ -1,0 +1,217 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<style>
+	div{
+	border: 1px sold black;
+}	
+	#wrapper{
+		width; 80%;
+
+		margin: auto;
+}
+	#titleBar{
+	font-size: 50px;
+	border-bottom: 1px solid orange;
+
+}
+
+	#buttonDiv{
+		width:75%;
+
+}
+
+	img.thumbnail{
+	width: 100px;
+	height 100px;
+
+}
+
+
+button.thumbnail{
+	background: none;
+	margin: 5px;
+	padding: 5px;
+	height: 115px;
+	width: 115px;
+	border-radius:0px;
+}
+
+#gallery{
+	background: rgba(0,0,0,.80);
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	display: none;
+}
+
+#both{
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	right: 5%;
+	left: 5%;
+
+}
+	
+	#picture{
+	height: 90%;
+	position: relative;
+}
+
+	#caption{
+	height: 10%;
+	color: lightgray;
+	text-align: center
+}
+
+	#galleryPicture{
+	max-height: 90%;
+	max-width: 90%;
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	right: 5%;
+	left: 5%;
+	margin: auto;
+}
+
+	#closeButton{
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	color: lightgray;
+	background: none;
+	font-size: 40px;
+}
+#rightButton{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 50%;
+	text-align: right;
+	background: none;
+	border: none;
+	outline: none;
+	color: lightgray;
+	font-size: 50px
+}
+
+#leftButton{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 50%;
+	left: 0px;
+	text-align: left;
+	background: none;
+	border: none;
+	outline: none;
+	color: lightgray;
+	font-size: 50px;
+}
+	
+</style>
+	<script>
+theCaptions=[	"A stone etched with a pattern of triangles from the Blombos Cave in South Africa. Some identify this as the oldest example of art.",
+			"A coin from Knossos in the first century B.C. featuring a labyrinth.",
+			"The Labyrinth in the Chartres Cathedral in France.",
+			"A labyrinth by Hans Pedersen featuring in the shape of a face.",
+			"A labyrinth by Hans Pedersen in the shape of a hand.",
+			"A sculpture based on a labyrinth pattern in stainless steel by Robert Bosch.",
+			"A drawing by Robert Bosch based on a cellular automaton.",
+			"A painting by Cenedra White based on polygonal dissection.",
+			"A painting by Cenedra White based on polygonal dissection.",
+			"A painting by Richard Diebenkorn. In 1985, Kirsch and Kirsch developed a phrase structure grammar to mimic the painting style of Richard Diebenkorn.",
+			"A painting by Joan Miro. In 1985, Kirsch and Kirsch developed a phrase structure grammar to mimic the painting style of Joan Miro.",
+			"A painting by Piet Mondrian. Paintings of this style can be mimiced with phrase structure grammars.",
+			"<i>Fifteen Etchings</i> by Sol Lewitt. This piece demonstrates a combinatorial enumeration more or less equivalent to the set of subsets of a four element set."
+]
+
+theImages=[	"images/blombos.png",
+			"images/knossos.png",
+			"images/chartreslabyrinth.png",
+			"images/hanspedersen.png",
+			"images/hanspedersen2.png",
+			"images/bosch.png",
+			"images/boschgameoflife.png",
+			"images/cenedra1.png",
+			"images/cenedra2.png",
+			"images/diebenkorn.png",
+			"images/miro.png",
+			"images/mondrian.png",
+			"images/sollewitt.png"
+]
+	var currentPicture;
+	function showPicture(n){
+	galleryPicture.src=theImages[n];
+	caption.innerHTML=theCaptions[n];
+	currentPicture=n;
+	if (currentPicture==0)
+		leftButton.style.display="none";
+
+	else
+		leftButton.style.display="block";
+		
+	gallery.style.display="block";
+
+if (currentPicture==theImages.length-1)
+		rightButton.style.display="none";
+
+	else
+		rightButton.style.display="block";
+}
+	function closewindow(){
+	gallery.style.display="none";
+}
+	function showNext(){
+	showPicture(currentPicture+1);
+
+}
+	function showPrevious(){
+	showPicture(currentPicture-1);
+}
+
+	</script>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<div id="titleBar"> Best 13 3DS Games</div>
+		<div id="buttonDiv">
+			<button class= "thumbnail" onclick="showPicture(0);"><img class= "thumbnail" src="thumbnails/blombos.png"></button>
+			<button class= "thumbnail" onclick="showPicture(1);"><img class= "thumbnail" src="thumbnails/knossos.png"></button>
+			<button class= "thumbnail" onclick="showPicture(2);"><img class= "thumbnail" src="thumbnails/chartreslabyrinth.png"></button>
+			<button class= "thumbnail" onclick="showPicture(3);"><img class= "thumbnail" src="thumbnails/hanspedersen.png"></button>
+			<button class= "thumbnail" onclick="showPicture(4);"><img class= "thumbnail" src="thumbnails/hanspedersen2.png"></button>
+			<button class= "thumbnail" onclick="showPicture(5);"><img class= "thumbnail" src="thumbnails/bosch.png"></button>
+			<button class= "thumbnail" onclick="showPicture(6);"><img class= "thumbnail" src="thumbnails/boschgameoflife.png"></button>
+			<button class= "thumbnail" onclick="showPicture(7);"><img class= "thumbnail" src="thumbnails/cenedra1.png"></button>
+			<button class= "thumbnail" onclick="showPicture(8);"><img class= "thumbnail" src="thumbnails/cenedra2.png"></button>
+			<button class= "thumbnail" onclick="showPicture(9);"><img class= "thumbnail" src="thumbnails/diebenkorn.png"></button>
+			<button class= "thumbnail" onclick="showPicture(10);"><img class= "thumbnail" src="thumbnails/miro.png"></button>
+			<button class= "thumbnail" onclick="showPicture(11);"><img class= "thumbnail" src="thumbnails/mondrian.png"></button>
+			<button class= "thumbnail" onclick="showPicture(12);"><img class= "thumbnail" src="thumbnails/sollewitt.png"></button>
+		</div>
+		</div>
+
+	<div id="gallery">
+	<div id="both">
+	<div id="picture">
+		<img id="galleryPicture" src="images/blombos.png"></div>
+	<div id="caption">nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense</div>
+
+	<button id="leftButton" onclick="showPrevious();">&leftarrow;</button>
+	<button id="rightButton" onclick="showNext();">&rightarrow;</button>
+	<button id="closeButton" onclick="closewindow();">x</button>
+
+</body>
+
+</html>

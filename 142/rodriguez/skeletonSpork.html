@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TITLE GOES HERE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+	function creature(x,y,s){
+
+  	save();
+    translate(x,y);
+	scale(s);
+  
+    //head
+    color("orange");
+    fillcolor('orange');
+    circle(0,0,100);
+    fill();
+
+    //leftear
+    color("orange");
+    fillcolor('orange');
+    triangle(-95,-30, -95,-135,-20,-95);
+    fill();
+
+    //rightear
+    color("orange");
+    fillcolor('orange');
+    triangle(95,-30, 95,-135,20,-95);
+    fill();
+
+
+    //nose
+    color("pink");
+    fillcolor('pink');
+    triangle(-15,0, 15,0, 0,15);
+    fill();
+
+    //mouth
+    color("black");
+    line(-15,30, 0,15, 15,30);
+
+    //lefteye
+    color("black");
+    fillcolor('white');
+    circle(-50,0,25);
+    fill();
+    fillcolor('black');
+    circle(-50,0,5);
+    fill();
+
+    //righteye
+    color("black");
+    fillcolor('white');
+    circle(50,0,25);
+    fill();
+    fillcolor('black');
+    circle(50,0,5);
+    fill();
+
+    //lefteyebrow
+    save();
+    color("brown")
+    fillcolor('brown');
+    translate(-35,-40);
+    rotate(35);
+    ellipse(0,0,25,10);
+    fill();
+    restore();
+
+    //righteyebrow
+    save();
+    color("brown")
+    fillcolor('brown');
+    translate(35,-40);
+    rotate(-35);
+    ellipse(0,0,25,10);
+    fill();
+    restore();
+  restore();
+}
+
+var X; //X-value of location
+var y; //Y-value of location
+var VX; //X velocity
+var VY; //Y velocity
+var R; // Radius of creature
+var G; // gravity
+
+function bounce(){
+	if (X>width-R){
+      VX=-abs(VX);
+    }
+  if(X<R){
+    VX=abs(VX);
+  }
+  	if (Y>height-R){
+      VY=-abs(VY);
+    }
+  if(Y<R){
+    VY=abs(VY);
+  }
+}
+function setup(){
+  	X=200;
+  	Y=200;
+  	VX=0.5;
+  	VY=0.5;
+  	R=50
+    G=.1
+	loop();
+}
+function draw(){
+  clear();
+  	X=X+VX;
+  	Y=Y+VY;
+    VY=VY+G;
+	creature(X,Y,0.5); 
+ 	bounce();
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Title Bar</div>
+      <div id="mainNavigation">Main navigation bar</div>
+      <div id="content"> Main Content Div
+        <div id="spork"></div>
+      </div>
+      <div id="secondaryNavigation">Secondary navigation bar</div>
+    </div>
+  </body>
+</html>

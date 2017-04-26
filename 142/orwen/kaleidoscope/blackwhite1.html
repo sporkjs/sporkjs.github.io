@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="kal.css">
+    <title>Kaleidoscope</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+    <script src="spork.js"></script>
+    <script>
+	
+	var theImages = [];
+	var triangleWidth=1000;
+	var imageWidth=triangleWidth/6;			//Larger = Smaller Images
+	var numberImages=20				//Larger = Less Blank
+
+      function setup(){
+	size(2*triangleWidth+imageWidth, 2*triangleWidth+imageWidth);
+	theImages =[img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12];
+	translate(width/2, height/2);
+      }
+      function draw(){
+	rect(-width/2,-height/2,width,height)
+	fillcolor('white');
+	fill();
+
+	color(0,0,0,0);
+
+for(i=0;i<numberImages;i=i+1){
+
+	var randomImage = theImages[floor(random()*theImages.length)];
+	var x=random()*triangleWidth;
+	var y=random()*x;	
+	var r=random()*360;
+	
+	save();
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage,x,y,imageWidth,imageWidth,r);
+	restore();
+
+	save();
+	scale(-1,1);
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+	save();
+	scale(1,-1);
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+	save();
+	scale(-1,-1);
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+rotate(90);
+	save();
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+	save();
+	scale(-1,1);
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+	save();
+	scale(1,-1);
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+	save();
+	scale(-1,-1);
+	triangle(0,0, width/2,0, width/2,height/2);
+	clip();
+	drawImage(randomImage ,x,y,imageWidth,imageWidth,r);
+	restore();
+
+}
+
+
+
+
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="content">
+        <div id="spork"></div>
+
+	<p><button onclick='startover();'>ANOTHER!</button><br></p>
+	<p><img id='img1' src='images/1.png'>
+	<img id='img2' src='images/2.png'>
+	<img id='img3' src='images/3.png'>
+	<img id='img4' src='images/4.png'>
+	<img id='img5' src='images/5.png'>
+	<img id='img6' src='images/6.png'>
+	<img id='img7' src='images/7.png'>
+	<img id='img8' src='images/8.png'>
+	<img id='img9' src='images/9.png'>
+	<img id='img10' src='images/10.png'>
+	<img id='img11' src='images/11.png'>
+	<img id='img12' src='images/12.png'></p>
+	</div>
+	<div id="footer"><a href="indexkal.html">Back</a><div>
+
+    </div>
+  </body>
+</html>

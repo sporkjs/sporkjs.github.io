@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>BOUNCING HIPPO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+
+    </style>
+    <script src="spork.js"></script>
+    <script>
+    function creature(x,y,s){
+  save();
+  translate(x,y);
+  scale(s);
+
+  //left ear
+  color(161,153,148);
+  fillcolor(161,153,148);
+  circle(-75,-110,20);
+  fill();
+
+  //right ear
+  color(161,153,148);
+  fillcolor(161,153,148);
+  circle(75,-110,20);
+  fill();
+
+  //left ear fill
+  color(216,219,191);
+  fillcolor(216,219,191);
+  circle(-75,-110,15);
+  fill();
+
+  //right ear fill
+  color(216,219,191);
+  fillcolor(216,219,191);
+  circle(75,-110,15);
+  fill();
+
+  //head
+  color(161,153,148);
+  fillcolor(161,153,148);
+  circle(0,-30,100);
+  fill();
+
+  //left eye
+  color("white");
+  fillcolor("white");
+  circle(-45,-55,23);
+  fill();
+
+  //right eye
+  color("white");
+  fillcolor("white");
+  circle(45,-55,23);
+  fill();
+
+  //left eye
+  color(184,204,204);
+  fillcolor("black");
+  circle(-45,-57,20);
+  fill();
+
+  //right eye
+  color(184,204,204);
+  fillcolor("black");
+  circle(45,-57,20);
+  fill();
+
+  //nose thing?
+  color(179,173,170);
+  fillcolor(179,173,170);
+  ellipse(0,20,110,60);
+  fill();
+
+  //left nose hole
+  color("black");
+  fillcolor(161,153,148);
+  circle(-45,0,10);
+  fill();
+
+  //right nose hole
+  color("black");
+  fillcolor(161,153,148);
+  circle(45,0,10);
+  fill();
+
+  //mouth
+  color("black");
+  arc(0,30,10,0,180);
+
+  restore();
+  }
+
+  var X; //X-value of location of cat
+  var Y; //y-value of location of cat
+  var VX; //X velocity
+  var VY; //y velocity
+  var R; //radius of cat
+  var G; //gravity
+
+  function bounce(){
+    if (X>width-R){
+      VX=-abs(VX);
+    }
+    if (X<R){
+      VX=abs(VX);
+    }
+    if (Y>height-R){
+      VY=-abs(VY);
+    }
+    if (Y<R){
+      VY=abs(VY);
+    }
+
+  }
+
+  function setup(){
+  	X=200;
+    Y=200;
+    VX=1;
+    VY=1;
+    R=40;
+    G=0.01;
+    loop();
+
+  }
+
+  function draw(){
+    clear();
+    X=X+VX;
+    Y=Y+VY;
+    VY=VY+G;
+
+   	creature(X,Y,0.5);
+    bounce();
+  }
+
+
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">BOUNCING HIPPO</div>
+      <div id="navigation"></div>
+      <div id="content">
+        <div id="spork"></div>
+          This is a hippo. I have been collecting hippos in various forms since I was little. I couldn't decide on a name for him, but I think he's pretty adorable. Hippos are probably my favorite animal because they look so cute, but they are so hardcore.
+          He's bouncing because why not?
+      </div>
+<div id='bottomNav'><a href="../index.html">Back to Project Directory</a></div>    </div>
+  </body>
+</html>

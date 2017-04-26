@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nerd Web</title>
+<link rel="stylesheet" type="text/css" href="final.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<style>
+</style>
+<script src="spork.js"></script>
+<script>
+
+var Ballx;
+var Bally;
+var Cupx;
+var Score;
+var gamenotover;
+var v;
+
+function drawCup(){
+	arc(Cupx,375,15,0,180);
+}
+function bounce(){
+	if(Bally>400){
+	  if((Cupx-10<Ballx)&(Ballx<Cupx+10)&gamenotover){
+	   Bally=0;
+	   Ballx=random()*400;
+	   Score=Score+1;
+	   v=v+.25;
+	  }
+	  else{
+	    filltext('Game Over',100,200);
+	    gamenotover=false;
+	  }
+	}	
+}
+function drawBall(){
+	circle(Ballx,Bally,6);
+	fillcolor("purple");
+	fill();
+	
+}
+function setup(){
+	Bally=0;
+	Ballx=random()*400;
+	Cupx=200;
+	Score=0;
+	timestep(10);
+	gamenotover=true;
+	v=1;
+	loop();
+}
+function draw(){
+	clear();
+	drawBall();
+	
+	Bally=Bally+v;
+	drawCup();
+	filltext(Score,30,30);
+	
+	bounce();
+}
+function onkeydown(){
+	if(keyCode == rightArrow)
+	  Cupx=Cupx+10;
+	
+	if(keyCode == leftArrow)
+	  Cupx=Cupx-10;
+
+	if(keyChar == 'S')
+	  setup();
+}
+
+
+</script>
+</head>
+<body>
+<p>
+<H1>Cup Game</H1>
+
+<p> 
+
+<p>
+<H2>Matthew James Chapa</H2>
+<p>
+
+<p>
+<H2>Spring 2015</H2>
+<p>
+<div id="spork"></div>
+</body>
+<br><a href='indexfinal.html'>Main Page</a>
+</html>

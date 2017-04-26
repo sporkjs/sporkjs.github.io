@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOOP DRAWING</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        margin: 10px;
+        padding: 10px;
+      }
+      #wrapper{
+        width: 50%;
+        margin: auto;
+        overflow: hidden;
+      }
+      #titleBar{
+        background-color: paleturquoise;
+        color: indianred;
+        font-size: 60px;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight:lighter;
+        }
+      #mainNavigation{
+        background-color: paleturquoise;
+      }
+     #content{
+       background-color: paleturquoise;
+       color: indianred;
+       text-align: center;
+       font-family: sans-serif;
+       font-weight: lighter;
+       padding-left: 40px;
+       padding-right: 40px;
+       padding-bottom: 40px;
+     }
+     #secondaryNavigation{
+       background-color: paleturquoise;
+     }
+     #link{
+       font-family: sans-serif;
+       font-weight: lighter;
+       text-align: center;
+       font-size: 8pt;
+     }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+      function randomFillColor(){
+  var r, g, b;
+  r = floor(256*random());
+  g = floor(256*random());
+  b = floor(256*random());
+  fillcolor(r,g,b);
+}
+
+function arch(x, y, s){
+ save ();
+ translate(x,y);
+ n=1;
+ rotate(n*90);
+ scale(s);
+ //drawing here--------------------------------------
+
+color(0,0,0,0);
+randomFillColor();
+rect (-200,-200,400,400);
+fill();
+
+randomFillColor();
+circle (0,0,200);
+fill();
+rect (-200,0,400,200);
+fill();
+
+randomFillColor();
+circle (0,0,125);
+fill();
+rect (-125,0,250,200);
+fill();
+
+randomFillColor();
+circle (0,0,50);
+fill();
+rect (-50,0,100,200);
+fill();
+
+randomFillColor();
+circle (0,0,10);
+fill();
+rect (-10,0,20,200);
+fill();
+
+  //-------------------------------------------------
+restore();
+}
+
+function setup(){
+  timestep(300);
+  loop();
+
+}
+
+function draw(){
+  var x,y;
+
+  for(x=20; x<width; x=x+25){
+  for (y=20; y<height; y=y+25){
+    arch(x, y, 0.1);
+}
+}
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">
+        LOOP DRAWING
+      </div>
+      <div id="mainNavigation"></div>
+      <div id="content">
+        <div id="spork"></div>
+        I used the loop function and random color function to create this crazy, moving mess of color. Try not to stare at it for too long!
+      <div id="secondaryNavigation"></div>
+        <div id="link"><a href="../index.html">HOME</a></div>
+    </div>
+  </body>
+</html>

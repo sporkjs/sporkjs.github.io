@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bouncing Steve</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+
+body{
+  background-color: white;
+}
+      #mainNavigation{
+        text-align: center;
+        border-bottom: 1px solid black;
+        font-family: "{text:Header Google Web Font}", "{text:Body Google Web Font}", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      }
+      #titleBar{
+        font-family: "{text:Header Google Web Font}", "{text:Body Google Web Font}", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-weight: normal;
+        margin: 0;
+        text-align: center;
+
+      }
+      #content {
+        margin: 20px;
+        text-align: center;
+        font-family: "{text:Header Google Web Font}", "{text:Body Google Web Font}", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      }
+      #secondaryNavigation {
+        text-align: right;
+        border-top: 1px solid black;
+        font-size: 12px;
+        padding-right: 20px;
+        font-family: "{text:Header Google Web Font}", "{text:Body Google Web Font}", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      }
+      a.tab{
+        padding-left: 5px;
+        padding-right: 5px;
+        color: red;
+        text-decoration: none;
+      }
+      a{
+        text-decoration: none;
+        color: red;
+      }
+
+    </style>
+    <script src="spork.js"></script>
+    <script>
+
+      function creature(x,y,s){
+
+  save();
+	  translate(x,y);
+  	  scale(s);
+
+      //head
+      save();
+      translate(100,-125)
+      color('orange');
+      fillcolor('orange');
+      arc(-100, 100, 95, 0, 180);
+      fill();
+      restore();
+
+      //left ear
+      color('orange');
+      fillcolor('orange');
+      triangle(-95,-25, -98,-135, -25, -95);
+      fill();
+
+      //right ear
+      color('orange');
+      fillcolor('orange');
+      triangle(95,-25, 98,-135, 25, -95);
+      fill();
+
+      //hair floof
+      save();
+      translate(20,-130);
+      color('brown');
+      fillcolor('orange');
+      rotate(25);
+      ellipse(-30, 70, 20, 50);
+      fill();
+      translate(45,-5);
+      color('brown');
+      fillcolor('orange');
+      rotate(15);
+      ellipse(-30, 70, 20, 50);
+      fill();
+      translate(40,0);
+      color('brown');
+      fillcolor('orange');
+      rotate(15);
+      ellipse(-30, 70, 20, 50);
+      fill();
+      restore();
+
+      //head arc fill
+      save();
+      translate(0,-120)
+      color('orange');
+      fillcolor('orange');
+      rect(-95, 100, 190, -75);
+      fill();
+      restore();
+
+      //right ear fill
+      color('pink');
+      fillcolor('pink');
+      triangle(85,-45, 85,-115, 45, -95);
+      fill();
+
+      //left ear fill
+      color('pink');
+      fillcolor('pink');
+      triangle(-85,-45, -85,-115, -45, -95);
+      fill();
+
+      //nose
+      color('pink');
+      fillcolor('pink');
+      triangle(-15,0 ,15,0 ,0,15);
+      fill();
+
+      //mouth
+      color('black');
+      line(-15,30, 0,15 ,15,30)
+
+      //left eye
+      color('black');
+      fillcolor('white');
+      circle(-50,0,25);
+      fill();
+      fillcolor('black');
+      circle(-50,0,3);
+      fill();
+
+      //right eye
+      color('black');
+      fillcolor('white');
+      circle(50,0,25);
+      fill();
+      fillcolor('black');
+      circle(50,0,3);
+      fill();
+
+      //left eyebrow
+      save();
+      color('brown');
+      fillcolor('brown');
+      translate(-35,-40);
+      rotate(35);
+      ellipse(0,0,20,8);
+      fill();
+      restore();
+
+      //right eyebrow
+      save();
+      color('brown');
+      fillcolor('brown');
+      translate(35,-40);
+      rotate(-35);
+      ellipse(0,0,20,8);
+      fill();
+      restore();
+  restore();
+}
+
+var X; //X-val location
+var Y; //Y-val location
+var VX; //X velocity
+var VY; //Y velocity
+var R; //Radius of creature
+var G; //Gravity
+
+function bounce(){
+  if (X>width-R){
+    VX=-abs(VX);
+  }
+  if (X<R){
+    VX=abs(VX);
+  }
+  if (Y>width-R){
+    VY=-abs(VY);
+  }
+  if (Y<R){
+    VY=abs(VY);
+  }
+}
+
+function setup(){
+  X=200;
+  Y=200;
+  VX=1;
+  VY=1;
+  R=50;
+  G=.05;
+  loop();
+}
+function draw(){
+  clear();
+  X=X+VX;
+  Y=Y+VY;
+  VY=VY+G;
+  creature(X,Y,0.5);
+  bounce();
+}
+
+
+
+    </script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">
+        <h1> Taylor Rankel </h1>
+        <h2> Math 142 </h2>
+      </div>
+
+      <div id="mainNavigation">
+        <a class="tab" href="../index.html">Home</a>
+      </div>
+
+      <div id="content">
+        <div id="spork"></div>
+        This is Steve. He seems to bouncing. Through the magic of code, I have created the bouncing Steve. Never before has he been so happy before in his life.
+      </div>
+      <div id="secondaryNavigation">
+        Taylor Rankel | 2016 | <a href=http://modmodmad.tumblr.com/>mod-mod-mad</a>
+    </div>
+  </body>
+</html>

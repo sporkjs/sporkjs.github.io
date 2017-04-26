@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Donut Dog Army Recrutement Center</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+
+
+    <style>
+     
+      div{
+        border: 1px solid black;
+      }
+
+#dogBody{
+	position: absolute;
+	top:10%;
+	left:10%;
+	width:400px;
+	height:500px;
+}
+
+#dressupOptions{
+	position: relative;
+	left: 50%;
+	width: 100px;
+	white-space: nowrap;
+	overflow:hidden;
+	-webkit-transition: width 2s; /* Safari */
+        transition: width 2s;
+	
+}
+#dressupOptions:hover{
+	width:750px;
+	
+}
+
+#content{
+	width:90%;
+	background: white;
+	margin: 0 auto;
+}
+
+img.clothes{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+button.choices{
+	background: none;
+	margin:0px;
+	padding: 0px;
+	height:100px;
+	width:100px;
+	border-radius:0px;
+	border: none;
+}
+
+    </style>
+
+
+  </head>
+
+
+
+
+  <body>
+    <div id="wrapper">
+
+      <div id="titleBar"><div>
+
+      <div id="content">
+
+		<div id="dressupOptions">
+			<div class="select" id="faceSelect">
+			<button class="choices" onclick="face.src='images/face/face1.png'"><img src="images/buttons/buttonFace1.png"></button>
+			<button class="choices" onclick="face.src='images/face/face2.png'"><img src="images/buttons/buttonFace2.png"></button>
+			<button class="choices" onclick="face.src='images/face/face3.png'"><img src="images/buttons/buttonFace3.png"></button>
+			<button class="choices" onclick="face.src='images/face/face4.png'"><img src="images/buttons/buttonFace4.png"></button>
+			<button class="choices" onclick="face.src='images/face/face5.png'"><img src="images/buttons/buttonFace5.png"></button>
+			<button class="choices" onclick="face.src='images/face/face6.png'"><img src="images/buttons/buttonFace6.png"></button>
+			<button class="choices" onclick="face.src='images/face/face7.png'"><img src="images/buttons/buttonFace7.png"></button>
+			</div>
+
+			<div class="select" id="hatSelect">
+			<button class="choices" onclick="hat.src='images/hat/hat0.png'"><img src="images/buttons/buttonNone.png"></button>
+			<button class="choices" onclick="hat.src='images/hat/hat1.png'"><img src="images/buttons/buttonHat1.png"></button>
+			<button class="choices" onclick="hat.src='images/hat/hat2.png'"><img src="images/buttons/buttonHat2.png"></button>
+			<button class="choices" onclick="hat.src='images/hat/hat3.png'"><img src="images/buttons/buttonHat3.png"></button>
+			<button class="choices" onclick="hat.src='images/hat/hat4.png'"><img src="images/buttons/buttonHat4.png"></button>
+			<button class="choices" onclick="hat.src='images/hat/hat5.png'"><img src="images/buttons/buttonHat5.png"></button>
+			<button class="choices" onclick="hat.src='images/hat/hat6.png'"><img src="images/buttons/buttonHat6.png"></button>
+			</div>
+
+			<div class="select" id="shirtSelect">
+			<button class="choices" onclick="shirt.src='images/shirt/shirt0.png'"><img src="images/buttons/buttonNone.png"></button>
+			<button class="choices" onclick="shirt.src='images/shirt/shirt1.png'"><img src="images/buttons/buttonShirt1.png"></button>
+			<button class="choices" onclick="shirt.src='images/shirt/shirt2.png'"><img src="images/buttons/buttonShirt2.png"></button>
+			<button class="choices" onclick="shirt.src='images/shirt/shirt3.png'"><img src="images/buttons/buttonShirt3.png"></button>
+			<button class="choices" onclick="shirt.src='images/shirt/shirt4.png'"><img src="images/buttons/buttonShirt4.png"></button>
+			<button class="choices" onclick="shirt.src='images/shirt/shirt5.png'"><img src="images/buttons/buttonShirt5.png"></button>
+			</div>
+
+			<div class="select" id="legSelect">
+			<button class="choices" onclick="leg.src='images/leg/leg0.png'"><img src="images/buttons/buttonNone.png"></button>
+			<button class="choices" onclick="leg.src='images/leg/leg1.png'">leg1</button>
+			<button class="choices" onclick="leg.src='images/leg/leg2.png'">leg2</button>
+			<button class="choices" onclick="leg.src='images/leg/leg3.png'">leg3</button>
+			<button class="choices" onclick="leg.src='images/leg/leg4.png'">leg4</button>
+			<button class="choices" onclick="leg.src='images/leg/leg5.png'">leg5</button>
+			<button class="choices" onclick="leg.src='images/leg/leg6.png'">leg6</button>
+			</div>
+
+			<div class="select" id="miscSelect">
+			<button class="choices" onclick="misc.src='images/misc/misc0.png'"><img src="images/buttons/buttonNone.png"></button>
+			<button class="choices" onclick="misc.src='images/misc/misc1.png'">misc1</button>
+			<button class="choices" onclick="misc.src='images/misc/misc2.png'">misc2</button>
+			</div>
+
+			<button class="choices" onclick="face.src='images/face/face1.png'; hat.src='images/hat/hat0.png'; shirt.src='images/shirt/shirt0.png';leg.src='images/leg/leg0.png';misc.src='images/misc/misc0.png';">
+				Reset
+			</button>
+		</div>
+
+		<div id="dogBody">
+		<img class="clothes" name="body" src="images/body.png">
+		<img class="clothes" name="face" src="images/face/face1.png">
+		<img class="clothes" name="misc" src="images/misc/misc0.png">
+		<img class="clothes" name="shirt" src="images/shirt/shirt0.png">
+		<img class="clothes" name="hat" src="images/hat/hat0.png">
+		<img class="clothes" name="leg" src="images/leg/leg0.png">
+		</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+    <title>Bouncing Kylo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+
+function pattern1(x, y, s){
+  save();
+  translate(x,y);
+  scale(s);
+  //drawing here-------------------------------------------------
+   
+
+
+    //body
+    color('red');
+    fillcolor('black');
+    quad(-115,65, 115,65, 210,310, -210, 310);
+    fill();
+
+
+    //head
+    color('black');
+    fillcolor('black');
+    circle(0,-10,100);
+    fill();
+
+
+    //faceplate
+    color('silver');
+    fillcolor('silver');
+    triangle(-72,-70, 72,-70, 0,115);
+    fill();
+
+    //Faceplate
+    color('silver');
+    fillcolor('silver');
+    quad(-72,-70, 72,-70, 45,30, -45, 30);
+    fill();
+
+
+    //topmouth
+    color('silver');
+    fillcolor('black');
+    quad(-15,-8, 15,-8, 45,30, -45, 30);
+    linewidth(3);
+    fill();
+
+    //Eye
+    color('black');
+    fillcolor('black');
+    ellipse(0,-15,40,5);
+    fill();
+
+    //LEye
+    color('black');
+    fillcolor('black');
+    ellipse(-25,-15,15,7);
+    fill();
+
+    //REye
+    color('black');
+    fillcolor('black');
+    ellipse(25,-15,15,7);
+    fill();
+
+    //Ldip
+    color('black');
+    fillcolor('black');
+    triangle(-75,-70, -65,-79, -70,-55);
+    fill();
+
+
+    //Rdip
+    color('black');
+    fillcolor('black');
+    triangle(75,-70, 65,-79, 70,-55);
+    fill();
+
+    //Shouderdip
+    color('white');
+    fillcolor('white');
+    triangle(85,60, 140,60, 140,110);
+    fill();
+
+    //Shouderdip
+    color('white');
+    fillcolor('white');
+    triangle(-85,60, -140,60,-140,110);
+    fill();
+
+    //dip
+    color('black');
+    fillcolor('black');
+    ellipse(0,-74,39,7);
+    fill();
+
+    //FaceplatelinesL1
+    color('red')
+    fillcolor('red')
+    line(0,150,-52,-45)
+
+    //FaceplatelinesR1
+    color('red')
+    fillcolor('red')
+    line(0,150,52,-45)
+
+    //FaceplatelinesM1
+    color('black')
+    fillcolor('black')
+    line(52,-45,-52,-45)
+
+    //FaceplatelinesL2
+    color('black')
+    fillcolor('black')
+    line(0,120,-40,-35)
+
+    //FaceplatelinesR2
+    color('black')
+    fillcolor('black')
+    line(0,120,40,-35)
+
+    //FaceplatelinesM2
+    color('black')
+    fillcolor('black')
+    line(-40,-35,40,-35)
+
+    //FaceplatelinesL1
+    color('black')
+    fillcolor('black')
+    line(0,180,-65,-60)
+
+    //FaceplatelinesR1
+    color('black')
+    fillcolor('black')
+    line(0,180,65,-60)
+
+    //FaceplatelinesM1
+    color('black')
+    fillcolor('black')
+    line(-65,-60,65,-60)
+    
+    //FaceplatelinesL1
+    color('black')
+    fillcolor('black')
+    line(0,150,-52,-45)
+
+    //FaceplatelinesR1
+    color('black')
+    fillcolor('black')
+    line(0,150,52,-45)
+
+    //FaceplatelinesM1
+    color('black')
+    fillcolor('black')
+    line(52,-45,-52,-45)
+
+    //FaceplatelinesL2
+    color('black')
+    fillcolor('black')
+    line(0,120,-40,-35)
+
+    //FaceplatelinesR2
+    color('black')
+    fillcolor('black')
+    line(0,120,40,-35)
+
+    //FaceplatelinesM2
+    color('black')
+    fillcolor('black')
+    line(-40,-35,40,-35)
+
+    //FaceplatelinesL1
+    color('black')
+    fillcolor('black')
+    line(0,180,-65,-60)
+
+    //FaceplatelinesR1
+    color('black')
+    fillcolor('black')
+    line(0,180,65,-60)
+
+    //FaceplatelinesM1
+    color('black')
+    fillcolor('black')
+    line(-65,-60,65,-60)
+
+
+    //saber
+    color('red');
+    fillcolor('red');
+    line(-55,200,-65,-175);
+    linewidth(7);
+    fill();
+
+
+    //bottomMouth
+    color('black');
+    fillcolor('black');
+    quad(-15,125, 15,125, 45,30, -45, 30);
+    fill();
+
+    //bottomMouth
+    color('silver');
+    fillcolor('black');
+    quad(-15,85, 15,85, 45,30, -45, 30);
+    fill();
+
+
+    //mouthlinecover
+    color('black')
+    fillcolor('black')
+    line(-42,29,42,29)
+
+    //saber
+    color('red');
+    fillcolor('red');
+    line(-55,200,-65,-175);
+    linewidth(7);
+    fill();
+  //-------------------------------------------------------------
+  restore();
+}
+
+var X; //X-value of location
+var Y; //Y-value of location
+var VX;//X velocity
+var VY;//Y velocity
+var R; //Radius of creature
+var G; //Gravity
+ 
+function bounce(){
+  //This function checks to see if our creature is off of the screen.
+  //If he is off of the scree, we change direction
+ 
+  //See if off right side
+  if (X>width-R){
+    VX=-abs(VX);
+  }
+ 
+  //see if off left side
+  if (X<R){
+    VX=abs(VX);
+  }
+ 
+  //see if off top
+  if (Y>height-R){
+    VY=-abs(VY);
+  }
+ 
+  //see if off bottom
+  if (Y<R){
+    VY=abs(VY);
+  }
+}
+function setup(){
+  X=200; //initial x
+  Y=200;                 //initial y
+  VX=2;                  //initial velocity x
+  VY=-1;                 //initial velocity y
+  R=80;                   //how close to side before bounce
+  G=0.1; //acceleration due to gravity
+  loop(); //makes the draw function be called repeatedly
+}
+function draw(){
+  clear();                                                                //clear frame between drawing
+  pattern1(X, Y,0.4);         //draw creature at new location
+  X=X+VX;                                                            //update x
+  Y=Y+VY;                                                             //update y
+  VY=VY+G;                                                         //update velocity
+  bounce();                                                          //bounce if necessary
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Bouncing Kylo</div>
+        <div id="spork"></div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+  <style>
+  #wrapper{
+    width: 365px;
+    margin: auto;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 35%;
+    background: aliceblue;
+  }
+  #titleBar{
+    font-size: 55px;
+    border-bottom: 1px solid lightsteelblue;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-weight: lighter;;
+    color: lightsteelblue;
+    text-align: center;
+  }
+  #buttonDiv{
+    width: 100%;
+    padding-top: 5px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+  }
+  img.thumbnail{
+    width: 100px;
+    height: 100px;
+  }
+  button.thumbnail{
+    background: none;
+    margin: .25px;
+    padding: 5px;
+    height: 115px;
+    width: 115px;
+    border-radius: 0px;
+    border: none;
+  }
+  #gallery{
+    background: rgba(0,0,0,0.70);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: none;
+  }
+  #both{
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+  }
+  #picture{
+    height: 90%;
+    position: relative;
+  }
+  #caption{
+    height: 10%;
+    color: lightsteelblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+  }
+  #galleryPicture{
+    max-height: 90%;
+    max-width: 90%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+  }
+  #closeButton{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    color: lightsteelblue;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 30px;
+  }
+  #rightButton{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    text-align: right;
+    background: none;
+    border: none;
+    outline: none;
+    color: lightsteelblue;
+    font-size: 30px;
+  }
+  #leftButton{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    left: 0px;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    color: lightsteelblue;
+    font-size: 30px;
+  }
+    #link{
+      font-family: sans-serif;
+      font-weight: lighter;
+      text-align: center;
+      font-size: 8pt;
+  }
+  </style>
+
+  <script>
+  theCaptions=[	"It's probably time to clean your windows; maybe not with a stick this time?",
+			"I thought I left my broom at the scrapyard!",
+			"Just a bit of rust won't hurt anyone.",
+			"These colors are brilliant!",
+			"I'm pretty sure this is the tail light of a car.",
+			"Red is the color of winners.",
+			"I wonder what this giant spring belonged to?",
+			"Enormous machinery!",
+			"More beautiful color!",
+]
+
+theImages=[	"images/Black.JPG",
+			"images/broom.JPG",
+			"images/Gray.JPG",
+			"images/Orange.JPG",
+			"images/Purple.JPG",
+			"images/Red.JPG",
+			"images/Spirals.JPG",
+			"images/Squares.JPG",
+			"images/triangles.JPG",
+]
+  var currentPicture;
+  function showPicture(n){
+    galleryPicture.src=theImages[n];
+    caption.innerHTML=theCaptions[n];
+    currentPicture=n;
+    if(currentPicture==0)
+      leftButton.style.display='none';
+    else {
+      leftButton.style.display='block';
+    }
+    gallery.style.display='block';
+    if(currentPicture==theImages.length-1)
+      rightButton.style.display='none';
+    else {
+      rightButton.style.display='block';
+    }
+  }
+  function closeWindow(){
+    gallery.style.display='none';
+  }
+  function showNext(){
+  showPicture(currentPicture+1);
+  }
+  function showPrevious(){
+  showPicture(currentPicture-1);
+  }
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="titleBar">SCRAPYARD</div>
+    <div id="buttonDiv">
+      <button class="thumbnail" onclick="showPicture(0);"><img class="thumbnail" src="thumbnails/Black.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(1);"><img class="thumbnail" src="thumbnails/broom.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(2);"><img class="thumbnail" src="thumbnails/Gray.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(3);"><img class="thumbnail" src="thumbnails/Orange.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(4);"><img class="thumbnail" src="thumbnails/Purple.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(5);"><img class="thumbnail" src="thumbnails/Red.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(6);"><img class="thumbnail" src="thumbnails/Spirals.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(7);"><img class="thumbnail" src="thumbnails/Squares.JPG"></button>
+      <button class="thumbnail" onclick="showPicture(8);"><img class="thumbnail" src="thumbnails/triangleS.JPG"></button>
+    </div>
+    <div id="secondaryNavigation"></div>
+    <div id="link"><a href="../index.html">HOME</a></div>
+  </div>
+
+  <div id="gallery">
+    <div id="both">
+      <div id="picture">
+        <img id="galleryPicture" src="images/blombos.png">
+      </div>
+      <div id="caption">Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Is that a rock? Someone tell me!!!!!! </div>
+    </div>
+    <button id="leftButton" onclick="showPrevious();">&leftarrow;</button>
+    <button id="rightButton" onclick="showNext();">&rightarrow;</button>
+    <button id="closeButton" onclick="closeWindow();">X</button>
+  </div>
+</body>
+
+</html>

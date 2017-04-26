@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <script src="spork.js"></script>
+  <script>
+  function face(x,y,r){
+  save()
+//set center and radius
+  translate(x,y);
+	scale(r/200)
+
+  //Face
+  color('tan');
+  fillcolor('pink');
+  circle(0,0,190,190);
+  fill();
+
+  //Eyes
+  color('blue');
+  fillcolor('blue');
+  circle(70,-50,20);
+  fill();
+  circle(-70,-50,20);
+  fill();
+
+  //Mouth
+  color('brown');
+  linewidth(30);
+  line(-20,50,20,50);
+  restore()
+	}
+
+function setup(){
+  size(600,400)
+}
+function draw(){
+  face(100,200,30)
+face(400,300,90)
+face(500,100,40)
+}
+face(100,200,30)
+face(265,260,24)
+face(85,15,70)
+face(200,250,55)
+face(50,350,60)
+face(300,50,30)
+face(300,180,50)
+face(300,320,35)
+face(185,150,25)
+</script>
+</head>
+<body>
+  <div id="spork">
+
+</div>
+</body>
+</html>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>

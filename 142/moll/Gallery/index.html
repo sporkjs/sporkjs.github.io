@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+
+  #buttonDiv{
+    width:85%;
+    margin:auto;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  img.thumbnail{
+    width:100px;
+    height:100px;
+  }
+  button.thumbnail{
+    background: none;
+    margin: 10px;
+    height:115px;
+    width:115px;
+    border: none;
+    outline: none;
+  }
+  #gallery{
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: none;
+  }
+  #both{
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+  }
+  #picture{
+    height: 85%;
+    position: relative;
+  }
+  #caption{
+    height: 15%;
+    color: lightgray;
+    text-align: center;
+  }
+  #galleryPicture{
+    max-height: 90%;
+    max-width: 90%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+  }
+  #closeButton{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: lightgray;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 30px;
+  }
+  #rightButton{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    width:50%;
+    text-align:right;
+    background: none;
+    border: none;
+    outline: none;
+    color: lightgray;
+    font-size: 30px;
+  }
+  #leftButton{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    width:50%;
+    left:0px;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    color: lightgray;
+    font-size: 30px;
+  }
+  </style>
+
+  <script>
+  theCaptions=[	"This is my dog Jedidiah. He's a Goldendoodle, which is the fancy name for a golden retriever and a poodle mix. My family bought him in 2008. Here he is the summer we brought him home. What an angel.",
+			"This is another shot of Jed his first summer with us. As you can see, he is lovin' life.",
+			"Jed won cutest pet in the annual Fourth of July Pet Parade. He's pretty much the dog version of a child star.",
+			"Jed loves getting in to family photos. This father's day picture in was much improved by his presence.",
+			"Jed also joined in our Christmas family photo this last year. He really knows how to pose.",
+			"One of Jed's favorite things to do is go on walks. He especially likes finding a hole and smelling it for five minutes without stopping.",
+			"Jed loves to walk in all kinds of weather.",
+			"One of Jed's best dog friends is Thunder. Thunder can do the impossible and make a walk even more fun than usual.",
+			"Jed also loves playing in the backyard with various toys.",
+			"However, he will only fetch once or twice, and he hasn't quite grasped the concept of giving the toy back after fetching.",
+			"Next to walking, Jed's absolute favorite activity is sleeping. This activity is especially photogenic when there's a Christmas tree present.",
+			"I'd have to say that Jed is my favorite dog of all time."
+  ]
+  theImages=[	"images/jedAngel.jpg",
+			"images/backyard.jpg",
+			"images/petParade.jpg",
+			"images/fathersDay.jpg",
+			"images/jedChristmas.jpg",
+			"images/fallWalk.jpg",
+			"images/winterWalk.jpg",
+			"images/jedThunder.jpg",
+			"images/playing.jpg",
+			"images/football.jpg",
+			"images/sleeping.jpg",
+			"images/seniorPic.jpg"
+  ]
+  var currentPicture;
+  function showPicture(n){
+    galleryPicture.src=theImages[n];
+    caption.innerHTML=theCaptions[n];
+    currentPicture=n;
+    if(currentPicture==0)
+      leftButton.style.display="none";
+    else{
+      leftButton.style.display="block";
+    }
+    if(currentPicture==theImages.length-1)
+      rightButton.style.display="none";
+    else{
+      rightButton.style.display="block";
+    }
+    gallery.style.display="block";
+  }
+  function closeWindow(){
+    gallery.style.display="none";
+  }
+  function showNext(){
+    showPicture(currentPicture+1);
+  }
+  function showPrevious(){
+    showPicture(currentPicture-1);
+  }
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="titleBar">JEDIDIAH</div>
+    <div id="buttonDiv">
+      <button class="thumbnail" onclick="showPicture(0);"><img class="thumbnail" src="thumbnails/jedAngel.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(1);"><img class="thumbnail" src="thumbnails/backyard.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(2);"><img class="thumbnail" src="thumbnails/petParade.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(3);"><img class="thumbnail" src="thumbnails/fathersDay.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(4);"><img class="thumbnail" src="thumbnails/jedChristmas.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(5);"><img class="thumbnail" src="thumbnails/fallWalk.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(6);"><img class="thumbnail" src="thumbnails/winterWalk.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(7);"><img class="thumbnail" src="thumbnails/jedThunder.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(8);"><img class="thumbnail" src="thumbnails/playing.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(9);"><img class="thumbnail" src="thumbnails/football.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(10);"><img class="thumbnail" src="thumbnails/sleeping.jpg"></img></button>
+      <button class="thumbnail" onclick="showPicture(11);"><img class="thumbnail" src="thumbnails/seniorPic.jpg"></img></button>
+
+
+    </div>
+    <div id='bottomNav'><a href="../index.html">Back to Project Directory</a></div>
+
+  </div>
+
+  <div id="gallery">
+    <div id="both">
+      <div id="picture">
+        <img id="galleryPicture" src=images/blombos.png>
+      </div>
+      <div id="caption">what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock what a cool rock</div>
+    </div>
+    <button id="leftButton" onclick="showPrevious();">&leftarrow;</button>
+    <button id="rightButton" onclick="showNext();">&rightarrow;</button>
+    <button id="closeButton" onclick="closeWindow();">X</button>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Julia Set</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        margin: 10px;
+        padding: 10px;
+      }
+      #wrapper{
+        width: 50%;
+        margin: auto;
+        overflow: hidden;
+      }
+      #titleBar{
+        background-color: paleturquoise;
+        color: indianred;
+        font-size: 60px;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight:lighter;
+        }
+      #mainNavigation{
+        background-color: paleturquoise;
+      }
+     #content{
+       background-color: paleturquoise;
+       color: indianred;
+       text-align: center;
+       font-family: sans-serif;
+       font-weight: lighter;
+       padding-left: 40px;
+       padding-right: 40px;
+       padding-bottom: 40px;
+     }
+     #secondaryNavigation{
+       background-color: paleturquoise;
+     }
+     #link{
+       font-family: sans-serif;
+       font-weight: lighter;
+       text-align: center;
+       font-size: 8pt;
+     }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+      var minX; //left hand side
+var minY; //bottom
+var dx;   //width
+var dy;   //height
+var cx;   //constants in the iteration
+var cy;
+
+function onclick(){
+  var centerX=dx*mouseX/width+minX;
+  var centerY=dy*mouseY/height+minY;
+  dx=dx/2;
+  dy=dy/2;
+  minX=centerX-dx/2;
+  minY=centerY-dy/2;
+  zoom.value=dx;
+  clear();
+  draw();
+}
+function setup(){
+  minX=-2;
+  minY=-2;
+  dx=4;
+  dy=4;
+  zoom.value=dx;
+  cx=eval(cxInput.value);
+  cy=eval(cyInput.value);
+  size(200,200);
+}
+function biggerWindow(){
+  minX=-2;
+  minY=-2;
+  dx=4;
+  dy=4;
+  zoom.value=dx;
+  cx=eval(cxInput.value);
+  cy=eval(cyInput.value);
+  size(400,400);
+  draw();
+}
+function draw(){
+  for(k=0;k<width;k=k+1)
+    for(j=0;j<height;j=j+1){
+      x=dx*k/width+minX;
+      y=dy*j/height+minY;
+      color('white');
+      for(n=0;n<200;n=n+1){
+        newX=x*x-y*y+cx;
+        newY=2*x*y+cy;
+        x=newX;
+        y=newY;
+        if(x*x+y*y>4){
+          color(2*n,2*n,2*n);
+          n=1000;
+        }
+      }
+      rect(k,j,1,1);
+    }
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">
+        Julia
+      </div>
+      <div id="mainNavigation"></div>
+      <div id="content">
+        <div id="spork"></div>
+        <button onclick='startover();'>Start Over</button>
+        <p>
+        cx=<input type='text' id='cxInput' value='-0.8'>
+        </p>
+        <p>
+        cy=<input type='text' id='cyInput' value='0.1'>
+        </p>
+        <p>
+        zoom=<input type='text' id='zoom' value='4'>
+        </p>
+        <p>
+        <button onclick='biggerWindow();'>Bigger Window</button>
+      </p>
+        </div>
+      <div id="secondaryNavigation"></div>
+      <div id="link"><a href="../index.html">HOME</a></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Bouncing Creature</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 1px solid white;
+        margin: 10px;
+        padding: 10px;
+      }
+      body{
+        background-color: blue;
+      }
+
+      #wrapper{
+        background-color: white;
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+        overflow: hidden
+      }
+      #titleBar{
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        padding: 10px;
+        text-align: center;
+      }
+      #secondaryNavigation{
+        float: right;
+        clear: both;
+      }
+      #content{
+        text-align: center;
+        margin: auto;
+      }
+    </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+      function creature(x,y,s){
+                save();
+    translate(x,y);
+                scale(s);
+
+    //head
+color('gray');
+fillcolor('gray');
+ellipse(200,200, 100, 85);
+fill();
+
+//snout
+color('beige');
+fillcolor('beige');
+ellipse(200,275, 40, 50);
+fill();
+
+//nose
+color('black');
+fillcolor('black');
+ellipse(200,310, 15,10);
+fill();
+
+//right side
+color('gray');
+fillcolor('gray');
+triangle(320,210, 288,160, 280,250);
+fill();
+
+//left side
+color('gray');
+fillcolor('gray');
+triangle(80,210, 112,160, 120,250);
+fill();
+
+//right ear
+color('gray');
+fillcolor('gray');
+triangle(200,120, 288,160, 280,80);
+fill();
+
+//left ear
+color('gray');
+fillcolor('gray');
+triangle(200,120, 122,160, 120,80);
+fill();
+
+//patch
+save();
+translate(190,-50);
+color('beige');
+fillcolor('beige');
+rotate(45);
+ellipse(155,200, 40,50);
+fill();
+restore();
+
+save();
+translate(-10,170);
+color('beige');
+fillcolor('beige');
+rotate(-45);
+ellipse(155,200, 40,50);
+fill();
+restore();
+
+//left patch
+save();
+translate(190,-50);
+color('black');
+fillcolor('black');
+rotate(45);
+ellipse(155,200, 27,35);
+fill();
+
+color('white');
+fillcolor('white');
+circle(158,200, 10);
+fill();
+
+color('blue');
+fillcolor('blue');
+circle(158,200, 7);
+fill();
+restore();
+
+//right patch
+save();
+translate(-75,230);
+color('black');
+fillcolor('black');
+rotate(-45);
+ellipse(245,200, 27,35);
+fill();
+
+color('white');
+fillcolor('white');
+circle(242,200, 10);
+fill();
+
+color('blue');
+fillcolor('blue');
+circle(242,200, 7);
+fill();
+restore();
+
+color('beige');
+fillcolor('beige');
+circle(200,220, 10);
+fill();
+restore();
+}
+
+var X; //X-value of location
+var Y; //Y-value of location
+var VX;//X velocity
+var VY;//Y velocity
+var R; //Radius of creature
+var G; //Gravity
+
+function bounce(){
+  //This function checks to see if our creature is off of the screen.
+  //If he is off of the scree, we change direction
+
+  //See if off right side
+  if (X>width-R){
+    VX=-abs(VX);
+  }
+
+  //see if off left side
+  if (X<R){
+    VX=abs(VX);
+  }
+
+  //see if off top
+  if (Y>height-R){
+    VY=-abs(VY);
+  }
+
+  //see if off bottom
+  if (Y<R){
+    VY=abs(VY);
+  }
+}
+function setup(){
+  translate(-100,-100);
+  X=200; //initial x
+  Y=200;                 //initial y
+  VX=2;                  //initial velocity x
+  VY=1;                  //initial velocity y
+  R=50;                   //how close to side before bounce
+  G=0.1; //acceleration due to gravity
+  loop(); //makes the draw function be called repeatedly
+}
+function draw(){
+  clear();                                                                //clear frame between drawing
+  creature(X, Y,0.5);         //draw creature at new location
+  X=X+VX;                                                            //update x
+  Y=Y+VY;                                                             //update y
+  VY=VY+G;                                                         //update velocity
+  bounce();                                                          //bounce if necessary
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">My Bouncing Creature</div>
+      <div id="mainNavigation"></div>
+      <div id="content">
+        This is Rocky the Raccoon. Rocky the Raccoon likes to bounce. This is him bouncing. As he bounces he accelerates and gets faster and faster. He won't stop!
+        <div id="spork"></div>
+      </div>
+      <div id="secondaryNavigation">
+      Hope Martin | Math 142 | <a href="http://www.cune.edu">CUNE</a>
+      </div>
+    </div>
+  </body>
+</html>

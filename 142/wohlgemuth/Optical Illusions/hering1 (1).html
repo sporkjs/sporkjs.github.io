@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="illusion.css">
+
+    <title>Optical Illusions</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+#hering1Tab{
+  background-color: gainsboro;
+}
+canvas{
+  border:none;
+}
+    </style>
+
+    <script src="spork.js"></script>
+    <script>
+    translate(7,7)
+function setup(){
+  drawing.style.border="none";
+}
+
+function slantRight(){
+
+ rotate(45);
+ color('black');
+ linewidth(3);
+
+  	for(r=-width; r<width*2; r=r+8){
+
+		line(width, r, -width, r)
+
+    }
+
+}
+
+
+function slantLeft(){
+
+ rotate(-45);
+ color('black');
+ linewidth(3);
+
+  	for(r=-width; r<width*2; r=r+8){
+
+		line(width, r, -width, r)
+
+    }
+
+}
+
+
+function ill(){
+color('white');
+  fillcolor('white');
+  save();
+  	rect (-200, -200, 400, 400); fill();
+		clip();
+  		slantRight();
+restore();
+
+	save();
+  	rect (-150, -150, 300, 300); fill();
+  		clip();
+	  	slantLeft ();
+	restore();
+save();
+  	rect (-100, -100, 200, 200); fill();
+		clip();
+  		slantRight();
+restore();
+
+	save();
+  	rect (-50, -50, 100, 100); fill();
+  		clip();
+	  	slantLeft ();
+	restore();
+
+}
+
+function ill2(){
+color('white');
+  fillcolor('white');
+  save();
+  	rect (-200, -200, 400, 400); fill();
+		clip();
+  		slantLeft();
+restore();
+
+	save();
+  	rect (-150, -150, 300, 300); fill();
+  		clip();
+	  	slantRight ();
+	restore();
+save();
+  	rect (-100, -100, 200, 200); fill();
+		clip();
+  		slantLeft ();
+restore();
+
+	save();
+  	rect (-50, -50, 100, 100); fill();
+  		clip();
+	  	slantRight ();
+	restore();
+
+}
+
+function red(){
+  translate(600,600)
+
+  color('red');
+
+  for(x=0; x<3;x=x+1){
+    linewidth(10);
+scale(.6);
+rect (-200, -200, 400, 400);
+  }
+}
+
+function draw(){
+  scale(.32);
+
+  save();
+  translate(200,200);
+  ill();
+  restore();
+
+  save();
+  translate(600,200);
+  ill2();
+  restore();
+
+  save();
+  translate(1000,200);
+  ill();
+  restore();
+  //---------------------------
+  save();
+  translate(200,600);
+  ill2();
+  restore();
+
+  save();
+  translate(600,600);
+  ill();
+  restore();
+
+  save();
+  translate(1000,600);
+  ill2();
+  restore();
+ //------------------------------
+  save();
+  translate(200,1000);
+  ill();
+  restore();
+
+  save();
+  translate(600,1000);
+  ill2();
+  restore();
+
+  save();
+  translate(1000,1000);
+  ill();
+  restore();
+
+  red();
+}
+
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+  		<div id="titleBar">
+  OPTICAL ILLUSIONS
+  		</div>
+  		<div id="navigation">
+  			<div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+  			<div class="tab" id="hermannTab"><a href="hermann.html">Hermann Grid</a></div>
+  			<div class="tab" id="pyramidTab"><a href="pyramid.html">Pyramid</a></div>
+  			<div class="tab" id="breathingTab"><a href="breathing.html">Breathing Square</a></div>
+  			<div class="tab" id="hering1Tab"><a href="hering1.html">Hering Illusion 1</a></div>
+  			<div class="tab" id="hering2Tab"><a href="hering2.html">Hering Illusion 2</a></div>
+</div>
+      <div id="content">
+
+<div id="spork"></div>
+<p>
+Hering Illusion. The red squares appear to be crooked but are actually straight. Please just take my word for it.
+        </p>
+
+
+  		</div>
+
+  		<div id="bottomNav">
+  			Chelsea Wohlgemuth | Math 142 | <a href="http://www.cune.edu">CUNE</a>
+  		</div>
+
+  </body>
+</html>

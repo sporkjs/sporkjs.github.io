@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Thumbnail Gallery</title>
+  <style>
+
+  #wrapper{
+    width: 80%;
+    margin:auto;
+  }
+  #titleBar{
+    font-size:50px;
+    border-bottom: 1px solid orange;
+  }
+  #buttonDiv{
+    width: 100%;
+  }
+  img.thumbnail{
+    width: 100px;
+    height: 100px;
+  }
+  button.thumbnail{
+    background: none;
+    margin: 5px;
+    padding: 5px;
+    height: 115px;
+    width:115px;
+    border-radius: 0px;
+  }
+  #gallery{
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: none;
+  }
+  #both{
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+  }
+  #picture{
+    height: 90%;
+    position: relative;
+  }
+  #caption{
+    height: 10%;
+    color: lightgray;
+    text-align: center;
+  }
+  #galleryPicture{
+    max-height: 90%;
+    max-width: 90%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+  }
+  #closeButton{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: lightgray;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 40px;
+  }
+  #rightButton{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    text-align: right;
+    background: none;
+    border: none;
+    outline: none;
+    color: lightgray;
+    font-size: 40px;
+  }
+  #leftButton{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    left: 0px;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    color: lightgray;
+    font-size: 40px;
+  }
+  </style>
+
+  <script>
+  theCaptions=[	"<i>Anitvenom Vi</i> - From a ranked game where I played Vi. Called <i> Antivenom </i> because two members on the team were super toxic the entire time.",
+			"<i>Friends v Friends</i> - Created for an instance where so many friends were online we made a full custom match lobby of ten people and played against one another. The voice chat was a nightmare.",
+			"<i>Ranked Adventures - Frog Unclogged</i> - Ranked game as Tahm Kench, the frog so often banned that he was affectionately given sayings for when he managed to be picked. Includes: Unbench the Kench, Unclog the Frog, Send in the Amphibian.",
+			"<i>Ranked Adventures - Gimme Da Booty</i> - The most recently made. From a video of Blitzcrank plays with music from Undertale. Formed an attachment to teammates.",
+			"<i>Ranked Adventures - Hurricane Garen</i> - Marks the point of the 2015 season where I advanced to Platinum ranking. Unfortunately, was not in time for end of season rewards.",
+			"<i>Illaoi On Deck</i> - A normal game where I was forced to break out the try-hard shotcalling that constantly leads my teams to victory in close matches.",
+			"<i>LCS Lee Sin Tryout</i> - Another normal game making fun of the fact that I am in no way a skilled Lee Sin player. Constantly references the North American League Championship Series and other pro players.",
+		        "<i>Ranked Adventures - 2016 Placement Circuit</i> - For the 2016 ranked season placements. All ten games were in some way showcased. Landed in Gold V to my personal dismay. This is the only Thumbnail made from scratch using a drawing software.",
+			"<i>Ranked Adventures - Shallow Graves</i> - Point from the 2015-16 preseason with major overhalls with marksmen. Somehow Graves kept making it through ban phase in ranked queues. I quickly gained proficiency on this character.",
+			"<i>Shenanigoons</i> - This video was sped up to 1.5x speed just to make our voices annoying. There was really no other reason.",
+			"<i>Shenanigoons: A New Nope</i> - A sequel to its predecessor because there was need for one apparently.",
+			"<i>Ranked Adventures - Stache Bash</i> - From a ranked game showcasing one of most practiced characters and how I go completely ham until the job is done.",
+			"<i>TERA-ble Racoon Adventure</i> - The only custom thumbnail that was not attributed to League of Legends. Rather, it was for an MMORPG I started playing called Tera. This follows my adventures as a racoon character through the beginning of the game.",
+                        "<i>Ranked Goon Squad - Welcome to ADC</i> - I was asked to join a ranked team preparing for a tournament in Omaha, Nebraska. Of course, I was up to the challenge and played a role I never considered myself very skilled at.",
+                        "<i>Yoshi's Heroes</i> - The image is purely because the song used in the video was pulled from Super Mario World where Yoshi was introduced. Mainly highlights myself being a nuisance to the enemy team."
+  ]
+
+  theImages=[	"galleryImages/AntivenomVi.jpg",
+			"galleryImages/FriendsvFriends.png",
+			"galleryImages/FrogUnclogged.jpg",
+			"galleryImages/GimmeDaBooty.jpg",
+			"galleryImages/HurricaneGaren.png",
+			"galleryImages/IllaoiOnDeck.jpg",
+			"galleryImages/LCSLeeSin.jpg",
+			"galleryImages/RankedPlacements.jpg",
+			"galleryImages/ShallowGraves.jpg",
+			"galleryImages/Shenanigoons.jpg",
+			"galleryImages/Shenanigoons_2.jpg",
+			"galleryImages/StacheBash.jpg",
+                        "galleryImages/TERA-bleRacoon.jpg",
+                        "galleryImages/WelcomeToADC.jpg",
+                        "galleryImages/YoshisHeroes.png"
+  ]
+  var currentPicture;
+  function showPicture(n){
+    galleryPicture.src=theImages[n];
+    caption.innerHTML=theCaptions[n];
+    currentPicture=n;
+    if (currentPicture==0)
+      leftButton.style.display="none";
+    else {
+      leftButton.style.display='block';
+    }
+    if (currentPicture==theImages.length-1)
+      rightButton.style.display="none";
+    else {
+      rightButton.style.display='block';
+    }
+
+    gallery.style.display='block';
+  }
+  function closeWindow(){
+    gallery.style.display='none';
+  }
+  function showNext(){
+  showPicture(currentPicture+1);
+  }
+  function showPrevious(){
+  showPicture(currentPicture-1);
+  }
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Custom Thumbnails</div>
+    <div id="buttonDiv">
+      <button class="thumbnail" onclick="showPicture(0);"><img class="thumbnail" src="galleryImages/AntivenomVi.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(1);"><img class="thumbnail" src="galleryImages/FriendsvFriends.png"></button>
+      <button class="thumbnail" onclick="showPicture(2);"><img class="thumbnail" src="galleryImages/FrogUnclogged.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(3);"><img class="thumbnail" src="galleryImages/GimmeDaBooty.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(4);"><img class="thumbnail" src="galleryImages/HurricaneGaren.png"></button>
+      <button class="thumbnail" onclick="showPicture(5);"><img class="thumbnail" src="galleryImages/IllaoiOnDeck.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(6);"><img class="thumbnail" src="galleryImages/LCSLeeSin.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(7);"><img class="thumbnail" src="galleryImages/RankedPlacements.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(8);"><img class="thumbnail" src="galleryImages/ShallowGraves.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(9);"><img class="thumbnail" src="galleryImages/Shenanigoons.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(10);"><img class="thumbnail" src="galleryImages/Shenanigoons_2.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(11);"><img class="thumbnail" src="galleryImages/StacheBash.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(12);"><img class="thumbnail" src="galleryImages/TERA-bleRacoon.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(13);"><img class="thumbnail" src="galleryImages/WelcomeToADC.jpg"></button>
+      <button class="thumbnail" onclick="showPicture(14);"><img class="thumbnail" src="galleryImages/YoshisHeroes.png"></button>
+    </div>
+  </div>
+
+  <div id="gallery">
+    <div id="both">
+      <div id="picture">
+	<img id="galleryPicture" src="galleryImages/AntivenomVi.jpg">
+      </div>
+      <div id="caption"> nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense nonsense </div>
+    </div>
+    <button id="leftButton" onclick="showPrevious();">&leftarrow;</button>
+    <button id="rightButton" onclick="showNext();">&rightarrow;</button>
+    <button id="closeButton" onclick="closeWindow();">x</button>
+  </div>
+</body>
+
+</html>

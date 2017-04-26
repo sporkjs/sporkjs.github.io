@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+  button.num{
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 0px;
+    padding: 0px;
+    background: lightgray;
+  }
+  button.equal{
+    font-size: 50px;
+    width: 163px;
+    height: 80px;
+    border-radius: 0px;
+    padding: 0px;
+    background: orange;
+  }
+  button.fun{
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 0px;
+    padding: 0px;
+    background:lightblue;
+  }
+  button.clear{
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 0px;
+    padding: 0px;
+    background:#B40404;
+  }
+  #display{
+    height:100px;
+    width: 330px;
+    background:gray;
+    overflow: hidden;
+    font-size: 80px;
+    vertical-align: middle;
+    line-height: 100px;
+    text-align:right;
+
+  }
+  table{
+    border-collapse: collapse;
+  }
+  </style>
+  <script>
+  function addCharacter(x){
+    var s;
+    s=display.innerHTML;
+    display.innerHTML=s+x;
+  }
+  function clearDisplay(){
+    display.innerHTML="";
+  }
+function evaluateDisplay(){
+  var s;
+  s=display.innerHTML;
+  display.innerHTML=eval(s);
+}
+
+  </script>
+
+</head>
+<body>
+<table border="0">
+  <tr>
+    <td colspan="4"><div id='display'></div></td>
+  </tr>
+  <tr>
+    <td><button class='clear'onclick='clearDisplay();'>C</button></td>
+    <td><button class='num' onclick='addCharacter("(");'>(</button></td>
+      <td><button class='num' onclick='addCharacter(")");'>)</button></td>
+      <td><button class='fun'onclick='addCharacter("\");'>\</button></td>
+</tr>
+<tr>
+  <td><button class='num' onclick='addCharacter("7");'>7</button></td>
+    <td><button class='num' onclick='addCharacter("8");'>8</button></td>
+      <td><button class='num' onclick='addCharacter("9");'>9</button></td>
+          <td><button class='fun'onclick='addCharacter("*");'>*</button></td>
+</tr>
+<tr>
+  <td><button class='num' onclick='addCharacter("4");'>4</button></td>
+    <td><button class='num' onclick='addCharacter("5");'>5</button></td>
+      <td><button class='num' onclick='addCharacter("6");'>6</button></td>
+          <td><button class='fun'onclick='addCharacter("-");'>-</button></td>
+</tr>
+<tr>
+<td><button class='num' onclick='addCharacter("1");'>1</button></td>
+<td><button class='num' onclick='addCharacter("2");'>2</button></td>
+<td><button class='num' onclick='addCharacter("3");'>3</button></td>
+  <td><button class='fun'onclick='addCharacter("+");'>+</button></td>
+</tr>
+  <tr>
+    <td><button class='num' onclick='addCharacter("0");'>0</button></td>
+      <td><button class='num' onclick='addCharacter(".");'>.</button></td>
+    <td colspan=2><button class='equal' onclick='evaluateDisplay();'>=</button></td>
+  </tr>
+  <tr>
+
+  </tr>
+</table>
+</body>
+</html>

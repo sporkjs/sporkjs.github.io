@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src='spork.js'></script>
+  <script>
+  var small=45;
+  var theColors=['orange','blue','purple','red','white'];
+  function vertLine(x,y,w,h){
+      fillcolor(theColors.random());
+      l=random()*w;
+      k=random()*h;
+    	fillrect(x,y,w,h);
+    	line(x+l,y,x+l,y+h);
+    	line(x,y+k,x+w,y+k);
+      fill();
+  }
+  function mgrid(x,y,w,h){
+    var l,k;
+    if ((w<small) && 		//(notice the && not ||)
+        (h<small) &&
+    	 (random()>0.15)){		//(notice > for &&, <for||)
+  	vertLine(x,y,w,h);
+    }
+    else if (w>h){ //wide
+      l=random()*w;
+      mgrid(x,y,l,h); //left
+      mgrid(x+l,y,w-l,h); //right
+    }
+    else{ //tall
+      k=random()*h;
+      mgrid(x,y,w,k); //top
+      mgrid(x,y+k,w,h-k); //bottom
+    }
+  }
+  function setup(){
+    size(600,400);
+  }
+  function draw(){
+    mgrid(0,0,width,height);
+  }
+  </script>
+</head>
+<body>
+  <div id='wrapper'>
+  <div id='spork'></div>
+  <button onclick='startover();'>New Image</button>
+          <a href="index.html">Mondrian Home</a>
+</body>
+</html>
+</div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>

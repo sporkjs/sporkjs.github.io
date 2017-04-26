@@ -1,0 +1,53 @@
+function square(x,y,s){
+  
+fillcolor(0, 190, 0);
+color(0, 190, 0);
+
+rect(-100, -100, 200, 200);
+fill();
+    
+}
+
+
+function border(){
+fillcolor(0, 0, 50);
+color(0, 0, 50);
+
+rect(30, -230, 200, 200);
+fill();
+
+rect(30, 30, 200, 200);
+fill();
+
+rect(-230, 30, 200, 200);
+fill();
+
+rect(-230, -230, 200, 200);
+fill();
+}
+
+
+
+function draw(){
+
+  
+    clear();
+ 
+  	save();
+  r=r+1
+    rotate(r);
+	square(0,0,1);
+	restore();
+  
+  
+	border();
+    
+}
+
+function setup(){
+	r=1
+  
+  translate(200,200);
+  loop();
+  
+}

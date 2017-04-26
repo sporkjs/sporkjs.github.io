@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+body{
+	background: rgb(20,20,50);
+}
+#wrapper{
+position: absolute;
+top: 15%;
+left: 10%;
+right: 10%;
+
+
+	width:70%;
+	margin: 0 auto;
+	background: rgb(220,240,250);
+	}
+
+#titleBar{
+	font-size: 40px;
+	color: white;
+	padding: 10px;
+	background: rgb(10,40,100);
+	font-family: "Courier New"
+	}
+#buttonDiv{
+	width:80%;
+	padding: 20px;
+	}
+img.thumbnail{
+	width:100px;
+	height:100px;
+	}
+button.thumbnail{
+	background: white;
+	margin:5px;
+	padding: 5px;
+	height:115px;
+	width:115px;
+	border-radius:0px;
+	}
+
+#gallery{
+	background: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	display: none;
+	}
+#both{
+	position: absolute;
+	top: 5%;
+	bottom: 5%;
+	right: 5%;
+	left: 5%;
+	}
+#picture{
+	height: 90%;
+	position: relative;
+	}
+#caption{
+	height: 10%;
+	color: lightgray;
+	text-align: center;
+	}
+#galleryPicture{
+	max-height:90%;
+	max-width:90%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	margin: auto;
+	}
+#closeButton{
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	color:lightgray;
+	background: none;
+	font-size: 40px;
+	border: none;
+	outline: none;
+	}
+#rightButton{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 50%;
+	text-align: right;
+	background: none;
+	border: none;
+	outline: none;
+	color:lightgray;
+	font-size: 50px;
+	}
+#leftButton{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	width: 50%;
+	left: 0px;
+	text-align: left;
+	background: none;
+	border: none;
+	outline: none;
+	color:lightgray;
+	font-size: 50px;
+	}
+
+</style>
+<script>
+
+theCaptions=[	
+		"<i>ExTyrannomon</i>. How can you go wrong with a possessed plush?",
+		"<i>Ravemon</i>. While I'm 90% sure it's actually suposed to be called Ravenmon, I preffer rave because it makes me imagine it dancing while wearing many glowsticks.",
+		"<i>Archnemon? Arukenimon? What's a consistency?</i> Anyway, cool spider lady thing. Woo.",
+		"<i>Ankylomon</i>. Because dinosaurs.",
+		"<i>Gargomon</i>. It's a rabbit with guns for hands. Guns for hands, man!",
+		"<i>Antylamon</i>. More rabbit, less guns for hands.",
+		"<i>Omekamon</i>. If I ever made a robot, it would probably look something like this. Construction paper horns and all.",
+		"<i>Digitamamon</i>. Despite the fact I think it should be related to ExTyrannomon and somehow it's not, this egg with legs is still adorable.",
+		"<i>Mach Gaogamon</i>. This thing's design is just so... Digimon-y. I feel like it perfectly embodies the Digimon spirit. Which is <i>Do what ever you want. Put everything into one design! More guns! MORE GUNS!</i>",
+		"<i>Matadormon</i>. Not sure what this thing is suposed to be and how exactly it's a matador. But it has like four wings and it doesn't even really need them. I love it.",
+		"<i>Gabumon</i>. Probably the only Digimon on here you have a chance of recognizing unless you've been binge playing Digimon Dusk version for the past 2 weeks like me.",
+		"<i>Sistermon</i>. Bet you didn't know there was a nun digimon. Two, actually.",
+		"<i>Honorable mention: Sinduramon</i>. Two words, Chicken orb."
+]
+
+theImages=[	
+		"images/1.png",
+		"images/2.png",
+		"images/3.png",
+		"images/4.png",
+		"images/5.png",
+		"images/6.png",
+		"images/7.png",
+		"images/8.png",
+		"images/9.png",
+		"images/10.png",
+		"images/11.png",
+		"images/12.png",
+		"images/13.png"
+]
+var currentPicture;
+
+	function showPicture(n){
+	galleryPicture.src=theImages[n];
+	caption.innerHTML=theCaptions[n];
+	currentPicture=n;
+
+	if(currentPicture==0)
+		leftButton.style.display='none';
+	else{
+		leftButton.style.display='block';
+	}
+
+
+	if(currentPicture==theImages.length-1)
+		rightButton.style.display='none';
+	else{
+		rightButton.style.display='block';
+	}
+	
+	gallery.style.display='block';
+	}
+
+
+	function closeWindow(){
+	gallery.style.display='none';
+	}
+
+	
+function showNext(){
+	showPicture(currentPicture+1);	
+	}
+	
+function showPrevious(){
+	showPicture(currentPicture-1);	
+	}
+
+</script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="titleBar">Cool Digimon</div>
+
+	<div id="buttonDiv">
+		<button class="thumbnail" onclick="showPicture(0);"><img class="thumbnail" src="thumbnails/1.png"></button>
+		<button class="thumbnail" onclick="showPicture(1);"><img class="thumbnail" src="thumbnails/2.png"></button>
+		<button class="thumbnail" onclick="showPicture(2);"><img class="thumbnail" src="thumbnails/3.png"></button>
+		<button class="thumbnail" onclick="showPicture(3);"><img class="thumbnail" src="thumbnails/4.png"></button>
+		<button class="thumbnail" onclick="showPicture(4);"><img class="thumbnail" src="thumbnails/5.png"></button>
+		<button class="thumbnail" onclick="showPicture(5);"><img class="thumbnail" src="thumbnails/6.png"></button>
+		<button class="thumbnail" onclick="showPicture(6);"><img class="thumbnail" src="thumbnails/7.png"></button>
+		<button class="thumbnail" onclick="showPicture(7);"><img class="thumbnail" src="thumbnails/8.png"></button>
+		<button class="thumbnail" onclick="showPicture(8);"><img class="thumbnail" src="thumbnails/9.png"></button>
+		<button class="thumbnail" onclick="showPicture(9);"><img class="thumbnail" src="thumbnails/10.png"></button>
+		<button class="thumbnail" onclick="showPicture(10);"><img class="thumbnail" src="thumbnails/11.png"></button>
+		<button class="thumbnail" onclick="showPicture(11);"><img class="thumbnail" src="thumbnails/12.png"></button>
+		<button class="thumbnail" onclick="showPicture(12);"><img class="thumbnail" src="thumbnails/13.png"></button>		
+	</div>
+</div>
+
+
+<div id="gallery">
+	<div id="both">
+		<div id="picture"><img id="galleryPicture" src="images/1.png"></div>
+		<div id="caption"></div>
+
+	</div>
+
+	<button id="leftButton" onclick="showPrevious();">&leftarrow;</button>
+	<button id="rightButton" onclick="showNext();">&rightarrow;</button>
+
+
+	<button id="closeButton" onclick="closeWindow();">X</button>
+
+</div>
+
+
+</body>
+
+</html>

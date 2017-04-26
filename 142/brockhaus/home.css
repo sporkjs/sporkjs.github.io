@@ -1,0 +1,43 @@
+body{
+  background-color: #04B4AE;
+  color:white;
+  text-align: center;
+  font-size: 30px;
+  margin:20px;
+  }
+  #content{
+    margin: 20px;
+
+    }
+
+
+    #titleBar{
+      background-color: #FFBF00;
+      color: white;
+      font-size: 50px;
+      padding: 10px;
+      text-align: left;
+      text-shadow: 3px 3px black;
+      font-family: fantasy;
+      }
+      #secondaryNavigation{
+        background-color: #FFBF00;
+        text-align: right;
+        border-top: 1px solid gray;
+        font-size: 10px;
+        padding-right: 10px;
+        color: black;
+
+        }
+        #navigationBar{
+          text-align: center;
+          border-bottom: 1px solid gray;
+          font-family: fantasy;
+          padding-top: 10px;
+
+
+          }
+          div.tab{
+            display:inline-block;
+            width:30%;
+          }

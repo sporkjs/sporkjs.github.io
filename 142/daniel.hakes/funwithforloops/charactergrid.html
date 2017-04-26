@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <title>Character Grid</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function minion(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+
+  //Minion
+  circle(0,-35,130);
+  fillcolor("yellow");
+  fill();
+
+  rect(-130,-35,260,300);
+  fillcolor("yellow");
+  fill();
+
+  //Mouth
+  ellipse(25,107,66,20);
+  fillcolor("black");
+  fill();
+
+  //Glasses Strap
+  rect(-130,-40,260,45);
+  fillcolor("black");
+  fill();
+
+  //Eye Whites
+  circle(-62,-20,58);
+  linewidth(11);
+  fillcolor("white");
+  fill();
+
+  circle(62,-20,58);
+  fillcolor("white");
+  fill();
+
+  //Blue Eyes
+  circle(50,-5,18);
+  fillcolor("blue");
+  fill();
+
+  circle(-50,-5,18);
+  fillcolor("blue");
+  fill();
+
+  //Glasses Framing
+  arc(-61,-20,58,20,390);
+  arc(61,-20,58,20,390);
+
+  //Hair
+  line(0,-183,0,-156);
+  line(37,-183,22,-155);
+  line(-37,-183,-22,-155);
+
+    restore();
+  }
+  //draw above this line
+  /*Circle Grid Example
+  This example will draw circles even spaced
+  on a rectangular grid.
+  */
+
+  function setup(){
+    /*
+    Since this example is just demonstrating a grid,
+    we do not need to do any special setup.
+    */
+  }
+  function draw(){
+
+    //variables for the centers of our circles
+    var x,y;
+    minion(200,200,450);
+    //x will take on values 20, 60, 100...
+    for (x=20;x<width;x=x+45)
+      //for each value of x, y takes on 20, 60...
+      for (y=20;y<height;y=y+45){
+       minion(x,y,19);
+        /*
+        Play with the value 20 in this last line.
+        Larger values make the circles overlap.
+        Smaller values adds space between them.
+        */
+      }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+      <div id="spork"></div>
+          <a href="index.html">Fun With Forloops</a>
+    </div>
+<div id="secondaryNavigation">Daniel Hakes | Math 142 |<a href="http://www.cune.org/daniel.hakes/" target="NEW">HOME</a>| <a href="http://www.cune.edu" target="NEW">CUNE</a></div>
+  </div>
+</body>
+</html>

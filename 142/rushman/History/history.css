@@ -1,0 +1,65 @@
+body{
+  background-color: black;
+  }
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  }
+#titleBar{
+  background-color: purple;
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  font-family: cursive;
+  }
+#navigationBar{
+  text-align: center;
+  border-bottom: 1px solid gray;
+  font-family: cursive;
+  }
+#content{
+  margin: 20px;
+  }
+#secondaryNavigation{
+  text-align: right;
+  border-top: 1px solid gray;
+  font-size: 10px;
+  padding-right: 10px;
+  font-family: cursive;
+  clear: both;
+  }
+  #titlebarimage{
+    height: 60px;
+    vertical-align: middle;
+  }
+  div.tab{
+    display: inline-block;
+    width: 18%;
+    vertical-align: middle;
+  }
+  img.smallRight{
+    height: 250px;
+    float: right;
+    padding: 10px;
+  }
+  img.smallLeft{
+    height:250px;
+    float: left;
+    padding: 10px;
+  }
+  img.math{
+    height:200px;
+    padding: 10px;
+  }
+  p.reference{
+    text-indent: -30px;
+    margin-left: 40px;
+  }
+  div.tab a{
+    text-decoration: none;
+  }

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title>Evan Rodriguez</title>
+</head>
+<body>
+<div>
+function creature(x,y,s){
+
+  	save();
+    translate(x,y);
+	scale(s);
+//eye
+circle(0,0,100);
+
+//iris
+circle(0,0,50);
+fillcolor('purple');
+fill();
+
+//Pupil
+circle(0,0,25);
+fillcolor('black');
+fill();
+
+//hat
+triangle(-100,-75, 0,-200, 100,-75);
+fillcolor('orange')
+fill();
+
+  restore();
+}
+
+var X; //X-value of location
+var y; //Y-value of location
+var VX; //X velocity
+var VY; //Y velocity
+var R; // Radius of creature
+var G; // gravity
+
+function bounce(){
+	if (X>width-R){
+      VX=-abs(VX);
+    }
+  if(X<R){
+    VX=abs(VX);
+  }
+  	if (Y>height-R){
+      VY=-abs(VY);
+    }
+  if(Y<R){
+    VY=abs(VY);
+  }
+}
+function setup(){
+  	X=200;
+  	Y=200;
+  	VX=0.5;
+  	VY=0.5;
+  	R=50
+    G=.1
+	loop();
+}
+function draw(){
+  clear();
+  	X=X+VX;
+  	Y=Y+VY;
+    VY=VY+G;
+	creature(X,Y,0.5); 
+ 	bounce();
+</div>
+<h1>Evan Rodriguez</h1>
+</body>
+</html>

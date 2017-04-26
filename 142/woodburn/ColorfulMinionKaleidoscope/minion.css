@@ -1,0 +1,38 @@
+{background-color: gray;
+  }
+#wrapper{
+  background-color: darkgray;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  }
+#titleBar{
+  background-color: gray;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  text-shadow: 3px 3px black;
+  }
+#mainNavigation{
+  background-color: black;
+  text-align: center;
+  color: gray;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+  }
+#content{
+  margin: 20px;
+  background-color: grey;
+  color: white;
+  font-size: 20px;
+}
+
+#secondaryNavigation{
+  text-align: right;
+  border-top: 1px solid black;
+  color: gray;
+  font-size: 10px;
+  padding-right: 10px;
+  }

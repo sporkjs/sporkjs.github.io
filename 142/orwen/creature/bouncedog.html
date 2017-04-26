@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BEHOLD THE GLORY</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+body{
+	background-color:pink;
+	}
+#wrapper{
+	background-color: white;
+	width: 80%;
+	margin: auto;
+	}
+#titleBar{
+	background-color: brown;
+	color: beige;
+	font-size:40px;
+	padding: 10px;
+	}
+#mainNavigation{
+	background-color: brown;
+	color: beige;
+}
+#secondaryNavigation{
+	background-color: brown;
+	color: red;
+	padding:10px
+}
+div.tab{
+	display:inline-block;
+	width: 18%;
+	font-size:20px;
+	padding:10px;
+	}
+
+div.tab a{
+	text-decoration: none;
+	color: beige;
+	}
+#spork{
+	padding:30px
+}
+
+
+  </style>
+    <script src="spork.js"></script>
+    <script>
+      //Javascript will go here.
+	function creature (x,y,s){
+	
+  
+save();  
+translate(x,y);
+scale(s);
+
+//head
+fillcolor(255,228,181);
+color(255,228,181);
+circle(0,0,100);
+fill();
+
+//left ear
+save();
+rotate(-20);
+fillcolor(255,228,181);
+ellipse(-40,-100, 20,30);
+fill();
+restore();
+
+//right ear
+save();
+rotate(20);
+fillcolor(255,228,181);
+ellipse(40,-100, 20,30);
+fill();
+restore();
+
+
+//mouth
+save();
+linewidth(4);
+rotate(180);
+fillcolor('white');
+color('black');
+arc(0, -20, 55, 180, 0);
+fill();
+restore();
+
+//teeth
+color('black');
+linewidth(2);
+line(-55, 20, 55, 20);
+line(-45, 50, -30, 30,  -15, 50,  0,30);
+line(45, 50, 30, 30,  15, 50,  0,30);
+
+
+
+//left eye
+fillcolor('black');
+ellipse(-50,-10, 10,20);
+fill();
+
+//right eye
+fillcolor('black');
+ellipse(50,-10, 10,20);
+fill();
+
+//donut
+fillcolor(230,184,141);
+color(230,184,141);
+ellipse(0,-100, 40,25);
+fill();
+//frosting
+fillcolor(250,128,114);
+color(250,128,114);
+ellipse(0,-107, 39,17);
+fill();
+
+linewidth(5);
+
+line(10, -90, 10, -70);
+line(20, -100, 20, -85);
+
+//hole
+fillcolor('black');
+color('black');
+linewidth(2);
+ellipse(0,-107, 10,2);
+fill();
+
+//sprinkles
+linewidth(5);
+color(220,34,34);
+line(5, -120, -5, -118);
+line(24, -99, 34, -97);
+color(255,255,0);
+line(-32, -120, -25, -114);
+line(-1, -94, 8, -95);
+color(0,255,255);
+line(-20, -100, -27, -103);
+line(19, -110, 25, -114);
+  
+restore();
+}
+
+var x; //location
+var y;
+var vx; //velocity
+var vy; 
+var r; //radius of creature
+
+function bounce(){
+  if (x>width-r){
+    vx=-abs(vx);
+  }
+  if (x<r){
+    vx=abs(vx);
+  }
+  
+  if (y>height-r){
+  	vy=-abs(vy);
+  }
+  
+  if (y<r){
+  	vy=abs(vy);
+  }
+  
+}
+
+function setup(){
+  x=200
+  y=200
+  vx=2
+  vy=1
+  r=100
+  g=0.1
+  loop();
+}
+
+
+function draw(){
+clear();
+  x=x+vx;
+  y=y+vy;
+  vy=vy+g
+creature(x,y,1);
+  bounce();
+}
+
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Bouncing Creature</div>
+      <div id="mainNavigation">
+		<center><div class="tab"><a href="creature/index.html">Creature</a></div>
+		<div class="tab"><a href="bouncedog.html">Bouncing Creature</a></div></center>
+	</div>
+      <div id="content"> 
+       <center> <div id="spork"></div> </center>
+      </div>
+      <div id="secondaryNavigation">Bark bakr barl</div>
+    </div>
+  </body>
+</html>

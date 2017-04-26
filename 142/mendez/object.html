@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TITLE GOES HERE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+    <script src="spork.js"></script>
+     <script>
+
+     var Vf=1
+var f
+
+function bounce(){
+  //This function checks to see if our creature is off of the screen.
+  //If he is off of the scree, we change direction
+
+  //See if off right side
+  if (f>200-64){
+    Vf=-abs(Vf);
+  }
+
+  //see if off left side
+  if (f<-200){
+    Vf=abs(Vf);
+  }
+}
+
+function setup(){
+  translate (200,200)
+  timestep(20);
+  f=0;
+  loop();
+}
+function blacklines(){
+  color('black');
+    fillcolor('black');
+	linewidth(20);
+	for (x=-196;x<=196;x=x+40)
+    line(x,-200,x,200);
+    fill();
+
+}
+function yellowandRed(x){
+ 	linewidth(1)
+	color('blue');
+    fillcolor('blue');
+    rect(x,35,55,20);
+    fill();
+
+
+	color('yellow');
+    fillcolor('yellow');
+    rect(x,-35,55,20);
+    fill();
+}
+
+
+  //drawing here-------------------------------------------------
+  //------------------------------------------------------------
+
+function draw(){
+  clear();
+  fillcolor('white')
+  rect(-200,-200,400,400)
+  fill();
+  blacklines();
+  yellowandRed(f);
+  f=f+Vf
+  bounce();
+}
+
+    </script>
+  </head>
+  <body>
+    <div id="spork">
+    </div>
+  </body>
+</html>

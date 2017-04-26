@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teemo Bounce</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <style>
+      div{
+        border: 3px solid black;
+        margin: 10px;
+        padding: 10px;
+      }
+
+	#titleBar{
+		color: black;
+		font-size: 100px;
+		background-color: lightgreen;
+		text-align: center;
+		}
+
+	#mainNavigation{
+		background-color: white;
+		border-radius: 15px;
+		}
+
+	#content{
+		background-color: pink;
+		text-align: left;
+		font-size: 20px;
+		}
+
+	#wrapper{
+		background-color: tan;
+		border-radius: 15px;
+		}
+
+	#secondaryNavigation{
+		background-color: lightgreen;
+		text-align: right;
+		font-size: 10px;
+		border-radius: 15px;
+		}
+
+	img.center{
+		height: 500px;
+		}
+
+    </style>
+	<script src="spork.js"></script>
+     <script>
+      function creature(x,y,s){
+  	save();
+	translate(x,y);
+  scale(s);
+  
+//Spork Teemo:
+
+translate(-25,60);
+
+//helmet underside
+color(70,35,50); //gray
+fillcolor(75,40,55);
+linewidth(4);
+line(-130,-45, -100,-21, -100,-45); //left
+fill();
+line(130,0, 150,-10, 130,-15); //right
+fill();
+
+//whiskers outer
+linewidth(15);
+color(70,20,20);
+fillcolor(255,220,200);
+line(-85,-10, -105,25, -75,45); //whisker left 1 outer
+fill();
+line(-85,30, -97,45, -65,48); //whisker left 2 outer
+fill();
+line(-70,38, -83,65, -50,66); //whisker left 3 outer
+fill();
+line(-74,55, -65,75, -30,73); //whisker left 4 outer
+fill();
+line(115,10, 130,30, 99,40); //whisker right 1 outer
+fill();
+line(113,25, 124,51, 100,49); //whisker right 2 outer
+fill();
+line(105,47, 105,64, 80,59); //whisker right 3 outer
+fill();
+line(86,59, 77,78, 45,77); //whisker right 4 outer
+fill();
+
+//head
+linewidth(15);
+color(70,20,20); //dark brown
+fillcolor(255,220,200); //light tan
+rotate(45);
+ellipse(-10,-5,100,80); //head left
+fill();
+rotate(-45);
+linewidth(15);
+color(70,20,20);
+fillcolor(255,220,200);
+rotate(-45);
+ellipse(35,25,85,80); //head right
+fill();
+rotate(45);
+color(70,20,20);
+fillcolor(255,220,200);
+ellipse(13,8,105,75); //chin
+fill();
+color(255,220,200);
+fillcolor(255,220,200);
+ellipse(12.5,-24,99,60); //head fill left
+fill();
+linewidth(1);
+color(255,220,200);
+fillcolor(255,220,200);
+rotate(-45);
+ellipse(35,25,85,80); //head fill right
+fill();
+rotate(45);
+linewidth(15);
+linewidth(50);
+color(255,235,225,.5);
+fillcolor(255,235,225,.6);
+circle(10,5,30); //face light
+fill();
+
+//whiskers inner
+linewidth(1);
+color(255,220,200);
+fillcolor(255,220,200);
+triangle(-85,-10, -105,25, -75,45); //whisker left 1 inner
+fill();
+triangle(-85,30, -97,45, -65,48); //whisker left 2 inner
+fill();
+triangle(-70,38, -83,65, -50,66); //whisker left 3 inner
+fill();
+triangle(-74,55, -65,75, -30,73); //whisker left 4 inner
+fill();
+triangle(115,10, 130,30, 99,40); //whisker right 1 inner
+fill();
+triangle(113,25, 124,51, 100,49); //whisker right 2 inner
+fill();
+triangle(105,47, 105,64, 80,59); //whisker right 3 inner
+fill();
+triangle(86,59, 77,78, 45,75); //whisker right 4 inner
+fill();
+
+//eyes
+rotate(40);
+fillcolor(190,10,30,.7); //light red
+ellipse(-43,27,40,35); //eye shadow left
+fill();
+rotate(-40);
+color(255,255,255,.1);
+fillcolor(255,240,240,.2); //pink
+circle(-30,7,17); //eye shadow left light
+fill();
+linewidth(10);
+color(70,20,20);
+arc(-65,80,85,-100,-75); //eye left upper
+linewidth(6);
+arc(-60,29,40,-115,-20); //eye left inner
+arc(-60,41.5,45,-115,-35); //eye left lower
+linewidth(1);
+rotate(-40);
+color(255,220,200);
+fillcolor(190,10,30,.7);
+ellipse(45,35,40,35); //eye shadow right
+fill();
+rotate(40);
+color(255,255,255,.1);
+fillcolor(255,240,240,.2);
+circle(35,9,17); //eye shadow right light
+fill();
+linewidth(10);
+color(70,20,20);
+arc(70,80,85,-105,-80); //eye right upper
+linewidth(6);
+arc(65,29,40,-160,-65); //eye right inner
+arc(65,41.5,45,-145,-65); //eye right lower
+
+//eyebrows
+rotate(55);
+linewidth(10);
+color(70,20,20);
+fillcolor(130,50,60); //maroon
+ellipse(-30,10,11.5,5); //eyebrow left
+fill();
+rotate(-55);
+rotate(-40);
+linewidth(10);
+color(70,20,20);
+fillcolor(130,50,60); //maroon
+ellipse(30,7,10,6); //eyebrow right
+fill();
+rotate(40);
+
+//nose
+fillcolor(220,120,180);
+triangle(5,35, -3.5,40, -10,35);
+fill();
+
+//mouth
+linewidth(5);
+line(-15,50, -2,60, 10,53);
+
+//hair
+linewidth(1);
+color(65,75,175); //light blue
+fillcolor(65,75,175);
+line(20,-182, 43,-188, 35,-177); //inner fuzz 1
+fill();
+line(35,-175, 60,-180, 94,-170, 82,-164, 105,-164, 100,-152); //inner fuzz 2/3
+fill();
+linewidth(5);
+color(75,45,85); //dark blue
+fillcolor(75,45,85);
+arc(145,-400,250,100.5,120); //edge
+line(10,-150, 8,-170, 18,-180, 50,-165, 95,-155, 85,-145, 78,-142); //inner bottom
+fill();
+color(70,20,20);
+arc(25,-165,20,130,-110); //outer fuzz 1
+line(20,-184, 43,-188, 35,-177);
+arc(60,-120,60,-115,-55); //outer fuzz 2
+line(94,-169, 82,-164);
+line(80,-163, 105,-164); //outer fuzz 3
+arc(75,-178,35,22,90);
+
+//helmet
+color(10,60,55); //dark green
+fillcolor(10,60,55);
+line(-120,-50, -20,-138, 20,-150, 50,-145, 80,-132, 140,-45, 147,-15, 70,-38, 20,-48); //inner dark
+fill();
+linewidth(1);
+color(60,145,80,.2); //transition green
+fillcolor(60,145,80,.5);
+line(-0,-50, -65,-55, -85,-85, -20,-140, 5,-150); //inner transition left
+fill();
+color(60,145,80,.2);
+fillcolor(60,145,80,.5);
+line(41,-45, 85,-38, 120,-65, 80,-140, 50,-148) //inner transition right
+fill();
+linewidth(11);
+color(60,145,80,.8); //light green
+fillcolor(60,145,80);
+circle(22,-97,50) //inner light
+fill();
+color(70,20,20);
+linewidth(7);
+arc(-57,550,600,-97,-70); //brim
+arc(-25,60,150,-135,-105); //lower left slope
+arc(20,-2,130,-25,-5); //lower right slope
+arc(30,30,180,-110,-83); //upper left slope
+arc(1,24,180,-73,-60); //upper right slope
+rotate(90);
+linewidth(7);
+arc(-66,92,45,12,60); //back left
+rotate(-90);
+arc(120,-45,45,50,78);
+
+//ears
+linewidth(1);
+fillcolor(245,195,175); //dark tan
+color(255,220,200);
+line(-112,-88, -123,-138, -115,-175, -108,-170, -105,-185, -95,-174, -82,-183, -79,-172, -34,-150, -15,-120); //inner ear tan left
+fill();
+line(60,-113, 100,-140, 144,-162, 144,-162, 165,-175, 162,-161, 172,-152, 166,-145, 175,-137, 170,-123, 165,-100, 140,-72); //inner ear tan right
+fill();
+linewidth(12);
+color(160,80,80); //light maroon
+fillcolor(160,80,80);
+line(-92,-90, -86,-148, -65,-140, -40,-120); //inner ear maroon left
+fill();
+linewidth(4);
+line(110,-115, 135,-127, 150,-130, 128,-85, 105,-88); //inner ear maroon right
+fill();
+linewidth(10);
+arc(-8,-126,90,155,-163) //inner ear maroon left
+linewidth(5);
+arc(90,-130,60,2,75); //inner ear maroon right
+fill();
+linewidth(5);
+color(70,20,20);
+arc(-100,-85,70,-85,-35); //inner ear left
+arc(175,-10,125,-125,-110) //inner ear right
+linewidth(7);
+arc(-22,-138,100,155,-165); //left ear left side
+arc(-93,-80,90,-80,-30); //left ear right side
+line(-118,-165, -115,-175, -108,-170); //left outer fuzz 1
+line(-108,-170, -105,-185, -95,-174); //left outer fuzz 2
+line(-95,-174, -82,-183, -79,-172); //left outer fuzz 3
+arc(170,-40,125,-145,-103); //right ear left side
+arc(110,-130,60,10,60); //right ear right side
+line(144,-162, 165,-175, 162,-161); //right outter fuzz 1
+line(164,-160, 172,-152, 166,-145); //right outter fuzz 2
+line(166,-145, 175,-137, 170,-123); //right outter fuzz 3
+
+//goggles
+color(70,20,20);
+linewidth(13);
+fillcolor(185,25,25); //red
+quad(-112,-88, -108,-70, -102,-73, -102,-90); //left strap
+fill();
+quad(105,-88, 105,-77, 140,-60, 142,-72); //right strap
+fill();
+linewidth(15);
+quad(-88,-120, -102,-80, -25,-80, -15,-120); //left lens red
+fill();
+fillcolor(150,190,255); //blue
+quad(-78,-105, -82,-95, -37,-95, -34,-105); //left lens blue
+fill();
+fillcolor(185,25,25);
+quad(40,-115, 33,-77, 103,-70, 110,-110); //right lens red
+fill();
+fillcolor(150,190,255);
+quad(52,-100, 50,-89, 93,-85, 95,-97); //right lens blue
+fill();
+fillcolor(182,25,25);
+quad(-10,-100, -15,-85, 26,-84, 29,-100); //middle strap
+fill();
+  restore();
+}
+
+var X; //X-value of location
+var Y; //Y-value of location
+var VX; //X velocity
+var VY; //Y velocity
+var R; //Radius of creature
+var G; //Gravity
+
+function bounce(){
+  if (X>width-R){
+    VX=-abs(VX);
+  }
+  if (X<R){
+    VX=abs(VX);
+  }
+  if (Y>height-R){
+    VY=-abs(VY);
+  }
+  if (Y<R){
+    VY=abs(VY);
+  }
+}
+
+function setup(){
+  X=200;
+  Y=200;
+  VX=1;
+  VY=1;
+  R=75;
+  G=.1;
+  loop();
+}
+function draw(){
+  clear();
+  X=X+VX;
+  Y=Y+VY;
+  VY=VY+G
+	creature(X,Y,.5);
+  bounce();
+}
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="titleBar">Captain Teemo</div>
+      <div id="mainNavigation">
+
+<a href="index.html">We have to go back</a>
+<a href="creature.html">Ooh, pretty picture</a>
+<a href="randomLoop.html">Feelin' pretty nauseous...</a>
+<a href="gallery.html">Is there a video for Teemo?</a>
+<a href="illusion.html">I'm ready for a headache</a>
+<a href="calculator.html">Help me with rocket science</a>
+<a href="kaleidoscope.html">Girl with kaleidoscope eyes</a>
+<a href="kaleidoscopeColor.html">Now with color</a>
+
+</div>
+
+      <div id="content">
+		<div id="spork"></div>
+<p>
+Oh look, now he's so happy he can't contain himself. What have you done? He will never be the same again.
+
+</div>
+      <div id="secondaryNavigation">Captain Teemo is on duty</div>
+    </div>
+  </body>
+</html>
