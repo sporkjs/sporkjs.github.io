@@ -1,0 +1,90 @@
+body{
+  background-color: paleturquoise;
+  }
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  }
+#titleBar{
+  background-color: darkturquoise;
+  color: white;
+  font-family: monospace;
+  font-size: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 33px;
+  text-shadow: 3px 3px gray;
+  }
+#navigationBar{
+  font-family: monospace;
+  text-align: center;
+  border-bottom: 2px solid lightgray;
+  }
+#content{
+  font-family: "georgia", serif;
+  font-size: 15px;
+  color: black;
+  margin: 20px;
+  }
+#secondaryNavigation{
+  font-family: monospace;
+  text-align: right;
+  border-top: 2px solid lightgray;
+  font-size: 10px;
+  padding-right: 10px;
+  }
+  #titleBarImage{
+    height: 28px;
+
+  }
+  div.tab{
+    display: inline-block;
+    width:18%;
+  }
+  img.smallLeft{
+    height: 130px;
+    float: left;
+    padding-left: 20px
+    padding-right: 40px;
+  }
+  p.reference{
+    font-family: "Georgia",serif;
+    font-size: 15px;
+    text-indent: -20px;
+    margin-left: 40px;
+  }
+  p.writing{
+    font-family: "Georgia", serif;
+    font-size: 15px;
+  }
+  p.inventions{
+    font-family: "Georgia", serif;
+    font-size: 15px;
+  }
+  p.theories{
+    font-family: "Georgia", serif;
+    font-size: 15px;
+  }
+img.math{
+  height: 300px;
+  padding-right: 15px;
+}
+div.tab a{
+  text-decoration: none;
+  color: orange;
+}
+a{
+  color: orange;
+}
+p{
+  font-family: "Georgia", serif;
+  padding-left: 20px;
+  padding-right: 50px;
+}
+img.smallLeft{
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
