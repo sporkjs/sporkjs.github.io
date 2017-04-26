@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="thursdaystyle.css">
+
+<script src='header.js'></script>
+
+<script type="text/javascript" src="spork.js"></script>
+		<script>
+var R,q,w;
+
+function rotateOnTouch(){
+  if (mouseX < 100){
+    R=R+10;
+  }
+  else if (mouseX > 300){
+    R=R-10;
+  }
+}
+function onclick(){
+  if ((mouseX > 100)&&(mouseX < 300)){
+   
+   x=q;
+   y=w;
+   dx=10*cos(pi*R/180);
+   dy=10*sin(pi*R/180);
+   
+  }
+}
+
+function ship() {
+
+  save();
+
+translate(q,w);
+rotate(R);
+fillcolor('grey');
+color('grey');
+circle(0,0,20);
+fill();
+rect(10,-5,30,10);
+fill();
+
+  restore();
+
+}
+
+var s,z;
+
+function star(){
+
+save();
+
+translate(s,z);
+s=(s+tx+width)%width;
+z=(z+ty+width)%width;
+color('yellow');
+fillcolor('yellow');
+triangle(10,7.5,-10,7.5,0,-12.5);
+fill();
+triangle(10,-5,-10,-5,0,15);
+fill();
+
+restore();
+}
+
+var x,y;
+var dx,dy;
+
+function Missile() {
+  x=x+dx;
+  y=y+dy;
+  save();
+  translate(x,y);
+  fillcolor('grey');
+  circle(0,0,5);
+  fill();
+
+restore();
+
+
+}
+
+
+
+
+var tx,ty,score;
+
+function setup() {
+
+  R=0;
+  s=random()*width;
+  z=random()*height;
+  tx=2*random();
+  ty=2*random();
+  x=800;
+  y=800;
+  dx=0;
+  dy=0;
+  loop();
+  timestep(20);
+  score=0;
+  q=200;
+  w=200;
+  
+  
+
+}
+
+function draw() {
+  clear();
+  if (mouseDown){
+    rotateOnTouch();
+  }
+  background('black');
+  Missile();
+  ship();
+  star(s,z,.5);
+  hitstar();
+  hitship();
+  fillcolor('white');
+  filltext(score,10,385);
+ 
+  
+  
+  
+}
+
+function onkeydown() {
+//Rotate Ship Right
+  if (keyCode==rightArrow) {
+      R=R+5;
+}
+//Rotate Ship Left
+  if (keyCode==leftArrow) {
+      R=R-5;  
+}
+//Move Ship Left
+   if (keyChar=='S') {
+       q=q-5;            
+}
+//Move Ship Right
+   if (keyChar=='F') {
+       q=q+5;            
+}
+//Move Ship Up
+   if (keyChar=='E') {
+       w=w-5;            
+}
+//Move Ship Down
+   if (keyChar=='D') {
+       w=w+5;            
+}
+//Fire
+  if (keyCode=='16'){
+   x=q;
+   y=w;
+//Speed of Missile
+   dx=10*cos(pi*R/180);
+   dy=10*sin(pi*R/180);
+}
+}
+
+function hitstar() {
+  
+  if (sqrt((s-x)*(s-x)+(z-y)*(z-y))<21){
+   score=score+1;
+    x=800;
+    y=800;
+    dx=0;
+    dy=0;
+//Star Starting Points
+    s=q+30+random()*width;
+    z=w+30+random()*height;
+//Star Speed
+    tx=score/2*random();
+    ty=score/2*random();
+  }
+}
+
+function hitship() {
+  
+  if (sqrt((s-q)*(s-q)+(z-w)*(z-w))<28){
+    stoploop();
+    fillcolor('red');
+    filltext('Game Over',100,50);
+  }
+}
+
+
+
+
+
+
+		</script>
+
+<body>
+
+<script>showHeader();</script>
+
+<h1>Star Blasting Game</h2>
+
+<p>The object of this game is to destroy as many stars as possible before the ship is destroyed. <br> <br> <b>Key Controls</b> <br> s = move ship left <br> f = move ship right <br> e = move ship up <br> d = move ship down <br> left and right arrows = rotate ship <br> shift = fire missile <br> <br> <b> Mouse Controls</b> <br> click game screen left = rotate left <br> click game screen right = rotate right <br> click game screen middle = fire missile
+
+<div id='spork'></div>
+
+<script>showFooter();</script>
+
+</body>
+</html>

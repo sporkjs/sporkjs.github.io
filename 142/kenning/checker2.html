@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<link rel="stylesheet" type="text/css" href="thursdaystyle.css">
+
+<script src='header.js'></script>
+<script type="text/javascript" src="spork.js"></script>
+<script>
+
+var x,y,r; //position and radius of the circle
+var vx,vy; //velocity in both x and y directions
+var e; //variable for elasticity
+var ax,ay; //accelerations
+
+function setup() {
+  x = 350;
+  y = 20;
+  r = 25;
+  vx = 0;
+  vy = 0;
+  e = -.7;
+  ax = 0;
+  ay = .01;
+  loop();
+}
+
+function checker() {
+  background('grey')
+  color('yellow');
+  fillcolor('yellow');
+  circle(x,y,r);
+  fill();
+}
+
+function onmousedown() {
+  if (distanceToChecker() < r){
+    x = mouseX;
+    y = mouseY;
+  }
+}
+
+function onmousemove() {
+  if ((mouseDown) && (distanceToChecker() < r)) {
+    vx = mouseX - x;
+    vy = mouseY - y;
+    x = mouseX;
+    y = mouseY;
+  }
+}
+
+function draw() {
+  if(!((mouseDown) && (distanceToChecker() < r))) {
+    x += vx;
+    y += vy;
+    bounce();
+
+    vx += ax;
+    vy += ay;  
+  }
+  clear();
+  checker();
+}
+
+function distanceToChecker() {
+  var dx = x - mouseX;
+  var dy = y - mouseY;
+  
+  return(sqrt(dx*dx+dy*dy));
+}
+
+function bounce() {
+  if (x > width-r) {
+    vx = vx * e;
+    x = width - r;
+  }
+  if (y > height-r) {
+    vy = vy * e;
+    y = height - r;
+  }
+  if (x < r) {
+    vx = vx * e;
+    x = r;
+  }
+  if (y < r) {
+    vy = vy * e;
+    y = r;
+  }
+}
+ 
+	</script>
+<body>
+
+<script>showHeader();</script>
+
+<h1>Gravity Checker</h1>
+
+Click on checker and hold to drag. Let go to fling checker.
+
+<div id='spork'>
+
+</div>
+
+<script>showFooter();</script>
+
+</body>
+</html>
