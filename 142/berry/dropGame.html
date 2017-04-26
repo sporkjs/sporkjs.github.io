@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Cole Berry's Cup Game</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<script src='portfolio.js'></script>
+<script src="spork.js"></script>
+<script>
+		var Ballx; //coordinates of ball
+		var Bally;
+
+		var Cupx;
+
+		var count;
+
+		var vy; //y velocity
+
+		var gameOver;
+
+		function drawBall(){
+		  circle(Ballx,Bally,10);
+		  fill();
+		}
+
+		function drawCup(){
+		  arc(Cupx, 385, 15,0,180);
+		  fill();
+		}
+
+		function counter(){
+		  filltext(count,20,40);
+		}
+
+		function GameOver(){
+		  filltext("Game Over", 100,200);
+
+		}
+
+		function onkeydown(){
+		  if (keyCode==leftArrow)
+			Cupx=Cupx-8;
+		  
+		  if (keyCode==rightArrow)
+			Cupx=Cupx+8;
+		}
+		
+		function setup(){
+		  loop();
+		  gameOver=false;
+		  count=0;
+		  Bally=0;
+		  vy=0.5;
+		  Ballx=random()*400;
+		  Cupx=200;
+		}
+
+		function bounce(){
+		  if (Bally>400){
+			if ((Cupx-15<Ballx)&(Ballx<Cupx+15)&!gameOver){
+			Bally=0;
+			Ballx=random()*400;
+			count=count+1;
+			vy=vy+0.04;
+			}
+			else{
+			  GameOver();
+			  gameOver=true;
+			}
+		  }
+		}
+
+		function draw(){
+		  clear();
+		  drawBall();
+		  drawCup();
+		  Bally=Bally+vy;
+		  bounce();
+		  counter();
+		  if(mouseDown){
+			if(mouseX>200){
+				Cupx=Cupx+1;}
+			else{
+			Cupx=Cupx-1;}
+		  }
+		}
+
+	</script>
+</head>
+
+<body>
+<script>writeHeader();</script>
+<center>
+<p>
+<div id="spork"></div>
+	
+	</center>
+	<p>
+<script>writeFooter();</script>
+</body>
+
+</html>
