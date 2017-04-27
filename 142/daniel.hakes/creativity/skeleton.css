@@ -53,3 +53,6 @@ img.largeCenter{
   display: block;
   margin:auto;
 }
+canvas{
+	max-width: 90%;
+}
