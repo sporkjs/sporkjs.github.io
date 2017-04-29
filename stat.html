@@ -490,6 +490,7 @@ function trimEndWhite(str){
 	return(str);
 	}
 function fixExponents(s){
+s=s.replace(/(\d+)\.(\d+)/g,'($1.$2)');
 	var i=0;
 	var re1=/:OP(\d+):([^]*):CP\1:\s*\^\s*:OP(\d+):([^]*):CP\3:/
 	var re2=/:OP(\d+):([^]*):CP\1:\s*\^\s*(\w*)/
@@ -660,16 +661,16 @@ function printListSummaries(){
 		if (listn[i]>0){
 			s="<table border=1><tr><th>n</th><th><font style='text-decoration: overline;'>X</font></th><th>s</th><th>Var</th><th>Min</th><th>Q1</th><th>Med</th><th>Q3</th><th>Max</th><th>Sum</th><th>Range</th></tr><tr>";
 			s=s+'<td>'+listn[i]+'</td>';
-			s=s+'<td>'+listm[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listsd[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+(listsd[i]*listsd[i]).toFixed(precision)+'</td>';
-			s=s+'<td>'+listmin[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listq1[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listmed[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listq3[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listmax[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listsum[i].toFixed(precision)+'</td>';
-			s=s+'<td>'+listrange[i].toFixed(precision)+'</td>';
+			s=s+'<td>'+listm[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listsd[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+(listsd[i]*listsd[i]).TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listmin[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listq1[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listmed[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listq3[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listmax[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listsum[i].TOFIXED(precision)+'</td>';
+			s=s+'<td>'+listrange[i].TOFIXED(precision)+'</td>';
 			s=s+'</tr></table>';
 			d.innerHTML=s;
 		}
@@ -718,7 +719,7 @@ function findHistograms(){
 				ctx.save();
 				ctx.translate(j*dx, h-40);
 				ctx.rotate(PI/2);
-				ctx.fillText((listmin[i]+j*d).toFixed(2),0,0);
+				ctx.fillText((listmin[i]+j*d).TOFIXED(2),0,0);
 				ctx.restore();
 			}
 		}
@@ -792,6 +793,7 @@ function cacheMath(){
 	for (var i in aMathFunctions){
 		window[aMathFunctions[i]] = Math[aMathFunctions[i]];
 	}
+	Number.prototype.TOFIXED=function(n){return(Number(Math.round(this+'e'+n)+'e-'+n));}
 }
 function setupAll(){
 	setupPageDivs();
@@ -892,7 +894,7 @@ function generateUniformDataSet(){
 	var n=eval(uniformn.value);
 	list[l]=[];
 	for (i=0;i<n;i++)
-		list[l][i]=(a+(random()*(b-a))).toFixed(precision);
+		list[l][i]=(a+(random()*(b-a))).TOFIXED(precision);
 	if (uniformintegeryes.checked)
 		for (i=0;i<n;i++)
 			list[l][i]=round(list[l][i]);
@@ -917,7 +919,7 @@ function generateNormalDataSet(){
 	var n=eval(normaln.value);
 	list[l]=[];
 	for (i=0;i<n;i++)
-		list[l][i]=(m+s*boxMuller()).toFixed(precision);
+		list[l][i]=(m+s*boxMuller()).TOFIXED(precision);
 	if (normalintegeryes.checked)
 		for (i=0;i<n;i++)
 			list[l][i]=round(list[l][i]);
@@ -946,7 +948,7 @@ function generateSampleMeans(){
 			for (j=0;j<n;j++)
 				c+=list[inlist][floor(random()*listn[inlist])];
 			c=c/n;
-			list[outlist].push(c.toFixed(precision));
+			list[outlist].push(c.TOFIXED(precision));
 		}
 		printDataListsValueOnly();
 		loadDataLists();
@@ -1005,7 +1007,7 @@ function drawPolygons(){
 			ctx.save();
 			ctx.translate(j*dx, h-40);
 			ctx.rotate(PI/2);
-			ctx.fillText((m+j*d).toFixed(2),0,0);
+			ctx.fillText((m+j*d).TOFIXED(2),0,0);
 			ctx.restore();
 		}
 		
@@ -1143,27 +1145,27 @@ try{
 		alert('The target value should be between 0 and n.');
 	else{
 		if (binomialequal.checked){
-			binomialanswer.innerHTML='Probability='+binompdf(n,p,x).toFixed(precision);
+			binomialanswer.innerHTML='Probability='+binompdf(n,p,x).TOFIXED(precision);
 			a=x;
 			b=x;
 			}
 		else if (binomiallt.checked){
-			binomialanswer.innerHTML='Probability='+binomcdf(n,p,x-1).toFixed(precision);
+			binomialanswer.innerHTML='Probability='+binomcdf(n,p,x-1).TOFIXED(precision);
 			a=0;
 			b=x-1;
 			}
 		else if (binomialleq.checked){
-			binomialanswer.innerHTML='Probability='+binomcdf(n,p,x).toFixed(precision);
+			binomialanswer.innerHTML='Probability='+binomcdf(n,p,x).TOFIXED(precision);
 			a=0;
 			b=x;
 			}
 		else if (binomialgt.checked){
-			binomialanswer.innerHTML='Probability='+(1-binomcdf(n,p,x)).toFixed(precision);
+			binomialanswer.innerHTML='Probability='+(1-binomcdf(n,p,x)).TOFIXED(precision);
 			a=x+1;
 			b=n;
 			}
 		else if (binomialgeq.checked){
-			binomialanswer.innerHTML='Probability='+(1-binomcdf(n,p,x-1)).toFixed(precision);
+			binomialanswer.innerHTML='Probability='+(1-binomcdf(n,p,x-1)).TOFIXED(precision);
 			a=x;
 			b=n;
 			}
@@ -1215,27 +1217,27 @@ try{
 		alert('The target value of x should be greater than or equal to 0.');
 	else{
 		if (poissonequal.checked){
-			poissonanswer.innerHTML='Probability='+poissonpdf(m,x).toFixed(precision);
+			poissonanswer.innerHTML='Probability='+poissonpdf(m,x).TOFIXED(precision);
 			a=x;
 			b=x;
 			}
 		else if (poissonlt.checked){
-			poissonanswer.innerHTML='Probability='+poissoncdf(m,x-1).toFixed(precision);
+			poissonanswer.innerHTML='Probability='+poissoncdf(m,x-1).TOFIXED(precision);
 			a=0;
 			b=x-1;
 			}
 		else if (poissonleq.checked){
-			poissonanswer.innerHTML='Probability='+poissoncdf(m,x).toFixed(precision);
+			poissonanswer.innerHTML='Probability='+poissoncdf(m,x).TOFIXED(precision);
 			a=0;
 			b=x;
 			}
 		else if (poissongt.checked){
-			poissonanswer.innerHTML='Probability='+(1-poissoncdf(m,x)).toFixed(precision);
+			poissonanswer.innerHTML='Probability='+(1-poissoncdf(m,x)).TOFIXED(precision);
 			a=x+1;
 			b=n;
 			}
 		else if (poissongeq.checked){
-			poissonanswer.innerHTML='Probability='+(1-poissoncdf(m,x-1)).toFixed(precision);
+			poissonanswer.innerHTML='Probability='+(1-poissoncdf(m,x-1)).TOFIXED(precision);
 			a=x;
 			b=n;
 			}
@@ -1287,7 +1289,7 @@ try{
 	else{
 		var z1=(a-m)/s;
 		var z2=(b-m)/s;
-		normalanswer.innerHTML='Probability='+normalcdf(z1,z2).toFixed(precision);
+		normalanswer.innerHTML='Probability='+normalcdf(z1,z2).TOFIXED(precision);
 
 		var ctx=normalcanvas.getContext('2d');
 		var w=normalcanvas.width;
@@ -1341,9 +1343,9 @@ try{
 			a=(1-a)/2;
 		var z=invnorm(a);
 		if  (invnormmiddle.checked)
-			invnormanswer.innerHTML='z='+'&pm;'+abs(z).toFixed(precision);
+			invnormanswer.innerHTML='z='+'&pm;'+abs(z).TOFIXED(precision);
 		else
-			invnormanswer.innerHTML='z='+z.toFixed(precision);
+			invnormanswer.innerHTML='z='+z.TOFIXED(precision);
 		var ctx=invnormalcanvas.getContext('2d');
 		var w=invnormalcanvas.width;
 		var h=invnormalcanvas.height;
@@ -1408,7 +1410,7 @@ try{
 		var n=listn[thelist];
 		var t=abs(invt(0.5*(1-cl), n-1));
 		var e=t*s/sqrt(n);
-		tintervaldanswer.innerHTML=(m-e).toFixed(precision)+' &lt; &mu; &lt; '+(m+e).toFixed(precision)+'<br><font style="text-decoration: overline;">X</font>='+m.toFixed(precision)+'<br>E='+e.toFixed(precision);
+		tintervaldanswer.innerHTML=(m-e).TOFIXED(precision)+' &lt; &mu; &lt; '+(m+e).TOFIXED(precision)+'<br><font style="text-decoration: overline;">X</font>='+m.TOFIXED(precision)+'<br>E='+e.TOFIXED(precision);
 	tintervaldanswer.style.display='block';
 	}
 }
@@ -1434,7 +1436,7 @@ try{
 		var z=abs(invnorm((1-cl)/2));
 		var p=x/n;
 		var e=z*sqrt(p*(1-p)/n);
-		pintervalanswer.innerHTML=(p-e).toFixed(precision)+' &lt; p &lt; '+(p+e).toFixed(precision)+'<br>E='+e.toFixed(precision);
+		pintervalanswer.innerHTML=(p-e).TOFIXED(precision)+' &lt; p &lt; '+(p+e).TOFIXED(precision)+'<br>E='+e.TOFIXED(precision);
 		pintervalanswer.style.display='block';
 	}
 }
@@ -1458,7 +1460,7 @@ try{
 	else{
 		var t=abs(invt(0.5*(1-cl), n-1));
 		var e=t*s/sqrt(n);
-		tintervalssanswer.innerHTML=(m-e).toFixed(precision)+' &lt; &mu; &lt; '+(m+e).toFixed(precision)+'<br>E='+e.toFixed(precision);
+		tintervalssanswer.innerHTML=(m-e).TOFIXED(precision)+' &lt; &mu; &lt; '+(m+e).TOFIXED(precision)+'<br>E='+e.TOFIXED(precision);
 		tintervalssanswer.style.display='block';
 	}
 }
@@ -1496,7 +1498,7 @@ try{
 			z1=-9;
 			z2=-abs(z);
 			}
-		ttestssanswer.innerHTML='P='+p.toFixed(precision)+'<br>t='+z.toFixed(precision);
+		ttestssanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>t='+z.TOFIXED(precision);
 
 		var i;
 		var ctx=ttestsscanvas.getContext('2d');
@@ -1573,7 +1575,7 @@ try{
 				z1=-9;
 				z2=-abs(z);
 				}
-			ttestdanswer.innerHTML='P='+p.toFixed(precision)+'<br>t='+z.toFixed(precision);
+			ttestdanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>t='+z.TOFIXED(precision);
 			var can=ttestdcanvas;
 			var ctx=can.getContext('2d');
 			var w=can.width;
@@ -1646,7 +1648,7 @@ try{
 			p=1-tcdf(z,n-1);
 		else
 			p=2*tcdf(-abs(z),n-1);
-		t2testssanswer.innerHTML='P='+p.toFixed(precision)+'<br>t='+z.toFixed(precision);
+		t2testssanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>t='+z.TOFIXED(precision);
 		t2testssanswer.style.display='block';
 	}
 }
@@ -1688,7 +1690,7 @@ try{
 			p=1-tcdf(z,n-1);
 		else
 			p=2*tcdf(-abs(z),n-1);
-		t2testdanswer.innerHTML='P='+p.toFixed(precision)+'<br>t='+z.toFixed(precision);
+		t2testdanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>t='+z.TOFIXED(precision);
 		t2testdanswer.style.display='block';
 	}
 }
@@ -1736,7 +1738,7 @@ try{
 			z1=-9;
 			z2=-abs(z);
 			}
-		mpanswer.innerHTML='P='+p.toFixed(precision)+'<br>t='+z.toFixed(precision);
+		mpanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>t='+z.TOFIXED(precision);
 		mpanswer.style.display='block';
 	}
 }
@@ -1778,7 +1780,7 @@ try{
 			mserror=sserror/(N-k);
 			F=mstreatment/mserror;
 			P=1-fcdf(F,k-1,N-k);
-			anovaanswer.innerHTML='P='+P.toFixed(precision)+'<br>F='+F.toFixed(precision);
+			anovaanswer.innerHTML='P='+P.TOFIXED(precision)+'<br>F='+F.TOFIXED(precision);
 			anovaanswer.style.display='block';
 		}
 	}
@@ -1793,13 +1795,13 @@ try{
 	var n=eval(propn.value);
 	var x=round(eval(propx.value));
 	if (!(n>0)) alert ('The sample size should be a positive integer.');
-	else if (!(x>0)) alert('The number of successes should be a positive integer.');
+//	else if (!(x>0)) alert('The number of successes should be a positive integer.');
 	else{
 		var phat=x/n;
 
 		var m=phat;
 		var hm=eval(propcp.value);
-		if (!(hm>0)) alert('The claimed proportion should be between 0 and 1.');
+		if (!((hm>0)&&(hm<1))) alert('The claimed proportion should be between 0 and 1.');
 		else{
 			var p=hm;
 			var s=sqrt(p*(1-p));
@@ -1821,7 +1823,7 @@ try{
 				z1=-9;
 				z2=-abs(z);
 				}
-			propanswer.innerHTML='P='+p.toFixed(precision)+'<br>z='+z.toFixed(precision);
+			propanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>z='+z.TOFIXED(precision);
 			var i;
 			var can=propcanvas;
 			var ctx=can.getContext('2d');
@@ -1906,7 +1908,7 @@ try{
 			z1=-9;
 			z2=-abs(z);
 			}
-		twopropanswer.innerHTML='P='+p.toFixed(precision)+'<br>z='+z.toFixed(precision);
+		twopropanswer.innerHTML='P='+p.TOFIXED(precision)+'<br>z='+z.TOFIXED(precision);
 		twopropanswer.style.display='block';
 	}
 }
@@ -1941,7 +1943,7 @@ try{
 			findListStats(l);
 			chi2=listsum[l];
 			P=1-chi2cdf(chi2,listn[i]-1);
-			chianswer.innerHTML='P='+P.toFixed(precision)+'<br>&chi;<sup>2</sup>='+chi2.toFixed(precision);
+			chianswer.innerHTML='P='+P.TOFIXED(precision)+'<br>&chi;<sup>2</sup>='+chi2.TOFIXED(precision);
 			chianswer.style.display='block';
 		}
 	}
@@ -2004,7 +2006,7 @@ try{
 			chi2=listsum[l0];
 
 			P=1-chi2cdf(chi2,(nr-1)*(nc-1));
-			contingencyanswer.innerHTML='P='+P.toFixed(precision)+'<br>&chi;<sup>2</sup>='+chi2.toFixed(precision);
+			contingencyanswer.innerHTML='P='+P.TOFIXED(precision)+'<br>&chi;<sup>2</sup>='+chi2.TOFIXED(precision);
 			contingencyanswer.style.display='block';
 		}
 	}
@@ -2045,7 +2047,7 @@ try{
 		t=r/Math.sqrt((1-r*r)/(n-2));
 		P=2*(1-tcdf(Math.abs(t),n-2));
 		
-		coranswer.innerHTML='y=mx+b<br>m='+m.toFixed(precision)+'<br>b='+b.toFixed(precision)+'<br>t='+t.toFixed(precision)+'<br>P='+P.toFixed(precision)+'<br>r='+r.toFixed(precision);
+		coranswer.innerHTML='y=mx+b<br>m='+m.TOFIXED(precision)+'<br>b='+b.TOFIXED(precision)+'<br>t='+t.TOFIXED(precision)+'<br>P='+P.TOFIXED(precision)+'<br>r='+r.TOFIXED(precision);
 
 		var xlist=l1;
 		var ylist=l2;
