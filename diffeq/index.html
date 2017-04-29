@@ -122,6 +122,7 @@ function cacheMath(){
 	for (var i in aMathFunctions){
 		window[aMathFunctions[i]] = Math[aMathFunctions[i]];
 	}
+	Number.prototype.TOFIXED=function(n){return(Number(Math.round(this+'e'+n)+'e-'+n));}
 }
 function fixExponentsOld(s){
 	var a=s;
@@ -236,14 +237,14 @@ function drawAxis(){
 		graphContext.moveTo(scaleX(x), scaleY(minY));
 		graphContext.lineTo(scaleX(x), scaleY(maxY));
 		if ((scaleX(x) > 20) && (scaleX(x)<width-20))
-			graphContext.fillText(x.toFixed(2), scaleX(x),scaleY(minY)-15);
+			graphContext.fillText(x.TOFIXED(2), scaleX(x),scaleY(minY)-15);
 		}
 	for (y=-10*dy;y<=minY;y=y+dy);
 	for (;y<=maxY;y+=dy)	{
 		graphContext.moveTo(scaleX(minX), scaleY(y));
 		graphContext.lineTo(scaleX(maxX), scaleY(y));
 		if ((scaleY(y) > 20) && (scaleY(y)<height-20))
-			graphContext.fillText(y.toFixed(2), scaleX(minX)+10,scaleY(y));
+			graphContext.fillText(y.TOFIXED(2), scaleX(minX)+10,scaleY(y));
 		}
 	graphContext.stroke();
 	graphContext.beginPath();
@@ -260,12 +261,12 @@ function clearGraph(){
 	drawAxis();
 }
 function init(){
+	cacheMath(); alert ((1.005).TOFIXED(2));
 	graphContext=graph.getContext('2d');
 	graphContext.fillStyle='white';
 	width=graph.width;
 	height=graph.height;
 	clearGraph();
-	cacheMath();
 }
 function showArrow(x1,y1,x2,y2){
 	var X=(x1+x2)/2;
@@ -319,12 +320,12 @@ var theColors=[
 
 function init(){
 	//graphing stuff
+	cacheMath();
 	graphContext=graph.getContext('2d');
 	graphContext.fillStyle='white';
 	width=graph.width;
 	height=graph.height;
 	clearGraph();
-	cacheMath();
 	
 	theEquations = document.getElementsByClassName('equation');
 	dxdt = document.getElementsByClassName('dxdt');
@@ -412,7 +413,7 @@ function setupT(){
 	T[0]=eval(fixExponents(tmin.value));
 	max=eval(fixExponents(tmax.value));
 	i=0;
-	while(eval(T[i].toFixed(8))<eval(max.toFixed(8))){
+	while(eval(T[i].TOFIXED(8))<eval(max.TOFIXED(8))){
 		i++;		
 		T[i]=T[i-1]+DT;
 	}
@@ -432,15 +433,15 @@ function showTable(){
 			s+='<td  colspan='+NUMCONDITIONS+' style="color: '+theColors[i][0]+';">x<sub>'+i+'</sub></td>';
 	s+='</tr>';
 	for (j=0;j<T.length;j++){
-		s+='<tr><td>'+T[j].toFixed(8)+'</td>';
+		s+='<tr><td>'+T[j].TOFIXED(8)+'</td>';
 		if (eulerMethod.checked==true)
 			for (i=1;i<=numEq;i++)
 			for (c=0;c<NUMCONDITIONS;c++)
-				s+='<td style="color: '+theColors[i][c]+';">'+EULEROUTPUT[i][c][j].toFixed(8)+'</td>';		
+				s+='<td style="color: '+theColors[i][c]+';">'+EULEROUTPUT[i][c][j].TOFIXED(8)+'</td>';		
 		if (rk4Method.checked==true)
 			for (i=1;i<=numEq;i++)
 			for (c=0;c<NUMCONDITIONS;c++)
-				s+='<td style="color: '+theColors[i][c]+';">'+RK4OUTPUT[i][c][j].toFixed(8)+'</td>';		
+				s+='<td style="color: '+theColors[i][c]+';">'+RK4OUTPUT[i][c][j].TOFIXED(8)+'</td>';		
 	}
 	s+='</tr>';
 	dataTable.innerHTML=s;
