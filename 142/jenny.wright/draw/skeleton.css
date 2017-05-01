@@ -1,0 +1,45 @@
+div{
+
+  margin:  10px;
+}
+#wrapper{
+
+}
+#titleBar{
+
+}
+#mainNavigation{
+
+}
+#content{
+}
+#secondaryNavigation{
+
+}
+div.pensize{
+  width:20px;
+  background:black;
+  display:inline-block;
+}
+div.one{
+  height:1px;
+}
+div.five{
+  height:5px;
+}
+div.six{
+  height:6px;
+}
+div.seven{
+  height:7px;
+}
+div.red{
+  background:red;
+
+}
+div.blue{
+  background:blue;
+}
+div.pink{
+  background: pink;
+}

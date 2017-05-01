@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <title> Noise Symmetry</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="spork.js"></script>
+  <script>
+
+  var R;
+   function mark(x,y,r){
+     var vx,vy;
+     save();
+     ang=(noise(abs(x/width),abs(y/height))*200);
+     vx=15*COS(ang)
+     vy=60*SIN(ang)
+     symmetricLine(x,y,(x+vx),(y+vy));
+       restore();
+     }
+   function symmetricLine(x1,y1,x2,y2){
+     var i;
+     save();
+     for(i=0;i<30;i=i+1){
+     line(x1,y1,x2,y2);
+     line(y1,x1,y2,x2);
+     rotate(150);
+   }
+     restore();
+   }
+
+   function setup(){
+     translate(width/2,height/2);
+     setupNoise(10);
+     R=width/3;
+
+
+   }
+   function draw(){
+
+
+     var x,y;
+     for(i=0;i<75;i=i+1){
+     x=random()*R;
+     y=random()*R;
+    var choices=['brown','white','blue','magenta'];
+     var colors=choices.random();
+     color(colors);
+     mark(x,y,15);
+     }
+   }
+
+  </script>
+  <style>
+  #noiseSymmetryTab{
+    background: gray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">Symmetry</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href="home.html">Home</a></div>
+        <div class="tab" id="spotsTab"><a href="spots.html">Cow Spots Symmetry</a></div>
+          <div class="tab" id="hairSymmetryTab"><a href="hairsymmetry.html">Hair Symmetry</a></div>
+            <div class="tab" id="noiseSymmetryTab"><a href="noisesymmetry.html">Noise Symmetry</a></div>
+              <div class="tab" id="brownianSymmetryTab"><a href="browniansymmetry.html">Brownian Symmetry</a></div>
+              <div class="tab" id="otherSymmetryTab"><a href="othersymmetry.html">Other Symmetry</a></div>
+</div>
+    <div id="content">
+      <div id="spork"></div>
+
+      <button onclick='startover();'>Start Over</button>
+
+    </div>
+
+  </div>
+</body>
+</html>

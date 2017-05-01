@@ -1,0 +1,25 @@
+div{
+  border: 5px solid transparent;
+
+}
+div{
+
+}
+#wrapper{
+text-align: center;
+}
+#titleBar{
+  font-size: 45pt;
+  border-bottom: 1px solid black;
+  
+}
+#mainNavigation{
+
+}
+#content{
+
+}
+#secondaryNavigation{
+  font-size: 12pt;
+  text-align: right;
+}

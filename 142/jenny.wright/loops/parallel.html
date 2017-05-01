@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lines</title>
+  <link rel="stylesheet" href="forloops.css">
+  <style>
+  #parallelTab{background: lightgray;}
+</style>
+  <script src="spork.js"></script>
+  <script>
+
+
+  function setup(){
+
+  }
+  function draw(){
+    //y value for the line
+    var y,h,x;
+
+
+
+    for (y=-20;y<height;y=y+10){
+      //draw a line from x=0 to x=width
+      line(0,y,width,y);
+
+
+
+   for (h=1.5;h<height;h=h+10){
+      //draw a line from x=0 to x=width
+     line(0,h,width,h);
+
+      circle(200,200,100,100);
+      fillcolor("white");
+     fill();}
+
+    //
+
+    clip();
+
+
+
+    //x will take on values 20, 60, 100...
+
+      //for each value of x, y takes on 20, 60...
+
+    for (y=1;y<height;y=y+10){
+       line(y,0,y,height);
+      fill();}}}
+
+
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id="titleBar">Parallel Lines</div>
+    
+
+
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">SECONDARY NAVIGATION</div>
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Cow Spots Symmetry</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="spork.js"></script>
+  <script>
+  //COW SPOTS
+function setup(){
+setupNoise(65);
+translate(200,200);
+}
+function symmetricPoint(x,y){
+var i;
+for (i=0;i<4;i=i+1){
+fillrect(x,y,1,1)
+fillrect(y,x,1,1)
+rotate(90);
+save();
+restore();
+}}
+function draw(){
+
+var x,y;
+for (x=0;x<=width/2;x=x+1)
+for (y=0;y<=x;y=y+1){
+if (noise(x/width,y/height)<0)
+fillcolor('black');
+else
+fillcolor('pink');
+symmetricPoint(x,y);
+}
+
+}
+
+  </script>
+  <style>
+  #cowSpotsSymmetryTab{
+    background: gray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">Symmetry</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href="home.html">Home</a></div>
+        <div class="tab" id="spotsTab"><a href="spots.html">Cow Spots Symmetry</a></div>
+        <div class="tab" id="hairSymmetryTab"><a href="hairsymmetry.html">Hair Symmetry</a></div>
+          <div class="tab" id="noiseSymmetryTab"><a href="noisesymmetry.html">Noise Symmetry</a></div>
+            <div class="tab" id="brownianSymmetryTab"><a href="browniansymmetry.html">Brownian Symmetry</a></div>
+            <div class="tab" id="otherSymmetryTab"><a href="othersymmetry.html">Other Symmetry</a></div>
+</div>
+    <div id="content">
+      <div id="spork"></div>
+
+      <button onclick='startover();'>Start Over</button>
+
+    </div>
+
+  </div>
+</body>
+</html>

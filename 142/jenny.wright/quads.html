@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href='style.css'/>
+  <style>
+  canvas{
+    max-width: 80%;
+  }
+  img{
+    max-width: 80%;
+  }
+  </style>
+  <script src='spork.js'></script>
+  <script>
+var R=[];
+var G=[];
+var B=[];
+var A=[];
+
+function setup(){
+size(theImage.width,theImage.height);
+drawImage(theImage,width/2,height/2,width,height);
+copyImageData(R,G,B,A);
+clear();
+color(0,0,0,0);
+loop();
+
+  }
+  function draw(){
+    save();
+var x1=floor(random()*width)
+var x2=floor(random()*width)
+var x3=floor(random()*width)
+var x4=floor(random()*width)
+r=300;
+var y1=floor(random()*height)
+var y2=floor(random()*height)
+var y3=floor(random()*height)
+var y4=floor(random()*height)
+var cx=floor(random()*width)
+var cy=floor(random()*height)
+quad(x1,y1,x2,y2,x3,y3,x4,y4)
+clip();
+drawImage(theImage,cx,cy,width,height,r);
+restore();
+  }
+  </script>
+</head>
+<body>
+<div id='spork'></div>
+<button onclick='startloop();'>Start</button>
+  <button onclick='stoploop();'>Stop</button>
+  <button onclick='startover();'>Start Over</button>
+  <button onclick='canvasToNewImg();'>Make Image</button>
+<br/>
+  <img src="images/mountains.jpg" id="theImage">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>
+  Motion
+</title>
+<link rel="stylesheet" href="motion.css" />
+<script src="spork.js"></script>
+<script>
+var theColor=
+  ["pink",
+  "lightblue",
+  "magenta",
+  "yellow",
+  "white"]
+
+function setup(){
+timestep(100);
+loop();
+}
+function draw(){
+var x=random()*width;
+var y=random()*height;
+
+circle(x,y,(min(x,y,width-x,height-y)));
+fillcolor(theColor.random());
+fill();
+}
+
+
+</script>
+<style>
+#sotsTab{background: lightgray;}
+</style>
+</head>
+<body>
+  <div id= "wrapper">
+    <div class="tab" id="homeTab"><a href="motion.html">Home</a></div>
+    <div id="titleBar">
+  Spots
+</div>
+<div id="primaryNavigation">
+
+</div>
+<div id="content">
+  <div id="spork"></div>
+  <button onclick='startloop();'>Start</button>
+  <button onclick='stoploop();'>Stop</button>
+  <button onclick='startover();'>Start Over</button>
+</div>
+
+<div id="secondaryNavigation">
+  Jenny Wright | Math 142 | <a href="http://www.cune.edu" target="NEW"> CUNE</a>
+</div>
+  </div>
+</body>
+</html>

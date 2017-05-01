@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hair</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+
+  function setup(){
+  setupNoise(5);
+  loop();
+}
+
+function draw(){
+  var colorChoices=['pink','blue','lightgray','yellow']
+ var colors=colorChoices.random()
+  var x,y
+ x=width*random();
+ y=height*random();
+ color(colors);
+ randomMark(x,y);
+
+}
+
+function randomMark(x,y){
+	var i;
+  	var a;
+for (i=0;i<100;i=i+1){
+ a=noise(abs(x/width),abs(y/height))*360;
+  vx=1*COS(a);
+  vy=1*SIN(a);
+  line(x,y,x+vx,y+vy);
+  x=x+vx;
+  y=y+vy;
+}
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Hair</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a  href="noise.html">Home</a></div>
+
+
+</div>
+    <div id="content">
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+
+    </div>
+
+  </div>
+</body>
+</html>

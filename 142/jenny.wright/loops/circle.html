@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <title>Cute Circle</title>
+  <link rel="stylesheet" href="forloops.css">
+  <style>
+  #circleTab{background: lightgray;}
+</style>
+  <script src="spork.js"></script>
+  <script>
+
+
+
+function draw(){
+  translate(200,200);
+  circle(0,0,200);
+  fillcolor("lightblue");
+  fill();
+
+  circle(0,0,180)
+  fillcolor("orange");
+  fill();
+  circle(0,0,165);
+  fillcolor("white");
+  fill();
+  circle(0,0,160);
+  fillcolor("magenta");
+  fill();
+  fill();
+  circle(0,0,55);
+  fillcolor("lightblue");
+  fill();
+  circle(0,0,45);
+  fillcolor("white");
+  fill();
+  circle(0,0,40);
+  fillcolor("orange");
+  fill();
+
+
+  //variables for the angle to which we will rotate
+  var angle;
+
+  //Let angle take the values 20, 40,... up to 360
+  //Play wth the number 20 here to see the results
+  for (angle=0;angle<360;angle=angle+20){
+    //save the graphics state so that transformations
+    //do not accumulate
+    save();
+
+    //rotate angle
+    rotate(angle);
+
+    //draw our shape pointing straight down
+    circle(0,100,10,185,-10,185);
+    fillcolor("pink");
+    fill();
+
+    circle(0,180,10,200,-10,200);
+    fillcolor("pink");
+    fill();
+
+
+
+    triangle(0,190,10,200,-10,200);
+    fillcolor("magenta");
+    fill();
+
+    triangle(0,190,0,200,-10,200);
+    fillcolor("orange");
+    fill();
+
+
+    line(0,150,20,150,-20,150);
+    circle(0,150,5,185,5,185);
+    fillcolor("lightblue");
+    fill();
+
+    triangle(0,90,10,80,-10,80);
+    fillcolor("lightblue");
+    fill();
+
+    triangle(0,70,15,80,-15,80);
+    fillcolor("orange");
+    fill();
+
+
+    //restore the graphics state to undo transforms
+    restore();
+  }
+
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleBar">Circle</div>
+  
+    <div id="spork"></div>
+  </div>
+  <div id="secondaryNavigation">SECONDARY NAVIGATION</div>
+</div>
+</body>
+</html>
