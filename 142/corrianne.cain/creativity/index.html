@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+  <title>Creativity Project</title>
+  <link rel="stylesheet" href="history.css"/>
+  <script src="spork.js"></script>
+  <script>
+  function treble(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    linewidth(5);
+    color('white');
+  line(0,-100,0,170);
+  arc(0,-50,50,270,90);
+  arc(0,70,70,90,270);
+  arc(0,90,50,230,90);
+  arc(-30,168,30,10,130);
+   restore();
+  }
+  function quarter(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    color('white');
+   circle(200,200,10);
+  fillcolor('white');
+  fill();
+  linewidth(3);
+  line(208,135,208,205);
+  restore();
+  }
+  function half(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    color('white');
+   circle(200,200,10);
+  linewidth(3);
+  line(208,135,208,205);
+  restore();
+  }
+  function eighth(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    color('white');
+  circle(200,200,10);
+  fillcolor('white');
+  fill();
+  circle(251,200,10);
+  fill();
+
+
+  linewidth(3);
+  line(208,135,208,205);
+  line(208,135,259,135);
+  line(259,135,259,205);
+  restore();
+  }
+  function bass(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    linewidth(5);
+    color('white');
+  arc(0,0,70,-90,80);
+  arc(0,-40,30,70,-75);
+  circle(85,-45,5);
+    fillcolor('white');
+  fill();
+  circle(85,-15,5);
+  fill();
+    restore();
+  }
+
+  function words(x,y,r){
+    var thewords=['all','creatures','God','king','lift','up','voice','sing','sing','sing','God','God','God','creatures','creatures','Alleluia','Alleluia','Alleluia','Alleluia','Alleluia','Praise Him','Alleluia'];
+    font('20px Courier');
+    fillcolor('black');
+    filltext(thewords.random(),x,y);
+
+  }
+  function night(x,y,r){
+    var nightcolors=['darkblue','navy','midnightblue','blue']
+    var nightwords=
+    ['silver','moon','softer','gleam'];
+      font('15px Courier');
+    fillcolor(nightcolors.random());
+    filltext(nightwords.random(),x,y);
+  }
+  function morning(x,y,r){
+    var morningcolors=['mediumvioletred','coral','darkorange','tomato','yellow','gold','goldenrod']
+    var morningwords=['burning','sun','golden','beam'];
+    fillcolor(morningcolors.random());
+    filltext(morningwords.random(),x,y);
+  }
+  function decrescendo(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    color('white');
+    line(70,0,200,20);
+    line(200,20,70,20);
+    restore();
+  }
+  function sharp(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    linewidth(7);
+    color('white');
+  line(0,0,-10,80);
+  line(20,0,10,80);
+  line(-30,20,35,20);
+  line(-30,60,35,60);
+    restore();
+  }
+  function crescendo(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    color('white');
+    line(0,0,100,-10);
+  line(0,0,100,10);
+    restore();
+  }
+
+  function setup(){
+    size(700,400);
+    timestep(3000);
+    loop();
+    background('lightgray');
+  }
+  function draw(){
+    var x,y,r;
+    x=random()*width;
+    y=random()*height;
+     r=30;
+    treble(x,y,r);
+    x=random()*width;
+    y=random()*height;
+     r=50;
+    eighth(x,y,r);
+      x=random()*width;
+    y=random()*height;
+     r=50;
+    quarter(x,y,r);
+      x=random()*width;
+    y=random()*height;
+     r=30;
+    bass(x,y,r);
+     x=random()*width;
+    y=random()*height;
+  	r=30;
+    words(x,y,r);
+    x=random()*width;
+    y=random()*height;
+  	r=30;
+  	night(x,y,r);
+    x=random()*width;
+    y=random()*height;
+  	r=30;
+    morning(x,y,r);
+    x=random()*width;
+    y=random()*height;
+    r=50
+    decrescendo(x,y,r);
+    x=random()*width;
+    y=random()*width;
+    r=50
+    half(x,y,r);
+    x=random()*width;
+    y=random()*width;
+    r=50;
+    sharp(x,y,r);
+    x=random()*width;
+    y=random()*height;
+    r=20;
+    crescendo(x,y,r);
+  }
+
+  </script>
+  <style>
+  </style>
+</head>
+<body>
+<div id="titleDiv">
+  Creativity Project</div>
+    <div id="content">This semester, I have been able to grow in many realms. My knowledge of the mathematics involved in coding and art has increased, but also my passion, expertise, and experience in music. This project culminates my experiences in both realms. Presented is a piece of algorithmic art that mathematically incorporates randomness and loops, many lines that create symbols, and arrays that involve random colors. Artistically, music is represented through warm and cool colors associated with the lyrics and the beauty of randomness. Musically, this piece resembles a song sung by the A Cappella choir this year. The lyrics can be seen appearing as the piece progresses. In addition, just as the quarter, eighth, half notes and other musical symbols appear, something musical appears. As sung in choir, diverse people with different backgrounds, experiences, and voices join together as one to praise the Lord.
+</div>
+      <div id="spork"></div>
+    </div>
+  </div>
+  <div id="secondaryNavigation">
+  Corrianne Cain | Math 142 | <a href="http://www.cune.edu"target="NEW">CUNE</a>
+  </div>
+</body>
+</html>

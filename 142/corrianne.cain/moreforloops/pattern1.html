@@ -1,0 +1,72 @@
+  <script>
+  var theColors=['lightcoral','salmon','aqua','turquoise', 'coral','cyan','lightsteelblue','darkturquoise','lightcoral','lightsalmon','skyblue','lightcoral'];
+  var theColor=['midnightblue','darkblue','navy','steelblue','slateblue','darkslateblue']
+  var theColorz=['azure','lightsteelblue','powderblue','white']
+  function dot(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    circle(0,0,35);
+    fillcolor(theColor.random());
+    fill();
+    restore();
+  }
+  function square(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    rect(-50,-50,100,100);
+    fillcolor(theColors.random());
+    fill();
+    restore();
+  }
+  function dot2(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    circle(0,0,15);
+    fillcolor(theColorz.random());
+    fill();
+    restore();
+  }
+  function circlex(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    color('white');
+    linewidth(5);
+    circle(0,0,45);
+
+  }
+
+  function draw(){
+    save();
+    var x,y;
+    for(x=15;x<width;x=x+25)
+      for(y=15;y<height;y=y+25){
+        square(x,y,50);
+      }
+    restore();
+    save();
+    var x,y;
+    for (x=15;x<width;x=x+25)
+      for (y=15;y<height;y=y+25){
+        dot(x,y,50);
+      }
+    restore();
+    save();
+    var x,y;
+   for(x=15;x<width;x=x+25)
+      for(y=15;y<height;y=y+25){
+        dot2(x,y,50)
+      }
+        restore();
+    save();
+    var x,y;
+    for(x=15;x<width;x=x+25)
+      for(y=15;y<height;y=y+25){
+        circlex(x,y,50)
+    restore();
+      }
+  }
+  </script>

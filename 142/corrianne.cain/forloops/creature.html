@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <title>Creature Grid</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function bee(x,y,r){
+    save ();
+    translate(x,y);
+    scale(r/200);
+
+   //wings
+  ellipse(-2,80,-150,50);
+  fillcolor('black');
+  fill();
+  ellipse(-2,-10,-150,50)
+  fillcolor('black');
+  fill();
+
+  //head
+  linewidth(1);
+  circle(1,-130,30);
+  fill();
+
+  //antennae
+  line(2,-150,20,-175);
+  line(0,-150,-20,-175);
+  circle(25,-178,5);
+  fill();
+  circle(-25,-178,5);
+  fill();
+
+  //body
+  translate(0,0)
+  ellipse(0,40,70,160);
+  fillcolor(255,255,0);
+  fill();
+  linewidth(40);
+
+  //stripes
+  line(-55,40,55,40);
+  line(-40,-50,40,-50);
+  line(-40,125,40,125);
+  restore();
+  }
+  function setup(){
+  }
+  function draw(){
+    var x,y;
+
+    for (x=40;x<width;x=x+80)
+      for (y=40;y<height;y=y+80){
+        bee(x,y,40);
+      }
+    bee(200,200,120)
+  }
+  </script>
+</head>
+<body>
+    <div id="titleBar">Creature Grid</div>
+    <div id="content">
+      <div id="spork"></div>
+      <div id="text"><p>I created a bee the first week of class, but now am able to repeat the creature into a five-by-five grid with emphasis on the middle bee.
+</p>
+ <p>Click<a href="index.html"> here</a> to go back.</p>
+
+  </div>
+</body>
+</html>

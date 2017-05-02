@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title>More Fun with For Loops</title>
+  <link rel="stylesheet" href="history.css"/>
+  <script src="spork.js"></script>
+  <script src='circles.js'></script>
+  <script>
+  var theFunctions=[corrianne, javier, zachary,cassie];
+
+  function setup(){
+    size(1000,500);
+    timestep(700);
+    loop();
+  }
+  function draw(){
+    var x,y,r;
+    var f;
+    x=width*random();
+    y=height*random();
+ r=min(x,y,width-x,height-y);
+ f=theFunctions.random();
+    f(x,y,r*random()+20);
+  }
+  </script>
+  <style>
+  #classCirclesTab{
+    background: gray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">More Fun with For Loops</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+        <div class="tab" id="circleGridTab"><a href="circlegrid.html">Circle Grid</a></div>
+          <div class="tab" id="randomCreatureSizeTab"><a href="randomcreaturesize.html">Random Creature Size</a></div>
+            <div class="tab" id="randomCreatureColorTab"><a href="randomcreaturecolor.html">Random Creature Color</a></div>
+              <div class="tab" id="randomCreatureLocationTab"><a href="randomcreaturelocation.html">Random Creature Location</a></div>
+              <div class="tab" id="classCirclesTab"><a href="classcircles.html">Class Circles</a></div>
+              <div class="tab" id="geometricPattern1Tab"><a href="geometricpatternone.html">Geometric Pattern 1</a></div>
+              <div class="tab" id="geometricPattern2Tab"><a href="geometricpatterntwo.html">Geometric Pattern 2</a></div>
+</div>
+    <div id="content">Here, you will see a piece of art created by the collaboration of the class.  Three other students' circle patterns, along with mine, can be found in random sizes at random locations.
+</div>
+      <div id="spork"></div>
+    </div>
+  </div>
+</body>
+</html>

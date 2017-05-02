@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>Fuzz Ball</title>
+  <link rel="stylesheet" href="history.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+  //start in middle of screen
+  translate(width/2,height/2);
+  loop();
+}
+function draw(){
+  var colors=['red','orange','yellow','green','lime','blue','purple','violet','lilac','navy','magenta'];
+  var x,y;		//coordinates
+  var vx,vy;	//velocity
+  var angle;	//angle/direction
+  var ax,ay;	//acceleration,
+  var i;		//index
+
+  var choices=colors.random();
+
+  color(choices);
+  //start at center
+  x=0;
+  y=0;
+
+  //0 velocity
+  vx=0;
+  vy=0;
+
+  //0 acceleration
+  ax=0;
+  ay=0;
+
+  //draw 20 steps of path
+  for (i=0;i<20;i++){
+    line(x,y,x+vx,y+vy);
+
+    //update position
+    x=x+vx;
+    y=y+vy;
+
+    //update acceleration
+    ax=random();
+    ay=5*(random()-0.7);
+
+    //update velocity
+    vx=vx+ax;
+    vy=vy+ay;
+
+    //update rotation
+    rotate (20);
+
+  }
+}
+  </script>
+  <style>
+  #fuzzBallTab{
+    background: gray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">Motion</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+        <div class="tab" id="fuzzBallTab"><a href="fuzzball.html">Fuzz Ball</a></div>
+          <div class="tab" id="creatureGravityTab"><a href="creaturegravity.html">Creature</a></div>
+            <div class="tab" id="spotsTab"><a href="spots.html">Spots</a></div>
+              <div class="tab" id="brownianTab"><a href="brownian.html">Brownian</a></div>
+              <div class="tab" id="randomMarksTab"><a href="randommarks.html">Random Marks</a></div>
+
+  </divs>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <p>This is a fuzz ball function, but the rotation, acceleration, and velocity were modified to create an image that appears to be like a firework or tie-dye.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

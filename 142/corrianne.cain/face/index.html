@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<script src="spork.js"></script>
+<script>
+translate(200,200);
+
+    //wings
+    ellipse(-2,80,-150,50);
+    fillcolor('black');
+    fill();
+    ellipse(-2,-10,-150,50)
+    fillcolor('black');
+    fill();
+
+    //head
+    linewidth(1);
+    circle(1,-130,30);
+    fill();
+
+    //antennae
+    line(2,-150,20,-175);
+    line(0,-150,-20,-175);
+    circle(25,-178,5);
+    fill();
+    circle(-25,-178,5);
+    fill();
+
+    //body
+    translate(0,0)
+    ellipse(0,40,70,160);
+    fillcolor(255,255,0);
+    fill();
+    linewidth(40);
+
+    //stripes
+    line(-55,40,55,40);
+    line(-40,-50,40,-50);
+    line(-40,125,40,125);
+
+    function bee(x,y,r){
+      save ();
+      //set center and radius
+      translate(x,y);
+      scale(r/200);
+
+     //wings
+    ellipse(-2,80,-150,50);
+    fillcolor('black');
+    fill();
+    ellipse(-2,-10,-150,50)
+    fillcolor('black');
+    fill();
+
+    //head
+    linewidth(1);
+    circle(1,-130,30);
+    fill();
+
+    //antennae
+    line(2,-150,20,-175);
+    line(0,-150,-20,-175);
+    circle(25,-178,5);
+    fill();
+    circle(-25,-178,5);
+    fill();
+
+    //body
+    translate(0,0)
+    ellipse(0,40,70,160);
+    fillcolor(255,255,0);
+    fill();
+    linewidth(40);
+
+    //stripes
+    line(-55,40,55,40);
+    line(-40,-50,40,-50);
+    line(-40,125,40,125);
+    restore();
+    }
+
+
+    function setup(){
+
+    size(600,400)
+    }
+
+    function draw(){
+      bee(300,100,100)
+    bee(10,20,170)
+    bee(350,300,20)
+    bee(100,250,40)
+
+    }
+</script>
+</head>
+<body>
+<div id ="spork">
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <title>Noise Symmetry</title>
+  <link rel="stylesheet" href="history.css">
+  <script src="spork.js"></script>
+  <script>
+  var R;
+  function mark(x,y,r){
+    var vx,vy;
+    save();
+    ang=(noise(abs(x/width),abs(y/height))*170);
+    vx=20*COS(ang)
+    vy=10*SIN(ang)
+    symmetricLine(x,y,(x+vx),(y+vy));
+      restore();
+    }
+  function symmetricLine(x1,y1,x2,y2){
+    var i;
+    save();
+    for(i=0;i<10;i=i+1){
+    line(x1,y1,x2,y2);
+    line(y1,x1,y2,x2);
+    rotate(36);
+  }
+    restore();
+  }
+
+  function setup(){
+    translate(width/2,height/2);
+    setupNoise(5);
+    R=width/3;
+  }
+  function draw(){
+
+
+    var x,y;
+    for(i=0;i<100;i=i+1){
+    x=random()*R;
+    y=random()*R;
+   var choices=['aqua','aquamarine','blue','blueviolet','chartreuse','coral','cornflowerblue','crimson','cyan','darkblue','darkmagenta','darkturquoise','darkviolet','deeppink','deepskyblue','dodgerblue','fuchsia','greenyellow','hotpink','indigo','lawngreen','lightblue','lightcoral','lightcyan','lightgreen','lightpink','lightsalmon','lightseagreen','lightskyblue','lime','limegreen','magenta','mediumbluee','mediumorchid','mediumpurple','mediumslateblue','mediumspringgreen','mediumturquoise','mediumvioletred','orchid','palegoldenrod','palegreen','paleturquoise','palevioletred','pink','plum','powderblue','purple','red','royalblue','salmon','skyblue','slateblue','springgreen','tomato','turquoise','violet','yellow','yellowgreen'];
+    var colors=choices.random();
+    color(colors);
+    mark(x,y,5);
+    }
+  }
+  </script>
+  <style>
+  #noiseSymmetryTab{
+    background: gray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">Symmetry</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+        <div class="tab" id="cowSpotsSymmetryTab"><a href="cowspotssymmetry.html">Cow Spots Symmetry</a></div>
+          <div class="tab" id="hairSymmetryTab"><a href="hairsymmetry.html">Hair Symmetry</a></div>
+            <div class="tab" id="octagonSymmetryTab"><a href="octagonsymmetry.html">Octagon Symmetry</a></div>
+              <div class="tab" id="brownianSymmetryTab"><a href="browniansymmetry.html">Brownian Symmetry</a></div>
+              <div class="tab" id="noiseSymmetryTab"><a href="noisesymmetry.html">Noise Symmetry</a></div>
+</div>
+    <div id="content">
+      <div id="spork"></div>
+    
+      <button onclick='startover();'>Start Over</button>
+      <p>This image features noise lines, as noticeable through the slight curved nature of the lines.</p>
+    </div>
+
+  </div>
+</body>
+</html>

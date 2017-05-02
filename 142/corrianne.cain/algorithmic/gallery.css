@@ -1,0 +1,126 @@
+#galleryimage{
+width:80%;
+margin: auto;
+}
+
+#mainNavigation{
+font-size: 12px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+#content{
+width:70%;
+margin:auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+button.thumb{
+  width:120px;
+  height:120px;
+  border:1px solid black;
+  border-radius: 0px;
+  background:slategray;
+  margin:7px;
+}
+img.thumb{
+  width:100px;
+  height:100px;
+}
+#gallery{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:rgba(119,136,153,0.97);
+  display:none;
+}
+#close{
+  position:fixed;
+  top:0px;
+  right:0px;
+  font-size: 40px;
+  color:white;
+  background:none;
+  border:none;
+  outline:none;
+}
+#caption{
+
+}
+#photoDiv{
+  display: table-cell;
+  vertical-align: middle;
+  text-align:center;
+}
+#photo{
+  max-width:70%;
+  max-height:70%;
+
+}
+#rightButton{
+  position:fixed;
+  right:0px;
+  top:0px;
+  height:100%;
+  width:45%;
+  border:none;
+  background:none;
+  outline:none;
+  font-size:40px;
+  color:white;
+  text-align:right;
+
+}
+#leftButton{
+  position:fixed;
+  left:0px;
+  top:0px;
+  height:100%;
+  width:45%;
+  border:none;
+  background:none;
+  outline:none;
+  font-size:40px;
+  color:white;
+  text-align:left;
+}
+#secondaryNavigation{
+
+}
+body{
+  background-color:black;
+}
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin:auto;
+  border-radius:10px;
+  overflow: hidden;
+}
+#titleDiv{
+  background-color: gray;
+  color: white;
+  font-size: 64px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+#primaryNavigation{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+p.ref{
+margin:30px;
+  text-indent: -30px;
+}
+img.smallCenter{
+  height:300px;
+  display:block;
+  margin:auto;
+}
+#secondaryNavigation{
+text-align: right;
+border-top: 1px solid lightgray;
+font-size: 12px;
+padding-right: 10px;
+clear: both
+}

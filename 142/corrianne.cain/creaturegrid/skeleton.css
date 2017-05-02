@@ -1,0 +1,24 @@
+body{
+  background-color: slategrey;
+}
+div{
+  
+}
+#wrapper{
+text-align: center
+}
+#titleBar{
+  background-color: lightsteelblue;
+  color: white;
+  font-size: 64px;
+  padding: 10px;
+}
+#mainNavigation{
+
+}
+#content{
+
+}
+#secondaryNavigation{
+
+}

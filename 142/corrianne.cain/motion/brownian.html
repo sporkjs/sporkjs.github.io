@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>Brownian</title>
+  <link rel="stylesheet" href="history.css">
+  <script src="spork.js"></script>
+  <script>
+  function draw(){
+ var colorChoices=['coral','aquamarine','darksagreen','darkturquoise','lightpink','pink','palevioletred','lightcoral','violet','orange','tomato']
+ var colors=colorChoices.random()
+  var x,y
+ x=width*random();
+ y=height*random();
+ color(colors);
+ randomMark(x,y);
+
+}
+function setup(){
+  loop();
+
+}
+function randomMark(x,y){
+	var i;
+  	var a;
+for (i=0;i<10;i=i+1){
+   a=random()*360;
+  vx=2*COS(a);
+  vy=4*SIN(a);
+  line(x,y,x+vx,y+vy);
+  x=x+vx;
+  y=y+vy;
+}
+}
+
+  </script>
+  <style>
+  #brownianTab{
+    background:gray;
+  }
+  </style>
+</head>
+<body>
+
+    <div id="wrapper">
+      <div id="titleDiv">Motion</div>
+      <div id="mainNavigation">
+        <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+          <div class="tab" id="fuzzBallTab"><a href="fuzzball.html">Fuzz Ball</a></div>
+            <div class="tab" id="creatureGravityTab"><a href="creaturegravity.html">Creature</a></div>
+              <div class="tab" id="spotsTab"><a href="spots.html">Spots</a></div>
+                <div class="tab" id="brownianTab"><a href="brownian.html">Brownian</a></div>
+                <div class="tab" id="randomMarksTab"><a href="randommarks.html">Random Marks</a></div>
+
+    </divs>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <p>Here, you can see a the repeating Brownian line function. The color scheme used makes the image appear to be like confetti!
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

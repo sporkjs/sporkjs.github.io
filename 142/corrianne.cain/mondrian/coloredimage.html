@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <script src='spork.js'></script>
+  <script>
+
+  var small=22;
+    //var choice=['aqua','aquamarine','lilac','coral','cyan','lawngreen','lightcyan','lightcoral','lemonchiffon','lightgreen','lightpink','lightcyan','lightyellow','mediumorchid','mediumspringgreen'];
+  function myRectangle(x,y,w,h){
+    //fillcolor(choice.random());
+    x=floor(x);
+    y=floor(y);
+   for(i=0;i<10;i=i+1){
+    	l=random()*w;
+    	k=random()*h;
+    	l2=random()*w;
+    	k2=random()*h;
+          	line(x+l,y+k,x+l2,y+k2);
+            linecolor(R[x][y],G[x][y],B[x][y],A[x][y]);
+
+  }
+  }
+  function mgrid(x,y,w,h){
+    var l,k;
+    if((w<small) || ((h<small))){
+      myRectangle(x,y,w,h);
+    }
+  else if(w>h){  //wide
+    l=random()*w;
+    mgrid(x,y,l,h); //left
+    mgrid(x+l,y,w-l,h); //right
+  }
+   else{ //tall
+     k=random()*h;
+     mgrid(x,y,w,k); //top
+     mgrid(x,y+k,w,h-k)  //bottom
+    }
+  }
+
+  var R=[];
+  var G=[];
+  var B=[];
+  var A=[];
+
+  function setup(){
+  size(theImage.width,theImage.height);
+  drawImage(theImage,width/2,height/2,width,height);
+  copyImageData(R,G,B,A);
+  clear();
+    }
+  function draw(){
+    mgrid(0,0,width,height);
+  }
+  </script>
+</head>
+<body>
+  <div id='spork'></div>
+  <button onclick='startover();'>Start Over</button>
+  <button onclick='canvasToNewImg();'>Make Image</button>
+<br/>
+
+<img src='cedarburg.jpg' id='theImage' />
+</body>
+</html>

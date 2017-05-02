@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <title>My Paint Program</title>
+  <link rel="stylesheet" href="history.css">
+  <script src="spork.js"></script>
+  <script>
+  var lastX, lastY;
+function onmousedown(){
+  lastX=mouseX;
+  lastY=mouseY;
+}
+function pencil(){
+  if(mouseDown){
+    line(lastX,lastY,mouseX,mouseY);
+  lastX=mouseX;
+  lastY=mouseY;
+  }
+}
+function Round(){
+  if(mouseDown){
+    save();
+    //translate(mouseX,mouseY);
+    linewidth(1);
+    circle(mouseX,mouseY,LineWidth);
+    lastX=mouseX;
+    lastY=mouseY;
+    fillcolor(white);
+    fill();
+    restore();
+  }
+}
+function fuzz(){
+  if(mouseDown){
+  save();
+linewidth (1);
+  translate(mouseX,mouseY);
+  rotate(random()*360);
+  line(-LineWidth,0,LineWidth,0);
+  restore();
+  }
+}
+var LineWidth;
+
+function setlinewidth(x){
+  linewidth(x);
+  LineWidth=x;
+}
+function setPenType(x){
+  onmousemove=x;
+}
+function selectEraser(){
+  eraserWidth.checked=true;
+  eraserColor.checked=true;
+  color('white');
+  setlinewidth(20);
+  onmousemove=pencil;
+
+}
+  function setup(){
+background('white');
+onmousemove=pencil;
+LineWidth=1;
+  }
+  function draw(){
+
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar"></div>
+    <div id="mainNavigation">My Paint Program</div>
+    <div id="content">Choose different brush styles, sizes, and colors and create something of your own!
+      <div id="spork"></div>
+      <button onclick="background('white');">Clear</button>
+<fieldset>
+  <legend>
+    Pen Type
+  </legend>
+  <input type="radio" name="penType" checked onclick="setPenType(pencil);"/> Pencil
+    <input type="radio" name="penType"  onclick="setPenType(fuzz);"/> Fuzz
+    <input type="radio" name="penType" onclick="setPenType(Round);"/> Circle
+      <input type="radio" name="penType"  onclick="selectEraser();"/> Eraser
+</fieldset>
+      <fieldset>
+        <legend>
+          Pen Size
+        </legend>
+      <input type="radio" name="penSize" checked onclick="setlinewidth(1);"/> <div class='pensize one'>
+
+      </div>
+      <input type="radio" name="penSize" onclick="setlinewidth(5);"/> <div class='pensize five'>
+      </div>
+      <input type="radio" name="penSize" onclick="setlinewidth(9);"/> <div class='pensize ten'></div>
+      <input type="radio" name="penSize" onclick="setlinewidth(15);"/> <div class='pensize fifteen'></div>
+        <input type="radio" name="penSize" id="eraserWidth" onclick="setlinewidth(20);"/> <div class='pensize twenty'></div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Pen Color
+      </legend>
+      <input type="radio" name="penColor" checked onclick="color('black')"/> <div class='pensize five'></div>
+      <input type="radio" name="penColor"  onclick="color('turquoise')"/> <div class='pensize five turquoise'></div>
+      <input type="radio" name="penColor"  onclick="color('salmon')"/> <div class='pensize five salmon'></div>
+      <input type="radio" name="penColor"  onclick="color('navy')"/> <div class='pensize five navy'></div>
+      <input type="radio" name="penColor" onclick="color('lime')"/> <div class='pensize five lime'></div>
+      <input type="radio" name="penColor" id="eraserColor" onclick="color('white')"/> <div class='pensize five white'></div>
+</fieldset>
+    </div>
+    <div id="secondaryNavigation"></div>
+  </div>
+</body>
+</html>

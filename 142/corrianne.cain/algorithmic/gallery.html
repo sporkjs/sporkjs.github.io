@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>Manfred Mohr</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script>
+  theCaptions=[ "Cubic Limit (1972-1977): This work was created in phases. First, Mohr created an alphabet using signs from the twelve lines of a cube. Statistics and rotations were used to modify these factors. In the second phase of this work, cubes were divided into two parts by one of the Cartesian planes. Each image of this grid then display independent rotations of the cube.",
+"Baseline (2012-2013): This work is part of Mohr's Artificiata II collection, inspired by musical scores. The collection features a diagonal paths from a hypercube which are drawn at changes of dimension. In this particular movement of the work, Manford describes that it 'contains random variations of speed and suites of stills, adding a musical rhythm to this work.'",
+"Space.Color.Motion (2002): At this point in his career, Mohr began to add color and motion to his previous algorithmic works. This work is in the boiler room, an actual exhibit, at the Contemporary Art Center in New York. The work features 6D animation, which upon each reload, a new set of angles and increments (based on time and date) are projected.",
+"Subsets (2005-2006): This work of Mohr's is center around the 11D hypercube. The algorithmic subset of cubes decides whether the color should be black or white. The green background fills the remainder of the space.",
+"Parallel Reasonance (2009-2011): This work features 'two randomly selected and superimposed 11-dimensional diagonal-paths,' according to Mohr. He adds, 'n calculated intervals, the black form interchanges with the colored background so that the background becomes black and the previously black form assumes a color.'"];
+  theImages=[	"images/cubiclimit.jpg",
+        "images/baseline.jpg",
+        "images/p777.jpg",
+        "images/subsets.jpg",
+        "images/parallelreasonance.jpg",
+  ];
+  var currentImage=0;
+  var lastimage=theImages.length-1;
+  function closeGallery(){
+    gallery.style.display='none';
+  }
+  function openGallery(n){
+    photo.src=theImages[n];
+    currentImage=n;
+    caption.innerHTML=theCaptions[n];
+    if (currentImage==0)
+    leftButton.style.display='none';
+    else
+      leftButton.style.display='block';
+    if (currentImage==lastimage)
+    rightButton.style.display='none';
+    else
+      rightButton.style.display='block';
+    gallery.style.display='table';
+  }
+  </script>
+  <style>
+  #galleryTab{
+background: lightgray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+
+ Manfred Mohr</div>
+ <div id="primaryNavigation">
+   <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+   <div class="tab" id="biographyTab"><a href="biography.html">Biography</a></div>
+   <div class="tab" id="galleryTab"><a href="gallery.html">Gallery</a></div>
+   <div class="tab" id="methodsTab"><a href="methods.html">Methods</a></div>
+   <div class="tab" id="referencesTab"><a href="references.html">References</a></div>
+ </div>
+  <div id="galleryimage">
+    <div id="mainNavigation"></div>
+    <div id="content">
+      <button class='thumb' onclick='openGallery(0);'><img class='thumb' src='images/cubiclimit.jpg'></button>
+      <button class='thumb' onclick='openGallery(1);'><img class='thumb' src='images/baseline.jpg'></button>
+      <button class='thumb' onclick='openGallery(2);'><img class='thumb' src='images/p777thumbnail.jpg'></button>
+      <button class='thumb' onclick='openGallery(3);'><img class='thumb' src='images/subsetsthumbnail.jpg'></button>
+      <button class='thumb' onclick='openGallery(4);'><img class='thumb' src='images/parallelreasonance.jpg'></button>
+    </div>
+  </div>
+  <div id='gallery'>
+    <div id="photoDiv">
+      <img id='photo'/>
+      <div id='caption'/></div>
+    </div>
+    <button id='rightButton' onclick='openGallery(currentImage+1)'>&rightarrow;</button>
+    <button id='leftButton' onclick='openGallery(currentImage-1)'>&leftarrow;</button>
+    <button id='close' onclick='closeGallery();'>X</button>
+  </div>
+
+</body>
+</html>

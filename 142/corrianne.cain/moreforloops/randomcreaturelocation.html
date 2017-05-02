@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <title>More Fun with For Loops</title>
+  <link rel="stylesheet" href="history.css"/>
+  <script src="spork.js"></script>
+  <script>
+function bee(x,y,r){
+  save();
+  translate(x,y);
+  scale(r/200);
+//wings
+ellipse(-2,80,-150,50);
+fillcolor('dimgray');
+fill();
+ellipse(-2,-10,-150,50)
+fillcolor('dimgray');
+fill();
+
+//head
+fillcolor('black');
+linewidth(1);
+circle(1,-130,30);
+fill();
+
+//antennae
+arc(40,-140,30,200,1);
+arc(-40,-140,30,200,1)
+circle(70,-140,5);
+fill();
+circle(-70,-150,5);
+fill();
+
+//body
+translate(0,0)
+ellipse(0,40,70,160);
+fillcolor(255,255,0);
+fill();
+linewidth(40);
+
+//stripes
+line(-53,40,53,40);
+line(-40,-50,40,-50);
+line(-40,125,40,125);
+
+  restore();
+}
+function setup(){
+  size(350,350);
+  timestep(700);
+  loop();
+}
+function draw(){
+  var x,y,r;
+  var i;
+  	x=random()*width;
+  	y=random()*height;
+    r=min(x,y,width-x,height-y);
+  bee(x,y,r*random()+2);
+  }
+</script>
+<style>
+#randomCreatureLocationTab{
+  background: gray;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleDiv">More Fun with For Loops</div>
+  <div id="mainNavigation">
+    <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="circleGridTab"><a href="circlegrid.html">Circle Grid</a></div>
+        <div class="tab" id="randomCreatureSizeTab"><a href="randomcreaturesize.html">Random Creature Size</a></div>
+          <div class="tab" id="randomCreatureColorTab"><a href="randomcreaturecolor.html">Random Creature Color</a></div>
+            <div class="tab" id="randomCreatureLocationTab"><a href="randomcreaturelocation.html">Random Creature Location</a></div>
+            <div class="tab" id="classCirclesTab"><a href="classcircles.html">Class Circles</a></div>
+            <div class="tab" id="geometricPattern1Tab"><a href="geometricpatternone.html">Geometric Pattern 1</a></div>
+            <div class="tab" id="geometricPattern2Tab"><a href="geometricpatterntwo.html">Geometric Pattern 2</a></div>
+</div>
+  <div id="content">In this work, you will see the creature popping up in different sizes, made using a loop and random radii.
+</div>
+    <div id="spork"></div>
+  </div>
+</div>
+</body>
+</html>

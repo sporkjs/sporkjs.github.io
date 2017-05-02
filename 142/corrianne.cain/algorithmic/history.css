@@ -1,0 +1,65 @@
+body{
+  background-color:black;
+}
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin:auto;
+  border-radius:10px;
+  overflow: hidden;
+}
+#titleDiv{
+  background-color: gray;
+  color: white;
+  font-size: 64px;
+  padding: 10px;
+  font-family: fantasy;
+  text-align: center;
+}
+#primaryNavigation{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  font-family:fantasy;
+}
+#content{
+  padding:10px;
+}
+#secondaryNavigation{
+text-align: right;
+border-top: 1px solid lightgray;
+font-size: 12px;
+padding-right: 10px;
+clear: both
+}
+p{
+  text-indent: 27px
+}
+
+#titleImage{
+  height: 80px;
+  vertical-align: middle;
+}
+
+img.smallRight{
+  height:200px;
+  float:right;
+  margin:10px;
+}
+img.smallLeft{
+  height:200px;
+  float:left;
+  margin:10px;
+}
+img.smallCenter{
+  height:200px;
+  display:block;
+  margin:auto;
+}
+  div.tab{
+    display:inline-block;
+    width: 18%;
+  }
+  p.ref{
+  margin:30px;
+    text-indent: -30px;
+  }
