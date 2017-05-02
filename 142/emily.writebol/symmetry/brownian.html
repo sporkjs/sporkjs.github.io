@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <script src='spork.js'></script>
+  <script>
+  function randomColor(){
+    var theColors=['green',
+              'cyan',
+              'light blue',
+              'blue',
+              'yellow'];
+    color(theColors.random());
+  }
+
+  function randomMark(x,y){
+
+  var vx,vy;
+  var i;
+  var a;
+
+    for (i=0;i<45;i=i+1){
+     a=(random()*360);
+
+        vx=2*COS(a);
+    vy=2*SIN(a);
+     line(x,y,x+vx,y+vy);
+
+      x=x+vx;
+      y=y+vy;
+
+    }
+  }
+  function symmetricPoint(x,y){
+    save();
+    for (i=0;i<4;i=i+1){
+      rotate();
+  fillrect(x,y,1,1);
+    fillrect(y,x,1,1);
+      rotate(90);
+    }
+    restore();
+  }
+
+  function setup(){
+
+    setupNoise(5);
+
+
+
+  }
+  function draw(){
+  var x,y;
+
+
+  x=(random()*width);
+  y=(random()*height);
+
+  randomColor();
+  randomMark(x,y);
+    symmetricPoint(x,y);
+  }
+  </script>
+</head>
+  <title>
+    Symmetry
+  </title>
+  <link rel="stylesheet" href="style.css"  />
+  <style>
+  #homeTab{
+    background-color: lightgray;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+      Symmetry Assignment with Brownian Patterns
+    </div>
+    <div id="primaryNavigation">
+    <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+    <div class="tab" id="cowTab"><a href="cow.html">Cow Spots</a></div>
+    <div class="tab" id="hairTab"><a href="hair.html">Hair</a></div>
+     <div class="tab"id="wavyTab"><a href="wavy.html">Wavy Lines</a></div>
+     <div class="tab"id="funkyTab"><a href="funky.html">funky Lines</a></div>
+     <div class="tab"id="brownianTab"><a href="brownian.html">Brownian</a></div>
+  </div>
+  <div id="content">
+     <i>by Emily Writebol</i>
+<p>
+Using the Brownian pattern, this page generates symmetry.
+</p>
+<div id="spork"></div>
+  <div id="secondaryNavigation">
+    Emily Writebol | Math 142 | <a href="http://www.cune.edu"> CUNE</a>
+  </div>
+
+</body>
+</html>

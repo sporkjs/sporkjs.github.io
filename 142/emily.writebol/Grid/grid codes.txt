@@ -1,0 +1,232 @@
+//rectangle grid
+
+var small=10;
+var theColors=['pink','gray','cyan','yellow'];
+function myRect(x,y,w,h){
+   fillcolor(theColors.random());
+    rect(x,y,w,h);
+    fill();
+}
+function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small) || (h<small) || (random()<0.1)) {
+    myRect(x,y,w,h);
+
+  }
+  else if (w>h){ //wide rect
+    l=random()*w;  //left
+    mgrid(x,y,l,h); //right
+    mgrid(x+l,y,w-l,h);
+  }
+  else{ //tall rect
+    k=random()*h;
+    mgrid(x,y,w,k);  //top
+    mgrid(x,y+k,w,h-k); //bottom
+
+  }
+}
+
+function setup(){
+  size(600,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}
+
+//Diamond Grid
+
+
+var small=10;
+var theColors=['pink','gray','cyan','yellow'];
+function myDiamond(x,y,w,h){
+   line(x,y+h/2,x+w/2,y,x+w,y+h/2,x+w/2,y+h,x,y+h/2);
+
+}
+function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small) || (h<small) || (random()<0.1)) {
+    myDiamond(x,y,w,h);
+
+  }
+  else if (w>h){ //wide rect
+    l=random()*w;  //left
+    mgrid(x,y,l,h); //right
+    mgrid(x+l,y,w-l,h);
+  }
+  else{ //tall rect
+    k=random()*h;
+    mgrid(x,y,w,k);  //top
+    mgrid(x,y+k,w,h-k); //bottom
+
+  }
+}
+
+function setup(){
+  size(600,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}
+
+//intersecting lines grid
+
+var small=10;
+var theColors=['pink','gray','cyan','yellow'];
+function myLine(x,y,w,h){
+
+  var l,k
+  l=random()*w;
+     k=random()*h;
+   line(x+l,y,x+l,y+h);
+  line(x,y+k,x+w,y+k);
+
+
+}
+function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small) || (h<small) ){
+    myLine(x,y,w,h);
+
+  }
+  else if (w>h){ //wide rect
+    l=random()*w;  //left
+    mgrid(x,y,l,h); //right
+    mgrid(x+l,y,w-l,h);
+  }
+  else{ //tall rect
+    k=random()*h;
+    mgrid(x,y,w,k);  //top
+    mgrid(x,y+k,w,h-k); //bottom
+
+  }
+}
+
+function setup(){
+  size(600,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}
+
+//grid random line
+
+var small=10;
+var theColors=['pink','gray','cyan','yellow'];
+function myLine(x,y,w,h){
+
+  var l,k,l2,k2
+  l=random()*w;
+     k=random()*h;
+   l2=random()*w;
+     k2=random()*h;
+   line(x+l,y+k,x+l2,y+k2);
+
+
+
+}
+function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small) || (h<small) ){
+    myLine(x,y,w,h);
+
+  }
+  else if (w>h){ //wide rect
+    l=random()*w;  //left
+    mgrid(x,y,l,h); //right
+    mgrid(x+l,y,w-l,h);
+  }
+  else{ //tall rect
+    k=random()*h;
+    mgrid(x,y,w,k);  //top
+    mgrid(x,y+k,w,h-k); //bottom
+
+  }
+}
+
+function setup(){
+  size(600,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}
+
+//grind random intersecting lines
+
+
+var small=10;
+var theColors=['pink','gray','cyan','yellow'];
+function myLine(x,y,w,h){
+
+  var l,k,l2,k2
+  for (i=0;i<20;i=i+1){
+  l=random()*w;
+     k=random()*h;
+   l2=random()*w;
+     k2=random()*h;
+   line(x+l,y+k,x+l2,y+k2);
+
+  }
+
+}
+function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small) || (h<small) ){
+    myLine(x,y,w,h);
+
+  }
+  else if (w>h){ //wide rect
+    l=random()*w;  //left
+    mgrid(x,y,l,h); //right
+    mgrid(x+l,y,w-l,h);
+  }
+  else{ //tall rect
+    k=random()*h;
+    mgrid(x,y,w,k);  //top
+    mgrid(x,y+k,w,h-k); //bottom
+
+  }
+}
+
+function setup(){
+  size(600,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}
+
+//grid circles
+
+
+var small=10;
+var theColors=['pink','gray','cyan','yellow'];
+function myCircle(x,y,w,h){
+    fillcolor(theColors.random());
+    circle(x+w/2,y+h/2,min(w/2,h/2));
+    fill();
+
+}
+function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small) && (h<small)) {
+    myCircle(x,y,w,h);
+
+  }
+  else if (w>h){ //wide rect
+    l=random()*w;  //left
+    mgrid(x,y,l,h); //right
+    mgrid(x+l,y,w-l,h);
+  }
+  else{ //tall rect
+    k=random()*h;
+    mgrid(x,y,w,k);  //top
+    mgrid(x,y+k,w,h-k); //bottom
+
+  }
+}
+
+function setup(){
+  size(600,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}

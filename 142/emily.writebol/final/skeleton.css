@@ -1,0 +1,29 @@
+div{
+  border: 1px solid black;
+  padding: 10px;
+  margin:  10px;
+  background-color: whites;
+}
+#wrapper{
+
+}
+#titleBar{
+color: cyan;
+font-size: 100px;
+background-color: lightgrey;
+}
+#mainNavigation{
+  background-color: cyan;
+
+}
+#content{
+background-color: cyan;
+height:6s00px;
+padding: 50px;
+}
+#secondaryNavigation{
+
+}
+#spork{
+  height:500px;
+}

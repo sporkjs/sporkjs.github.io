@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    Mondrian Grid
+  </title>
+  <link rel="stylesheet" href="skeleton.css"  />
+  <script src='spork.js'></script>
+  <script>
+
+  var small=10;
+  var theColors=['pink','gray','cyan','yellow'];
+  function myDiamond(x,y,w,h){
+     line(x,y+h/2,x+w/2,y,x+w,y+h/2,x+w/2,y+h,x,y+h/2);
+
+  }
+  function mgrid(x,y,w,h){
+    var l,k;
+    if((w<small) || (h<small) || (random()<0.1)) {
+      myDiamond(x,y,w,h);
+
+    }
+    else if (w>h){ //wide rect
+      l=random()*w;  //left
+      mgrid(x,y,l,h); //right
+      mgrid(x+l,y,w-l,h);
+    }
+    else{ //tall rect
+      k=random()*h;
+      mgrid(x,y,w,k);  //top
+      mgrid(x,y+k,w,h-k); //bottom
+
+    }
+  }
+
+  function setup(){
+    size(600,400);
+  }
+  function draw(){
+    mgrid(0,0,width,height);
+  }
+  </script>
+  <style>
+  #homeTab{
+    background-color: yellow;
+  }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+      Mondrian Grid Assignment
+    </div>
+    <div id="primaryNavigation">
+    <div class="tab" id="homeTab"><a href="home.html">Home</a></div>
+    <div class="tab" id="RectTab"><a href="GridRect.html">Rectangle</a></div>
+    <div class="tab" id="DiamondTab"><a href="GridDiamond.html">Diamonds</a></div>
+     <div class="tab"id="CircleTab"><a href="GridCircle.html">Circle</a></div>
+     <div class="tab"id="LineTab"><a href="GridLine.html">Lines</a></div>
+     <div class="tab"id="ImagTab"><a href="GridImage.html">Image</a></div>
+  </div>
+  <div id="content">
+     <i>by Emily Writebol</i>
+<p>
+All of these images are generated on a Mondrian Grid.
+</p>
+<div id='spork'></div>
+  <div id="secondaryNavigation">
+    Emily Writebol | Math 142 | <a href="http://www.cune.edu"> CUNE</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <script src='spork.js'></script>
+  <script>
+  //paste mark functions below here
+  function randomLine(x,y,r){
+
+
+
+  save()
+  translate(x,y)
+  rotate(360*random())
+  line(-r,0,r,0)
+  restore()
+  }
+
+
+  function randomBrownian(x,y){
+
+  var vx,vy;
+  var i;
+  var a;
+
+    for (i=0;i<45;i=i+1){
+     a=(random()*360);
+
+        vx=2*COS(a);
+    vy=2*SIN(a);
+     line(x,y,x+vx,y+vy);
+
+      x=x+vx;
+      y=y+vy;
+
+    }
+  }
+
+  function randomCurve(x,y){
+
+  var vx,vy;
+  var ax,ay;
+  var r;
+  var i;
+
+
+    vx=2*(random()-0.5);
+    vy=2*(random()-0.5);
+    ax=0;
+    ay=0.01;
+    r=5;
+
+    for (i=0;i<50;i=i+1){
+     line(x,y,x+vx,y+vy);
+
+    x=x+vx;
+    y=y+vy;
+
+    vx=vx+ax;
+    vy=vy+ay;
+    }
+  }
+
+  function hair(x,y){
+
+var vx,vy;
+var i;
+var a;
+
+
+
+
+
+
+
+  for (i=0;i<45;i=i+1){
+   a=noise(abs(x/width),abs(y/height))*180
+
+      vx=2*COS(a);
+  vy=2*SIN(a);
+   line(x,y,x+vx,y+vy);
+
+    x=x+vx;
+    y=y+vy;
+
+  }
+}
+function noiseLine(x,y,r){
+
+save()
+translate(x,y)
+rotate(noise(abs(x/width),abs(y/height))*360);
+line(-r,0,r,0)
+restore()
+}
+
+  //paste mark functions above here
+  var f=randomLine;
+  var R=[];
+  var G=[];
+  var B=[];
+  var A=[];
+  function setup(){
+    size(theImage.width,theImage.height);
+    drawImage(theImage,width/2,height/2,width,height);
+    copyImageData(R,G,B,A);
+    clear();
+loop();
+setupNoise(5);
+  }
+  function draw(){
+    var x=floor(random()*width);
+    var y=floor(random()*height);
+    color(R[x][y],G[x][y],B[x][y],A[x][y]);
+
+    f(x,y,20);
+
+
+  }
+  </script>
+</head>
+<body>
+  <div id='spork'></div>
+  <button onclick='stoploop();'>stop</button>
+  <button onclick='startloop();'>start</button>
+    <button onclick='startover();'>start over</button>
+    <button onclick='canvasToNewImg();'>make image</button>
+    <br />
+    <button onclick='f=randomLine;startover();'>lines</button>
+    <button onclick='f=randomBrownian;startover();'()>brownian</button>
+    <button onclick='f=randomCurve;startover();'()>projectile</button>
+    <button onclick='f=hair;startover();'()>hair</button>
+      <button onclick='f=noiseLine;startover();'()>noise line</button>
+    <br />
+    <img src='owl.jpg' id='theImage' />
+</body>
+</html>
