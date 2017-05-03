@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <title>Circle Pattern</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function circlepattern(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+     circle(0,0,180);
+      fillcolor('black');
+      fill();
+     var a;
+  //Orange triangles
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('yellow');
+      fillcolor('yellow');
+      triangle(180,0,165,10,175,-10);
+      fill();
+       restore();
+    }
+    //Orange circle
+    save();
+    color('orange');
+    linewidth(5);
+    circle(0,0,160);
+    restore();
+
+    //< shapes
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('red');
+      line(150,5,155,0,150,-5);
+       restore();
+    }
+     //Blue circle
+    save();
+    color(0,0,210);
+    linewidth(3);
+    circle(0,0,150);
+    restore();
+
+    //White lines
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('white');
+      rect(-100,-100,200,200);
+       restore();
+    }
+     //Red rectangle
+    for (a=0;a<360;a=a+22.5){
+    save();
+      rotate(a);
+    color(0,0,100);
+    rect(-70,-70,140,140);
+      fillcolor(0,0,100);
+      fill();
+    restore();
+    }
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(1);
+    circle(0,0,40);
+    restore();
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(2);
+    circle(0,0,45);
+    restore();
+
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(3);
+    circle(0,0,50);
+    restore();
+
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(4);
+    circle(0,0,55);
+    restore();
+
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(5);
+    circle(0,0,60);
+    restore();
+
+   //Red Lines
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('red');
+      rect(70,2,10,4);
+      fillcolor('red');
+      fill();
+       restore();
+    }
+    restore();
+  }
+  function circlepattern2 (x,y,r){
+     circlepattern(x,y,r);
+     circlepattern(x,y,r/4);
+     circlepattern(x,y,r/16);
+
+  }
+  function setup(){
+
+  }
+  function draw(){
+   circlepattern2(200,200,200);
+
+
+  }
+
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Fun with For Loops</div>
+    <div id="mainNavigation">
+<div class='tab'>
+  <a href='creature.html'>Creature</a></div>
+<div class='tab'>  <a href='clips.html'>Clips</a></div>
+<div class='tab'>  <a href='circlepattern.html'>Circle Pattern</a></div>
+<div class='tab'>  <a href='../index.html'>Home</a></div>
+
+</div>
+    <div id="content">
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation"></div>
+  </div>
+</body>
+</html>

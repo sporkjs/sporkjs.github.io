@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>Noise</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    setupNoise(5);
+  }
+
+  function draw(){
+    for(x=0;x<width;x=x+1)
+     for(y=0;y<height;y=y+1){
+
+       var c;
+       c=floor(128*(noise(x/width,y/height)+1));
+       fillcolor(c,c,255-c);
+       fill(x,y);
+       fillrect(x,y,1,1);
+     }
+   }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar"> Noise</div>
+      <div id=content>
+        <div id=spork></div>
+        <button onclick='stoploop();'>Stop</button>
+        <button onclick='startloop();'>Start</button>
+        <button onclick='startover();'>Start Over</button>
+        <p>
+          Click <a href="index.html">here</a> to go back home.
+        </p>
+      </div>
+    <div id="secondaryNavigationDiv">
+      Samuel Otte | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a>
+    </div>
+  </div>
+</body>
+</html>

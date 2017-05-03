@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>FUNKY</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  var theColors=[]
+
+  function setup(){
+    setupNoise(5);
+    translate(200,200);
+    color(255,255,255,0);
+    	for(i=0;i<256;i=i+1){
+        theColors[i]=rgb(floor(random()*256),
+                         floor(random()*256),
+                         floor(random()*256))
+      }
+  }
+  function symmetricPoint(x,y){
+    var i;
+
+    save();
+    	for(i=0;i<4;i=i+1){
+    		fillrect(x,y,1,1);
+    		fillrect(y,x,1,1);
+        	rotate(90);
+    }
+     restore();
+  }
+  function draw(){
+    var x,y
+    var c
+
+    for(x=0;x<=width/2;x=x+1)
+      for(y=0;y<=x;y=y+1){
+        c=floor(128*(noise(x/width,y/height)+1));
+        c=10*floor(c/10);
+        fillcolor(theColors[c]);
+      symmetricPoint(x,y,1,1);
+        }
+      }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">SYMMETRY</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a></div>
+      <div class="tab" id="linesTab"><a href ="lines.html"> Lines </a></div>
+      <div class="tab" id="hairTab"><a href ="hair.html"> Hair </a></div>
+      <div class="tab" id="broTab"><a href ="bro.html"> Brownian </a></div>
+      <div class="tab" id="cowTab"><a href ="cow.html"> Cow Spots </a></div>
+      <div class="tab" id="funkyTab"><a href ="funky.html"> Funky </a></div>
+    </div>
+    <div id="content">
+        <div id="spork"></div>
+            <button onclick='startover();'>Start Over</button>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

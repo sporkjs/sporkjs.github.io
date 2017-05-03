@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <title>Kerry C Mitchell's Work</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script>
+theCaptions=[ "This peices is part of Kerry Mitchell's series called space aliens. This specific peice is called Way Out There and it was done in 2014.",
+      "This peice was done with Painter on the computer with pattern pens. It is created with many circles which contain other circle. ",
+      "This peice was done in a way that it holds a Japanese artistic style to it. It is named Spring Cherry and falls into her landscape and sunset works. ",
+      "This peice was a revisit for her in the fact that she has done a series like these in the past, some of the past works include Daydreams, ROY 04, and You Caught Me Running in Circles.",
+      "Kerry Mitchell Created this work after a big event of NASA landing the Curiosity Rover on Mars. She did this with both art and math together. It was completed using both fractals and algorithms. ",
+      "This peice was done using on one of her apps as mentioned in the techniques tab. It is of another artists famous drawing, the Mona Lisa. She used a similar technique to that of the Learning Minds peice. ",
+
+];
+theImages=["Images/aliens.jpg",
+      "Images/circles.jpg",
+      "Images/trees.jpg",
+      "Images/eggs.jpg",
+      "Images/learningmind.jpg",
+      "Images/monalisa.jpg",
+];
+var currentImage=0;
+var lastImage=theImages.length-1;
+function closeGallery(){
+  gallery.style.display='none';
+  }
+  function showGallery(n){
+    photo.src=theImages[n];
+    currentImage=n;
+    caption.innerHTML=theCaptions[n];
+    if (currentImage==0)
+      leftButton.style.display='none';
+    else
+      leftButton.style.display='block';
+    if (currentImage==lastImage)
+      rightButton.style.display='none';
+    else
+      rightButton.style.display='block';
+    gallery.style.display='table';
+  }
+ </script>
+ <style>
+ #galleryTab{
+   background: darkgray;
+ }
+ </style>
+</head>
+<body>
+
+  <div id='wrapper'>
+    <div id='titleBar'><img id="titleBarImage" src=Images/kerrymichelle.jpg> Kerry C. Mitchell</div>
+    <div id='primaryNavigation'>
+      <div class="tab" id="homeTab"><a href=index.html>Home</a></div>
+      <div class="tab" id="galleryTab"><a href=gallery.html>Gallery</a></div>
+      <div class="tab" id="influenceTab"><a href=influence.html>Influence</a></div>
+      <div class="tab" id="technologyTab"><a href=technology.html>Techniques</a></div>
+      <div class="tab" id="referenceTab"><a href=ref.html>References</a></div>
+      <div class="tab" id="main"><a href=../index.html>Main</a></div>
+    </div>
+  <div id="mainNavigation"></div>
+    <div id="content">
+      <button class='thumb'onclick='showGallery(0);'><img class='thumb'src='thumbnails/aliens.jpg'/></button>
+      <button class='thumb'onclick='showGallery(1);'><img class='thumb' src='thumbnails/circles.jpg'/></button>
+      <button class='thumb'onclick='showGallery(2);'><img class='thumb' src='thumbnails/trees.jpg'/></button>
+      <button class='thumb'onclick='showGallery(3);'><img class='thumb' src='thumbnails/eggs.jpg'/></button>
+      <button class='thumb'onclick='showGallery(4);'><img class='thumb' src='thumbnails/learningmind.jpg'/></button>
+      <button class='thumb'onclick='showGallery(5);'><img class='thumb' src='thumbnails/monalisa.jpg'/></button>
+  </div>
+  </div>
+</div>
+<div id='gallery'>
+  <div id='photoDiv'>
+    <img id= 'photo'/>
+    <div id='caption'></div>
+  </div>
+  <button id='rightButton'onclick='showGallery(currentImage+1);'>&rightarrow;</button>
+  <button id='leftButton'onclick='showGallery(currentImage-1);'>&leftarrow;</button>
+</div>
+  <button id='close'onclick="closeGallery();">X</button>
+  <div id="secondaryNavigation">Cassie Lewis | Math 142 </div>
+</body>
+</html>

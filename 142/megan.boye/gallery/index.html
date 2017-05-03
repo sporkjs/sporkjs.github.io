@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <title>PHOTO GALLERY</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script>
+
+  theCaptions=[ "This piece was created by Mikael Hvidtfeldt Christensen. It was generated using the software Structure Synth.",
+          "The artist started with the red, then combined the green and blue channels together. The arrangement was created by using a random number generator.",
+          "This piece was created by utilizing a Hilbert space filling curve. The curve stops at each point within a 2D space and was discovered by the German mathematician David Hilbert.",
+          "To create this piece, the artist used a process called digital slitscan.",
+          "This sculpture was created by Jean-Max Albert in 1991. It is an example of what a plant's growth could look like if it were translated into shapes and colors.",
+          "This piece was created using a C++ program that the artist than used to experiment with and got this result.",
+          "The artist was inspired to create this image after reading a book about cosmology, specifically, \"the arrow time\".",
+          "German researchers created a computer algorithm that can transform pictures into images that resemble styles used by masters such as Van Gogh and Picasso.",
+          "This was created by Anastasiya Malakhova using codes, functions and algorithms.",
+          "This was created by Tyler Hobbs in 2016.",
+  	       "This was created by an artist using themes and symbols from NYC, Andy Warhol, her studio's logo and the font called Dingbat."
+  ];
+
+  theImages=["images/octo.jpg",
+          "images/red.png",
+          "images/blue.png",
+          "images/3d.jpg",
+          "images/growth.jpg",
+          "images/feb.jpg",
+          "images/order.png",
+          "images/work.jpg",
+          "images/art.jpg",
+          "images/hearing.jpg",
+          "images/hearts.jpg"
+  ];
+var currentImage=0;
+var lastImage=theImages.length-1;
+    function closeGallery(){
+      gallery.style.display="none";
+   }
+    function showGallery(n){
+      photo.src=theImages[n];
+      currentImage=n;
+      caption.innerHTML=theCaptions[n];
+      if (currentImage==0)
+        leftButton.style.display="none";
+      else
+        leftButton.style.display="block";
+      if (currentImage==lastImage)
+        rightButton.style.display="none";
+      else
+        rightButton.style.display="block";
+      gallery.style.display="table";
+    }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Algorithmic Art</div>
+    <div id="mainNavigation"></div>
+    <div id="content">
+      <button class="thumb" onclick="showGallery(0);"><img class="thumb" src="thumbnails/octo.jpg"/></button>
+      <button class="thumb" onclick="showGallery(1);"><img class="thumb" src="thumbnails/red.png"/></button>
+      <button class="thumb" onclick="showGallery(2);"><img class="thumb" src="thumbnails/blue.png"/></button>
+      <button class="thumb" onclick="showGallery(3);"><img class="thumb" src="thumbnails/3d.jpg"/></button>
+      <button class="thumb" onclick="showGallery(4);"><img class="thumb" src="thumbnails/growth.jpg"/></button>
+      <button class="thumb" onclick="showGallery(5);"><img class="thumb" src="thumbnails/feb.jpg"/></button>
+      <button class="thumb" onclick="showGallery(6);"><img class="thumb" src="thumbnails/order.png"/></button>
+      <button class="thumb" onclick="showGallery(7);"><img class="thumb" src="thumbnails/work.jpg"/></button>
+      <button class="thumb" onclick="showGallery(8);"><img class="thumb" src="thumbnails/art.jpg"/></button>
+      <button class="thumb" onclick="showGallery(9);"><img class="thumb" src="thumbnails/hearing.jpg"/></button>
+      <button class="thumb" onclick="showGallery(10);"><img class="thumb" src="thumbnails/reaching.jpg"/></button>
+      <button class="thumb" onclick="showGallery(11);"><img class="thumb" src="thumbnails/hearts.jpg"/></button>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+      <div id="gallery">
+          <div id="photoDiv">
+            <img id="photo"/>
+              <div id="caption"></div>
+              </div>
+                <button id="rightButton" onclick="showGallery(currentImage+1)">&rightarrow;</button>
+                <button id="leftButton" onclick="showGallery(currentImage-1)">&leftarrow;</button>
+              </div>
+          <button id="close" onclick="closeGallery();">X</button>
+
+</body>
+</html>

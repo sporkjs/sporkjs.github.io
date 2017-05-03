@@ -1,0 +1,49 @@
+div{
+  border: 5px solid transparent;
+  padding: 10px;
+  margin:  10px;
+}
+#wrapper{
+text-align: center;
+}
+#titleBar{
+font-size: 42pt;
+border-bottom: 1px solid black;
+}
+#mainNavigation{
+
+}
+#content{
+
+}
+#secondaryNavigation{
+font-size: 12pt;
+}
+div.pensize{
+  width:20px;
+  background:black;
+  padding:0px;
+  border:none;
+  display: inline-block;
+}
+div.one{
+  height:1px;
+}
+div.three{
+  height:3px;
+}
+div.five{
+  height:5px;
+}
+div.nine{
+  height:9px;
+}
+div.red{
+  background: red;
+}
+div.yellow{
+  background: yellow;
+}
+div.blue{
+  background: blue;
+}

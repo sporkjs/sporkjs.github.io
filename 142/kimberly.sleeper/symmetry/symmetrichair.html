@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>Symmetric Hair Drawing</title>
+  <link rel="stylesheet" href="symmetry.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+  setupNoise(5);
+  translate(200,200);
+  R=width/4;
+  timestep (300);
+}
+
+function hair(x,y,k){
+  var vx,vy;
+  var i,j;
+  var ang;
+  var R;
+  var c;
+  var k;
+
+  for (R=0;R<100;R=R+1){
+    ang=noise(abs(x/width),abs(y/height))*360;
+    vx=COS(ang);
+    vy=SIN(ang);
+    symmetricLine(x,y,(x+vx),(y+vy),k);
+    x=x+vx;
+    y=y+vy;
+  }
+  loop(c);
+}
+
+function symmetricLine(x1,y1,x2,y2,k){
+  var i;
+  save();
+  for (i=0;i<k;i=i+1){
+    line(x1,y1,x2,y2);
+    line(y1,x1,y2,x2);
+    	rotate(360/k);
+  }
+  restore();
+}
+
+function draw(){
+  var x,y,k,i;
+  for (i=0;i<20;i=i+1){
+  x=random()*R;
+  y=random()*R;
+  hair(x,y,10);
+  }
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Symmetric Hair Drawing</div>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">Symmetry Home</a>
+  </div>
+</body>
+</html>

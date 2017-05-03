@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>Noise Gallery</title>
+  <link rel="stylesheet" href="noise.css" />
+    <script src="spork.js"></script>
+  <script>
+  function randomColor(){
+   var theColors=['black',
+                 'gray',
+                 'lightgray',
+                 'white',
+                 'darkorange'];
+    color(theColors.random());
+  }
+  function randomMark(x,y){
+  var vx,vy;
+  var i;
+  var a;
+    for(i=0;i<1000;i=i+1){
+    a=noise(abs(x/width),abs(y/height))*360;
+    vx=COS(a);
+    vy=SIN(a);
+    line(x,y,x+vx,y+vy);
+    x=x+vx;
+    y=y+vy;
+    }
+  }
+
+  function setup(){
+    setupNoise(5);
+    loop();
+  }
+  function draw(){
+  var x,y;
+  x=width*random();
+  y=height*random();
+  randomColor();
+  randomMark(x,y);
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">My Noise Gallery</div>
+    <div id="mainNavigation">Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/></div>
+      <div id="primaryNavigation">
+        <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+        <div class="tab" id="randomstaticTab"><a href="random.html">Random Static</a></div>
+        <div class="tab" id="smoothstaticTab"><a href="smooth.html">Smooth Static</a></div>
+        <div class="tab" id="brownianhairTab"><a href="hair.html">Brownian Hair</a></div>
+        <div class="tab" id="funkyTab"><a href="funky.html">Funky Lines</a></div>
+        <div class="tab" id="wavyTab"><a href="wavy.html">Wavy Lines</a></div>
+        <div class="tab" id="cowspotsTab"><a href="cowspots.html">Cow Spots</a></div>
+      </div>
+      <div id="content">
+        <div id="spork"></div>
+      </div>
+  </div>
+</body>
+</html>

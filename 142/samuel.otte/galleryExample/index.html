@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script>
+  theCaptions=[	"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  			"A selection of work from Keith Peters.",
+  ];
+  theImages=[	"realimages/image1.png",
+  			"realimages/image2.png",
+  			"realimages/image3.png",
+  			"realimages/image4.png",
+  			"realimages/image5.png",
+  			"realimages/image6.png",
+  			"realimages/image7.png",
+  			"realimages/image8.jpg",
+  			"realimages/image9.jpg",
+  ];
+
+  var currentImage=0;
+  var lastImage=theImages.length-1;
+  function closeGallery(){
+    gallery.style.display='none';
+  }
+  function showGallery(n){
+    photo.src=theImages[n];
+    currentImage=n;
+    caption.innerHTML=theCaptions[n];
+    if(currentImage==0)
+      leftButton.style.display='none';
+    else
+      leftButton.style.display="block";
+    if(currentImage==lastImage)
+      rightButton.style.display='none';
+    else
+      rightButton.style.display='block';
+    gallery.style.display='table';
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">My Photo Gallery</div>
+    <div id="mainNavigation">SamO's Photo's</div>
+    <div id="content">
+      <button class='thumb' onclick='showGallery(0);'><img class='thumb' src='thumbnail/timage1.png'/></button>
+      <button class='thumb' onclick='showGallery(1);'><img class='thumb' src='thumbnail/timage2.png'/></button>
+      <button class='thumb' onclick='showGallery(2);'><img class='thumb' src='thumbnail/timage3.png'/></button>
+      <button class='thumb' onclick='showGallery(3);'><img class='thumb' src='thumbnail/timage4.png'/></button>
+      <button class='thumb' onclick='showGallery(4);'><img class='thumb' src='thumbnail/timage5.png'/></button>
+      <button class='thumb' onclick='showGallery(5);'><img class='thumb' src='thumbnail/timage6.png'/></button>
+      <button class='thumb' onclick='showGallery(6);'><img class='thumb' src='thumbnail/timage7.png'/></button>
+      <button class='thumb' onclick='showGallery(7);'><img class='thumb' src='thumbnail/timage8.jpg'/></button>
+      <button class='thumb' onclick='showGallery(8);'><img class='thumb' src='thumbnail/timage9.jpg'/></button>
+    </div>
+    <div id="secondaryNavigation">
+      Samuel Otte | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a>
+    </div>
+  </div>
+  <div id='gallery'>
+    <div id='photoDiv'>
+      <img id='photo'/>
+      <div id='caption'></div>
+    </div>
+      <button id='rightButton' onclick='showGallery(currentImage+1);'>&rightarrow;</button>
+      <button id='leftButton' onclick='showGallery(currentImage-1);'>&leftarrow;</button>
+      <button id='close' onclick='closeGallery();'>X</button>
+  </div>
+</body>
+</html>

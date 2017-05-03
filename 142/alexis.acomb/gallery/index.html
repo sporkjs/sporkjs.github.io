@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mathematical Art Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+  <script>
+  theCaptions=["Crannell demonstrated the essential concepts of perspective art by drawing a cube with front and back faces parallel to the canvas and therefore represented as squares. The remaining four edges of the cube are parallel to each other but not parallel to the canvas, so they lie along lines that converge to a vanishing point. An example of this is Drurer's 'Melancolia'.",
+  "George Hart, whose background is in computer science, is an example of a person who is contributing to the mathematical theory of polyhedra, while at the same time he uses his skills as a sculptor and artist to create original works inspired by polyhedral objects.",
+  "An artist was commissioned to create Works of Art to be integrated into the labyrinth, threshold and swirl features to ensure continuity of theme, materials and colours to all these areas, providing consistency of narrative and visual impact. The art works are integrated into these constructions, suitably positioned to convey the narrative of the words and designs. ",
+  "Origami models of polyhedra use approaches where the panels become the faces of the polyhedra, so that the challenge becomes producing panels with different numbers of sides with the same edge lengths. One can also produce polyhedra which are 'pyramided'. They resemble Leonardo da Vinci's drawings that demonstrated emerging techniques of drawing polyhedra in perspective. ",
+  "A major area of interest has been the study of the crease patterns (system of lines on the paper) which can be folded 'flat'. The mathematics needed involves ideas and methods somewhat different from what was done in the past in attempting to understand how a piece of a plane (a square of origami paper) could be transformed by a geometric transformation, because at the end of the transformation parts of the origami paper touch each other, though they do not interpenetrate other parts of the paper.",
+  "This scarf depicts the Yang-Baxter equation of statistical mechanics, a variation of which is the braid equation in algebra, or the 3rd Reidemeister (equivalence) move in knot theory.",
+  "This work is part of a series of visual meditations on the structure of the alternating group on 5 elements, also known as the icosahedral group. ",
+  "The mathematics behind this process is a way to dissect a hexagon with a hole into a hexagram with a hole. Based on this dissection Frederickson cleverly produced a hinge-twist dissection. "
+  ];
+  theImages=["images/cube.jpg",
+  "images/globe.jpg",
+  "images/labyrinth.jpg",
+  "images/origami.jpg",
+  "images/origami2.jpg",
+  "images/scarf.jpg",
+  "images/symmetry.jpg",
+  "images/wood.jpg"
+  ];
+var currentImage=0;
+var lastImage=theImages.length-1;
+function closeGallery(){
+  gallery.style.display="none";
+  }
+function showGallery(n){
+  photo.src=theImages[n];
+    currentImage=n;
+  caption.innerHTML=theCaptions[n];
+    if (currentImage==0)
+  leftButton.style.display="none";
+    else
+  leftButton.style.display="block";
+    if (currentImage==lastImage)
+  rightButton.style.display="none";
+    else
+  rightButton.style.display="block";
+  gallery.style.display="table"; //Will change Tuesday
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">My Photo Gallery</div>
+    <div id="mainNavigation">Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/></div>
+      <div id="content">
+        <button class="thumb" onclick="showGallery(0);"><img class="thumb" src="thumbnails/cube.jpg"/></button>
+        <button class="thumb" onclick="showGallery(1);"><img class="thumb" src="thumbnails/globe.jpg"/></button>
+        <button class="thumb" onclick="showGallery(2);"><img class="thumb" src="thumbnails/labyrinth.jpg"/></button>
+        <button class="thumb" onclick="showGallery(3);"><img class="thumb" src="thumbnails/origami.jpg"/></button>
+        <button class="thumb" onclick="showGallery(4);"><img class="thumb" src="thumbnails/origami2.jpg"/></button>
+        <button class="thumb" onclick="showGallery(5);"><img class="thumb" src="thumbnails/scarf.jpg"/></button>
+        <button class="thumb" onclick="showGallery(6);"><img class="thumb" src="thumbnails/symmetry.jpg"/></button>
+        <button class="thumb" onclick="showGallery(7);"><img class="thumb" src="thumbnails/wood.jpg"/></button>
+      </div>
+  </div>
+  <div id="gallery">
+    <div id="photoDiv">
+      <img id="photo" />
+      <div id="caption"></div>
+    </div>
+    <button id="rightButton" onclick="showGallery(currentImage+1)">&rightarrow;</button>
+    <button id="leftButton" onclick="showGallery(currentImage-1)">&leftarrow;</button>
+<button id="close" onclick="closeGallery();">X</button>
+  </div>
+</body>
+</html>

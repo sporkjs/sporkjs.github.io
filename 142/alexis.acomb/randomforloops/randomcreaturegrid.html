@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+  <title>Random For Loops</title>
+  <link rel="stylesheet" href="random.css" />
+  <script src="spork.js"></script>
+  <script>
+
+  function randomCreature(x,y,r){
+  save();
+  translate(x,y);
+  scale(r/100);
+
+  //Face Background
+  ellipse(0,0,100,150);
+  fillcolor("white");
+  fill();
+
+  //Inner Face
+  save();
+  translate(-45,-20);
+  ellipse(0,0,50,100);
+  fillcolor("black");
+  fill();
+  restore();
+
+  //Ears
+  save();
+  translate(135,-80);
+  rotate(60);
+  ellipse(0,0,30,65);
+  fillcolor("black");
+  fill();
+  restore();
+
+  save();
+  translate(-135,-80);
+  rotate(-60);
+  ellipse(0,0,30,65);
+  fillcolor("black");
+  fill();
+  restore();
+
+
+  //Inner Ears
+  save();
+  translate(135,-77);
+  rotate(60);
+  ellipse(0,0,15,65);
+  fillcolor("pink");
+  fill();
+  restore();
+
+  save();
+  translate(-135,-77);
+  rotate(-60);
+  ellipse(0,0,15,65);
+  fillcolor("pink");
+  fill();
+  restore();
+
+  //Eyes
+  save();
+  translate(75,-20);
+  ellipse(0,0,15,15);
+  fillcolor("white");
+  fill();
+  restore();
+
+  save();
+  translate(-75,-20);
+  ellipse(0,0,15,15);
+  fillcolor("white");
+  fill();
+  restore();
+
+  //Inner Eyes
+  save();
+  translate(-75,-20);
+  ellipse(0,0,5,5);
+  fillcolor("black");
+  fill();
+  restore();
+
+  save();
+  translate(75,-20);
+  ellipse(0,0,5,5);
+  fillcolor("black");
+  fill();
+  restore();
+
+
+  //Nose
+  translate(0,85);
+  quad(-45,45,45,45,25,15,-25,15);
+  fillcolor("pink");
+  fill();
+
+  //Inner Nose
+  save();
+  translate(0,85);
+  circle(15,-55,6);
+  fillcolor("black");
+  fill();
+  restore();
+
+  save();
+  translate(0,85);
+  circle(-15,-55,6);
+  fillcolor("black");
+  fill();
+  restore();
+  }
+
+  function setup(){
+
+  }
+  function draw(){
+
+   var i;
+   var x,y,r;
+     for (i=0;i<20;i=i+1){
+      save();
+      x=random()*width;
+      y=random()*height;
+      r=random()*100;
+    	randomCreature(x,y,15);
+      restore();
+     }
+   }
+
+  </script>
+  <style>
+#randomcreaturegridTab{
+  background: lightgray;
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+      Random For Loops
+    </div>
+    <div id="primaryNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="randomradiusTab"><a href="randomradius.html">Random Circle Grid</a></div>
+      <div class="tab" id="randomcreaturesizeTab"><a href="randomcreaturesize.html">Random Creature Size</a></div>
+      <div class="tab" id="creaturegridcolorTab"><a href="creaturegridcolor.html">Creature Color Grid</a></div>
+      <div class="tab" id="randomcreaturegridTab"><a href="randomcreaturegrid.html">Random Creature Grid</a></div>
+      <div class="tab" id="circlepatternloopTab"><a href="circlepatternloop.html">Circle Pattern Loop With Friends</a></div>
+      <div class="tab" id="geometricshapeTab"><a href="geometricshape.html">Geometric Shape</a></div>
+      <div class="tab" id="creatureanimationTab"><a href="creatureanimation.html">Creature Animation</a></div>
+
+    </div>
+    <div id="content">
+
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/>
+    </div>
+  </div>
+</body>
+
+</html>

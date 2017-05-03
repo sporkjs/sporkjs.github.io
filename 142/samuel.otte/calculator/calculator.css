@@ -1,0 +1,59 @@
+table{
+  border-collapse:collapse;
+  text-align: center;
+}
+button{
+  padding: 0px;
+  margin:0px;
+  background-color:lightgreen;
+}
+td{
+  padding: 0px;
+  margin:0px;
+}
+button.number{
+  width: 100px;
+  height: 100px;
+  boarder-radius: 0px;
+  font-size: 40px;
+}
+button.equal{
+  width: 200px;
+  height: 100px;
+  boarder-radius: 0px;
+  font-size: 40px;
+}
+#display{
+  width:400px;
+  height: 100px;
+  background:black;
+  font-size:45px;
+  text-align: right;
+  line-height: 100px;
+  vertical-align: middle;
+  color: lightgreen;
+  overflow:hidden;
+  padding-right:10px;
+}
+#wrapper{
+  background-color: white;
+  width: 400px;
+  margin:auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#titleBar{
+  background-color: lightgreen;
+  font-size:50px;
+  text-shadow: 1px 1px black;
+  padding: 10px;
+  text-align:center;
+}
+#content{
+  text-align:center;
+}
+#secondaryNavigationDiv{
+  text-align: center;;
+  font-size: 12px;
+  clear:both;
+}

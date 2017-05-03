@@ -1,0 +1,33 @@
+div{
+}
+#wrapper{
+text-align: center;
+width: 100%;
+margin:auto;
+border-radius:15px;
+overflow:hidden;
+background: black;
+}
+#titleBar{
+background-color: lightblue;
+font-size: 60px;
+color:white;
+padding:10px;
+text-shadow:5px 5px black;
+}
+#mainNavigation{
+position:fixed;
+left:0px;
+
+}
+#content{
+margin:30px;
+overflow: hidden;
+}
+#secondaryNavigation{
+
+}
+div.tab{
+  font-size: 25px;
+  padding: 20px;
+}

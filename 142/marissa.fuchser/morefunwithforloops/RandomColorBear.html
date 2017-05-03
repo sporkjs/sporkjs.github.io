@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+  <title>Random Color Bears</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+function creature(x,y,r){
+  var possibleEyecolor=['green','blue','orange','purple', 'yellow'];
+  var possibleEarcolor=['green','blue','orange','purple', 'yellow'];
+  var possibleNosecolor=['green','blue','orange','purple', 'yellow'];
+  var possibleFurcolor=['green','blue','orange','purple', 'yellow'];
+ var possibleHeadcolor=['green','blue','orange','purple', 'yellow'];
+  var Eyecolor=possibleEyecolor.random();
+  var Earcolor=possibleEarcolor.random();
+  var Nosecolor=possibleNosecolor.random();
+  var Furcolor=possibleFurcolor.random();
+  var Headcolor=possibleHeadcolor.random();
+  save();
+  translate(x,y);
+  scale(r/100);
+
+
+     //Right Leg
+  circle(50,110,30);
+  fillcolor(Furcolor);
+  fill();
+  //Left Leg
+  circle(-50,110,30)
+  fillcolor(Furcolor);
+  fill();
+  //Left Foot
+  // Body
+  circle(0,30,100);
+  fillcolor(Furcolor);
+  fill();
+  //Right Ear
+  circle(50,-140,20);
+  fillcolor(Furcolor);
+  fill();
+  //Right Inner Ear
+  circle(49,-137,15);
+  fillcolor(Earcolor);
+  fill();
+  //Left Ear
+  circle(-50,-140,20);
+  fillcolor(Furcolor);
+  fill();
+  //Left Inner Ear
+  circle(-49,-137,15);
+  fillcolor(Earcolor);
+  fill();
+  //Head
+  circle(0,-70,80);
+  fillcolor(Headcolor);
+  fill();
+  //Muzzle
+  ellipse(0,-50,-50,40);
+  fillcolor(145,120,80);
+  fill();
+  //Nose
+  ellipse(0,-55,-10,7);
+  fillcolor(Nosecolor);
+  fill();
+
+  //Left Arm
+  circle(-60,10,30);
+  fillcolor(Furcolor);
+  fill();
+  //Right Eye
+  circle(30,-90,7);
+  fillcolor(Eyecolor);
+  fill();
+  //Left eye
+  circle(-30,-90,7);
+  fillcolor(Eyecolor);
+  fill();
+  //Mouth
+  line(-19,-37,-18,-36,-17,-35,-15,-34,-5,-35,-2,-38,-1,-43,0,-48,1,-43,2,-38,5,-35,15,-34,17,-35,15,-33,17,-35,18,-36,19,-37);
+  //Right Foot
+  ellipse(50,145,30,12)
+  fillcolor(Furcolor);
+  fill();
+  //Left Foot
+  ellipse(-50,145,30,12)
+  fillcolor(Furcolor);
+  fill();
+  //Paw
+  circle(-60,17,15)
+  fillcolor(145,120,80);
+  fill();
+  //Paw1
+  circle(-77,0,6);
+  fillcolor(145,120,80)
+  fill();
+  //Paw2
+  circle(-60,-7,6)
+  fillcolor(145,120,80)
+  fill();
+  //Paw3
+  circle(-42,0,6)
+  fillcolor(145,120,80)
+  fill();
+  //Right Arm
+  circle(64,121,30)
+  fillcolor(Furcolor);
+  fill();
+  //Right Paw
+  ellipse(65,147,30,15);
+  fillcolor(Furcolor);
+  fill();
+  restore();
+}
+
+function setup(){
+}
+function draw(){
+  var x;
+  for(x=45; x<width;x=x+100)
+      for (y=45;y<height;y=y+110){
+    creature(x,y,35);
+ }
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleBar"> More Fun with For Loops</div>
+  <div id="mainNavigation">
+<div class='tab'>
+<a href='RandomLocationCreature.html'>Random Location Creature</a></div>
+<div class='tab'>  <a href='RandomColorBear.html'>Random Color Bear</a></div>
+<div class='tab'>  <a href='RandomSizeCreature.html'>Random Size Creature</a></div>
+<div class='tab'>  <a href='RandomCircleGrid.html'>Random Circle Grid</a></div>
+<div class='tab'>  <a href='CarpetPattern.html'>Carpet Pattern</a></div>
+<div class='tab'>  <a href='RandomArrowPattern.html'>ArrowPattern</a></div>
+<div class='tab'>  <a href='../index.html'>Home</a></div>
+</div>
+  <div id="content">
+    <div id="spork"></div>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <title>Circle Pattern</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    translate (200,200);
+  }
+
+  function draw(x,y){
+
+    var x;
+    var d;
+
+    save();
+    translate(x,y);
+
+  //blue center cirle
+     circle(0,0,30);
+     fillcolor(0,0,128);
+     fill();
+
+   //green triangle lines
+    save();
+    for (x=50;x<width;x=x+15){
+      rotate(150*x);
+      color("lightgreen");
+      linewidth(3);
+      line(25,25,50,30,35,10);
+    }
+    restore();
+
+  //inner first ring (doesn't work)
+    save();
+   	color("lightblue");
+    	linewidth(3);
+    	circle(0,0,65);
+    restore();
+
+  //inner second ring (doesn't work)
+    save();
+   	color("magenta");
+    	linewidth(3);
+   	 circle(0,0,80);
+    restore();
+
+  //yellow circles
+    for (x=50;x<width;x=x+15){
+      save();
+      rotate(x);
+      circle(120,0,10);
+      color("gold");
+      fillcolor("gold");
+      fill();
+      restore();
+    }
+
+  //outside blue circles
+    for (x=0;x<360;x=x+20){
+      save();
+      rotate(x);
+      circle(150,0,5);
+      color("lightblue");
+      fillcolor("lightblue");
+      fill();
+      restore();
+    }
+
+  //pink lines
+    for (x=50;x<width;x=x+15){
+    save();
+    color("pink");
+    rotate(x);
+      linewidth(3);
+    line(0,-105,0,-85);
+    restore();
+    }
+
+  //outermost ring
+    save();
+   	color("orange");
+    	linewidth(3);
+    circle(0,0,170);
+    restore();
+
+
+    restore();
+
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Circle Pattern</div>
+    <div id="content">
+      <div id="spork"></div>
+    </div>
+    <div>
+      <a href="index.html">For Loops Home</a>
+    </div>
+  </div>
+</body>
+</html>

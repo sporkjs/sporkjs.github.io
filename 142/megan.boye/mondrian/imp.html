@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>MONDRIAN</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <style></style>
+  <script src='spork.js'></script>
+  <script>
+  var small=10;
+
+  function myRect(x,y,w,h){
+    x=floor(x);
+    y=floor(y);
+
+    fillcolor(R[x][y],G[x][y],B[x][y]);
+    fillrect(x,y,w,h);
+    fill();
+  }
+
+  function mgrid(x,y,w,h){
+    var l,k;
+
+    if ((w<small)||(h<small)){
+      myRect(x,y,w,h);
+    }
+    else if (w>h){ 			//wide
+      l=random()*w;
+      mgrid(x,y,l,h);			//left
+      mgrid(x+l,y,w-l,h);		//right
+    }
+    else { 					//tall
+      k=random()*h;
+      mgrid(x,y,w,k);			//top
+      mgrid(x,y+k,w,h-k);		//bottom
+    }
+  }
+
+    var R=[];
+    var G=[];
+    var B=[];
+    var A=[];
+
+  function setup(){
+      size(theImage.width,theImage.height);
+      drawImage(theImage,width/2,height/2,width,height);
+      copyImageData(R,G,B,A);
+      clear();
+    }
+  function draw(){
+      mgrid(0,0,width,height);
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">MONDRIAN</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a></div>
+      <div class="tab" id="rectTab"><a href ="rect.html"> Random Color </a></div>
+      <div class="tab" id="geoTab"><a href ="geo.html"> Geometric </a></div>
+      <div class="tab" id="impTab"><a href ="imp.html"> Impressionism </a></div>
+    </div>
+    <div id="spork"></div>
+    <img src="sunset1.jpg" id="theImage" />
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

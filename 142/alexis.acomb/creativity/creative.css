@@ -1,0 +1,36 @@
+body{
+  background-color: darkolivegreen;
+    text-align: center;
+}
+#wrapper{
+  background-color: darkslategray;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#titleDiv{
+  background-color: darkslateblue;
+  color: white;
+  font-size: 50px;
+  text-shadow: 1px 1px black;
+  padding: 10px;
+}
+#primaryNavigation{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+#content{
+padding: 10px;
+font-size: 19px;
+}
+#secondaryNavigation{
+text-align: right;
+border-top: 1px solid gray;
+font-size: 13px;
+padding-right: 9px;
+clear: both;
+}
+#spork{
+
+}

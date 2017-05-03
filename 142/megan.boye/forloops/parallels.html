@@ -1,0 +1,55 @@
+<!doctype html>
+  <html>
+  <head>
+    <title>PARALLELS</title>
+    <link rel="stylesheet" href="skeleton.css">
+    <script src="spork.js"></script>
+    <script>
+
+    function setup(){
+  }
+  function draw(){
+
+    var y;
+
+    for (y=0;y<height;y=y+7){
+
+      line(0,y,400,y);
+      }
+
+    	color(0,0,0,0);
+    	fillcolor("white");
+      circle(200,200,150);
+    	fill();
+
+
+      clip();
+
+    	color("black");
+
+    var x;
+
+    for (x=0;x<width;x=x+7){
+
+      line(x,0,x,400);
+    	}
+
+  }
+
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Fun With For Loops</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a> </div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

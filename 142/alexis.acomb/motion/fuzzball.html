@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>Animation Motion</title>
+  <link rel="stylesheet" href="motion.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+   loop();
+   color(0,0,0,0.25);
+   translate(width/2,height/2);
+  }
+  function draw(){
+    var randomColors=['black',
+               'darkorange',
+               'gray',
+               'lightgray',
+                'orange',
+               ]
+    var x,y;
+    var vx,vy;
+    var angle;
+    var ax,ay;
+    var i;
+    rotate(100);
+    color(randomColors.random());
+    x=0;
+    y=0;
+    vx=0;
+    vy=0;
+    ax=0;
+    ay=0;
+    for (i=0;i<25;i++){
+      line(x,y,x+vx,y+vy);
+
+      x=x+vx;
+      y=y+vy;
+
+      ax=random();
+      ay=2*(random()-0.5);
+
+      vx=vx+ax;
+      vy=vy+ay;
+
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">Animation Motion</div>
+    <div id="primaryNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="mathTab"><a href="fuzzball.html">Fuzz Ball</a></div>
+      <div class="tab" id="philosophyTab"><a href="creature.html">Bouncing Creature</a></div>
+      <div class="tab" id="referenceTab"><a href="brownian.html">Brownian</a></div>
+      <div class="tab" id="homeTab"><a href="random.html">Random Mark</a></div>
+      <div class="tab" id="mathTab"><a href="spots.html">Spots</a></div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+      <button onclick="stoploop();">Stop</button>
+      <button onclick="startloop();">Start</button>
+      <button onclick="startover();">Start Over</button>
+    </div>
+  </div>
+</body>
+</html>

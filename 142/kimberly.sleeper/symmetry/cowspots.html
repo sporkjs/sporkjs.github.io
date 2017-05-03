@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Symmetric Cow Spots</title>
+  <link rel="stylesheet" href="symmetry.css">
+  <script src="spork.js"></script>
+  <script>
+  //COW SPOTS
+  function setup(){
+    setupNoise(10);
+    color("transparent");
+  }
+
+  function symmetricPoint(x,y){
+    fillrect(x,y,1,1);
+    fillrect(y,x,1,1);
+  }
+
+  function draw(){
+    var x,y;
+    for (x=0;x<=width;x=x+1)
+      for (y=x;y<=height;y=y+1){
+        if (noise(x/width,y/height)<0)
+          fillcolor('black');
+        else
+          fillcolor('white');
+        symmetricPoint(x,y,1,1);
+      }
+    save();
+    circle(200,200,width/2);
+    clip();
+    restore();
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Symmetric Cow Spots</div>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">Symmetry Home</a>
+  </div>
+</body>
+</html>

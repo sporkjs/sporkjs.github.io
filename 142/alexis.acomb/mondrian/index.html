@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mondrian Grid</title>
+  <link rel="stylesheet" href="grid.css" />
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    translate(200,200);
+  }
+  function draw(){
+    //Face Background
+    ellipse(0,0,100,150);
+    fillcolor("white");
+    fill();
+
+    //Inner Face
+    save();
+    translate(-45,-20);
+    ellipse(0,0,50,100);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //Ears
+    save();
+    translate(135,-80);
+    rotate(60);
+    ellipse(0,0,30,65);
+    fillcolor("black");
+    fill();
+    restore();
+
+    save();
+    translate(-135,-80);
+    rotate(-60);
+    ellipse(0,0,30,65);
+    fillcolor("black");
+    fill();
+    restore();
+
+
+    //Inner Ears
+    save();
+    translate(135,-77);
+    rotate(60);
+    ellipse(0,0,15,65);
+    fillcolor("pink");
+    fill();
+    restore();
+
+    save();
+    translate(-135,-77);
+    rotate(-60);
+    ellipse(0,0,15,65);
+    fillcolor("pink");
+    fill();
+    restore();
+
+    //Eyes
+    save();
+    translate(75,-20);
+    ellipse(0,0,15,15);
+    fillcolor("white");
+    fill();
+    restore();
+
+    save();
+    translate(-75,-20);
+    ellipse(0,0,15,15);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //Inner Eyes
+    save();
+    translate(-75,-20);
+    ellipse(0,0,5,5);
+    fillcolor("black");
+    fill();
+    restore();
+
+    save();
+    translate(75,-20);
+    ellipse(0,0,5,5);
+    fillcolor("black");
+    fill();
+    restore();
+
+
+    //Nose
+    translate(0,85);
+    quad(-45,45,45,45,25,15,-25,15);
+    fillcolor("pink");
+    fill();
+
+    //Inner Nose
+    save();
+    translate(0,85);
+    circle(15,-55,6);
+    fillcolor("black");
+    fill();
+    restore();
+
+    save();
+    translate(0,85);
+    circle(-15,-55,6);
+    fillcolor("black");
+    fill();
+    restore();
+  }
+  </script>
+  <style>
+#homeTab{
+  background: lightgray;
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+      Mondrian Grid
+    </div>
+    <div id="primaryNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="gridTab"><a href="grid.html">Mondrian Grid</a></div>
+      <div class="tab" id="gridTab"><a href="geometric.html">Geometric Mondrian Grid</a></div>
+    </div>
+    <div id="content">
+
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/>
+    </div>
+  </div>
+</body>
+
+</html>

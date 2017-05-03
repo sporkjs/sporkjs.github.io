@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <title>HOME</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  var x,y;
+  var vy;
+  var finalY;
+  var tx,ty;
+  var tvy;
+  var tfinalY;
+  var tcolor;
+  var qcolor;
+
+  function q(x,y){
+    save();
+      fillcolor(qcolor);
+      quad(x,y,
+        x+200,y+400,
+        x,y+250,
+        x-200,y+400);
+      fill();
+    restore();
+  }
+  function t(x,y){
+    save();
+      fillcolor(tcolor);
+        triangle(x,y,
+         x+200,y-100,
+         x-200,y-100);
+      fill();
+    restore();
+}
+  function setup(){
+    size(400,800);
+    x=width/2;
+    y=-2*height*random();
+    vy=1;
+    finalY=400
+    tx=width/2;
+    ty=-2*height*random();
+    tvy=1;
+    tfinalY=650
+    loop();
+    tcolor=rgb(floor(random()*256),
+                   floor(random()*256),
+                   floor(random()*256))
+    qcolor=rgb(floor(random()*256),
+                   floor(random()*256),
+                   floor(random()*256))
+    }
+    function draw(){
+      clear();
+      q(x,y);
+      t(tx,ty);
+
+      if(y<finalY){
+        y=y+vy;
+      }
+      if(ty<tfinalY){
+      ty=ty+tvy;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Creative Project</div>
+    <div id="content">
+      <div id="spork"></div>
+        <button onclick='startover();'>Start Over</button>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

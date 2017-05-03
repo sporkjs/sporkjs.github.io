@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <title>INSERT TITLE HERE</title>
+  <link rel="stylesheet" href="PAINT.css">
+  <script src="spork.js"></script>
+  <script>
+  var lastX, lastY;
+function onmousedown(){
+  lastX=mouseX;
+  lastY=mouseY;
+}
+function pencil(){
+  if (mouseDown){
+    line(lastX,lastY,mouseX,mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+function fuzz(){
+  if (mouseDown){
+save();
+linewidth(1);
+translate(mouseX,mouseY);
+rotate(random()*360);
+line(-theLineWidth,0,theLineWidth,0);
+restore();
+  }
+}
+function curve(){
+  if (mouseDown){
+save();
+linewidth(1);
+translate(mouseX,mouseY);
+rotate(random()*360);
+arc(0,0,theLineWidth,0,90);
+restore();
+  }
+}
+var theLineWidth;
+  function setup(){
+    size(800,400);
+    background("white");
+    theLineWidth=7;
+    linewidth(theLineWidth)
+onmousemove=pencil;
+  }
+  function draw(){
+
+  }
+  function setLineWidth(x){
+    linewidth(x);
+    theLineWidth=x;
+  }
+  function setPenType(x){
+    onmousemove=x;
+  }
+  function selectEraser(){
+    eraserWidth.checked=true;
+    eraserColor.checked=true;
+    color("white");
+    linewidth(30);
+    onmousemove=pencil;
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Drawing!</div>
+    <div id="mainNavigation"></div>
+    <div id="content">Draw Below
+      <div class='tab'>  <a href='../index.html'>Home</a></div>
+
+      <div id="spork"></div>
+      <button onclick="background('white');">Clear</button>
+      <fieldset>
+        <legend>
+          Pen Type
+        </legend>
+        <input type='radio' name="penType" checked onclick="setPenType(pencil);" /> Pencil
+        <input type='radio' name="penType" onclick="setPenType(fuzz);" /> Fuzz
+        <input type='radio' name="penType" onclick="setPenType(curve);" /> Curve
+        <input type='radio' name="penType" onclick="selectEraser();" /> Eraser
+
+      </fieldset>
+<fieldset>
+  <legend>
+    Pen Tip
+  </legend>
+
+      <input type="radio" name="penTip" onclick="setLineWidth(1);"/><div class='penTip one'></div>
+      <input type="radio" name="penTip" onclick="setLineWidth(3);"/><div class='penTip three'></div>
+      <input type="radio" name="penTip" onclick="setLineWidth(5);"/><div class='penTip five'></div>
+      <input type="radio" name="penTip" checked onclick="setLineWidth(7);"/><div class='penTip seven'></div>
+      <input type="radio" name="penTip" onclick="setLineWidth(10);"/><div class='penTip ten'></div>
+      <input type="radio" name="penTip" onclick="setLineWidth(15);"/><div class='penTip fifteen'></div>
+      <input type="radio" name="penTip" onclick="setLineWidth(50);"/><div class='penTip fifty'></div>
+      <input type="radio" name="penTip" onclick="setLineWidth(30);"id='eraserWidth'/><div class='penTip thirty'></div>
+
+
+</fieldset>
+<fieldset>
+<legend>
+  Pen Color
+</legend>
+
+        <input type="radio" name="penColor" checked onclick="color('black')" /> <div class='penTip five'></div>
+      <input type="radio" name="penColor" onclick="color('green')" /> <div class='penTip five green'></div>
+      <input type="radio" name="penColor" onclick="color('purple')" /><div class='penTip five purple'></div>
+      <input type="radio" name="penColor" onclick="color('blue')" /><div class='penTip five blue'></div>
+      <input type="radio" name="penColor" onclick="color('yellow')" /><div class='penTip five yellow'></div>
+      <input type="radio" name="penColor" onclick="color('white')" id='eraserColor' /><div class='penTip five white'></div>
+      <input type="radio" name="penColor" onclick="color('orange')" /><div class='penTip five orange'></div>
+      <input type="radio" name="penColor" onclick="color('red')" /><div class='penTip five red'></div>
+      <input type="radio" name="penColor" onclick="color('grey')" /><div class='penTip five grey'></div>
+
+
+
+</fieldset>
+
+
+    </div>
+    <div id="secondaryNavigation"></div>
+  </div>
+</body>
+</html>

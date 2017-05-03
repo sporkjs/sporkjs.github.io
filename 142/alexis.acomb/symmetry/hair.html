@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <title>Symmetry</title>
+  <link rel="stylesheet" href="symmetry.css" />
+  <script src="spork.js"></script>
+  <script>
+  function randomColor(){
+ var theColors=['gold',
+               'gray',
+               'royalblue',
+               'indigo',
+               'darkorange'];
+  color(theColors.random());
+}
+
+function hair(x,y,k){
+var vx,vy;
+var i,j;
+var ang;
+for (R=0;R<100;R=R+1){
+ang=noise(abs(x/width),abs(y/height))*360;
+vx=COS(ang);
+vy=SIN(ang);
+symmetricLine(x,y,(x+vx),(y+vy),k);
+x=x+vx;
+y=y+vy;
+}
+}
+ var R;
+function setup(){
+setupNoise(15);
+  translate(200,200);
+  R=width/4;
+}
+function draw(){
+  var k;
+   var x,y;
+  k=floor(2*random());
+  for (i=0;i<100;i=i+1){
+  x=random()*R/2;
+  y=random()*R/2;
+  randomColor();
+  hair(x,y,5);
+  }
+}
+function symmetricLine(x1,y1,x2,y2,k){
+  var i;
+  for(i=0;i<k;i=i+1){
+  line(x1,y1,x2,y2);
+  line(y1,x1,y2,x2);
+  rotate(360/k);
+  }
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+      Symmetry with Motion/Noise Project
+    </div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="hairTab"><a href="hair.html">Hair</a></div>
+      <div class="tab" id="brownianTab"><a href="brownian.html">Brownian</a></div>
+      <div class="tab" id="projectileTab"><a href="projectile.html">Projectile</a></div>
+      <div class="tab" id="randomTab"><a href="random.html">Random Static</a></div>
+      <div class="tab" id="smoothTab"><a href="smooth.html">Smooth Static</a></div>
+      <div class="tab" id="funkyTab"><a href="funky.html">Funky Static</a></div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/>
+    </div>
+  </div>
+</body>
+</html>

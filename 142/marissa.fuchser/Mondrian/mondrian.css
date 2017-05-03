@@ -1,0 +1,35 @@
+body{background: black;
+}
+#wrapper{
+text-align: center;
+background-color: white;
+width: 80%;
+margin:auto;
+border-radius:15px;
+overflow:hidden;
+}
+#titleBar{
+  background-color: red;
+  color:white;
+  font-size:45px;
+  padding:20px;
+  text-shadow:5px 5px black;
+}
+#mainNavigation{
+position:fixed;
+left:0px;
+background-color:lightgrey;
+color: white;
+}
+#content{
+margin:30px;
+overflow: hidden;
+}
+#secondaryNavigation{
+
+}
+div.tab{
+  font-size: 25px;
+  padding: 20px;
+
+}

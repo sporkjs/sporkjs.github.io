@@ -1,0 +1,25 @@
+div{
+}
+#wrapper{
+text-align: center;
+}
+#titleBar{
+background-color: purple;
+font-size: 60px;
+}
+#mainNavigation{
+position:fixed;
+left:0px;
+
+}
+#content{
+margin:30px;
+overflow: hidden;
+}
+#secondaryNavigation{
+
+}
+div.tab{
+  font-size: 25px;
+  padding: 20px;
+}

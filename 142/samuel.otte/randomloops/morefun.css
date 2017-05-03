@@ -1,0 +1,36 @@
+div{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+body{
+  background-color: lightgray;
+}
+
+#wrapper{
+  text-align: center;
+  background-color:white;
+}
+
+#titleBar{
+  background-color: brown;
+  font-size:50px;
+  text-shadow: 1px 1px black;
+}
+
+#content{
+  text-align: center;
+}
+
+#secondaryNavigationDiv{
+  text-align: right;
+  font-size: 12px;
+  padding-right: 10px;
+  clear:both;
+}
+
+img.small{
+  height: 150px;
+  margin:5px;
+}

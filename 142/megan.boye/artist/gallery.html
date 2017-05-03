@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script>
+
+  theCaptions=["Meta-Google, 2016-2017. Meta-Google confronts William Burroughs' heritage with Google, the symbol company of today's soft global digital capitalism, in order to question our relationship with pictorial digital proliferation.",
+          "Text(e)~Fil(e)s, 2015. Text(e)~Fil(e)s is a monumental 252-m-long floor ribbon, on which thousands of text lines (literature, poetry, philosophy) in relation to the Palais Royal proliferate, at different scales.",
+          "Google_Color, 2007-2011. For these works, a search engine ('Google') is used to download ten thousand of internet images that match color name keyword like black, white, red, blue, pink.",
+          "Hyper-Structures, 2002-2004. This series is based on the idea of opening and closing geometric space.",
+          "Antisana Virus, 2001-2003. Site specific installation realized in 2001 by continuously printing a geometric proliferation algorithm on a large format printer installed in the gallery.",
+  ];
+
+  theImages=[ "images/time.png",
+          "images/file.jpg",
+          "images/google.jpg",
+          "images/geo.jpg",
+          "images/random.jpg",
+  ];
+
+var currentImage=0;
+var lastImage=theImages.length-1;
+    function closeGallery(){
+      gallery.style.display="none";
+   }
+    function showGallery(n){
+      photo.src=theImages[n];
+      currentImage=n;
+      caption.innerHTML=theCaptions[n];
+      if (currentImage==0)
+        leftButton.style.display="none";
+      else
+        leftButton.style.display="block";
+      if (currentImage==lastImage)
+        rightButton.style.display="none";
+      else
+        rightButton.style.display="block";
+      gallery.style.display="table";
+    }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Pascal Dombis</div>
+    <div id="primaryNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a> </div>
+      <div class="tab" id="bioTab"><a href ="bio.html"> Biography </a> </div>
+      <div class="tab" id="worksTab"><a href ="works.html"> Works </a> </div>
+      <div class="tab" id="galleryTab"><a href ="gallery.html"> Gallery </a> </div>
+      <div class="tab" id="refTab"><a href ="ref.html"> References </a> </div>
+    </div>
+    <div id="content">
+      <button class="thumb" onclick="showGallery(0);"><img class="thumb" src="thumbnails/time.png"/></button>
+      <button class="thumb" onclick="showGallery(1);"><img class="thumb" src="thumbnails/file.jpg"/></button>
+      <button class="thumb" onclick="showGallery(2);"><img class="thumb" src="thumbnails/google.jpg"/></button>
+      <button class="thumb" onclick="showGallery(3);"><img class="thumb" src="thumbnails/geo.jpg"/></button>
+      <button class="thumb" onclick="showGallery(4);"><img class="thumb" src="thumbnails/random.jpg"/></button>
+
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+      <div id="gallery">
+          <div id="photoDiv">
+            <img id="photo"/>
+              <div id="caption"></div>
+              </div>
+                <button id="rightButton" onclick="showGallery(currentImage+1)">&rightarrow;</button>
+                <button id="leftButton" onclick="showGallery(currentImage-1)">&leftarrow;</button>
+              </div>
+          <button id="close" onclick="closeGallery();">X</button>
+</body>
+</html>

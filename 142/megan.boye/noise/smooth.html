@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>SMOOTH</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+      function setup(){
+        setupNoise(5);
+
+      }
+      function draw(){
+        var x,y
+        var c
+
+        for(x=0;x<=width;x=x+1)
+        for(y=0;y<=height;y=y+1){
+          c=floor(128*(noise(x/width,y/height)+1));
+          fillcolor(c,c,c);
+          fillrect(x,y,1,1);
+        }
+      }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">NOISE</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a></div>
+      <div class="tab" id="ranTab"><a href ="random.html"> Random </a></div>
+      <div class="tab" id="smoTab"><a href ="smooth.html"> Smooth </a></div>
+      <div class="tab" id="funTab"><a href ="funky.html"> Funky </a></div>
+      <div class="tab" id="cowTab"><a href ="cow.html"> Cow </a></div>
+      <div class="tab" id="hairTab"><a href ="hair.html"> Hair </a></div>
+      <div class="tab" id="wavyTab"><a href ="wavy.html"> Wavy </a></div>
+      <div class="tab" id="gridTab"><a href ="grid.html"> Grid </a></div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+        <button onclick='startover();'>Start Over</button>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

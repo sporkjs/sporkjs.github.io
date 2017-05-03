@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <title>Paint Program Example</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+var lastX, lastY;
+function onmousedown(){
+  lastX=mouseX;
+  lastY=mouseY;
+}
+function pencil(){
+  if (mouseDown){
+   line(lastX,lastY,mouseX,mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+function fuzz(){
+  if (mouseDown){
+    save();
+    linewidth(1);
+    translate(mouseX,mouseY);
+    rotate(random()*360);
+    line(-theLineWidth,0,theLineWidth,0);
+    restore();
+  }
+}
+function rect(){
+  if (mouseDown){
+    save();
+    linewidth(1);
+    translate(mouseX,mouseY);
+    rotate(random()*360);
+    rect(mouseX,mouseY,theLineWidth,theLineWidth);
+    fill();
+    restore();
+  }
+}
+var theLineWidth;
+  function setup(){
+size(800,400);
+background('white');
+theLineWidth=1;
+onmousemove=pencil;
+  }
+  function draw(){
+
+  }
+  function setLineWidth(x){
+    linewidth(x);
+    theLineWidth=x;
+  }
+  function setPenType(x){
+    onmousemove=x;
+  }
+  function selectEraser(){
+    eraserWidth.checked=true;
+    eraserColor.checked=true;
+    color('white');
+    onmousemove=pencil;
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Paint Program Example</div>
+    <div id="content">Freakin' Draw Already
+      <div id="spork"></div>
+      <button onclick="background('white');">Clear</button>
+      <fieldset>
+        <legend>
+          Pen Type
+        </legend>
+        <input type="radio" name="penType" checked onclick="setPenType(pencil);" /> Pencil
+        <input type="radio" name="penType" onclick="setPenType(fuzz);" /> Fuzz
+        <input type="radio" name="penType" onclick="selectEraser();" /> Eraser
+      </fieldset>
+      <fieldset>
+        <legend>
+          Pen Size
+        </legend>
+        <input type="radio" name="penSize" checked onclick="setLineWidth(1);"/><div class="penSize one"></div>
+        <input type="radio" name="penSize" onclick="setLineWidth(5);"/><div class="penSize five"></div>
+        <input type="radio" name="penSize" onclick="setLineWidth(10);"/><div class="penSize ten"></div>
+        <input type="radio" name="penSize" onclick="setLineWidth(25);" id="eraserWidth"/><div class="penSize twenty-five"></div>
+        <input type="radio" name="penSize" onclick="setLineWidth(50);"/><div class="penSize fifty"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Pen Color
+        </legend>
+        <input type="radio" name="penColor" checked onclick="color('black')" /><div class="penSize ten"></div>
+        <input type="radio" name="penColor" onclick="color('white')" id="eraserColor" /><div class="penSize ten white"></div>
+        <input type="radio" name="penColor" onclick="color('darkorange')" /><div class="penSize ten darkorange"></div>
+        <input type="radio" name="penColor" onclick="color('blue')" /><div class="penSize ten blue"></div>
+        <input type="radio" name="penColor" onclick="color('red')" /><div class="penSize ten red"></div>
+        <input type="radio" name="penColor" onclick="color('yellow')" /><div class="penSize ten yellow"></div>
+        <input type="radio" name="penColor" onclick="color('green')" /><div class="penSize ten green"></div>
+        <input type="radio" name="penColor" onclick="color('purple')" /><div class="penSize ten purple"></div>
+        <input type="radio" name="penColor" onclick="color('gray')" /><div class="penSize ten gray"></div>
+        <input type="radio" name="penColor" onclick="color('brown')" /><div class="penSize ten brown"></div>
+      </fieldset>
+    </div>
+    <div id="secondaryNavigation">
+    Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/>
+    </div>
+  </div>
+</body>
+</html>

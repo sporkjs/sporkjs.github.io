@@ -1,0 +1,43 @@
+body{
+  background-color: black;
+}
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#titleDiv{
+  background-color: orange;
+  color: gray;
+  font-size: 50px;
+  text-shadow: 1px 1px black;
+  padding: 10px
+}
+#primaryNavigation{
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+}
+#content{
+padding: 10px;
+font-size: 19px;
+text-align: center;
+}
+#secondaryNavigation{
+text-align: right;
+border-top: 1px solid gray;
+font-size: 13px;
+padding-right: 9px;
+clear: both;
+}
+
+p.content{
+  margin: 30px;
+  text-indent: -30px;
+}
+
+div.tab{
+  display: inline-block;
+  width: 16%;
+}

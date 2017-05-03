@@ -1,0 +1,95 @@
+div{
+  border: 1px solid black;
+  padding: 10px;
+  margin:  10px;
+}
+body{
+  background-color:lightgray;
+}
+#wrapper{
+  text-align: center;
+  background-color:white;
+  border-radius:5px;
+}
+#titleBar{
+  background-color: lightgray;
+  color:black;
+  font-size:50px;
+  text-shadow: 1px 1px black;
+  border-radius: 5px;
+}
+#mainNavigation{
+
+}
+#content{
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+#secondaryNavigationDiv{
+  background-color: lightgray;
+  text-align:right;
+  font-size: 12px;
+  padding-right: 10px;
+  clear:both;
+  border-radius: 5px;
+}
+#spork{
+  background-color: white;
+}
+#eraserWidth{
+
+}
+#eraserColor{
+  
+}
+img.small{
+  height: 150px;
+  margin:5px;
+}
+
+div.pensize{
+  width:20px;
+  background:black;
+  padding:0px;
+  border:none;
+  display:inline-block;
+  vertical-align: middle;
+}
+div.two{
+  height:2px;
+}
+div.five{
+  height:5px;
+}
+div.ten{
+  height:10px;
+}
+div.twenty{
+  height:20px;
+}
+div.fifty{
+  height:50px;
+}
+div.red{
+  background:red;
+}
+div.orange{
+  background:orange;
+}
+div.yellow{
+  background:yellow;
+}
+div.green{
+  background:green;
+}
+div.blue{
+  background:blue;
+}
+div.purple{
+  background:purple;
+}
+div.white{
+  background:white;
+  border:1px;
+}

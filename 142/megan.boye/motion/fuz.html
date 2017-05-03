@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>FUZZY</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    translate(width/2,height/2);
+    loop();
+    var r, g, b, a;
+  }
+  function draw(){
+    var x,y;
+    var vx,vy;
+    var angle;
+    var ax,ay;
+    var i;
+
+    rotate(0.5);
+
+    x=0;
+    y=0;
+
+    vx=0;
+    vy=0;
+
+    ax=0;
+    ay=0;
+
+    for (i=0;i<25;i++){
+      color(0,191,255,0.1)
+      line(x,y,x+vx,y+vy);
+
+      x=x+vx;
+      y=y+vy;
+
+      ax=random();
+      ay=2*(random()-0.6);
+
+      vx=vx+ax;
+      vy=vy+ay;
+
+    }
+  }
+
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">MOTION</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a> </div>
+      <div class="tab" id="fuzTab"><a href ="fuz.html"> Fuzzy </a> </div>
+      <div class="tab" id="bouTab"><a href ="bou.html"> Bounce </a> </div>
+      <div class="tab" id="spoTab"><a href ="spot.html"> Spots </a> </div>
+      <div class="tab" id="broTab"><a href ="bro.html"> Brownian </a> </div>
+      <div class="tab" id="ranTab"><a href ="ran.html"> Random </a> </div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+        <button onclick='startloop();'>Start</button>
+        <button onclick='stoploop();'>Stop</button>
+        <button onclick='startover();'>Start Over</button>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

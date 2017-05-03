@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mondrian Grid</title>
+  <link rel="stylesheet" href="grid.css" />
+  <script src="spork.js"></script>
+  <script>
+  var small=25;
+var theFunctions=[one, two, three, four];
+function mgrid(x,y,w,h){
+  //x,y are the points
+  var l;
+  var k;
+  var f;
+  if ((w<small)||
+      (h<small)||
+     (random()<0.05)){   	//and=&& or=||
+    r=min(w/2,h/2);
+      f=theFunctions.random();
+      f(x,y,r);
+
+  }
+  else if(w>h){ 		//wide
+    l=random()*w;
+    mgrid(x,y,l,h);		//left
+    mgrid(x+l,y,w-l,h);	//right
+  }
+  else{ 				//tall
+    k=random()*h;
+    mgrid(x,y,w,k);		//top
+    mgrid(x,y+k,w,h-k);	//bottom
+  }
+}
+function one(x,y,w,h){
+  var r;
+  r=min(w/2,h/2);
+  line(x+w/2,y,x+w,y+h/2,x+w/2,y+h,x,y+h/2,x+w/2,y);
+  circle(x+w/2,y+h/2,r);
+}
+function two(x,y,w,h){
+  for(i=0;i<10;i=i+100){
+  var l,r;
+  l=random()*w;
+  r=min(w/4,h/4);
+  line(x+l,y,x+l,y+h);
+  circle(x+w/2,y+h/2,r);
+  }
+}
+function three(x,y,w,h){
+  for(i=0;i<10;i=i+100){
+    var l,k,r;
+    l=w/2;
+    k=h/2;
+    r=min(w/4,h/4);
+    line(x+l,y,x+l,y+h);
+    line(x,y+k,x+w,y+k);
+    circle(x+w/2,y+h/2,r);
+  }
+}
+function four(x,y,w,h){
+  for(i=0;i<10;i=i+1){
+    var r;
+    r=random()*min(w/2,h/2);
+    circle(x+w/2,y+h/2,r);
+  }
+}
+function setup(){
+  size(400,400);
+}
+function draw(){
+  mgrid(0,0,width,height);
+}
+  </script>
+  <style>
+#homeTab{
+  background: lightgray;
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">
+      Mondrian Grid
+    </div>
+    <div id="primaryNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="gridTab"><a href="grid.html">Mondrian Grid</a></div>
+      <div class="tab" id="gridTab"><a href="geometric.html">Geometric Mondrian Grid</a></div>
+    </div>
+    <div id="content">
+
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/>
+    </div>
+  </div>
+</body>
+
+</html>

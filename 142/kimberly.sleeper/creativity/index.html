@@ -1,0 +1,948 @@
+<!doctype html>
+<html>
+<head>
+  <title>Creativity Project: Kim Sleeper</title>
+  <link rel="stylesheet" href="creativity.css">
+  <script src="spork.js"></script>
+  <script>
+  var x,y;
+  var vx,vy;
+  var ax,ay;
+  var r;
+  var N;
+
+  var apples=[fullapple,onebite,twobite,threebite,fourbite,fivebite];
+
+  function bounce(){
+    var e=0.95;
+
+    if (x>width-r-40){
+      vx=-e*abs(vx);
+      N=(N+1)%6;
+    }
+    if (x<r-60){	//left border
+      vx=e*abs(vx);
+      N=(N+1)%6;
+    }
+    if (y>height-r-50){ //bottom border
+      vy=-e*abs(vy);
+      N=(N+1)%6;
+    }
+    if (y<r) {
+      vy=e*abs(vy);
+      N=(N+1)%6;
+    }
+  }
+
+  function setup(){
+    x=width/2;
+    y=height/2;
+    vx=random()-1.2; //velocity for x
+    vy=random()-1.2; //velocity for y
+    ax=0;			   //acceleration x
+    ay=0.01;		   //acceleration y
+    r=50;
+    N=0
+
+    loop();
+  }
+
+  function fullapple(x,y,r,c){
+  save();
+  translate(x,y);
+  scale(r/200);
+    //left apple side, red back
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor("red");
+    fill();
+    restore();
+
+    //left apple side, transparent front
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //right apple side, red back
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor("red");
+    fill();
+    restore();
+
+      //right apple side, transparent front
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //white slice
+    save();
+    rotate(3);
+    color("transparent");
+    arc(249,215,110,-107,100);
+    fillcolor("beige");
+    fill();
+    restore();
+
+    //top seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(245,190,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //middle seed
+    save();
+    rotate(90);
+    color("transparent");
+    ellipse(232,-250,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //bottom seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(248,245,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //stem
+    save();
+    color("transparent");
+    //circle(200,200,60);
+    triangle(200,90,170,18,130,8);
+    fillcolor("saddlebrown");
+    fill();
+    restore();
+
+    //leaf
+    save();
+    rotate(40);
+    color("transparent");
+    ellipse(190,-110,12,33);
+    fillcolor("mediumseagreen");
+    fill();
+    restore();
+
+    //leaf line
+    save();
+    rotate(-20);
+    color("darkgreen");
+    linewidth(2);
+    line(210,98,170,120);
+    restore();
+  restore();
+  }
+
+  function onebite(x,y,r,c){
+  save();
+  translate(x,y);
+  scale(r/200);
+    //left apple side, red back
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor("red");
+    fill();
+    restore();
+
+    //left apple side, transparent front
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //right apple side, red back
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor("red");
+    fill();
+    restore();
+
+      //right apple side, transparent front
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //white slice
+    save();
+    rotate(3);
+    color("transparent");
+    arc(249,215,110,-107,100);
+    fillcolor("beige");
+    fill();
+    restore();
+
+    //top seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(245,190,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //middle seed
+    save();
+    rotate(90);
+    color("transparent");
+    ellipse(232,-250,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //bottom seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(248,245,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //stem
+    save();
+    color("transparent");
+    //circle(200,200,60);
+    triangle(200,90,170,18,130,8);
+    fillcolor("saddlebrown");
+    fill();
+    restore();
+
+    //leaf
+    save();
+    rotate(40);
+    color("transparent");
+    ellipse(190,-110,12,33);
+    fillcolor("mediumseagreen");
+    fill();
+    restore();
+
+    //leaf line
+    save();
+    rotate(-20)
+    color("darkgreen");
+    linewidth(2);
+    line(210,98,170,120);
+    restore();
+
+    //bite1
+    save();
+    rotate(50);
+    color("transparent");
+    arc(110,10,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite2
+    save();
+    rotate(15);
+    color("transparent");
+    arc(79,160,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+  restore();
+  }
+
+  function twobite(x,y,r,c){
+  save();
+  translate(x,y);
+  scale(r/200);
+    //left apple side, red back
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor("red");
+    fill();
+    restore();
+
+    //left apple side, transparent front
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //right apple side, red back
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor("red");
+    fill();
+    restore();
+
+      //right apple side, transparent front
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //white slice
+    save();
+    rotate(3);
+    color("transparent");
+    arc(249,215,110,-107,100);
+    fillcolor("beige");
+    fill();
+    restore();
+
+    //top seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(245,190,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //middle seed
+    save();
+    rotate(90);
+    color("transparent");
+    ellipse(232,-250,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //bottom seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(248,245,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //stem
+    save();
+    color("transparent");
+    //circle(200,200,60);
+    triangle(200,90,170,18,130,8);
+    fillcolor("saddlebrown");
+    fill();
+    restore();
+
+    //leaf
+    save();
+    rotate(40);
+    color("transparent");
+    ellipse(190,-110,12,33);
+    fillcolor("mediumseagreen");
+    fill();
+    restore();
+
+    //leaf line
+    save();
+    rotate(-20)
+    color("darkgreen");
+    linewidth(2);
+    line(210,98,170,120);
+    restore();
+
+    //bite1
+    save();
+    rotate(50);
+    color("transparent");
+    arc(110,10,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite2
+    save();
+    rotate(15);
+    color("transparent");
+    arc(79,160,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite3
+    save();
+    rotate(-65);
+    color("transparent");
+    arc(-283,240,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite4
+    save();
+    rotate(-25);
+    color("transparent");
+    arc(-80,290,65,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+  restore();
+  }
+
+  function threebite(x,y,r,c){
+  save();
+  translate(x,y);
+  scale(r/200);
+    //left apple side, red back
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor("red");
+    fill();
+    restore();
+
+    //left apple side, transparent front
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //right apple side, red back
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor("red");
+    fill();
+    restore();
+
+      //right apple side, transparent front
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //white slice
+    save();
+    rotate(3);
+    color("transparent");
+    arc(249,215,110,-107,100);
+    fillcolor("beige");
+    fill();
+    restore();
+
+    //top seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(245,190,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //middle seed
+    save();
+    rotate(90);
+    color("transparent");
+    ellipse(232,-250,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //bottom seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(248,245,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //stem
+    save();
+    color("transparent");
+    //circle(200,200,60);
+    triangle(200,90,170,18,130,8);
+    fillcolor("saddlebrown");
+    fill();
+    restore();
+
+    //leaf
+    save();
+    rotate(40);
+    color("transparent");
+    ellipse(190,-110,12,33);
+    fillcolor("mediumseagreen");
+    fill();
+    restore();
+
+    //leaf line
+    save();
+    rotate(-20)
+    color("darkgreen");
+    linewidth(2);
+    line(210,98,170,120);
+    restore();
+
+    //bite1
+    save();
+    rotate(50);
+    color("transparent");
+    arc(110,10,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite2
+    save();
+    rotate(15);
+    color("transparent");
+    arc(79,160,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite3
+    save();
+    rotate(-65);
+    color("transparent");
+    arc(-283,240,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite4
+    save();
+    rotate(-25);
+    color("transparent");
+    arc(-80,290,65,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite5
+    save();
+    rotate(160);
+    color("transparent");
+    arc(-285,-250,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+  restore();
+  }
+
+  function fourbite(x,y,r,c){
+  save();
+  translate(x,y);
+  scale(r/200);
+    //left apple side, red back
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor("red");
+    fill();
+    restore();
+
+    //left apple side, transparent front
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //right apple side, red back
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor("red");
+    fill();
+    restore();
+
+      //right apple side, transparent front
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //white slice
+    save();
+    rotate(3);
+    color("transparent");
+    arc(249,215,110,-107,100);
+    fillcolor("beige");
+    fill();
+    restore();
+
+    //top seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(245,190,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //middle seed
+    save();
+    rotate(90);
+    color("transparent");
+    ellipse(232,-250,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //bottom seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(248,245,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //stem
+    save();
+    color("transparent");
+    //circle(200,200,60);
+    triangle(200,90,170,18,130,8);
+    fillcolor("saddlebrown");
+    fill();
+    restore();
+
+    //leaf
+    save();
+    rotate(40);
+    color("transparent");
+    ellipse(190,-110,12,33);
+    fillcolor("mediumseagreen");
+    fill();
+    restore();
+
+    //leaf line
+    save();
+    rotate(-20)
+    color("darkgreen");
+    linewidth(2);
+    line(210,98,170,120);
+    restore();
+
+    //bite1
+    save();
+    rotate(50);
+    color("transparent");
+    arc(110,10,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite2
+    save();
+    rotate(15);
+    color("transparent");
+    arc(79,160,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite3
+    save();
+    rotate(-65);
+    color("transparent");
+    arc(-283,240,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite4
+    save();
+    rotate(-25);
+    color("transparent");
+    arc(-80,290,65,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite5
+    save();
+    rotate(160);
+    color("transparent");
+    arc(-285,-250,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite6
+    save();
+    rotate(200);
+    color("transparent");
+    arc(-430,-135,70,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite7
+    save();
+    rotate(240);
+    color("transparent");
+    arc(-460,80,60,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+  restore();
+  }
+
+  function fivebite(x,y,r,c){
+  save();
+  translate(x,y);
+  scale(r/200);
+    //left apple side, red back
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor("red");
+    fill();
+    restore();
+
+    //left apple side, transparent front
+    save();
+    rotate(-10);
+    color("transparent");
+    ellipse(90,240,110,170);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //right apple side, red back
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor("red");
+    fill();
+    restore();
+
+      //right apple side, transparent front
+    save();
+    rotate(10);
+    color("transparent");
+    ellipse(300,173,-110,-169);
+    fillcolor(205,92,92,.6);
+    fill();
+    restore();
+
+    //white slice
+    save();
+    rotate(3);
+    color("transparent");
+    arc(249,215,110,-107,100);
+    fillcolor("beige");
+    fill();
+    restore();
+
+    //top seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(245,190,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //middle seed
+    save();
+    rotate(90);
+    color("transparent");
+    ellipse(232,-250,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //bottom seed
+    save();
+    rotate(3);
+    color("transparent");
+    ellipse(248,245,5,10);
+    fillcolor("black");
+    fill();
+    restore();
+
+    //stem
+    save();
+    color("transparent");
+    //circle(200,200,60);
+    triangle(200,90,170,18,130,8);
+    fillcolor("saddlebrown");
+    fill();
+    restore();
+
+    //leaf
+    save();
+    rotate(40);
+    color("transparent");
+    ellipse(190,-110,12,33);
+    fillcolor("mediumseagreen");
+    fill();
+    restore();
+
+    //leaf line
+    save();
+    rotate(-20)
+    color("darkgreen");
+    linewidth(2);
+    line(210,98,170,120);
+    restore();
+
+    //bite1
+    save();
+    rotate(50);
+    color("transparent");
+    arc(110,10,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite2
+    save();
+    rotate(15);
+    color("transparent");
+    arc(79,160,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite3
+    save();
+    rotate(-65);
+    color("transparent");
+    arc(-283,240,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite4
+    save();
+    rotate(-25);
+    color("transparent");
+    arc(-80,290,65,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite5
+    save();
+    rotate(160);
+    color("transparent");
+    arc(-285,-250,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite6
+    save();
+    rotate(200);
+    color("transparent");
+    arc(-430,-135,70,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite7
+    save();
+    rotate(240);
+    color("transparent");
+    arc(-460,80,60,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite8
+    save();
+    rotate(10);
+    color("transparent");
+    arc(130,200,75,-107,100);
+    fillcolor("white");
+    fill();
+    restore();
+
+    //bite9
+    save();
+    rotate(190);
+    color("transparent");
+    arc(-330,-160,65,-107,100);
+    fillcolor("white");
+    fill();
+    color("transparent");
+    circle(-350,-150,20);
+    fillcolor("white");
+    fill();
+    restore();
+  restore();
+  }
+
+  function draw(){
+    clear();
+    apples[N](x,y,r);
+
+    x=x+vx;
+    y=y+vy;
+
+    vx=vx+ax;
+    vy=vy+ay;
+
+    bounce();
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">
+        BOUNCING APPLE WITH BITES
+    </div>
+    <div id="mainNavigation">
+  </div>
+  <div id="spork"></div>
+  <button onclick='stoploop();'>Stop</button>
+  <button onclick='startloop();'>Start</button>
+  <button onclick='startover();'>Start Over</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mondrian Grid: Kim Sleeper</title>
+  <link rel="stylesheet" href="mgrid.css">
+  <script src="spork.js"></script>
+  <script>
+  var small=15;
+  var theColors=[rgb(143,188,143),
+                       rgb(176,196,222),
+                       rgb(255,160,122),
+                       rgb(219,112,147)];
+
+  function myRect(x,y,w,h){
+      fillcolor(theColors.random());
+      rect(x,y,w,h);
+      fill();
+  }
+
+  function circles(x,y,w,h){
+    fillcolor(theColors.random());
+    r=min(w/2,h/2);
+    circle(x+w/2,y+h/2,r);
+    fill();
+  }
+
+  function diamond(x,y,w,h){
+    fillcolor(theColors.random());
+    quad(x,y+h/2,
+         x+w/2,y,
+         x+w,y+h/2,
+         x+w/2,y+h);
+    fill();
+  }
+
+  function crossLines(x,y,w,h){
+    var l,k;
+    l=random()*w;
+    k=random()*h;
+    line(x+l,y,x+l,y+h);
+    line(x,y+k,x+w,y+k)
+    fill();
+  }
+
+  function randomLine(x,y,w,h){
+    var l,l2,k,k2;
+    for (i=0;i<10;i=i+1){
+    l=random()*w;
+    k=random()*h;
+    l2=random()*w;
+    k2=random()*h;
+      line(x+l,y+k,x+l2,y+k2);}
+    //rect(x,y,w,h);
+  }
+
+  function mgrid(x,y,w,h){
+    var l,k;
+    if ((w<small) ||
+        (h<small))
+      //(random()<0.007))
+        {
+      myRect(x,y,w,h);
+    }
+    else if (w>h){           //wide
+      l=random()*w;
+      mgrid(x,y,l,h);          //left
+      mgrid(x+l,y,w-l,h);     //right
+    }
+    else{                     //tall
+      k=random()*h;
+      mgrid(x,y,w,k);          //top
+      mgrid(x,y+k,w,h-k)     //bottom
+    }
+  }
+
+  function setup(){
+    size(800,600);
+    color("transparent"); //this is for shapes
+  }
+
+  function draw(){
+    mgrid(0,0,width,height);
+  }
+
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">MONDRIAN GRID</div>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">Mondrian Grids Home</a>
+  </div>
+</body>
+</html>

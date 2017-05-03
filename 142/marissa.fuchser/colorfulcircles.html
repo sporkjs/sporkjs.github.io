@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <title>Colorful Circles</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function randomFillColor(){
+   var r,g,b,a;
+    r=floor(random()*50);
+     g=floor(random()*25);
+     b=floor(random()*200);
+    a=random();
+    fillcolor(r,g,b,a);
+  }
+
+  function setup(){
+    loop();
+  }
+  function draw(){
+    var x,y,r;
+
+    var i;
+
+    for(i=0;i<300;i=i+1){
+    x=random()*width;
+    y=random()*height;
+      r=random()*30
+    circle(x,y,r);
+      randomFillColor();
+      fill();
+    }
+  }
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleBar">Drawing</div>
+  <div id="mainNavigation">
+<div class='tab'>
+
+</div>
+  <div id="content">
+    <div id="spork"></div>
+    <button onclick="stoploop();">Stop</button>
+    <button onclick="startloop();">Start</button>
+    <button onclick="startover();">Start Over</button>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

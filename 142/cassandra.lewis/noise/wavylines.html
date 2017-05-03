@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <title>Wavy Lines
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #wavylines{
+    background: darkgray;}
+    </style>
+  <script src="spork.js"></script>
+  <script>
+
+  function mark (x,y,r){
+  save();
+    translate(x,y);
+  rotate(noise(abs(x/width),abs(y/height))*70);
+    line(-r,0,r,0);
+    restore();
+  }
+  function setup(){
+    setupNoise(5);
+    loop();
+  }
+
+  function draw(){
+
+  var x,y,r;
+    var i;
+    x=random()*(width-40)+20;
+    y=random()*(height-40)+20;
+    if (x>width/2 && y<height/2)
+      color('red');
+   else
+    if(x<width/2 && y>height/2)
+      color('red');
+    else
+      color('purple');
+  mark(x,y,10);
+
+  }
+
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id='titleDiv'>Wavy Lines</div>
+    <div id='primaryNavigation'>
+      <div class="tab" id="mainTab"><a href=../index.html>Main</a></div>
+      <div class="tab" id="homeTab"><a href=index.html>Home</a></div>
+      <div class="tab" id="randomstatic"><a href=randomstatic.html>Random Static</a></div>
+      <div class="tab" id="smoothstatic"><a href=smoothstatic.html>Smooth Static</a></div>
+      <div class="tab" id="funkylines"><a href=funkylines.html>Funky Lines</a></div>
+      <div class="tab" id="cowspots"><a href=cowspots.html>Cow Spots</a></div>
+      <div class="tab" id="hair"><a href=hair.html>Hair</a></div>
+      <div class="tab" id="wavylines"><a href=wavylines.html>Wavy Lines</a></div>
+      <div class="tab" id="circlegrid"><a href=circlegrid.html>Circle Grid</a></div>
+
+
+    </div>
+    <div id="content">
+      <p>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <button onclick='canvasToNewImg()'>Make Image</button>
+
+    </div>
+    <div id="secondaryNavigation">Cassie Lewis | Math 142 | <a href= "http://www.cune.edu">CUNE</a></div>
+        </div>
+  </body>
+  </html>

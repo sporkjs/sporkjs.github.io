@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <title>Geometric Pattern</title>
+  <link rel="stylesheet" href="2loop.css">
+  <script src="spork.js"></script>
+  <script>
+  function f1(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    //draw below this line
+    	linewidth(8);
+    	color("red");
+     	line(200,0,0,-200);
+    	line(0,-200,-200,0);
+    //draw above this line
+    restore();
+  }
+
+  function f2(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    //draw below this line
+   	linewidth(8);
+    	color("blue");
+    	line(-200,0,200,0);
+    	line(0,-100,0,100);
+    	line(-40,120,40,120)
+    //draw above this line
+    restore();
+  }
+
+  function f3(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+    //draw below this line
+    	linewidth(10);
+    	color("black");
+    	circle(10,10,90)
+    //draw above this line
+    restore();
+  }
+
+  function setup(){
+
+  }
+
+  function draw(){
+    var x,y;
+    var r=20;
+    var theFunctions=[f1,f2,f3];
+    var f;
+    for (x=r;x<width;x=x+2*r)
+      for(y=r;y<height;y=y+2*r){
+        f=theFunctions.random();
+        f(x,y,r);
+      }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Geometric Pattern</div>
+      <div id="spork"></div>
+      <a href="index.html">For Loops Home</a>
+  </div>
+</body>
+</html>

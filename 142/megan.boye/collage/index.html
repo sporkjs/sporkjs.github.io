@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    #theImage{
+        height: 600px;
+        text-align: center;
+    }
+    body{
+      text-align: center;
+      background-color: lightgray;
+    }
+    #titleBar{
+      background-color: darkcyan;
+      color: white;
+      font-size: 64px;
+      padding: 10px;
+    }
+    #wrapper{
+      text-align: center;
+      background-color: white;
+      width: 90%;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    #spork{
+      padding: 30px;
+    }
+    #theImage{
+      height: 600px;
+      padding: 30px;
+    }
+    #secondaryNavigation{
+      text-align: right;
+      border-top: 1px solid black;
+      font-size: 10px;
+      padding-right: 15px;
+      clear:both;
+    }
+  </style>
+  <script src='spork.js'></script>
+  <script>
+
+  var R=[];
+  var G=[];
+  var B=[];
+  var A=[];
+
+  function setup(){
+      size(theImage.width,theImage.height);
+      size (theImage.width,theImage.height);
+      clear();
+      color(0,0,0,0);
+      loop();
+      setupNoise(5);
+    }
+    function draw(){
+      save();
+
+      var x=random()*width;
+      var y=random()*height;
+
+          x1=(x+50*random())
+          y1=(y+50*random())
+          x2=(x-50*random())
+          y2=(y+50*random())
+          x3=(x-50*random())
+          y3=(y-50*random())
+          x4=(x+50*random())
+          y4=(y-50*random())
+      quad(x1,y1,x2,y2,x3,y3,x4,y4);
+
+      clip();
+
+      var cx=(random()*width);
+      var cy=(random()*height);
+      var r=random()*360;
+
+      drawImage(theImage,cx,cy,width,height,r);
+
+      restore();
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Collage</div>
+  <div id='spork'></div>
+    <button onclick="startover();">Start Over</button>
+    <button onclick="stoploop();">Stop</button>
+    <button onclick="startloop();">Start</button>
+    <br/>
+    <img src="sunset.jpg" id="theImage" />
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    Motion
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="spork.js"></script>
+  <script>
+  /*
+Animation Loop
+This code demonstrates using the animation loop
+to repeatedly call the draw function.
+
+The code will draw random circles on thee canvas.
+*/
+
+function setup(){
+/*
+Set the number of miliseconds to wait
+between drawing. The larger this number is,
+the slower the animation will be.
+*/
+timestep(100);
+//call loop to make the draw function be
+//called repeatedly.
+loop();
+}
+function draw(){
+//random coordinates
+var x=random()*width;
+var y=random()*height;
+
+//draw filled circle
+circle(x,y,r=min(x, y, width-x, height-y));
+fillcolor(189,183,107,.15);
+fill();
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Motion</div>
+    <div id="content">
+        <div id=spork></div>
+        <button onclick='stoploop();'>Stop</button>
+        <button onclick='startloop();'>Start</button>
+        <button onclick='startover();'>Start Over</button>
+        <p>
+          Click <a href="index.html">here</a> to go back home.
+        </p>
+    </div>
+    <div id="secondaryNavigationDiv">
+      Samuel Otte | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a>
+    </div>
+  </div>
+</body>
+</html>

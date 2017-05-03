@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hair</title>
+  <link rel="stylesheet" href="noise.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    setupNoise(10);
+ 	loop();
+    timestep(200);
+ }
+
+ function randomMark(x,y){
+     //var x,y;
+ 	var vx,vy;
+ 	var i;
+   var a;
+
+   //x=width*random();
+   //y=height*random();
+   //vx=2*(random()-0.5);
+   //vy=2*(random()-0.5);
+
+   for(i=0;i<100;i=i+1){
+
+     a=noise(abs(x/width),abs(y/height))*325;
+     vx=3*COS(a);
+     vy=3*SIN(a);
+
+   line(x,y,x+vx,y+vy);
+
+   x=x+vx;
+   y=y+vy;
+   }
+ }
+
+ function randomColor(x,y){
+  var possibleColors=[rgb(143,188,143,.5),
+                      rgb(176,196,222,.5),
+                      rgb(255,160,122,.5),
+                      rgb(219,112,147,.1)];
+
+   var theColors=possibleColors.random();
+
+   //lines
+   color(theColors);
+   fillcolor(theColors);
+ }
+
+ function draw(){
+   var x,y;
+   x=width*random();
+   y=height*random();
+   randomColor(x,y);
+   randomMark(x,y);
+ }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Hair</div>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">Noise Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <title>Noise Gallery</title>
+  <link rel="stylesheet" href="noise.css" />
+    <script src="spork.js"></script>
+  <script>
+  function setup(){
+    setupNoise(5);
+  }
+  function draw(){
+    for(x=0;x<=width;x=x+1)
+      for(y=0;y<=height;y=y+1){
+        var c;
+        c=floor(128*(noise(x/width,y/height)+1));
+        fillcolor(c,c,255-c);
+        fillrect(x,y,1,1);
+
+      }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">My Noise Gallery</div>
+    <div id="mainNavigation">Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/></div>
+      <div id="primaryNavigation">
+        <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+        <div class="tab" id="randomstaticTab"><a href="random.html">Random Static</a></div>
+        <div class="tab" id="smoothstaticTab"><a href="smooth.html">Smooth Static</a></div>
+        <div class="tab" id="brownianhairTab"><a href="hair.html">Brownian Hair</a></div>
+        <div class="tab" id="funkyTab"><a href="funky.html">Funky Lines</a></div>
+        <div class="tab" id="wavyTab"><a href="wavy.html">Wavy Lines</a></div>
+        <div class="tab" id="cowspotsTab"><a href="cowspots.html">Cow Spots</a></div>
+      </div>
+      <div id="content">
+        <div id="spork"></div>
+      </div>
+  </div>
+</body>
+</html>

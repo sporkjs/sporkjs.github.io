@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <title>Math142 Portfolio</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+
+  var x=[]
+  var y=[]
+  var vx=[]
+  var vy=[]
+  var N=50
+  var L=200
+  var R=.01
+  var theColors=[]
+
+  function setup(){
+    fillContainer();
+    background(0,14,60);
+    color('white')
+   //fillcolor('white');
+  translate(width/2,height/2);
+   for (i=0; i<N;i=i+1){
+    x[i]=random()*L-L/2;
+    y[i]=random()*L-L/2;
+    vx[i]=x[i]/sqrt(x[i]*x[i]+y[i]*y[i])
+    vy[i]=y[i]/sqrt(x[i]*x[i]+y[i]*y[i])
+    C=50+floor(random()*200)
+    theColors[i]=rgb(C,C,255);
+   }
+    timestep(1);
+R=.01
+    loop();
+  }
+  function draw(){
+
+    for(i=0; i<N;i=i+1){
+    //color(theColors[i]);
+      fillcolor(theColors[i]);
+    if (!((vx[i]==0)&&((vy[i]==0))))
+      circle(x[i],y[i],R);
+    fill();
+
+
+    x[i]=x[i]+vx[i];
+    y[i]=y[i]+vy[i];
+    if(random()<.001){
+      vx[i]=0
+      vy[i]=0
+    }
+    }
+    R=R+.02
+  }
+</script>
+</head>
+<body>
+  <div id="spork"></div>
+<div id="wrapper">
+    <div id="titleBar"></div>
+    <div id="mainNavigation">
+      <div id="name">
+        Marissa Fuchser
+      </div>
+  <div class='tab'>
+    <div class='tab'> <a href="Historypage/index.html"> Galileo </a></div>
+    <div class='tab'> <a href="flowergrid/index.html">My Flower Grid</a></div>
+    <div class='tab'> <a href="forloops/creature.html">For Loops</a></div>
+    <div class='tab'> <a href="calculator/calculator.html">Calculator</a></div>
+    <div class='tab'> <a href="morefunwithforloops/RandomLocationCreature.html">More Fun With For Loops</a></div>
+    <div class='tab'> <a href="gallery/index.html">Gallery</a></div>
+    <div class='tab'> <a href="motion/bouncingbear.html">Motion</a></div>
+    <div class='tab'> <a href="impression/index.html">Impression</a></div>
+    <div class='tab'> <a href="pieces/pieces.html">Shattered Image</a></div>
+    <div class='tab'> <a href="symmetry/symmetrichair.html">Symmetry</a></div>
+    <div class='tab'> <a href="drawing/sporkskeleton.html">PAINT</a></div>
+    <div class='tab'> <a href="Mondrian/modifiedImpression.html">Mondrian Grid</a></div>
+    <div class='tab'> <a href="algorithmicArtist/index.html">Algorithmic Artist</a></div>
+</div>
+  <div id="content">
+
+    <button onclick="stoploop();">Stop</button>
+    <button onclick="startloop();">Start</button>
+    <button onclick="startover();">New</button>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

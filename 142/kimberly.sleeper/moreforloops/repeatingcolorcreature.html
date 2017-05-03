@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <title>Random Color Creature</title>
+  <link rel="stylesheet" href="2loop.css">
+  <script src="spork.js"></script>
+  <script>
+  //grid
+
+function randomcreature(x,y,r,c){
+  var possibleShellColors=["cornflowerblue",
+                         "peachpuff",
+                         "lightgrey",
+                         "orange"];
+
+  var possibleLeftArmColors=["lavender",
+                         "mediumpurple",
+                         "grey",
+                         "purple"]
+
+  var possibleRightArmColors=["lavender",
+                         "mediumpurple",
+                         "grey",
+                         "purple"]
+
+  var possibleLeftLegColors=["lavender",
+                         "mediumpurple",
+                         "grey",
+                         "purple"]
+
+  var possibleRightLegColors=["lavender",
+                         "mediumpurple",
+                         "grey",
+                         "purple"]
+
+  var ShellColor=possibleShellColors.random();
+  var LeftArmColor=possibleLeftArmColors.random();
+  var RightArmColor=possibleRightArmColors.random();
+  var LeftLegColor=possibleLeftLegColors.random();
+  var RightLegColor=possibleRightLegColors.random();
+
+  save();
+  translate(x,y);
+  scale(r/200);
+  //Head
+  color("mediumseagreen");
+  fillcolor("mediumseagreen");
+  ellipse(0,-130,50,-60);
+  fill();
+
+  //Eyes
+  color('black');
+  fillcolor('black');
+  circle(19,-135,7);
+  fill();
+  color('black');
+  fillcolor('black');
+  circle(-19,-135,7);
+  fill();
+
+  //Left arm
+  color(LeftArmColor);
+  fillcolor(LeftArmColor);
+  rotate(-45);
+  ellipse(-30,-90,20,-60);
+  fill();
+
+  //Right arm
+  color(RightArmColor);
+  fillcolor(RightArmColor);
+  rotate(90);
+  ellipse(30,-90,20,-60);
+  fill();
+
+  //Left leg
+  color(LeftLegColor);
+  fillcolor(LeftLegColor);
+  ellipse(10,130,20,-60);
+  fill();
+
+  //Right leg
+  save();
+  color(RightLegColor);
+  fillcolor(RightLegColor);
+  rotate(90);
+  ellipse(15,-130,20,-60);
+  fill();
+  restore();
+
+  //Shell
+  save();
+  color(ShellColor);
+  fillcolor(ShellColor);
+  rotate(-45);
+  ellipse(0,20,100,130);
+  fill();
+  restore();
+
+  //Shell pattern
+  save();
+  color("black");
+  fillcolor("mediumorchid");
+  triangle(-5,-5,-85,-30,-30,-85);
+  fill();
+  triangle(5,-5,85,-30,30,-85);
+  fill();
+  triangle(5,5,85,30,30,85);
+  fill();
+  triangle(-5,5,-85,30,-30,85);
+  fill();
+  restore();
+  restore();
+  }
+
+function setup(){
+
+}
+
+function draw(){
+
+  var x,y;
+  var r=20;
+  for (x=r;x<width;x=x+3*r)
+    for (y=r;y<height;y=y+2*r){
+      randomcreature(x,y,r);
+    }
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Random Color Creature</div>
+    <div id="content">
+      <div id="spork"></div>
+      <a href="index.html">For Loops Home</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+  background-color: lightgray;
+}
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#titleDiv{
+  background-color: indigo;
+  color: gray;
+  font-size: 50px;
+  text-shadow: 1px 1px black;
+  padding: 10px
+}
+#content{
+padding: 10px;
+font-size: 15px;
+text-align: center;
+}
+#secondaryNavigation{
+text-align: right;
+border-top: 1px solid gray;
+font-size: 13px;
+padding-right: 9px;
+clear: both;
+}
+#photoDiv{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 500px;
+  max-height: 500px;
+}
+#canvas{
+  max-width: 90%;
+}
+img{
+  max-width: 80%;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>HOME</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+  }
+  function draw(){
+    translate(200,200);
+          //Head//
+          circle(0,35,120);
+          color("gray");
+          fillcolor("gray");
+          fill();
+          //Right Ear//
+          save();
+          translate(100,-125);
+          circle(0,35,70);
+          color("gray");
+          fillcolor("gray");
+          fill();
+          restore();
+          //Left Ear//
+          save();
+          translate(-100,-125);
+          circle(0,35,70);
+          color("gray");
+          fillcolor("gray");
+          fill();
+          restore();
+          //Face//
+          rotate(90);
+          ellipse(35,25,100,60);
+          color(255,223,184);
+          fillcolor(255,223,184);
+          fill();
+          ellipse(35,-25,100,60);
+          fillcolor(255,223,184);
+          fill();
+
+          rotate(90);
+          ellipse(0,-96,95,60);
+          fillcolor(255,223,184);
+          fill();
+          //Bow//
+          color("deepskyblue");
+          circle(0,85,15);
+          fillcolor("deepskyblue");
+          fill();
+          save();
+          translate(0,85);
+          triangle(0,0,90,100,100,-100);
+          fillcolor("deepskyblue");
+          fill();
+          triangle(0,0,-100,-100,-90,100);
+          fillcolor("deepskyblue");
+          fill();
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">NOISE</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a></div>
+      <div class="tab" id="homeTab"><a href ="random.html"> Random </a></div>
+      <div class="tab" id="fuzTab"><a href ="fuz.html"> Smooth </a></div>
+      <div class="tab" id="bouTab"><a href ="bou.html"> Funky </a></div>
+      <div class="tab" id="spoTab"><a href ="spot.html"> Cow </a></div>
+      <div class="tab" id="broTab"><a href ="bro.html"> Hair </a></div>
+      <div class="tab" id="ranTab"><a href ="ran.html"> Wavy </a></div>
+      <div class="tab" id="ranTab"><a href ="ran.html"> Grid </a></div>
+    </div>
+    <div id="content">
+        <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

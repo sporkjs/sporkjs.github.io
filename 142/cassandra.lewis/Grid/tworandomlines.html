@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <title> Two Random Lines
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #tworandomlines{
+    background: darkgray;}
+    </style>
+  <script src="spork.js"></script>
+  <script>
+  //COW SPOTS
+  var small=50;
+ var theColors=['blue','purple','pink','lightgrey'];
+ function myRect(x,y,w,h){
+   var l,k,l2,k2
+   fillcolor(theColors.random());
+   rect(x,y,w,h);
+    fill();
+   for (a=0;a<2;a=a+1){
+   l=random()*w;
+   k=random()*h;
+   l2=random()*w;
+   k2=random()*h;
+ line(x+l,y+k,x+l2,y+k2);
+   }
+ }
+ function mgrid(x,y,w,h){
+   var l,k;
+   if((w<small)||(h<small)||(random()<0.05)){
+   myRect(x,y,w,h);
+   }
+   else if(w>h){  //wide
+     l=random()*w;
+     mgrid(x,y,l,h);
+     mgrid(x+l,y,w-l,h);  //right
+   }
+   else{ //tall
+     k=random()*h;
+     mgrid(x,y,w,k);  //top
+     mgrid(x,y+k,w,h-k);  //bottom
+   }
+ }
+ function setup(){
+   size(600,400);
+ }
+
+ function draw(){
+   mgrid(0,0,width,height);
+
+ }
+
+
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id='titleDiv'>M Grid</div>
+    <div id='primaryNavigation'>
+      <div class="tab" id="mainTab"><a href=../index.html>Main</a></div>
+      <div class="tab" id="mgrid"><a href=mgrid.html>M Grid</a></div>
+      <div class="tab" id="overlay"><a href=mgridoverlay.html>Mgrid overlay</a></div>
+      <div class="tab" id="nest"><a href=nest.html>Nest</a></div>
+      <div class="tab" id="nestoverlay"><a href=nestoverlay.html>Nest overlay</a></div>
+      <div class="tab" id="diamonds"><a href=diamonds.html>Diamonds</a></div>
+        <div class="tab" id="TLines"><a href=tlines.html>T Lines</a></div>
+      <div class="tab" id="randomline"><a href=randomline.html>Random Lines</a></div>
+      <div class="tab" id="tenlines"><a href=tenlines.html>Ten Random Lines</a></div>
+      <div class="tab" id="tworandomlines"><a href=tworandomlines.html>Two Random Lines</a></div>
+      <div class="tab" id="circles"><a href=circles.html>Circles</a></div>
+      <div class="tab" id="picture"><a href=picture.html>Picture</a></div>
+    <div class="tab" id="picturescratch"><a href=picturescratch.html>Picture Scratch</a></div>
+
+
+
+    </div>
+    <div id="content">
+      <p>
+      <div id="spork"></div>
+      <button onclick='startover();'>New</button>
+        <button onclick='canvasToNewImg()'>Make Image</button>
+
+    </div>
+    <div id="secondaryNavigation">Cassie Lewis | Math 142 | <a href= "http://www.cune.edu">CUNE</a></div>
+        </div>
+  </body>
+  </html>

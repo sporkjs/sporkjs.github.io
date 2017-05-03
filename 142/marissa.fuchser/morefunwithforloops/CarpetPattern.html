@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+  <title>Carpet Pattern</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+function alexis(X,Y,R){
+  save();
+  translate(X,Y);
+  scale(R/200);
+  color('white');
+  fillcolor('white');
+  circle(0,0,200);
+  fill();
+    var angle;
+    for(angle=0;angle<360;angle=angle+20){
+      save();
+      rotate(angle);
+      line(0,0,0,200);
+      triangle(0,200,10,185,-10,185);
+      fillcolor('blue');
+      fill();
+      restore();
+    }
+    circle(0,0,150);
+    fillcolor('red');
+    fill();
+    var x;
+    for(x=0;x<360;x=x+20){
+      save();
+      rotate(x);
+      circle(0,150,20);
+      fillcolor('orange');
+      fill();
+      circle(0,150,10);
+      fillcolor('yellow');
+      fill();
+      restore();
+    }
+    var y;
+    for(y=0;y<360;y=y+20){
+      save();
+    rotate(y);
+    rect(25,75,50,25);
+    fillcolor('blue');
+    fill();
+    restore();
+    }
+    var z;
+    for(z=0;z<360;z=z+20){
+      save();
+      rotate(z);
+      ellipse(55,35,10,5);
+      fillcolor('orange');
+      fill();
+      restore();
+    }
+    var a;
+    for(a=0;a<360;a=a+20){
+      save();
+      circle(0,0,50);
+      fillcolor('yellow');
+      fill();
+      restore();
+    }
+    var b;
+    for(b=0;b<360;b=b+20){
+      save();
+      rotate(b);
+      triangle(0,15,5,40,-5,40);
+      fillcolor('black');
+      fill();
+      restore();
+    }
+    circle(0,0,10);
+    fillcolor('blue');
+    fill();
+  restore();
+  }
+
+
+
+
+function marissa(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/200);
+     circle(0,0,180);
+      fillcolor('black');
+      fill();
+     var a;
+  //Orange triangles
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('yellow');
+      fillcolor('yellow');
+      triangle(180,0,165,10,175,-10);
+      fill();
+       restore();
+    }
+    //Orange circle
+    save();
+    color('orange');
+    linewidth(5);
+    circle(0,0,160);
+    restore();
+
+    //< shapes
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('red');
+      line(150,5,155,0,150,-5);
+       restore();
+    }
+     //Blue circle
+    save();
+    color(0,0,210);
+    linewidth(3);
+    circle(0,0,150);
+    restore();
+
+    //White lines
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('white');
+      rect(-100,-100,200,200);
+       restore();
+    }
+     //Red rectangle
+    for (a=0;a<360;a=a+22.5){
+    save();
+      rotate(a);
+    color(0,0,100);
+    rect(-70,-70,140,140);
+      fillcolor(0,0,100);
+      fill();
+    restore();
+    }
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(1);
+    circle(0,0,40);
+    restore();
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(2);
+    circle(0,0,45);
+    restore();
+
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(3);
+    circle(0,0,50);
+    restore();
+
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(4);
+    circle(0,0,55);
+    restore();
+
+
+    //Circle
+     save();
+    color('orange');
+    linewidth(5);
+    circle(0,0,60);
+    restore();
+
+   //Red Lines
+    for (a=0;a<360;a=a+10){
+      save();
+      rotate(a);
+      color('red');
+      rect(70,2,10,4);
+      fillcolor('red');
+      fill();
+       restore();
+    }
+    restore();
+  }
+
+
+
+ function emily(X,Y,R){
+  save();
+  translate(X,Y);
+  scale(R/200);
+
+  circle(0,0,200)
+  fillcolor("white");
+  fill();
+
+  linewidth(10);
+  color('yellow')
+  circle(0,0,160)
+  var a
+
+  for (a=0;a<360;a=a+10){
+    save();
+    rotate(a);
+    circle(150,125,9);
+    fillcolor(a,0,255-a);
+    fill();
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(5);
+    color('red');
+    line(150,110,100,100);
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(3);
+    color('blue');
+    line(120,100,75,75);
+    restore();
+
+    save();
+    rotate(a);
+    color('purple');
+    linewidth(3);
+    circle(100,80,9);
+    restore();
+
+    save();
+    rotate(a);
+    color('yellow');
+    linewidth(3);
+    circle(90,60,9);
+    restore();
+
+     save();
+    rotate(a);
+    circle(70,65,4);
+    fillcolor(a,0,255-a);
+    fill();
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(5);
+    color('red');
+    line(50,30,10,10);
+    restore();
+
+     save();
+    rotate(a);
+    linewidth(3);
+    color('blue');
+    line(20,15,8,8);
+    restore();
+
+    save();
+    rotate(a);
+    color('purple');
+    linewidth(3);
+    circle(10,8,9);
+    restore();
+
+
+  }
+
+  circle(0,0,10)
+  fillcolor('yellow');
+  fill();
+  restore();
+}
+
+
+
+function setup(){
+  size(600,400);
+  background('white');
+  timestep(1);
+  loop();
+}
+function draw(){
+ var possibleTheCircles=
+  [marissa,
+  alexis,
+  emily];
+
+var TheCircles=possibleTheCircles.random();
+  var x,y,r;
+  x=random()*width;
+  y=random()*height;
+  r=random()*50
+  TheCircles(x,y,r);
+
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleBar">More Fun with For Loops</div>
+  <div id="mainNavigation">
+<div class='tab'>
+  <a href='RandomLocationCreature.html'>Random Location Creature</a></div>
+  <div class='tab'>  <a href='RandomColorBear.html'>Random Color Bear</a></div>
+  <div class='tab'>  <a href='RandomSizeCreature.html'>Random Size Creature</a></div>
+  <div class='tab'>  <a href='RandomCircleGrid.html'>Random Circle Grid</a></div>
+  <div class='tab'>  <a href='CarpetPattern.html'>Carpet Pattern</a></div>
+  <div class='tab'>  <a href='RandomArrowPattern.html'>ArrowPattern</a></div>
+  <div class='tab'>  <a href='../index.html'>Home</a></div>
+
+</div>
+  <div id="content">
+    <div id="spork"></div>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+div{
+  padding: 10px;
+  margin:  10px;
+}
+#titleBar{
+  background-color: lightblue;
+  color: blue;
+  font-size: 48px;
+  text-align: center;
+}
+#content{
+  text-align: center;
+}
+div.pensize{
+  width: 20px;
+  background: black;
+  padding: 0px;
+  border: none;
+  display: inline-block;
+}
+div.one{
+  height: 1px;
+}
+div.three{
+  height: 3px;
+}
+div.five{
+  height: 5px;
+}
+div.seven{
+  height: 7px;
+}
+div.fifty{
+  height: 50px;
+}
+div.blue{
+  height: 7px;
+  background-color: blue;
+}
+div.lightblue{
+  height: 7px;
+  background-color: lightblue;
+}
+div.lightgray{
+  height: 7px;
+  background-color: lightgray;
+}
+#secondaryNavigation{
+  text-align: right;
+  border-top: 1px solid black;
+  font-size: 10px;
+  padding-right: 15px;
+  clear:both;
+}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>BOUNCE</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  var x,y;
+  var vx,vy;
+  var ax,ay;
+  var r;
+
+  function creature(x,y,r){
+          save();
+          translate(x,y);
+          scale(r/200);
+            //Head//
+            circle(0,35,120);
+            color("gray");
+            fillcolor("gray");
+            fill();
+            //Right Ear//
+            save();
+            translate(100,-125);
+            circle(0,35,70);
+            color("gray");
+            fillcolor("gray");
+            fill();
+            restore();
+            //Left Ear//
+            save();
+            translate(-100,-125);
+            circle(0,35,70);
+            color("gray");
+            fillcolor("gray");
+            fill();
+            restore();
+            //Face//
+            rotate(90);
+            ellipse(35,25,100,60);
+            color(255,223,184);
+            fillcolor(255,223,184);
+            fill();
+            ellipse(35,-25,100,60);
+            color(255,223,184);
+            fillcolor(255,223,184);
+            fill();
+            rotate(90);
+            ellipse(0,-96,95,60);
+            color(255,223,184);
+            fillcolor(255,223,184);
+            fill();
+            //Bow//
+            color("deepskyblue");
+            circle(0,85,15);
+            fillcolor("deepskyblue");
+            fill();
+            save();
+            translate(0,85);
+            triangle(0,0,90,100,100,-100);
+            fillcolor("deepskyblue");
+            fill();
+            triangle(0,0,-100,-100,-90,100);
+            fillcolor("deepskyblue");
+            fill();
+      	restore();
+  	restore();
+        	}
+
+  function bounce(){
+
+    if (x>width-r+9)
+      vx=-abs(vx);
+
+    if (x<r-9)
+      vx=abs(vx);
+
+    if (y>height-r+7)
+      vy=-abs(vy);
+
+    if (y<r-7)
+      vy=abs(vy);
+
+  }
+  function setup(){
+    x=width*random();
+    y=height*random();
+    vx=2*random()-0.5;
+    vy=2*random()-0.5;
+    ax=0;
+    ay=0.01;
+    r=50;
+
+    loop();
+  }
+  function draw(){
+    clear();
+    creature(x,y,r);
+
+    x=x+vx;
+    y=y+vy;
+
+    vx=vx+ax;
+    vy=vy+ay;
+
+    bounce();
+
+  }
+
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">MOTION</div>
+    <div id="mainNavigation">
+      <div class="tab" id="homeTab"><a href ="index.html"> Home </a> </div>
+      <div class="tab" id="fuzTab"><a href ="fuz.html"> Fuzzy </a> </div>
+      <div class="tab" id="bouTab"><a href ="bou.html"> Bounce </a> </div>
+      <div class="tab" id="spoTab"><a href ="spot.html"> Spots </a> </div>
+      <div class="tab" id="broTab"><a href ="bro.html"> Brownian </a> </div>
+      <div class="tab" id="ranTab"><a href ="ran.html"> Random </a> </div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+        <button onclick='startloop();'>Start</button>
+        <button onclick='stoploop();'>Stop</button>
+        <button onclick='startover();'>Start Over</button>
+    </div>
+    <div id="secondaryNavigation">
+      <a href="http://web.cune.org/megan.boye/">Megan Boye</a> | <a href="http://jwsnow.com/">Math 142</a>
+    </div>
+  </div>
+</body>
+</html>

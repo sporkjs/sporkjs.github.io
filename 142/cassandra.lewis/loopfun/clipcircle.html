@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title>Clipped Circle</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+
+}
+
+function draw(){
+  var x,y; //variable for y coord//
+
+  for(x=0; x<=400;x=x+5){
+   line(x,0,x,400);
+ }
+  circle (200,200,150);
+  clip();
+  fillcolor('black');
+  fill();
+  for (y=3;y<height;y=y+3){
+    color('white');
+    line(0,y,width,y);
+
+ }
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleBar"> Clipped Circle</div>
+  <div id="content">
+    <p>
+    <div id="spork"></div>
+  </p>
+  <p>
+    <a href="creatureloop.html">Creature</src> </a>
+  </p>
+  <p>
+    <a href="circlepattern.html">Circle Pattern</src></a>
+  </p>
+  <p>
+    <a href="index.html">Home</src></a>
+    </p>
+    <p>
+      <a href="../index.html">Main</src></a>
+      </p>
+  </div>
+</body>
+</html>

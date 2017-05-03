@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>Fuzzball</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+function randomColor(){
+  var theColors=['lightblue','blue','turquoise','grey','gray','lightgrey']
+  color(theColors.random());
+}
+function setup(){
+  //start in middle of screen
+  translate(width/2,height/2);
+  loop();
+  clear();
+}
+function draw(){
+  rotate(20);
+  var x,y;		//coordinates
+  var vx,vy;	//velocity
+  var angle;	//angle/direction
+  var ax,ay;	//acceleration
+  var i;		//index
+
+  x=0;
+  y=0;
+
+  vx=0;
+  vy=0;
+
+  ax=0;
+  ay=0;
+
+  for (i=0;i<25;i++){
+    line(x,y,x+vx,y+vy);
+
+    //update position
+    x=x+vx;
+    y=y+vy;
+
+    //update acceleration
+    ax=random();
+    ay=4*(random()-0.5);
+
+    //update velocity
+    vx=vx+ax;
+    vy=vy+ay;
+
+  }
+   randomColor();
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="titleBar">Motion</div>
+    <div id="mainNavigation">
+  <div class='tab'>
+    <a href='bouncingbear.html'>Bouncing Bear Creature</a></div>
+    <div class='tab'>  <a href='fuzzball.html'>Fuzzball</a></div>
+    <div class='tab'>  <a href='spots.html'>Spots</a></div>
+    <div class='tab'>  <a href='brownianmotion.html'>Brownian Motion</a></div>
+    <div class='tab'>  <a href='randommark.html'>Random Mark</a></div>
+    <div class='tab'>  <a href='../index.html'>Home</a></div>
+
+</div>
+  <div id="content">
+    <div id="spork"></div>
+    <button onclick="stoploop();">Stop</button>
+    <button onclick="startloop();">Start</button>
+    <button onclick="startover();">Start Over</button>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

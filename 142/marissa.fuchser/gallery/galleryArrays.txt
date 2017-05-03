@@ -1,0 +1,19 @@
+theCaptions=[	"The Mathematical Bridge, designed by William Etheridge in Cambridge, England.",
+			"The Endless Column, by Constantin Brancusi. It was made of cast iron and steel in 1938.",
+			"A cube and line sculpture design by Joey Camacho.",
+			"M.C. Escher's 'Relativity,' from 1953.",
+			"A woodcut from 1938 by M.C. Escher.It is titled 'Sky and Water II.'",
+			"A perspective painting by Isabelle Chu.",
+			"Brandon Morse's algorthmic approach to collapsing structures.",
+			"A perspective study of a vase by Paolo Uccello",
+			];
+
+theImages=["architecture.jpg",
+"Brancusi.jpg",
+"cubewaves.jpg",
+"escher1.jpg",
+"escher 2.jpg",
+"farm.jpg",
+"gridsculpture.jpg",
+"uccello-vase.jpg",
+];

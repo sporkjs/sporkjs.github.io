@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <title>Symmetry</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="spork.js"></script>
+  <script>
+  //NOISY HAIR
+  var R,k;
+
+  function symmetricLine(x1,y1,x2,y2,k){
+    var x,y,k;
+    save();
+    for(i=0;i<R;i=i+k){
+    line(x1,y1,x2,y2);
+    line(y1,x1,y2,x2);
+      rotate(360/k);
+    }
+    restore();
+  }
+
+  function hair(x,y,k){
+    var vx,vy;
+    var i,j;
+    var ang;
+
+    for (i=0;i<R;i=i+1){
+      ang=noise(abs(x/width),abs(y/height))*360;
+      vx=COS(ang);
+      vy=SIN(ang);
+     	symmetricLine(x,y,(x+vx),(y+vy),k);
+      x=x+vx;
+      y=y+vy;
+    }
+  }
+  var possibleInsideColors=['orange','green','blue','red','yellow'];
+
+  function setup(){
+    translate(200,200);
+    setupNoise(5);
+    //loop();
+    R=width/4;
+    color(possibleInsideColors.random());
+  }
+
+  function draw(){
+    var x,y,i,k;
+    k>=2;
+    k=floor(random()*25);
+    for(i=0;i<10;i=i+1){
+    x=random()*R;
+    y=random()*R;
+    hair(x,y,5);
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar"> Symmetry</div>
+      <div id=content>
+      <div id=spork></div>
+      <button onclick='startover();'>New Image</button>
+      <p>
+        Click <a href="index.html">here</a> to go back home.
+      </p>
+    </div>
+    <div id="secondaryNavigationDiv">
+      Samuel Otte | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a>
+    </div>
+  </div>
+</body>
+</html>

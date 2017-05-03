@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+  <title>Animation Motion</title>
+  <link rel="stylesheet" href="motion.css">
+  <script src="spork.js"></script>
+  <script>
+  var x,y;
+  var vx,vy;
+  var ax,ay;
+  var r;
+
+
+  function bounce(){
+    var e=0.95;
+
+    if (x>width-r-62)
+      vx=-abs(vx);
+    if (x<r+62)
+      vx=abs(vx);
+    if (y>height-r-45)
+      vy=-abs(vy);
+    if (y<r+45)
+      vy=abs(vy);
+    //put e* to the (abs) if I want to have the creature go slower
+  }
+
+  function setup(){
+    x=width*random();
+    y=height*random();
+    vx=(random()-0.5)*2;
+    vy=(random()-0.5)*2;
+    ax=0;
+    ay=0.01;
+    r=2;
+    loop();
+  }
+  function draw(){
+    clear();
+    randomCreature(x,y,33);
+
+    x=x+vx;
+    y=y+vy;
+
+    vx=vx+ax;
+    vy=vy+ay;
+
+    bounce();
+    restore();
+  }
+  function randomCreature(x,y,r){
+    save();
+    translate(x,y);
+    scale(r/100);
+
+  //Face Background
+  ellipse(0,0,100,150);
+  fillcolor("white");
+  fill();
+
+  //Inner Face
+  save();
+  translate(-45,-20);
+  ellipse(0,0,50,100);
+  fillcolor("black");
+  fill();
+  restore();
+
+  //Ears
+  save();
+  translate(135,-80);
+  rotate(60);
+  ellipse(0,0,30,65);
+  fillcolor("black");
+  fill();
+  restore();
+
+
+
+  //Face Background
+  ellipse(0,0,100,150);
+  fillcolor("white");
+  fill();
+
+  //Inner Face
+  save();
+  translate(-45,-20);
+  ellipse(0,0,50,100);
+  fillcolor("black");
+  fill();
+  restore();
+
+  //Ears
+  save();
+  translate(135,-80);
+  rotate(60);
+  ellipse(0,0,30,65);
+  fillcolor("black");
+  fill();
+  restore();
+
+  save();
+  translate(-135,-80);
+  rotate(-60);
+  ellipse(0,0,30,65);
+  fillcolor("black");
+  fill();
+  restore();
+
+
+  //Inner Ears
+  save();
+  translate(135,-77);
+  rotate(60);
+  ellipse(0,0,15,65);
+  fillcolor("pink");
+  fill();
+  restore();
+
+  save();
+  translate(-135,-77);
+  rotate(-60);
+  ellipse(0,0,15,65);
+  fillcolor("pink");
+  fill();
+  restore();
+
+  //Eyes
+  save();
+  translate(75,-20);
+  ellipse(0,0,15,15);
+  fillcolor("white");
+  fill();
+  restore();
+
+  save();
+  translate(-75,-20);
+  ellipse(0,0,15,15);
+  fillcolor("white");
+  fill();
+  restore();
+
+  //Inner Eyes
+  save();
+  translate(-75,-20);
+  ellipse(0,0,5,5);
+  fillcolor("black");
+  fill();
+  restore();
+
+  save();
+  translate(75,-20);
+  ellipse(0,0,5,5);
+  fillcolor("black");
+  fill();
+  restore();
+
+
+  //Nose
+  translate(0,85);
+  quad(-45,45,45,45,25,15,-25,15);
+  fillcolor("pink");
+  fill();
+
+  //Inner Nose
+  save();
+  translate(0,85);
+  circle(15,-55,6);
+  fillcolor("black");
+  fill();
+  restore();
+
+  save();
+  translate(0,85);
+  circle(-15,-55,6);
+  fillcolor("black");
+  fill();
+  restore();
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleDiv">Animation Motion</div>
+    <div id="primaryNavigation">
+      <div class="tab" id="homeTab"><a href="index.html">Home</a></div>
+      <div class="tab" id="fuzzballTab"><a href="fuzzball.html">Fuzz Ball</a></div>
+      <div class="tab" id="creatureTab"><a href="creature.html">Bouncing Creature</a></div>
+      <div class="tab" id="brownianTab"><a href="brownian.html">Brownian</a></div>
+      <div class="tab" id="randomTab"><a href="random.html">Random Mark</a></div>
+      <div class="tab" id="spotsTab"><a href="spots.html">Spots</a></div>
+    </div>
+    <div id="content">
+      <div id="spork"></div>
+      <button onclick="stoploop();">Stop</button>
+      <button onclick="startloop();">Start</button>
+      <button onclick="startover();">Start Over</button>
+    </div>
+    <div id="secondaryNavigation">
+      Alexis Acomb | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a/>
+    </div>
+  </div>
+</body>
+</html>

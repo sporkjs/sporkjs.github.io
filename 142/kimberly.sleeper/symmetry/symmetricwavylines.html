@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>Symmetric Wavy Lines Drawing</title>
+  <link rel="stylesheet" href="symmetry.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(x,y){
+      var r,k;
+      translate(200,200);
+      setupNoise(5);
+      R=width/3;
+    }
+    var Colors=[rgb(143,188,143,.5),
+                rgb(176,196,222,.5),
+                rgb(255,160,122,.5),
+                rgb(219,112,147,.1)];
+
+    function randomMark(x,y,r){
+      save();
+      translate(x,y);
+      rotate(noise(abs(x/width),abs(y/height))*360);
+      symmetricLine(-r,0,r,0,5);
+      linewidth(15);
+      restore();
+}
+
+  function symmetricLine(x1,y1,x2,y2,k){
+      var x,y,k;
+      save();
+      for(i=0;i<k;i=i+1){
+      line(x1,y1,x2,y2);
+      line(y1,x1,y2,x2);
+        rotate(360/k);
+      }
+      restore();
+    }
+
+    function draw(){
+      var x,y,i,k;
+      k>=2;
+      k=floor(random()*10)+2;
+      for(i=0;i<R;i=i+1){
+      color(Colors.random());
+      x=random()*R;
+      y=random()*R;
+      x2=random()*R;
+      y2=random()*R;
+      symmetricLine(x,y,x2,y2,k);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Symmetric Wavy Lines Drawing</div>
+      <div id="spork"></div>
+      <button onclick='stoploop();'>Stop</button>
+      <button onclick='startloop();'>Start</button>
+      <button onclick='startover();'>Start Over</button>
+      <a href="index.html">Symmetry Home</a>
+  </div>
+</body>
+</html>

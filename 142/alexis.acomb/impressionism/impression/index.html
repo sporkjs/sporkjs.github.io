@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <script src='spork.js'></script>
+  <script>
+  var R=[];
+  var G=[];
+  var B=[];
+  var A=[];
+
+  var small=10;
+  function myRect(x,y,w,h){
+  var x=floor(x);
+  var y=floor(y);
+  fillcolor(R[x][y],G[x][y],B[x][y],A[x][y]);
+  rect(x,y,w,h);
+  fill();
+  }
+  function mgrid(x,y,w,h){
+  var l,k;
+  if((w<small)||(h<small)||(random()<0.05)){
+  myRect(x,y,w,h);
+  }
+  else if(w>h){ //wide
+  l=random()*w;
+  mgrid(x,y,l,h);
+ mgrid(x+l,y,w-l,h); //right
+}
+else{ //tall
+k=random()*h;
+mgrid(x,y,w,k); //top
+mgrid(x,y+k,w,h-k); //bottom
+}
+}
+function setup(){
+size(theImage.width,theImage.height);
+drawImage(theImage,width/2,height/2,width,height);
+copyImageData(R,G,B,A);
+clear();
+}
+function draw(){
+mgrid(0,0,width,height);
+}
+  </script>
+</head>
+<body>
+  <div id='spork'></div>
+  <img src='owl.jpg' id='theImage'></img>
+</br/>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>Spots
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #Spots{
+    background: darkgray;}
+    </style>
+  <script src="spork.js"></script>
+  <script>
+
+function setup(){
+  timestep(100);
+  loop();
+  size(400,400);
+}
+function draw(){
+  var x=random()*width;
+  var y=random()*height;
+  var r=min(x, y, width-x, height-y);
+  fillcolor(72,61,139,0.5)
+  circle(x,y,r);
+  fill();
+}
+
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id='titleDiv'>Spots</div>
+  <div id='primaryNavigation'>
+    <div class="tab" id="mainTab"><a href=../index.html>Main</a></div>
+    <div class="tab" id="homeTab"><a href=indexnew.html>Home</a></div>
+    <div class="tab" id="FourColors"><a href=fourcolors.html>Four Colored Lines</a></div>
+    <div class="tab" id="TwoColors"><a href=twocolor.html>Two Colored Lines</a></div>
+    <div class="tab" id="RandomColors"><a href=randomcolor.html>Random Colored Lines</a></div>
+    <div class="tab" id="CreatureBouncing"><a href=bouncingcreature.html>Creature Bouncing</a></div>
+    <div class="tab" id="Fuzzy"><a href=fuzzy.html>Fuzzy Ball</a></div>
+    <div class="tab" id="Spots"><a href=Spots.html>Spots</a></div>
+    <div class="tab" id="Brownian"><a href=Brownianmotion.html>Brownian</a></div>
+
+  </div>
+  <div id="content">
+    <p>
+    <div id="spork"></div>
+    <button onclick='stoploop();'>Stop</button>
+    <button onclick='startloop();'>Start</button>
+    <button onclick='startover();'>Start Over</button>
+    <button onclick='canvasToNewImg()'>Make Image</button>
+
+  </div>
+  <div id="secondaryNavigation">Cassie Lewis | Math 142 | <a href= "http://www.cune.edu">CUNE</a></div>
+      </div>
+</body>
+</html>

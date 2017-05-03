@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <title>Line Symmetry
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #line{
+    background: darkgray;}
+    </style>
+  <script src="spork.js"></script>
+  <script>
+  var R;
+    function mark(x,y,r){
+      var vx,vy;
+      save();
+      ang=(noise(abs(x/width),abs(y/height))*170);
+      vx=20*COS(ang)
+      vy=10*SIN(ang)
+      symmetricLine(x,y,(x+vx),(y+vy));
+        restore();
+      }
+    function symmetricLine(x1,y1,x2,y2){
+      var i;
+      save();
+      for(i=0;i<10;i=i+1){
+      line(x1,y1,x2,y2);
+      line(y1,x1,y2,x2);
+      rotate(36);
+    }
+      restore();
+    }
+
+    function setup(){
+      translate(width/2,height/2);
+      setupNoise(10);
+      R=width/5;
+    }
+    function draw(){
+
+
+      var x,y;
+      for(i=0;i<100;i=i+1){
+      x=random()*R;
+      y=random()*R;
+     var theColors=['blue','darkblue','deeppink','hotpink','orchid','pink','purple','red','royalblue','violet'];
+      var colors=theColors.random();
+      color(colors);
+      mark(x,y,40);
+      }
+    }
+
+
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id='titleDiv'>Hair symmetry</div>
+    <div id='primaryNavigation'>
+      <div class="tab" id="mainTab"><a href=../index.html>Main</a></div>
+      <div class="tab" id="cowspot"><a href=cowspotsymmetry.html>Cow Spot Symmetry</a></div>
+      <div class="tab" id="hair"><a href=hairsymmetry.html>Hair Symmetry</a></div>
+      <div class="tab" id="line"><a href=linesymmetry.html>Line Symmetry</a></div>
+      <div class="tab" id="brownian"><a href=browniansymmetry.html>Brownian Symmetry</a></div>
+      <div class="tab" id="smooth"><a href=fuzzysymmetry.html>Smooth Symmetry</a></div>
+
+
+    </div>
+    <div id="content">
+      <p>
+      <div id="spork"></div>
+      <button onclick='startover();'>New</button>
+        <button onclick='canvasToNewImg()'>Make Image</button>
+
+    </div>
+    <div id="secondaryNavigation">Cassie Lewis | Math 142 | <a href= "http://www.cune.edu">CUNE</a></div>
+        </div>
+  </body>
+  </html>

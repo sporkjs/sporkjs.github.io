@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <script src="spork.js"></script></script>
+  <script>
+  function creature(x,y,r){
+    save();
+    translate(200,200);
+  //Right Leg
+  circle(50,110,30);
+  fillcolor(80,20,5);
+  fill();
+  //Left Leg
+  circle(-50,110,30)
+  fillcolor(80,20,5);
+  fill();
+  //Left Foot
+  // Body
+  circle(0,30,100);
+  fillcolor(80,20,5);
+  fill();
+  //Right Ear
+  circle(50,-140,20);
+  fillcolor(80,20,5);
+  fill();
+  //Right Inner Ear
+  circle(49,-137,15);
+  fillcolor(145,120,80);
+  fill();
+  //Left Ear
+  circle(-50,-140,20);
+  fillcolor(80,20,5);
+  fill();
+  //Left Inner Ear
+  circle(-49,-137,15);
+  fillcolor(145,120,80);
+  fill();
+  //Head
+  circle(0,-70,80);
+  fillcolor(80,20,5);
+  fill();
+  //Muzzle
+  ellipse(0,-50,-50,40);
+  fillcolor(145,120,80);
+  fill();
+  //Nose
+  ellipse(0,-55,-10,7);
+  fillcolor('black');
+  fill();
+
+  //Left Arm
+  circle(-60,10,30);
+  fillcolor(80,20,5);
+  fill();
+  //Right Eye
+  circle(30,-90,7);
+  fillcolor('black');
+  fill();
+  //Left eye
+  circle(-30,-90,7);
+  fillcolor('black');
+  fill();
+  //Mouth
+  line(-19,-37,-18,-36,-17,-35,-15,-34,-5,-35,-2,-38,-1,-43,0,-48,1,-43,2,-38,5,-35,15,-34,17,-35,15,-33,17,-35,18,-36,19,-37)
+  //Right Foot
+  ellipse(50,145,30,12)
+  fillcolor(80,20,5);
+  fill();
+  //Left Foot
+  ellipse(-50,145,30,12)
+  fillcolor(80,20,5);
+  fill();
+  //Paw
+  circle(-60,17,15)
+  fillcolor(145,120,80);
+  fill();
+  //Paw1
+  circle(-77,0,6);
+  fillcolor(145,120,80)
+  fill();
+  //Paw2
+  circle(-60,-7,6)
+  fillcolor(145,120,80)
+  fill();
+  //Paw3
+  circle(-42,0,6)
+  fillcolor(145,120,80)
+  fill();
+  //Right Arm
+  circle(64,121,30)
+  fillcolor(80,20,5);
+  fill();
+  //Right Paw
+  ellipse(65,147,30,15);
+  fillcolor(80,20,5);
+  fill();
+  }
+  function setup(){
+    size(600,400)
+  }
+  function draw(){
+  creature(100,250,20);
+  }
+  </script>
+</head>
+<body>
+  <div id="spork">
+  </div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+  <title>Random Location Creature</title>
+  <link rel="stylesheet" href="2loop.css">
+  <script src="spork.js"></script>
+  <script>
+  function alexis(X,Y,R){
+    save();
+    translate(X,Y);
+    scale(R/200);
+    color('white');
+    fillcolor('white');
+    circle(0,0,200);
+    fill();
+      var angle;
+      for(angle=0;angle<360;angle=angle+20){
+        save();
+        rotate(angle);
+        line(0,0,0,200);
+        triangle(0,200,10,185,-10,185);
+        fillcolor('blue');
+        fill();
+        restore();
+      }
+      circle(0,0,150);
+      fillcolor('red');
+      fill();
+      var x;
+      for(x=0;x<360;x=x+20){
+        save();
+        rotate(x);
+        circle(0,150,20);
+        fillcolor('orange');
+        fill();
+        circle(0,150,10);
+        fillcolor('yellow');
+        fill();
+        restore();
+      }
+      var y;
+      for(y=0;y<360;y=y+20){
+        save();
+      rotate(y);
+      rect(25,75,50,25);
+      fillcolor('blue');
+      fill();
+      restore();
+      }
+      var z;
+      for(z=0;z<360;z=z+20){
+        save();
+        rotate(z);
+        ellipse(55,35,10,5);
+        fillcolor('orange');
+        fill();
+        restore();
+      }
+      var a;
+      for(a=0;a<360;a=a+20){
+        save();
+        circle(0,0,50);
+        fillcolor('yellow');
+        fill();
+        restore();
+      }
+      var b;
+      for(b=0;b<360;b=b+20){
+        save();
+        rotate(b);
+        triangle(0,15,5,40,-5,40);
+        fillcolor('black');
+        fill();
+        restore();
+      }
+      circle(0,0,10);
+      fillcolor('blue');
+      fill();
+    restore();
+    }
+
+  function megan(X,Y,R){
+    save();
+  	    translate(X,Y);
+    scale(R/200);
+    color('white');
+    fillcolor('white');
+    circle(0,0,180);
+    fill();
+
+      //OneRed
+      var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-10){
+            save();
+         		rotate(a);
+              color("red");
+        		circle(170,0,10);
+              fillcolor("red");
+              fill();
+        	  restore();
+        	  }
+          }
+
+      //OneBlack
+      var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-20){
+            save();
+         		rotate(a);
+              color("black");
+        		circle(170,0,20);
+              fillcolor("black");
+              fill();
+        	  restore();
+        	  }
+          }
+
+      //lines
+      var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-10){
+            save();
+         		rotate(a);
+              color("black");
+        		line(0,0,0,158);
+        	  restore();
+        	  }
+          }
+
+      //TwoRed
+      var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-10){
+            save();
+         		rotate(a);
+              color("red");
+        		circle(135,0,10);
+              fillcolor("red");
+              fill();
+        	  restore();
+        	  }
+          }
+
+      //ThreeBlack
+      var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-10){
+            save();
+         		rotate(a);
+              color("black");
+              triangle(0,120,10,90,-10,90);
+              fillcolor("black");
+              fill();
+        	  restore();
+        	  }
+          }
+
+      var angle;
+
+        for (angle=0;angle<360;angle=angle+20){
+
+          save();
+            rotate(angle);
+            line(0,0,0,180);
+            triangle(0,166,20,185,-20,185);
+            fillcolor("black");
+            fill();
+          restore();
+        }
+
+      //FourRed
+       var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-10){
+            save();
+         		rotate(a);
+              color("red");
+        		circle(70,0,5);
+              fillcolor("red");
+              fill();
+        	  restore();
+        	  }
+          }
+
+      //FiveBlack
+      var a
+
+          for(d=180;d>0;d=d-10){
+
+            for(a=360;a>0;a=a-10){
+            save();
+              rotate(a);
+              color("black");
+        		triangle(0,40,5,50,-5,50);
+              fillcolor("black");
+              fill();
+        	  restore();
+        	  }
+          }
+
+      circle(0,0,20);
+      color("red");
+      fillcolor("red");
+      fill();
+  restore();
+  }
+
+  function circlepattern(x,y,r){
+      save();
+      translate(x,y);
+      scale(r/200);
+       circle(0,0,180);
+        fillcolor('black');
+        fill();
+       var a;
+    //Orange triangles
+      for (a=0;a<360;a=a+10){
+        save();
+        rotate(a);
+        color('yellow');
+        fillcolor('yellow');
+        triangle(180,0,165,10,175,-10);
+        fill();
+         restore();
+      }
+      //Orange circle
+      save();
+      color('orange');
+      linewidth(5);
+      circle(0,0,160);
+      restore();
+
+      //< shapes
+      for (a=0;a<360;a=a+10){
+        save();
+        rotate(a);
+        color('red');
+        line(150,5,155,0,150,-5);
+         restore();
+      }
+       //Blue circle
+      save();
+      color(0,0,210);
+      linewidth(3);
+      circle(0,0,150);
+      restore();
+
+      //White lines
+      for (a=0;a<360;a=a+10){
+        save();
+        rotate(a);
+        color('white');
+        rect(-100,-100,200,200);
+         restore();
+      }
+       //Red rectangle
+      for (a=0;a<360;a=a+22.5){
+      save();
+        rotate(a);
+      color(0,0,100);
+      rect(-70,-70,140,140);
+        fillcolor(0,0,100);
+        fill();
+      restore();
+      }
+
+      //Circle
+       save();
+      color('orange');
+      linewidth(1);
+      circle(0,0,40);
+      restore();
+
+      //Circle
+       save();
+      color('orange');
+      linewidth(2);
+      circle(0,0,45);
+      restore();
+
+
+      //Circle
+       save();
+      color('orange');
+      linewidth(3);
+      circle(0,0,50);
+      restore();
+
+
+      //Circle
+       save();
+      color('orange');
+      linewidth(4);
+      circle(0,0,55);
+      restore();
+
+
+      //Circle
+       save();
+      color('orange');
+      linewidth(5);
+      circle(0,0,60);
+      restore();
+
+     //Red Lines
+      for (a=0;a<360;a=a+10){
+        save();
+        rotate(a);
+        color('red');
+        rect(70,2,10,4);
+        fillcolor('red');
+        fill();
+         restore();
+      }
+      restore();
+    }
+    function marissa (x,y,r){
+       circlepattern(x,y,r);
+       circlepattern(x,y,r/4);
+       circlepattern(x,y,r/16);
+
+    }
+
+  function draw(){
+    var x,y,r;
+
+    var i;
+
+      for(i=0;i<20;i=i+1){
+    	x=random()*width;
+    	y=random()*height;
+      r=random()*80;
+    	megan(x,y,r);
+    	}
+
+      for(i=0;i<20;i=i+1){
+    	x=random()*width;
+    	y=random()*height;
+      r=random()*80;
+    	circlepattern(x,y,r);
+    	}
+
+      for(i=0;i<20;i=i+1){
+    	x=random()*width;
+    	y=random()*height;
+      r=random()*80;
+    	alexis(x,y,r);
+    	}
+  }
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Random Location Creature</div>
+      <div id="spork"></div>
+      <a href="index.html">For Loops Home</a>
+  </div>
+</body>
+</html>

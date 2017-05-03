@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>INSERT TITLE HERE</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+
+  function setup(){
+    }
+   function draw(){
+   
+      var x,y;
+      for(x=40;x<width;x=x+80)
+        for(y=40;y<height;y=y+80){
+          creature(x,y,40);
+        }
+     		creature(200,200,157);
+   }
+        function creature(x,y,r){
+          save();
+          translate(x,y);
+          scale(r/200);
+            //Head//
+            circle(0,35,120);
+            fillcolor("black");
+            fill();
+            //Right Ear//
+            save();
+            translate(100,-125);
+            circle(0,35,70);
+            fillcolor("black");
+            fill();
+            restore();
+            //Left Ear//
+            save();
+            translate(-100,-125);
+            circle(0,35,70);
+            fillcolor("black");
+            fill();
+            restore();
+            //Face//
+            rotate(90);
+            ellipse(35,25,100,60);
+            color(255,223,184);
+            fillcolor(255,223,184);
+            fill();
+            ellipse(35,-25,100,60);
+            fillcolor(255,223,184);
+            fill();
+            rotate(90);
+            ellipse(0,-96,95,60);
+            fillcolor(255,223,184);
+            fill();
+            //Bow//
+            color("red");
+            circle(0,85,15);
+            fillcolor("red");
+            fill();
+            save();
+            translate(0,85);
+            triangle(0,0,90,100,100,-100);
+            fillcolor("red");
+            fill();
+            triangle(0,0,-100,-100,-90,100);
+            fillcolor("red");
+            fill();
+      	restore();
+  	restore();
+        }
+
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">TITLE BAR</div>
+    <div id="mainNavigation">MAIN NAVIGATION DIV</div>
+    <div id="content">MAIN CONTENT DIV
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">SECONDARY NAVIGATION</div>
+  </div>
+</body>
+</html>

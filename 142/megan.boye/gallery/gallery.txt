@@ -1,0 +1,25 @@
+theCaptions=[ "This piece was created by Mikael Hvidtfeldt Christensen. It was generated using the software Structure Synth.",
+        "The artist started with the red, then combined the green and blue channels together. The arrangement was created by using a random number generator.",
+        "This piece was created by utilizing a Hilbert space filling curve. The curve stops at each point within a 2D space and was discovered by the German mathematician David Hilbert.",
+        "To create this piece, the artist used a process called digital slitscan.",
+        "This sculpture was created by Jean-Max Albert in 1991. It is an example of what a plant's growth could look like if it were translated into shapes and colors.",
+        "This piece was created using a C++ program that the artist than used to experiment with and got this result.",
+        "The artist was inspired to create this image after reading a book about cosmology, specifically, "the arrow time".",
+        "German researchers created a computer algorithm that can transform pictures into images that resemble styles used by masters such as Van Gogh and Picasso.",
+        "This was created by Anastasiya Malakhova using codes, functions and algorithms.",
+        "This was created by Tyler Hobbs in 2016.",
+	       "This was created by an artist using themes and symbols from NYC, Andy Warhol, her studio's logo and the font called Dingbat."
+];
+
+theImages=[ "images/octo.jpg",
+        "images/red.png",
+        "images/blue.png",
+        "images/3d.jpg",
+        "images/growth.jpg",
+        "images/feb.jpg",
+        "images/order.png",
+        "images/work.jpg",
+        "images/art.jpg",
+        "images/hearing.jpg",
+        "images/hearts.jpg"
+];

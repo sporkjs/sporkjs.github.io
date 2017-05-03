@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <title>Random Lines</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="spork.js"></script>
+  <script>
+  var randomColors=['blue','black','gold'];
+
+function mark(x,y,r){
+save();
+translate(x,y);
+rotate(random()*360);
+linewidth(2);
+line(-r,0,r,0);
+restore();
+}
+
+
+function setup(){
+size(600,400);
+loop();
+timestep(2);
+}
+
+function draw(){
+var x,y,r;
+  r=5;
+  x=random()*(width-40)+20;
+  y=random()*(height-40)+20;
+  if(x<width/2 && y<height/2) color('red');
+  else if (y<height/2) color('green');
+  else if (x>width/2) color('black');
+  else if (y>height/2) color('blue');
+  mark(x,y,r);
+}
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar"> Random Lines </div>
+    <div id="spork">
+    </div>
+      <div id=content>
+        This image is a bunch of lines randomly being drawn. With the if/else statement, there was a way to divide the width and height in half to determine which colors appeared where. Click <a href="index.html">here</a> to go back home.
+      </p>
+    </div>
+    <div id="secondaryNavigationDiv">
+      Samuel Otte | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a>
+    </div>
+  </div>
+</body>

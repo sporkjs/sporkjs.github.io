@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <title>Paint
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #paint{
+    background: darkgray;}
+    </style>
+  <script src="spork.js"></script>
+  <script>
+  //COW SPOTS
+  var lastX, lastY;
+
+function onmousedown(){
+  lastX=mouseX;
+  lastY=mouseY;
+
+}
+
+function pencil(){
+  if (mouseDown){
+  line(lastX,lastY,mouseX,mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+
+function fuzz(){
+  if (mouseDown){
+  save();
+  linewidth(1);
+  translate(mouseX,mouseY);
+  rotate(random()*360);
+  line(-theLineWidth,0,theLineWidth,0);
+  restore();
+  }
+}
+function Circle(){
+  if (mouseDown){
+  save();
+  linewidth(1);
+  circle(mouseX,mouseY,theLineWidth);
+  restore();
+  }
+}
+var theLineWidth;
+  function setup(){
+    background('white');
+    theLineWidth=1;
+    onmousemove=pencil;
+  }
+
+  function draw(){
+  }
+function setLineWidth(x){
+  linewidth(x);
+  theLineWidth=x;
+}
+function setPenType(x){
+  onmousemove=x;
+}
+function selectEraser(){
+  eraserWidth.checked=true;
+  eraserColor.checked=true;
+  color('white');
+  linewidth(14);
+  onmousemove=pencil;
+}
+
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div id='titleDiv'>Paint</div>
+    <div id='primaryNavigation'>
+      <div class="tab" id="mainTab"><a href=../index.html>Main</a></div>
+      <div class="tab" id="paint"><a href=paint.html>Paint</a></div>
+
+
+    </div>
+    <div id="content">
+      <p>
+      <div id="spork"></div>
+        <button onclick="background('white')">Clear</button>
+        <button onclick='canvasToNewImg()'>Make Image</button>
+        <fieldset>
+          <legend>
+            Pen Type
+          </legend>
+          <input type="radio" name='penType' checked onclick = 'setPenType(pencil);'/> Pencil
+          <input type="radio" name='penType' onclick = 'setPenType(fuzz);' /> Fuzz
+          <input type="radio" name='penType' onclick = 'setPenType(Circle);' /> Circle
+          <input type="radio" name='penType' onclick = 'selectEraser();' /> Eraser
+        </fieldset>
+        <fieldset>
+          <legend>
+            Pen Size
+          </legend>
+          <input type="radio" name='penSize' checked onclick = 'setLineWidth(1);'/> <div class='pensize one'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(5);' /> <div class='pensize five'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(8);' /> <div class='pensize eight'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(10);' /> <div class='pensize ten'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(12);'/> <div class='pensize twelve'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(14);' id='eraserWidth'/> <div class='pensize fourteen'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(16);' /> <div class='pensize sixteen'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(18);' /> <div class='pensize eighteen'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(20);' /> <div class='pensize twenty'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(22);' /> <div class='pensize twentytwo'></div>
+          <input type="radio" name='penSize' onclick = 'setLineWidth(24);' /> <div class='pensize twentyfour'></div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Pen Color
+          </legend>
+          <input type="radio" name='penColor' checked onclick = "color('black');" /> <div class='pencolor black'></div>
+          <input type="radio" name='penColor' onclick = "color('red');" /> <div class='pencolor red'></div>
+          <input type="radio" name='penColor' onclick = "color('orange');" /> <div class='pencolor orange'></div>
+            <input type="radio" name='penColor' onclick = "color('yellow');" /> <div class='pencolor yellow'></div>
+          <input type="radio" name='penColor' onclick = "color('green');" /> <div class='pencolor green'></div>
+          <input type="radio" name='penColor' onclick = "color('blue');" /> <div class='pencolor blue'></div>
+          <input type="radio" name='penColor' onclick = "color('purple');" /> <div class='pencolor purple'></div>
+          <input type="radio" name='penColor' onclick = "color('pink');" /> <div class='pencolor pink'></div>
+          <input type="radio" name='penColor' onclick = "color('grey');" /> <div class='pencolor grey'></div>
+          <input type="radio" name='penColor' onclick = "color('brown');" /> <div class='pencolor brown'></div>
+          <input type="radio" name='penColor' onclick = "color('white');" id='eraserColor'/> <div class='pencolor white'></div>
+        </fieldset>
+
+
+
+    </div>
+    <div id="secondaryNavigation">Cassie Lewis | Math 142 | <a href= "http://www.cune.edu">CUNE</a></div>
+        </div>
+  </body>
+  </html>

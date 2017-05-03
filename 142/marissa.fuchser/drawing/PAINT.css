@@ -1,0 +1,87 @@
+body{background: black;
+}
+#wrapper{
+text-align: center;
+background-color: lightgrey;
+width: 80%;
+margin:auto;
+border-radius:15px;
+overflow:hidden;
+}
+#titleBar{
+  background-color: darkgreen;
+  color:silver;
+  font-size:45px;
+  padding:20px;
+  text-shadow:5px 5px black;
+}
+#mainNavigation{
+position:fixed;
+left:0px;
+background-color:lightgrey;
+color: white;
+}
+#content{
+margin:30px;
+overflow: hidden;
+}
+#secondaryNavigation{
+
+}
+div.penTip{
+  width:20px;
+  background:black;
+  padding:0px;
+  border:none;
+  display:inline-block;
+}
+div.one{
+  height:1px;
+}
+div.three{
+  height:3px
+}
+div.five{
+  height:5px
+}
+div.seven{
+  height:7px
+}
+div.ten{
+  height:10px
+}
+div.fifteen{
+  height:15px
+}
+div.thirty{
+  height:30px
+}
+}div.fifty{
+  height:50px
+}
+div.green{
+  background: green;
+}
+div.purple{
+  background: purple;
+}
+div.blue{
+  background: blue;
+}
+div.yellow{
+  background: yellow;
+}
+div.grey{
+  background: grey;
+}
+div.orange{
+  background: orange;
+}
+div.white{
+  background: white;
+}
+
+div.tab{
+  font-size: 25px;
+  padding: 20px;
+}

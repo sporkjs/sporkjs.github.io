@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title>Noises</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    setupNoise(7)
+  }
+
+  function draw(){
+    for(x=0;x<width;x=x+1)
+      for(y=0;y<=height;y=y+1){
+        var c;
+        c=(noise(x/width,y/height));
+        if (c>0)
+           fillcolor('black');
+        else
+        fillcolor('white');
+
+        fillrect(x,y,1,1);
+
+      }
+  }
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="titleBar">Cow Spots</div>
+  <div id="mainNavigation">
+<div class='tab'>
+  <a href='Static1.html'>Random Static</a></div>
+  <div class='tab'>  <a href='Static2.html'>Smooth Static</a></div>
+  <div class='tab'>  <a href='Static3.html'>Funky Lines</a></div>
+  <div class='tab'>  <a href='Static4.html'>Cow Spots</a></div>
+  <div class='tab'>  <a href='Static5.html'>Hair</a></div>
+  <div class='tab'>  <a href='Static6.html'>Wavy Lines</a></div>
+  <div class='tab'>  <a href='Static7.html'>Circle Grid Modified</a></div>
+<div class='tab'>  <a href='../index.html'>Home</a></div>
+
+
+</div>
+  <div id="content">
+    <div id="spork"></div>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

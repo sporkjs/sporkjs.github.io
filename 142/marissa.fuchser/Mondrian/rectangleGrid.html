@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>Rectangle Grid</title>
+  <link rel="stylesheet" href="mondrian.css">
+  <script src="spork.js"></script>
+  <script>
+  var small=15;
+var
+theColors=['red','blue','purple','grey'];
+function mgrid(x,y,w,h){
+  var l,k;
+  if ((w<small) || (h<small)){
+    fillcolor(theColors.random());
+    rect(x,y,w,h);
+    fill();
+  }
+else if (w>h){ // wide rectangle
+  l=random()*w;
+  mgrid(x,y,l,h);  //left
+  mgrid(x+l,y,w-l,h);   //right
+}
+else{ // tall rectangle
+  k=random()*h;
+  mgrid(x,y,w,k);   //top
+  mgrid(x,y+k,w,h-k); //bottom
+}
+}
+function setup(){
+  size(600,400);
+}
+function draw(){
+    mgrid(0,0,width,height);
+  }
+  </script>
+  </head>
+  <body>
+  <div id="wrapper">
+      <div id="titleBar">Mondrian Grids</div>
+      <div id="mainNavigation">
+    <div class='tab'>
+      <a href='modifiedImpression.html'>Modified Impression</a></div>
+      <div class='tab'>  <a href='diamondGrid.html'>Diamond Grid</a></div>
+    <div class='tab'>  <a href='rectangleGrid.html'>Rectangle Grid</a></div>
+    <div class='tab'>  <a href='../index.html'>Home</a></div>
+
+  </div>
+    <div id="content">
+      <div id="spork"></div>
+      <button onclick="startover();">New</button>
+    </div>
+    <div id="secondaryNavigation"></div>
+  </div>
+  </body>
+  </html>

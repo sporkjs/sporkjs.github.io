@@ -1,0 +1,66 @@
+body{
+  background-color: tan;
+}
+#wrapper{
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#titleDiv{
+  background-color: pink;
+  color: white;
+  font-size: 64px;
+  text-shadow: 2px 2px black;
+  padding: 10px;
+}
+#primaryNavigation{
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+}
+#content{
+  padding: 10px;
+}
+#secondaryNavigation{
+  text-align: right;
+  border-top: 1px solid lightgrey;
+  font-size: 11pt;
+  padding-right: 7px;
+  clear:both;
+}
+p{
+  text-indent: 30px;
+}
+#titleImage{
+  height: 80px;
+  vertical-align: middle;
+}
+img.smallRight{
+  max-height: 200px;
+  float: right;
+  padding: 10px;
+}
+img.smallLeft{
+  height: 200px;
+  float: left;
+  padding: 10px;
+}
+img.smallCenter{
+  max-width: 200px;
+  display: block;
+  margin: auto;
+}
+div.tab{
+  display: inline-block;
+  width:18%;
+}
+p.ref{
+  margin: 30px;
+  text-indent: -30px;
+}
+img.medCenter{
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}

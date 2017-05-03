@@ -1,0 +1,71 @@
+div{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+#wrapper{
+background-color: lightslategray;
+}
+#titleBar{
+background-color: lightseagreen;
+font-size: 35px;
+text-align: center;
+}
+#content{
+background-color: lightseagreen;
+text-align: center;
+font-size: 20px;
+}
+#secondaryNavigation{
+background-color: lightseagreen;
+text-align: right;
+}
+div.penSize{
+width: 20px;
+background: black;
+padding: 0px;
+border: none;
+display: inline-block;
+}
+div.one{
+height: 1px;
+}
+div.five{
+  height: 5px;
+}
+div.ten{
+  height: 10px;
+}
+div.twenty-five{
+  height:25px;
+}
+div.fifty{
+  height: 50px;
+}
+div.red{
+  background: red;
+}
+div.darkorange{
+  background: orange;
+}
+div.blue{
+  background: blue;
+}
+div.yellow{
+  background: yellow;
+}
+div.green{
+  background: green;
+}
+div.purple{
+  background: purple;
+}
+div.white{
+  background: white;
+}
+div.gray{
+  background: gray;
+}
+div.brown{
+  background: brown;
+}

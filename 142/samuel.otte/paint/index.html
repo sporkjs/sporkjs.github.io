@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <title>Paint</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="spork.js"></script>
+  <script>
+  var lastX,lastY;
+function onmousedown(){
+  lastX=mouseX;
+  lastY=mouseY;
+}
+function pencil(){
+  if (mouseDown){
+  	line(lastX,lastY,mouseX,mouseY);
+    lastX=mouseX;
+    lastY=mouseY;
+  }
+}
+function fuzz(){
+  if (mouseDown){
+  	save();
+      linewidth(1);
+      translate(mouseX,mouseY);
+      rotate(random()*360);
+      line(-theLineWidth,0,theLineWidth,0);
+    restore();
+  }
+}
+function circles(){
+  if (mouseDown){
+  	save();
+      linewidth(1);
+      circle(mouseX,mouseY,theLineWidth);
+    restore();
+  }
+}
+var theLineWidth;
+function setup(){
+  size(400,400);
+  background('white');
+  theLineWidth=1;
+  onmousemove=pencil;
+}
+function draw(){
+
+}
+function setLineWidth(x){
+  linewidth(x);
+  theLineWidth=x;
+}
+function setPenType(x){
+  onmousemove=x;
+}
+function selectEraser(){
+  eraserWidth.checked=true;
+  eraserColor.checked=true;
+  color('white');
+  linewidth(50);
+  onmousemove=pencil;
+}
+  </script>
+
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Paint</div>
+    <div id="content">
+      <div id='spork'></div>
+      <button onclick="background('white');">Clear</button>
+
+      <fieldset>
+        <legend>
+          Pen Type
+        </legend>
+        <input type='radio' name='penType' checked onclick='setPenType(pencil);' />Pencil
+        <input type='radio' name='penType' onclick='setPenType(fuzz);' />Fuzz
+        <input type='radio' name='penType' onclick='setPenType(circles);' />Circles
+        <input type='radio' name='penType' onclick='selectEraser();' />Eraser
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Pen Size
+        </legend>
+        <input type='radio' name='penSize' checked onclick="setLineWidth(2);"/>2<div class='pensize two'></div>
+        <input type='radio' name='penSize' onclick="setLineWidth(5);"/>5<div class='pensize five'></div>
+        <input type='radio' name='penSize' onclick="setLineWidth(10);"/>10<div class='pensize ten'></div>
+        <input type='radio' name='penSize' onclick="setLineWidth(20);" />20<div class='pensize twenty'></div>
+        <input type='radio' name='penSize' onclick="setLineWidth(50);"id='eraserWidth'/>50<div class='pensize fifty'></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Pen Color
+        </legend>
+        <input type='radio' name='penColor' checked onclick="color('black')" />Black<div class='pensize five'></div>
+        <input type='radio' name='penColor' onclick="color('red')" />Red<div class='pensize five red'></div>
+        <input type='radio' name='penColor' onclick="color('orange')" />Orange<div class='pensize five orange'></div>
+        <input type='radio' name='penColor' onclick="color('yellow')" />Yellow<div class='pensize five yellow'></div>
+        <input type='radio' name='penColor' onclick="color('green')" />Green<div class='pensize five green'></div>
+        <input type='radio' name='penColor' onclick="color('blue')" />Blue<div class='pensize five blue'></div>
+        <input type='radio' name='penColor' onclick="color('purple')" />Purple<div class='pensize five purple'></div>
+        <input type='radio' name='penColor' onclick="color('white')" id='eraserColor' />White<div class='pensize five white'></div>
+      </fieldset>
+
+    </div>
+    <div id="secondaryNavigationDiv">
+      Samuel Otte | Math 142 | <a href="http://www.cune.edu" target="NEW">CUNE</a>
+    </div>
+  </div>
+</body>
+</html>

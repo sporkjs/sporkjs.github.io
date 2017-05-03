@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Fun With For Loops</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+
+  }
+  function draw(){
+    var x;
+    for(x=0;x<height;x=x+5){
+      line(0,x,width,x);
+    }
+    color(0,0,0,0);
+    circle(200,200,150);
+    fillcolor('white');
+    fill();
+    clip();
+    color('black');
+    var y;
+    for(y=0;y<width;y=y+5){
+      line(y,0,y,height);
+    }
+
+  }
+
+  </script>
+
+</head>
+<body>
+  <div id="wrapper">
+    <div id="titleBar">Fun With For Loops</div>
+    <div id="mainNavigation"></div>
+    <div id="content">
+      <div id="spork"></div>
+    </div>
+    <div id="secondaryNavigation">
+      <div class="tab" id="creatureTab"><a href="creature.html">Creature</a></div>
+      <div class="tab" id="circleTab"><a href="circle.html">Circle</a></div>
+      <div class="tab" id="clipTab"><a href="clip.html">Clip</a></div>
+    </div>
+  </div>
+</body>
+
+</html>

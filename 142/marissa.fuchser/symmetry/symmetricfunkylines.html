@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>Symmetric Funky Lines</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <script src="spork.js"></script>
+  <script>
+  function setup(){
+    size(400,400);
+    translate(width/2,height/2);
+
+    setupNoise(20);
+  }
+  function symmetricPoint(x,y){
+    save();
+  	for(i=0; i<4; i=i+1){
+      fillrect(x,y,1,1);
+      fillrect(y,x,1,1);
+    	rotate(90);
+      }
+  	restore();
+  }
+  function draw(){
+    var x,y;
+    for (x=0;x<=width/2;x=x+1)
+      for (y=0;y<=x;y=y+1){
+         c=floor(130*(noise(x/width,y/height)+1));
+          c=20*floor(c/20);
+          fillcolor(20-c,c,c);
+        symmetricPoint(x,y,1,1);
+      }
+  }
+</script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="titleBar">Symmetry</div>
+    <div id="mainNavigation">
+  <div class='tab'>
+    <a href='symmetrichair.html'>Symmetrical Hair</a></div>
+    <div class='tab'>  <a href='symmetriccowspots.html'>Symmetrical Cow Spots</a></div>
+  <div class='tab'>  <a href='symmetricfunkylines.html'>Symmetrical Funky Lines</a></div>
+  <div class='tab'>  <a href='symmetricphoto.html'>Symmetrical Image</a></div>
+  <div class='tab'>  <a href='symmetricbrownian.html'>Symmetrical Brownian Motion</a></div>
+  <div class='tab'>  <a href='symmetricSpots.html'>Symmetrical Spots</a></div>
+  <div class='tab'>  <a href='../index.html'>Home</a></div>
+
+</div>
+  <div id="content">
+    <div id="spork"></div>
+    <button onclick="startover();">New</button>
+  </div>
+  <div id="secondaryNavigation"></div>
+</div>
+</body>
+</html>

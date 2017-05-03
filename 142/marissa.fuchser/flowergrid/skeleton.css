@@ -1,0 +1,33 @@
+body{
+  background-color: grey;
+}
+div{
+  border: 1px solid black;
+  padding: 10px;
+  margin:  10px;
+}
+#wrapper{
+text-align: center;
+background: black;
+font-size: 30px;
+width: 95%;
+margin:auto;
+border-radius:15px;
+overflow:hidden;
+}
+#titleBar{
+background-color: blue;
+font-size:45px;
+margin:auto;
+padding:10px;
+border-radius:15px;
+text-shadow:5px 4px white;
+overflow:hidden;
+}
+#mainNavigation{
+  background: gray;
+}
+#content{
+}
+#secondaryNavigation{
+}

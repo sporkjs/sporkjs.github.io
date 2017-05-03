@@ -1,0 +1,22 @@
+div{
+  border: 1px solid black;
+  padding: 10px;
+  margin:  10px;
+}
+#wrapper{
+text-align: center;
+}
+#titleBar{
+  background-color: lightgreen;
+  font-size: 35px;
+
+}
+#mainNavigation{
+
+}
+#content{
+
+}
+#secondaryNavigation{
+
+}
