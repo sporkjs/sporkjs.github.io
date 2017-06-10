@@ -793,7 +793,13 @@ function cacheMath(){
 	for (var i in aMathFunctions){
 		window[aMathFunctions[i]] = Math[aMathFunctions[i]];
 	}
-	Number.prototype.TOFIXED=function(n){return(Number(Math.round(this+'e'+n)+'e-'+n));}
+	Number.prototype.TOFIXED=function(n){
+		var z=Number('1e-'+(n+1));
+		if (abs(this)<z)
+			return(0);
+		else
+			return(Number(Math.round(this+'e'+n)+'e-'+n));
+		}
 }
 function setupAll(){
 	setupPageDivs();
@@ -1343,9 +1349,9 @@ try{
 			a=(1-a)/2;
 		var z=invnorm(a);
 		if  (invnormmiddle.checked)
-			invnormanswer.innerHTML='z='+'&pm;'+abs(z).TOFIXED(precision);
+			invnormanswer.innerHTML=''+(m-s*abs(z)).TOFIXED(precision)+' to '+(m+s*abs(z)).TOFIXED(precision);
 		else
-			invnormanswer.innerHTML='z='+z.TOFIXED(precision);
+			invnormanswer.innerHTML=''+(m+s*z).TOFIXED(precision);
 		var ctx=invnormalcanvas.getContext('2d');
 		var w=invnormalcanvas.width;
 		var h=invnormalcanvas.height;
