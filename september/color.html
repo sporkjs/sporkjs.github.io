@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+img{
+	margin: 10px;
+}
+</style>
+<script src='spork.js'></script>
+<script>
+//color wheel stuff--------------------------------------------------
+function cCycle(d){
+  var r;
+  while(d<0) d+=360;
+  d=d%360;
+  if ((d<60) || (d>300)) r=255;
+  else if ((120<d) && (d<240)) r=0;
+  else if (d<=120) r=floor(255-255*(d-60)/60);
+  else r=floor(255*(d-240)/60);
+  return(r)
+}
+function cColor(d){
+  return(rgb(cCycle(d), cCycle(d-120), cCycle(d+120)))
+}
+//----------------------------------------------------------------------
+
+
+function MUL(x,y){
+	return(x*y);
+}
+function P1(x,y){
+	return(x);
+}
+function P2(x,y){
+	return(y)
+}
+function SINPI(x,y){
+	return(sin(x*pi));
+}
+function COSPI(x,y){
+	return(cos(x*pi));
+}
+function SIN2PI(x,y){
+	return(sin(2*x*pi));
+}
+function COS2PI(x,y){
+	return(cos(2*x*pi));
+}
+function SIN3PI(x,y){
+	return(sin(3*x*pi));
+}
+function COS3PI(x,y){
+	return(cos(3*x*pi));
+}
+function CUBE(x,y){
+	return(x*x*x);
+}
+function SINXXYY(x,y){
+	return(sin(pi*(x*x+y*y)));
+}
+function SINXXXYYY(x,y){
+	return(sin(pi*(x*x*x+y*y*y)));
+}
+function SQUARE(x,y){
+	return(x*x);
+}
+
+var theFunctions=['MUL', 'SINPI', 'COSPI','CUBE','SINXXYY','max','min','SIN2PI','COS2PI'];
+
+function randomFunction(n){
+	var r,s,t,u;
+	if (n==1){
+		if (random()<0.5)
+			r='P1(x,y)'
+		else
+			r='P2(x,y)';
+	}
+	else{
+		s=randomFunction(n-1);
+		t=randomFunction(n-1);
+		u=theFunctions.random();
+		r=u+'('+s+','+t+')';
+	}
+	return(r);
+}
+
+function setup(){
+	size(200,200);
+	loop();
+  }
+
+function draw(){
+	clear();
+	var x,y,a,b,c;
+	var f=randomFunction(7);
+	for (a=0;a<width;a++)
+		for (b=0;b<height;b++){
+			x=2*a/width-1;
+			y=2*b/height-1;
+			c=cColor((eval(f)+1)*180);
+			fillcolor(c);
+			fillrect(a,b,1,1);
+		}
+	canvasToNewImg();
+}
+</script>
+</head>
+<body>
+<div id='spork'></div> <br>
+</body>
+</html>
