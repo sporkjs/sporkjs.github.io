@@ -2,40 +2,10 @@
 <html>
 <head>
 <style>
-img{
-	margin: 10px;
-}
-html{
-	width:100%;
-	height:100%;
-	overflow: hidden;
-}
-body{
-	height:100%;
-	width:100%;
-	display:table;
-	background: black;
-}
 
-div.cell{
-	display: table-cell;
-	vertical-align:middle;
-	text-align:center;
-}
-margin
 </style>
 <script src='spork.js'></script>
 <script>
-//Random stuff-------------------------------------------------------
-var RNGMOD=Math.pow(2,32);
-var RNGSEED=0;
-
-function RNG(){
-	RNGSEED=(RNGSEED*1664525 + 1013904223)%RNGMOD;
-  	return(RNGSEED/RNGMOD);
-}
-//----------------------------------------------------------------------------
-
 //color wheel stuff--------------------------------------------------
 function cCycle(d){
   var r;
@@ -91,10 +61,8 @@ function SINXXXYYY(x,y){
 function SQUARE(x,y){
 	return(x*x);
 }
-function AVG(x,y){
-	return((x+y)/2);
-}
-var theFunctions=['P1','P2','MUL', 'SINPI', 'COSPI','CUBE','SINXXYY','max','min','SIN2PI','COS2PI','AVG'];
+
+var theFunctions=['MUL', 'SINPI', 'COSPI','CUBE','SINXXYY','max','min','SIN2PI','COS2PI'];
 function randomFunction(n){
 	var r,s,t,u;
 	if (n==1){
@@ -111,55 +79,31 @@ function randomFunction(n){
 	}
 	return(r);
 }
- var av=[];
+
 function setup(){
-	size(400,400);
-	var x, y;
-	for (x=0;x<width;x++)
-		av[x]=[];
-	random=RNG;
-	RNGSEED=millisecond();
+	size(200,200);
 	loop();
   }
-function diff(){
-	var x,y;
-	var dx=0;
-	var dy=0;
-	for (x=0;x<width;x++)
-	 for (y=0;y<height-1;y++)
-	  dy+=abs(av[x][y]-av[x][y+1]);
-	 dy=dy/(width*height);
-	for (y=0;y<height;y++)
-	for (x=0;x<width-1;x++)
-	 dx+=abs(av[x][y]-av[x+1][y]);
-	 dx=dx/(width*height);
-	 return(dx*dy);
-}
+
 function draw(){
-//	clear();
-	var x,y,a,b,c,d;
-	var f=randomFunction(4+floor(random()*4));
+	clear();
+	var x,y,a,b,c;
+	var f=randomFunction(7);
 	for (a=0;a<width;a++)
 		for (b=0;b<height;b++){
 			x=2*a/width-1;
 			y=2*b/height-1;
-			c=floor((eval(f)+1)*127);
-			av[a][b]=c;
+			c=eval(f);
+			if (c<0) fillcolor('black');
+			else if (c<0.5) fillcolor('gray');
+			else fillcolor('white');
+			fillrect(a,b,1,1);
 		}
-	if (diff()!=0)
-		for (a=0;a<width;a++)
-			for (b=0;b<height;b++){
-				c=av[a][b];
-				fillcolor(c,c,c);
-				fillrect(a,b,1,1);
-			}
 //	canvasToNewImg();
 }
 </script>
 </head>
 <body>
-<div class='cell'>
-<div id='spork'></div> 
-</div>
+<div id='spork'></div> <hr>
 </body>
 </html>
