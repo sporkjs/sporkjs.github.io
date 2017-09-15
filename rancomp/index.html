@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+	margin-top:40px;
+	background: black;
+	text-align: center;
+}
+button{
+	font-size: 30px;
+}
+button:active{
+	background: black;
+	color: white;
+}
+</style>
+<script src='spork.js'></script>
+<script src='rancomp.js'></script>
+<script>
+
+ var av=[];
+ var theColors=[];
+ function diff(){
+	var x,y;
+	var dx=0;
+	var dy=0;
+	for (x=0;x<width;x++)
+	 for (y=0;y<height-1;y++)
+	  dy+=abs(av[x][y]-av[x][y+1])*256;
+	 dy=dy/(width*height);
+	for (y=0;y<height;y++)
+	for (x=0;x<width-1;x++)
+	 dx+=abs(av[x][y]-av[x+1][y])*256;
+	 dx=dx/(width*height);
+	 return(min(dx,dy));
+}
+function setup(){
+	size(400,400);
+	var x, y;
+	for (x=0;x<width;x++)
+		av[x]=[];
+	random=RNG;
+	RNGSEED=millisecond();
+	drawbutton.style.width=width+'px';
+	//loop();
+  }
+
+function draw(){
+	var x,y,a,b,c,d,cr,cg,cb;
+	var r1=floor(random()*256);
+	var g1=floor(random()*256);
+	var b1=floor(random()*256);
+	var USING=RNGSEED;
+	if (theFunctions.indexOf('NOISE')>-1) setupNoise(2+floor(random()*3));
+	var fr=randomFunction(4+floor(random()*4));
+	for (a=0;a<width;a++)
+		for (b=0;b<height;b++){
+			x=2*a/width-1;
+			y=2*b/height-1;
+			cr=eval(fr);
+			av[a][b]=cr;
+		}
+	
+	if (diff()>1){
+	for (a=0;a<width;a++)
+		for (b=0;b<height;b++){
+			cr=av[a][b];
+			fillcolor(floor(cr*r1+(1-cr)*(256-r1)), floor(cr*g1+(1-cr)*(256-g1)), floor(cr*b1+(1-cr)*(256-b1)));
+			fillrect(a,b,1,1);
+		}
+	numbers.innerHTML=USING+' '+r1+' '+g1+' '+b1;
+	}
+	else draw();
+}
+
+</script>
+</head>
+<body>
+<div id='spork'></div> 
+<button onclick='draw();' id='drawbutton'>DRAW ANOTHER</button>
+<div id='numbers'></div>
+</body>
+</html>

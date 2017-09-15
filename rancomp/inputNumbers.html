@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<script src='spork.js'></script>
+<script src='rancomp.js'></script>
+<script>
+function randomPicture(){
+	theSeed.value=RNGSEED;
+	theRed.value=floor(random()*256);
+ 	theGreen.value=floor(random()*256);
+ 	theBlue.value=floor(random()*256);
+	draw();
+}
+function setup(){
+	size(200,200);
+	random=RNG;
+	RNGSEED=millisecond();
+	theSeed.value=RNGSEED;
+	theRed.value=floor(random()*256);
+ 	theGreen.value=floor(random()*256);
+ 	theBlue.value=floor(random()*256);
+  }
+
+function draw(){
+//	clear();
+	var x,y,a,b,c,d,cr,cg,cb;
+	var r1=eval(theRed.value);
+	var g1=eval(theGreen.value);
+	var b1=eval(theBlue.value);
+	RNGSEED=eval(theSeed.value);
+	if (theFunctions.indexOf('NOISE')>-1) setupNoise(2+floor(random()*3));
+	var fr=randomFunction(4+floor(random()*4));
+	for (a=0;a<width;a++)
+		for (b=0;b<height;b++){
+			x=2*a/width-1;
+			y=2*b/height-1;
+			cr=eval(fr);
+			fillcolor(floor(cr*r1+(1-cr)*(256-r1)), floor(cr*g1+(1-cr)*(256-g1)), floor(cr*b1+(1-cr)*(256-b1)));
+			fillrect(a,b,1,1);
+		}
+}
+function saveParameters(){
+	saveforlater.innerHTML+='<hr>'+theSeed.value+' '+theRed.value+' '+theGreen.value+' '+theBlue.value;
+}
+</script>
+</head>
+<body>
+<div class='cell'>
+<div id='spork'></div> 
+<div>
+Seed: <input type='text' size=50 value=0 id='theSeed'><br>
+Red: <input type='text' size=50 value=0 id='theRed'><br>
+Green: <input type='text' size=50 value=0 id='theGreen'><br>
+Blue: <input type='text' size=50 value=0 id='theBlue'><br>
+<button onclick='draw();'>Draw it</button>
+<button onclick='randomPicture();'>Random</button>
+<button onclick='saveParameters();'>Save For Later</button><br>
+<button onclick='size(100,100);draw();'>Tiny</button>
+<button onclick='size(200,200);draw();'>Small</button>
+<button onclick='size(500,500);draw();'>Medium</button>
+<button onclick='size(1000,1000);draw();'>Large</button>
+<button onclick='size(1500,1500);draw();'>Huge</button>
+</div>
+</div>
+<div id='saveforlater'></div>
+</body>
+</html>
