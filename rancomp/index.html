@@ -48,12 +48,16 @@ function setup(){
 
 function draw(){
 	var x,y,a,b,c,d,cr,cg,cb;
+	var fr='';
+	var USING;
+	while(fr.length<10){
+		USING=RNGSEED;
+		fr=randomFunction(4+floor(random()*4));
+	}
+	if (theFunctions.indexOf('NOISE')>-1) setupNoise(2+floor(random()*3));
 	var r1=floor(random()*256);
 	var g1=floor(random()*256);
 	var b1=floor(random()*256);
-	var USING=RNGSEED;
-	if (theFunctions.indexOf('NOISE')>-1) setupNoise(2+floor(random()*3));
-	var fr=randomFunction(4+floor(random()*4));
 	for (a=0;a<width;a++)
 		for (b=0;b<height;b++){
 			x=2*a/width-1;
@@ -65,7 +69,7 @@ function draw(){
 	if (diff()>1){
 	for (a=0;a<width;a++)
 		for (b=0;b<height;b++){
-			cr=av[a][b];
+			cr=(av[a][b]+1)/2;
 			fillcolor(floor(cr*r1+(1-cr)*(256-r1)), floor(cr*g1+(1-cr)*(256-g1)), floor(cr*b1+(1-cr)*(256-b1)));
 			fillrect(a,b,1,1);
 		}
