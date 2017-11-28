@@ -3,12 +3,34 @@
 <head>
 <style>
 body{
+	margin-top:40px;
 	background: black;
-	text-align:center;
+	text-align: center;
+}
+button{
+	font-size: 30px;
+	margin: 5px;
+}
+button:active{
+	background: black;
+	color: white;
+}
+#saved{
+	color:white;
 }
 </style>
 <script src='spork.js'></script>
 <script>
+//Random stuff-------------------------------------------------------
+var RNGMOD=Math.pow(2,32);
+var RNGSEED=0;
+
+function RNG(){
+	RNGSEED=(RNGSEED*1664525 + 1013904223)%RNGMOD;
+  	return(RNGSEED/RNGMOD);
+}
+//----------------------------------------------------------------------------
+
 var R, G, B;
 
 
@@ -45,20 +67,20 @@ function flattenOutsideNoiseEdges(){
 					noiseValues[x][y][z]=0;	
 }
 function setup(){
-  R=floor(random()*256);
-  G=floor(random()*256);
-  B=floor(random()*256);
-
   R=255;G=255;B=255;  
   //size(300,300);
-  setupNoise(floor(random()*5)+2);
+ 	random=RNG;
+	RNGSEED=millisecond();
+ }
+var USING;
+function draw(){
+USING=RNGSEED;
+setupNoise(floor(random()*5)+2);
   flattenOutsideNoiseEdges();
-  background('black');
-  save();
+ save();
   translate(width/2,height/2);
   rotate(floor(random()*4)*90);
-}
-function draw(){
+
   var x,y;
   for (x=0;x<=width/2;x++)
     for (y=0;y<=x;y++){
@@ -79,11 +101,19 @@ function draw(){
     color('black');
     linewidth(2);
 line(0,0,width,0,width,height,0,height,0,0);
+	numbers.innerHTML=USING;
 }
-
+function saveNumbers(){
+	saved.innerHTML+='<br>'+USING;
+}
 </script>
 </head>
 <body>
 <div id='spork'></div>
+<button onclick='draw();' id='drawbutton'>DRAW ANOTHER</button><br>
+<button onclick='saveNumbers();' id='savebutton'>SAVE CODE</button>
+
+<div id='numbers'></div>
+<div id='saved'></div>
 </body>
 </html>
