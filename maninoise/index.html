@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+	margin-top:40px;
+	background: black;
+	text-align: center;
+}
+button{
+	font-size: 30px;
+	margin: 5px;
+}
+button:active{
+	background: black;
+	color: white;
+}
+#saved{
+	color:white;
+}
+</style>
+<script src='spork.js'></script>
+<script>
+
+//Random stuff-------------------------------------------------------
+var RNGMOD=Math.pow(2,32);
+var RNGSEED=0;
+
+function RNG(){
+	RNGSEED=(RNGSEED*1664525 + 1013904223)%RNGMOD;
+  	return(RNGSEED/RNGMOD);
+}
+//----------------------------------------------------------------------------
+
+var A=[];
+var N;
+
+function setupArray(n){
+  var x,y;
+  N=n;
+  for (x=0;x<=N;x++){
+    A[x]=[];
+    for (y=0;y<=N;y++)
+      A[x][y]=2*random()-1;
+  }
+  for (x=0;x<=N;x++)
+    for (y=0;y<=N;y++)
+      if ((x==0) || (x==N) || (y==0) || y==N)
+        A[x][y]=0;
+}
+function av(x,y){
+  x=x%1;
+  y=y%1;
+  var nx=N*x;
+  var ny=N*y;
+  var X=floor(nx);
+  var Y=floor(ny);
+  var tx = nx-X;
+  var ty = ny-Y;
+  tx=3*tx*tx-2*tx*tx*tx;
+  ty=3*ty*ty-2*ty*ty*ty;
+  var a=(1-tx)*A[X][Y]+(tx)*A[X+1][Y];
+  var b=(1-tx)*A[X][Y+1]+(tx)*A[X+1][Y+1];
+  return((1-ty)*a+(ty)*b);
+}
+function spread(x){
+  if (x>0.5) return(1);
+  else if (x<-0.5) return(-1)
+  else return(2*x);
+}
+function setup(){
+  //size(200,200);
+ 	random=RNG;
+	RNGSEED=millisecond();
+	}
+	var USING;
+function draw(){
+  var x,y,c;
+  USING=RNGSEED;
+ setupArray(floor(8*random())+2);
+  for (x=0;x<width;x++)
+    for (y=0;y<height;y++){
+      c=spread(av(x/width,y/height));
+      c=abs(sin(c*pi));
+      c=floor(c*255);
+      fillcolor(c,c,c);
+      fillrect(x,y,1,1);
+    }
+	numbers.innerHTML=USING;
+}
+function saveNumbers(){
+	saved.innerHTML+='<br>'+USING;
+}
+</script>
+</head>
+<body>
+<div id='spork'></div>
+<button onclick='draw();' id='drawbutton'>DRAW ANOTHER</button><br>
+<button onclick='saveNumbers();' id='savebutton'>SAVE CODE</button>
+
+<div id='numbers'></div>
+<div id='saved'></div>
+</body>
+</html>
