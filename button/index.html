@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<style>body{
+	margin-top:40px;
+	background: black;
+	text-align: center;
+}
+button{
+	font-size: 30px;
+	margin: 5px;
+}
+button:active{
+	background: black;
+	color: white;
+}
+#saved{
+	color:white;
+}</style>
+<script src='spork.js'>
+</script>
+<script>function drawPixel(x,y){
+  rect(x,y,1,1);
+}
+function drawPixel4(x,y){
+  rect(x,y,1,1);
+  rect(-x,y,1,1);
+  rect(x,-y,1,1);
+  rect(-x,-y,1,1);
+}
+function drawPixel8(x,y){
+ /*
+ save();
+  drawPixel4(x,y);
+  rotate(90);
+  drawPixel4(x,y);
+  restore();
+  */
+    rect(x,y,1,1);
+  rect(-x,y,1,1);
+  rect(x,-y,1,1);
+  rect(-x,-y,1,1);
+  
+    rect(y,x,1,1);
+  rect(-y,x,1,1);
+  rect(y,-x,1,1);
+  rect(-y,-x,1,1);
+}
+function randomGrayScale(){
+  var r= floor(256*random());
+  color(r,r,r);
+}
+function randomColor(){
+  var r=floor(256*random());
+  var g=floor(256*random());
+  var b=floor(256*random());
+  color(r,g,b);
+}
+function noiseGrayScale(x,y){
+  var r=floor(128+128*noise(x/width,y/height));
+  color(r,r,r);
+}
+var R, G, B;
+function noiseColor(x,y){
+var c=noise(2*x/width, 2*y/height);
+	c=(sin(4*c*pi));
+	color(floor(128+c*R),floor(128+c*G),floor( 128+c*B));
+}
+function noiseColorCow(x,y){
+  var r = noise(x/width, y/height);
+  if (r<0) color('black');
+  else color('white');
+}
+
+function flattenOutsideNoiseEdges(){
+	var n=noiseGridSize;
+	var x,y,z;
+	for (x=0;x<=n;x++)
+		for (y=0;y<=n;y++)
+			for (z=0;z<=n;z++)
+				if (x*x+y*y>=(n-1)*(n-1))
+					noiseValues[x][y][z]=0.5;	
+}
+
+function setup(){
+R=floor(random()*128)*(2*floor(random()*2)-1);
+G=floor(random()*128)*(2*floor(random()*2)-1);
+B=floor(random()*128)*(2*floor(random()*2)-1);
+var D=sqrt(R*R+G*G+B*B);
+R=floor(128*R/D);
+G=floor(128*G/D);
+B=floor(128*B/D);
+	
+	size(400,400);
+  translate(width/2,height/2);
+  setupNoise(floor(random()*8)+3);
+  //flattenOutsideNoiseEdges();
+}
+function draw(){
+  var x,y;
+  clear();
+  color(0,0,0,0);
+  circle(0,0,width/2);
+ clip();
+  for (x=0;x<=width/2;x++)
+    for (y=0;y<=x;y++){
+      noiseColor(x,y);
+      drawPixel8(x,y);
+    }
+ /*
+ save();
+    linewidth(4);
+    color(128,128,128);
+    circle(0,0,width/2);
+    restore();
+    */
+}</script>
+</head>
+<body>
+<div id='spork'></div>
+<button onclick='setup();draw();' id='drawbutton'>DRAW ANOTHER</button><br>
+
+</body>
+</html>

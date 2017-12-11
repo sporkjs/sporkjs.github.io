@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<style></style>
+<script src='spork.js'>
+</script>
+<script>function drawPixel(x,y){
+  rect(x,y,1,1);
+}
+function drawPixel4(x,y){
+  rect(x,y,1,1);
+  rect(-x,y,1,1);
+  rect(x,-y,1,1);
+  rect(-x,-y,1,1);
+}
+function drawPixel8(x,y){
+  save();
+  drawPixel4(x,y);
+  rotate(90);
+  drawPixel4(x,y);
+  restore();
+}
+function randomGrayScale(){
+  var r= floor(256*random());
+  color(r,r,r);
+}
+function randomColor(){
+  var r=floor(256*random());
+  var g=floor(256*random());
+  var b=floor(256*random());
+  color(r,g,b);
+}
+function noiseGrayScale(x,y){
+  var r=floor(128+128*noise(x/width,y/height));
+  color(r,r,r);
+}
+function noiseColor(x,y){
+  var r=floor(128+128*noise(x/width,y/height,0));
+  var g=floor(128+128*noise(x/width,y/height,0.25));
+  var b=floor(128+128*noise(x/width,y/height,0.5));
+  color(r,g,b);  
+}
+function noiseColorCow(x,y){
+  var r = noise(x/width, y/height);
+  if (r<0) color('black');
+  else color('white');
+}
+function setup(){
+  size(400,400);
+  translate(width/2,height/2);
+  setupNoise(10);
+}
+function draw(){
+  var x,y;
+  clear();
+  color(0,0,0,0);
+  circle(0,0,width/2);
+  clip();
+  for (x=0;x<width/2;x++)
+    for (y=0;y<=x;y++){
+      noiseColorCow(x,y);
+      drawPixel8(x,y);
+    }
+}</script>
+</head>
+<body>
+<div id='spork'></div>
+</body>
+</html>
