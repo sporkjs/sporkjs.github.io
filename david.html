@@ -320,22 +320,11 @@ function draw(){
 		detectIntersection();
 }
 //*****************************************************************************************
-//This is a helper function called by a button.
-function getCoordsInOut(){
-	//Get coords for use in other programs. Called by button.
-	out.innerHTML='X=['+X+'];<br>Y=['+Y+'];<br>//hello';
-}
+
 </script>
 </head>
 <body>
 <div id='spork'></div>
-<button onclick='stoploop();'>Stop</button> 
-<button onclick='startloop();'>Go</button>
-<button onclick='MAXRADIUS+=1;'>Up</button>
-<button onclick='THRESH-=1;'>Down</button>
-<button onclick='getCoordsInOut();'>Get Coordinates</button>
-<button onclick='detectIntersection();'>Intersect</button>
-<button onclick='drawIt();'>Redraw</button>
 <div id='out'></div>
 
 </body>
