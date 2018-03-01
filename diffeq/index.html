@@ -544,7 +544,7 @@ for (INITIALCONDITION=0;INITIALCONDITION<NUMCONDITIONS;INITIALCONDITION++){
 			s='x'+k+'=rk4['+k+']['+(j-1)+']+DT*K3['+k+'];'
 			eval(s);
 		}
-		t=T[j-1]+DT/2;
+		t=T[j-1]+DT;
 		for (i=1;i<=numEq;i++)
 			K4[i]=eval(dxdtfcn[i]);
 		
