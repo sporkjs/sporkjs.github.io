@@ -1,5 +1,5 @@
 <!doctype html>
-<html> 
+<html>
 <head>
 <title>Spork  Editor</title>
 
@@ -30,27 +30,30 @@
 <div>
 <div id='cmDiv'><textarea id="code" name="code">
 /*
-Parallel lines.
-This example uses a for loop to draw parallel
-horizontal lines.
+Symmetry Example
+
+This example draws a symmetric shape by drawing 
+10 line segments and their reflections through
+the line y=x;
 */
 
 function setup(){
-  //No special setup needed
 }
 function draw(){
-  //y value for the line
-  var y;
+  var x1, y1, x2, y2;	//coordinates
+  var i;				//index to count segments
   
-  //y takes on the values 3, 6, 9...
-  for (y=3;y<height;y=y+3){
-    //draw a line from x=0 to x=width
-    line(0,y,width,y);
+  for(i=0;i<10;i++){
+    x1=random()*width;	//x1 random
+    y1=random()*x1;			//y1 less than x1
+    x2=random()*width;	//x2 random
+    y2=random()*x1;			//y2 less than x2
+    
+    line(x1,y1,x2,y2);		//Original
+    line(y1,x1,y2,x2);		//Reflected
   }
 }
 </textarea></div> <div id='spork'></div>
-
-
 
 <br>
 <select onchange="selectTheme()" id='themeSelect'>

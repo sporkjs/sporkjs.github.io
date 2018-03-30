@@ -1,5 +1,5 @@
 <!doctype html>
-<html> 
+<html>
 <head>
 <title>Spork  Editor</title>
 
@@ -30,27 +30,41 @@
 <div>
 <div id='cmDiv'><textarea id="code" name="code">
 /*
-Parallel lines.
-This example uses a for loop to draw parallel
-horizontal lines.
+Parametric Rose
+This example uses parametric equations and
+a THE ANIMATION LOOP to draw a rose.
 */
 
+/*
+We will need to access the parameter t
+from both the setup() and draw() functions
+so we declare it here.
+*/
+var t;
+
 function setup(){
-  //No special setup needed
-}
-function draw(){
-  //y value for the line
-  var y;
+  //translate to center
+  translate(width/2, height/2);
   
-  //y takes on the values 3, 6, 9...
-  for (y=3;y<height;y=y+3){
-    //draw a line from x=0 to x=width
-    line(0,y,width,y);
-  }
+  //initialize t at 0
+  t=0;
+  
+  //start animation loop
+  loop();
+}
+
+function draw(){
+  var x,y;		//coordinates
+  
+  //coordinates of points on a rose
+  x=100*COS(3*t);
+  y=100*SIN(2*t);
+  fillrect(x,y,1,1);
+
+  //increment t
+  t=t+0.1;
 }
 </textarea></div> <div id='spork'></div>
-
-
 
 <br>
 <select onchange="selectTheme()" id='themeSelect'>
