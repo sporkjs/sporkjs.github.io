@@ -188,10 +188,8 @@ function clearall(form){
 <center><h1>Frequency Analysis</h1>
 
 <FORM name="theform">
-Type Ciphertext here:<br>
-<textarea name="ciphertext" rows=7></textarea><br>
-Plaintext:<br>
-<textarea name="plaintext" rows=7></textarea><br><br>
+<textarea name="ciphertext" rows=7  id='theciphertext'></textarea><br>
+<textarea name="plaintext" rows=7 id='theplaintext'></textarea><br><br>
 <table border=1>
 <tr>
 <td> A </td>
@@ -262,10 +260,8 @@ Plaintext:<br>
 </table><br>
 </FORM>
 <button class='control' value="Substitute" onclick="substitute(theform)">Substitute</button>
-<button  class='control' value="Clear Guesses" onclick="clearguesses(theform)">Clear Guesses</button>
-<button  class='control' value="Clear All" onclick="clearall(theform)">Clear All</button>
+<button  class='control' value="Clear Guesses" onclick="clearguesses(theform);substitute(theform);">Clear Guesses</button>
 <button  class='control' value="See Stats" onclick="frequencies(theform)">See Stats</button>
-<button  class='control' value="Move Spaces" onclick="moveSpaces(theform)">Move Spaces</button>
 
 </center>
 
@@ -312,7 +308,7 @@ QAKRAKIA LB TAZRD VZQ RDA HZQR LB TEQREKIR ZIIAKRSZRELK VDEID OAZIDAT JX AZOQ
 <li><button class="ex"  onclick='theform.ciphertext.value=this.innerText;substitute(theform);'> Z LIOQKJ VBK CQ CAJKOZJR KN GIAZG HZRRIOQ CQ ZGVZXQ GCZPGI RK 
 HZFI HCQRZFIQ VBIJ BI ROCIQ RK LBKRKAOZLB Z UKSOR QUIJI VCRB BCQ LIJ 
 </button></li>
-<li><button class="ex" onclick='theform.ciphertext.value=this.innerText;'> QDA JAKQZI BAZQSOAP EFPULSOPAE LB ZP QDA ZKZIXQFUZI ZOA FK 
+<li><button class="ex" onclick='theform.ciphertext.value=this.innerText;substitute(theform);'> QDA JAKQZI BAZQSOAP EFPULSOPAE LB ZP QDA ZKZIXQFUZI ZOA FK 
 QDAJPAITAP RSQ IFQQIA  PSPUAMQFRIA LB ZKZIXPFP 
 </button></li>
 <li><button class="ex"  onclick='theform.ciphertext.value=this.innerText;substitute(theform);'>
