@@ -1,6 +1,6 @@
 // Spork.js
-//John W. Snow (john.snow@cune.edu)
-//Version of 2017-3-15
+//John W. Snow (snowj342@gmail.com)
+//Version of 2017-10-27
 /*This is a JavaScript library that provides easy access to 
  - The HTML 5 canvas
  - Animation
@@ -520,6 +520,23 @@ function cacheMath(){
 	}
 	Array.prototype.random = function(){
 		return(this[floor(this.length*random())]);
+	}
+	Array.prototype.zipf = function(){
+		function invSum(n){
+		  var c=0;
+		  var i;
+		  for (i=1;i<=n;i++)
+		    c+=1/i;
+		  return(c);
+		}
+		function zipfIndex(n){
+		  var z=1/invSum(n);
+		  var r=random();
+		  var i=1;
+		  while (z*invSum(i)<r) i++;
+		  return(i-1);
+		}
+		return(this[zipfIndex(this.length)]);
 	}
 }
 function init(){
