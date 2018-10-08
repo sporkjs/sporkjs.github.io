@@ -49,6 +49,7 @@ function setup(){
   timestep(2000);
   color('white');
   drawing.style.borderColor='white';
+  
   loop();
 }
 function draw(){
@@ -68,13 +69,15 @@ function draw(){
   }
 }
 
-
+function onclick(){
+	openFullscreen();
+	spork.style.cursor='none';
+}
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
 /* View in fullscreen */
 function openFullscreen() {
-theButton.style.display='none';
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -138,7 +141,6 @@ div.navigation{
 </head>
 <body>
 <div id='spork'></div><br>
-<button onclick='openFullscreen();' id='theButton'>Full Screen</button>
 </body>
 
 </html>
